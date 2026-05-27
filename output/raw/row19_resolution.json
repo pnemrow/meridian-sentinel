@@ -1,0 +1,1550 @@
+{
+  "fields": {
+    "name": [
+      "Vnesheconombank"
+    ],
+    "identifier": null,
+    "profile": null,
+    "country": [
+      "RUS"
+    ],
+    "address": null,
+    "date_of_birth": null,
+    "contact": null,
+    "type": null
+  },
+  "data": [
+    {
+      "profile": "corporate",
+      "score": 145.44682,
+      "entity_id": "0-dUKOZj1YJ8Hl48PMHjgA",
+      "label": "\u0413\u043e\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0435\u043d\u043d\u0430\u044f \u043a\u043e\u0440\u043f\u043e\u0440\u0430\u0446\u0438\u044f \"\u0411\u0430\u043d\u043a \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044f \u0438 \u0432\u043d\u0435\u0448\u043d\u0435\u044d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u0435\u044f\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438 (\u0412\u043d\u0435\u0448\u044d\u043a\u043e\u043d\u043e\u043c\u0431\u0430\u043d\u043a)\"",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "7750004150",
+          "type": "ru_inn",
+          "label": "Ru Inn"
+        },
+        {
+          "value": "1077711000102",
+          "type": "ru_ogrn",
+          "label": "Ru Ogrn"
+        },
+        {
+          "value": "7750004150",
+          "type": "ru_tin",
+          "label": "Ru Tin"
+        },
+        {
+          "value": "BFEARUMM",
+          "type": "swift_bic_code",
+          "label": "Swift Bic Code"
+        },
+        {
+          "value": "17015",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "25340076UP17XECUF417",
+          "type": "lei",
+          "label": "Lei"
+        },
+        {
+          "value": "90615",
+          "type": "xxx_edi_global_issuer_id",
+          "label": "Xxx Edi Global Issuer Id"
+        },
+        {
+          "value": "135346",
+          "type": "eu_fsd_id",
+          "label": "Eu Fsd Id"
+        },
+        {
+          "value": "EU.7396.35",
+          "type": "eu_sanction_rn",
+          "label": "Eu Sanction Rn"
+        },
+        {
+          "value": "14198",
+          "type": "gbr_hm_treasury_sanction_group_id",
+          "label": "Gbr Hm Treasury Sanction Group Id"
+        },
+        {
+          "value": "RUS0253",
+          "type": "gbr_uk_sanctions_id",
+          "label": "Gbr Uk Sanctions Id"
+        },
+        {
+          "value": "C438875",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "3841",
+          "type": "fra_asset_freeze_id",
+          "label": "Fra Asset Freeze Id"
+        },
+        {
+          "value": "1077711000102",
+          "type": "ru_registration_number",
+          "label": "Ru Registration Number"
+        },
+        {
+          "value": "6774",
+          "type": "aus_consolidated_sanctions_reference",
+          "label": "Aus Consolidated Sanctions Reference"
+        },
+        {
+          "value": "622f88da54e2c83db22b8836",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "BFEARUMMXXX",
+          "type": "swift_bic_code",
+          "label": "Swift Bic Code"
+        },
+        {
+          "value": "BAN-17",
+          "type": "nzl_russia_sanctions_uid",
+          "label": "Nzl Russia Sanctions Uid"
+        },
+        {
+          "value": "5bce301a52978000017876d1",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "NK-b3fcbf4CHMfChZi52uVcjS",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "044525060",
+          "type": "rus_bik_code",
+          "label": "Rus Bik Code"
+        },
+        {
+          "value": "28759",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "48076",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "51043",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "13082",
+          "type": "gbr_hm_treasury_sanction_group_id",
+          "label": "Gbr Hm Treasury Sanction Group Id"
+        },
+        {
+          "value": "13087",
+          "type": "ukr_sanctions_nazk_company_internal_id",
+          "label": "Ukr Sanctions Nazk Company Internal Id"
+        },
+        {
+          "value": "00005061",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "997950001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "770801001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "775001001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "1077711000102",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "RUC23314746",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "17458\u041d",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "177-06092-000100",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "177-08331-001000",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "177-08328-010000",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "177-08324-100000",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "770401001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "\u041b\u0421\u04170016564 17458\u041d",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "044525060",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "Subject to Directive 1",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "18 Aug 1922",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "Ukraine-/Russia-Related Sanctions Regulations, 31 CFR 589.201 and/or 589.209",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "1077711000102",
+          "type": "unknown_commercial_register_id",
+          "label": "Unknown Commercial Register Id"
+        },
+        {
+          "value": "45378000000",
+          "type": "ru_oktmo",
+          "label": "Ru Oktmo"
+        },
+        {
+          "value": "7750004150",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "K3M1FDRED4J3",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "KMN7WQ8YVUY6",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "KVW3BQGKUQM7",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "LB3ZXN585GK4",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "LEBYFGDM6V47",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "LEHTZ7VG5NA1",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "N56KY78SKSF7",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "Z49GNVFVDHH6",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "\u043f-\u0442 \u0410\u043a\u0430\u0434\u0435\u043c\u0438\u043a\u0430 \u0421\u0430\u0445\u0430\u0440\u043e\u0432\u0430, 9, \u041c\u043e\u0441\u043a\u0432\u0430, RU-MOW, 107996, RU",
+        "p-t Akademika Saharova, 9, Moskva, RU-MOW, 107996, RU",
+        "p-t Academician Sakharov, 9, Moscow, RU-MOW, 107996, RU",
+        "\u043f\u0440-\u0442 \u0410\u043a\u0430\u0434\u0435\u043c\u0438\u043a\u0430 \u0421\u0430\u0445\u0430\u0440\u043e\u0432\u0430, \u0434.9, \u041c\u043e\u0441\u043a\u0432\u0430, 107996, \u0420\u043e\u0441\u0441\u0438\u044f",
+        "pr-t Akademika Saharova, d.9, Moskva, 107996, Rossia",
+        "Akademika Sakharova Ave., 9, Moscow, 107996, Russia",
+        "Pr-kt, Akademika Sakharova, D. 9, Moscow, 107078, Russia",
+        "107996, \u041c\u043e\u0441\u043a\u0432\u0430, \u0410\u043a\u0430\u0434\u0435\u043c\u0438\u043a\u0430 \u0421\u0430\u0445\u0430\u0440\u043e\u0432\u0430, \u0434\u043e\u043c 9",
+        "107996, Moskva, Akademika Saharova, dom 9",
+        "107996, Moscow, Academician Sakharov, building 9",
+        "RUS",
+        "st. Vozdvizhenka 10 Moscow 125009 RUSSIAN FEDERATION",
+        "20\u0410 CITIC BULDING, 19, JIANGUOMENWAI DAJIE, BEIJING,100004, CHINA",
+        "20A CITIC BULDING, 19, JIANGUOMENWAI DAJIE, BEIJING,100004, CHINA",
+        "20A CITIC BUILDING, 19, JIANGUOMENWAI DAJIE, BEIJING,100004, CHINA",
+        "Shop No. 11, Arcade Ground Floor, World Trade Centre, Cuffe Prade, Colaba, Mumbai, 400005, IN",
+        "9 prospekt Akademika Sakharova Moscow RUSSIAN FEDERATION",
+        "125009, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u0432\u043d.\u0442\u0435\u0440.\u0433. \u043c\u0443\u043d\u0438\u0446\u0438\u043f\u0430\u043b\u044c\u043d\u044b\u0439 \u043e\u043a\u0440\u0443\u0433 \u0410\u0440\u0431\u0430\u0442, \u0443\u043b. \u0412\u043e\u0437\u0434\u0432\u0438\u0436\u0435\u043d\u043a\u0430, \u0434. 10",
+        "125009, g. Moskva, vn.ter.g. municipal\u02b9nyj okrug Arbat, ul. Vozdvizenka, d. 10",
+        "125009, Moscow, Vn.ter.g. Arbat municipal district, st. Vozdvizhenka, 10",
+        "\u0420\u0424, 107996, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u0413\u0421\u041f-6, \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0410\u043a\u0430\u0434\u0435\u043c\u0438\u043a\u0430 \u0421\u0430\u0445\u0430\u0440\u043e\u0432\u0430, \u0434.9",
+        "RF, 107996, g. Moskva, GSP-6, prospekt Akademika Saharova, d.9",
+        "RF, 107996, Moscow, GSP-6, Academician Sakharov Avenue, 9",
+        "107078, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u043f\u0440-\u0442 \u0410\u043a\u0430\u0434\u0435\u043c\u0438\u043a\u0430 \u0421\u0430\u0445\u0430\u0440\u043e\u0432\u0430, \u0434.9",
+        "107078, g. Moskva, pr-t Akademika Saharova, d.9",
+        "9, Akademika Sakharova Ave., Moscow, 107078",
+        "777 THIRD AVENUE, SUITE 29B, NY10017, NEW YORK, USA",
+        "8, PIAZZALE PRINCIPESSA CLOTILDE, MILANO, 20121, ITALY",
+        "TAUNUSANLAGE 1, 60329, FRANKFURT, GERMANY",
+        "10 Vozdvizhenka Str., Moscow, 125009, RU",
+        "Frankfurt, DE",
+        "New York, US",
+        "PLOT EP-15, DR. JOSE P. RIZAL MARG, CHANAKYAPURI, NEW DEHLI-110021, INDIA",
+        "Mumbai, IN",
+        "Abu Dhabi, AE",
+        "\u0420\u043e\u0441\u0456\u0439\u0441\u044c\u043a\u0430 \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0456\u044f, 125009, \u043c. \u041c\u043e\u0441\u043a\u0432\u0430, \u0432\u0443\u043b. \u0412\u043e\u0437\u0434\u0432\u0456\u0436\u0435\u043d\u043a\u0430, \u0431\u0443\u0434. 10",
+        "Rosijs\u02b9ka Federacia, 125009, m. Moskva, vul. Vozdvizenka, bud. 10",
+        "Russian Federation, 125009, metro Moscow, st. Vozdvizhenka, bud. 10"
+      ],
+      "countries": [
+        "RUS",
+        "CHN",
+        "IND",
+        "GBR",
+        "CYP",
+        "UKR",
+        "DEU",
+        "USA",
+        "ARE",
+        "ITA"
+      ],
+      "sources": [
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "6c14405dec0a245d6acd6a3650d49de4",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "52a7bc4a30e787544ad2d95e7f54adca",
+        "ce873f184abee5b13c9e89791bd78229",
+        "e517c714b560f159a89a9501ed7dd84e",
+        "4ea8bac1bed868e1510ffd21842e9551",
+        "ded706ef28cdc649b6fc5142bc542890",
+        "e6e4acebdea4e9e71af8d3586d34fcdd",
+        "05bae57e72956e990b4b213cb12b5d66",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "66dfefb726ae00fde8f09f34c5578d35",
+        "635021e4e01979cdf95fa7ee76501696",
+        "56bce0e008204712e302271ddd7b4fb1",
+        "f43658cf2a19452fb45b830edeeeea44",
+        "f4ce10ac8bdc0bd9bcb31cb868b4b539",
+        "b812677c0a32a1746b3ac741c7b97ae0",
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "d357238101a2bb02d97d5d77a56d9455",
+        "10a889609ddae6cc31773feebe48166b",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "c6d35e98081e4c41d8eb295c29ce8eb9",
+        "db3416894cd5f0c4d2d6ecc79bdaf366",
+        "3322a755c28851ec06eda3280cc2a2b2",
+        "c10d482320f207d92aa814519c3bd686",
+        "bef2f30139ea37c723ecb0f953b5f024",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "a9a18eeb901e4376c912e95dc05ceb78",
+        "b97ad5c858093e5227b2359a0078696f",
+        "ad6dc774c74b92159422deabc5aee661",
+        "cc87ce4ab4900667bc4672401ba19144",
+        "3f92da650f5a32cf9c50c11333e9b7cb",
+        "ac1fa195f9cd4ccf657bca3c6db0bb19",
+        "93de05b55a68cc964f34bbfc7ec7bc86",
+        "e85d865943ee6d8369307569d2ad9de0"
+      ],
+      "typed_matched_queries": [
+        "country|0",
+        "country|13",
+        "country|27",
+        "country|7",
+        "name|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Vnesheconombank</em>",
+          "State Corporation \"Bank of Development and Foreign Economic Activity (<em>Vnesheconombank</em>)\"",
+          "STATE CORPORATION BANK FOR DEVELOPMENT AND FOREIGN ECONOMIC AFFAIRS <em>VNESHECONOMBANK</em>",
+          "\u0412\u042d\u0411; <em>Vnesheconombank</em>",
+          "VEB; <em>Vnesheconombank</em>"
+        ],
+        "country": [
+          "<em>RUS</em>",
+          "<em>CHN</em>",
+          "<em>IND</em>",
+          "<em>ARE</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Vnesheconombank</em>",
+            "uploaded": "Vnesheconombank",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 1.0,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "State Corporation \"Bank of Development and Foreign Economic Activity (<em>Vnesheconombank</em>)\"",
+            "uploaded": "Vnesheconombank",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.1,
+              "lv": 0.30612244897959184,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "STATE CORPORATION BANK FOR DEVELOPMENT AND FOREIGN ECONOMIC AFFAIRS <em>VNESHECONOMBANK</em>",
+            "uploaded": "Vnesheconombank",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.1,
+              "lv": 0.30612244897959184,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "\u0412\u042d\u0411; <em>Vnesheconombank</em>",
+            "uploaded": "Vnesheconombank",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.5,
+              "lv": 0.8823529411764706,
+              "fz": 0.7894736842105263,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "VEB; <em>Vnesheconombank</em>",
+            "uploaded": "Vnesheconombank",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.5,
+              "lv": 0.8823529411764706,
+              "fz": 0.7894736842105263,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": "<em>CHN</em>",
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>IND</em>",
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>ARE</em>",
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 78.59365,
+      "entity_id": "bdis7hcFld2XK259eR4rYA",
+      "label": "VEB.RF\uff08Vnesheconombank\uff09",
+      "type": "company",
+      "identifiers": [],
+      "psa_id": null,
+      "addresses": [
+        "9 Akademika Sakharova Prospekt, Moscow, 107996, Russian Federation"
+      ],
+      "countries": [
+        "RUS"
+      ],
+      "sources": [
+        "4ff85397f508e4ff8e71c5ca5ea895dd"
+      ],
+      "typed_matched_queries": [
+        "country|0",
+        "name|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "VEB.RF\uff08<em>Vnesheconombank</em>\uff09",
+          "VEB.RF(<em>Vnesheconombank</em>)"
+        ],
+        "country": [
+          "<em>RUS</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "VEB.RF\uff08<em>Vnesheconombank</em>\uff09",
+            "uploaded": "Vnesheconombank",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.0,
+              "lv": 0.7894736842105263,
+              "fz": 0.6521739130434783,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          },
+          {
+            "matched": "VEB.RF(<em>Vnesheconombank</em>)",
+            "uploaded": "Vnesheconombank",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.33333333333333326,
+              "lv": 0.8108108108108107,
+              "fz": 0.6818181818181819,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 74.12242,
+      "entity_id": "zcQAdTzf900thb38t9JbiQ",
+      "label": "Turkmenvnesheconombank",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "C920488",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "32, Garashsyzlyk, Ashgabat, 744036, TM"
+      ],
+      "countries": [
+        "TKM"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "e85d865943ee6d8369307569d2ad9de0"
+      ],
+      "typed_matched_queries": [
+        "country|19",
+        "name|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Vnesheconombank</em>"
+        ],
+        "country": [
+          "<em>TKM</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Vnesheconombank</em>",
+            "uploaded": "Vnesheconombank",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 1.0,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": null,
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": "<em>TKM</em>",
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    }
+  ]
+}

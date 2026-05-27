@@ -1,0 +1,1419 @@
+{
+  "fields": {
+    "name": [
+      "Admiralty Shipyards"
+    ],
+    "identifier": null,
+    "profile": null,
+    "country": [
+      "RUS"
+    ],
+    "address": [
+      "203 Fontanka River Embankment St. Petersburg"
+    ],
+    "date_of_birth": null,
+    "contact": null,
+    "type": null
+  },
+  "data": [
+    {
+      "profile": "corporate",
+      "score": 179.12186,
+      "entity_id": "YA4d9w1CSR2dpqzMhYoYVw",
+      "label": "\u0410\u041a\u0426\u0418\u041e\u041d\u0415\u0420\u041d\u041e\u0415 \u041e\u0411\u0429\u0415\u0421\u0422\u0412\u041e \"\u0410\u0414\u041c\u0418\u0420\u0410\u041b\u0422\u0415\u0419\u0421\u041a\u0418\u0415 \u0412\u0415\u0420\u0424\u0418\"",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "7839395419",
+          "type": "ru_tin",
+          "label": "Ru Tin"
+        },
+        {
+          "value": "7839395419",
+          "type": "ru_inn",
+          "label": "Ru Inn"
+        },
+        {
+          "value": "36032",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "1089848054339",
+          "type": "ru_ogrn",
+          "label": "Ru Ogrn"
+        },
+        {
+          "value": "7446",
+          "type": "aus_consolidated_sanctions_reference",
+          "label": "Aus Consolidated Sanctions Reference"
+        },
+        {
+          "value": "C1005748",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "ENT-34",
+          "type": "nzl_russia_sanctions_uid",
+          "label": "Nzl Russia Sanctions Uid"
+        },
+        {
+          "value": "1089848054339",
+          "type": "ru_registration_number",
+          "label": "Ru Registration Number"
+        },
+        {
+          "value": "10059",
+          "type": "ru_ship_register_id",
+          "label": "Ru Ship Register Id"
+        },
+        {
+          "value": "NK-oE9r7Kprj4NjHaDiL22jDg",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "50537",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "624f7d85dd4c920001dd174d",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "14338",
+          "type": "ukr_sanctions_nazk_company_internal_id",
+          "label": "Ukr Sanctions Nazk Company Internal Id"
+        },
+        {
+          "value": "783901001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "997850001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "78 No 00122",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "77.99.15.002.\u041b.001413.06.06",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "3059-\u0421-\u0412\u0422-\u0420, \u0421\u0415\u0420\u0418\u042f No 003677",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "3060-\u0421-\u0412\u0422-\u0420\u041c, \u0421\u0415\u0420\u0418\u042f No 003678",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "3061-\u0421-\u0412\u0422-\u041f, \u0421\u0415\u0420\u0418\u042f No 003679",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "1998 78\u041b02No0000931",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b \u041e \u0414 47710 \u0412 \u042d",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "78\u041f01 \u0411\u041b\u0410\u041d\u041a No0005427 \u041f\u0420\u0418\u041b\u041e\u0416\u0415\u041d\u0418\u042f No2 \u041a \u041b\u0418\u0426\u0415\u041d\u0417\u0418\u0418 No1998",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b\u041e\u0414\u041b 47985 \u0412\u0420",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0412\u0425-19 004835 \u041f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0410\u0412 \u0421\u0415-(\u0423)-03-209-4741",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b\u041e\u0414 48244 \u0412\u0420",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b042-01148-78/00166721",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b041-01148-78/00358315",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "783943001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "\u0410\u041d-78-000199",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0413\u041a-1-16-0225\u042f",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0410\u0412 \u0421\u0415-03-210-4614",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b017-01148-78/00143951",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0421\u0415-03-210-5550",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b\u041e-78-02-003165",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "997450001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "\u041b052-00102-77/00005673",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b\u041e-78-01-011298",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "20 Nov 2008",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "\u041b020-00113-78/00038068",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b\u041e\u0414 03455 \u0412\u041f",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "40301000000",
+          "type": "ru_oktmo",
+          "label": "Ru Oktmo"
+        },
+        {
+          "value": "7521952",
+          "type": "ru_okpo",
+          "label": "Ru Okpo"
+        },
+        {
+          "value": "7839395419",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "MF99BB8HHT56",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "PSBJFUECDUA5",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "PSCEBQSUJEW9",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "190121, \u0433 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u043d\u0430\u0431 \u0420\u0435\u043a\u0438 \u0424\u043e\u043d\u0442\u0430\u043d\u043a\u0438, \u0434\u043e\u043c 203",
+        "190121, g Sankt-Peterburg, nab Reki Fontanki, dom 203",
+        "190121, St. Petersburg, Reky Fontanka embankment, building 203",
+        "190121, \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u043d\u0430\u0431. \u0440\u0435\u043a\u0438 \u0424\u043e\u043d\u0442\u0430\u043d\u043a\u0438, 203",
+        "190121, Sankt-Peterburg, nab. reki Fontanki, 203",
+        "190121, St. Petersburg, emb. Fontanka River, 203",
+        "203, Fontanka Emb., 190121, St.Peterburg, Russia",
+        "190121, \u0413\u041e\u0420\u041e\u0414 \u0421\u0410\u041d\u041a\u0422-\u041f\u0415\u0422\u0415\u0420\u0411\u0423\u0420\u0413, \u041d\u0410\u0411\u0415\u0420\u0415\u0416\u041d\u0410\u042f \u0420\u0415\u041a\u0418 \u0424\u041e\u041d\u0422\u0410\u041d\u041a\u0418, \u0434\u043e\u043c \u0414\u041e\u041c 203",
+        "190121, GOROD SANKT-PETERBURG, NABEREZNAA REKI FONTANKI, dom DOM 203",
+        "190121, CITY OF SAINT PETERSBURG, FONTANKA RIVER EMBANKMENT, building HOUSE 203",
+        "\u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0430\u044f \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0438\u044f, 190121,, \u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433,",
+        "Rossijskaa Federacia, 190121,, g. Sankt-Peterburg,",
+        "Russian Federation, 190121, St. Petersburg,",
+        "190121, \u0413\u041e\u0420\u041e\u0414 \u0424\u0415\u0414\u0415\u0420\u0410\u041b\u042c\u041d\u041e\u0413\u041e \u0417\u041d\u0410\u0427\u0415\u041d\u0418\u042f, \u0421\u0410\u041d\u041a\u0422-\u041f\u0415\u0422\u0415\u0420\u0411\u0423\u0420\u0413, \u041d\u0410\u0411\u0415\u0420\u0415\u0416\u041d\u0410\u042f \u0420\u0415\u041a\u0418 \u0424\u041e\u041d\u0422\u0410\u041d\u041a\u0418,",
+        "190121, GOROD FEDERAL\u02b9NOGO ZNACENIA, SANKT-PETERBURG, NABEREZNAA REKI FONTANKI,",
+        "190121, CITY OF FEDERAL SIGNIFICANCE, ST. PETERSBURG, FONTANKA RIVER EMBANKMENT,",
+        "115184, \u0413\u041e\u0420\u041e\u0414 \u041c\u041e\u0421\u041a\u0412\u0410, \u0423\u041b\u0418\u0426\u0410 \u0422\u0410\u0422\u0410\u0420\u0421\u041a\u0410\u042f \u0411., \u0414\u041e\u041c 7, \u041a\u041e\u041c\u041d\u0410\u0422\u042b 3, 4, 4\u0410, 4\u0411",
+        "115184, GOROD MOSKVA, ULICA TATARSKAA B., DOM 7, KOMNATY 3, 4, 4A, 4B",
+        "115184, MOSCOW CITY, B. TATARSKAYA STREET, BUILDING 7, ROOMS 3, 4, 4A, 4B",
+        "190008, \u0413.\u0421\u0410\u041d\u041a\u0422-\u041f\u0415\u0422\u0415\u0420\u0411\u0423\u0420\u0413, \u0423\u041b \u0421\u0410\u0414\u041e\u0412\u0410\u042f, \u0414. 126, \u041b\u0418\u0422\u0415\u0420\u0410 \u0410",
+        "190008, G.SANKT-PETERBURG, UL SADOVAA, D. 126, LITERA A",
+        "190008, SAINT-PETERSBURG, STREET SADOVAYA, D. 126, LETTER A",
+        "190121, \u0413\u041e\u0420\u041e\u0414 \u0421\u0410\u041d\u041a\u0422-\u041f\u0415\u0422\u0415\u0420\u0411\u0423\u0420\u0413, \u0423\u041b\u0418\u0426\u0410 \u0421\u0410\u0414\u041e\u0412\u0410\u042f, 126 \u041b\u0418\u0422. \u0410",
+        "190121, GOROD SANKT-PETERBURG, ULICA SADOVAA, 126 LIT. A",
+        "190121, CITY OF SAINT PETERSBURG, SADOVAYA STREET, 126 LIT. A",
+        "203 Fontanka River Embankment, St. Peterburg, 190121, RU",
+        "115184, \u0413.\u041c\u041e\u0421\u041a\u0412\u0410, \u0423\u041b \u0411\u041e\u041b\u042c\u0428\u0410\u042f \u0422\u0410\u0422\u0410\u0420\u0421\u041a\u0410\u042f, \u0414. 7, \u041a\u041e\u041c\u041d\u0410\u0422\u042b 3, 4, 4\u0410, 4\u0411",
+        "115184, G.MOSKVA, UL BOL\u02b9SAA TATARSKAA, D. 7, KOMNATY 3, 4, 4A, 4B",
+        "115184, MOSCOW, BOLSHAYA TATARSKAYA STREET, 7, ROOMS 3, 4, 4A, 4B",
+        "203, Fontanka Emb., 190121, St. Petersburg, RU",
+        "\u041a\u0418\u0422\u0410\u0419\u0421\u041a\u0410\u042f \u041d\u0410\u0420\u041e\u0414\u041d\u0410\u042f \u0420\u0415\u0421\u041f\u0423\u0411\u041b\u0418\u041a\u0410, \u0413. \u041f\u0415\u041a\u0418\u041d, \u0420\u0410\u0419\u041e\u041d \u0427\u0410\u041e\u042f\u041d, \u041f\u0420\u041e\u0421\u041f\u0415\u041a\u0422 \u0426\u0417\u042f\u041d\u0413\u041e\u041c\u042d\u041d\u042c\u0412\u0410\u0419 19, \u0417\u0414\u0410\u041d\u0418\u0415 CITIC, \u0421\u0422\u0420\u041e\u0415\u041d\u0418\u0415 1, 18 \u042d\u0422\u0410\u0416, \u041a\u041e\u041c\u041d\u0410\u0422\u0410 18-01\u0421",
+        "KITAJSKAA NARODNAA RESPUBLIKA, G. PEKIN, RAJON CAOAN, PROSPEKT CZANGOMEN\u02b9VAJ 19, ZDANIE CITIC, STROENIE 1, 18 ETAZ, KOMNATA 18-01S",
+        "PEOPLE'S REPUBLIC OF CHINA, BEIJING, CHAOYAN DISTRICT, 19 JIANGHOMENWAI AVENUE, CITIC BUILDING, BUILDING 1, 18TH FLOOR, ROOM 18-01C",
+        "190121, \u0420\u043e\u0441\u0456\u0439\u0441\u044c\u043a\u0430 \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0456\u044f, \u043c. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u043d\u0430\u0431. \u0420\u0456\u043a\u0438 \u0424\u043e\u043d\u0442\u0430\u043d\u043a\u0438, \u0431\u0443\u0434. 203",
+        "190121, Rosijs\u02b9ka Federacia, m. Sankt-Peterburg, nab. Riki Fontanki, bud. 203",
+        "190121, Russian Federation, metro station St. Petersburg, emb. Rivers of Fontanka, bud. 203",
+        "\u0420-\u041d \u0427\u0410\u041e\u042f\u041d, \u0423\u041b. \u0427\u0410\u041e\u0412\u0410\u0419\u0414\u0410\u0426\u0417\u0415, 6\u0410, \u0414\u0415\u041b\u041e\u0412\u041e\u0419 \u0426\u0415\u041d\u0422\u0420 \"\u0412\u0410\u041d\u042c\u0422\u0423\u041d\" 3-1302",
+        "R-N CAOAN, UL. CAOVAJDACZE, 6A, DELOVOJ CENTR \"VAN\u02b9TUN\" 3-1302",
+        "CHAOYANG DISTRICT, ST. CHAOWAIDATZIE 6A, WANTUNG BUSINESS CENTER 3-1302"
+      ],
+      "countries": [
+        "RUS"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "d357238101a2bb02d97d5d77a56d9455",
+        "6c14405dec0a245d6acd6a3650d49de4",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "10a889609ddae6cc31773feebe48166b",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "ded706ef28cdc649b6fc5142bc542890",
+        "3322a755c28851ec06eda3280cc2a2b2",
+        "e6e4acebdea4e9e71af8d3586d34fcdd",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "b7d545bc2801c3a080bcfec866a9f27f",
+        "fd46028e08cc491708167e82d0cfbe93",
+        "66dfefb726ae00fde8f09f34c5578d35",
+        "bef2f30139ea37c723ecb0f953b5f024",
+        "b97ad5c858093e5227b2359a0078696f",
+        "a9a18eeb901e4376c912e95dc05ceb78",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "635021e4e01979cdf95fa7ee76501696",
+        "a4be698ea3263f7f7f3906d1c98cffc2",
+        "93de05b55a68cc964f34bbfc7ec7bc86",
+        "56bce0e008204712e302271ddd7b4fb1",
+        "4ff85397f508e4ff8e71c5ca5ea895dd",
+        "1b27af6fa4018a70fbce9ca6f316e21c",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "78b9eb45e7266680e1b9908b7f88dcb7"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoDistance|5km|0",
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "Joint Stock Company <em>Admiralty</em> <em>Shipyards</em>",
+          "JSC <em>Admiralty</em> <em>Shipyards</em>",
+          "<em>Admiralty</em> <em>Shipyards</em>",
+          "\"<em>Admiralty</em> <em>Shipyards</em>\"",
+          "Joint Stock Company \"<em>Admiralty</em> <em>Shipyards</em>\"",
+          "<em>Admiralty</em> <em>Shipyard</em> JSC"
+        ],
+        "address": [
+          "<em>203</em> <em>Fontanka</em> <em>River</em> <em>Embankment</em>, <em>St</em>. <em>Peterburg</em>, 190121, RU",
+          "190121, <em>St</em>. <em>Petersburg</em>, Reky <em>Fontanka</em> <em>embankment</em>, building <em>203</em>",
+          "190121, <em>St</em>. <em>Petersburg</em>, emb. <em>Fontanka</em> <em>River</em>, <em>203</em>",
+          "190121, CITY OF SAINT <em>PETERSBURG</em>, <em>FONTANKA</em> <em>RIVER</em> <em>EMBANKMENT</em>, building HOUSE <em>203</em>",
+          "<em>203</em>, <em>Fontanka</em> Emb., 190121, <em>St</em>. <em>Petersburg</em>, RU"
+        ],
+        "country": [
+          "<em>RUS</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "Joint Stock Company <em>Admiralty</em> <em>Shipyards</em>",
+            "uploaded": "Admiralty Shipyards",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4,
+              "lv": 0.6551724137931034,
+              "fz": 0.4871794871794872,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "JSC <em>Admiralty</em> <em>Shipyards</em>",
+            "uploaded": "Admiralty Shipyards",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.6666666666666665,
+              "lv": 0.9047619047619048,
+              "fz": 0.8260869565217391,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Admiralty</em> <em>Shipyards</em>",
+            "uploaded": "Admiralty Shipyards",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 1.0,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "\"<em>Admiralty</em> <em>Shipyards</em>\"",
+            "uploaded": "Admiralty Shipyards",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 1.0,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "Joint Stock Company \"<em>Admiralty</em> <em>Shipyards</em>\"",
+            "uploaded": "Admiralty Shipyards",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4,
+              "lv": 0.6551724137931034,
+              "fz": 0.4871794871794872,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Admiralty</em> <em>Shipyard</em> JSC",
+            "uploaded": "Admiralty Shipyards",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.6666666666666665,
+              "lv": 0.926829268292683,
+              "fz": 0.8636363636363636,
+              "l1": 0.9473684210526315,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>203</em> <em>Fontanka</em> <em>River</em> <em>Embankment</em>, <em>St</em>. <em>Peterburg</em>, 190121, RU",
+            "uploaded": "203 Fontanka River Embankment St. Petersburg",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "190121, <em>St</em>. <em>Petersburg</em>, Reky <em>Fontanka</em> <em>embankment</em>, building <em>203</em>",
+            "uploaded": "203 Fontanka River Embankment St. Petersburg",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "190121, <em>St</em>. <em>Petersburg</em>, emb. <em>Fontanka</em> <em>River</em>, <em>203</em>",
+            "uploaded": "203 Fontanka River Embankment St. Petersburg",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "190121, CITY OF SAINT <em>PETERSBURG</em>, <em>FONTANKA</em> <em>RIVER</em> <em>EMBANKMENT</em>, building HOUSE <em>203</em>",
+            "uploaded": "203 Fontanka River Embankment St. Petersburg",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "<em>203</em>, <em>Fontanka</em> Emb., 190121, <em>St</em>. <em>Petersburg</em>, RU",
+            "uploaded": "203 Fontanka River Embankment St. Petersburg",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 203.4774,
+      "entity_id": "rRQActMz38DRNBoWaHX-ZQ",
+      "label": "\u041e\u0442\u043a\u0440\u044b\u0442\u043e\u0435 \u0430\u043a\u0446\u0438\u043e\u043d\u0435\u0440\u043d\u043e\u0435 \u043e\u0431\u0449\u0435\u0441\u0442\u0432\u043e \"\u0410\u0434\u043c\u0438\u0440\u0430\u043b\u0442\u0435\u0439\u0441\u043a\u0438\u0435 \u0432\u0435\u0440\u0444\u0438\"",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "7839395419",
+          "type": "ru_tin",
+          "label": "Ru Tin"
+        },
+        {
+          "value": "5c5b5a0bfb44fb0001520d7b",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "1089848054339",
+          "type": "ru_registration_number",
+          "label": "Ru Registration Number"
+        },
+        {
+          "value": "1089848054339",
+          "type": "ru_ogrn",
+          "label": "Ru Ogrn"
+        },
+        {
+          "value": "7839395419",
+          "type": "ru_inn",
+          "label": "Ru Inn"
+        },
+        {
+          "value": "783901001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "997850001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "783943001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "190121, \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u043d\u0430\u0431. \u0440\u0435\u043a\u0438 \u0424\u043e\u043d\u0442\u0430\u043d\u043a\u0438, 203",
+        "190121, Sankt-Peterburg, nab. reki Fontanki, 203",
+        "190121, St. Petersburg, emb. Fontanka River, 203",
+        "190121, \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0420\u0435\u043a\u0438 \u0424\u043e\u043d\u0442\u0430\u043d\u043a\u0438, \u0434\u043e\u043c 203",
+        "190121, Sankt-Peterburg, Reki Fontanki, dom 203",
+        "190121, St. Petersburg, Fontanka River, building 203",
+        "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u043d\u0430\u0431. \u0440\u0435\u043a\u0438 \u0424\u043e\u043d\u0442\u0430\u043d\u043a\u0438, \u0434. 203",
+        "Sankt-Peterburg, nab. reki Fontanki, d. 203",
+        "St. Petersburg, Fontanka River Embankment, Building 203",
+        "\u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0430\u044f \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0438\u044f, 191121, \u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u043d\u0430\u0431. \u0440\u0435\u043a\u0438 \u0424\u043e\u043d\u0442\u0430\u043d\u043a\u0438, \u0434. 203",
+        "Rossijskaa Federacia, 191121, g. Sankt-Peterburg, nab. reki Fontanki, d. 203",
+        "Russian Federation, 191121, St. Petersburg, nab. 203, Fontanka River",
+        "190121, \u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0443\u043b. \u0424\u043e\u043d\u0442\u0430\u043d\u043a\u0430, \u0434. 203",
+        "190121, g. Sankt-Peterburg, ul. Fontanka, d. 203",
+        "190121, St. Petersburg, st. Fontanka, 203",
+        "\u0420\u043e\u0441\u0441\u0438\u044f, \u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+        "Rossia, g. Sankt-Peterburg",
+        "Russia, St. Petersburg"
+      ],
+      "countries": [
+        "RUS"
+      ],
+      "sources": [
+        "66dfefb726ae00fde8f09f34c5578d35",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "635021e4e01979cdf95fa7ee76501696",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "3322a755c28851ec06eda3280cc2a2b2"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoDistance|5km|0",
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "Open Joint Stock Company <em>Admiralty</em> <em>Shipyards</em>",
+          "OJSC \"<em>Admiralty</em> <em>Shipyards</em>\"",
+          "\"Medcenter\" JSC \"<em>Admiralty</em> <em>Shipyards</em>\"",
+          "<em>Admiralty</em> <em>Shipyards</em>",
+          "<em>ADMIRALTY</em> <em>SHIPYARD</em> JSC"
+        ],
+        "address": [
+          "<em>St</em>. <em>Petersburg</em>, <em>Fontanka</em> <em>River</em> <em>Embankment</em>, Building <em>203</em>",
+          "190121, <em>St</em>. <em>Petersburg</em>, emb. <em>Fontanka</em> <em>River</em>, <em>203</em>",
+          "190121, <em>St</em>. <em>Petersburg</em>, <em>Fontanka</em> <em>River</em>, building <em>203</em>",
+          "Russian Federation, 191121, <em>St</em>. <em>Petersburg</em>, nab. <em>203</em>, <em>Fontanka</em> <em>River</em>",
+          "190121, <em>St</em>. <em>Petersburg</em>, <em>st</em>. <em>Fontanka</em>, <em>203</em>"
+        ],
+        "country": [
+          "<em>RUS</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "Open Joint Stock Company <em>Admiralty</em> <em>Shipyards</em>",
+            "uploaded": "Admiralty Shipyards",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.33333333333333326,
+              "lv": 0.6031746031746033,
+              "fz": 0.43181818181818177,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "OJSC \"<em>Admiralty</em> <em>Shipyards</em>\"",
+            "uploaded": "Admiralty Shipyards",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.6666666666666665,
+              "lv": 0.8837209302325582,
+              "fz": 0.7916666666666666,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "\"Medcenter\" JSC \"<em>Admiralty</em> <em>Shipyards</em>\"",
+            "uploaded": "Admiralty Shipyards",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.5,
+              "lv": 0.7307692307692308,
+              "fz": 0.5757575757575757,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Admiralty</em> <em>Shipyards</em>",
+            "uploaded": "Admiralty Shipyards",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 1.0,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>ADMIRALTY</em> <em>SHIPYARD</em> JSC",
+            "uploaded": "Admiralty Shipyards",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.6666666666666665,
+              "lv": 0.926829268292683,
+              "fz": 0.8636363636363636,
+              "l1": 0.9473684210526315,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>St</em>. <em>Petersburg</em>, <em>Fontanka</em> <em>River</em> <em>Embankment</em>, Building <em>203</em>",
+            "uploaded": "203 Fontanka River Embankment St. Petersburg",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "190121, <em>St</em>. <em>Petersburg</em>, emb. <em>Fontanka</em> <em>River</em>, <em>203</em>",
+            "uploaded": "203 Fontanka River Embankment St. Petersburg",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "190121, <em>St</em>. <em>Petersburg</em>, <em>Fontanka</em> <em>River</em>, building <em>203</em>",
+            "uploaded": "203 Fontanka River Embankment St. Petersburg",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "Russian Federation, 191121, <em>St</em>. <em>Petersburg</em>, nab. <em>203</em>, <em>Fontanka</em> <em>River</em>",
+            "uploaded": "203 Fontanka River Embankment St. Petersburg",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "190121, <em>St</em>. <em>Petersburg</em>, <em>st</em>. <em>Fontanka</em>, <em>203</em>",
+            "uploaded": "203 Fontanka River Embankment St. Petersburg",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    }
+  ]
+}

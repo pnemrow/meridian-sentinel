@@ -1,0 +1,1445 @@
+{
+  "fields": {
+    "name": [
+      "Belarusian Potash Company"
+    ],
+    "identifier": null,
+    "profile": null,
+    "country": [
+      "BLR"
+    ],
+    "address": null,
+    "date_of_birth": null,
+    "contact": null,
+    "type": null
+  },
+  "data": [
+    {
+      "profile": "corporate",
+      "score": 215.24669,
+      "entity_id": "BSsUPVlxsICOW4GCjb4fqQ",
+      "label": "Avoin osakeyhti\u00f6 \u201dBelarusian Potash Company\u201d",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "140352",
+          "type": "eu_fsd_id",
+          "label": "Eu Fsd Id"
+        },
+        {
+          "value": "192050251",
+          "type": "blr_registration_number",
+          "label": "Blr Registration Number"
+        },
+        {
+          "value": "33374",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "EU.8280.51",
+          "type": "eu_sanction_rn",
+          "label": "Eu Sanction Rn"
+        },
+        {
+          "value": "4864",
+          "type": "fra_asset_freeze_id",
+          "label": "Fra Asset Freeze Id"
+        },
+        {
+          "value": "C1550646",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "190615971",
+          "type": "blr_registration_number",
+          "label": "Blr Registration Number"
+        },
+        {
+          "value": "F04871",
+          "type": "ind_fcrn",
+          "label": "Ind Fcrn"
+        },
+        {
+          "value": "61a8e1e2a209920001526a3e",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "54566",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "IN108176700",
+          "type": "ind_techsalerator_id",
+          "label": "Ind Techsalerator Id"
+        },
+        {
+          "value": "192050251",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "375(17)309-30-30",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "13 Sep 2013",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "MJF3P545PUM8",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "MJH5UFTYQVN5",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "ZHGUDK3J1VZ5",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "ZJV7ELAHG5E7",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "JW53R99STAX5",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "35 Masherova Ave. Minsk 220002 BELARUS",
+        "35 avenue Masherova, 220002 Minsk, BI\u00c9LORUSSIE",
+        "35 avenue Masherova, 220002 Minsk, BIELORUSSIE",
+        "MASHEROVA AVE, BUILDING 35, ROOM 644, MINSK, BLR, 220002",
+        "\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0411\u0435\u043b\u0430\u0440\u0443\u0441\u044c, 220002, \u0433. \u041c\u0438\u043d\u0441\u043a, \u043f\u0440-\u0442 \u041c\u0430\u0448\u0435\u0440\u043e\u0432\u0430, \u0434. 35, \u043f\u043e\u043c. 645",
+        "Respublika Belarus\u02b9, 220002, g. Minsk, pr-t Maserova, d. 35, pom. 645",
+        "Republic of Belarus, 220002, Minsk, Masherova Avenue, 35, d. 645",
+        "\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0411\u0435\u043b\u0430\u0440\u0443\u0441\u044c, 220002, \u0433. \u041c\u0438\u043d\u0441\u043a, \u043f\u0440-\u0442 \u041c\u0430\u0448\u0435\u0440\u043e\u0432\u0430, \u0434. 35, \u043f\u043e\u043c. 644",
+        "Respublika Belarus\u02b9, 220002, g. Minsk, pr-t Maserova, d. 35, pom. 644",
+        "Republic of Belarus, 220002, Minsk, Masherova Ave., 35, office. 644",
+        "MINSK,THE REPUBLIC OF BELARUS",
+        "Unit/Office No. 402, IVth (Fourth) Floor, Commerci The Palm Springs Plaza,Golf Course Road, Sector- 54 Gurgaon HR 122001 IN",
+        "AtlF Global, 1st Floor   Global Foyer Mall, Golf Course RoadNA-Gurgaon-Haryana-122002-India",
+        "\u0433. \u041c\u0438\u043d\u0441\u043a, \u0443\u043b. \u041c\u0435\u043b\u044c\u043d\u0438\u043a\u0430\u0439\u0442\u0435, \u0434. 2, 1805 \u0430",
+        "g. Minsk, ul. Mel\u02b9nikajte, d. 2, 1805 a",
+        "Minsk, st. Melnikaite, 2, 1805 a",
+        "JSC BELARUSIAN POTASH COMPANY 35,MASHEROVA AVE,22",
+        "504, Suncity Business Tower Golf Course Road, Sector 54 Gurgaon HR 122002 IN"
+      ],
+      "countries": [
+        "BLR",
+        "RUS",
+        "LTU",
+        "CHN",
+        "IND",
+        "DEU",
+        "TUR",
+        "AUS",
+        "USA"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "3ba7324ad30e7db94b6ca85e0e91fb52",
+        "5ccce9bac81d59d454484d22d2534fad",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "6c14405dec0a245d6acd6a3650d49de4",
+        "b1d2f50f163413806366618fed7cfac4",
+        "53025b5e8f2032f5f23878503e1edc34",
+        "10a889609ddae6cc31773feebe48166b",
+        "ded706ef28cdc649b6fc5142bc542890",
+        "5ccce9bac81d59d454484d22d2534fad",
+        "a7829d9c8999fcaa78af55886da9be06",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "b97ad5c858093e5227b2359a0078696f",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "e5de7b52cc88ef4cd1a10e201bdf46ee",
+        "ad6dc774c74b92159422deabc5aee661",
+        "635021e4e01979cdf95fa7ee76501696",
+        "ac1fa195f9cd4ccf657bca3c6db0bb19",
+        "93de05b55a68cc964f34bbfc7ec7bc86",
+        "c7c2684a1a28cce25025c6b7c6a97bf1",
+        "faa9caafcfabcee04ef2f0b21dd9197a",
+        "4a34a8375e7041cf8661fa82366c60ea",
+        "1b27af6fa4018a70fbce9ca6f316e21c",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "97e5432248a4cfd02b48fdcc4d0e236e",
+        "f4ce10ac8bdc0bd9bcb31cb868b4b539"
+      ],
+      "typed_matched_queries": [
+        "country|0",
+        "country|1",
+        "country|11",
+        "country|27",
+        "country|7",
+        "name|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "Avoin osakeyhti\u00f6 \u201d<em>Belarusian</em> <em>Potash</em> <em>Company</em>\u201d",
+          "Avoin osakeyhtio \u201d<em>Belarusian</em> <em>Potash</em> <em>Company</em>\u201d",
+          "Akciov\u00e1 spole\u010dnost \u201c<em>Belarusian</em> <em>Potash</em> <em>Company</em>\u201c",
+          "Akciova spolecnost \u201c<em>Belarusian</em> <em>Potash</em> <em>Company</em>\u201c",
+          "Covert shares <em>Belarusian</em> <em>potash</em> <em>company</em>",
+          "Avoin osakeyhti\u00f6 \u201d<em>Belarusian</em> <em>Potash</em> Company\u201d",
+          "Avoin osakeyhtio \u201d<em>Belarusian</em> <em>Potash</em> Company\u201d",
+          "Akciov\u00e1 spole\u010dnost \u201c<em>Belarusian</em> <em>Potash</em> Company\u201c",
+          "Akciova spolecnost \u201c<em>Belarusian</em> <em>Potash</em> Company\u201c",
+          "Covert shares <em>Belarusian</em> <em>potash</em> company"
+        ],
+        "country": [
+          "<em>BLR</em>",
+          "<em>RUS</em>",
+          "<em>CHN</em>",
+          "<em>IND</em>",
+          "<em>TUR</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "Avoin osakeyhti\u00f6 \u201d<em>Belarusian</em> <em>Potash</em> <em>Company</em>\u201d",
+            "uploaded": "Belarusian Potash Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2,
+              "lv": 0.7246376811594203,
+              "fz": 0.5681818181818181,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Avoin osakeyhtio \u201d<em>Belarusian</em> <em>Potash</em> <em>Company</em>\u201d",
+            "uploaded": "Belarusian Potash Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.2,
+              "lv": 0.7246376811594203,
+              "fz": 0.5681818181818181,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Akciov\u00e1 spole\u010dnost \u201c<em>Belarusian</em> <em>Potash</em> <em>Company</em>\u201c",
+            "uploaded": "Belarusian Potash Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.2,
+              "lv": 0.704225352112676,
+              "fz": 0.5434782608695652,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Akciova spolecnost \u201c<em>Belarusian</em> <em>Potash</em> <em>Company</em>\u201c",
+            "uploaded": "Belarusian Potash Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.2,
+              "lv": 0.704225352112676,
+              "fz": 0.5434782608695652,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Covert shares <em>Belarusian</em> <em>potash</em> <em>company</em>",
+            "uploaded": "Belarusian Potash Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.41877021995339503,
+              "lv": 0.78125,
+              "fz": 0.641025641025641,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "Avoin osakeyhti\u00f6 \u201d<em>Belarusian</em> <em>Potash</em> Company\u201d",
+            "uploaded": "Belarusian Potash Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.2,
+              "lv": 0.7246376811594203,
+              "fz": 0.5681818181818181,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Avoin osakeyhtio \u201d<em>Belarusian</em> <em>Potash</em> Company\u201d",
+            "uploaded": "Belarusian Potash Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.2,
+              "lv": 0.7246376811594203,
+              "fz": 0.5681818181818181,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Akciov\u00e1 spole\u010dnost \u201c<em>Belarusian</em> <em>Potash</em> Company\u201c",
+            "uploaded": "Belarusian Potash Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.2,
+              "lv": 0.704225352112676,
+              "fz": 0.5434782608695652,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Akciova spolecnost \u201c<em>Belarusian</em> <em>Potash</em> Company\u201c",
+            "uploaded": "Belarusian Potash Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.2,
+              "lv": 0.704225352112676,
+              "fz": 0.5434782608695652,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Covert shares <em>Belarusian</em> <em>potash</em> company",
+            "uploaded": "Belarusian Potash Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4,
+              "lv": 0.78125,
+              "fz": 0.641025641025641,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>BLR</em>",
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>CHN</em>",
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>IND</em>",
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>TUR</em>",
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 146.62885,
+      "entity_id": "UCdQClZUJa4ZX4hkOH9oDA",
+      "label": "Belarusian Potash Company",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "NK-mmxfM5pmgkwatVSVwuAG5i",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [],
+      "countries": [
+        "BLR"
+      ],
+      "sources": [
+        "24ca9e1480ab586a153d3ae12a7b83a0"
+      ],
+      "typed_matched_queries": [
+        "country|0",
+        "name|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Belarusian</em> <em>Potash</em> <em>Company</em>",
+          "<em>Belarusian</em> <em>Potash</em> Company"
+        ],
+        "country": [
+          "<em>BLR</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Belarusian</em> <em>Potash</em> <em>Company</em>",
+            "uploaded": "Belarusian Potash Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.6979503665889917,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Belarusian</em> <em>Potash</em> Company",
+            "uploaded": "Belarusian Potash Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.6666666666666665,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>BLR</em>",
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 153.92865,
+      "entity_id": "0JGXMMAvMK1lwYq5H5QM2w",
+      "label": "JSC Belarusian Potash Company",
+      "type": "company",
+      "identifiers": [],
+      "psa_id": null,
+      "addresses": [],
+      "countries": [
+        "IND"
+      ],
+      "sources": [
+        "5e3abcd9af2a44f6173fd02346f1f778"
+      ],
+      "typed_matched_queries": [
+        "country|27",
+        "name|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "JSC <em>Belarusian</em> <em>Potash</em> <em>Company</em>",
+          "JSC <em>Belarusian</em> <em>Potash</em> Company"
+        ],
+        "country": [
+          "<em>IND</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "JSC <em>Belarusian</em> <em>Potash</em> <em>Company</em>",
+            "uploaded": "Belarusian Potash Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.5234627749417438,
+              "lv": 0.9259259259259259,
+              "fz": 0.8620689655172413,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "JSC <em>Belarusian</em> <em>Potash</em> Company",
+            "uploaded": "Belarusian Potash Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.5,
+              "lv": 0.9259259259259259,
+              "fz": 0.8620689655172413,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": "<em>IND</em>",
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    }
+  ]
+}

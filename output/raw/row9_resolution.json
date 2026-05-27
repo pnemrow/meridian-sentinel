@@ -1,0 +1,4392 @@
+{
+  "fields": {
+    "name": [
+      "Huawei Technologies Co. Ltd."
+    ],
+    "identifier": null,
+    "profile": null,
+    "country": [
+      "CHN"
+    ],
+    "address": [
+      "Bantian Longgang District Shenzhen"
+    ],
+    "date_of_birth": null,
+    "contact": null,
+    "type": null
+  },
+  "data": [
+    {
+      "profile": "corporate",
+      "score": 150.58875,
+      "entity_id": "5n9BpqEMoMVQvMKBBKbk2g",
+      "label": "HUAWEI TECHNOLOGIES CO LTD",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "7714186804",
+          "type": "ru_tin",
+          "label": "Ru Tin"
+        },
+        {
+          "value": "1791845722001",
+          "type": "ecu_importer_id",
+          "label": "Ecu Importer Id"
+        },
+        {
+          "value": "1791845722001",
+          "type": "ecu_exporter_id",
+          "label": "Ecu Exporter Id"
+        },
+        {
+          "value": "1027739023212",
+          "type": "ru_registration_number",
+          "label": "Ru Registration Number"
+        },
+        {
+          "value": "7714186804",
+          "type": "ru_inn",
+          "label": "Ru Inn"
+        },
+        {
+          "value": "1027739023212",
+          "type": "ru_ogrn",
+          "label": "Ru Ogrn"
+        },
+        {
+          "value": "165020766613",
+          "type": "swe_tax_number",
+          "label": "Swe Tax Number"
+        },
+        {
+          "value": "5020766613",
+          "type": "swe_org_no",
+          "label": "Swe Org No"
+        },
+        {
+          "value": "1791845722001",
+          "type": "ecu_ruc_number",
+          "label": "Ecu Ruc Number"
+        },
+        {
+          "value": "93391",
+          "type": "ecu_company_id",
+          "label": "Ecu Company Id"
+        },
+        {
+          "value": "C871587",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "NK-j3SH3rM4EHTuHaVebHeR3D",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "192203821",
+          "type": "cn_organization_code",
+          "label": "Cn Organization Code"
+        },
+        {
+          "value": "440307192203821",
+          "type": "cn_tax_identification_number",
+          "label": "Cn Tax Identification Number"
+        },
+        {
+          "value": "773101001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "774850001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "000193058-0101",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "13168 \u041d \u041d\u0410 \u0411\u041b\u0410\u041d\u041a\u0415 \u041b\u0421\u0417 No 0009522",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0420\u0415\u0413. No13639 \u041d \u041d\u0410 \u0411\u041b\u0410\u041d\u041a\u0415 \u041b\u0421\u0417 No0010505",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "997150001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "77-\u0411/02456",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "1733",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "3253",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b024-00107-00/00583282",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b050-00107-00/00583943",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "771401001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "4403011022600",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "45319000000",
+          "type": "ru_oktmo",
+          "label": "Ru Oktmo"
+        },
+        {
+          "value": "55189013",
+          "type": "ru_okpo",
+          "label": "Ru Okpo"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "121614, , \u0413.\u041c\u041e\u0421\u041a\u0412\u0410, \u0423\u041b.\u041a\u0420\u042b\u041b\u0410\u0422\u0421\u041a\u0410\u042f,\u0414.17,\u0421\u0422\u0420.2,",
+        "121614, , G.MOSKVA, UL.KRYLATSKAA,D.17,STR.2,",
+        "121614, , MOSCOW, KRYLATSKAYA STREET, 17, Bldg. 2,",
+        "121614, \u0413., \u041c\u041e\u0421\u041a\u0412\u0410, \u0423\u041b. \u041a\u0420\u042b\u041b\u0410\u0422\u0421\u041a\u0410\u042f, \u0414.17, \u0421\u0422\u0420.2,",
+        "121614, G., MOSKVA, UL. KRYLATSKAA, D.17, STR.2,",
+        "121614, G., MOSCOW, ST. KRYLATSKAYA, 17, Bldg. 2,",
+        "99 QUEENS RD,RM3610-12 36FL THE CENTER",
+        "Bantian Longgang district, Shenzhen, P.R. China",
+        "\u041a\u0418\u0422\u0410\u0419518129 SHENZHEN BANTIANLONGGANG DISTRICT PR CHINA",
+        "KITAJ518129 SHENZHEN BANTIANLONGGANG DISTRICT PR CHINA",
+        "CHINA518129 SHENZHEN BANTIANLONGGANG DISTRICT PR CHINA",
+        "Bantian Longgang district Shenzhen, \u041a\u0438\u0442\u0430\u0439",
+        "Bantian Longgang district Shenzhen, Kitaj",
+        "Bantian Longgang district Shenzhen, China",
+        "AV. REPUBLICA DEL SALVADOR 734 Y AV. PORTUGAL, EDIF. ATHOS 7",
+        "Av. Rep. De El Salvador N34-107 Y Suiza Edificio Brescia, Piso 7",
+        ", , SHENZHEN, HUAWEI BASE,BANTIAN LONGGANG DISTRICT, ..,,",
+        "\u041a\u0438\u0442\u0430\u0439, BANTAI, LONGGANG DISTRICT, SHENZHEN, CHINA, ADMINISTRATION BUILDING, HUAWEI TECHNOLOGIES CO.",
+        "Kitaj, BANTAI, LONGGANG DISTRICT, SHENZHEN, CHINA, ADMINISTRATION BUILDING, HUAWEI TECHNOLOGIES CO.",
+        "China, BANTAI, LONGGANG DISTRICT, SHENZHEN, CHINA, ADMINISTRATION BUILDING, HUAWEI TECHNOLOGIES CO.",
+        "Huawei Industrial Base, Bantian Lo Shenzhen 518129 P.R. China",
+        "Bantian, Longgang, Shenzhen, P.R. China. , 0",
+        "Administration Building, Huawei Technologies Co., Ltd., Bantian, Longgang District, Shenzhen, China",
+        "AV JUAN TANCA MARENGO EDIFICIO NOBIS",
+        "Bantian Longgang district Shenzhen, \u041a\u0438\u0442\u0430\u0439 , \u0447/\u0437 \u0442\u0440\u0430\u043d\u0441\u043f. \u043a\u043e\u043c\u043f. Xiongsen Logistics Technology (Guangzhou) Co LTD \u041a\u0438\u0442\u0430\u0439",
+        "Bantian Longgang district Shenzhen, Kitaj , c/z transp. komp. Xiongsen Logistics Technology (Guangzhou) Co LTD Kitaj",
+        "Bantian Longgang district Shenzhen, China, c/w transp. computer Xiongsen Logistics Technology (Guangzhou) Co LTD China",
+        "BANTIAN, LONGGANG DISTRICT SHENZHEN IA HUAWEI INTERNATIONAL PTE. LTD. 5 SHENZHEN CHINA",
+        "Huawei Industrial Base, Bantian Longgang Shenzhen 518129 P.R. China. On Be Half Of Huawei International Pte Ltd,51 Changi Business Park,Singapore.",
+        "., , SHENZHEN, BAN\u0422IAN LONGGANG DIS\u0422RIC\u0422, ...",
+        "., , SHENZHEN, BANTIAN LONGGANG DISTRICT, ...",
+        "\u041a\u0418\u0422\u0410\u0419|BANTIAN|LONGGANG DISTRICT,SHENZHEN",
+        "KITAJ|BANTIAN|LONGGANG DISTRICT,SHENZHEN",
+        "CHINA|BANTIAN|LONGGANG DISTRICT,SHENZHEN",
+        "MOSCOW RUSSIAN FEDERATION 121614 TEL.(495) 234 0686;FAX(495)234 0683",
+        "China",
+        "HUAWEI TECHNOLOGIES CO. LTD. BANTIAN LONGGANG DISTRICT SHENZHEN P.R.CHINA 518129 CONTACT: HUAN XUAN WAN EMAIL: HUAN.XUAN.WAN@HUAWEI.COM MOB:",
+        "BANTIAN LONGGANG DISTRICT SHENZHEN P R CHINA 518129 SHENZHEN CHINA",
+        "Huawei Industrial Base, Bantian Longgang Shenzhen 518129 P.R. China **On Behalf Of Huawei International Pte Ltd 15A, Changi Business Park, Singapore.",
+        "DISTRICT SHENZHEN CHINA 518129",
+        "BANTIAN LONGGANGDISTRICT SHENZHEN P R CHINA 518129",
+        "HUAWEI INDUSTRIAL BASE, BANTIAN LONGGANG SHENZHEN 518129 P.R.CHINA ON BEHALF OF HUAWEI INTERNATIONAL PTE LTD 51,CHANGI BUSINESS PARK CENTRAL 2 #07-08 THE SIGNATURE,SINGAPORE 486066,SINGAPORE",
+        "518129, INDUSTRIAL BASE, SHENZHEN, BANTIAN, LONGGANG DISTRICT,",
+        "518129, ., SH\u0415NZH\u0415N, HUAW\u0415I BAS\u0415, BANTIAN LONGGANG",
+        "518129, ., SHENZHEN, HUAWEI BASE, BANTIAN LONGGANG",
+        "Bantian, Longgang, Shenzhen, P.R. China. , \u0447\u0435\u0440\u0435\u0437 \u0442\u0440.\u043a\u043e\u043c\u043f.\"Xiongsen Losictics Technology (Guangzhou) Co.LTD\" China.",
+        "Bantian, Longgang, Shenzhen, P.R. China. , cerez tr.komp.\"Xiongsen Losictics Technology (Guangzhou) Co.LTD\" China.",
+        "Bantian, Longgang, Shenzhen, P.R. China. , via t.com. \"Xiongsen Losictics Technology (Guangzhou) Co.LTD\" China.",
+        "ALASHANKOU CHINA",
+        "518129, , SHENZHEN, BANTIAN, LONGGANG DISTRICT, ADMINISTRATION BUILDIN,",
+        "\"\u041e\u041e\u041e \"\"\u0422\u0415\u0425\u041a\u041e\u041c\u041f\u0410\u041d\u0418\u042f \u0425\u0423\u0410\u0412\u042d\u0419\"\"\"",
+        "\"OOO \"\"TEHKOMPANIA HUAVEJ\"\"\"",
+        "\"HUAWEI TECH COMPANY LLC\"",
+        "Bantian Longgang district Shenzhen, \u041a\u0438\u0442\u0430\u0439 \u0447/\u0437 GUANGZHOU QUNYUE INTERNATIONAL FREIGHT FORWARDING CO , LTD BAO'AN INTERNATIONAL AIRPORT, SHENZHEN,\u041a\u0418\u0422\u0410\u0419",
+        "Bantian Longgang district Shenzhen, Kitaj c/z GUANGZHOU QUNYUE INTERNATIONAL FREIGHT FORWARDING CO , LTD BAO'AN INTERNATIONAL AIRPORT, SHENZHEN,KITAJ",
+        "Bantian Longgang district Shenzhen, China c/o GUANGZHOU QUNYUE INTERNATIONAL FREIGHT FORWARDING CO , LTD BAO'AN INTERNATIONAL AIRPORT, SHENZHEN,CHINA",
+        "DISTRICT SHENZHEN CHINA 518129 , \u0447\u0435\u0440\u0435\u0437 \u0433.\u041e\u0448 \u041a\u044b\u0440\u0433\u044b\u0437\u0441\u0442\u0430\u043d",
+        "DISTRICT SHENZHEN CHINA 518129 , cerez g.Os Kyrgyzstan",
+        "DISTRICT SHENZHEN CHINA 518129, through the city of Osh, Kyrgyzstan",
+        "PROKISOVA 356/7 CESKE BUDEJOVICE 37001, CZECH REPUBLIC / \u0427\u0435\u0445\u0438\u044f",
+        "PROKISOVA 356/7 CESKE BUDEJOVICE 37001, CZECH REPUBLIC / Cehia",
+        "PROKISOVA 356/7 CESKE BUDEJOVICE 37001, CZECH REPUBLIC / Czech Republic",
+        "HUAWEI INDUSTRIAL BASE BANTIAN LONGGANG SHENZHEN GUANGDONG CHINA",
+        "9/F,TOWER6,THEGATEWAY,NO.9CANTON ROAD,TSIMSHATSUI,KOWLOON,HONGKONG",
+        "344037, \u0420\u041e\u0421\u0422\u041e\u0412\u0421\u041a\u0410\u042f \u041e\u0411\u041b\u0410\u0421\u0422\u042c, \u0413. \u0420\u041e\u0421\u0422\u041e\u0412-\u041d\u0410-\u0414\u041e\u041d\u0423, \u0423\u041b. 14 \u041b\u0418\u041d\u0418\u042f, \u0414.50, \u041e\u0424\u0418\u0421 502",
+        "344037, ROSTOVSKAA OBLAST\u02b9, G. ROSTOV-NA-DONU, UL. 14 LINIA, D.50, OFIS 502",
+        "344037, ROSTOV REGION, ROSTOV-ON-DON, ST. 14 LINE, BLDG. 50, OFFICE 502",
+        "350015, \u041a\u0420\u0410\u0421\u041d\u041e\u0414\u0410\u0420\u0421\u041a\u0418\u0419 \u041a\u0420\u0410\u0419, \u0413. \u041a\u0420\u0410\u0421\u041d\u041e\u0414\u0410\u0420, \u0423\u041b. \u041a\u0423\u0417\u041d\u0415\u0427\u041d\u0410\u042f, \u0414.4",
+        "350015, KRASNODARSKIJ KRAJ, G. KRASNODAR, UL. KUZNECNAA, D.4",
+        "350015, KRASNODAR REGION, KRASNODAR, ST. KUZNECHNAYA, 4",
+        "450022, \u0420\u0415\u0421\u041f\u0423\u0411\u041b\u0418\u041a\u0410 \u0411\u0410\u0428\u041a\u041e\u0420\u0422\u041e\u0421\u0422\u0410\u041d, \u0413 \u0423\u0424\u0410, \u0423\u041b \u041c\u0415\u041d\u0414\u0415\u041b\u0415\u0415\u0412\u0410, \u0414. 134",
+        "450022, RESPUBLIKA BASKORTOSTAN, G UFA, UL MENDELEEVA, D. 134",
+        "450022, REPUBLIC OF BASHKORTOSTAN, UFA, MENDELEEVA STREET, 134",
+        "620026, \u0421\u0412\u0415\u0420\u0414\u041b\u041e\u0412\u0421\u041a\u0410\u042f \u041e\u0411\u041b\u0410\u0421\u0422\u042c, \u0413. \u0415\u041a\u0410\u0422\u0415\u0420\u0418\u041d\u0411\u0423\u0420\u0413, \u0423\u041b. \u0411\u0415\u041b\u0418\u041d\u0421\u041a\u041e\u0413\u041e, \u0414.83",
+        "620026, SVERDLOVSKAA OBLAST\u02b9, G. EKATERINBURG, UL. BELINSKOGO, D.83",
+        "620026, SVERDLOVSK REGION, EKATERINBURG, ST. BELINSKOGO, 83",
+        "603000, \u041d\u0418\u0416\u0415\u0413\u041e\u0420\u041e\u0414\u0421\u041a\u0410\u042f \u041e\u0411\u041b\u0410\u0421\u0422\u042c, \u0413. \u041d\u0418\u0416\u041d\u0418\u0419 \u041d\u041e\u0412\u0413\u041e\u0420\u041e\u0414, \u041f\u0415\u0420. \u0425\u041e\u041b\u041e\u0414\u041d\u042b\u0419, \u0414.10\u0410",
+        "603000, NIZEGORODSKAA OBLAST\u02b9, G. NIZNIJ NOVGOROD, PER. HOLODNYJ, D.10A",
+        "603000, NIZHNY NOVGOROD REGION, NIZHNY NOVGOROD, PER. COLD, 10A",
+        "2ND FLOOR WAREHOUSE 3 SHUNFENG LONGDI LANGXING PARK NO. 34 LIANHUAN ROAD DONGGUAN GUANGDONG CN",
+        "BANTIAN LONGGANG DISTRICT, Shenzhen, P.R. China \u0447/\u0437 GUANGZHOU STAR WALKER INTERNATIONAL, FREIGHT FORWARDING CO., LTD ZHENGDONG NEW DISTRICT",
+        "BANTIAN LONGGANG DISTRICT, Shenzhen, P.R. China c/z GUANGZHOU STAR WALKER INTERNATIONAL, FREIGHT FORWARDING CO., LTD ZHENGDONG NEW DISTRICT",
+        "BANTIAN LONGGANG DISTRICT, Shenzhen, P.R. China h/z GUANGZHOU STAR WALKER INTERNATIONAL, FREIGHT FORWARDING CO., LTD ZHENGDONG NEW DISTRICT",
+        "196105, \u0413.\u0421\u0410\u041d\u041a\u0422-\u041f\u0415\u0422\u0415\u0420\u0411\u0423\u0420\u0413, \u0423\u041b. \u0420\u0415\u0428\u0415\u0422\u041d\u0418\u041a\u041e\u0412\u0410, \u0414. 14, \u041b\u0418\u0422 \u0410",
+        "196105, G.SANKT-PETERBURG, UL. RESETNIKOVA, D. 14, LIT A",
+        "196105, SAINT-PETERSBURG, STR. RESHETNYKOVA, D. 14, LYT A",
+        "443011, \u0421\u0410\u041c\u0410\u0420\u0421\u041a\u0410\u042f \u041e\u0411\u041b\u0410\u0421\u0422\u042c, \u0413. \u0421\u0410\u041c\u0410\u0420\u0410, \u0423\u041b. \u0421\u041e\u0412\u0415\u0422\u0421\u041a\u041e\u0419 \u0410\u0420\u041c\u0418\u0418, \u0414. 221",
+        "443011, SAMARSKAA OBLAST\u02b9, G. SAMARA, UL. SOVETSKOJ ARMII, D. 221",
+        "443011, SAMARA REGION, SAMARA, ST. SOVIET ARMY, 221",
+        "630112, \u041d\u041e\u0412\u041e\u0421\u0418\u0411\u0418\u0420\u0421\u041a\u0410\u042f \u041e\u0411\u041b\u0410\u0421\u0422\u042c, \u0413. \u041d\u041e\u0412\u041e\u0421\u0418\u0411\u0418\u0420\u0421\u041a, \u0423\u041b. \u0424\u0420\u0423\u041d\u0417\u0415, \u0414. 242",
+        "630112, NOVOSIBIRSKAA OBLAST\u02b9, G. NOVOSIBIRSK, UL. FRUNZE, D. 242",
+        "630112, NOVOSIBIRSK REGION, NOVOSIBIRSK, STR. FRUNZE, D. 242",
+        "143315, \u041c\u041e\u0421\u041a\u041e\u0412\u0421\u041a\u0410\u042f \u041e\u0411\u041b\u0410\u0421\u0422\u042c, \u0413. \u041d\u0410\u0420\u041e-\u0424\u041e\u041c\u0418\u041d\u0421\u041a, \u0420\u0410\u0411\u041e\u0427\u0418\u0419 \u041f\u041e\u0421\u0415\u041b\u041e\u041a \u0421\u0415\u041b\u042f\u0422\u0418\u041d\u041e, \u0412\u041e\u041a\u0417\u0410\u041b\u042c\u041d\u0410",
+        "143315, MOSKOVSKAA OBLAST\u02b9, G. NARO-FOMINSK, RABOCIJ POSELOK SELATINO, VOKZAL\u02b9NA",
+        "143315, MOSCOW REGION, NARO-FOMINSK, WORKING VILLAGE SELYATINO, STATIONALNA",
+        "CANTON ROAD DR 23 03 03 22",
+        "690106, \u041f\u0420\u0418\u041c\u041e\u0420\u0421\u041a\u0418\u0419 \u041a\u0420\u0410\u0419, \u0413. \u0412\u041b\u0410\u0414\u0418\u0412\u041e\u0421\u0422\u041e\u041a, \u041f\u0420-\u041a\u0422 \u041e\u041a\u0415\u0410\u041d\u0421\u041a\u0418\u0419, \u0414. 69",
+        "690106, PRIMORSKIJ KRAJ, G. VLADIVOSTOK, PR-KT OKEANSKIJ, D. 69",
+        "690106, PRIMORSKY TERRITORY, VLADIVOSTOK, PR-KT OKEANSKY, 69",
+        "AV. NACIONES UNIDAS E2-30 Y NUEZ D ,GUAYAQUIL ,ESTHEFANY.NATHALY.ALVAREZ@HUAW",
+        "Bantian Longgang district Shenzhen, \u041a\u0438\u0442\u0430\u0439 , \u0447/\u0437 \u0442\u0440\u0430\u043d\u0441\u043f. \u043a\u043e\u043c\u043f.Guangzhou Yuefei International Freight Forwarding Co LTD Guangzhou \u041a\u0438\u0442\u0430\u0439",
+        "Bantian Longgang district Shenzhen, Kitaj , c/z transp. komp.Guangzhou Yuefei International Freight Forwarding Co LTD Guangzhou Kitaj",
+        "Bantian Longgang district Shenzhen, China, c/w transp. comp.Guangzhou Yuefei International Freight Forwarding Co LTD Guangzhou China",
+        "150 METERS SOUTHWEST OF THE INTERSE CTION OF GONGYE EAST ROAD NORFOLK VA US",
+        "420061, \u0420\u0415\u0421\u041f\u0423\u0411\u041b\u0418\u041a\u0410 \u0422\u0410\u0422\u0410\u0420\u0421\u0422\u0410\u041d (\u0422\u0410\u0422\u0410\u0420\u0421\u0422\u0410\u041d), \u0413. \u041a\u0410\u0417\u0410\u041d\u042c, \u0423\u041b. \u041d\u0418\u041a\u041e\u041b\u0410\u042f \u0415\u0420\u0428\u041e\u0412\u0410, \u0414. 29\u0411",
+        "420061, RESPUBLIKA TATARSTAN (TATARSTAN), G. KAZAN\u02b9, UL. NIKOLAA ERSOVA, D. 29B",
+        "420061, REPUBLIC OF TATARSTAN (TATARSTAN), KAZAN, ST. NIKOLAY ERSHOV, 29B",
+        "PO BOX 46013,AE",
+        "50M EAST OF DONGPING AVENUE , DONGGUAN CITY , GUANGDONG PROVINCE , CN",
+        "LIMOUZHANG WX428071,LONGGANG DIST, SHENZHEN GUANGDONG PROVINCE 518129 CHINA",
+        "Huawei Industrial Base, Bantian Longgang Shenzhen Shenzhen 518129 P.R. China. On Behalf Of Huawei International Pte Ltd 51 Change Bussiness Park Central 2 #07-08 The Signature Singapore",
+        "142455, \u041c\u041e\u0421\u041a\u041e\u0412\u0421\u041a\u0410\u042f \u041e\u0411\u041b\u0410\u0421\u0422\u042c, \u041d\u041e\u0413\u0418\u041d\u0421\u041a\u0418\u0419 \u0420\u0410\u0419\u041e\u041d, \u0413. \u042d\u041b",
+        "142455, MOSKOVSKAA OBLAST\u02b9, NOGINSKIJ RAJON, G. EL",
+        "142455, MOSCOW REGION, NOGHINSKY DISTRICT, H. EL",
+        "C24 BUILDING C GATE 1 NANHUA LOGISTICS PARK NO. 1 BAIYE E LIAOBU TOWN DONGGUAN CITY GUANGDONG PROVINCE CN",
+        "MOSCOW RUSSIAN FEDERATION 121614 TELFAX",
+        "Employee Service Center,East Gate West Section Huawei Lvchee Garden Bantian Longgang Shenzhen,\u041a\u0438\u0442\u0430\u0439",
+        "Employee Service Center,East Gate West Section Huawei Lvchee Garden Bantian Longgang Shenzhen,Kitaj",
+        "Employee Service Center, East Gate West Section Huawei Lvchee Garden Bantian Longgang Shenzhen, China",
+        "Donglipuluosi Industrial area 2rd Warehouse Shichong rd,Shipai town,Dongguan,523808,\u041a\u0438\u0442\u0430\u0439",
+        "Donglipuluosi Industrial area 2rd Warehouse Shichong rd,Shipai town,Dongguan,523808,Kitaj",
+        "Donglipuluosi Industrial area 2nd Warehouse Shichong rd,Shipai town,Dongguan,523808,China",
+        "KRYLATSKAYA STR. 17 BLDG 2 MOSCOWRUSSIAN FEDERATION 121614 TEL. (495)234 0686",
+        "E2-30, AVENIDA NACIONES UNIDAS, N\u00da\u00d1EZ DE VELA, 1801, METROPOLITAN, I\u00d1AQUITO, QUITO, PICHINCHA, DIAGONAL AL REGISTRO CIVIL",
+        "E2-30, AVENIDA NACIONES UNIDAS, NUNEZ DE VELA, 1801, METROPOLITAN, INAQUITO, QUITO, PICHINCHA, DIAGONAL AL REGISTRO CIVIL",
+        "E2-30, AVENIDA NACIONES UNIDAS, N\u00fa\u00d1EZ DE VELA, 1801, METROPOLITAN, I\u00d1AQUITO, QUITO, PICHINCHA, DIAGONAL AL \u200b\u200bREGISTRO CIVIL",
+        "E2-30, AVENIDA NACIONES UNIDAS, NuNEZ DE VELA, 1801, METROPOLITAN, INAQUITO, QUITO, PICHINCHA, DIAGONAL AL \u200b\u200bREGISTRO CIVIL",
+        "121614, \u0413\u041e\u0420\u041e\u0414 \u041c\u041e\u0421\u041a\u0412\u0410, \u0423\u041b\u0418\u0426\u0410 \u041a\u0420\u042b\u041b\u0410\u0422\u0421\u041a\u0410\u042f, 17, 2",
+        "121614, GOROD MOSKVA, ULICA KRYLATSKAA, 17, 2",
+        "121614, MOSCOW, KRYLATSKAYA STREET, 17, 2",
+        "DONGPING AVENUE DONGGUAN CITY GUANGDONG PROVINCE CHINA",
+        "690106, \u041a\u0420\u0410\u0419 \u041f\u0420\u0418\u041c\u041e\u0420\u0421\u041a\u0418\u0419, \u0413\u041e\u0420\u041e\u0414 \u0412\u041b\u0410\u0414\u0418\u0412\u041e\u0421\u0422\u041e\u041a, \u041f\u0420\u041e\u0421\u041f\u0415\u041a\u0422 \u041e\u041a\u0415\u0410\u041d\u0421\u041a\u0418\u0419, \u0414\u041e\u041c 69",
+        "690106, KRAJ PRIMORSKIJ, GOROD VLADIVOSTOK, PROSPEKT OKEANSKIJ, DOM 69",
+        "690106, PRIMORSKY REGION, CITY OF VLADIVOSTOK, OCEANSKY AVENUE, BUILDING 69"
+      ],
+      "countries": [
+        "RUS",
+        "CHN",
+        "ECU",
+        "CZE",
+        "NLD",
+        "ARE",
+        "HKG",
+        "UZB",
+        "KAZ",
+        "BEL",
+        "SWE",
+        "TUR",
+        "SGP",
+        "USA",
+        "CHE",
+        "GBR",
+        "JPN",
+        "ESP",
+        "FIN",
+        "DEU",
+        "KOR"
+      ],
+      "sources": [
+        "04eae776f662e518c977d5df3598ae69",
+        "521d5b6d9ebfeb968d183cc30fffebe0",
+        "9615bab28dddcc89548c928ab192ee7c",
+        "546a239179eb5ba24177e29e308005bf",
+        "8630c0e3b86787c729aa3a1d56494829",
+        "4a34a8375e7041cf8661fa82366c60ea",
+        "9d00ba8ef5949281169eff9bed951f93",
+        "617e3d9b6fa0cca3ba14699061ea090a",
+        "4ef4e9dd7aa6dc5d662692548e62ef0c",
+        "2090fa91e691e3f15d2ea13594a286d8",
+        "f5fdf9a3e7f4ae43eae3191eea1f3127",
+        "e5de7b52cc88ef4cd1a10e201bdf46ee",
+        "35f323ab28e6ad0bf35e6cae8ac4d271",
+        "a35d4c24787e761d64ef7025fabc8b25",
+        "4a34a8375e7041cf8661fa82366c60ea",
+        "0b325d9555f1011ae80446f3778bc3c8",
+        "181623bfb16b56c7214aeb0ac1ca9425",
+        "8511f57f6098dcc36e3a814c3ea5bdd7",
+        "a8a8ffcd95b8f701749b22c3f8292f15",
+        "aebcb2f2fe410ec1664d6b904e9a8a37",
+        "e5de7b52cc88ef4cd1a10e201bdf46ee",
+        "16a4cc2d0f467fa993b28587d542a25d",
+        "1f8774c85ab4fd71295015396bb08be1",
+        "a7829d9c8999fcaa78af55886da9be06",
+        "3322a755c28851ec06eda3280cc2a2b2",
+        "95d4ee257c785546e66a87a37fa183f4",
+        "b7593dcf982bcb9ca86f24ef369ed1e5",
+        "96c06a5a03b61b91324c7e05b3114fb6",
+        "51d4600e71c5888f41ab3ffad56a8050",
+        "a9a18eeb901e4376c912e95dc05ceb78",
+        "37267261b8e4a4234018c6d4b1004840",
+        "c7c2684a1a28cce25025c6b7c6a97bf1",
+        "9f22a5470e1faf82004e203d094cca29",
+        "faa9caafcfabcee04ef2f0b21dd9197a",
+        "4abad52c15462323519564cccef5bf07",
+        "a0bc9f7913cb345cc685e3f65532dd70",
+        "1540df2a2bd8f91b64bdfe9f7ed851f0",
+        "90dd39c7eca34a2a61f0d220fcacda6e",
+        "b2695e88b6f5b89ba1d9011e06dbcbc7",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "3456014d7aa3d82207e36f321980d49b",
+        "46c82ef2437564acca9fb5de8c382778",
+        "febba15cc2f172ee92f4373d4b11cc0e",
+        "8c2d4a6066d8339262d07be859061d8a",
+        "33ce74530696fdc957af6e05194905a2",
+        "66dfefb726ae00fde8f09f34c5578d35",
+        "9221db0be1f24c341c61457ae17b02d5",
+        "f95b84d56c3c29dd8b7fd77b3f0d6745",
+        "a4be698ea3263f7f7f3906d1c98cffc2",
+        "56bce0e008204712e302271ddd7b4fb1",
+        "43dd2588230e9788bbd508b7f0e8c087",
+        "1b27af6fa4018a70fbce9ca6f316e21c",
+        "a6a639808cdad385ab27296aa6d98b98",
+        "d147d93876aa0653c0e120cf2c96a936",
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "7bbb665cde5f762e5484fbfcfce4be54",
+        "93f0d99bcf2cc0b9f09cacc92640e54c",
+        "41c82cb8bda87edc819b7790081e1e26",
+        "b1d2f50f163413806366618fed7cfac4",
+        "93841a0c08e54526f6b71c4f76419617",
+        "7e0b45866bdcca61b2cfd455e5403dc2",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "8de630b7a702183da138321ae0f1c4b0",
+        "d302aa0d7153d87aeaa4406f9a3b28fa",
+        "66dfefb726ae00fde8f09f34c5578d35",
+        "ee100f9b5dfdae8991ba43f5de6e1854",
+        "d302aa0d7153d87aeaa4406f9a3b28fa",
+        "83ffee6075e54030397fa4c499a5a7ba",
+        "31df3cc3a57cc4a39dcc29dd4b9ce5e5",
+        "e85d865943ee6d8369307569d2ad9de0"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "address|sub|phraseStripped|0",
+        "country|0",
+        "country|1",
+        "country|5",
+        "country|7",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>HUAWEI</em> <em>TECHNOLOGIES</em> <em>CO</em> <em>LTD</em>",
+          "<em>Huawei</em> <em>Technologies</em> <em>Co</em>., <em>Ltd</em>",
+          "<em>HUAWEI</em> <em>TECHNOLOGIES</em> CO.LTD",
+          "<em>Huawei</em> <em>Technologies</em> Russia",
+          "<em>HUAWEI</em> <em>TECHNOLOGIES</em> CO LTD",
+          "<em>Huawei</em> <em>Technologies</em> Co., Ltd",
+          "<em>HUAWEI</em> TECH COMPANY LLC"
+        ],
+        "address": [
+          "HUAWEI INDUSTRIAL BASE <em>BANTIAN</em> <em>LONGGANG</em> <em>SHENZHEN</em> <em>GUANGDONG</em> CHINA",
+          "LIMOUZHANG WX428071,<em>LONGGANG</em> <em>DIST</em>, <em>SHENZHEN</em> <em>GUANGDONG</em> PROVINCE 518129 CHINA",
+          "<em>Bantian</em> <em>Longgang</em> <em>district</em>, <em>Shenzhen</em>, P.R. China",
+          "<em>Bantian</em> <em>Longgang</em> <em>district</em> <em>Shenzhen</em>, \u041a\u0438\u0442\u0430\u0439",
+          "<em>Bantian</em> <em>Longgang</em> <em>district</em> <em>Shenzhen</em>, Kitaj"
+        ],
+        "country": [
+          "<em>RUS</em>",
+          "<em>CHN</em>",
+          "<em>HKG</em>",
+          "<em>SGP</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>HUAWEI</em> <em>TECHNOLOGIES</em> <em>CO</em> <em>LTD</em>",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.551368977927101,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> <em>Technologies</em> <em>Co</em>., <em>Ltd</em>",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.551368977927101,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HUAWEI</em> <em>TECHNOLOGIES</em> CO.LTD",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.551368977927101,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> <em>Technologies</em> Russia",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.06849197056946803,
+              "lv": 0.8846153846153846,
+              "fz": 0.7692307692307692,
+              "l1": 0.7692307692307693,
+              "l2": 0.7692307692307693
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HUAWEI</em> TECH COMPANY LLC",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.03497019375292796,
+              "lv": 0.7551020408163265,
+              "fz": 0.5384615384615384,
+              "l1": 0.4230769230769231,
+              "l2": 0.6153846153846154
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HUAWEI</em> <em>TECHNOLOGIES</em> CO LTD",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.551368977927101,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> <em>Technologies</em> Co., Ltd",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.551368977927101,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "HUAWEI INDUSTRIAL BASE <em>BANTIAN</em> <em>LONGGANG</em> <em>SHENZHEN</em> <em>GUANGDONG</em> CHINA",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5882352941176471
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "LIMOUZHANG WX428071,<em>LONGGANG</em> <em>DIST</em>, <em>SHENZHEN</em> <em>GUANGDONG</em> PROVINCE 518129 CHINA",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5882352941176471
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "<em>Bantian</em> <em>Longgang</em> <em>district</em>, <em>Shenzhen</em>, P.R. China",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5882352941176471
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "<em>Bantian</em> <em>Longgang</em> <em>district</em> <em>Shenzhen</em>, \u041a\u0438\u0442\u0430\u0439",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5882352941176471
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "<em>Bantian</em> <em>Longgang</em> <em>district</em> <em>Shenzhen</em>, Kitaj",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5882352941176471
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>CHN</em>",
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HKG</em>",
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>SGP</em>",
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 147.86652,
+      "entity_id": "BLLE7w4Z6UpJqjYpJIyCDg",
+      "label": "\u534e\u4e3a\u6280\u672f\u6709\u9650\u516c\u53f8",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "914403001922038216",
+          "type": "cn_unified_social_credit_code",
+          "label": "Cn Unified Social Credit Code"
+        },
+        {
+          "value": "30947",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "302107758",
+          "type": "uzb_tin_number",
+          "label": "Uzb Tin Number"
+        },
+        {
+          "value": "C215169",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "9240dfa2-68ce-49ce-a5d2-069468dd589c",
+          "type": "sesamm_company_id",
+          "label": "Sesamm Company Id"
+        },
+        {
+          "value": "440301103097413",
+          "type": "cn_registration_number",
+          "label": "Cn Registration Number"
+        },
+        {
+          "value": "300300G4NLFHF8PDPY52",
+          "type": "lei",
+          "label": "Lei"
+        },
+        {
+          "value": "HWTCCNBS",
+          "type": "swift_bic_code",
+          "label": "Swift Bic Code"
+        },
+        {
+          "value": "HWTCCNBSXXX",
+          "type": "swift_bic_code",
+          "label": "Swift Bic Code"
+        },
+        {
+          "value": "192203821",
+          "type": "cn_organization_code",
+          "label": "Cn Organization Code"
+        },
+        {
+          "value": "0779.800.519",
+          "type": "bel_enterprise_number",
+          "label": "Bel Enterprise Number"
+        },
+        {
+          "value": "J311961461",
+          "type": "ven_rif",
+          "label": "Ven Rif"
+        },
+        {
+          "value": "39908320",
+          "type": "rou_company_registration_code",
+          "label": "Rou Company Registration Code"
+        },
+        {
+          "value": "NK-P3xHZasb3VZasvJLDwiGHC",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "326040092383",
+          "type": "uzb_vat_number",
+          "label": "Uzb Vat Number"
+        },
+        {
+          "value": "440301192203821",
+          "type": "cn_tax_identification_number",
+          "label": "Cn Tax Identification Number"
+        },
+        {
+          "value": "NK-GPtVXcoYvY63uknvz2toYu",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "914403001922038216",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "002519326-0401",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "0100015311961461",
+          "type": "ven_rnc_number",
+          "label": "Ven Rnc Number"
+        },
+        {
+          "value": "91440300746645251H",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "11022600",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "4403011022600",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "440301103097413",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "91330108727195718R",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "15454",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "2403",
+          "type": "prk_internal_trade_id",
+          "label": "Prk Internal Trade Id"
+        },
+        {
+          "value": "4707001829",
+          "type": "chn_customs_registration_code",
+          "label": "Chn Customs Registration Code"
+        },
+        {
+          "value": "DAMUC456MZU6",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "DCAMUHE5N6W1",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "Y3NYMV2P5446",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "ADMINISTRATION BUILDING HUAWEI TECHNOLOGIES CO., LTD. BANTIAN",
+        "BANTIAN NUM. EXT. ADMINISTRATION BUILDING HUAWEI TECHNOLOGIES CO., LTD.",
+        "Huawei Administration Building,, Bantian, Longgang District,; Shenzhen; 5, CN",
+        "Huawei Administration Building,, Bantian, Longgang District, Shenzhen, 51, CN",
+        "\u6df1\u5733\u5e02",
+        "shen zhen shi",
+        "Shenzhen",
+        "HUAWEI HEADQUARTER OFFICE BUILDING, BANTIAN, LONGGANG DISTRICT, GUANGDONG, SHENZHEN, CHN, 518129",
+        "\u0433.\u0422\u0430\u0448\u043a\u0435\u043d\u0442, \u042f\u043a\u043a\u0430\u0441\u0430\u0440\u0430\u0439\u0441\u043a\u0438\u0439 \u0440-\u043d., \u0443\u043b. \u0410.\u041a\u0430\u0445\u0445\u0430\u0440\u0430, 16-\u0410",
+        "g.Taskent, Akkasarajskij r-n., ul. A.Kahhara, 16-A",
+        "Tashkent, Yakkasaray district, st. A. Kakhhara, 16-A",
+        "DISTRICT BANTIAN LONGGANG, SHENZEN 518129, 1.Eroare",
+        "10150, , BANGKOK, 305, RAMA 2 RD., SOI 38, BANGMOD",
+        "06145, , SEOUL, 45 BONGEUNSARO-50GIL, GANGNAM-GU,",
+        "Travessa, -R-, n- 400 Cidade Universit-ria Butant, , S-o Paulo, SP 05508-170 Brasil",
+        ", \u0433.\u0422\u0430\u0448\u043a\u0435\u043d\u0442, \u042f\u043a\u043a\u0430\u0441\u0430\u0440\u0430\u0439\u0441\u043a\u0438\u0439 \u0440-\u043d., \u0443\u043b. \u0410.\u041a\u0430\u0445\u0445\u0430\u0440\u0430, 16-\u0410 , 302107758",
+        ", g.Taskent, Akkasarajskij r-n., ul. A.Kahhara, 16-A , 302107758",
+        ", Tashkent, Yakkasaray district, st. A. Kakhhara, 16-A, 302107758",
+        "BUILDING G1, HUAWEI INDUSTRIAL BASE, BANTIAN NUM. EXT. -",
+        "29-4, GIGOK-RO, GIHEUNG-GU, YONGIN-SI",
+        "YONGJEON INDUSTRIAL COMPLEX ROAD 89,SAMRANGJIN, MIRYANG CITY, GYEON GSANGNAMDO. SOUTH KOREA TEL 82 55 352 5366 8",
+        "\u6df1\u5733\u5e02\u9f99\u5c97\u533a\u5742\u7530\u534e\u4e3a\u603b\u90e8\u529e\u516c\u697c",
+        "shen zhen shi long gang qu ban tian hua wei zong bu ban gong lou",
+        "Huawei Headquarters Office Building in Bantian, Longgang District, Shenzhen",
+        "34057, DAEDEOK-DAERO 989BEON-GIL, DAEJEON, YUSEONG-GU, 111,,...",
+        "-, Bantian Street Longgang District, Shenzhen, CN, 518129",
+        "\u0433.\u0422\u0430\u0448\u043a\u0435\u043d\u0442, \u042f\u043a\u043a\u0430\u0441\u0430\u0440\u0430\u0439\u0441\u043a\u0438\u0439 \u0440-\u043d., \u0443\u043b. \u0410.\u041a\u0430\u0445\u0445\u0430\u0440\u0430, 16-\u0410 , 0 ,",
+        "g.Taskent, Akkasarajskij r-n., ul. A.Kahhara, 16-A , 0 ,",
+        "Tashkent city, Yakkasarai district, ul. A. Kakhhara, 16-A , 0 ,",
+        "\u6df1\u5733\u5e02\u9f99\u5c97\u533a\u5742\u7530\u534e\u4e3a\u603b\u90e8\u529e\u516c\u697c, \u6df1\u5733\u5e02, CN-GD, 100000, CN",
+        "shen zhen shi long gang qu ban tian hua wei zong bu ban gong lou, shen zhen shi, CN-GD, 100000, CN",
+        "Huawei Headquarters Office Building, Bantian, Longgang District, Shenzhen, CN-GD, 100000, CN",
+        "Dubai Biotechnology & Research Park, ED-21, Nucleotide Complex, Dubai UAE , \u0427\u0435\u0440\u0435\u0437 Moving Forward International GmbH/ Frankfurt",
+        "Dubai Biotechnology & Research Park, ED-21, Nucleotide Complex, Dubai UAE , Cerez Moving Forward International GmbH/ Frankfurt",
+        "Dubai Biotechnology & Research Park, ED-21, Nucleotide Complex, Dubai UAE, Via Moving Forward International GmbH/ Frankfurt",
+        "100022, , \u0422ASHKEN\u0422, 16-A, A.KAHHAR S\u0422R., YAKKASARAY DIS\u0422RIC\u0422, ,,...",
+        "100022, , TASHKENT, 16-A, A.KAHHAR STR., YAKKASARAY DISTRICT, ,,...",
+        ", HUAWEI ADMINISTRATION BUILDING, SHENZHEN, GUANGDONG, SHENZHEN, GUANGDONG, 518129, CHINA",
+        "Huawei Service Centre Bldg., Science-Based Industrial Park, Nanshan District, Shenzhen 518057, CN",
+        "89,SAMRANGJIN,MIRYANG CITY, GYEONGSANGNAMDO ,SOUTH KOREA",
+        "Longgang District, Huawei Industrial Base, Bantian, Shenzhen, 518129, CN",
+        "Huawei Industrial Base, Bantian Longgang, Shenzhen, People Republic Of China, CN",
+        "\"\u041e\u041e\u041e \"\"\u0422\u041e\u0420\u041d\u0415\u0422\u041a\u041e\u041c\"\"\"",
+        "\"OOO \"\"TORNETKOM\"\"\"",
+        "\"\"TORNETCOM\"\" LLC",
+        "Bantian Huawei General Headquarters Office Building, Longgang District Shenzhen China",
+        "Urb. Los Palos Grandes, Av. Francisco de Miranda, Parque Cristal, Ala Oeste Piso 14 Ofic. TOP 14-3",
+        ", BUILDING DUBAI SCIENCE PARK-SOUTH TOWER BUSINESS P, DUBAI, OFFICE CON-1272, PR.",
+        "GIGOK-RO 29-4 YONGIN-SI GYEONGGI-DO 17099 KR",
+        "Tsim Sha Tsui, Kowloon, HK",
+        "105066, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b. \u0414\u043e\u0431\u0440\u043e\u0441\u043b\u043e\u0431\u043e\u0434\u0441\u043a\u0430\u044f, \u0434. 5 \u044d\u0442\u0430\u0436",
+        "105066, g. Moskva, ul. Dobroslobodskaa, d. 5 etaz",
+        "105066, Moscow, Dobroslobodskaya St., 5th floor",
+        "\u5e7f\u4e1c\u6df1\u5733\u6df1\u5733\u5e02\u9f99\u5c97\u533a\u5742\u7530\u534e\u4e3a\u603b\u90e8\u529e\u516c\u697c",
+        "guang dong shen zhen shen zhen shi long gang qu ban tian hua wei zong bu ban gong lou",
+        "Guangdong Shenzhen Longjiang District, Shenzhen City",
+        "89 , YONGJEONSANOPDANJIGIL, SAMNANGJIN-EUP , MIRYANG-SIGYEONGSANGNAM-DOREP.OF KOREA",
+        ", BUSINESS PARK D-QUARTERS DUBAI, DUBAI, BUILDING DUBAI SCIENCE PARK-SOUTH TOWER.",
+        "100060, , \u0422ASHKEN\u0422, 5 A. SHAHRISABZ-\u0422OR, ...",
+        "100060, , TASHKENT, 5 A. SHAHRISABZ-TOR, ...",
+        "34057, DA\u0415D\u0415OK-DA\u0415RO 989B\u0415ON-GIL, DA\u0415J\u0415ON, YUS\u0415ONG-GU, 111,..",
+        "34057, DAEDEOK-DAERO 989BEON-GIL, DAEJEON, YUSEONG-GU, 111,..",
+        "34057, DA\u0415DEOK-DAERO 989BEON-GIL, DA\u0415J\u0415ON, YUSEONG-GU, 111,..",
+        "R&D Center, No. 2222, Golden Bridge Road, Pu Dong District, Shanghai, CN",
+        "C1, Wuhan Future City No. 999 Gaoxin Ave. Wuhan Future City, Wuhan, Hebei Province, CN",
+        "\u5e7f\u4e1c\u7701\u6df1\u5733\u5e02\u9f99\u5c97\u533a\u5742\u7530\u534e\u4e3a\u603b\u90e8\u529e\u516c\u697c",
+        "guang dong sheng shen zhen shi long gang qu ban tian hua wei zong bu ban gong lou",
+        "Huawei Headquarters Office Building, Bantian, Longgang District, Shenzhen City, Guangdong Province",
+        "No. 1899 Xi Yuan Road, High-Tech West District, Chengdu, 611731, CN",
+        "10150, BANGKOK, BANGMOD, JOMTHONG, 05, RAMA 2 RD.,",
+        ", , DUBAI, OFFICE CON-1272, PREMISES DSP-HQSOU,VD-F13-095, BU, ..,,.",
+        "Buji Bantian Huawei Technologies Co., Ltd., Longgang, Shenzhen, Guangdong, China, 518129",
+        "Bantian,Longgang District, Huawei Industrial Base, Shenzhen, Guangdong, 518129, CN",
+        "No. 2 Xincheng Avenue, Songshan Lake Road Dongguan Guangdong CN",
+        "157-1, HAGAL-DONG, GIHEUNG-GU, YONGIN-SI, GYEONGGI-DOSDNF",
+        ", SHENZHEN, GUANGDONG, ROOM A408, WEST SILICON B, BAOAN BLVD 5010, XIXIAN, ..,,.",
+        "DISTRICT BANTIAN LONGGANG, SHENZEN 518129, FISCALE18-06-2021",
+        "157-1, HAGAL-DONG,GIHEUNG-GU YOUNGIN-SI, KYUNGKI-DO 446930",
+        "SHYAM KUNJ COMPLEX GROUND FLOOR89 YONGJEONSANEOPDANJI-GILSAMNANGJIN-EUP MIRYANG-SI",
+        "SHYAM KUNJ COMPLEX GROUND FLOORYONGJEON INDUSTRIAL COMPLEX ROAD89 SAMRANGJIN MIRYANG CITY",
+        "203-137,JIMUN-RO,WONGOK-MYEON ANSEONG-SI,GYEONGGI-DO,17553 REPUBLIC OF KOREA",
+        "\u9f99\u5c97\u533a, \u6df1\u5733",
+        "long gang qu, shen zhen",
+        "Longgang District, Shenzhen",
+        "\u041a\u0418\u0422\u0410\u0419||",
+        "KITAJ||",
+        "CHINA||",
+        "A.Qahhor ko chasi, 16a-uy Toshkent Uzbekistan",
+        "100000 A.KAXXOR KO CHASI,16\u0410",
+        "100000 A.KAXXOR KO CHASI,16A",
+        "3d Flour, Dubai Science Park, Nucleotide Complex, Umm Suqeim Street, Al Barsha South, , Dubai the United Arab Emirates.",
+        ", BUILDING DUBAI SCIENCE PARK-SOUTH TOWER, DUBAI, OFFICE CON-1272, PREMISES DSP-.",
+        ", ADNAN KANVECI MAH.ALEMDAG, ISTAMBUL, MAH.ALEMDAG",
+        "ED21, Dubai, UAE \u0447\u0435\u0440\u0435\u0437 SHANGHAI ZDAN INTERNATIONAL CO., LTD, , UNIT 2 NO 26 FUDI SHEN MANSION LANO 688 HENGNAN ROAD PUJIANG TOWN SHANGHAI CHINA",
+        "ED21, Dubai, UAE cerez SHANGHAI ZDAN INTERNATIONAL CO., LTD, , UNIT 2 NO 26 FUDI SHEN MANSION LANO 688 HENGNAN ROAD PUJIANG TOWN SHANGHAI CHINA",
+        "ED21, Dubai, UAE via SHANGHAI ZDAN INTERNATIONAL CO., LTD, , UNIT 2 NO 26 FUDI SHEN MANSION LANO 688 HENGNAN ROAD PUJIANG TOWN SHANGHAI CHINA",
+        "\u5317\u4eac\u5e02\u6d77\u6dc0\u533a\u4e0a\u5730\u4fe1\u606f\u8def2\u53f7\u521b\u4e1a\u56edD\u680b410B\u5ba4",
+        "bei jing shi hai dian qu shang de xin xi lu2hao chuang ye yuanD dong410B shi",
+        "Room 410B, Building D, No. 2 Xinxi Road, Haidian District, Beijing",
+        "\u042f\u043a\u043a\u0430\u0441\u0430\u0440\u0430\u0439\u0441\u043a\u0438\u0439 \u0420\u0430\u0439\u043e\u043d, A. Qaxxor Ko'chasi,16A-Uy \u0422\u0430\u0448\u043a\u0435\u043d\u0442 Tashkent city UZ",
+        "Akkasarajskij Rajon, A. Qaxxor Ko'chasi,16A-Uy Taskent Tashkent city UZ",
+        "Yakkasaray District, A. Qaxxor Ko'chasi,16A-Uy Tashkent Tashkent city UZ",
+        "\u5e7f\u4e1c\u7701\u6df1\u5733\u5e02\u9f99\u5c97\u533a\u5742\u7530\u534e\u4e3a\u57fa\u5730\u5b9e\u9a8c\u697c6\u697c, 518129",
+        "guang dong sheng shen zhen shi long gang qu ban tian hua wei ji de shi yan lou6lou, 518129",
+        "6th Floor, Laboratory Building, Huawei Base, Bantian, Longgang District, Shenzhen City, Guangdong Province, 518129",
+        "Yakkasarayskiy District, A. Qaxxor Str.,16A-Uy Tashkent Tashkent city UZ",
+        "\u5e7f\u4e1c\u7701\u6df1\u5733\u5e02\u9f99\u5c97\u533a\u5e03\u5409\u5742\u7530\u534e\u4e3a\u6280\u672f\u6709\u9650\u516c\u53f8, 518129",
+        "guang dong sheng shen zhen shi long gang qu bu ji ban tian hua wei ji shu you xian gong si, 518129",
+        "Buji Bantian Huawei Technologies Co., Ltd., Longgang District, Shenzhen City, Guangdong Province, 518129",
+        "Urb. La Floresta, Av. Fco. de Miranda, Edificio Banco Orinoco, Orinoco, piso 7 Ofic. 7-C",
+        "\u6df1\u5733\u5e02\u9f99\u5c97\u533a\u5742\u7530\u534e\u4e3a\u57fa\u5730B\u533a2\u53f7\u697c",
+        "shen zhen shi long gang qu ban tian hua wei ji deB qu2hao lou",
+        "Building 2, Area B, Huawei Base, Bantian, Longgang District, Shenzhen",
+        "\u0433.\u0422\u0430\u0448\u043a\u0435\u043d\u0442, \u042f\u043a\u043a\u0430\u0441\u0430\u0440\u0430\u0439\u0441\u043a\u0438\u0439 \u0440-\u043d, \u0443\u043b.\u0410.\u041a\u0430\u0445\u0445\u0430\u0440\u0430, 16-\u0410 , HOJIN INDUSTRIAL CO., LTD 45 BONGEUNSARO-50GIL, GANGNAM-GU, SEOUL,06145,KOREA ,",
+        "g.Taskent, Akkasarajskij r-n, ul.A.Kahhara, 16-A , HOJIN INDUSTRIAL CO., LTD 45 BONGEUNSARO-50GIL, GANGNAM-GU, SEOUL,06145,KOREA ,",
+        "Tashkent, Yakkasaray district, A.Kahkhara st., 16-A, HOJIN INDUSTRIAL CO., LTD 45 BONGEUNSARO-50GIL, GANGNAM-GU, SEOUL,06145,KOREA,",
+        "\u4e2d\u56fd",
+        "zhong guo",
+        "China",
+        "\u6df1\u5733",
+        "shen zhen",
+        "Shenzhen",
+        "Tsim Sha Tsui",
+        "\u0433.\u0422\u0430\u0448\u043a\u0435\u043d\u0442, \u042f\u043a\u043a\u0430\u0441\u0430\u0440\u0430\u0439\u0441\u043a\u0438\u0439 \u0440-\u043d., \u0443\u043b. \u0410.\u041a\u0430\u0445\u0445\u0430\u0440\u0430, 16-\u0410 C/O BIOCARD GENERAL TRADING LLC JEBEL ALI INDUSTRIAL 1 112907 DUBAI",
+        "g.Taskent, Akkasarajskij r-n., ul. A.Kahhara, 16-A C/O BIOCARD GENERAL TRADING LLC JEBEL ALI INDUSTRIAL 1 112907 DUBAI",
+        "Tashkent city, Yakkasarai district, ul. A. Kahhara, 16-\u0410 C/O BIOCARD GENERAL TRADING LLC JEBEL ALI INDUSTRIAL 1 112907 DUBAI",
+        "Tashkent city, Yakkasarai district, ul. A. Kahhara, 16-A C/O BIOCARD GENERAL TRADING LLC JEBEL ALI INDUSTRIAL 1 112907 DUBAI",
+        "1000 N West Street, Suite 1200, Wilmington, DE, 19801",
+        ", , ISTANBUL, \u041cERKEZ \u041cAH.AKAR CAD. I TOWER BO\u041cONTI",
+        ", , ISTANBUL, MERKEZ MAH.AKAR CAD. I TOWER BOMONTI",
+        "DISTRICT SHEN ZHEN",
+        "Zone G, Huawei Base, Bantian, Longgang District, Shenzhen",
+        "DISTRICT BANTIAN LONGGANG, SHENZEN 518129, FARAJUDET",
+        ", , SEOUL, NO. 419, 4-DONG, YEONGDEUNGPO-GU, ,..."
+      ],
+      "countries": [
+        "CHN",
+        "MEX",
+        "USA",
+        "AUS",
+        "CAN",
+        "UZB",
+        "KOR",
+        "ARE",
+        "GBR",
+        "BRA",
+        "RUS",
+        "BEL",
+        "NZL",
+        "VEN",
+        "CHE",
+        "HKG",
+        "ROU",
+        "DEU",
+        "LKA",
+        "PAK",
+        "TUR",
+        "CZE",
+        "MMR",
+        "PRK",
+        "SEN",
+        "THA"
+      ],
+      "sources": [
+        "5d8c06ba0b85ff599bca851e7bf43c30",
+        "79df2dc92a22705bb2500d6819e6c64b",
+        "52a7bc4a30e787544ad2d95e7f54adca",
+        "441b8bd29977208d312f2192675b05d9",
+        "148946e7e3e5b2ba031bfcefa28e4d83",
+        "a025b3503797a9cd1e1964dec6943594",
+        "7ff1623c807b4d54a9bbae8412fffd72",
+        "4a34a8375e7041cf8661fa82366c60ea",
+        "a585b440ea74d837aef0e485fd2942f3",
+        "2090fa91e691e3f15d2ea13594a286d8",
+        "0ff02c63234d4447c803acd7748b9afc",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "e5de7b52cc88ef4cd1a10e201bdf46ee",
+        "b6382672c6741fe1bca28d2668c1732b",
+        "a35d4c24787e761d64ef7025fabc8b25",
+        "b812677c0a32a1746b3ac741c7b97ae0",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "8511f57f6098dcc36e3a814c3ea5bdd7",
+        "8f50655ba1d1552ab4b89d119bd9c318",
+        "53025b5e8f2032f5f23878503e1edc34",
+        "5b1375783448347064745954e331bbe9",
+        "a7829d9c8999fcaa78af55886da9be06",
+        "95d4ee257c785546e66a87a37fa183f4",
+        "959a385fac146762e5d8d2119e0d8edc",
+        "8f21460f1cc54773b9672cb5efdb01cf",
+        "b97ad5c858093e5227b2359a0078696f",
+        "a9a18eeb901e4376c912e95dc05ceb78",
+        "ac1fa195f9cd4ccf657bca3c6db0bb19",
+        "faa9caafcfabcee04ef2f0b21dd9197a",
+        "9f22a5470e1faf82004e203d094cca29",
+        "a0bc9f7913cb345cc685e3f65532dd70",
+        "ce462e9deea545cce35df38c48512a0c",
+        "b9d809b02049993ba8dc2e4c5f7cceca",
+        "0b519150a6118d769a375c6a089a0dd6",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "c5cc650876d65288c8ae6b63c8c7fd4f",
+        "701bbfc53dd09fad95b177d1f07f3667",
+        "ffaec8a9095b83977197be861da257d8",
+        "8c2d4a6066d8339262d07be859061d8a",
+        "a4475601393f5a6a27154175556f7a85",
+        "860ee022bacc1a11b8aa3f33b205269c",
+        "df4535e7fc3682517e1815ed87ddf2f6",
+        "bf68c3a9a482c02f1f76342feb79af8d",
+        "66dfefb726ae00fde8f09f34c5578d35",
+        "a4be698ea3263f7f7f3906d1c98cffc2",
+        "3c2f8498797d861dbdfb901731883c9f",
+        "3e954582056545f0c331cf6929f24521",
+        "1b27af6fa4018a70fbce9ca6f316e21c",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "d147d93876aa0653c0e120cf2c96a936",
+        "542ad2352af9ce07202a2f34d402d5bf",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "4b58375256689dae9c9b05ffb03ac4f2",
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "1c4b8e32451d0a68cf46ec3d94fa0636",
+        "0cf0044442daf17258e27a6ddd49770f",
+        "e85f886caf11a16c40512647def393e0",
+        "41c82cb8bda87edc819b7790081e1e26",
+        "72429eb79dca5f23168468888266d634",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "4a96d0f73c8a9bd59a5af0650f4874d2",
+        "66dfefb726ae00fde8f09f34c5578d35",
+        "b6382672c6741fe1bca28d2668c1732b",
+        "6aa1209c63a71d43eb11bd9f273608a9",
+        "26a8072830039f470287902c1530ef79",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "31df3cc3a57cc4a39dcc29dd4b9ce5e5",
+        "e85d865943ee6d8369307569d2ad9de0"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "address|sub|phraseStripped|0",
+        "country|0",
+        "country|1",
+        "country|4",
+        "country|5",
+        "country|8",
+        "country|9",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Huawei</em> <em>Technologies</em> <em>Co</em>., <em>Ltd</em>",
+          "<em>HUAWEI</em> <em>TECHNOLOGIES</em> <em>CO</em>., <em>LTD</em>.",
+          "<em>Huawei</em> <em>Technologies</em> <em>Co</em> <em>Ltd</em>",
+          "<em>HUAWEI</em> <em>TECHNOLOGIES</em> <em>CO</em>.,<em>LTD</em>.",
+          "\u0427\u041f \"Avia Brok Service Group\"\u043f\u043e \u043f\u043e\u0440\u0443\u0447\u0435\u043d\u0438\u044e <em>Huawei</em> <em>Technologies</em> <em>Co</em>., <em>Ltd</em>.,",
+          "<em>Huawei</em> <em>Technologies</em> Co., Ltd",
+          "<em>HUAWEI</em> <em>TECHNOLOGIES</em> CO., LTD.",
+          "<em>Huawei</em> <em>Technologies</em> Co Ltd",
+          "<em>HUAWEI</em> <em>TECHNOLOGIES</em> CO.,LTD.",
+          "\u0427\u041f \"Avia Brok Service Group\"\u043f\u043e \u043f\u043e\u0440\u0443\u0447\u0435\u043d\u0438\u044e <em>HUAWEI</em> <em>TECHNOLOGY</em> CO.LTD.,"
+        ],
+        "address": [
+          "HUAWEI HEADQUARTER OFFICE BUILDING, <em>BANTIAN</em>, <em>LONGGANG</em> <em>DISTRICT</em>, <em>GUANGDONG</em>, <em>SHENZHEN</em>, CHN, 518129",
+          "Huawei Headquarters Office Building, <em>Bantian</em>, <em>Longgang</em> <em>District</em>, <em>Shenzhen</em> City, <em>Guangdong</em> Province",
+          "<em>Bantian</em>,<em>Longgang</em> <em>District</em>, Huawei Industrial Base, <em>Shenzhen</em>, <em>Guangdong</em>, 518129, CN",
+          "6th Floor, Laboratory Building, Huawei Base, <em>Bantian</em>, <em>Longgang</em> <em>District</em>, <em>Shenzhen</em> City, <em>Guangdong</em> Province, 518129",
+          "Buji <em>Bantian</em> Huawei Technologies Co., Ltd., <em>Longgang</em> <em>District</em>, <em>Shenzhen</em> City, <em>Guangdong</em> Province, 518129"
+        ],
+        "country": [
+          "<em>CHN</em>",
+          "<em>RUS</em>",
+          "<em>HKG</em>",
+          "<em>MMR</em>",
+          "<em>PRK</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Huawei</em> <em>Technologies</em> <em>Co</em>., <em>Ltd</em>",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.551368977927101,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HUAWEI</em> <em>TECHNOLOGIES</em> <em>CO</em>., <em>LTD</em>.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.551368977927101,
+              "lv": 0.8846153846153846,
+              "fz": 0.7692307692307692,
+              "l1": 0.7692307692307693,
+              "l2": 0.8846153846153846
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> <em>Technologies</em> <em>Co</em> <em>Ltd</em>",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.551368977927101,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HUAWEI</em> <em>TECHNOLOGIES</em> <em>CO</em>.,<em>LTD</em>.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.551368977927101,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "\u0427\u041f \"Avia Brok Service Group\"\u043f\u043e \u043f\u043e\u0440\u0443\u0447\u0435\u043d\u0438\u044e <em>Huawei</em> <em>Technologies</em> <em>Co</em>., <em>Ltd</em>.,",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.20049781015530946,
+              "lv": 0.5652173913043479,
+              "fz": 0.3939393939393939,
+              "l1": 0.7692307692307693,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> <em>Technologies</em> Co., Ltd",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.551368977927101,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HUAWEI</em> <em>TECHNOLOGIES</em> CO., LTD.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.551368977927101,
+              "lv": 0.8846153846153846,
+              "fz": 0.7692307692307692,
+              "l1": 0.7692307692307693,
+              "l2": 0.8846153846153846
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> <em>Technologies</em> Co Ltd",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.551368977927101,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HUAWEI</em> <em>TECHNOLOGIES</em> CO.,LTD.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.551368977927101,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "\u0427\u041f \"Avia Brok Service Group\"\u043f\u043e \u043f\u043e\u0440\u0443\u0447\u0435\u043d\u0438\u044e <em>HUAWEI</em> <em>TECHNOLOGY</em> CO.LTD.,",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.018679628337127645,
+              "lv": 0.5222222222222221,
+              "fz": 0.0,
+              "l1": 0.38461538461538464,
+              "l2": 0.8846153846153846
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "HUAWEI HEADQUARTER OFFICE BUILDING, <em>BANTIAN</em>, <em>LONGGANG</em> <em>DISTRICT</em>, <em>GUANGDONG</em>, <em>SHENZHEN</em>, CHN, 518129",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5882352941176471
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "Huawei Headquarters Office Building, <em>Bantian</em>, <em>Longgang</em> <em>District</em>, <em>Shenzhen</em> City, <em>Guangdong</em> Province",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5882352941176471
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "<em>Bantian</em>,<em>Longgang</em> <em>District</em>, Huawei Industrial Base, <em>Shenzhen</em>, <em>Guangdong</em>, 518129, CN",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5882352941176471
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "6th Floor, Laboratory Building, Huawei Base, <em>Bantian</em>, <em>Longgang</em> <em>District</em>, <em>Shenzhen</em> City, <em>Guangdong</em> Province, 518129",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5882352941176471
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "Buji <em>Bantian</em> Huawei Technologies Co., Ltd., <em>Longgang</em> <em>District</em>, <em>Shenzhen</em> City, <em>Guangdong</em> Province, 518129",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5882352941176471
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>CHN</em>",
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HKG</em>",
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>MMR</em>",
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>PRK</em>",
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 122.334656,
+      "entity_id": "BRr1qDpXEmaoUYTPtqQXww",
+      "label": "HUAWEI TECH INVESTMENT CO LTD",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "3070768991",
+          "type": "arg_partial_cuit",
+          "label": "Arg Partial Cuit"
+        },
+        {
+          "value": "M110500019442U",
+          "type": "cm_nui_tax_reg_num",
+          "label": "Cm Nui Tax Reg Num"
+        },
+        {
+          "value": "30-70768991-5",
+          "type": "arg_cuit_number",
+          "label": "Arg Cuit Number"
+        },
+        {
+          "value": "0714018",
+          "type": "cn_hk_cr_number",
+          "label": "Cn Hk Cr Number"
+        },
+        {
+          "value": "C1022370",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "30883832",
+          "type": "cn_hk_br_number",
+          "label": "Cn Hk Br Number"
+        },
+        {
+          "value": "213800DUQGMJ7FWYJ659",
+          "type": "lei",
+          "label": "Lei"
+        },
+        {
+          "value": "NK-XnBohYMmsK2iAVejTmezRR",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "30707689915",
+          "type": "arg_cuit_number",
+          "label": "Arg Cuit Number"
+        },
+        {
+          "value": "714018",
+          "type": "cn_organization_code",
+          "label": "Cn Organization Code"
+        },
+        {
+          "value": "000482325-0402",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "0714018",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "30883832",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "714018",
+          "type": "unknown",
+          "label": "Unknown"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "Butty 240 20Th Floor",
+        "LOT 3221, DD129, PING HA ROAD,",
+        "Sinotrans S21 Entrance Lot 3221 Dd 123 Ping Ha Road, Lajfau Shn Yuen Long, Hong Kong.",
+        "Sinotans 521 Entrance Lot 3221 Dd129, Ping Ha Road, Lau Fau Shan, Yuen Long N.T., Hong Kong",
+        "#N/A",
+        "Hong Kong",
+        "Sinotrans S21 Entrance, Lot 3221, 00129, Ping Ha Road, Lau Fau Shan, Yuen, Long, N.T. Hong Kong.",
+        "3F CHINA MERCHANTS LOGISTICS CENTRE 38 TSING YI HONG WAN ROAD TSING YI NT HK",
+        ", WANCHAI,283 LOCKHART ROAD, HONG KONG, 20TH FLOOR, WAH HING COMMERCIAL BUILDING",
+        ", TSIM SHA TSUI, KOWLOON, 9/F,TOWER 6,THE GATEWAY NO.9 CANTON ROAD,",
+        "5/F, ASIA LOGISTICS HUB-SF CENTER, 36 TSING YI",
+        "9Th Floor Tower 6, Gateway No 9 Canton Road, Tsim Sha Tsui Kowloon, Hong Kong",
+        "1437, AV.CORRIENTES, CAPITAL FEDERAL",
+        "N14 5 PT, KWUN TONG, LONDON, SOUTHGATE, 12TH CHELMSFORD ROAD,",
+        "3087, CYPRUS, LIMASSOL, AGIAS FYLAXEOS, 118 CHRISTABEL HOUSE,",
+        "RM C04 , GROUND FLOOR , SOUTH OFFICE BLOCK SUPER TERMINAL 1 ,HK INTERN",
+        "UNIT 616,TERMINAL 4,KAWAI CHUNG CONTAINER PORT,18 CONTAINER PORT ROAD",
+        ", NEW TERRITORIES, TSING YI, 3/F (HKRC) CHINA MERCHANTS LOGISTICS CENTRE, 38 TS,",
+        ", KOWLOON, HONG KONG, NO 9 CANTON ROAD, TSIMSHATSU,",
+        ", TSIMSHATSUI,KOWLOON, HONG KONG, 9/F,TOWER 6 THE GATEWAY,NO 9 CANTON ROAD,",
+        ", 811 04, BRATISLAVA, BOZENY NEMCOVEJ, 8",
+        "CY 6057, LARNACA, 1 ALEXANDROU PANAGOULLI STREET, NOVEL TOWER, 1ST FLOOR,",
+        ", TSING YI HONG WAN ROAD, TSING YI, HONG KONG, 3F, CHINA MERCHANTS LOGISTICS CE",
+        "C/O DEVICE SPARE PARTS,YUET HOI INTERNATIONAL SHIPPING LIMITED",
+        "S21 Entrance Lot 3221 Dd 129 Ping Ha Road, Laufau Shn Yuen Long, Hong Kong.",
+        "Sinotrans S21, Entrance Lot 321, Ddt 129, Ping Ha Road, Lau Fau Shan, Yuen Long Nt, Hong Kong",
+        "9/F THE Gateway Twr 6 9 Canton Rd, HK",
+        "306#, HUAWEI WAREHOUSE, QIANHAIWAN FREE TRADE PORT AREA,LINHAI RD, NANSHAN DISTRICT, SHENZHEN",
+        ", , HONG KONG, KOWLOON, TSIMSHATSUI, 9/F,TOWER 6,THE GATEWAY,9 CANTON ROAD,",
+        "Unit 3610-12 36/F, The Center 99 Queen S Road, Central Hongkong",
+        "51 CHANGI BUSINESS PARK CENTRAL 2 #07-08, THE SIGNATURE SINGAPORE 4860",
+        "9Th Floor, Tower 6, The Gateway, No, Tsim Sha Tsui, Kowloon, Hong Kong Hong Kong China",
+        "BAOXINCHUANG, AOHAN INDUSTRIAL PARK, 147 GEXIN AVENUE, CHANGQING STREET, XIHU DISTRICT, WUHAN",
+        "QCMC/QUANTA GROUP , ZENGJIA TOWN , SHAPINGBA , CHONGQING CITY , WANG GUANZHONG , CHINA , CN",
+        "Argentina, Av. Leandro N. Alem 815, C1054 CABA, AR",
+        "BUILDING NO. 207 JIUFENG 3RD ROAD , JIANGXIA DISTRICT , WUHAN CITY , CHINA , CN",
+        ", HONG KONG, KOWLOON, TSIM SHA TSUI, 9/F, TOWER 6 THE GATEWAY, NO. 9 CANTON ROAD",
+        "9Th Floor, Tower 6 The Gateway, No. 09 Canton Road, Tsim Sha Tsui, Kowloon, Hong Kong",
+        "U1 Building, No. 1899 Xiyuan Avenue, West Gaoxin District, Chengdu City, 611731, CN",
+        "AP MGMT CENTRE A9-1 , HUAWEI INDUS. BASE BANTIAN , SHENZHEN , CHINA , CN",
+        "Sparkoo Technologies Sg Pte Ltd, Karin Electronic Supp Co Ltd,., C/O Sharp Int'L Cargo Services Ltd, Hong Kong.",
+        "DD129 PING HA ROAD LAU FAU SHANYUEN LONG NT HONG KONGCTC CYNTHIA MR CHEN LEI",
+        "HUJING ROAD SONGSHAN LAKE HUAWEI BASE XILIU BEIPO VILLAGE GUANGDONG PROVINCE CHINA CN",
+        "BUILDING NO. 3 BONDED WAREHOUSE , XIYONG CBZ , SHAPINGBA DISTRICT , CHONGQING CITY , CHINA , CN",
+        "9 Th Floor Tower 6 The Gateway No. Canton Road Tsim Sha Tsui, Kowloon Hong Kong",
+        "168 YEUNG UK ROAD TSUEN WAN 2502 GLOBAL GATEWAY HK NEW TERRITORIES HK",
+        "JIUFENGSAN ROAD HONGSHAN DISTRICT WUHAN PROVINCE CHINA",
+        "3/F CHINA MSRHANTS LOGISTICS CENTRE 38 TSING YIHONG WAN ROAD TSING YI 164 HONG KONG",
+        "3/F(HKRC), CHINA MERCHANTS LOGISTICS CENTRE,38 TSING YI HONG WAN ROAD,",
+        "DD129.LOT3066-3116RP SHA KONG WAI LAU FAU SHAN YUEN LONG NEW TER",
+        "SINOTRANS S21 LOT 32",
+        "HUAWEI TECH. INVESTMENT CO. LTD. ON BEHALF OF HUAWEI INTERNATIONAL CO. LIMITED 3/F(HKRC) CHINA MERCHANTS LOGISTICS CENTRE *",
+        "NO.20 GUANNANYUANYI ROAD MODERN , DREAM FACTORY 7-701 EAST LAKE , HIGH TECH DISTRICT , WU HAN CITY , HU BEI PROVINCE , CHINA , CN",
+        "HK CN"
+      ],
+      "countries": [
+        "ARG",
+        "HKG",
+        "CHN",
+        "CMR",
+        "DNK",
+        "NGA",
+        "CYP",
+        "SVK",
+        "KEN",
+        "NLD",
+        "DEU",
+        "SGP",
+        "USA",
+        "FRA",
+        "IDN",
+        "TUR"
+      ],
+      "sources": [
+        "ecfe874506e3c2795db32ca5e020d39d",
+        "3456014d7aa3d82207e36f321980d49b",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "3e7b7fd8c77ae047376142db72027f87",
+        "9615bab28dddcc89548c928ab192ee7c",
+        "46c82ef2437564acca9fb5de8c382778",
+        "441b8bd29977208d312f2192675b05d9",
+        "546a239179eb5ba24177e29e308005bf",
+        "4a34a8375e7041cf8661fa82366c60ea",
+        "33ce74530696fdc957af6e05194905a2",
+        "4ef4e9dd7aa6dc5d662692548e62ef0c",
+        "66dfefb726ae00fde8f09f34c5578d35",
+        "e5de7b52cc88ef4cd1a10e201bdf46ee",
+        "a4be698ea3263f7f7f3906d1c98cffc2",
+        "b6382672c6741fe1bca28d2668c1732b",
+        "35f323ab28e6ad0bf35e6cae8ac4d271",
+        "ecfe874506e3c2795db32ca5e020d39d",
+        "7aa32ad6bbfab19e7391966b85c2cdfa",
+        "4a34a8375e7041cf8661fa82366c60ea",
+        "1b27af6fa4018a70fbce9ca6f316e21c",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "0b325d9555f1011ae80446f3778bc3c8",
+        "d147d93876aa0653c0e120cf2c96a936",
+        "b812677c0a32a1746b3ac741c7b97ae0",
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "a8a8ffcd95b8f701749b22c3f8292f15",
+        "e5de7b52cc88ef4cd1a10e201bdf46ee",
+        "41c82cb8bda87edc819b7790081e1e26",
+        "93f0d99bcf2cc0b9f09cacc92640e54c",
+        "b1d2f50f163413806366618fed7cfac4",
+        "16a4cc2d0f467fa993b28587d542a25d",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "1f8774c85ab4fd71295015396bb08be1",
+        "8de630b7a702183da138321ae0f1c4b0",
+        "d302aa0d7153d87aeaa4406f9a3b28fa",
+        "a7829d9c8999fcaa78af55886da9be06",
+        "ee100f9b5dfdae8991ba43f5de6e1854",
+        "ee100f9b5dfdae8991ba43f5de6e1854",
+        "95d4ee257c785546e66a87a37fa183f4",
+        "b7593dcf982bcb9ca86f24ef369ed1e5",
+        "96c06a5a03b61b91324c7e05b3114fb6",
+        "b6382672c6741fe1bca28d2668c1732b",
+        "100ff813558014f333f96fc994177d0e",
+        "d302aa0d7153d87aeaa4406f9a3b28fa",
+        "c95cea497b4379ab798d5c694f853dcc",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "83ffee6075e54030397fa4c499a5a7ba",
+        "c7c2684a1a28cce25025c6b7c6a97bf1",
+        "9f22a5470e1faf82004e203d094cca29",
+        "faa9caafcfabcee04ef2f0b21dd9197a",
+        "a0bc9f7913cb345cc685e3f65532dd70",
+        "ce462e9deea545cce35df38c48512a0c",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "74cf0fc2a62f9c8f4e88f8a0b3ffcca4"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "country|1",
+        "country|7",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>HUAWEI</em> TECH INVESTMENT <em>CO</em> <em>LTD</em>",
+          "<em>HUAWEI</em> TECH INVESTMENT <em>CO</em>.,<em>LTD</em>",
+          "<em>HUAWEI</em> TECHNO. <em>CO</em>. CAM. <em>LTD</em>",
+          "<em>Huawei</em> Technology Investment <em>Co</em>., <em>Ltd</em>.",
+          "<em>HUAWEI</em> TECH INVESTMENT <em>CO</em>. <em>LTD</em>. SUCURSAL ARGENTINA",
+          "<em>Huawei</em> <em>Technology</em> Investment Co., Ltd.",
+          "<em>HUAWEI</em> TECH INVESTMENT CO LTD",
+          "<em>HUAWEI</em> TECH INVESTMENT CO.,LTD",
+          "<em>HUAWEI</em> TECHNO. CO. CAM. LTD",
+          "<em>HUAWEI</em> TECHNO.CO.CAM.LTD"
+        ],
+        "address": [
+          "306#, HUAWEI WAREHOUSE, QIANHAIWAN FREE TRADE PORT AREA,LINHAI RD, NANSHAN <em>DISTRICT</em>, <em>SHENZHEN</em>",
+          "AP MGMT CENTRE A9-1 , HUAWEI INDUS. BASE <em>BANTIAN</em> , <em>SHENZHEN</em> , CHINA , CN",
+          "HUJING ROAD SONGSHAN LAKE HUAWEI BASE XILIU BEIPO VILLAGE <em>GUANGDONG</em> PROVINCE CHINA CN",
+          "BAOXINCHUANG, AOHAN INDUSTRIAL PARK, 147 GEXIN AVENUE, CHANGQING STREET, XIHU <em>DISTRICT</em>, WUHAN",
+          "BUILDING NO. 207 JIUFENG 3RD ROAD , JIANGXIA <em>DISTRICT</em> , WUHAN CITY , CHINA , CN"
+        ],
+        "country": [
+          "<em>HKG</em>",
+          "<em>CHN</em>",
+          "<em>SGP</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>HUAWEI</em> TECH INVESTMENT <em>CO</em> <em>LTD</em>",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4279761550023424,
+              "lv": 0.8363636363636364,
+              "fz": 0.6896551724137931,
+              "l1": 0.4230769230769231,
+              "l2": 0.8076923076923077
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HUAWEI</em> TECH INVESTMENT <em>CO</em>.,<em>LTD</em>",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4279761550023424,
+              "lv": 0.8363636363636364,
+              "fz": 0.6896551724137931,
+              "l1": 0.4230769230769231,
+              "l2": 0.8076923076923077
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HUAWEI</em> TECHNO. <em>CO</em>. CAM. <em>LTD</em>",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4279761550023424,
+              "lv": 0.78,
+              "fz": 0.5769230769230769,
+              "l1": 0.2692307692307692,
+              "l2": 0.7307692307692307
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> Technology Investment <em>Co</em>., <em>Ltd</em>.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4279761550023424,
+              "lv": 0.7377049180327868,
+              "fz": 0.5428571428571429,
+              "l1": 0.38461538461538464,
+              "l2": 0.8461538461538461
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HUAWEI</em> TECH INVESTMENT <em>CO</em>. <em>LTD</em>. SUCURSAL ARGENTINA",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3056972535731017,
+              "lv": 0.5810810810810811,
+              "fz": 0.35416666666666663,
+              "l1": 0.2692307692307692,
+              "l2": 0.6923076923076923
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> <em>Technology</em> Investment Co., Ltd.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4279761550023424,
+              "lv": 0.7377049180327868,
+              "fz": 0.5428571428571429,
+              "l1": 0.38461538461538464,
+              "l2": 0.8461538461538461
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HUAWEI</em> TECH INVESTMENT CO LTD",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4279761550023424,
+              "lv": 0.8363636363636364,
+              "fz": 0.6896551724137931,
+              "l1": 0.4230769230769231,
+              "l2": 0.8076923076923077
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HUAWEI</em> TECH INVESTMENT CO.,LTD",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4279761550023424,
+              "lv": 0.8363636363636364,
+              "fz": 0.6896551724137931,
+              "l1": 0.4230769230769231,
+              "l2": 0.8076923076923077
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HUAWEI</em> TECHNO. CO. CAM. LTD",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4279761550023424,
+              "lv": 0.78,
+              "fz": 0.5769230769230769,
+              "l1": 0.2692307692307692,
+              "l2": 0.7307692307692307
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HUAWEI</em> TECHNO.CO.CAM.LTD",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4279761550023424,
+              "lv": 0.84,
+              "fz": 0.6923076923076923,
+              "l1": 0.5,
+              "l2": 0.7692307692307693
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "306#, HUAWEI WAREHOUSE, QIANHAIWAN FREE TRADE PORT AREA,LINHAI RD, NANSHAN <em>DISTRICT</em>, <em>SHENZHEN</em>",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.11764705882352941
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "AP MGMT CENTRE A9-1 , HUAWEI INDUS. BASE <em>BANTIAN</em> , <em>SHENZHEN</em> , CHINA , CN",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.11764705882352941
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "HUJING ROAD SONGSHAN LAKE HUAWEI BASE XILIU BEIPO VILLAGE <em>GUANGDONG</em> PROVINCE CHINA CN",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.11764705882352941
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "BAOXINCHUANG, AOHAN INDUSTRIAL PARK, 147 GEXIN AVENUE, CHANGQING STREET, XIHU <em>DISTRICT</em>, WUHAN",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.11764705882352941
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "BUILDING NO. 207 JIUFENG 3RD ROAD , JIANGXIA <em>DISTRICT</em> , WUHAN CITY , CHINA , CN",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.11764705882352941
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>CHN</em>",
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": "<em>HKG</em>",
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>SGP</em>",
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 108.77727,
+      "entity_id": "Y8yTpESNzjmbg8k6sDCPDQ",
+      "label": "Huawei Technologies Co., Ltd. (Huawei)",
+      "type": "company",
+      "identifiers": [],
+      "psa_id": null,
+      "addresses": [
+        "R&D Center, No. 2222, Golden Bridge Road, Pu Dong District, Shanghai, CN",
+        "Banxuegang Industrial Park, Buji Longgang, Shenzhen, Guangdong, 518129, Shenzhen, 518129, CN",
+        "Bantian Huawei Base, Longgang District, Shenzhen, 518129, CN",
+        "C1, Wuhan Future City, No. 999 Gaoxin Ave., Wuhan, Hebei Province, CN",
+        "Zone G, Huawei Base, Bantian, Longgang District, Shenzhen, CN",
+        "No. 1899 Xi Yuan Road, High-Tech West District, Chengdu, 611731, CN",
+        "Tsim Sha Tsui, Kowloon, CN"
+      ],
+      "countries": [
+        "CHN"
+      ],
+      "sources": [
+        "417400a1ac439843fda5bb2f05fb4161"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "address|sub|phraseStripped|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Huawei</em> <em>Technologies</em> <em>Co</em>., <em>Ltd</em>. (<em>Huawei</em>)",
+          "Shenzhen <em>Huawei</em> <em>Technologies</em>",
+          "<em>Huawei</em> <em>Technologies</em> Co., Ltd. (<em>Huawei</em>)",
+          "<em>Huawei</em> <em>Technology</em>",
+          "<em>Huawei</em> Technology"
+        ],
+        "address": [
+          "<em>Bantian</em> Huawei Base, <em>Longgang</em> <em>District</em>, <em>Shenzhen</em>, 518129, CN",
+          "Zone G, Huawei Base, <em>Bantian</em>, <em>Longgang</em> <em>District</em>, <em>Shenzhen</em>, CN",
+          "Banxuegang Industrial Park, Buji <em>Longgang</em>, <em>Shenzhen</em>, <em>Guangdong</em>, 518129, <em>Shenzhen</em>, 518129, CN",
+          "R&D Center, No. 2222, Golden Bridge Road, Pu Dong <em>District</em>, Shanghai, CN",
+          "No. 1899 Xi Yuan Road, High-Tech West <em>District</em>, Chengdu, 611731, CN"
+        ],
+        "country": [
+          "<em>CHN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Huawei</em> <em>Technologies</em> <em>Co</em>., <em>Ltd</em>. (<em>Huawei</em>)",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.46907133734402323,
+              "lv": 0.8305084745762712,
+              "fz": 0.696969696969697,
+              "l1": 0.7692307692307693,
+              "l2": 0.8846153846153846
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "Shenzhen <em>Huawei</em> <em>Technologies</em>",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.06849197056946803,
+              "lv": 0.8518518518518519,
+              "fz": 0.7142857142857143,
+              "l1": 0.7692307692307693,
+              "l2": 0.7692307692307693
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> Technology",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.06994038750585592,
+              "lv": 0.7674418604651163,
+              "fz": 0.6153846153846154,
+              "l1": 0.6153846153846154,
+              "l2": 0.6153846153846154
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> <em>Technologies</em> Co., Ltd. (<em>Huawei</em>)",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.46907133734402323,
+              "lv": 0.8305084745762712,
+              "fz": 0.696969696969697,
+              "l1": 0.7692307692307693,
+              "l2": 0.8846153846153846
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> <em>Technology</em>",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.10273795585420203,
+              "lv": 0.7674418604651163,
+              "fz": 0.6153846153846154,
+              "l1": 0.6153846153846154,
+              "l2": 0.6153846153846154
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>Bantian</em> Huawei Base, <em>Longgang</em> <em>District</em>, <em>Shenzhen</em>, 518129, CN",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5882352941176471
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "Zone G, Huawei Base, <em>Bantian</em>, <em>Longgang</em> <em>District</em>, <em>Shenzhen</em>, CN",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5882352941176471
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "Banxuegang Industrial Park, Buji <em>Longgang</em>, <em>Shenzhen</em>, <em>Guangdong</em>, 518129, <em>Shenzhen</em>, 518129, CN",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5882352941176471
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "R&D Center, No. 2222, Golden Bridge Road, Pu Dong <em>District</em>, Shanghai, CN",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5882352941176471
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "No. 1899 Xi Yuan Road, High-Tech West <em>District</em>, Chengdu, 611731, CN",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5882352941176471
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>CHN</em>",
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 97.855,
+      "entity_id": "hsj2aao3Jnh6vaCyfEYdtA",
+      "label": "Huawei Technologies Co., Ltd. (Huawei). Affiliated Entity: Shenzhen Huawei Anjiexin Electricity Co., Ltd.",
+      "type": "company",
+      "identifiers": [],
+      "psa_id": null,
+      "addresses": [
+        "Building 2, Area B, Putian Huawei Base, Longgang District, Shenzhen, CN"
+      ],
+      "countries": [
+        "CHN"
+      ],
+      "sources": [
+        "417400a1ac439843fda5bb2f05fb4161"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Huawei</em> <em>Technologies</em> <em>Co</em>., <em>Ltd</em>. (<em>Huawei</em>). Affiliated Entity: Shenzhen <em>Huawei</em> Anjiexin Electricity <em>Co</em>., <em>Ltd</em>.",
+          "Shenzhen <em>Huawei</em> Agisson Electric <em>Co</em>., <em>Ltd</em>.",
+          "<em>Huawei</em> <em>Technologies</em> Co., Ltd. (<em>Huawei</em>). Affiliated Entity: Shenzhen <em>Huawei</em> Anjiexin Electricity Co., Ltd.",
+          "Shenzhen <em>Huawei</em> Agisson Electric Co., Ltd."
+        ],
+        "address": [
+          "Building 2, Area B, Putian Huawei Base, <em>Longgang</em> <em>District</em>, <em>Shenzhen</em>, CN"
+        ],
+        "country": [
+          "<em>CHN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Huawei</em> <em>Technologies</em> <em>Co</em>., <em>Ltd</em>. (<em>Huawei</em>). Affiliated Entity: Shenzhen <em>Huawei</em> Anjiexin Electricity <em>Co</em>., <em>Ltd</em>.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19117211244090984,
+              "lv": 0.4727272727272728,
+              "fz": 0.0,
+              "l1": 0.7692307692307693,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "Shenzhen <em>Huawei</em> Agisson Electric <em>Co</em>., <em>Ltd</em>.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.35664679583528525,
+              "lv": 0.6307692307692307,
+              "fz": 0.3846153846153846,
+              "l1": 0.2692307692307692,
+              "l2": 0.6923076923076923
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> <em>Technologies</em> Co., Ltd. (<em>Huawei</em>). Affiliated Entity: Shenzhen <em>Huawei</em> Anjiexin Electricity Co., Ltd.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.03732595859475599,
+              "lv": 0.4727272727272728,
+              "fz": 0.0,
+              "l1": 0.7692307692307693,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          },
+          {
+            "matched": "Shenzhen <em>Huawei</em> Agisson Electric Co., Ltd.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.35664679583528525,
+              "lv": 0.6307692307692307,
+              "fz": 0.3846153846153846,
+              "l1": 0.2692307692307692,
+              "l2": 0.6923076923076923
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "Building 2, Area B, Putian Huawei Base, <em>Longgang</em> <em>District</em>, <em>Shenzhen</em>, CN",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>CHN</em>",
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 97.38315,
+      "entity_id": "3tXkFFr7VW_to-rYokClrw",
+      "label": "Huawei Technologies Co., Ltd. (Huawei). Affiliated Entity: Shenzhen Huawei Anjiexin Electricity Co., Ltd.",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "NK-fvbusQNugMaoFGDsKUB398",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "Building 2, Area B, Putian Huawei Base, Longgang District, Shenzhen"
+      ],
+      "countries": [
+        "CHN"
+      ],
+      "sources": [
+        "24ca9e1480ab586a153d3ae12a7b83a0"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Huawei</em> <em>Technologies</em> <em>Co</em>., <em>Ltd</em>. (<em>Huawei</em>). Affiliated Entity: Shenzhen <em>Huawei</em> Anjiexin Electricity <em>Co</em>., <em>Ltd</em>.",
+          "Shenzhen <em>Huawei</em> Agisson Electric <em>Co</em>., <em>Ltd</em>.",
+          "Shenzhen <em>Huawei</em> Anjiexin Electricity <em>Co</em>., <em>Ltd</em>.",
+          "<em>Huawei</em> <em>Technologies</em> Co., Ltd. (<em>Huawei</em>). Affiliated Entity: Shenzhen <em>Huawei</em> Anjiexin Electricity Co., Ltd.",
+          "Shenzhen <em>Huawei</em> Agisson Electric Co., Ltd.",
+          "Shenzhen <em>Huawei</em> Anjiexin Electricity Co., Ltd."
+        ],
+        "address": [
+          "Building 2, Area B, Putian Huawei Base, <em>Longgang</em> <em>District</em>, <em>Shenzhen</em>"
+        ],
+        "country": [
+          "<em>CHN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Huawei</em> <em>Technologies</em> <em>Co</em>., <em>Ltd</em>. (<em>Huawei</em>). Affiliated Entity: Shenzhen <em>Huawei</em> Anjiexin Electricity <em>Co</em>., <em>Ltd</em>.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19117211244090984,
+              "lv": 0.4727272727272728,
+              "fz": 0.0,
+              "l1": 0.7692307692307693,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "Shenzhen <em>Huawei</em> Agisson Electric <em>Co</em>., <em>Ltd</em>.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.35664679583528525,
+              "lv": 0.6307692307692307,
+              "fz": 0.3846153846153846,
+              "l1": 0.2692307692307692,
+              "l2": 0.6923076923076923
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "Shenzhen <em>Huawei</em> Anjiexin Electricity <em>Co</em>., <em>Ltd</em>.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.35664679583528525,
+              "lv": 0.6086956521739131,
+              "fz": 0.37209302325581395,
+              "l1": 0.2692307692307692,
+              "l2": 0.6153846153846154
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> <em>Technologies</em> Co., Ltd. (<em>Huawei</em>). Affiliated Entity: Shenzhen <em>Huawei</em> Anjiexin Electricity Co., Ltd.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.03732595859475599,
+              "lv": 0.4727272727272728,
+              "fz": 0.0,
+              "l1": 0.7692307692307693,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          },
+          {
+            "matched": "Shenzhen <em>Huawei</em> Agisson Electric Co., Ltd.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.35664679583528525,
+              "lv": 0.6307692307692307,
+              "fz": 0.3846153846153846,
+              "l1": 0.2692307692307692,
+              "l2": 0.6923076923076923
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "Shenzhen <em>Huawei</em> Anjiexin Electricity Co., Ltd.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.35664679583528525,
+              "lv": 0.6086956521739131,
+              "fz": 0.37209302325581395,
+              "l1": 0.2692307692307692,
+              "l2": 0.6153846153846154
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "Building 2, Area B, Putian Huawei Base, <em>Longgang</em> <em>District</em>, <em>Shenzhen</em>",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>CHN</em>",
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 94.92148,
+      "entity_id": "p1P5JM9sEUdXWG4FvJ8hqg",
+      "label": "Huawei Technologies Co., Ltd. (Huawei). Affiliated Entity: Shenzhen Huawei New Technology Co., Ltd.",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "NK-T9PTDnvXNyA4wBZgXuvt3S",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "Huawei Production Center, Gangtou Village, Buji Town, Longgang District Shenzhen CN"
+      ],
+      "countries": [
+        "CHN"
+      ],
+      "sources": [
+        "24ca9e1480ab586a153d3ae12a7b83a0"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Huawei</em> <em>Technologies</em> <em>Co</em>., <em>Ltd</em>. (<em>Huawei</em>). Affiliated Entity: Shenzhen <em>Huawei</em> New Technology <em>Co</em>., <em>Ltd</em>.",
+          "<em>Huawei</em> <em>Technologies</em> Co., Ltd. (<em>Huawei</em>). Affiliated Entity: Shenzhen <em>Huawei</em> New <em>Technology</em> Co., Ltd."
+        ],
+        "address": [
+          "Huawei Production Center, Gangtou Village, Buji Town, <em>Longgang</em> <em>District</em> <em>Shenzhen</em> CN"
+        ],
+        "country": [
+          "<em>CHN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Huawei</em> <em>Technologies</em> <em>Co</em>., <em>Ltd</em>. (<em>Huawei</em>). Affiliated Entity: Shenzhen <em>Huawei</em> New Technology <em>Co</em>., <em>Ltd</em>.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19117211244090984,
+              "lv": 0.5,
+              "fz": 0.33333333333333337,
+              "l1": 0.7692307692307693,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> <em>Technologies</em> Co., Ltd. (<em>Huawei</em>). Affiliated Entity: Shenzhen <em>Huawei</em> New <em>Technology</em> Co., Ltd.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19117211244090984,
+              "lv": 0.5,
+              "fz": 0.33333333333333337,
+              "l1": 0.7692307692307693,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "Huawei Production Center, Gangtou Village, Buji Town, <em>Longgang</em> <em>District</em> <em>Shenzhen</em> CN",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>CHN</em>",
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 94.92148,
+      "entity_id": "eMjs1Z8G_4ALYFTr8-yxug",
+      "label": "Huawei Technologies Co., Ltd. (Huawei). Affiliated Entity: Shenzhen Huawei New Technology Co., Ltd.",
+      "type": "company",
+      "identifiers": [],
+      "psa_id": null,
+      "addresses": [
+        "Huawei Production Center, Gangtou Village, Buji Town, Longgang District, Shenzhen, CN"
+      ],
+      "countries": [
+        "CHN"
+      ],
+      "sources": [
+        "417400a1ac439843fda5bb2f05fb4161"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Huawei</em> <em>Technologies</em> <em>Co</em>., <em>Ltd</em>. (<em>Huawei</em>). Affiliated Entity: Shenzhen <em>Huawei</em> New Technology <em>Co</em>., <em>Ltd</em>.",
+          "<em>Huawei</em> <em>Technologies</em> Co., Ltd. (<em>Huawei</em>). Affiliated Entity: Shenzhen <em>Huawei</em> New <em>Technology</em> Co., Ltd."
+        ],
+        "address": [
+          "Huawei Production Center, Gangtou Village, Buji Town, <em>Longgang</em> <em>District</em>, <em>Shenzhen</em>, CN"
+        ],
+        "country": [
+          "<em>CHN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Huawei</em> <em>Technologies</em> <em>Co</em>., <em>Ltd</em>. (<em>Huawei</em>). Affiliated Entity: Shenzhen <em>Huawei</em> New Technology <em>Co</em>., <em>Ltd</em>.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19117211244090984,
+              "lv": 0.5,
+              "fz": 0.33333333333333337,
+              "l1": 0.7692307692307693,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> <em>Technologies</em> Co., Ltd. (<em>Huawei</em>). Affiliated Entity: Shenzhen <em>Huawei</em> New <em>Technology</em> Co., Ltd.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19117211244090984,
+              "lv": 0.5,
+              "fz": 0.33333333333333337,
+              "l1": 0.7692307692307693,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "Huawei Production Center, Gangtou Village, Buji Town, <em>Longgang</em> <em>District</em>, <em>Shenzhen</em>, CN",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>CHN</em>",
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 94.83951,
+      "entity_id": "jIqvuvvjh34LeWckrI-8qw",
+      "label": "\u6df1\u5733\u5e02\u534e\u4e3a\u6280\u672f\u8f6f\u4ef6\u6709\u9650\u516c\u53f8",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "440301103431637",
+          "type": "cn_registration_number",
+          "label": "Cn Registration Number"
+        },
+        {
+          "value": "914403007839465126",
+          "type": "cn_unified_social_credit_code",
+          "label": "Cn Unified Social Credit Code"
+        },
+        {
+          "value": "440307783946512",
+          "type": "cn_tax_identification_number",
+          "label": "Cn Tax Identification Number"
+        },
+        {
+          "value": "783946512",
+          "type": "cn_organization_code",
+          "label": "Cn Organization Code"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "\u6df1\u5733\u5e02\u9f99\u5c97\u533a\u5742\u7530\u534e\u4e3a\u57fa\u5730B\u533a2\u53f7\u697c, 518129",
+        "shen zhen shi long gang qu ban tian hua wei ji deB qu2hao lou, 518129",
+        "Building 2, Area B, Huawei Base, Bantian, Longgang District, Shenzhen, 518129",
+        "\u6df1\u5733\u5e02\u9f99\u5c97\u533a\u5742\u7530\u534e\u4e3a\u57fa\u5730B\u533a2\u53f7\u697c",
+        "shen zhen shi long gang qu ban tian hua wei ji deB qu2hao lou",
+        "Building 2, Area B, Huawei Base, Bantian, Longgang District, Shenzhen",
+        "\u6df1\u5733\u5e02",
+        "shen zhen shi",
+        "Shenzhen",
+        "Huawei Base, Building 2, District B, Shenzhen, CN"
+      ],
+      "countries": [
+        "CHN"
+      ],
+      "sources": [
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "0ff02c63234d4447c803acd7748b9afc",
+        "a4be698ea3263f7f7f3906d1c98cffc2",
+        "0cf0044442daf17258e27a6ddd49770f",
+        "148946e7e3e5b2ba031bfcefa28e4d83",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "fcfa3d1c6b5f9744188fc01d0999fb76"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "address|sub|phraseStripped|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "ShenZhen <em>Huawei</em> <em>Technologies</em> Software <em>Co</em>., <em>Ltd</em>",
+          "Shenzhen <em>Huawei</em> Technology Software <em>Co</em>., <em>Ltd</em>.",
+          "Shenzhen <em>Huawei</em> <em>Technology</em> Software Co., Ltd.",
+          "ShenZhen <em>Huawei</em> <em>Technologies</em> Software Co., Ltd"
+        ],
+        "address": [
+          "Building 2, Area B, Huawei Base, <em>Bantian</em>, <em>Longgang</em> <em>District</em>, <em>Shenzhen</em>, 518129",
+          "Building 2, Area B, Huawei Base, <em>Bantian</em>, <em>Longgang</em> <em>District</em>, <em>Shenzhen</em>",
+          "Huawei Base, Building 2, <em>District</em> B, <em>Shenzhen</em>, CN",
+          "<em>Shenzhen</em>"
+        ],
+        "country": [
+          "<em>CHN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "ShenZhen <em>Huawei</em> <em>Technologies</em> Software <em>Co</em>., <em>Ltd</em>",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.36757931861806725,
+              "lv": 0.7428571428571429,
+              "fz": 0.5909090909090908,
+              "l1": 0.7692307692307693,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "Shenzhen <em>Huawei</em> Technology Software <em>Co</em>., <em>Ltd</em>.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.35664679583528525,
+              "lv": 0.6323529411764706,
+              "fz": 0.40476190476190477,
+              "l1": 0.38461538461538464,
+              "l2": 0.7692307692307693
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "Shenzhen <em>Huawei</em> <em>Technology</em> Software Co., Ltd.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.35664679583528525,
+              "lv": 0.6323529411764706,
+              "fz": 0.40476190476190477,
+              "l1": 0.38461538461538464,
+              "l2": 0.7692307692307693
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "ShenZhen <em>Huawei</em> <em>Technologies</em> Software Co., Ltd",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.36757931861806725,
+              "lv": 0.7428571428571429,
+              "fz": 0.5909090909090908,
+              "l1": 0.7692307692307693,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "Building 2, Area B, Huawei Base, <em>Bantian</em>, <em>Longgang</em> <em>District</em>, <em>Shenzhen</em>, 518129",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.23529411764705882
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "Building 2, Area B, Huawei Base, <em>Bantian</em>, <em>Longgang</em> <em>District</em>, <em>Shenzhen</em>",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.23529411764705882
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "Huawei Base, Building 2, <em>District</em> B, <em>Shenzhen</em>, CN",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.23529411764705882
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "<em>Shenzhen</em>",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.23529411764705882
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>CHN</em>",
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 93.85118,
+      "entity_id": "651HNoX9HenoUeC3Cc9bZQ",
+      "label": "\u534e\u4e3a\u7ec8\u7aef\uff08\u4e1c\u839e\uff09\u6709\u9650\u516c\u53f8",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "914419000585344943",
+          "type": "cn_unified_social_credit_code",
+          "label": "Cn Unified Social Credit Code"
+        },
+        {
+          "value": "C959570",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "058534494",
+          "type": "cn_organization_code",
+          "label": "Cn Organization Code"
+        },
+        {
+          "value": "441900001461999",
+          "type": "cn_registration_number",
+          "label": "Cn Registration Number"
+        },
+        {
+          "value": "441900058534494",
+          "type": "cn_tax_identification_number",
+          "label": "Cn Tax Identification Number"
+        },
+        {
+          "value": "trade-csl-9da359f0e5ef87f3e4784c79bbe60e88960e2f93aad57c0aa64800f0",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "1225505",
+          "type": "unknown_commercial_register_id",
+          "label": "Unknown Commercial Register Id"
+        },
+        {
+          "value": "441900001461999",
+          "type": "unknown",
+          "label": "Unknown"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "\u4e1c\u839e\u5e02",
+        "dong guan shi",
+        "Dongguan City",
+        "\u5e7f\u4e1c\u7701\u4e1c\u839e\u5e02\u677e\u5c71\u6e56\u56ed\u533a\u65b0\u57ce\u8def2\u53f7",
+        "guang dong sheng dong guan shi song shan hu yuan qu xin cheng lu2hao",
+        "No. 2, Xincheng Road, Songshan Lake District, Dongguan City, Guangdong Province",
+        "Dongguan, Guangdong, CN",
+        "\u4e1c\u839e\u5e02\u677e\u5c71\u6e56\u9ad8\u65b0\u6280\u672f\u4ea7\u4e1a\u5f00\u53d1\u533a\u65b0\u57ce\u5927\u90532\u53f7\u5357\u65b9\u5de5\u5382\u5382\u623f\uff08\u4e00\u671f\uff09\u9879\u76eeB2\u533a\u751f\u4ea7\u5382\u623f-5",
+        "dong guan shi song shan hu gao xin ji shu chan ye kai fa qu xin cheng da dao2hao nan fang gong chang chang fang (yi qi) xiang muB2qu sheng chan chang fang-5",
+        "Production Plant-5, Area B2, Southern Factory Building (Phase I) Project, No. 2 Xincheng Avenue, Songshan Lake High-tech Industrial Development Zone, Dongguan City",
+        "No. 2 Xincheng Avenue, Songshan Lake Road, Dongguan",
+        "Songshan Lake Base, Guangdong, CN",
+        "8 Shitou Road North Area, Shenzhen, 518129, CN"
+      ],
+      "countries": [
+        "CHN"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "0cf0044442daf17258e27a6ddd49770f",
+        "441b8bd29977208d312f2192675b05d9",
+        "148946e7e3e5b2ba031bfcefa28e4d83",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "0ff02c63234d4447c803acd7748b9afc",
+        "a4be698ea3263f7f7f3906d1c98cffc2",
+        "b6382672c6741fe1bca28d2668c1732b",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "4b58375256689dae9c9b05ffb03ac4f2"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Huawei</em> Communications <em>Technologies</em> <em>Co</em>., <em>Ltd</em>.",
+          "<em>Huawei</em> Terminal (Dongguan) <em>Co</em>., <em>Ltd</em>.",
+          "<em>Huawei</em> Terminal <em>Co</em>., <em>Ltd</em>.",
+          "<em>Huawei</em> Device(Dongguan)<em>Co</em>., <em>Ltd</em>.",
+          "<em>Huawei</em> Device <em>Co</em>., <em>Ltd</em>.",
+          "<em>Huawei</em> Communication <em>Technologies</em> Co., Limited",
+          "<em>Huawei</em> Communications <em>Technologies</em> Co., Ltd.",
+          "<em>Huawei</em> Terminal (Dongguan) Co., Ltd.",
+          "<em>Huawei</em> Terminal Co., Ltd.",
+          "<em>Huawei</em> Device(Dongguan)Co., Ltd."
+        ],
+        "address": [
+          "No. 2, Xincheng Road, Songshan Lake <em>District</em>, Dongguan City, <em>Guangdong</em> Province",
+          "Dongguan, <em>Guangdong</em>, CN",
+          "Songshan Lake Base, <em>Guangdong</em>, CN",
+          "8 Shitou Road North Area, <em>Shenzhen</em>, 518129, CN"
+        ],
+        "country": [
+          "<em>CHN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Huawei</em> Communications <em>Technologies</em> <em>Co</em>., <em>Ltd</em>.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.44109518234168077,
+              "lv": 0.7313432835820896,
+              "fz": 0.5609756097560976,
+              "l1": 0.7692307692307693,
+              "l2": 0.8846153846153846
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> Terminal (Dongguan) <em>Co</em>., <em>Ltd</em>.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4279761550023424,
+              "lv": 0.6666666666666667,
+              "fz": 0.3870967741935484,
+              "l1": 0.2692307692307692,
+              "l2": 0.6153846153846154
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> Terminal <em>Co</em>., <em>Ltd</em>.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.534970193752928,
+              "lv": 0.6666666666666667,
+              "fz": 0.3846153846153846,
+              "l1": 0.2692307692307692,
+              "l2": 0.5384615384615384
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> Device(Dongguan)<em>Co</em>., <em>Ltd</em>.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4279761550023424,
+              "lv": 0.6727272727272727,
+              "fz": 0.3793103448275862,
+              "l1": 0.2692307692307692,
+              "l2": 0.5769230769230769
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> Device <em>Co</em>., <em>Ltd</em>.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.534970193752928,
+              "lv": 0.6739130434782609,
+              "fz": 0.42307692307692313,
+              "l1": 0.2692307692307692,
+              "l2": 0.5384615384615384
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> Communication <em>Technologies</em> Co., Limited",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.041095182341680817,
+              "lv": 0.7428571428571429,
+              "fz": 0.5909090909090908,
+              "l1": 0.8461538461538461,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> Communications <em>Technologies</em> Co., Ltd.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.44109518234168077,
+              "lv": 0.7313432835820896,
+              "fz": 0.5609756097560976,
+              "l1": 0.7692307692307693,
+              "l2": 0.8846153846153846
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> Terminal (Dongguan) Co., Ltd.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4279761550023424,
+              "lv": 0.6666666666666667,
+              "fz": 0.3870967741935484,
+              "l1": 0.2692307692307692,
+              "l2": 0.6153846153846154
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> Terminal Co., Ltd.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.534970193752928,
+              "lv": 0.6666666666666667,
+              "fz": 0.3846153846153846,
+              "l1": 0.2692307692307692,
+              "l2": 0.5384615384615384
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Huawei</em> Device(Dongguan)Co., Ltd.",
+            "uploaded": "Huawei Technologies Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4279761550023424,
+              "lv": 0.6727272727272727,
+              "fz": 0.3793103448275862,
+              "l1": 0.2692307692307692,
+              "l2": 0.5769230769230769
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "No. 2, Xincheng Road, Songshan Lake <em>District</em>, Dongguan City, <em>Guangdong</em> Province",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.4117647058823529
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "Dongguan, <em>Guangdong</em>, CN",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.4117647058823529
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "Songshan Lake Base, <em>Guangdong</em>, CN",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.4117647058823529
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "8 Shitou Road North Area, <em>Shenzhen</em>, 518129, CN",
+            "uploaded": "Bantian Longgang District Shenzhen",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.4117647058823529
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>CHN</em>",
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    }
+  ]
+}

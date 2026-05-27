@@ -1,0 +1,942 @@
+{
+  "fields": {
+    "name": [
+      "Syrian Arab Airlines"
+    ],
+    "identifier": null,
+    "profile": null,
+    "country": [
+      "SYR"
+    ],
+    "address": [
+      "Damascus International Airport Damascus"
+    ],
+    "date_of_birth": null,
+    "contact": null,
+    "type": null
+  },
+  "data": [
+    {
+      "profile": "corporate",
+      "score": 200.30426,
+      "entity_id": "v6qt9ZlyXkJb5AHmURHh0g",
+      "label": "Syrian Arab Airlines",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "13440",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "EU.2861.78",
+          "type": "eu_sanction_rn",
+          "label": "Eu Sanction Rn"
+        },
+        {
+          "value": "7097",
+          "type": "eu_fsd_id",
+          "label": "Eu Fsd Id"
+        },
+        {
+          "value": "12734",
+          "type": "gbr_hm_treasury_sanction_group_id",
+          "label": "Gbr Hm Treasury Sanction Group Id"
+        },
+        {
+          "value": "SYR0330",
+          "type": "gbr_uk_sanctions_id",
+          "label": "Gbr Uk Sanctions Id"
+        },
+        {
+          "value": "C744924",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "2388",
+          "type": "fra_asset_freeze_id",
+          "label": "Fra Asset Freeze Id"
+        },
+        {
+          "value": "5c48803aa18bbce4b8f16a2b",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "12734",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "29508588-42bf-4fe5-990d-d7d8b4910b23",
+          "type": "sesamm_company_id",
+          "label": "Sesamm Company Id"
+        },
+        {
+          "value": "NK-nKeChvrHv8EX89KPe5kqbS",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "Al-Mohafazeh Square, Damascus, P.O. Box 417, SYRIAN ARAB REPUBLIC",
+        "Syria",
+        "Social Insurance Building, Youssef Al Azmeh Square, Down Town, PO Box 417, Damascus, Syria",
+        "Al-Oumaween Square, P.O. Box 417, Damas, SYRIE",
+        "Social Insurance Building Youssef Alazmah Square / Intersection of Al Hijaz Street and Al Firdous Street Damascus Syria"
+      ],
+      "countries": [
+        "SYR"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "701bbfc53dd09fad95b177d1f07f3667",
+        "5b1375783448347064745954e331bbe9",
+        "10a889609ddae6cc31773feebe48166b",
+        "ded706ef28cdc649b6fc5142bc542890",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "c10d482320f207d92aa814519c3bd686",
+        "ad6dc774c74b92159422deabc5aee661",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "93de05b55a68cc964f34bbfc7ec7bc86",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "f4ce10ac8bdc0bd9bcb31cb868b4b539"
+      ],
+      "typed_matched_queries": [
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Syrian</em> <em>Arab</em> <em>Airlines</em>",
+          "<em>Syrian</em> <em>Arab</em> <em>Airlines</em> and <em>Syrian</em>",
+          "<em>Syrian</em> <em>Arab</em> <em>Airlines</em> (SAA)",
+          "<em>Syrian</em> Air",
+          "L\u00edneas A\u00e9reas <em>\u00c1rabes</em> Sirias"
+        ],
+        "country": [
+          "<em>SYR</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Syrian</em> <em>Arab</em> <em>Airlines</em>",
+            "uploaded": "Syrian Arab Airlines",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.7128519514320572,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Syrian</em> <em>Arab</em> <em>Airlines</em> and <em>Syrian</em>",
+            "uploaded": "Syrian Arab Airlines",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.534638963574043,
+              "lv": 0.9090909090909091,
+              "fz": 0.8333333333333334,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Syrian</em> <em>Arab</em> <em>Airlines</em> (SAA)",
+            "uploaded": "Syrian Arab Airlines",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.7128519514320572,
+              "lv": 0.9090909090909091,
+              "fz": 0.8333333333333334,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Syrian</em> Air",
+            "uploaded": "Syrian Arab Airlines",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.5,
+              "lv": 0.6666666666666667,
+              "fz": 0.5,
+              "l1": 0.4,
+              "l2": 0.5
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "L\u00edneas A\u00e9reas <em>\u00c1rabes</em> Sirias",
+            "uploaded": "Syrian Arab Airlines",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.25,
+              "lv": 0.6382978723404256,
+              "fz": 0.37037037037037035,
+              "l1": 0.15,
+              "l2": 0.6
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>SYR</em>",
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "YEM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": null,
+            "uploaded": "Damascus International Airport",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 166.90245,
+      "entity_id": "NNUIQp39ujo1GSTVWgkF_A",
+      "label": "SYRIAN ARAB AIRLINES CORPORATION",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "02130451004",
+          "type": "ita_vat_number",
+          "label": "Ita Vat Number"
+        },
+        {
+          "value": "RM-282551",
+          "type": "ita_rea_number",
+          "label": "Ita Rea Number"
+        },
+        {
+          "value": "80165930589",
+          "type": "ita_fiscal_code",
+          "label": "Ita Fiscal Code"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "VIA BAGDAG (SIRIA), DAMASCO, Siria"
+      ],
+      "countries": [
+        "ITA",
+        "SYR"
+      ],
+      "sources": [
+        "16279c76cf40cfb1f5ad0809e6a76fd7"
+      ],
+      "typed_matched_queries": [
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>SYRIAN</em> <em>ARAB</em> <em>AIRLINES</em> CORPORATION"
+        ],
+        "country": [
+          "<em>SYR</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>SYRIAN</em> <em>ARAB</em> <em>AIRLINES</em> CORPORATION",
+            "uploaded": "Syrian Arab Airlines",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.7128519514320572,
+              "lv": 0.7692307692307692,
+              "fz": 0.625,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>SYR</em>",
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "YEM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": null,
+            "uploaded": "Damascus International Airport",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 162.90245,
+      "entity_id": "FhfWdlf8ykj_inHpEMu_vw",
+      "label": "SYRIAN ARAB AIRLINES CORPORATION",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "FC030541",
+          "type": "uk_company_number",
+          "label": "Uk Company Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "Syrian Arab Airlines Building, Yousef Al-Athma Square, Salhia P O Box 417 Damascus, Syrian Arab Republic"
+      ],
+      "countries": [
+        "GBR",
+        "SYR"
+      ],
+      "sources": [
+        "ecdfb3f2ecc8c3797e77d5795a8066ef",
+        "ecdfb3f2ecc8c3797e77d5795a8066ef"
+      ],
+      "typed_matched_queries": [
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>SYRIAN</em> <em>ARAB</em> <em>AIRLINES</em> CORPORATION"
+        ],
+        "country": [
+          "<em>SYR</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>SYRIAN</em> <em>ARAB</em> <em>AIRLINES</em> CORPORATION",
+            "uploaded": "Syrian Arab Airlines",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.7128519514320572,
+              "lv": 0.7692307692307692,
+              "fz": 0.625,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>SYR</em>",
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "YEM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": null,
+            "uploaded": "Damascus International Airport",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 152.10602,
+      "entity_id": "ku6F7aXoOKcYGvy46k1aaA",
+      "label": "SYRIAN ARAB AIRLINES",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "SYC0033048",
+          "type": "xxx_cedar_rose_uid",
+          "label": "Xxx Cedar Rose Uid"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "Saadallah Jabiri Street, Damascus, SYR"
+      ],
+      "countries": [
+        "SYR"
+      ],
+      "sources": [
+        "72438a484ca4e0b76fcc49f87dc70e52"
+      ],
+      "typed_matched_queries": [
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>SYRIAN</em> <em>ARAB</em> <em>AIRLINES</em>",
+          "<em>Syrian</em> <em>Arab</em> <em>Airlines</em> Corporation"
+        ],
+        "country": [
+          "<em>SYR</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>SYRIAN</em> <em>ARAB</em> <em>AIRLINES</em>",
+            "uploaded": "Syrian Arab Airlines",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.7128519514320572,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Syrian</em> <em>Arab</em> <em>Airlines</em> Corporation",
+            "uploaded": "Syrian Arab Airlines",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.7128519514320572,
+              "lv": 0.7692307692307692,
+              "fz": 0.625,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>SYR</em>",
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "YEM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": null,
+            "uploaded": "Damascus International Airport",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    }
+  ]
+}

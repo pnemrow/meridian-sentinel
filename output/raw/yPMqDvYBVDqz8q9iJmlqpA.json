@@ -1,0 +1,1014 @@
+{
+  "id": "yPMqDvYBVDqz8q9iJmlqpA",
+  "label": "EMPRESA CUBANA IMPORTADORA Y EXPORTADORA DE COMBUSTIBLES Y LUBRICANTES",
+  "degree": 1,
+  "closed": false,
+  "entity_url": "/v1/entity/yPMqDvYBVDqz8q9iJmlqpA",
+  "pep": false,
+  "psa_id": "78778290173758",
+  "psa_count": 1,
+  "sanctioned": false,
+  "type": "company",
+  "identifiers": [
+    {
+      "value": "4963",
+      "type": "cub_cod",
+      "label": "Cub Cod"
+    }
+  ],
+  "countries": [
+    "CUB"
+  ],
+  "source_count": {
+    "60c5205d5c2c3f4dc9b14658d0fd1163": {
+      "count": 6,
+      "label": "Cuba Directory of Institutions and Business Entities",
+      "country": "CUB",
+      "source_type": "company_data"
+    }
+  },
+  "addresses": [
+    "CALLE 30, NO. 512, ENTRE 5TA Y 7MA, MIRAMAR"
+  ],
+  "trade_count": {
+    "sent": 0,
+    "received": 0
+  },
+  "date_of_birth": null,
+  "relationship_count": {
+    "subsidiary_of": 1
+  },
+  "user_relationship_count": {},
+  "attribute_count": {
+    "company_type": 1,
+    "name": 2,
+    "business_purpose": 2,
+    "identifier": 1,
+    "additional_information": 1,
+    "country": 2,
+    "status": 1,
+    "address": 1
+  },
+  "user_attribute_count": {},
+  "attribute_counts": {
+    "company_type": 1,
+    "name": 2,
+    "business_purpose": 2,
+    "identifier": 1,
+    "additional_information": 1,
+    "country": 2,
+    "status": 1,
+    "address": 1
+  },
+  "user_attribute_counts": {},
+  "related_entities_count": 1,
+  "user_related_entities_count": 0,
+  "user_record_count": 0,
+  "reference_id": "60c5205d5c2c3f4dc9b14658d0fd1163/04963/1585713600000:7d82bd1d2a536a58e15f1e2fa321a0ed",
+  "logistics_entity": false,
+  "registration_date": null,
+  "translated_label": null,
+  "hs_code": null,
+  "shipment_arrival": null,
+  "shipment_departure": null,
+  "company_type": "Empresas Estatales",
+  "latest_status": {
+    "status": "active",
+    "date": "2020-04-01"
+  },
+  "risk": {
+    "psa_sanctioned": {
+      "value": true,
+      "metadata": {
+        "sanctioned_entity": [
+          "clqpsHHBxcbf9k6ZrXb20g"
+        ]
+      },
+      "level": "critical"
+    },
+    "psa_owner_of_sanctioned_usa_ofac_sdn_entity": {
+      "value": 1.0,
+      "metadata": {
+        "traversal_path": [
+          "yPMqDvYBVDqz8q9iJmlqpA|psa|clqpsHHBxcbf9k6ZrXb20g|has_subsidiary|u3WtCBdmoq9XCHoo6XSwRg"
+        ]
+      },
+      "level": "high"
+    },
+    "psa_owner_of_sanctioned_entity": {
+      "value": 1.0,
+      "metadata": {
+        "traversal_path": [
+          "yPMqDvYBVDqz8q9iJmlqpA|psa|clqpsHHBxcbf9k6ZrXb20g|has_subsidiary|u3WtCBdmoq9XCHoo6XSwRg"
+        ]
+      },
+      "level": "high"
+    },
+    "psa_sanctioned_usa_ofac_sdn": {
+      "value": true,
+      "metadata": {
+        "sanctioned_usa_ofac_sdn_entity": [
+          "clqpsHHBxcbf9k6ZrXb20g"
+        ]
+      },
+      "level": "critical"
+    },
+    "psa_state_owned": {
+      "value": true,
+      "metadata": {
+        "state_owned_entity": [
+          "clqpsHHBxcbf9k6ZrXb20g"
+        ]
+      },
+      "level": "high"
+    },
+    "psa_owner_of_regulatory_action_entity": {
+      "value": 1.0,
+      "metadata": {
+        "traversal_path": [
+          "yPMqDvYBVDqz8q9iJmlqpA|psa|clqpsHHBxcbf9k6ZrXb20g|has_subsidiary|u3WtCBdmoq9XCHoo6XSwRg"
+        ]
+      },
+      "level": "high"
+    },
+    "psa_export_controls": {
+      "value": true,
+      "metadata": {
+        "export_controls_entity": [
+          "clqpsHHBxcbf9k6ZrXb20g"
+        ]
+      },
+      "level": "critical"
+    },
+    "psa_owner_of_export_controls_entity": {
+      "value": 1.0,
+      "metadata": {
+        "traversal_path": [
+          "yPMqDvYBVDqz8q9iJmlqpA|psa|clqpsHHBxcbf9k6ZrXb20g|has_subsidiary|u3WtCBdmoq9XCHoo6XSwRg"
+        ]
+      },
+      "level": "high"
+    }
+  },
+  "attributes": {
+    "additional_information": {
+      "limit": 100,
+      "size": {
+        "count": 1,
+        "qualifier": "eq"
+      },
+      "data": [
+        {
+          "editable": false,
+          "record": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163/04963/1585713600000"
+          ],
+          "record_count": 1,
+          "properties": {
+            "date": null,
+            "extra": null,
+            "from_date": null,
+            "to_date": null,
+            "type": "Oficina Nacional de Estad\u00edstica e Informaci\u00f3n",
+            "value": null,
+            "SUBORD": "0",
+            "NAE": "5141",
+            "ORGA": "104",
+            "FORG": "02",
+            "UNI": "614",
+            "TIPO": "CMEX",
+            "DPA": "2301",
+            "FFI": "1",
+            "EP": "1",
+            "ALTA": "19770131"
+          },
+          "sources": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163"
+          ]
+        }
+      ],
+      "next": null,
+      "offset": null
+    },
+    "address": {
+      "limit": 100,
+      "size": {
+        "count": 1,
+        "qualifier": "eq"
+      },
+      "data": [
+        {
+          "editable": false,
+          "record": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163/04963/1585713600000"
+          ],
+          "record_count": 6,
+          "properties": {
+            "building": null,
+            "category": null,
+            "city": null,
+            "city_district": null,
+            "country": null,
+            "country_region": null,
+            "date": null,
+            "entrance": null,
+            "extra": null,
+            "from_date": null,
+            "house": null,
+            "house_number": "No. 512",
+            "island": null,
+            "language": null,
+            "level": null,
+            "metro_station": null,
+            "near": null,
+            "normalized": null,
+            "po_box": null,
+            "postcode": null,
+            "precision_code": null,
+            "road": "Entre 5ta Y 7ma Miramar",
+            "staircase": null,
+            "state": null,
+            "state_district": null,
+            "suburb": null,
+            "to_date": null,
+            "translated": null,
+            "transliterated": null,
+            "type": null,
+            "unit": null,
+            "value": "CALLE 30, NO. 512, ENTRE 5TA Y 7MA, MIRAMAR",
+            "world_region": null,
+            "x": null,
+            "y": null
+          },
+          "sources": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163"
+          ]
+        }
+      ],
+      "next": null,
+      "offset": null
+    },
+    "business_purpose": {
+      "limit": 100,
+      "size": {
+        "count": 2,
+        "qualifier": "eq"
+      },
+      "data": [
+        {
+          "editable": false,
+          "record": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163/04963/1654473600000"
+          ],
+          "record_count": 5,
+          "properties": {
+            "code": "4661",
+            "date": null,
+            "extra": null,
+            "from_date": null,
+            "standard": "ISIC4",
+            "to_date": null,
+            "value": "Wholesale of solid, liquid and gaseous fuels and related products",
+            "Original Code Before Sayari Conversion to ISIC4": "4661 (CCNAE2021)"
+          },
+          "sources": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163"
+          ]
+        },
+        {
+          "editable": false,
+          "record": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163/04963/1654473600000"
+          ],
+          "record_count": 5,
+          "properties": {
+            "code": "4661",
+            "date": null,
+            "extra": null,
+            "from_date": null,
+            "standard": "CCNAE2021",
+            "to_date": null,
+            "value": "VENTA AL POR MAYOR DE COMBUSTIBLES S\u00d3LIDOS, L\u00cdQUIDOS Y GASEOSOS Y PRODUCTOS CONEXOS"
+          },
+          "sources": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163"
+          ]
+        }
+      ],
+      "next": null,
+      "offset": null
+    },
+    "company_type": {
+      "limit": 100,
+      "size": {
+        "count": 1,
+        "qualifier": "eq"
+      },
+      "data": [
+        {
+          "editable": false,
+          "record": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163/04963/1654473600000"
+          ],
+          "record_count": 5,
+          "properties": {
+            "date": null,
+            "extra": null,
+            "from_date": null,
+            "to_date": null,
+            "value": "Empresas Estatales"
+          },
+          "sources": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163"
+          ]
+        }
+      ],
+      "next": null,
+      "offset": null
+    },
+    "contact": null,
+    "country": {
+      "limit": 100,
+      "size": {
+        "count": 2,
+        "qualifier": "eq"
+      },
+      "data": [
+        {
+          "editable": false,
+          "record": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163/04963/1585713600000"
+          ],
+          "record_count": 6,
+          "properties": {
+            "context": "mentioned_in",
+            "date": null,
+            "extra": null,
+            "from_date": null,
+            "state": null,
+            "to_date": null,
+            "value": "CUB"
+          },
+          "sources": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163"
+          ]
+        },
+        {
+          "editable": false,
+          "record": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163/04963/1585713600000"
+          ],
+          "record_count": 6,
+          "properties": {
+            "context": "activity_in",
+            "date": null,
+            "extra": null,
+            "from_date": null,
+            "state": null,
+            "to_date": null,
+            "value": "CUB"
+          },
+          "sources": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163"
+          ]
+        }
+      ],
+      "next": null,
+      "offset": null
+    },
+    "date_of_birth": null,
+    "finances": null,
+    "financials": null,
+    "gender": null,
+    "generic": null,
+    "identifier": {
+      "limit": 100,
+      "size": {
+        "count": 1,
+        "qualifier": "eq"
+      },
+      "data": [
+        {
+          "editable": false,
+          "record": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163/04963/1585713600000"
+          ],
+          "record_count": 1,
+          "properties": {
+            "date": null,
+            "extra": null,
+            "from_date": null,
+            "to_date": null,
+            "type": "cub_cod",
+            "value": "4963"
+          },
+          "sources": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163"
+          ]
+        }
+      ],
+      "next": null,
+      "offset": null
+    },
+    "measurement": null,
+    "monetary_value": null,
+    "name": {
+      "limit": 100,
+      "size": {
+        "count": 2,
+        "qualifier": "eq"
+      },
+      "data": [
+        {
+          "editable": false,
+          "record": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163/04963/1585713600000"
+          ],
+          "record_count": 6,
+          "properties": {
+            "context": "alias",
+            "date": null,
+            "extra": null,
+            "from_date": null,
+            "language": null,
+            "to_date": null,
+            "translated": null,
+            "transliterated": null,
+            "value": "CUBAMETALES"
+          },
+          "sources": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163"
+          ]
+        },
+        {
+          "editable": false,
+          "record": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163/04963/1585713600000"
+          ],
+          "record_count": 6,
+          "properties": {
+            "context": "primary",
+            "date": null,
+            "extra": null,
+            "from_date": null,
+            "language": null,
+            "to_date": null,
+            "translated": null,
+            "transliterated": null,
+            "value": "EMPRESA CUBANA IMPORTADORA Y EXPORTADORA DE COMBUSTIBLES Y LUBRICANTES"
+          },
+          "sources": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163"
+          ]
+        }
+      ],
+      "next": null,
+      "offset": null
+    },
+    "person_status": null,
+    "position": null,
+    "risk_intelligence": null,
+    "shares": null,
+    "status": {
+      "limit": 100,
+      "size": {
+        "count": 1,
+        "qualifier": "eq"
+      },
+      "data": [
+        {
+          "editable": false,
+          "record": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163/04963/1585713600000"
+          ],
+          "record_count": 1,
+          "properties": {
+            "context": null,
+            "date": null,
+            "extra": null,
+            "from_date": null,
+            "text": null,
+            "to_date": null,
+            "value": "active"
+          },
+          "sources": [
+            "60c5205d5c2c3f4dc9b14658d0fd1163"
+          ]
+        }
+      ],
+      "next": null,
+      "offset": null
+    },
+    "translated_name": null,
+    "weak_identifier": null
+  },
+  "relationships": {
+    "limit": 50,
+    "size": {
+      "count": 1,
+      "qualifier": "eq"
+    },
+    "next": null,
+    "data": [
+      {
+        "target": {
+          "id": "k_D4L49GFuvefLYFgkLmCw",
+          "label": "UNION CUBA-PETROLEO",
+          "degree": 28,
+          "closed": false,
+          "entity_url": "/v1/entity/k_D4L49GFuvefLYFgkLmCw",
+          "pep": false,
+          "psa_id": "5514738010103",
+          "psa_count": 1,
+          "sanctioned": false,
+          "type": "company",
+          "identifiers": [
+            {
+              "value": "2605",
+              "type": "cub_cod",
+              "label": "Cub Cod"
+            }
+          ],
+          "countries": [
+            "CUB"
+          ],
+          "source_count": {
+            "60c5205d5c2c3f4dc9b14658d0fd1163": {
+              "count": 33,
+              "label": "Cuba Directory of Institutions and Business Entities",
+              "country": "CUB",
+              "source_type": "company_data"
+            }
+          },
+          "addresses": [
+            "AVENIDA SALVADOR ALLENDE NO. 666, ENTRE OQUENDO Y SOLEDAD."
+          ],
+          "trade_count": {
+            "sent": 0,
+            "received": 0
+          },
+          "date_of_birth": null,
+          "relationship_count": {
+            "subsidiary_of": 1,
+            "has_subsidiary": 27
+          },
+          "user_relationship_count": {},
+          "attribute_count": {
+            "company_type": 1,
+            "name": 2,
+            "business_purpose": 2,
+            "identifier": 1,
+            "additional_information": 1,
+            "country": 2,
+            "status": 1,
+            "address": 1
+          },
+          "user_attribute_count": {},
+          "attribute_counts": {
+            "company_type": 1,
+            "name": 2,
+            "business_purpose": 2,
+            "identifier": 1,
+            "additional_information": 1,
+            "country": 2,
+            "status": 1,
+            "address": 1
+          },
+          "user_attribute_counts": {},
+          "related_entities_count": 28,
+          "user_related_entities_count": 0,
+          "user_record_count": 0,
+          "reference_id": "60c5205d5c2c3f4dc9b14658d0fd1163/01002/1585713600000:fcc2187f94392aff78c42bbc494d20ee",
+          "logistics_entity": false,
+          "registration_date": "1984-12-31",
+          "translated_label": null,
+          "hs_code": null,
+          "shipment_arrival": null,
+          "shipment_departure": null,
+          "company_type": "Uniones Estatales",
+          "latest_status": {
+            "status": "active",
+            "date": "2020-04-01"
+          },
+          "risk": {},
+          "attributes": null,
+          "relationships": null,
+          "possibly_same_as": null,
+          "referenced_by": null
+        },
+        "types": {
+          "subsidiary_of": [
+            {
+              "editable": false,
+              "record": "60c5205d5c2c3f4dc9b14658d0fd1163/04963/1585713600000",
+              "attributes": {},
+              "date": null,
+              "from_date": null,
+              "to_date": null,
+              "acquisition_date": "2020-04-01",
+              "former": true,
+              "publication_date": null,
+              "relationship_status": "unknown"
+            }
+          ]
+        },
+        "dates": [],
+        "first_observed": null,
+        "former": true,
+        "last_observed": "2020-04-01",
+        "start_date": null,
+        "end_date": null,
+        "relationship_status": "inactive"
+      }
+    ]
+  },
+  "possibly_same_as": {
+    "limit": 100,
+    "size": {
+      "count": 1,
+      "qualifier": "eq"
+    },
+    "offset": null,
+    "next": null,
+    "data": [
+      {
+        "editable": false,
+        "entity": {
+          "id": "clqpsHHBxcbf9k6ZrXb20g",
+          "label": "Cubametales",
+          "degree": 2,
+          "closed": false,
+          "entity_url": "/v1/entity/clqpsHHBxcbf9k6ZrXb20g",
+          "pep": false,
+          "psa_id": "78778290173758",
+          "psa_count": 1,
+          "sanctioned": true,
+          "type": "company",
+          "identifiers": [
+            {
+              "value": "26934",
+              "type": "usa_ofac_sdn_number",
+              "label": "Usa Ofac Sdn Number"
+            },
+            {
+              "value": "5d1cb7508128b200010980d3",
+              "type": "xxx_intel_internal_id",
+              "label": "Xxx Intel Internal Id"
+            },
+            {
+              "value": "C1030765",
+              "type": "xxx_acuris_id",
+              "label": "Xxx Acuris Id"
+            },
+            {
+              "value": "NK-ULQx285dfg3MZxoduo7QCx",
+              "type": "open_sanctions_internal_id",
+              "label": "Open Sanctions Internal Id"
+            }
+          ],
+          "countries": [
+            "CUB"
+          ],
+          "source_count": {
+            "a8c6ee1cd4dfc952105ee8c0e4836f08": {
+              "count": 2,
+              "label": "Acuris Risk Intelligence - Entities & Relationships (3rd Party Data)",
+              "country": "XXX",
+              "source_type": "risk_intelligence_data"
+            },
+            "fdfedf11a5122e2aef9dc3f176c7427d": {
+              "count": 5,
+              "label": "Sayari Intel (Sayari Curated Risk Data) - Archived",
+              "country": "XXX",
+              "source_type": "sayari_curated_data"
+            },
+            "e85d865943ee6d8369307569d2ad9de0": {
+              "count": 2,
+              "label": "Acuris Risk Intelligence - Risk Information and Articles (3rd Party Data)",
+              "country": "XXX",
+              "source_type": "adverse_media_/_negative_news_data"
+            },
+            "92edb8fe6615498f6e3e7b0e220f74e6": {
+              "count": 652,
+              "label": "USA Treasury OFAC Specially Designated Nationals (SDN) List",
+              "country": "USA",
+              "source_type": "sanctions_lists"
+            },
+            "24ca9e1480ab586a153d3ae12a7b83a0": {
+              "count": 2,
+              "label": "OpenSanctions - Global Sanctions List",
+              "country": "XXX",
+              "source_type": "sanctions_lists"
+            },
+            "417400a1ac439843fda5bb2f05fb4161": {
+              "count": 1,
+              "label": "USA Consolidated Screening List",
+              "country": "USA",
+              "source_type": "supply_chain_screening_data"
+            }
+          },
+          "addresses": [
+            "Street 30, Number 512 between 5th and 7th, Miramar, Havana, Playa, CU",
+            "Calzada de Infanta No. 16, Havana, CU",
+            "Street 30, Number 512 between 5th and 7th, Miramar, Havana, Playa, Cuba",
+            "Calzada de Infanta No. 16, Havana, Cuba"
+          ],
+          "trade_count": {
+            "sent": 0,
+            "received": 0
+          },
+          "date_of_birth": null,
+          "relationship_count": {
+            "has_subsidiary": 1,
+            "linked_to": 2
+          },
+          "user_relationship_count": {},
+          "attribute_count": {
+            "name": 4,
+            "risk_intelligence": 5,
+            "business_purpose": 1,
+            "identifier": 4,
+            "additional_information": 1,
+            "country": 2,
+            "contact": 3,
+            "status": 1,
+            "address": 2
+          },
+          "user_attribute_count": {},
+          "attribute_counts": {
+            "name": 4,
+            "risk_intelligence": 5,
+            "business_purpose": 1,
+            "identifier": 4,
+            "additional_information": 1,
+            "country": 2,
+            "contact": 3,
+            "status": 1,
+            "address": 2
+          },
+          "user_attribute_counts": {},
+          "related_entities_count": 2,
+          "user_related_entities_count": 0,
+          "user_record_count": 0,
+          "reference_id": "fdfedf11a5122e2aef9dc3f176c7427d/5c7043650971f50001a0c494/1550861160000:61c4519135918378094bec8d96b6e67c",
+          "logistics_entity": false,
+          "risk": {
+            "state_owned": {
+              "value": true,
+              "metadata": {},
+              "level": "high"
+            },
+            "psa_owner_of_sanctioned_usa_ofac_sdn_entity": {
+              "value": 1.0,
+              "metadata": {
+                "traversal_path": [
+                  "clqpsHHBxcbf9k6ZrXb20g|has_subsidiary|u3WtCBdmoq9XCHoo6XSwRg"
+                ]
+              },
+              "level": "high"
+            },
+            "cpi_score": {
+              "value": 40.0,
+              "metadata": {
+                "country": [
+                  "CUB"
+                ]
+              },
+              "level": "relevant"
+            },
+            "owner_of_sanctioned_entity": {
+              "value": 1.0,
+              "metadata": {
+                "traversal_path": [
+                  "clqpsHHBxcbf9k6ZrXb20g|has_subsidiary|u3WtCBdmoq9XCHoo6XSwRg"
+                ]
+              },
+              "level": "high"
+            },
+            "sanctioned_usa_ofac_sdn": {
+              "value": true,
+              "metadata": {
+                "source": [
+                  "USA Treasury OFAC Specially Designated Nationals (SDN) List",
+                  "OpenSanctions - Global Sanctions List"
+                ],
+                "from_date": [
+                  "2019-07-03"
+                ]
+              },
+              "level": "critical"
+            },
+            "psa_owner_of_sanctioned_entity": {
+              "value": 1.0,
+              "metadata": {
+                "traversal_path": [
+                  "clqpsHHBxcbf9k6ZrXb20g|has_subsidiary|u3WtCBdmoq9XCHoo6XSwRg"
+                ]
+              },
+              "level": "high"
+            },
+            "owner_of_export_controls_entity": {
+              "value": 1.0,
+              "metadata": {
+                "traversal_path": [
+                  "clqpsHHBxcbf9k6ZrXb20g|has_subsidiary|u3WtCBdmoq9XCHoo6XSwRg"
+                ]
+              },
+              "level": "high"
+            },
+            "export_controls": {
+              "value": true,
+              "metadata": {
+                "source": [
+                  "USA Consolidated Screening List"
+                ]
+              },
+              "level": "critical"
+            },
+            "owner_of_sanctioned_usa_ofac_sdn_entity": {
+              "value": 1.0,
+              "metadata": {
+                "traversal_path": [
+                  "clqpsHHBxcbf9k6ZrXb20g|has_subsidiary|u3WtCBdmoq9XCHoo6XSwRg"
+                ]
+              },
+              "level": "high"
+            },
+            "sanctioned": {
+              "value": true,
+              "metadata": {
+                "source": [
+                  "USA Treasury OFAC Specially Designated Nationals (SDN) List",
+                  "OpenSanctions - Global Sanctions List"
+                ],
+                "from_date": [
+                  "2019-07-03"
+                ]
+              },
+              "level": "critical"
+            },
+            "owner_of_regulatory_action_entity": {
+              "value": 1.0,
+              "metadata": {
+                "traversal_path": [
+                  "clqpsHHBxcbf9k6ZrXb20g|has_subsidiary|u3WtCBdmoq9XCHoo6XSwRg"
+                ]
+              },
+              "level": "high"
+            },
+            "basel_aml": {
+              "value": 5.65,
+              "metadata": {
+                "country": [
+                  "CUB"
+                ]
+              },
+              "level": "relevant"
+            },
+            "psa_owner_of_regulatory_action_entity": {
+              "value": 1.0,
+              "metadata": {
+                "traversal_path": [
+                  "clqpsHHBxcbf9k6ZrXb20g|has_subsidiary|u3WtCBdmoq9XCHoo6XSwRg"
+                ]
+              },
+              "level": "high"
+            },
+            "psa_owner_of_export_controls_entity": {
+              "value": 1.0,
+              "metadata": {
+                "traversal_path": [
+                  "clqpsHHBxcbf9k6ZrXb20g|has_subsidiary|u3WtCBdmoq9XCHoo6XSwRg"
+                ]
+              },
+              "level": "high"
+            }
+          },
+          "registration_date": "1962-01-01",
+          "company_type": null,
+          "latest_status": null
+        },
+        "matches": {}
+      }
+    ]
+  },
+  "referenced_by": {
+    "limit": 100,
+    "size": {
+      "count": 6,
+      "qualifier": "eq"
+    },
+    "offset": null,
+    "next": null,
+    "data": [
+      {
+        "record": {
+          "id": "60c5205d5c2c3f4dc9b14658d0fd1163/04963/1762905600000",
+          "label": "Company Record from Cuba Directory of Institutions and Business Entities",
+          "source": "60c5205d5c2c3f4dc9b14658d0fd1163",
+          "publication_date": "2025-11-12",
+          "acquisition_date": "2025-11-12",
+          "references_count": 1,
+          "record_url": "/record/60c5205d5c2c3f4dc9b14658d0fd1163%2F04963%2F1762905600000",
+          "source_url": "http://www.onei.gob.cu/node/14224",
+          "document_urls": null,
+          "matches": null,
+          "country": null,
+          "page": null,
+          "page_count": null
+        },
+        "type": "about"
+      },
+      {
+        "record": {
+          "id": "60c5205d5c2c3f4dc9b14658d0fd1163/04963/1749600000000",
+          "label": "Company Record from Cuba Directory of Institutions and Business Entities",
+          "source": "60c5205d5c2c3f4dc9b14658d0fd1163",
+          "publication_date": "2025-06-11",
+          "acquisition_date": "2025-06-11",
+          "references_count": 1,
+          "record_url": "/record/60c5205d5c2c3f4dc9b14658d0fd1163%2F04963%2F1749600000000",
+          "source_url": "http://www.onei.gob.cu/node/14224",
+          "document_urls": null,
+          "matches": null,
+          "country": null,
+          "page": null,
+          "page_count": null
+        },
+        "type": "about"
+      },
+      {
+        "record": {
+          "id": "60c5205d5c2c3f4dc9b14658d0fd1163/04963/1732665600000",
+          "label": "Company Record from Cuba Directory of Institutions and Business Entities",
+          "source": "60c5205d5c2c3f4dc9b14658d0fd1163",
+          "publication_date": "2024-11-27",
+          "acquisition_date": "2024-11-27",
+          "references_count": 1,
+          "record_url": "/record/60c5205d5c2c3f4dc9b14658d0fd1163%2F04963%2F1732665600000",
+          "source_url": "http://www.onei.gob.cu/node/14224",
+          "document_urls": null,
+          "matches": null,
+          "country": null,
+          "page": null,
+          "page_count": null
+        },
+        "type": "about"
+      },
+      {
+        "record": {
+          "id": "60c5205d5c2c3f4dc9b14658d0fd1163/04963/1720483200000",
+          "label": "Company Record from Cuba Directory of Institutions and Business Entities",
+          "source": "60c5205d5c2c3f4dc9b14658d0fd1163",
+          "publication_date": "2024-07-09",
+          "acquisition_date": "2024-07-09",
+          "references_count": 1,
+          "record_url": "/record/60c5205d5c2c3f4dc9b14658d0fd1163%2F04963%2F1720483200000",
+          "source_url": "http://www.onei.gob.cu/node/14224",
+          "document_urls": null,
+          "matches": null,
+          "country": null,
+          "page": null,
+          "page_count": null
+        },
+        "type": "about"
+      },
+      {
+        "record": {
+          "id": "60c5205d5c2c3f4dc9b14658d0fd1163/04963/1654473600000",
+          "label": "Company Record from Cuba Directory of Institutions and Business Entities",
+          "source": "60c5205d5c2c3f4dc9b14658d0fd1163",
+          "publication_date": "2022-06-06",
+          "acquisition_date": "2022-06-06",
+          "references_count": 1,
+          "record_url": "/record/60c5205d5c2c3f4dc9b14658d0fd1163%2F04963%2F1654473600000",
+          "source_url": "http://www.onei.gob.cu/node/14224",
+          "document_urls": null,
+          "matches": null,
+          "country": null,
+          "page": null,
+          "page_count": null
+        },
+        "type": "about"
+      },
+      {
+        "record": {
+          "id": "60c5205d5c2c3f4dc9b14658d0fd1163/04963/1585713600000",
+          "label": "Company Record from Cuba Directory of Institutions and Business Entities",
+          "source": "60c5205d5c2c3f4dc9b14658d0fd1163",
+          "publication_date": "2020-04-01",
+          "acquisition_date": "2020-04-01",
+          "references_count": 2,
+          "record_url": "/record/60c5205d5c2c3f4dc9b14658d0fd1163%2F04963%2F1585713600000",
+          "source_url": "http://www.onei.gob.cu/node/14224",
+          "document_urls": null,
+          "matches": null,
+          "country": null,
+          "page": null,
+          "page_count": null
+        },
+        "type": "about"
+      }
+    ]
+  }
+}

@@ -1,0 +1,652 @@
+{
+  "fields": {
+    "name": [
+      "Myanmar Economic Holdings Limited"
+    ],
+    "identifier": null,
+    "profile": null,
+    "country": [
+      "MMR"
+    ],
+    "address": [
+      "51 Mahabandoola Road Botahtaung Township Yangon"
+    ],
+    "date_of_birth": null,
+    "contact": null,
+    "type": null
+  },
+  "data": [
+    {
+      "profile": "corporate",
+      "score": 219.91411,
+      "entity_id": "PNCfdPZenKKPQYzg0983yg",
+      "label": "Myanmar  Economic  Holdings  Public  Company  Ltd",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "129450",
+          "type": "eu_fsd_id",
+          "label": "Eu Fsd Id"
+        },
+        {
+          "value": "31517",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "14080",
+          "type": "gbr_hm_treasury_sanction_group_id",
+          "label": "Gbr Hm Treasury Sanction Group Id"
+        },
+        {
+          "value": "GHR0080",
+          "type": "gbr_uk_sanctions_id",
+          "label": "Gbr Uk Sanctions Id"
+        },
+        {
+          "value": "EU.6312.8",
+          "type": "eu_sanction_rn",
+          "label": "Eu Sanction Rn"
+        },
+        {
+          "value": "3536",
+          "type": "fra_asset_freeze_id",
+          "label": "Fra Asset Freeze Id"
+        },
+        {
+          "value": "C1164098",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "7334",
+          "type": "aus_consolidated_sanctions_reference",
+          "label": "Aus Consolidated Sanctions Reference"
+        },
+        {
+          "value": "6026e3eb84d9820001da477c",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "156387282",
+          "type": "mmr_reg_no",
+          "label": "Mmr Reg No"
+        },
+        {
+          "value": "NK-kAM2M2rAgGVmT8jmqfxbcM",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "0cc033d7-a5a3-4ea4-8e15-12eba86482e7",
+          "type": "mmr_corp_id",
+          "label": "Mmr Corp Id"
+        },
+        {
+          "value": "28/1990-1991",
+          "type": "mmr_prior_reg_no",
+          "label": "Mmr Prior Reg No"
+        },
+        {
+          "value": "45083",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "156387282",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "28/1990-1991",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "28/1990-1991 (27.4.1990)",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "\u1042\u1048/\u1041\u1049\u1049\u1040-\u1041\u1049\u1049\u1041",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "156387282",
+          "type": "unknown_commercial_register_id",
+          "label": "Unknown Commercial Register Id"
+        },
+        {
+          "value": "RF23P75SNWJ5",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "Yangon region 51  Mahabandoola  road, 189/191 Botataung 11 161 MYANMAR",
+        "51*MAHABANDOOLA ROAD, 189/191, BOTATAUNG, YANGON REGION, 11161, MMR",
+        "189/191 Mahaban Doola Road, Corner of 50th Street, Yangon, MM",
+        "189-191 Maha Bandoola Road, Botahtaung Township, Yangon, MM",
+        "89-191 Maha Bandoola Road, Botahtaung Township, Yangon, MM",
+        "\u1019\u1014\u1039\u1010\u101c\u1031\u1038\u1010\u102d\u102f\u1004\u103a\u1038\u1012\u1031\u101e\u1000\u103c\u102e\u1038\u104a \u1000\u103b\u1031\u102c\u1000\u103a\u1006\u100a\u103a \u1019\u103c\u102d\u102f\u1037\u1014\u101a\u103a\u104a \u1001\u103b\u1031\u102c\u1000\u103a\u1006\u102d\u1015\u103a\u1015\u1004\u103a\u104a \u101b\u1032\u1018\u1031\u102c\u103a\u1000\u103c\u102e\u1038 \u1000\u103b\u1031\u1038\u101b\u103d\u102c\u1021\u1014\u102e\u1038",
+        "mantalayytinedaysakyee, kyawwatsai myahoetnaal, hkyawwatsiutpain, rellbhawkyee kyaayyrwaraanee"
+      ],
+      "countries": [
+        "MMR"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "10a889609ddae6cc31773feebe48166b",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "ded706ef28cdc649b6fc5142bc542890",
+        "78586b6984ecb00e81563ae3d31c9227",
+        "f3c594baad747639d00aa317311f1e86",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "c10d482320f207d92aa814519c3bd686",
+        "bef2f30139ea37c723ecb0f953b5f024",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "ad6dc774c74b92159422deabc5aee661",
+        "b97ad5c858093e5227b2359a0078696f",
+        "a4be698ea3263f7f7f3906d1c98cffc2",
+        "93de05b55a68cc964f34bbfc7ec7bc86",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "f4ce10ac8bdc0bd9bcb31cb868b4b539"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoDistance|5km|0",
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Myanmar</em> <em>Economic</em> <em>Holdings</em> <em>Limited</em>",
+          "Union of <em>Myanmar</em> <em>Economic</em> <em>Holdings</em> <em>Limited</em>.",
+          "Union of <em>Myanmar</em> <em>Economic</em> <em>Holdings</em> Company <em>Limited</em>",
+          "<em>Myanmar</em> <em>Economic</em> <em>Holdings</em> Public Company <em>Limited</em>",
+          "<em>Myanmar</em> <em>Economic</em> <em>Holdings</em> <em>Limited</em> (MEHL)",
+          "<em>Myanmar</em>  <em>Economic</em>  <em>Holdings</em>  Public  Company  Ltd",
+          "<em>Myanmar</em> <em>Economic</em> <em>Holding</em> Limited",
+          "<em>Myanmar</em> <em>Economic</em> <em>Holdings</em> Limited",
+          "Union of <em>Myanmar</em> <em>Economic</em> <em>Holding</em> Ltd.",
+          "<em>Myanmar</em> <em>Economic</em> <em>Holdings</em> Ltd"
+        ],
+        "address": [
+          "<em>Yangon</em> <em>region</em> <em>51</em>  <em>Mahabandoola</em>  <em>road</em>, 189/191 <em>Botataung</em> 11 161 MYANMAR",
+          "<em>51</em>*<em>MAHABANDOOLA</em> <em>ROAD</em>, 189/191, <em>BOTATAUNG</em>, <em>YANGON</em> <em>REGION</em>, 11161, MMR",
+          "189-191 <em>Maha</em> <em>Bandoola</em> <em>Road</em>, <em>Botahtaung</em> <em>Township</em>, <em>Yangon</em>, MM",
+          "89-191 <em>Maha</em> <em>Bandoola</em> <em>Road</em>, <em>Botahtaung</em> <em>Township</em>, <em>Yangon</em>, MM",
+          "189/191 Mahaban Doola <em>Road</em>, Corner of 50th <em>Street</em>, <em>Yangon</em>, MM"
+        ],
+        "country": [
+          "<em>MMR</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Myanmar</em> <em>Economic</em> <em>Holdings</em> <em>Limited</em>",
+            "uploaded": "Myanmar Economic Holdings Limited",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3867301254485668,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Union of <em>Myanmar</em> <em>Economic</em> <em>Holdings</em> <em>Limited</em>.",
+            "uploaded": "Myanmar Economic Holdings Limited",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2900475940864251,
+              "lv": 0.88,
+              "fz": 0.7857142857142857,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Union of <em>Myanmar</em> <em>Economic</em> <em>Holdings</em> Company <em>Limited</em>",
+            "uploaded": "Myanmar Economic Holdings Limited",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2900475940864251,
+              "lv": 0.7951807228915663,
+              "fz": 0.6599999999999999,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Myanmar</em> <em>Economic</em> <em>Holdings</em> Public Company <em>Limited</em>",
+            "uploaded": "Myanmar Economic Holdings Limited",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3867301254485668,
+              "lv": 0.8148148148148149,
+              "fz": 0.6875,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Myanmar</em> <em>Economic</em> <em>Holdings</em> <em>Limited</em> (MEHL)",
+            "uploaded": "Myanmar Economic Holdings Limited",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2900475940864251,
+              "lv": 0.9295774647887324,
+              "fz": 0.868421052631579,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Myanmar</em>  <em>Economic</em>  <em>Holdings</em>  Public  Company  Ltd",
+            "uploaded": "Myanmar Economic Holdings Limited",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3867301254485668,
+              "lv": 0.8181818181818181,
+              "fz": 0.6818181818181819,
+              "l1": 0.7878787878787878,
+              "l2": 0.9393939393939394
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Myanmar</em> <em>Economic</em> <em>Holding</em> Limited",
+            "uploaded": "Myanmar Economic Holdings Limited",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3867301254485668,
+              "lv": 0.9846153846153847,
+              "fz": 0.9696969696969697,
+              "l1": 0.7272727272727273,
+              "l2": 0.9696969696969697
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Myanmar</em> <em>Economic</em> <em>Holdings</em> Limited",
+            "uploaded": "Myanmar Economic Holdings Limited",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3867301254485668,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Union of <em>Myanmar</em> <em>Economic</em> <em>Holding</em> Ltd.",
+            "uploaded": "Myanmar Economic Holdings Limited",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2900475940864251,
+              "lv": 0.8428571428571429,
+              "fz": 0.7027027027027026,
+              "l1": 0.7272727272727273,
+              "l2": 0.8484848484848485
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Myanmar</em> <em>Economic</em> <em>Holdings</em> Ltd",
+            "uploaded": "Myanmar Economic Holdings Limited",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3867301254485668,
+              "lv": 0.935483870967742,
+              "fz": 0.8787878787878788,
+              "l1": 0.8181818181818182,
+              "l2": 0.8787878787878788
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>Yangon</em> <em>region</em> <em>51</em>  <em>Mahabandoola</em>  <em>road</em>, 189/191 <em>Botataung</em> 11 161 MYANMAR",
+            "uploaded": "51 Mahabandoola Road Botahtaung Township Yangon",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "<em>51</em>*<em>MAHABANDOOLA</em> <em>ROAD</em>, 189/191, <em>BOTATAUNG</em>, <em>YANGON</em> <em>REGION</em>, 11161, MMR",
+            "uploaded": "51 Mahabandoola Road Botahtaung Township Yangon",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "189-191 <em>Maha</em> <em>Bandoola</em> <em>Road</em>, <em>Botahtaung</em> <em>Township</em>, <em>Yangon</em>, MM",
+            "uploaded": "51 Mahabandoola Road Botahtaung Township Yangon",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "89-191 <em>Maha</em> <em>Bandoola</em> <em>Road</em>, <em>Botahtaung</em> <em>Township</em>, <em>Yangon</em>, MM",
+            "uploaded": "51 Mahabandoola Road Botahtaung Township Yangon",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "189/191 Mahaban Doola <em>Road</em>, Corner of 50th <em>Street</em>, <em>Yangon</em>, MM",
+            "uploaded": "51 Mahabandoola Road Botahtaung Township Yangon",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>MMR</em>",
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 110.10845,
+      "entity_id": "up6T_JrR3lPlIW1kCqUwWQ",
+      "label": "Myanmar Economic Holdings Public Company Ltd",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "eu-oj-2efac018553788d3e2b0af93c77f363b31738e58",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "156387282",
+          "type": "unknown",
+          "label": "Unknown"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "51 Mahabandoola road, 189/191 Botataung, Yangon region, Myanmar 11 161"
+      ],
+      "countries": [
+        "MMR"
+      ],
+      "sources": [
+        "24ca9e1480ab586a153d3ae12a7b83a0"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoDistance|5km|0",
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Myanmar</em> <em>Economic</em> <em>Holdings</em> Public Company Ltd"
+        ],
+        "address": [
+          "<em>51</em> <em>Mahabandoola</em> <em>road</em>, 189/191 <em>Botataung</em>, <em>Yangon</em> <em>region</em>, Myanmar 11 161"
+        ],
+        "country": [
+          "<em>MMR</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Myanmar</em> <em>Economic</em> <em>Holdings</em> Public Company Ltd",
+            "uploaded": "Myanmar Economic Holdings Limited",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3867301254485668,
+              "lv": 0.8181818181818181,
+              "fz": 0.6818181818181819,
+              "l1": 0.7878787878787878,
+              "l2": 0.9393939393939394
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>51</em> <em>Mahabandoola</em> <em>road</em>, 189/191 <em>Botataung</em>, <em>Yangon</em> <em>region</em>, Myanmar 11 161",
+            "uploaded": "51 Mahabandoola Road Botahtaung Township Yangon",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.4117647058823529
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>MMR</em>",
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    }
+  ]
+}

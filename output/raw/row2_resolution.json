@@ -1,0 +1,1829 @@
+{
+  "fields": {
+    "name": [
+      "Russian Direct Investment Fund"
+    ],
+    "identifier": null,
+    "profile": null,
+    "country": [
+      "RUS"
+    ],
+    "address": [
+      "8 Presnenskaya Naberezhnaya Moscow"
+    ],
+    "date_of_birth": null,
+    "contact": null,
+    "type": null
+  },
+  "data": [
+    {
+      "profile": "corporate",
+      "score": 168.75677,
+      "entity_id": "5fFhX0dMY2GliW0F5kOs4A",
+      "label": "\u0410\u041a\u0426\u0418\u041e\u041d\u0415\u0420\u041d\u041e\u0415 \u041e\u0411\u0429\u0415\u0421\u0422\u0412\u041e \u0423\u041f\u0420\u0410\u0412\u041b\u042f\u042e\u0429\u0410\u042f \u041a\u041e\u041c\u041f\u0410\u041d\u0418\u042f \u0420\u041e\u0421\u0421\u0418\u0419\u0421\u041a\u041e\u0413\u041e \u0424\u041e\u041d\u0414\u0410 \u041f\u0420\u042f\u041c\u042b\u0425 \u0418\u041d\u0412\u0415\u0421\u0422\u0418\u0426\u0418\u0419",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "1177746367017",
+          "type": "ru_ogrn",
+          "label": "Ru Ogrn"
+        },
+        {
+          "value": "7703425673",
+          "type": "ru_inn",
+          "label": "Ru Inn"
+        },
+        {
+          "value": "34337",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "7703425673",
+          "type": "ru_tin",
+          "label": "Ru Tin"
+        },
+        {
+          "value": "6684",
+          "type": "aus_consolidated_sanctions_reference",
+          "label": "Aus Consolidated Sanctions Reference"
+        },
+        {
+          "value": "C1563550",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "NK-9doWWScn3pES2z8PaJyNCE",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "18504",
+          "type": "ukr_sanctions_nazk_company_internal_id",
+          "label": "Ukr Sanctions Nazk Company Internal Id"
+        },
+        {
+          "value": "15110384",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "770301001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "21-000-1-00845",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "1177746367017",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "1177746367017 (Russia)",
+          "type": "unknown_commercial_register_id",
+          "label": "Unknown Commercial Register Id"
+        },
+        {
+          "value": "7703425673 (Russia)",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "C1UDU6FYKRR4",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "C1UDWJ9GNJP5",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "P259AE4U6649",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "P25CVWGB8AY8",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "P26ELVUQC6C7",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "P26GZ2XX5SC3",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "Naberezhnaya Presnenskaya, Dom 8 Stroyeniye 1, Etaj 7, Moscow, 123112, Russia",
+        "123112, \u041f\u0440\u0435\u0441\u043d\u0435\u043d\u0441\u043a\u0430\u044f \u043d\u0430\u0431., \u0434. 8, \u0441\u0442\u0440. 1 \u041c\u0424\u041a \"\u0413\u043e\u0440\u043e\u0434 \u0421\u0442\u043e\u043b\u0438\u0446\", \u042e\u0436\u043d\u0430\u044f \u0431\u0430\u0448\u043d\u044f, 7, 8 \u044d\u0442\u0430\u0436",
+        "123112, Presnenskaa nab., d. 8, str. 1 MFK \"Gorod Stolic\", Uznaa basna, 7, 8 etaz",
+        "123112, Presnenskaya embankment, 8, p. 1, IFC \"City of Stolyts\", South tower, 7, 8th floor",
+        "123112, \u0413 \u041c\u041e\u0421\u041a\u0412\u0410, \u041d\u0410\u0411 \u041f\u0420\u0415\u0421\u041d\u0415\u041d\u0421\u041a\u0410\u042f, \u0434\u043e\u043c \u0414\u041e\u041c 8, \u043a\u043e\u0440\u043f\u0443\u0441 \u0421\u0422\u0420\u041e\u0415\u041d\u0418\u0415 1, \u043e\u0444\u0438\u0441 (\u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0430) \u042d\u0422\u0410\u0416 7",
+        "123112, G MOSKVA, NAB PRESNENSKAA, dom DOM 8, korpus STROENIE 1, ofis (kvartira) ETAZ 7",
+        "123112, MOSCOW, NAB PRESNENSKAYA, building 8, building BUILDING 1, office (apartment) FLOOR 7",
+        "107996, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0410\u043a\u0430\u0434\u0435\u043c\u0438\u043a\u0430 \u0421\u0430\u0445\u0430\u0440\u043e\u0432\u0430, \u0434. 9",
+        "107996, g. Moskva, prospekt Akademika Saharova, d. 9",
+        "107996, Moscow, Academician Sakharov Avenue, 9",
+        "123112, \u0413\u041e\u0420\u041e\u0414 \u041c\u041e\u0421\u041a\u0412\u0410, \u041d\u0410\u0411\u0415\u0420\u0415\u0416\u041d\u0410\u042f \u041f\u0420\u0415\u0421\u041d\u0415\u041d\u0421\u041a\u0410\u042f, \u0414\u041e\u041c 8, \u042d\u0422\u0410\u0416 7, \u0421\u0422\u0420\u041e\u0415\u041d\u0418\u0415 1",
+        "123112, GOROD MOSKVA, NABEREZNAA PRESNENSKAA, DOM 8, ETAZ 7, STROENIE 1",
+        "123112, MOSCOW CITY, NABEREZHNAYA PRESNENSKAYA, BUILDING 8, FLOOR 7, BUILDING 1",
+        "\u041d\u0430\u0431\u0435\u0440\u0435\u0436\u043d\u0430\u044f \u041f\u0440\u0435\u0441\u043d\u0435\u043d\u0441\u043a\u0430\u044f, \u0414\u043e\u043c 8 \u0421\u0442\u0440\u043e\u0435\u043d\u0438\u0435 1, \u042d\u0442\u0430\u0436 7, \u041c\u043e\u0441\u043a\u0432\u0430, 123112, RU",
+        "Nabereznaa Presnenskaa, Dom 8 Stroenie 1, Etaz 7, Moskva, 123112, RU",
+        "Naberezhnaya Presnenskaya, Building 8 Building 1, Floor 7, Moscow, 123112, RU",
+        "PRESNENSKAYA NAB., D. 8, STRUCTURE 1, MFK CAPITAL CITY, SOUTH TOWER, 7, 8TH FLOOR, MOSCOW, RUS, 123112",
+        "123112, \u0420\u043e\u0441\u0456\u0439\u0441\u044c\u043a\u0430 \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0456\u044f, \u043c.\u00a0\u041c\u043e\u0441\u043a\u0432\u0430, \u043d\u0430\u0431.\u00a0\u041f\u0440\u0435\u0441\u043d\u0435\u043d\u0441\u044c\u043a\u0430, 8 (\u0431\u0443\u0434\u043e\u0432\u0430 1, \u043f\u043e\u0432\u0435\u0440\u0445 7)",
+        "123112, Rosijs\u02b9ka Federacia, m.\u00a0Moskva, nab.\u00a0Presnens\u02b9ka, 8 (budova 1, poverh 7)",
+        "123112, Russian Federation, Moscow, nab.\u00a0Presnenska, 8 (building 1, floor 7)"
+      ],
+      "countries": [
+        "RUS"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "3322a755c28851ec06eda3280cc2a2b2",
+        "e6e4acebdea4e9e71af8d3586d34fcdd",
+        "05bae57e72956e990b4b213cb12b5d66",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "bef2f30139ea37c723ecb0f953b5f024",
+        "b97ad5c858093e5227b2359a0078696f",
+        "a9a18eeb901e4376c912e95dc05ceb78",
+        "635021e4e01979cdf95fa7ee76501696",
+        "93de05b55a68cc964f34bbfc7ec7bc86",
+        "56bce0e008204712e302271ddd7b4fb1",
+        "e85d865943ee6d8369307569d2ad9de0"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "address|numericOptional|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "JOINT STOCK COMPANY MANAGEMENT COMPANY OF THE <em>RUSSIAN</em> <em>DIRECT</em> <em>INVESTMENT</em> <em>FUND</em>",
+          "Joint Stock Company \"Management Company of the <em>Russian</em> <em>Direct</em> <em>Investment</em> <em>Fund</em>\"",
+          "Management Company of the <em>Russian</em> <em>Direct</em> <em>Investment</em> <em>Fund</em>",
+          "Joint Stock Company Management Company of the <em>Russian</em> <em>Direct</em> <em>Investment</em> <em>Fund</em>",
+          "<em>RUSSIAN</em> <em>DIRECT</em> <em>INVESTMENT</em> <em>FUND</em>"
+        ],
+        "address": [
+          "<em>123112</em>, <em>MOSCOW</em> CITY, <em>NABEREZHNAYA</em> <em>PRESNENSKAYA</em>, BUILDING <em>8</em>, FLOOR 7, BUILDING 1",
+          "<em>Naberezhnaya</em> <em>Presnenskaya</em>, Dom <em>8</em> Stroyeniye 1, Etaj 7, <em>Moscow</em>, <em>123112</em>, Russia",
+          "<em>Naberezhnaya</em> <em>Presnenskaya</em>, Building <em>8</em> Building 1, Floor 7, <em>Moscow</em>, <em>123112</em>, RU",
+          "<em>123112</em>, GOROD <em>MOSKVA</em>, <em>NABEREZNAA</em> <em>PRESNENSKAA</em>, DOM <em>8</em>, ETAZ 7, STROENIE 1",
+          "<em>Nabereznaa</em> <em>Presnenskaa</em>, Dom <em>8</em> Stroenie 1, Etaz 7, <em>Moskva</em>, <em>123112</em>, RU"
+        ],
+        "country": [
+          "<em>RUS</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "JOINT STOCK COMPANY MANAGEMENT COMPANY OF THE <em>RUSSIAN</em> <em>DIRECT</em> <em>INVESTMENT</em> <em>FUND</em>",
+            "uploaded": "Russian Direct Investment Fund",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.1756610915518093,
+              "lv": 0.5660377358490566,
+              "fz": 0.39473684210526316,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Joint Stock Company \"Management Company of the <em>Russian</em> <em>Direct</em> <em>Investment</em> <em>Fund</em>\"",
+            "uploaded": "Russian Direct Investment Fund",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.1756610915518093,
+              "lv": 0.5660377358490566,
+              "fz": 0.39473684210526316,
+              "l1": 0.8666666666666667,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Management Company of the <em>Russian</em> <em>Direct</em> <em>Investment</em> <em>Fund</em>",
+            "uploaded": "Russian Direct Investment Fund",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.24592552817253302,
+              "lv": 0.6976744186046512,
+              "fz": 0.5357142857142857,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Joint Stock Company Management Company of the <em>Russian</em> <em>Direct</em> <em>Investment</em> <em>Fund</em>",
+            "uploaded": "Russian Direct Investment Fund",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.1756610915518093,
+              "lv": 0.5660377358490566,
+              "fz": 0.39473684210526316,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>RUSSIAN</em> <em>DIRECT</em> <em>INVESTMENT</em> <em>FUND</em>",
+            "uploaded": "Russian Direct Investment Fund",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3074069102156663,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>123112</em>, <em>MOSCOW</em> CITY, <em>NABEREZHNAYA</em> <em>PRESNENSKAYA</em>, BUILDING <em>8</em>, FLOOR 7, BUILDING 1",
+            "uploaded": "8 Presnenskaya Naberezhnaya Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>Naberezhnaya</em> <em>Presnenskaya</em>, Dom <em>8</em> Stroyeniye 1, Etaj 7, <em>Moscow</em>, <em>123112</em>, Russia",
+            "uploaded": "8 Presnenskaya Naberezhnaya Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>Naberezhnaya</em> <em>Presnenskaya</em>, Building <em>8</em> Building 1, Floor 7, <em>Moscow</em>, <em>123112</em>, RU",
+            "uploaded": "8 Presnenskaya Naberezhnaya Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>123112</em>, GOROD <em>MOSKVA</em>, <em>NABEREZNAA</em> <em>PRESNENSKAA</em>, DOM <em>8</em>, ETAZ 7, STROENIE 1",
+            "uploaded": "8 Presnenskaya Naberezhnaya Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>Nabereznaa</em> <em>Presnenskaa</em>, Dom <em>8</em> Stroenie 1, Etaz 7, <em>Moskva</em>, <em>123112</em>, RU",
+            "uploaded": "8 Presnenskaya Naberezhnaya Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 162.24988,
+      "entity_id": "vQhOCI37g0Zv0L4qBmShRg",
+      "label": "Russian Direct Investment Fund",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "34036",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "14207",
+          "type": "gbr_hm_treasury_sanction_group_id",
+          "label": "Gbr Hm Treasury Sanction Group Id"
+        },
+        {
+          "value": "RUS0263",
+          "type": "gbr_uk_sanctions_id",
+          "label": "Gbr Uk Sanctions Id"
+        },
+        {
+          "value": "6683",
+          "type": "aus_consolidated_sanctions_reference",
+          "label": "Aus Consolidated Sanctions Reference"
+        },
+        {
+          "value": "1137746320535",
+          "type": "ru_ogrn",
+          "label": "Ru Ogrn"
+        },
+        {
+          "value": "C788923",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "7703787786",
+          "type": "ru_inn",
+          "label": "Ru Inn"
+        },
+        {
+          "value": "25340007VRH2RF83J190",
+          "type": "lei",
+          "label": "Lei"
+        },
+        {
+          "value": "ENT-20",
+          "type": "nzl_russia_sanctions_uid",
+          "label": "Nzl Russia Sanctions Uid"
+        },
+        {
+          "value": "7703787786",
+          "type": "ru_tin",
+          "label": "Ru Tin"
+        },
+        {
+          "value": "NK-CSTHWr7TNQckHEURKfFGMH",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "770301001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "13157281",
+          "type": "ru_okpo",
+          "label": "Ru Okpo"
+        },
+        {
+          "value": "45380000000",
+          "type": "ru_oktmo",
+          "label": "Ru Oktmo"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "Presnenskaya nab., D. 8, Structure 1, MFK Capital City, South Tower, 7, 8th Floor, Moscow, 123112, Russia",
+        "\u0420\u0424, 123317, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u041f\u0440\u0435\u0441\u043d\u0435\u043d\u0441\u043a\u0430\u044f \u043d\u0430\u0431\u0435\u0440\u0435\u0436\u043d\u0430\u044f \u0434.8, \u0441\u0442\u0440.1",
+        "RF, 123317, g. Moskva, Presnenskaa nabereznaa d.8, str.1",
+        "RF, 123317, Moscow, Presnenskaya embankment 8, building 1",
+        "\u041f\u0440\u0435\u0441\u043d\u0435\u043d\u0441\u043a\u0430\u044f \u043d\u0430\u0431\u0435\u0440\u0435\u0436\u043d\u0430\u044f, \u0434\u043e\u043c 8, \u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435 1, \u044d\u0442. 7, \u043f\u043e\u043c. I, \u043a\u043e\u043c. 3, \u041c\u043e\u0441\u043a\u0432\u0430, RU-MOW, 123112, RU",
+        "Presnenskaa nabereznaa, dom 8, stroenie 1, et. 7, pom. I, kom. 3, Moskva, RU-MOW, 123112, RU",
+        "Presnenskaya embankment, building 8, building 1, fl. 7, d. I, com. 3, Moscow, RU-MOW, 123112, RU",
+        "123112, \u0413.\u041c\u041e\u0421\u041a\u0412\u0410, \u0412\u041d.\u0422\u0415\u0420.\u0413. \u041c\u0423\u041d\u0418\u0426\u0418\u041f\u0410\u041b\u042c\u041d\u042b\u0419 \u041e\u041a\u0420\u0423\u0413 \u041f\u0420\u0415\u0421\u041d\u0415\u041d\u0421\u041a\u0418\u0419, \u041d\u0410\u0411 \u041f\u0420\u0415\u0421\u041d\u0415\u041d\u0421\u041a\u0410\u042f, \u0414. 8, \u0421\u0422\u0420. 1",
+        "123112, G.MOSKVA, VN.TER.G. MUNICIPAL\u02b9NYJ OKRUG PRESNENSKIJ, NAB PRESNENSKAA, D. 8, STR. 1",
+        "123112, MOSCOW, VN.TER.G. PRESNENSKY MUNICIPAL DISTRICT, PRESNENSKAYA NASB, 8, Bldg. 1",
+        "123317, \u041c\u041e\u0421\u041a\u0412\u0410, \u041f\u0420\u0415\u0421\u041d\u0415\u041d\u0421\u041a\u0410\u042f, \u0434\u043e\u043c 8, \u043a\u043e\u0440\u043f\u0443\u0441 \u0421\u0422\u0420.1",
+        "123317, MOSKVA, PRESNENSKAA, dom 8, korpus STR.1",
+        "123317, MOSCOW, PRESNENSKAYA, house 8, building STR.1",
+        "123317, \u041c\u041e\u0421\u041a\u0412\u0410, \u041f\u0420\u0415\u0421\u041d\u0415\u041d\u0421\u041a\u0410\u042f, \u0434\u043e\u043c 8, \u043a\u043e\u0440\u043f\u0443\u0441 \u0421\u0422\u0420.1",
+        "123317, MOSKVA, PRESNENSKAA, dom 8, korpus STR.1",
+        "123317, MOSCOW, PRESNENSKAYA, house 8, building STR.1",
+        "\u041c\u043e\u0441\u043a\u0432\u0430 \u0433",
+        "Moskva g",
+        "Moscow city",
+        "123112, \u0413\u041e\u0420\u041e\u0414 \u041c\u041e\u0421\u041a\u0412\u0410, \u041d\u0410\u0411\u0415\u0420\u0415\u0416\u041d\u0410\u042f \u041f\u0420\u0415\u0421\u041d\u0415\u041d\u0421\u041a\u0410\u042f, \u0414\u041e\u041c 8, \u042d\u0422.7,\u041f\u041e\u041c.I \u041a\u041e\u041c.3, \u0421\u0422\u0420\u041e\u0415\u041d\u0418\u0415 1",
+        "123112, GOROD MOSKVA, NABEREZNAA PRESNENSKAA, DOM 8, ET.7,POM.I KOM.3, STROENIE 1",
+        "123112, MOSCOW, EMBANKMENT PRESNENSKAYA, BUILDING 8, FLOOR 7, ROOM I ROOM 3, BUILDING 1",
+        "Presnenskaya nab., D. 8, Structure 1, MFK Capital City, South Tower, 7, 8th Floor, Moscow, 123112, RU",
+        "Capital City South Tower 7th Floor 8 Bld. 1 Presnenskaya Nab., Moscow, 123317, RU",
+        "123112, \u0433 \u041c\u043e\u0441\u043a\u0432\u0430, \u043d\u0430\u0431\u0435\u0440\u0435\u0436\u043d\u0430\u044f \u041f\u0440\u0435\u0441\u043d\u0435\u043d\u0441\u043a\u0430\u044f, \u0434\u043e\u043c 8 \u0421\u0422\u0420\u041e\u0415\u041d\u0418\u0415 1",
+        "123112, g Moskva, nabereznaa Presnenskaa, dom 8 STROENIE 1",
+        "123112, Moscow, Presnenskaya embankment, building 8 BUILDING 1"
+      ],
+      "countries": [
+        "RUS"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "d357238101a2bb02d97d5d77a56d9455",
+        "72b09952a36b8f7ae72ae6ca7f410d8c",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "c6d35e98081e4c41d8eb295c29ce8eb9",
+        "3322a755c28851ec06eda3280cc2a2b2",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "c10d482320f207d92aa814519c3bd686",
+        "bef2f30139ea37c723ecb0f953b5f024",
+        "a9a18eeb901e4376c912e95dc05ceb78",
+        "635021e4e01979cdf95fa7ee76501696",
+        "93de05b55a68cc964f34bbfc7ec7bc86",
+        "56bce0e008204712e302271ddd7b4fb1",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "b812677c0a32a1746b3ac741c7b97ae0"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "address|numericOptional|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Russian</em> <em>Direct</em> <em>Investment</em> <em>Fund</em>",
+          "<em>Russian</em> <em>Direct</em> <em>Investment</em> <em>Fund</em> (RDIF); RDIF",
+          "<em>Russian</em> <em>Direct</em> <em>Investment</em> <em>Fund</em> (RDIF)",
+          "AO Management Company <em>Russian</em> <em>Direct</em> <em>Investment</em> <em>Fund</em>",
+          "<em>Russian</em> <em>Direct</em> <em>Investment</em> <em>Fund</em> Management Co"
+        ],
+        "address": [
+          "<em>Presnenskaa</em> <em>nabereznaa</em>, dom <em>8</em>, stroenie 1, et. 7, pom. I, kom. 3, <em>Moskva</em>, RU-MOW, <em>123112</em>, RU",
+          "<em>123112</em>, GOROD <em>MOSKVA</em>, <em>NABEREZNAA</em> <em>PRESNENSKAA</em>, DOM <em>8</em>, ET.7,POM.I KOM.3, STROENIE 1",
+          "<em>123112</em>, g <em>Moskva</em>, <em>nabereznaa</em> <em>Presnenskaa</em>, dom <em>8</em> STROENIE 1",
+          "<em>123112</em>, <em>MOSCOW</em>, VN.TER.G. <em>PRESNENSKY</em> MUNICIPAL DISTRICT, <em>PRESNENSKAYA</em> NASB, <em>8</em>, Bldg. 1",
+          "<em>Presnenskaya</em> nab., D. <em>8</em>, Structure 1, MFK Capital City, South Tower, 7, 8th Floor, <em>Moscow</em>, <em>123112</em>, Russia"
+        ],
+        "country": [
+          "<em>RUS</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Russian</em> <em>Direct</em> <em>Investment</em> <em>Fund</em>",
+            "uploaded": "Russian Direct Investment Fund",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3074069102156663,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Russian</em> <em>Direct</em> <em>Investment</em> <em>Fund</em> (RDIF); RDIF",
+            "uploaded": "Russian Direct Investment Fund",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.20493794014377748,
+              "lv": 0.8571428571428572,
+              "fz": 0.75,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Russian</em> <em>Direct</em> <em>Investment</em> <em>Fund</em> (RDIF)",
+            "uploaded": "Russian Direct Investment Fund",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.24592552817253302,
+              "lv": 0.9230769230769231,
+              "fz": 0.8571428571428572,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "AO Management Company <em>Russian</em> <em>Direct</em> <em>Investment</em> <em>Fund</em>",
+            "uploaded": "Russian Direct Investment Fund",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.24592552817253302,
+              "lv": 0.7317073170731707,
+              "fz": 0.5769230769230769,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Russian</em> <em>Direct</em> <em>Investment</em> <em>Fund</em> Management Co",
+            "uploaded": "Russian Direct Investment Fund",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.24592552817253302,
+              "lv": 0.8108108108108107,
+              "fz": 0.6818181818181819,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>Presnenskaa</em> <em>nabereznaa</em>, dom <em>8</em>, stroenie 1, et. 7, pom. I, kom. 3, <em>Moskva</em>, RU-MOW, <em>123112</em>, RU",
+            "uploaded": "8 Presnenskaya Naberezhnaya Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>123112</em>, GOROD <em>MOSKVA</em>, <em>NABEREZNAA</em> <em>PRESNENSKAA</em>, DOM <em>8</em>, ET.7,POM.I KOM.3, STROENIE 1",
+            "uploaded": "8 Presnenskaya Naberezhnaya Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>123112</em>, g <em>Moskva</em>, <em>nabereznaa</em> <em>Presnenskaa</em>, dom <em>8</em> STROENIE 1",
+            "uploaded": "8 Presnenskaya Naberezhnaya Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>123112</em>, <em>MOSCOW</em>, VN.TER.G. <em>PRESNENSKY</em> MUNICIPAL DISTRICT, <em>PRESNENSKAYA</em> NASB, <em>8</em>, Bldg. 1",
+            "uploaded": "8 Presnenskaya Naberezhnaya Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>Presnenskaya</em> nab., D. <em>8</em>, Structure 1, MFK Capital City, South Tower, 7, 8th Floor, <em>Moscow</em>, <em>123112</em>, Russia",
+            "uploaded": "8 Presnenskaya Naberezhnaya Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 117.15286,
+      "entity_id": "cTULB-RudDuji2Tz9L35KQ",
+      "label": "RUSSIAN DIRECT INVESTMENT FUND MANAGEMENT COMPANY",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "18279",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "1117746429371",
+          "type": "ru_registration_number",
+          "label": "Ru Registration Number"
+        },
+        {
+          "value": "7708740277",
+          "type": "ru_tin",
+          "label": "Ru Tin"
+        },
+        {
+          "value": "1117746429371",
+          "type": "ru_ogrn",
+          "label": "Ru Ogrn"
+        },
+        {
+          "value": "7708740277",
+          "type": "ru_inn",
+          "label": "Ru Inn"
+        },
+        {
+          "value": "C1874831",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "NK-c8XtC5rQecz8QLrxaiUzFY",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "13037",
+          "type": "ukr_sanctions_nazk_company_internal_id",
+          "label": "Ukr Sanctions Nazk Company Internal Id"
+        },
+        {
+          "value": "770801001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "RUC23439467",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "1117746429371",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "45378000000",
+          "type": "ru_oktmo",
+          "label": "Ru Oktmo"
+        },
+        {
+          "value": "92465681",
+          "type": "ru_okpo",
+          "label": "Ru Okpo"
+        },
+        {
+          "value": "FJJGYWUM5MY1",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "JMFDV7M4T5P5",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "d. 9 prospekt Akademika Sakharova, Moscow, 107996, Russia",
+        "107996, \u041c\u043e\u0441\u043a\u0432\u0430, \u0410\u043a\u0430\u0434\u0435\u043c\u0438\u043a\u0430 \u0421\u0430\u0445\u0430\u0440\u043e\u0432\u0430, \u0434\u043e\u043c 9",
+        "107996, Moskva, Akademika Saharova, dom 9",
+        "107996, Moscow, Academician Sakharov, building 9",
+        "123317, \u041f\u0440\u0435\u0441\u043d\u0435\u043d\u0441\u043a\u0430\u044f \u043d\u0430\u0431., \u0434. 8, \u0441\u0442\u0440. 1, \u041c\u0424\u041a \"\u0413\u043e\u0440\u043e\u0434 \u0421\u0442\u043e\u043b\u0438\u0446\", \u042e\u0436\u043d\u0430\u044f \u0431\u0430\u0448\u043d\u044f, 7 \u044d\u0442\u0430\u0436",
+        "123317, Presnenskaa nab., d. 8, str. 1, MFK \"Gorod Stolic\", Uznaa basna, 7 etaz",
+        "123317, Presnenskaya embankment, 8, building 1, multifunctional complex \"Capital City\", South Tower, 7th floor",
+        "d. 9 prospekt Akademika Sakharova, Moscow, 107996, RU",
+        "107996, \u0420\u043e\u0441\u0456\u0439\u0441\u044c\u043a\u0430 \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0456\u044f, \u043c. \u041c\u043e\u0441\u043a\u0432\u0430, \u043f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 \u0410\u043a\u0430\u0434\u0435\u043c\u0456\u043a\u0430 \u0421\u0430\u0445\u0430\u0440\u043e\u0432\u0430, 9",
+        "107996, Rosijs\u02b9ka Federacia, m. Moskva, prospekt Akademika Saharova, 9",
+        "107996, Russian Federation, Moscow, Akademik Sakharov Avenue, 9"
+      ],
+      "countries": [
+        "RUS",
+        "USA",
+        "AUS",
+        "CYP"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "52a7bc4a30e787544ad2d95e7f54adca",
+        "e517c714b560f159a89a9501ed7dd84e",
+        "53025b5e8f2032f5f23878503e1edc34",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "3322a755c28851ec06eda3280cc2a2b2",
+        "e6e4acebdea4e9e71af8d3586d34fcdd",
+        "b97ad5c858093e5227b2359a0078696f",
+        "a9a18eeb901e4376c912e95dc05ceb78",
+        "635021e4e01979cdf95fa7ee76501696",
+        "ac1fa195f9cd4ccf657bca3c6db0bb19",
+        "56bce0e008204712e302271ddd7b4fb1",
+        "e85d865943ee6d8369307569d2ad9de0"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>RUSSIAN</em> <em>DIRECT</em> <em>INVESTMENT</em> <em>FUND</em> MANAGEMENT COMPANY"
+        ],
+        "address": [
+          "123317, <em>Presnenskaya</em> embankment, <em>8</em>, building 1, multifunctional complex \"Capital City\", South Tower, 7th floor",
+          "123317, <em>Presnenskaa</em> nab., d. <em>8</em>, str. 1, MFK \"Gorod Stolic\", Uznaa basna, 7 etaz",
+          "123317, \u041f\u0440\u0435\u0441\u043d\u0435\u043d\u0441\u043a\u0430\u044f \u043d\u0430\u0431., \u0434. <em>8</em>, \u0441\u0442\u0440. 1, \u041c\u0424\u041a \"\u0413\u043e\u0440\u043e\u0434 \u0421\u0442\u043e\u043b\u0438\u0446\", \u042e\u0436\u043d\u0430\u044f \u0431\u0430\u0448\u043d\u044f, 7 \u044d\u0442\u0430\u0436",
+          "107996, <em>Moskva</em>, Akademika Saharova, dom 9",
+          "107996, Rosijs\u02b9ka Federacia, m. <em>Moskva</em>, prospekt Akademika Saharova, 9"
+        ],
+        "country": [
+          "<em>RUS</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>RUSSIAN</em> <em>DIRECT</em> <em>INVESTMENT</em> <em>FUND</em> MANAGEMENT COMPANY",
+            "uploaded": "Russian Direct Investment Fund",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.24592552817253302,
+              "lv": 0.759493670886076,
+              "fz": 0.6122448979591837,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "123317, <em>Presnenskaya</em> embankment, <em>8</em>, building 1, multifunctional complex \"Capital City\", South Tower, 7th floor",
+            "uploaded": "8 Presnenskaya Naberezhnaya Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.7058823529411765
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "123317, <em>Presnenskaa</em> nab., d. <em>8</em>, str. 1, MFK \"Gorod Stolic\", Uznaa basna, 7 etaz",
+            "uploaded": "8 Presnenskaya Naberezhnaya Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.7058823529411765
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "123317, \u041f\u0440\u0435\u0441\u043d\u0435\u043d\u0441\u043a\u0430\u044f \u043d\u0430\u0431., \u0434. <em>8</em>, \u0441\u0442\u0440. 1, \u041c\u0424\u041a \"\u0413\u043e\u0440\u043e\u0434 \u0421\u0442\u043e\u043b\u0438\u0446\", \u042e\u0436\u043d\u0430\u044f \u0431\u0430\u0448\u043d\u044f, 7 \u044d\u0442\u0430\u0436",
+            "uploaded": "8 Presnenskaya Naberezhnaya Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.7058823529411765
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "107996, <em>Moskva</em>, Akademika Saharova, dom 9",
+            "uploaded": "8 Presnenskaya Naberezhnaya Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.7058823529411765
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "107996, Rosijs\u02b9ka Federacia, m. <em>Moskva</em>, prospekt Akademika Saharova, 9",
+            "uploaded": "8 Presnenskaya Naberezhnaya Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.7058823529411765
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    }
+  ]
+}

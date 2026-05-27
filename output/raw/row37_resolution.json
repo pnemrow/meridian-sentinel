@@ -1,0 +1,2983 @@
+{
+  "fields": {
+    "name": [
+      "Kalashnikov Concern"
+    ],
+    "identifier": null,
+    "profile": null,
+    "country": [
+      "RUS"
+    ],
+    "address": [
+      "3 Deryabina Ave. Izhevsk Udmurt Republic"
+    ],
+    "date_of_birth": null,
+    "contact": null,
+    "type": null
+  },
+  "data": [
+    {
+      "profile": "corporate",
+      "score": 191.31183,
+      "entity_id": "SyiWoXAi7JAAOfdzOWpBDQ",
+      "label": "\u041e\u0411\u0429\u0415\u0421\u0422\u0412\u041e \u0421 \u041e\u0413\u0420\u0410\u041d\u0418\u0427\u0415\u041d\u041d\u041e\u0419 \u041e\u0422\u0412\u0415\u0422\u0421\u0422\u0412\u0415\u041d\u041d\u041e\u0421\u0422\u042c\u042e \"\u0418\u041d\u041d\u041e\u0412\u0410\u0426\u0418\u041e\u041d\u041d\u042b\u0419 \u0426\u0415\u041d\u0422\u0420 \"\u041a\u041e\u041d\u0426\u0415\u0420\u041d\u0410 \"\u041a\u0410\u041b\u0410\u0428\u041d\u0418\u041a\u041e\u0412\"\"",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "1832140883",
+          "type": "ru_tin",
+          "label": "Ru Tin"
+        },
+        {
+          "value": "1832140883",
+          "type": "ru_inn",
+          "label": "Ru Inn"
+        },
+        {
+          "value": "1161832073347",
+          "type": "ru_ogrn",
+          "label": "Ru Ogrn"
+        },
+        {
+          "value": "1161832073347",
+          "type": "ru_registration_number",
+          "label": "Ru Registration Number"
+        },
+        {
+          "value": "5c487ab856d67fc038671674",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "C2029916",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "27857",
+          "type": "ukr_sanctions_nazk_company_internal_id",
+          "label": "Ukr Sanctions Nazk Company Internal Id"
+        },
+        {
+          "value": "183201001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "2009",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "16",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "18\u041b01 1916",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "4337802",
+          "type": "ru_okpo",
+          "label": "Ru Okpo"
+        },
+        {
+          "value": "94701000001",
+          "type": "ru_oktmo",
+          "label": "Ru Oktmo"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "426057, \u0420\u0415\u0421\u041f\u0423\u0411\u041b\u0418\u041a\u0410 \u0423\u0414\u041c\u0423\u0420\u0422\u0421\u041a\u0410\u042f, \u0413\u041e\u0420\u041e\u0414 \u0418\u0416\u0415\u0412\u0421\u041a, \u041f\u0420\u041e\u0415\u0417\u0414 \u0418\u041c \u0414\u0415\u0420\u042f\u0411\u0418\u041d\u0410, \u0414\u041e\u041c 3, \u041f\u041e\u041c\u0415\u0429\u0415\u041d\u0418\u0415 49",
+        "426057, RESPUBLIKA UDMURTSKAA, GOROD IZEVSK, PROEZD IM DERABINA, DOM 3, POMESENIE 49",
+        "426057, UDMURTSKA REPUBLIC, IZHEVSK CITY, DERYABYNA STREET, BUILDING 3, ROOM 49",
+        "426057, \u0420\u0435\u0441\u043f \u0423\u0434\u043c\u0443\u0440\u0442\u0441\u043a\u0430\u044f, \u0433 \u0418\u0436\u0435\u0432\u0441\u043a, \u043f\u0440\u043e\u0435\u0437\u0434 \u0438\u043c \u0414\u0435\u0440\u044f\u0431\u0438\u043d\u0430, \u0434\u043e\u043c 3, \u043e\u0444\u0438\u0441 (\u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0430) 49",
+        "426057, Resp Udmurtskaa, g Izevsk, proezd im Derabina, dom 3, ofis (kvartira) 49",
+        "426057, Republic of Udmurtskaya, Izhevsk, Deryabina proezd, building 3, office (apartment) 49",
+        "426006, \u0433. \u0418\u0436\u0435\u0432\u0441\u043a, \u043f\u0440\u043e\u0435\u0437\u0434 \u0438\u043c. \u0414\u0435\u0440\u044f\u0431\u0438\u043d\u0430, \u0434.3, \u043f\u043e\u043c\u0435\u0449\u0435\u043d\u0438\u0435 49",
+        "426006, g. Izevsk, proezd im. Derabina, d.3, pomesenie 49",
+        "426006, Izhevsk, proezd im. Deryabina, 3, room 49",
+        "426006, \u0423\u0414\u041c\u0423\u0420\u0422\u0421\u041a\u0410\u042f \u0420\u0415\u0421\u041f\u0423\u0411\u041b\u0418\u041a\u0410, \u0413\u041e\u0420\u041e\u0414 \u0418\u0416\u0415\u0412\u0421\u041a, \u041f\u0420\u041e\u0415\u0417\u0414 \u0418\u041c \u0414\u0415\u0420\u042f\u0411\u0418\u041d\u0410, \u0414\u041e\u041c 2/362, \u042d\u0422\u0410\u0416 7, \u041f\u041e\u041c\u0415\u0429\u0415\u041d\u0418\u0415 8",
+        "426006, UDMURTSKAA RESPUBLIKA, GOROD IZEVSK, PROEZD IM DERABINA, DOM 2/362, ETAZ 7, POMESENIE 8",
+        "426006, UDMURT REPUBLIC, CITY IZHEVSK, DERYABIN TRAEST, BUILDING 2/362, FLOOR 7, ROOM 8",
+        "426057, \u0423\u0434\u043c\u0443\u0440\u0442\u0441\u043a\u0430\u044f \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430, \u0433. \u0418\u0436\u0435\u0432\u0441\u043a, \u043f\u0440\u043e\u0435\u0437\u0434 \u0414\u0435\u0440\u044f\u0431\u0438\u043d\u0430, 3",
+        "426057, Udmurtskaa Respublika, g. Izevsk, proezd Derabina, 3",
+        "426057, Udmurt Republic, Izhevsk, Deryabina proezd, 3",
+        "Pom. 8, Et. 7, 2/362 Proyezd Im. Deryabina, Izhevsk, Udmurt Republic, 426057, Russia",
+        "Pom. 49, 3 Ul. Proyezd Im. Deryabina, Izhevsk, Udmurt Republic, 426057 Russia",
+        "\u0420\u043e\u0441\u0456\u0439\u0441\u044c\u043a\u0430 \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0456\u044f, 426006, \u0423\u0434\u043c\u0443\u0440\u0442\u0441\u044c\u043a\u0430 \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0456\u043a\u0430, \u043c. \u0406\u0436\u0435\u0432\u0441\u044c\u043a, \u043f\u0440\u043e\u0457\u0437\u0434 \u0456\u043c. \u0414\u0435\u0440\u044f\u0431\u0456\u043d\u0430, \u0431\u0443\u0434. 2/362, \u043f\u043e\u0432. 7, \u043f\u0440\u0438\u043c. 8 (\u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0430\u044f \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0438\u044f, 426006, \u0423\u0434\u043c\u0443\u0440\u0442\u0441\u043a\u0430\u044f \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430, \u0433. \u0418\u0436\u0435\u0432\u0441\u043a, \u043f\u0440\u043e\u0435\u0437\u0434 \u0438\u043c. \u0414\u0435\u0440\u044f\u0431\u0438\u043d\u0430, \u0434. 2/362, \u044d\u0442. 7, \u043f\u043e\u043c. 8)",
+        "Rosijs\u02b9ka Federacia, 426006, Udmurts\u02b9ka Respublika, m. Izevs\u02b9k, proizd im. Derabina, bud. 2/362, pov. 7, prim. 8 (Rossijskaa Federacia, 426006, Udmurtskaa Respublika, g. Izevsk, proezd im. Derabina, d. 2/362, et. 7, pom. 8)",
+        "Russian Federation, 426006, Udmurt Republic, metro station Izhevsk, proezd im. Deryabina, bud. 2/362, rev. 7, approx. 8 (Russian Federation, 426006, Udmurt Republic, Izhevsk, Deryabin proezd, 2/362, floor 7, room 8)"
+      ],
+      "countries": [
+        "RUS"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "a9a18eeb901e4376c912e95dc05ceb78",
+        "635021e4e01979cdf95fa7ee76501696",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "56bce0e008204712e302271ddd7b4fb1",
+        "3322a755c28851ec06eda3280cc2a2b2",
+        "e6e4acebdea4e9e71af8d3586d34fcdd",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "e61c3b3478534c110b46cd64c7746e82"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "address|numericOptional|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "LIMITED LIABILITY COMPANY \"INNOVATION CENTER OF THE <em>KALASHNIKOV</em> <em>CONCERN</em>\"",
+          "LLC INNOVATION CENTER OF THE <em>KALASHNIKOV</em> <em>CONCERN</em>",
+          "<em>KALASHNIKOV</em> <em>CONCERN</em> INNOVATION CENTER LLC",
+          "Limited Liability Company \"<em>Concern</em> \"<em>Kalashnikov</em>\" Innovation Center\"",
+          "<em>Concern</em> <em>Kalashnikov</em> LLC"
+        ],
+        "address": [
+          "Pom. 49, <em>3</em> Ul. <em>Proyezd</em> Im. <em>Deryabina</em>, <em>Izhevsk</em>, <em>Udmurt</em> <em>Republic</em>, 426057 Russia",
+          "426057, <em>Republic</em> of <em>Udmurtskaya</em>, <em>Izhevsk</em>, <em>Deryabina</em> proezd, building <em>3</em>, office (apartment) 49",
+          "<em>426006</em>, <em>Izhevsk</em>, proezd im. <em>Deryabina</em>, <em>3</em>, room 49",
+          "<em>426006</em>, g. <em>Izevsk</em>, proezd im. <em>Derabina</em>, d.<em>3</em>, pomesenie 49",
+          "<em>426006</em>, \u0433. \u0418\u0436\u0435\u0432\u0441\u043a, \u043f\u0440\u043e\u0435\u0437\u0434 \u0438\u043c. \u0414\u0435\u0440\u044f\u0431\u0438\u043d\u0430, \u0434.<em>3</em>, \u043f\u043e\u043c\u0435\u0449\u0435\u043d\u0438\u0435 49"
+        ],
+        "country": [
+          "<em>RUS</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "LIMITED LIABILITY COMPANY \"INNOVATION CENTER OF THE <em>KALASHNIKOV</em> <em>CONCERN</em>\"",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2222222222222222,
+              "lv": 0.4269662921348315,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "LLC INNOVATION CENTER OF THE <em>KALASHNIKOV</em> <em>CONCERN</em>",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2857142857142857,
+              "lv": 0.5671641791044777,
+              "fz": 0.39583333333333337,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>KALASHNIKOV</em> <em>CONCERN</em> INNOVATION CENTER LLC",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4,
+              "lv": 0.6333333333333333,
+              "fz": 0.46341463414634143,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "Limited Liability Company \"<em>Concern</em> \"<em>Kalashnikov</em>\" Innovation Center\"",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2857142857142857,
+              "lv": 0.426829268292683,
+              "fz": 0.0,
+              "l1": 0.631578947368421,
+              "l2": 0.8947368421052632
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Concern</em> <em>Kalashnikov</em> LLC",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.6666666666666665,
+              "lv": 0.9047619047619048,
+              "fz": 0.8260869565217391,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "Pom. 49, <em>3</em> Ul. <em>Proyezd</em> Im. <em>Deryabina</em>, <em>Izhevsk</em>, <em>Udmurt</em> <em>Republic</em>, 426057 Russia",
+            "uploaded": "3 Deryabina Ave. Izhevsk Udmurt Republic",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "426057, <em>Republic</em> of <em>Udmurtskaya</em>, <em>Izhevsk</em>, <em>Deryabina</em> proezd, building <em>3</em>, office (apartment) 49",
+            "uploaded": "3 Deryabina Ave. Izhevsk Udmurt Republic",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>426006</em>, <em>Izhevsk</em>, proezd im. <em>Deryabina</em>, <em>3</em>, room 49",
+            "uploaded": "3 Deryabina Ave. Izhevsk Udmurt Republic",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>426006</em>, g. <em>Izevsk</em>, proezd im. <em>Derabina</em>, d.<em>3</em>, pomesenie 49",
+            "uploaded": "3 Deryabina Ave. Izhevsk Udmurt Republic",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>426006</em>, \u0433. \u0418\u0436\u0435\u0432\u0441\u043a, \u043f\u0440\u043e\u0435\u0437\u0434 \u0438\u043c. \u0414\u0435\u0440\u044f\u0431\u0438\u043d\u0430, \u0434.<em>3</em>, \u043f\u043e\u043c\u0435\u0449\u0435\u043d\u0438\u0435 49",
+            "uploaded": "3 Deryabina Ave. Izhevsk Udmurt Republic",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 189.91699,
+      "entity_id": "zqpMddadf94y39RfB3AgcA",
+      "label": "Kalashnikov Concern",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "1832090230",
+          "type": "ru_tin",
+          "label": "Ru Tin"
+        },
+        {
+          "value": "1111832003018",
+          "type": "ru_registration_number",
+          "label": "Ru Registration Number"
+        },
+        {
+          "value": "7445",
+          "type": "aus_consolidated_sanctions_reference",
+          "label": "Aus Consolidated Sanctions Reference"
+        },
+        {
+          "value": "ENT-466",
+          "type": "nzl_russia_sanctions_uid",
+          "label": "Nzl Russia Sanctions Uid"
+        },
+        {
+          "value": "183201001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "183650001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "Deryabina avenue, 3B, Izhevsk 394018, Russian Federation"
+      ],
+      "countries": [
+        "RUS"
+      ],
+      "sources": [
+        "bef2f30139ea37c723ecb0f953b5f024",
+        "d357238101a2bb02d97d5d77a56d9455",
+        "6c14405dec0a245d6acd6a3650d49de4",
+        "93de05b55a68cc964f34bbfc7ec7bc86",
+        "3322a755c28851ec06eda3280cc2a2b2"
+      ],
+      "typed_matched_queries": [
+        "address|geoCity|0",
+        "address|geoDistance|5km|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Kalashnikov</em> <em>Concern</em>",
+          "Joint Stock Company <em>Kalashnikov</em> <em>Concern</em>",
+          "JSC <em>Concern</em> <em>Kalashnikov</em>",
+          "JOINT STOCK COMPANY \"<em>KALASHNIKOV</em> <em>CONCERN</em>\"",
+          "OJSC <em>Concern</em> <em>Kalashnikov</em>"
+        ],
+        "address": [
+          "<em>Deryabina</em> <em>avenue</em>, 3B, <em>Izhevsk</em> 394018, Russian Federation"
+        ],
+        "country": [
+          "<em>RUS</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Kalashnikov</em> <em>Concern</em>",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 1.0,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "Joint Stock Company <em>Kalashnikov</em> <em>Concern</em>",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4,
+              "lv": 0.6551724137931034,
+              "fz": 0.4871794871794872,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "JSC <em>Concern</em> <em>Kalashnikov</em>",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.6666666666666665,
+              "lv": 0.9047619047619048,
+              "fz": 0.8260869565217391,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "JOINT STOCK COMPANY \"<em>KALASHNIKOV</em> <em>CONCERN</em>\"",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4,
+              "lv": 0.6551724137931034,
+              "fz": 0.4871794871794872,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "OJSC <em>Concern</em> <em>Kalashnikov</em>",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.6666666666666665,
+              "lv": 0.8837209302325582,
+              "fz": 0.7916666666666666,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>Deryabina</em> <em>avenue</em>, 3B, <em>Izhevsk</em> 394018, Russian Federation",
+            "uploaded": "3 Deryabina Ave. Izhevsk Udmurt Republic",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.17647058823529413
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 187.61232,
+      "entity_id": "Siogj2_Mz7EDUiZWyqat2g",
+      "label": "\u0410\u041a\u0426\u0418\u041e\u041d\u0415\u0420\u041d\u041e\u0415 \u041e\u0411\u0429\u0415\u0421\u0422\u0412\u041e \"\u041a\u041e\u041d\u0426\u0415\u0420\u041d \"\u041a\u0410\u041b\u0410\u0428\u041d\u0418\u041a\u041e\u0412\"",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "1832090230",
+          "type": "ru_tin",
+          "label": "Ru Tin"
+        },
+        {
+          "value": "1111832003018",
+          "type": "ru_ogrn",
+          "label": "Ru Ogrn"
+        },
+        {
+          "value": "1832090230",
+          "type": "ru_inn",
+          "label": "Ru Inn"
+        },
+        {
+          "value": "16911",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "139876",
+          "type": "eu_fsd_id",
+          "label": "Eu Fsd Id"
+        },
+        {
+          "value": "15305",
+          "type": "gbr_hm_treasury_sanction_group_id",
+          "label": "Gbr Hm Treasury Sanction Group Id"
+        },
+        {
+          "value": "RUS1356",
+          "type": "gbr_uk_sanctions_id",
+          "label": "Gbr Uk Sanctions Id"
+        },
+        {
+          "value": "EU.8174.69",
+          "type": "eu_sanction_rn",
+          "label": "Eu Sanction Rn"
+        },
+        {
+          "value": "4528",
+          "type": "fra_asset_freeze_id",
+          "label": "Fra Asset Freeze Id"
+        },
+        {
+          "value": "C830491",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "5c487b6f56d67fc038671d49",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "ENT-113",
+          "type": "nzl_russia_sanctions_uid",
+          "label": "Nzl Russia Sanctions Uid"
+        },
+        {
+          "value": "NK-nR5AXM9AVPq4pQaSPSaVam",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "29455",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "54204",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "1111183200301",
+          "type": "ru_registration_number",
+          "label": "Ru Registration Number"
+        },
+        {
+          "value": "12986",
+          "type": "ukr_sanctions_nazk_company_internal_id",
+          "label": "Ukr Sanctions Nazk Company Internal Id"
+        },
+        {
+          "value": "183201001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "1111832003018",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "1832090230",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "183650001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "002029 \u0412\u0412\u0422-\u041e\u041f\u0420\u0423",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "18.\u0423\u0426.05.002.\u041b.000001.04.18",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "0002294 \u0422\u041e",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "0060794 \u0422\u041e",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "0180000001904 \u0422\u041e",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0418\u0416\u0412 01902 \u0412\u042d",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0412\u0425-46-800726",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0418\u0416\u0412 80053 \u0412\u042d",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0418\u0416\u0412 80189 \u0412\u042d",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "0003104",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "14582-\u041f\u041e",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "18-\u0411/00093",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0412\u0425-46 800726 \u041f\u0435\u0440\u0435\u043e\u0444\u043e\u0440\u043c",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "0002294",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "0060794",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "0180000001904",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "0002286",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "0060786",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b008-00102-77/00006674, 002029 \u0412\u0412\u0422- \u041e\u041f\u0420\u0423",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b041-01129-18/00552116",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "018 256/\u041f",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b\u041e-18-01-002325",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "0056790",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "018 256",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0422\u041f 0002287 \u0422\u041f",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b008-00102-77/00006674",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b059-00106-18/00048196",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0422\u041e 0060787 \u0422\u041e",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "183200100",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "Ukraine-/Russia-Related Sanctions Regulations, 31 CFR 589.201 and/or 589.209",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "49",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "\u041b020-00113-18/00095698",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "13796-\u041f\u041e",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "183201000",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "90082579",
+          "type": "ru_okpo",
+          "label": "Ru Okpo"
+        },
+        {
+          "value": "94701000001",
+          "type": "ru_oktmo",
+          "label": "Ru Oktmo"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "426006, \u0423\u0434\u043c\u0443\u0440\u0442\u0441\u043a\u0430\u044f \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430, \u0433. \u0418\u0436\u0435\u0432\u0441\u043a, \u043f\u0440\u043e\u0435\u0437\u0434 \u0414\u0435\u0440\u044f\u0431\u0438\u043d\u0430, 3",
+        "426006, Udmurtskaa Respublika, g. Izevsk, proezd Derabina, 3",
+        "426006, Udmurtskaya Respublika, Izhevsk, Deryabyna Drive, 3",
+        "426006, \u0423\u0434\u043c\u0443\u0440\u0442\u0441\u043a\u0430\u044f, \u0418\u0436\u0435\u0432\u0441\u043a, \u0438\u043c \u0414\u0435\u0440\u044f\u0431\u0438\u043d\u0430, \u0434\u043e\u043c 3",
+        "426006, Udmurtskaa, Izevsk, im Derabina, dom 3",
+        "426006, Udmurtskaya, Izhevsk, named after Deryabin, house 3",
+        "Deryabina avenue, 3B Izhevsk 394018 RUSSIAN FEDERATION",
+        "3, Derjabin Pr., Izhevsk, Udmurt Republic, 426006, Russia",
+        "426006, \u0423\u0434\u043c\u0443\u0440\u0442\u0441\u043a\u0430\u044f \u0440\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430, \u0433\u043e\u0440\u043e\u0434 \u0418\u0436\u0435\u0432\u0441\u043a, \u043f\u0440\u043e\u0435\u0437\u0434 \u0438\u043c. \u0414\u0435\u0440\u044f\u0431\u0438\u043d\u0430, \u0434.2/193 \u043f\u043e\u043c.78",
+        "426006, Udmurtskaa respublika, gorod Izevsk, proezd im. Derabina, d.2/193 pom.78",
+        "426006, Udmurt Republic, Izhevsk, proezd im. Deryabina, 2/193 room 78",
+        "18 Krzhizhanovsky St, Bldg 4, Moscow, 11728, RU",
+        "2/93 Deryabin Passage, Room 78, Izhevsk, 426006, Russia",
+        "426006, \u0423\u0414\u041c\u0423\u0420\u0422\u0421\u041a\u0410\u042f \u0420\u0415\u0421\u041f\u0423\u0411\u041b\u0418\u041a\u0410, \u0413. \u0418\u0416\u0415\u0412\u0421\u041a, \u041f\u0420\u041e\u0415\u0417\u0414 \u0418\u041c. \u0414\u0415\u0420\u042f\u0411\u0418\u041d\u0410, 2/193-78,",
+        "426006, UDMURTSKAA RESPUBLIKA, G. IZEVSK, PROEZD IM. DERABINA, 2/193-78,",
+        "426006, UDMURT REPUBLIC, IZHEVSK, PROEZD YM. DERYABYNA, 2/193-78,",
+        "426006 Russia, Udmurt Republic City of Izhevsk. , \u0420\u043e\u0441\u0438\u0438\u044f.",
+        "426006 Russia, Udmurt Republic City of Izhevsk. , Rosiia.",
+        "426006 Russia, Udmurt Republic City of Izhevsk. , Russia.",
+        "426006, \u0423\u0434\u043c\u0443\u0440\u0442\u0441\u043a\u0430\u044f \u0440\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430, \u0433. \u0418\u0436\u0435\u0432\u0441\u043a, \u043f\u0440-\u0434 \u0438\u043c. \u0414\u0435\u0440\u044f\u0431\u0438\u043d\u0430, \u0434.3",
+        "426006, Udmurtskaa respublika, g. Izevsk, pr-d im. Derabina, d.3",
+        "426006, Udmurt Republic, Izhevsk, pr-d im. Deryabina, 3",
+        "426006, Udmurt Republic, Izhevsk, Deryabina Avenue, 2/193, Room 78, Russian Federation",
+        "Krievija",
+        "426006, \u0423\u0414\u041c\u0423\u0420\u0422\u0421\u041a\u0410\u042f \u0420\u0415\u0421\u041f\u0423\u0411\u041b\u0418\u041a\u0410, \u0413. \u0418\u0416\u0415\u0412\u0421\u041a, \u041f\u0420-\u0414 \u0418\u041c \u0414\u0415\u0420\u042f\u0411\u0418\u041d\u0410, \u0414. 2/193, \u041f\u041e\u041c\u0415\u0429. 78",
+        "426006, UDMURTSKAA RESPUBLIKA, G. IZEVSK, PR-D IM DERABINA, D. 2/193, POMES. 78",
+        "426006, UDMURT REPUBLIC, IZHEVSK, PR-D IM DERYABIN, 2/193, PREMISCH. 78",
+        "PROYEZD IM.DERYABINA, HOUSE 2/193, ROOM 78 IZHEVSK",
+        "2/193 Pr. Im Deryabina, Pom. 78, Izhevsk, Udmurt Republic, 426006, Russia",
+        "\u0420\u041e\u0421\u0421\u0418\u042f, 119034 \u0413\u041e\u0420\u041e\u0414 \u041c\u041e\u0421\u041a\u0412\u0410, \u0423\u041b\u0418\u0426\u0410 \u0422\u0418\u041c\u0423\u0420\u0410 \u0424\u0420\u0423\u041d\u0417\u0415, \u0414\u041e\u041c 11, \u0421\u0422\u0420\u041e\u0415\u041d\u0418\u0415 56",
+        "ROSSIA, 119034 GOROD MOSKVA, ULICA TIMURA FRUNZE, DOM 11, STROENIE 56",
+        "RUSSIA, 119034 MOSCOW CITY, TIMURA FRUNZE STREET, BUILDING 11, BUILDING 56",
+        "Str. 56, 11 Ul. Timura Frunze, Moscow, 119034, Russia",
+        "454007, \u0433. \u0427\u0435\u043b\u044f\u0431\u0438\u043d\u0441\u043a, \u043f\u0440\u043e\u0441\u043f. \u041b\u0435\u043d\u0438\u043d\u0430, \u0434. 2-\u0411",
+        "454007, g. Celabinsk, prosp. Lenina, d. 2-B",
+        "454007, Chelyabinsk, ave. Lenina, d. 2-B",
+        "3 Deryabina Str., Izhevsk, Udmurt Republic, 426006, RU",
+        "Deryabina avenue, 3B, Izhevsk, 394018, RU",
+        "\u0420\u0424, \u0423\u0434\u043c\u0443\u0440\u0442\u0441\u044c\u043a\u0430 \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0456\u043a\u0430, \u043c. \u0406\u0436\u0435\u0432\u0441\u044c\u043a, \u043f\u0440\u043e\u0457\u0437\u0434 \u0414\u0435\u0440\u044f\u0431\u0456\u043d\u0430, 3, 426006",
+        "RF, Udmurts\u02b9ka Respublika, m. Izevs\u02b9k, proizd Derabina, 3, 426006",
+        "Russian Federation, Udmurt Republic, metro station Izhevsk, Deryabina proezd, 3, 426006",
+        "\u0420\u0424, \u0423\u0434\u043c\u0443\u0440\u0442\u0441\u044c\u043a\u0430 \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0456\u043a\u0430, \u043c. \u0406\u0436\u0435\u0432\u0441\u044c\u043a, \u043f\u0440\u043e\u0457\u0437\u0434 \u0414\u0435\u0440\u044f\u0431\u0456\u043d\u0430, 3, 426006",
+        "RF, Udmurts\u02b9ka Respublika, m. Izevs\u02b9k, proizd Derabina, 3, 426006",
+        "Russian Federation, Udmurt Republic, metro station Izhevsk, Deryabina proezd, 3, 426006"
+      ],
+      "countries": [
+        "RUS",
+        "AUS",
+        "USA",
+        "CAN"
+      ],
+      "sources": [
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "6c14405dec0a245d6acd6a3650d49de4",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "a4475601393f5a6a27154175556f7a85",
+        "ded706ef28cdc649b6fc5142bc542890",
+        "e6e4acebdea4e9e71af8d3586d34fcdd",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "66dfefb726ae00fde8f09f34c5578d35",
+        "bf8f37ada9df878c8494e230e26321ee",
+        "635021e4e01979cdf95fa7ee76501696",
+        "a4be698ea3263f7f7f3906d1c98cffc2",
+        "56bce0e008204712e302271ddd7b4fb1",
+        "4ff85397f508e4ff8e71c5ca5ea895dd",
+        "1b27af6fa4018a70fbce9ca6f316e21c",
+        "f4ce10ac8bdc0bd9bcb31cb868b4b539",
+        "78b9eb45e7266680e1b9908b7f88dcb7",
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "d357238101a2bb02d97d5d77a56d9455",
+        "8511f57f6098dcc36e3a814c3ea5bdd7",
+        "b1d2f50f163413806366618fed7cfac4",
+        "53025b5e8f2032f5f23878503e1edc34",
+        "10a889609ddae6cc31773feebe48166b",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "3322a755c28851ec06eda3280cc2a2b2",
+        "c10d482320f207d92aa814519c3bd686",
+        "ad6dc774c74b92159422deabc5aee661",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "a9a18eeb901e4376c912e95dc05ceb78",
+        "3f92da650f5a32cf9c50c11333e9b7cb",
+        "ac1fa195f9cd4ccf657bca3c6db0bb19",
+        "a0bc9f7913cb345cc685e3f65532dd70",
+        "ce462e9deea545cce35df38c48512a0c",
+        "e85d865943ee6d8369307569d2ad9de0"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "address|numericOptional|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "JOINT STOCK COMPANY \"<em>KALASHNIKOV</em> <em>CONCERN</em>\"",
+          "\"<em>KALASHNIKOV</em> <em>CONCERN</em>\" JSC",
+          "OPEN JOINT STOCK COMPANY \"<em>CONCERN</em> \"<em>KALASHNIKOV</em>\"",
+          "JSC \"<em>CONCERN</em> \"<em>KALASHNIKOV</em>\"",
+          "JSC <em>Kalashnikov</em> <em>Concern</em>"
+        ],
+        "address": [
+          "<em>426006</em>, <em>Udmurtskaya</em> <em>Respublika</em>, <em>Izhevsk</em>, <em>Deryabyna</em> Drive, <em>3</em>",
+          "<em>426006</em>, <em>Udmurt</em> <em>Republic</em>, <em>Izhevsk</em>, pr-d im. <em>Deryabina</em>, <em>3</em>",
+          "<em>3</em> <em>Deryabina</em> Str., <em>Izhevsk</em>, <em>Udmurt</em> <em>Republic</em>, <em>426006</em>, RU",
+          "Russian Federation, <em>Udmurt</em> <em>Republic</em>, metro station <em>Izhevsk</em>, <em>Deryabina</em> proezd, <em>3</em>, <em>426006</em>",
+          "Russian Federation, <em>Udmurt</em> <em>Republic</em>, metro station <em>Izhevsk</em>, <em>Deryabina</em> proezd, <em>3</em>, <em>426006</em>"
+        ],
+        "country": [
+          "<em>RUS</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "JOINT STOCK COMPANY \"<em>KALASHNIKOV</em> <em>CONCERN</em>\"",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.4,
+              "lv": 0.6551724137931034,
+              "fz": 0.4871794871794872,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "\"<em>KALASHNIKOV</em> <em>CONCERN</em>\" JSC",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.6666666666666665,
+              "lv": 0.9047619047619048,
+              "fz": 0.8260869565217391,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "OPEN JOINT STOCK COMPANY \"<em>CONCERN</em> \"<em>KALASHNIKOV</em>\"",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.33333333333333326,
+              "lv": 0.4285714285714286,
+              "fz": 0.0,
+              "l1": 0.5789473684210527,
+              "l2": 0.5789473684210527
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "JSC \"<em>CONCERN</em> \"<em>KALASHNIKOV</em>\"",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.6666666666666665,
+              "lv": 0.5238095238095238,
+              "fz": 0.0,
+              "l1": 0.5789473684210527,
+              "l2": 0.5789473684210527
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "JSC <em>Kalashnikov</em> <em>Concern</em>",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.6666666666666665,
+              "lv": 0.9047619047619048,
+              "fz": 0.8260869565217391,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>426006</em>, <em>Udmurtskaya</em> <em>Respublika</em>, <em>Izhevsk</em>, <em>Deryabyna</em> Drive, <em>3</em>",
+            "uploaded": "3 Deryabina Ave. Izhevsk Udmurt Republic",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>426006</em>, <em>Udmurt</em> <em>Republic</em>, <em>Izhevsk</em>, pr-d im. <em>Deryabina</em>, <em>3</em>",
+            "uploaded": "3 Deryabina Ave. Izhevsk Udmurt Republic",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>3</em> <em>Deryabina</em> Str., <em>Izhevsk</em>, <em>Udmurt</em> <em>Republic</em>, <em>426006</em>, RU",
+            "uploaded": "3 Deryabina Ave. Izhevsk Udmurt Republic",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "Russian Federation, <em>Udmurt</em> <em>Republic</em>, metro station <em>Izhevsk</em>, <em>Deryabina</em> proezd, <em>3</em>, <em>426006</em>",
+            "uploaded": "3 Deryabina Ave. Izhevsk Udmurt Republic",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "Russian Federation, <em>Udmurt</em> <em>Republic</em>, metro station <em>Izhevsk</em>, <em>Deryabina</em> proezd, <em>3</em>, <em>426006</em>",
+            "uploaded": "3 Deryabina Ave. Izhevsk Udmurt Republic",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 128.31537,
+      "entity_id": "UPp11yWPDKChoObyabmUNQ",
+      "label": "Kalashnikov Concern",
+      "type": "person",
+      "identifiers": [
+        {
+          "value": "SCMNVVTJDAY7",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "3, Derjabin Pr., Izhevsk, Udmurt Republic, RUS, 426006"
+      ],
+      "countries": [
+        "RUS"
+      ],
+      "sources": [
+        "b97ad5c858093e5227b2359a0078696f",
+        "417400a1ac439843fda5bb2f05fb4161"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "address|numericOptional|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Kalashnikov</em> <em>Concern</em>",
+          "<em>Concern</em> <em>Kalashnikov</em>",
+          "OJSC <em>Concern</em> <em>Kalashnikov</em>"
+        ],
+        "address": [
+          "<em>3</em>, <em>Derjabin</em> Pr., <em>Izhevsk</em>, <em>Udmurt</em> <em>Republic</em>, RUS, <em>426006</em>"
+        ],
+        "country": [
+          "<em>RUS</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Kalashnikov</em> <em>Concern</em>",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 1.0,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Concern</em> <em>Kalashnikov</em>",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 1.0,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "OJSC <em>Concern</em> <em>Kalashnikov</em>",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.6666666666666665,
+              "lv": 0.8837209302325582,
+              "fz": 0.7916666666666666,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>3</em>, <em>Derjabin</em> Pr., <em>Izhevsk</em>, <em>Udmurt</em> <em>Republic</em>, RUS, <em>426006</em>",
+            "uploaded": "3 Deryabina Ave. Izhevsk Udmurt Republic",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 74.83119,
+      "entity_id": "_IFHeFU_zkZBeDijIheqww",
+      "label": "\u0410\u0412\u0422\u041e\u041d\u041e\u041c\u041d\u0410\u042f \u041d\u0415\u041a\u041e\u041c\u041c\u0415\u0420\u0427\u0415\u0421\u041a\u0410\u042f \u041e\u0420\u0413\u0410\u041d\u0418\u0417\u0410\u0426\u0418\u042f \u0414\u041e\u041f\u041e\u041b\u041d\u0418\u0422\u0415\u041b\u042c\u041d\u041e\u0413\u041e \u041f\u0420\u041e\u0424\u0415\u0421\u0421\u0418\u041e\u041d\u0410\u041b\u042c\u041d\u041e\u0413\u041e \u041e\u0411\u0420\u0410\u0417\u041e\u0412\u0410\u041d\u0418\u042f \"\u0423\u0427\u0415\u0411\u041d\u042b\u0419 \u0426\u0415\u041d\u0422\u0420 \"\u0418\u0416\u041c\u0410\u0428\"",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "1840041830",
+          "type": "ru_tin",
+          "label": "Ru Tin"
+        },
+        {
+          "value": "1840041830",
+          "type": "ru_inn",
+          "label": "Ru Inn"
+        },
+        {
+          "value": "1151800000505",
+          "type": "ru_ogrn",
+          "label": "Ru Ogrn"
+        },
+        {
+          "value": "5c48808fa18bbce4b8f16cf3",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "1151800000505",
+          "type": "ru_registration_number",
+          "label": "Ru Registration Number"
+        },
+        {
+          "value": "184001001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "18\u041b\u041e1 0000450",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "503201001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "\u041b035-01265-18/00255350",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "183201001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "16",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "43680809",
+          "type": "ru_okpo",
+          "label": "Ru Okpo"
+        },
+        {
+          "value": "94701000001",
+          "type": "ru_oktmo",
+          "label": "Ru Oktmo"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "143070, \u041c\u041e\u0421\u041a\u041e\u0412\u0421\u041a\u0410\u042f \u041e\u0411\u041b\u0410\u0421\u0422\u042c, \u0413.\u041e. \u041e\u0414\u0418\u041d\u0426\u041e\u0412\u0421\u041a\u0418\u0419, \u0422\u0415\u0420 \u041f\u0410\u0420\u041a \u041f\u0410\u0422\u0420\u0418\u041e\u0422, \u0421\u0422\u0420. 4, \u041f\u041e\u041c\u0415\u0429. 5",
+        "143070, MOSKOVSKAA OBLAST\u02b9, G.O. ODINCOVSKIJ, TER PARK PATRIOT, STR. 4, POMES. 5",
+        "143070, MOSCOW REGION, ODINTSOVSKY CITY, TER PARK PATRIOT, BUILDING 4, ROOM 5",
+        "426006, \u0423\u0414\u041c\u0423\u0420\u0422\u0421\u041a\u0410\u042f \u0420\u0415\u0421\u041f\u0423\u0411\u041b\u0418\u041a\u0410, \u0413\u041e\u0420\u041e\u0414 \u0418\u0416\u0415\u0412\u0421\u041a, \u041f\u0420\u041e\u0415\u0417\u0414 \u0418\u041c \u0414\u0415\u0420\u042f\u0411\u0418\u041d\u0410, \u0417\u0414\u0410\u041d\u0418\u0415 2/193, \u042d\u0422\u0410\u0416/\u041f\u041e\u041c 1/25",
+        "426006, UDMURTSKAA RESPUBLIKA, GOROD IZEVSK, PROEZD IM DERABINA, ZDANIE 2/193, ETAZ/POM 1/25",
+        "426006, UDMURT REPUBLIC, CITY IZHEVSK, DERYABIN TRAEST, BUILDING 2/193, FLOOR/ROOM 1/25",
+        "426053, \u0423\u0434\u043c\u0443\u0440\u0442\u0441\u043a\u0430\u044f \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430, \u0433. \u0418\u0436\u0435\u0432\u0441\u043a, \u0443\u043b. \u0421\u0430\u043b\u044e\u0442\u043e\u0432\u0441\u043a\u0430\u044f, \u0434. 33",
+        "426053, Udmurtskaa Respublika, g. Izevsk, ul. Salutovskaa, d. 33",
+        "426053, Udmurt Republic, Izhevsk, st. Salyutovskaya, 33",
+        "\u0420\u041e\u0421\u0421\u0418\u042f, 426053 \u0420\u0415\u0421\u041f\u0423\u0411\u041b\u0418\u041a\u0410 \u0423\u0414\u041c\u0423\u0420\u0422\u0421\u041a\u0410\u042f, \u0413\u041e\u0420\u041e\u0414 \u0418\u0416\u0415\u0412\u0421\u041a, \u0423\u041b\u0418\u0426\u0410 \u0421\u0410\u041b\u042e\u0422\u041e\u0412\u0421\u041a\u0410\u042f, \u0414\u041e\u041c 33",
+        "ROSSIA, 426053 RESPUBLIKA UDMURTSKAA, GOROD IZEVSK, ULICA SALUTOVSKAA, DOM 33",
+        "RUSSIA, 426053 REPUBLIC OF UDMURT, CITY IZHEVSK, SALYUTOVSKAYA STREET, BUILDING 33",
+        "33 Ul. Salyutovskaya, Izhevsk, Udmurt Republic, 426053, Russia"
+      ],
+      "countries": [
+        "RUS"
+      ],
+      "sources": [
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "a9a18eeb901e4376c912e95dc05ceb78",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "635021e4e01979cdf95fa7ee76501696",
+        "56bce0e008204712e302271ddd7b4fb1",
+        "3322a755c28851ec06eda3280cc2a2b2"
+      ],
+      "typed_matched_queries": [
+        "address|geoCity|0",
+        "address|geoDistance|5km|0",
+        "address|numericOptional|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "AUTONOMOUS NON-PROFIT ORGANIZATION OF ADDITIONAL PROFESSIONAL EDUCATION \"TRAINING CENTER OF THE <em>KALASHNIKOV</em> <em>CONCERN</em>\"",
+          "ANO DPO \"TRAINING CENTER OF THE <em>KALASHNIKOV</em> <em>CONCERN</em>\"",
+          "AVTONOMNAA NEKOMMERCESKAA ORGANIZACIA DOPOLNITEL\u02b9NOGO PROFESSIONAL\u02b9NOGO OBRAZOVANIA \"UCEBNYJ CENTR \"KONCERNA \"<em>KALASNIKOV</em>\"",
+          "ANO DPO \"UCEBNYJ CENTR \"KONCERNA \"<em>KALASNIKOV</em>\""
+        ],
+        "address": [
+          "<em>426006</em>, <em>UDMURT</em> <em>REPUBLIC</em>, CITY <em>IZHEVSK</em>, <em>DERYABIN</em> TRAEST, BUILDING 2/193, FLOOR/ROOM 1/25",
+          "<em>426006</em>, UDMURTSKAA <em>RESPUBLIKA</em>, GOROD <em>IZEVSK</em>, PROEZD IM <em>DERABINA</em>, ZDANIE 2/193, ETAZ/POM 1/25",
+          "426053, <em>Udmurt</em> <em>Republic</em>, <em>Izhevsk</em>, st. Salyutovskaya, 33",
+          "RUSSIA, 426053 <em>REPUBLIC</em> OF <em>UDMURT</em>, CITY <em>IZHEVSK</em>, SALYUTOVSKAYA STREET, BUILDING 33",
+          "<em>426006</em>, \u0423\u0414\u041c\u0423\u0420\u0422\u0421\u041a\u0410\u042f \u0420\u0415\u0421\u041f\u0423\u0411\u041b\u0418\u041a\u0410, \u0413\u041e\u0420\u041e\u0414 \u0418\u0416\u0415\u0412\u0421\u041a, \u041f\u0420\u041e\u0415\u0417\u0414 \u0418\u041c \u0414\u0415\u0420\u042f\u0411\u0418\u041d\u0410, \u0417\u0414\u0410\u041d\u0418\u0415 2/193, \u042d\u0422\u0410\u0416/\u041f\u041e\u041c 1/25"
+        ],
+        "country": [
+          "<em>RUS</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "AUTONOMOUS NON-PROFIT ORGANIZATION OF ADDITIONAL PROFESSIONAL EDUCATION \"TRAINING CENTER OF THE <em>KALASHNIKOV</em> <em>CONCERN</em>\"",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.14285714285714285,
+              "lv": 0.2857142857142857,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "ANO DPO \"TRAINING CENTER OF THE <em>KALASHNIKOV</em> <em>CONCERN</em>\"",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.25,
+              "lv": 0.5507246376811594,
+              "fz": 0.38,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "AVTONOMNAA NEKOMMERCESKAA ORGANIZACIA DOPOLNITEL\u02b9NOGO PROFESSIONAL\u02b9NOGO OBRAZOVANIA \"UCEBNYJ CENTR \"KONCERNA \"<em>KALASNIKOV</em>\"",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.1,
+              "lv": 0.25,
+              "fz": 0.0,
+              "l1": 0.3157894736842105,
+              "l2": 0.7894736842105263
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "ANO DPO \"UCEBNYJ CENTR \"KONCERNA \"<em>KALASNIKOV</em>\"",
+            "uploaded": "Kalashnikov Concern",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.16666666666666663,
+              "lv": 0.44999999999999996,
+              "fz": 0.0,
+              "l1": 0.3157894736842105,
+              "l2": 0.5789473684210527
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>426006</em>, <em>UDMURT</em> <em>REPUBLIC</em>, CITY <em>IZHEVSK</em>, <em>DERYABIN</em> TRAEST, BUILDING 2/193, FLOOR/ROOM 1/25",
+            "uploaded": "3 Deryabina Ave. Izhevsk Udmurt Republic",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.29411764705882354
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "<em>426006</em>, UDMURTSKAA <em>RESPUBLIKA</em>, GOROD <em>IZEVSK</em>, PROEZD IM <em>DERABINA</em>, ZDANIE 2/193, ETAZ/POM 1/25",
+            "uploaded": "3 Deryabina Ave. Izhevsk Udmurt Republic",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.29411764705882354
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "426053, <em>Udmurt</em> <em>Republic</em>, <em>Izhevsk</em>, st. Salyutovskaya, 33",
+            "uploaded": "3 Deryabina Ave. Izhevsk Udmurt Republic",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.29411764705882354
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "RUSSIA, 426053 <em>REPUBLIC</em> OF <em>UDMURT</em>, CITY <em>IZHEVSK</em>, SALYUTOVSKAYA STREET, BUILDING 33",
+            "uploaded": "3 Deryabina Ave. Izhevsk Udmurt Republic",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.29411764705882354
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "<em>426006</em>, \u0423\u0414\u041c\u0423\u0420\u0422\u0421\u041a\u0410\u042f \u0420\u0415\u0421\u041f\u0423\u0411\u041b\u0418\u041a\u0410, \u0413\u041e\u0420\u041e\u0414 \u0418\u0416\u0415\u0412\u0421\u041a, \u041f\u0420\u041e\u0415\u0417\u0414 \u0418\u041c \u0414\u0415\u0420\u042f\u0411\u0418\u041d\u0410, \u0417\u0414\u0410\u041d\u0418\u0415 2/193, \u042d\u0422\u0410\u0416/\u041f\u041e\u041c 1/25",
+            "uploaded": "3 Deryabina Ave. Izhevsk Udmurt Republic",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.29411764705882354
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    }
+  ]
+}

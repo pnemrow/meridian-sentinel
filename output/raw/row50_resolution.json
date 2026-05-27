@@ -1,0 +1,966 @@
+{
+  "fields": {
+    "name": [
+      "Zvezdochka Shipyard"
+    ],
+    "identifier": null,
+    "profile": null,
+    "country": [
+      "RUS"
+    ],
+    "address": [
+      "12 Mashinostroiteley St. Severodvinsk Arkhangelsk Region"
+    ],
+    "date_of_birth": null,
+    "contact": null,
+    "type": null
+  },
+  "data": [
+    {
+      "profile": "corporate",
+      "score": 181.1972,
+      "entity_id": "uvq9R4Byykp6HBsX9Ohp3A",
+      "label": "\u0410\u041a\u0426\u0418\u041e\u041d\u0415\u0420\u041d\u041e\u0415 \u041e\u0411\u0429\u0415\u0421\u0422\u0412\u041e \"\u0426\u0415\u041d\u0422\u0420 \u0421\u0423\u0414\u041e\u0420\u0415\u041c\u041e\u041d\u0422\u0410 \"\u0417\u0412\u0415\u0417\u0414\u041e\u0427\u041a\u0410\"",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "2902060361",
+          "type": "ru_tin",
+          "label": "Ru Tin"
+        },
+        {
+          "value": "2902060361",
+          "type": "ru_inn",
+          "label": "Ru Inn"
+        },
+        {
+          "value": "1082902002677",
+          "type": "ru_ogrn",
+          "label": "Ru Ogrn"
+        },
+        {
+          "value": "20201",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "36065",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "1082902002677",
+          "type": "ru_registration_number",
+          "label": "Ru Registration Number"
+        },
+        {
+          "value": "C1564881",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "ENT-210",
+          "type": "nzl_russia_sanctions_uid",
+          "label": "Nzl Russia Sanctions Uid"
+        },
+        {
+          "value": "16960",
+          "type": "ru_ship_register_id",
+          "label": "Ru Ship Register Id"
+        },
+        {
+          "value": "1820197",
+          "type": "int_maritime_org_id",
+          "label": "Int Maritime Org Id"
+        },
+        {
+          "value": "5c487e2fa18bbce4b8f158ac",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "NK-aDYmrZjjArHjaaJxQ2DaWC",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "52675",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "52714",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "624f7d7bc9cfc2000162ac36",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "12871",
+          "type": "ukr_sanctions_nazk_company_internal_id",
+          "label": "Ukr Sanctions Nazk Company Internal Id"
+        },
+        {
+          "value": "290201001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "301643001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "997850001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "290143001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "997450001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "511243001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "29.01.05.002.\u041b.000004.06.13",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "29\u041b01 0000873 \u0411\u0415\u0421\u0421\u0420\u041e\u0427\u041d\u0410\u042f",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "77.99.15.002.\u041b.000114.06.13",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0410 0002031",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0412\u0412\u0422-2 014478",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "51-\u0411/00080",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041c\u0420-4 003597",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "(29) - 9074 - \u0422\u0423",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "6271",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "998050001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "\u0410\u041a-29-000404",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041c\u0422-3 000946",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b041-01152-29/00553330",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0413\u041a-1-16-0252\u0422",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0413\u041a-1-16-0278\u0423",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "871\u041a",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "920343001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "\u0410\u0412 \u0421\u0415-03-210-4688",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "519043001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "\u0413\u041a-1-16-0357\u0422",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0413\u041a-1-16-0410\u0423\u0422",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b\u041e-23-01-010195",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0421\u0415-03-210-5700",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0410\u041a 29-000404",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b052-00102-77/00047571",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0413\u041a-1-16-0048",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "290245003",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "\u0413\u041a-1-16-0014",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b\u041e-29-01-002947",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0421\u0415-(\u0423)-07-602-5832",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "12 Nov 2008",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "Ukraine-/Russia-Related Sanctions Regulations, 31 CFR 589.201 and/or 589.209",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "235243001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "2902060361",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "290245001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "770443001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "\u041b008-00102-77/00010807",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b020-00113-29/00099903",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "1082902002677",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "1082902002677",
+          "type": "unknown_commercial_register_id",
+          "label": "Unknown Commercial Register Id"
+        },
+        {
+          "value": "11730000001",
+          "type": "ru_oktmo",
+          "label": "Ru Oktmo"
+        },
+        {
+          "value": "231843001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "7515753",
+          "type": "ru_okpo",
+          "label": "Ru Okpo"
+        },
+        {
+          "value": "770432001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "MHJ6RJJNBCR6",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "Q1Q5BYUUWA63",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "Q1RTE8M5P948",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "Q1URBFDHCRK8",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "Q1V8WQP8WT68",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "QCS8N795TKW5",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "RVM3SLCF6EH7",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "164509, \u041e\u0411\u041b \u0410\u0420\u0425\u0410\u041d\u0413\u0415\u041b\u042c\u0421\u041a\u0410\u042f, \u0413 \u0421\u0415\u0412\u0415\u0420\u041e\u0414\u0412\u0418\u041d\u0421\u041a, \u041f\u0420 \u041c\u0410\u0428\u0418\u041d\u041e\u0421\u0422\u0420\u041e\u0418\u0422\u0415\u041b\u0415\u0419, \u0434\u043e\u043c 12",
+        "164509, OBL ARHANGEL\u02b9SKAA, G SEVERODVINSK, PR MASINOSTROITELEJ, dom 12",
+        "164509, ARKHANGELSKAYA REGION, SEVERODVINSK, MACHINE BUILDING PR, building 12",
+        "164509, \u0410\u0440\u0445\u0430\u043d\u0433\u0435\u043b\u044c\u0441\u043a\u0430\u044f, \u0421\u0435\u0432\u0435\u0440\u043e\u0434\u0432\u0438\u043d\u0441\u043a, \u041c\u0430\u0448\u0438\u043d\u043e\u0441\u0442\u0440\u043e\u0438\u0442\u0435\u043b\u0435\u0439, \u0434\u043e\u043c 12",
+        "164509, Arhangel\u02b9skaa, Severodvinsk, Masinostroitelej, dom 12",
+        "164509, Arkhangelskaya, Severodvinsk, Mashinostroiteley, building 12",
+        "164509, \u0410\u0420\u0425\u0410\u041d\u0413\u0415\u041b\u042c\u0421\u041a\u0410\u042f \u041e\u0411\u041b., \u0413.\u0421\u0415\u0412\u0415\u0420\u041e\u0414\u0412\u0418\u041d\u0421\u041a, \u041f\u0420.\u041c\u0410\u0428\u0418\u041d\u041e\u0421\u0422\u0420\u041e\u0418\u0422\u0415\u041b\u0415\u0419,\u0414.12,",
+        "164509, ARHANGEL\u02b9SKAA OBL., G.SEVERODVINSK, PR.MASINOSTROITELEJ,D.12,",
+        "164509, ARKHANGELSKAYA OBL., SEVERODVINSK, PROV. MASHYNOSTROITELEY, D. 12,",
+        "414009. \u0410\u0441\u0442\u0440\u0430\u0445\u0430\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c , \u0433. \u0410\u0441\u0442\u0440\u0430\u0445\u0430\u043d\u044c , \u0443\u043b. \u0410\u0442\u0430\u0440\u0431\u0435\u043a\u043e\u0432\u0430 , 37",
+        "414009. Astrahanskaa oblast\u02b9 , g. Astrahan\u02b9 , ul. Atarbekova , 37",
+        "414009. Astrakhan region, Astrakhan, st. Atarbekova, 37",
+        "414009. \u0410\u0441\u0442\u0440\u0430\u0445\u0430\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c , \u0433. \u0410\u0441\u0442\u0440\u0430\u0445\u0430\u043d\u044c , \u0443\u043b. \u0410\u0442\u0430\u0440\u0431\u0435\u043a\u043e\u0432\u0430 , 37",
+        "414009. Astrahanskaa oblast\u02b9 , g. Astrahan\u02b9 , ul. Atarbekova , 37",
+        "414009. Astrakhan region, Astrakhan, st. Atarbekova, 37",
+        "12, proyezd Mashinostroiteley, Severodvinsk, Arkhangelskaya Oblast, 164509, Russia",
+        "13 Geroyev Sevastopolya Street, Sevastopol, Crimea, 99001, UA",
+        "12 Mashinostroiteley Passage, Severodvinsk, Arkhangelsk Region, 164500, Russia",
+        "\u0420\u0424, 164509, \u0410\u0440\u0445\u0430\u043d\u0433\u0435\u043b\u044c\u0441\u044c\u043a\u0430 \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u043c. \u0421\u0454\u0432\u0454\u0440\u043e\u0434\u0432\u0438\u043d\u0441\u044c\u043a, \u043f\u0440\u043e\u0457\u0437\u0434 \u041c\u0430\u0448\u0438\u043d\u043e\u0431\u0443\u0434\u0456\u0432\u043d\u0438\u043a\u0456\u0432, \u0431. 12",
+        "RF, 164509, Arhangel\u02b9s\u02b9ka oblast\u02b9, m. Severodvins\u02b9k, proizd Masinobudivnikiv, b. 12",
+        "Russian Federation, 164509, Arkhangelsk region, Severodvinsk, Mashinobudivniki street, b. 12",
+        "\u0413\u043e\u0440\u043e\u0434 \u0421\u0435\u0432\u0435\u0440\u043e\u0434\u0432\u0438\u043d\u0441\u043a, \u0410\u0440\u0445\u0430\u043d\u0433\u0435\u043b\u044c\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0430\u044f \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0438\u044f",
+        "Gorod Severodvinsk, Arhangel\u02b9skaa oblast\u02b9, Rossijskaa Federacia",
+        "The city of Severodvinsk, Arkhangelsk region, Russian Federation",
+        "\u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0430\u044f \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0438\u044f, 164509,, \u0410\u0440\u0445\u0430\u043d\u0433\u0435\u043b\u044c\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0433. \u0421\u0435\u0432\u0435\u0440\u043e\u0434\u0432\u0438\u043d\u0441\u043a",
+        "Rossijskaa Federacia, 164509,, Arhangel\u02b9skaa oblast\u02b9, g. Severodvinsk",
+        "Russian Federation, 164509, Arkhangelsk region, Severodvinsk",
+        "Russia, 164509 Arkhangelskaya obl., Severodvinsk, pr. Mashinostroiteley, d. 12",
+        "163020, \u0410\u0440\u0445\u0430\u043d\u0433\u0435\u043b\u044c\u0441\u043a\u0430\u044f, \u0410\u0440\u0445\u0430\u043d\u0433\u0435\u043b\u044c\u0441\u043a, \u041a\u0440\u0430\u0441\u043d\u043e\u0444\u043b\u043e\u0446\u043a\u0430\u044f, \u0434\u043e\u043c 1",
+        "163020, Arhangel\u02b9skaa, Arhangel\u02b9sk, Krasnoflockaa, dom 1",
+        "163020, Arkhangelskaya, Arkhangelsk, Krasnoflotskaya, building 1",
+        "163020, \u0410\u0440\u0445\u0430\u043d\u0433\u0435\u043b\u044c\u0441\u043a\u0430\u044f, \u0410\u0440\u0445\u0430\u043d\u0433\u0435\u043b\u044c\u0441\u043a, \u041a\u0440\u0430\u0441\u043d\u043e\u0444\u043b\u043e\u0446\u043a\u0430\u044f, \u0434\u043e\u043c 1",
+        "163020, Arhangel\u02b9skaa, Arhangel\u02b9sk, Krasnoflockaa, dom 1",
+        "163020, Arkhangelskaya, Arkhangelsk, Krasnoflotskaya, building 1",
+        "12, proyezd Mashinostroiteley, Severodvinsk, Arkhangelskaya Oblast, 164509, RU",
+        "37 Atarbekova, Astrakhan, Astrakhanskaya Oblast, 414009, RU",
+        "\u0443\u043b. \u0413\u0435\u0440\u043e\u0435\u0432 \u0421\u0435\u0432\u0430\u0441\u0442\u043e\u043f\u043e\u043b\u044f, 13, \u0433.\u0421\u0435\u0432\u0430\u0441\u0442\u043e\u043f\u043e\u043b\u044c, 299001",
+        "ul. Geroev Sevastopola, 13, g.Sevastopol\u02b9, 299001",
+        "st. Heroev Sevastopol, 13, Sevastopol, 299001",
+        "249010, \u041e\u0411\u041b\u0410\u0421\u0422\u042c \u041a\u0410\u041b\u0423\u0416\u0421\u041a\u0410\u042f, \u0413\u041e\u0420\u041e\u0414 \u0411\u041e\u0420\u041e\u0412\u0421\u041a, \u0423\u041b\u0418\u0426\u0410 \u041b\u0415\u041d\u0418\u041d\u0410, 73",
+        "249010, OBLAST\u02b9 KALUZSKAA, GOROD BOROVSK, ULICA LENINA, 73",
+        "73 LENINA STREET, CITY OF BOROVSK, KALUZHSKA REGION, 249010",
+        "164509, \u0420\u043e\u0441\u0441\u0456\u0439\u0441\u044c\u043a\u0430 \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0456\u044f, \u0410\u0440\u0445\u0430\u043d\u0433\u0435\u043b\u044c\u0441\u044c\u043a\u0430 \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u043c. \u0421\u0454\u0432\u0454\u0440\u043e\u0434\u0432\u0438\u043d\u0441\u044c\u043a, \u043f\u0440-\u0434 \u041c\u0430\u0448\u0438\u043d\u043e\u0441\u0442\u0440\u043e\u0456\u0442\u0454\u043b\u0454\u0439, \u0431\u0443\u0434. 12",
+        "164509, Rossijs\u02b9ka Federacia, Arhangel\u02b9s\u02b9ka oblast\u02b9, m. Severodvins\u02b9k, pr-d Masinostroitelej, bud. 12",
+        "164509, Russian Federation, Arkhangelsk region, metro station Severodvinsk, Mashinostroiteley Ave., bld. 12"
+      ],
+      "countries": [
+        "RUS",
+        "UKR"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "d357238101a2bb02d97d5d77a56d9455",
+        "6c14405dec0a245d6acd6a3650d49de4",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "10a889609ddae6cc31773feebe48166b",
+        "feaa37a992b152dd64b445978aea652a",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "3322a755c28851ec06eda3280cc2a2b2",
+        "e6e4acebdea4e9e71af8d3586d34fcdd",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "b7d545bc2801c3a080bcfec866a9f27f",
+        "fd46028e08cc491708167e82d0cfbe93",
+        "66dfefb726ae00fde8f09f34c5578d35",
+        "b97ad5c858093e5227b2359a0078696f",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "a9a18eeb901e4376c912e95dc05ceb78",
+        "635021e4e01979cdf95fa7ee76501696",
+        "a4be698ea3263f7f7f3906d1c98cffc2",
+        "93de05b55a68cc964f34bbfc7ec7bc86",
+        "56bce0e008204712e302271ddd7b4fb1",
+        "4ff85397f508e4ff8e71c5ca5ea895dd",
+        "1b27af6fa4018a70fbce9ca6f316e21c",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "78b9eb45e7266680e1b9908b7f88dcb7"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "address|numericOptional|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "'<em>ZVEZDOCHKA</em>' <em>SHIPYARD</em>",
+          "Branch \"Astrakhan <em>Shipyard</em>\" JSC \"CS\" <em>Zvezdochka</em>\"",
+          "Branch \"Astrakhan <em>Shipyard</em>\" of JSC \"CS\" <em>Zvezdochka</em>\"",
+          "Arkhangelsk branch of the Krasnaya Kuznitsa <em>Shipyard</em> of JSC <em>Zvezdochka</em> CS",
+          "JOINT STOCK COMPANY SHIP REPAIR CENTER '<em>ZVEZDOCHKA</em>'"
+        ],
+        "address": [
+          "<em>12</em>, <em>proyezd</em> <em>Mashinostroiteley</em>, <em>Severodvinsk</em>, Arkhangelskaya <em>Oblast</em>, <em>164509</em>, Russia",
+          "<em>12</em>, <em>proyezd</em> <em>Mashinostroiteley</em>, <em>Severodvinsk</em>, Arkhangelskaya <em>Oblast</em>, <em>164509</em>, RU",
+          "Russian Federation, <em>164509</em>, <em>Arkhangelsk</em> <em>region</em>, <em>Severodvinsk</em>, Mashinobudivniki <em>street</em>, b. <em>12</em>",
+          "<em>164509</em>, Russian Federation, <em>Arkhangelsk</em> <em>region</em>, metro station <em>Severodvinsk</em>, <em>Mashinostroiteley</em> Ave., bld. <em>12</em>",
+          "<em>164509</em>, ARKHANGELSKAYA <em>REGION</em>, <em>SEVERODVINSK</em>, MACHINE BUILDING PR, building <em>12</em>"
+        ],
+        "country": [
+          "<em>RUS</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "'<em>ZVEZDOCHKA</em>' <em>SHIPYARD</em>",
+            "uploaded": "Zvezdochka Shipyard",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 1.0,
+              "lv": 0.5263157894736843,
+              "fz": 0.0,
+              "l1": 0.5263157894736842,
+              "l2": 0.5263157894736842
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "Branch \"Astrakhan <em>Shipyard</em>\" JSC \"CS\" <em>Zvezdochka</em>\"",
+            "uploaded": "Zvezdochka Shipyard",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.33333333333333326,
+              "lv": 0.6129032258064516,
+              "fz": 0.4418604651162791,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "Branch \"Astrakhan <em>Shipyard</em>\" of JSC \"CS\" <em>Zvezdochka</em>\"",
+            "uploaded": "Zvezdochka Shipyard",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2857142857142857,
+              "lv": 0.5846153846153845,
+              "fz": 0.4130434782608695,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "Arkhangelsk branch of the Krasnaya Kuznitsa <em>Shipyard</em> of JSC <em>Zvezdochka</em> CS",
+            "uploaded": "Zvezdochka Shipyard",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.18181818181818182,
+              "lv": 0.4130434782608695,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "JOINT STOCK COMPANY SHIP REPAIR CENTER '<em>ZVEZDOCHKA</em>'",
+            "uploaded": "Zvezdochka Shipyard",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.14285714285714285,
+              "lv": 0.4411764705882353,
+              "fz": 0.0,
+              "l1": 0.5263157894736842,
+              "l2": 0.631578947368421
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>12</em>, <em>proyezd</em> <em>Mashinostroiteley</em>, <em>Severodvinsk</em>, Arkhangelskaya <em>Oblast</em>, <em>164509</em>, Russia",
+            "uploaded": "12 Mashinostroiteley St. Severodvinsk Arkhangelsk Region",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>12</em>, <em>proyezd</em> <em>Mashinostroiteley</em>, <em>Severodvinsk</em>, Arkhangelskaya <em>Oblast</em>, <em>164509</em>, RU",
+            "uploaded": "12 Mashinostroiteley St. Severodvinsk Arkhangelsk Region",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "Russian Federation, <em>164509</em>, <em>Arkhangelsk</em> <em>region</em>, <em>Severodvinsk</em>, Mashinobudivniki <em>street</em>, b. <em>12</em>",
+            "uploaded": "12 Mashinostroiteley St. Severodvinsk Arkhangelsk Region",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>164509</em>, Russian Federation, <em>Arkhangelsk</em> <em>region</em>, metro station <em>Severodvinsk</em>, <em>Mashinostroiteley</em> Ave., bld. <em>12</em>",
+            "uploaded": "12 Mashinostroiteley St. Severodvinsk Arkhangelsk Region",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>164509</em>, ARKHANGELSKAYA <em>REGION</em>, <em>SEVERODVINSK</em>, MACHINE BUILDING PR, building <em>12</em>",
+            "uploaded": "12 Mashinostroiteley St. Severodvinsk Arkhangelsk Region",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    }
+  ]
+}

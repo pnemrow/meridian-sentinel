@@ -1,0 +1,812 @@
+{
+  "fields": {
+    "name": [
+      "Korea Mining Development Trading Corporation"
+    ],
+    "identifier": null,
+    "profile": null,
+    "country": [
+      "PRK"
+    ],
+    "address": [
+      "Central District Pyongyang"
+    ],
+    "date_of_birth": null,
+    "contact": null,
+    "type": null
+  },
+  "data": [
+    {
+      "profile": "corporate",
+      "score": 178.25583,
+      "entity_id": "743PV9hvik01AFVlWI-oTg",
+      "label": "Korea Mining Development Trading Corporation",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "9345",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "5492",
+          "type": "eu_fsd_id",
+          "label": "Eu Fsd Id"
+        },
+        {
+          "value": "KPe.001",
+          "type": "un_sanction_prn",
+          "label": "Un Sanction Prn"
+        },
+        {
+          "value": "KPe.014",
+          "type": "un_sanction_prn",
+          "label": "Un Sanction Prn"
+        },
+        {
+          "value": "EU.4187.20",
+          "type": "eu_sanction_rn",
+          "label": "Eu Sanction Rn"
+        },
+        {
+          "value": "EU.4060.7",
+          "type": "eu_sanction_rn",
+          "label": "Eu Sanction Rn"
+        },
+        {
+          "value": "10892",
+          "type": "gbr_hm_treasury_sanction_group_id",
+          "label": "Gbr Hm Treasury Sanction Group Id"
+        },
+        {
+          "value": "12857",
+          "type": "gbr_hm_treasury_sanction_group_id",
+          "label": "Gbr Hm Treasury Sanction Group Id"
+        },
+        {
+          "value": "DPR0153",
+          "type": "gbr_uk_sanctions_id",
+          "label": "Gbr Uk Sanctions Id"
+        },
+        {
+          "value": "DPR0157",
+          "type": "gbr_uk_sanctions_id",
+          "label": "Gbr Uk Sanctions Id"
+        },
+        {
+          "value": "2387",
+          "type": "fra_asset_freeze_id",
+          "label": "Fra Asset Freeze Id"
+        },
+        {
+          "value": "C324803",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "5c487ba256d67fc038671f43",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "1113",
+          "type": "aus_consolidated_sanctions_reference",
+          "label": "Aus Consolidated Sanctions Reference"
+        },
+        {
+          "value": "NK-ZSYwNUJeVRptthnMWmLtzs",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "24068",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "3563",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "5146476",
+          "type": "int_maritime_org_id",
+          "label": "Int Maritime Org Id"
+        },
+        {
+          "value": "1065",
+          "type": "ukr_fiu_list_number",
+          "label": "Ukr Fiu List Number"
+        },
+        {
+          "value": "North Korea Sanctions Regulations, sections 510.201 and 510.210",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "North Korea Sanctions Regulations section 510.214",
+          "type": "unknown",
+          "label": "Unknown"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "Central District, Pyongyang, Korea, North",
+        "Moscow, Russia",
+        "Damascus, Syria",
+        "Tehran, Iran",
+        "Beijing, China",
+        "\u5317\u671d\u9bae\u5e73\u58cc\u7279\u5225\u5e02\u4e2d\u533a\u57df",
+        "bei chao xian ping rang te bie shi zhong qu yu",
+        "North Korea Pyongyang Special City Central District",
+        "Songuja-dong, Mangyongdae-guyok, Pyongyang, North Korea.",
+        "Beijing, CN",
+        "Tehran, IR",
+        "Botonggang District, Pyongyang, KP"
+      ],
+      "countries": [
+        "CHN",
+        "IRN",
+        "RUS",
+        "SYR",
+        "PRK"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "e891ddfd16e870d626e5889b97f44e6a",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "10a889609ddae6cc31773feebe48166b",
+        "feaa37a992b152dd64b445978aea652a",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "ded706ef28cdc649b6fc5142bc542890",
+        "0484bc386504f01d0419413cbd580d9f",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "c10d482320f207d92aa814519c3bd686",
+        "bef2f30139ea37c723ecb0f953b5f024",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "ad6dc774c74b92159422deabc5aee661",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "03bd7413f14c9360a97ddbfc91af16b0",
+        "4ff85397f508e4ff8e71c5ca5ea895dd",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "3f9c42ef7e7111b86a3882b3eafe7993",
+        "f4ce10ac8bdc0bd9bcb31cb868b4b539"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "address|sub|phraseStripped|0",
+        "country|0",
+        "country|1",
+        "country|2",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Korea</em> <em>Mining</em> <em>Development</em> <em>Trading</em> <em>Corporation</em>",
+          "<em>Korea</em> <em>Mining</em> <em>Development</em> <em>Trading</em> <em>Corporation</em>(KOMID\uff09",
+          "<em>Korea</em> <em>Mining</em> <em>Development</em> <em>Trading</em> <em>Corporation</em>(KOMID)",
+          "<em>Korea</em> <em>Mining</em> <em>Development</em> <em>Trading</em> <em>Corporation</em> (KOMID)",
+          "NORTH <em>KOREAN</em> <em>MINING</em> <em>DEVELOPMENT</em> <em>TRADING</em> <em>CORPORATION</em>",
+          "<em>Korea</em> <em>Mining</em> <em>Development</em> <em>Trading</em> Corporation",
+          "<em>Korea</em> <em>Mining</em> <em>Development</em> <em>Trading</em> Corporation(KOMID\uff09",
+          "<em>Korea</em> <em>Mining</em> <em>Development</em> <em>Trading</em> Corporation(KOMID)",
+          "<em>Korea</em> <em>Mining</em> <em>Development</em> <em>Trading</em> Corporation (KOMID)",
+          "NORTH <em>KOREAN</em> <em>MINING</em> <em>DEVELOPMENT</em> <em>TRADING</em> CORPORATION"
+        ],
+        "address": [
+          "<em>Central</em> <em>District</em>, <em>Pyongyang</em>, Korea, North",
+          "North Korea <em>Pyongyang</em> Special City <em>Central</em> <em>District</em>",
+          "Botonggang <em>District</em>, <em>Pyongyang</em>, KP",
+          "Songuja-dong, Mangyongdae-guyok, <em>Pyongyang</em>, North Korea."
+        ],
+        "country": [
+          "<em>CHN</em>",
+          "<em>RUS</em>",
+          "<em>PRK</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Korea</em> <em>Mining</em> <em>Development</em> <em>Trading</em> <em>Corporation</em>",
+            "uploaded": "Korea Mining Development Trading Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3048773159297868,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Korea</em> <em>Mining</em> <em>Development</em> <em>Trading</em> <em>Corporation</em>(KOMID\uff09",
+            "uploaded": "Korea Mining Development Trading Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.24390185274382944,
+              "lv": 0.9263157894736842,
+              "fz": 0.8627450980392157,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Korea</em> <em>Mining</em> <em>Development</em> <em>Trading</em> <em>Corporation</em>(KOMID)",
+            "uploaded": "Korea Mining Development Trading Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.24390185274382944,
+              "lv": 0.9361702127659575,
+              "fz": 0.88,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Korea</em> <em>Mining</em> <em>Development</em> <em>Trading</em> <em>Corporation</em> (KOMID)",
+            "uploaded": "Korea Mining Development Trading Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.24390185274382944,
+              "lv": 0.9361702127659575,
+              "fz": 0.88,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "NORTH <em>KOREAN</em> <em>MINING</em> <em>DEVELOPMENT</em> <em>TRADING</em> <em>CORPORATION</em>",
+            "uploaded": "Korea Mining Development Trading Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.24390185274382944,
+              "lv": 0.8,
+              "fz": 0.6274509803921569,
+              "l1": 0.8636363636363636,
+              "l2": 0.8636363636363636
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Korea</em> <em>Mining</em> <em>Development</em> <em>Trading</em> Corporation",
+            "uploaded": "Korea Mining Development Trading Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3048773159297868,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Korea</em> <em>Mining</em> <em>Development</em> <em>Trading</em> Corporation(KOMID\uff09",
+            "uploaded": "Korea Mining Development Trading Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.24390185274382944,
+              "lv": 0.9263157894736842,
+              "fz": 0.8627450980392157,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Korea</em> <em>Mining</em> <em>Development</em> <em>Trading</em> Corporation(KOMID)",
+            "uploaded": "Korea Mining Development Trading Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.24390185274382944,
+              "lv": 0.9361702127659575,
+              "fz": 0.88,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Korea</em> <em>Mining</em> <em>Development</em> <em>Trading</em> Corporation (KOMID)",
+            "uploaded": "Korea Mining Development Trading Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.24390185274382944,
+              "lv": 0.9361702127659575,
+              "fz": 0.88,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "NORTH <em>KOREAN</em> <em>MINING</em> <em>DEVELOPMENT</em> <em>TRADING</em> CORPORATION",
+            "uploaded": "Korea Mining Development Trading Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.24390185274382944,
+              "lv": 0.8,
+              "fz": 0.6274509803921569,
+              "l1": 0.8636363636363636,
+              "l2": 0.8636363636363636
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>Central</em> <em>District</em>, <em>Pyongyang</em>, Korea, North",
+            "uploaded": "Central District Pyongyang",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.23529411764705882
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "North Korea <em>Pyongyang</em> Special City <em>Central</em> <em>District</em>",
+            "uploaded": "Central District Pyongyang",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.23529411764705882
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "Botonggang <em>District</em>, <em>Pyongyang</em>, KP",
+            "uploaded": "Central District Pyongyang",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.23529411764705882
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "Songuja-dong, Mangyongdae-guyok, <em>Pyongyang</em>, North Korea.",
+            "uploaded": "Central District Pyongyang",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.23529411764705882
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>PRK</em>",
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": "<em>CHN</em>",
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 163.37598,
+      "entity_id": "_wf6YQuvSBiGsO9DHRs3zw",
+      "label": "KOREA MINING DEVELOPMENT TRADING CORPORATION",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "DLJ7QVMWYGC6",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "Central District, Pyongyang, PRK"
+      ],
+      "countries": [
+        "PRK"
+      ],
+      "sources": [
+        "b97ad5c858093e5227b2359a0078696f"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "address|sub|phraseStripped|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>KOREA</em> <em>MINING</em> <em>DEVELOPMENT</em> <em>TRADING</em> <em>CORPORATION</em>",
+          "<em>KOREA</em> <em>MINING</em> <em>DEVELOPMENT</em> <em>TRADING</em> CORPORATION"
+        ],
+        "address": [
+          "<em>Central</em> <em>District</em>, <em>Pyongyang</em>, PRK"
+        ],
+        "country": [
+          "<em>PRK</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>KOREA</em> <em>MINING</em> <em>DEVELOPMENT</em> <em>TRADING</em> <em>CORPORATION</em>",
+            "uploaded": "Korea Mining Development Trading Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3048773159297868,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>KOREA</em> <em>MINING</em> <em>DEVELOPMENT</em> <em>TRADING</em> CORPORATION",
+            "uploaded": "Korea Mining Development Trading Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3048773159297868,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>Central</em> <em>District</em>, <em>Pyongyang</em>, PRK",
+            "uploaded": "Central District Pyongyang",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.23529411764705882
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>PRK</em>",
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    }
+  ]
+}

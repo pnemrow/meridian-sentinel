@@ -1,0 +1,1543 @@
+{
+  "fields": {
+    "name": [
+      "MiG Corporation"
+    ],
+    "identifier": null,
+    "profile": null,
+    "country": [
+      "RUS"
+    ],
+    "address": [
+      "6 Leningradskoe Highway Moscow"
+    ],
+    "date_of_birth": null,
+    "contact": null,
+    "type": null
+  },
+  "data": [
+    {
+      "profile": "corporate",
+      "score": 172.16905,
+      "entity_id": "qgjNlQSAvdiFrSXZLdzGYA",
+      "label": "\u0410\u041a\u0426\u0418\u041e\u041d\u0415\u0420\u041d\u041e\u0415 \u041e\u0411\u0429\u0415\u0421\u0422\u0412\u041e \"\u0420\u041e\u0421\u0421\u0418\u0419\u0421\u041a\u0410\u042f \u0421\u0410\u041c\u041e\u041b\u0415\u0422\u041e\u0421\u0422\u0420\u041e\u0418\u0422\u0415\u041b\u042c\u041d\u0410\u042f \u041a\u041e\u0420\u041f\u041e\u0420\u0410\u0426\u0418\u042f \"\u041c\u0418\u0413\"",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "7714733528",
+          "type": "ru_tin",
+          "label": "Ru Tin"
+        },
+        {
+          "value": "1087746371844",
+          "type": "ru_ogrn",
+          "label": "Ru Ogrn"
+        },
+        {
+          "value": "7714733528",
+          "type": "ru_inn",
+          "label": "Ru Inn"
+        },
+        {
+          "value": "1087746371844",
+          "type": "ru_registration_number",
+          "label": "Ru Registration Number"
+        },
+        {
+          "value": "C697277",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "894500KGFWIAJL9OJ540",
+          "type": "lei",
+          "label": "Lei"
+        },
+        {
+          "value": "ENT-61",
+          "type": "nzl_russia_sanctions_uid",
+          "label": "Nzl Russia Sanctions Uid"
+        },
+        {
+          "value": "NK-TuJ6aaD5f8upTYBtinNSdn",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "50656",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "27441",
+          "type": "ukr_sanctions_nazk_company_internal_id",
+          "label": "Ukr Sanctions Nazk Company Internal Id"
+        },
+        {
+          "value": "771401001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "997850001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "774301001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "52.\u041d\u0426.12.001.\u041b.000006.09.17",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "77.99.15.002.\u041b.000016.03.12",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0412\u041f-01-004132",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b\u041e-50-01-004967",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b\u041e-50-01-006108",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041c\u041e\u0421 03577 \u0412\u042d/2668",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041c\u0421\u041a 06396 \u0412\u042d",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "077 902",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "12302-\u0410\u0422",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "3520",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "525943001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "77-\u0411/05675",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041c002713\u0412\u0412\u0422-\u041e\u041f\u0418\u0420",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0410\u041d 77-000309",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b\u041e-52-01-006456",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041c\u0421\u041a 06248 \u0412\u041f",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u042d\u0425-01-004871",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "997450001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "0-0000521",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b\u041e-52-01-007028",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b\u041e-50-01-008686",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "42836853",
+          "type": "ru_okpo",
+          "label": "Ru Okpo"
+        },
+        {
+          "value": "45334000000",
+          "type": "ru_oktmo",
+          "label": "Ru Oktmo"
+        },
+        {
+          "value": "\u041f\u0420\u0414 7704210",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "125284, \u0433 \u041c\u043e\u0441\u043a\u0432\u0430, \u043f\u0440\u043e\u0435\u0437\u0434 \u0411\u043e\u0442\u043a\u0438\u043d\u0441\u043a\u0438\u0439 1-\u0439, \u0434\u043e\u043c 7",
+        "125284, g Moskva, proezd Botkinskij 1-j, dom 7",
+        "125284, Moscow, 1st Botkinsky lane, building 7",
+        "125284, \u041c\u043e\u0441\u043a\u0432\u0430, \u0411\u043e\u0442\u043a\u0438\u043d\u0441\u043a\u0438\u0439 1-\u0439, \u0434\u043e\u043c 7",
+        "125284, Moskva, Botkinskij 1-j, dom 7",
+        "125284, Moscow, Botkinsky 1st, building 7",
+        "125171, \u0420\u041e\u0421\u0421\u0418\u042f, \u041c\u041e\u0421\u041a\u0412\u0410, \u041b\u0415\u041d\u0418\u041d\u0413\u0420\u0410\u0414\u0421\u041a\u041e\u0415 \u0428\u041e\u0421\u0421\u0415, \u0414. 6, \u0421\u0422\u0420. 1",
+        "125171, ROSSIA, MOSKVA, LENINGRADSKOE SOSSE, D. 6, STR. 1",
+        "125171, RUSSIA, MOSCOW, LENINGRADSKOE SHOSSE, D. 6, STR. 1",
+        "125171, Moscow, Leningradskoe Shosse, 6, Building 1, Russian Federation",
+        "1-st Botkinsky drive, 7, Moscow, RU",
+        "125284, \u0420\u041e\u0421\u0421\u0418\u042f, \u041c\u041e\u0421\u041a\u0412\u0410, 1-\u0419 \u0411\u041e\u0422\u041a\u0418\u041d\u0421\u041a\u0418\u0419 \u041f\u0420-\u0414, 7,",
+        "125284, ROSSIA, MOSKVA, 1-J BOTKINSKIJ PR-D, 7,",
+        "125284, RUSSIA, MOSCOW, 1ST BOTKINSKY PR-D, 7,",
+        "No38, SAGAWA RD., DAGON TOWNSHIP, YANGON UNION OF MYANMAR",
+        "DR. JOSE P. RIZAN MARG, DIPLOMATIC ENCLAVE, CHANAKYA PURI, NEW DELHI-110021",
+        "125284, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430, 1-\u0439 \u0411\u043e\u0442\u043a\u0438\u043d\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0435\u0437\u0434, \u0434. 7, \u0425\u043e\u0437\u044f\u0439\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0435 \u043e\u0431\u0449\u0435\u0441\u0442\u0432\u043e, \u0432 \u043a\u043e\u0442\u043e\u0440\u043e\u043c \u041e\u0442\u043a\u0440\u044b\u0442\u043e\u0435 \u0430\u043a\u0446\u0438\u043e\u043d\u0435\u0440\u043d\u043e\u0435 \u043e\u0431\u0449\u0435\u0441\u0442\u0432\u043e \u00ab\u041e\u0431\u044a\u0435\u0434\u0438\u043d\u0435\u043d\u043d\u0430\u044f \u0430\u0432\u0438\u0430\u0441\u0442\u0440\u043e\u0438\u0442\u0435\u043b\u044c\u043d\u0430\u044f \u043a\u043e\u0440\u043f\u043e\u0440\u0430\u0446\u0438\u044f\u00bb \u0438\u043c\u0435\u0435\u0442 \u0432 \u0441\u0438\u043b\u0443 \u0441\u0432\u043e\u0435\u0433\u043e \u0443\u0447\u0430\u0441\u0442\u0438\u044f \u0431\u043e\u043b\u0435\u0435 \u0447\u0435\u043c 50% \u043e\u0431\u0449\u0435\u0433\u043e \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u0430 \u0433\u043e\u043b\u043e\u0441\u043e\u0432, \u043f\u0440\u0438\u0445\u043e\u0434\u044f\u0449\u0438\u0445\u0441\u044f \u043d\u0430 \u0433\u043e\u043b\u043e\u0441\u0443\u044e\u0449\u0438\u0435 \u0430\u043a\u0446\u0438\u0438 \u0432 \u0443\u0441\u0442\u0430\u0432\u043d\u043e\u043c \u043a\u0430\u043f\u0438\u0442\u0430\u043b\u0435",
+        "125284, g. Moskva, 1-j Botkinskij proezd, d. 7, Hozajstvennoe obsestvo, v kotorom Otkrytoe akcionernoe obsestvo \u00abOb\u02baedinennaa aviastroitel\u02b9naa korporacia\u00bb imeet v silu svoego ucastia bolee cem 50% obsego kolicestva golosov, prihodasihsa na golosuusie akcii v ustavnom kapitale",
+        "125284, Moscow, 1st Botkinsky proezd, 7, Business entity in which the Open Joint Stock Company United Aircraft Corporation, by virtue of its participation, has more than 50% of the total number of votes attributable to voting shares in the authorized capital",
+        "125171, \u0413.\u041c\u041e\u0421\u041a\u0412\u0410, \u0428. \u041b\u0415\u041d\u0418\u041d\u0413\u0420\u0410\u0414\u0421\u041a\u041e\u0415, \u0414. 6, \u0421\u0422\u0420. 1",
+        "125171, G.MOSKVA, S. LENINGRADSKOE, D. 6, STR. 1",
+        "125171, G. MOSCOW, Sh. LENINGRADSKOE, D. 6, STR. 1",
+        "UL. W. RZYMOWSKIEGO 53, OFFICE 319 02-697 WARZAW, POLAND",
+        "MAZZEH (EAST), AL FARABI STR., BLD. 119/02, DAMASCUS, SYRIAN ARAB REPUBLIC",
+        "6 (1) Leningradskoye Highway, Moscow, 125171, RU",
+        "7 1-y Botkinskiy Passage, Moscow, 125284, RU",
+        "\u0420\u0424, \u043c. \u041c\u043e\u0441\u043a\u0432\u0430, \u043f\u0440. 1-\u0438\u0439 \u0411\u043e\u0442\u043a\u0456\u043d\u0441\u044c\u043a\u0438\u0439, \u0431. 7",
+        "RF, m. Moskva, pr. 1-ij Botkins\u02b9kij, b. 7",
+        "Russian Federation, Moscow, 1st Botkinsky Ave., bldg. 7",
+        "DIPLOMATIC AREA, STREET No20, HOUSE No15 SANA`A, REPUBLIC OF YEMEN"
+      ],
+      "countries": [
+        "RUS",
+        "DZA",
+        "MMR",
+        "POL",
+        "SYR",
+        "YEM"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "d357238101a2bb02d97d5d77a56d9455",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "6c14405dec0a245d6acd6a3650d49de4",
+        "10a889609ddae6cc31773feebe48166b",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "ded706ef28cdc649b6fc5142bc542890",
+        "3322a755c28851ec06eda3280cc2a2b2",
+        "e6e4acebdea4e9e71af8d3586d34fcdd",
+        "fd46028e08cc491708167e82d0cfbe93",
+        "66dfefb726ae00fde8f09f34c5578d35",
+        "a9a18eeb901e4376c912e95dc05ceb78",
+        "635021e4e01979cdf95fa7ee76501696",
+        "a4be698ea3263f7f7f3906d1c98cffc2",
+        "93de05b55a68cc964f34bbfc7ec7bc86",
+        "56bce0e008204712e302271ddd7b4fb1",
+        "1b27af6fa4018a70fbce9ca6f316e21c",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "b812677c0a32a1746b3ac741c7b97ae0",
+        "78b9eb45e7266680e1b9908b7f88dcb7"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "address|numericOptional|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "country|23",
+        "country|26",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "JOINT STOCK COMPANY RUSSIAN AIRCRAFT BUILDING <em>CORPORATION</em> <em>MIG</em>",
+          "Russian Aircraft <em>Corporation</em> <em>MiG</em>",
+          "JSC Russian Aircraft <em>Corporation</em> <em>MiG</em>",
+          "Open Joint Stock Company Russian Aircraft <em>Corporation</em> <em>MiG</em>",
+          "\"Russian Aircraft Construction <em>Corporation</em> \"<em>Mig</em>\"",
+          "AKCIONERNOE OBSESTVO \"ROSSIJSKAA SAMOLETOSTROITEL\u02b9NAA KORPORACIA \"<em>MIG</em>\"",
+          "JOINT STOCK COMPANY RUSSIAN AIRCRAFT BUILDING CORPORATION <em>MIG</em>",
+          "AO \"RSK \"<em>MIG</em>\"",
+          "Russian Aircraft Corporation <em>MiG</em>",
+          "JSC Russian Aircraft Corporation <em>MiG</em>"
+        ],
+        "address": [
+          "<em>125171</em>, RUSSIA, <em>MOSCOW</em>, <em>LENINGRADSKOE</em> <em>SHOSSE</em>, D. <em>6</em>, STR. 1",
+          "<em>125171</em>, <em>Moscow</em>, <em>Leningradskoe</em> <em>Shosse</em>, <em>6</em>, Building 1, Russian Federation",
+          "<em>6</em> (1) <em>Leningradskoye</em> <em>Highway</em>, <em>Moscow</em>, <em>125171</em>, RU",
+          "<em>125171</em>, ROSSIA, <em>MOSKVA</em>, <em>LENINGRADSKOE</em> SOSSE, D. <em>6</em>, STR. 1",
+          "<em>125171</em>, G. <em>MOSCOW</em>, Sh. <em>LENINGRADSKOE</em>, D. <em>6</em>, STR. 1"
+        ],
+        "country": [
+          "<em>RUS</em>",
+          "<em>MMR</em>",
+          "<em>SYR</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "JOINT STOCK COMPANY RUSSIAN AIRCRAFT BUILDING <em>CORPORATION</em> <em>MIG</em>",
+            "uploaded": "MiG Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.1346186455814445,
+              "lv": 0.39473684210526316,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Russian Aircraft <em>Corporation</em> <em>MiG</em>",
+            "uploaded": "MiG Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.269237291162889,
+              "lv": 0.6382978723404256,
+              "fz": 0.46875,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "JSC Russian Aircraft <em>Corporation</em> <em>MiG</em>",
+            "uploaded": "MiG Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2153898329303112,
+              "lv": 0.5882352941176471,
+              "fz": 0.41666666666666663,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Open Joint Stock Company Russian Aircraft <em>Corporation</em> <em>MiG</em>",
+            "uploaded": "MiG Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.1346186455814445,
+              "lv": 0.41666666666666663,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "\"Russian Aircraft Construction <em>Corporation</em> \"<em>Mig</em>\"",
+            "uploaded": "MiG Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2153898329303112,
+              "lv": 0.4,
+              "fz": 0.0,
+              "l1": 0.7333333333333333,
+              "l2": 0.7333333333333333
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "AKCIONERNOE OBSESTVO \"ROSSIJSKAA SAMOLETOSTROITEL\u02b9NAA KORPORACIA \"<em>MIG</em>\"",
+            "uploaded": "MiG Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.16666666666666663,
+              "lv": 0.30487804878048785,
+              "fz": 0.0,
+              "l1": 0.4,
+              "l2": 0.6666666666666666
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "JOINT STOCK COMPANY RUSSIAN AIRCRAFT BUILDING CORPORATION <em>MIG</em>",
+            "uploaded": "MiG Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.125,
+              "lv": 0.39473684210526316,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "AO \"RSK \"<em>MIG</em>\"",
+            "uploaded": "MiG Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.33333333333333326,
+              "lv": 0.52,
+              "fz": 0.0,
+              "l1": 0.2,
+              "l2": 0.2
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Russian Aircraft Corporation <em>MiG</em>",
+            "uploaded": "MiG Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.25,
+              "lv": 0.6382978723404256,
+              "fz": 0.46875,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "JSC Russian Aircraft Corporation <em>MiG</em>",
+            "uploaded": "MiG Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2,
+              "lv": 0.5882352941176471,
+              "fz": 0.41666666666666663,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>125171</em>, RUSSIA, <em>MOSCOW</em>, <em>LENINGRADSKOE</em> <em>SHOSSE</em>, D. <em>6</em>, STR. 1",
+            "uploaded": "6 Leningradskoe Highway Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>125171</em>, <em>Moscow</em>, <em>Leningradskoe</em> <em>Shosse</em>, <em>6</em>, Building 1, Russian Federation",
+            "uploaded": "6 Leningradskoe Highway Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>6</em> (1) <em>Leningradskoye</em> <em>Highway</em>, <em>Moscow</em>, <em>125171</em>, RU",
+            "uploaded": "6 Leningradskoe Highway Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>125171</em>, ROSSIA, <em>MOSKVA</em>, <em>LENINGRADSKOE</em> SOSSE, D. <em>6</em>, STR. 1",
+            "uploaded": "6 Leningradskoe Highway Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>125171</em>, G. <em>MOSCOW</em>, Sh. <em>LENINGRADSKOE</em>, D. <em>6</em>, STR. 1",
+            "uploaded": "6 Leningradskoe Highway Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8823529411764706
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": "<em>MMR</em>",
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>SYR</em>",
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 92.84047,
+      "entity_id": "baVuAtK8xhrCw9t75-id9g",
+      "label": "NPO BAZALT",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "16862",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "163241",
+          "type": "eu_fsd_id",
+          "label": "Eu Fsd Id"
+        },
+        {
+          "value": "7719830028",
+          "type": "ru_inn",
+          "label": "Ru Inn"
+        },
+        {
+          "value": "1127747209501",
+          "type": "ru_ogrn",
+          "label": "Ru Ogrn"
+        },
+        {
+          "value": "7339",
+          "type": "fra_asset_freeze_id",
+          "label": "Fra Asset Freeze Id"
+        },
+        {
+          "value": "EU.11344.18",
+          "type": "eu_sanction_rn",
+          "label": "Eu Sanction Rn"
+        },
+        {
+          "value": "7719030487",
+          "type": "ru_inn",
+          "label": "Ru Inn"
+        },
+        {
+          "value": "7719030487",
+          "type": "ru_tin",
+          "label": "Ru Tin"
+        },
+        {
+          "value": "1027700020677",
+          "type": "ru_ogrn",
+          "label": "Ru Ogrn"
+        },
+        {
+          "value": "5c4879b656d67fc038670c54",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "ENT-499",
+          "type": "nzl_russia_sanctions_uid",
+          "label": "Nzl Russia Sanctions Uid"
+        },
+        {
+          "value": "29470",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "72200",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "C830485",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "771901001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "\u0424\u0421-44-01-000129-12",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "77.99.15.002.\u041b.000194.06.09",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "044 00038",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b\u041e-44-01-000798 \u043c\u0435\u0434",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "002250 \u0411\u041f-\u041e\u041f\u0423",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "0-0000291",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041a\u041e\u0421 53224 \u0412\u042d",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "169875",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "774850001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "\u041b041-00110-77/00383092",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b041-01187-71/00563138",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "77-\u0411/02884",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b\u041e-44-01-000798",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0413\u0422 0072896 1925",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b\u041e-71-01-002116",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "006.647",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "Ukraine-/Russia-Related Sanctions Regulations, 31 CFR 589.201 and/or 589.209",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "770101001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "1127747209501 (Russia)",
+          "type": "unknown_commercial_register_id",
+          "label": "Unknown Commercial Register Id"
+        },
+        {
+          "value": "11481184",
+          "type": "ru_okpo",
+          "label": "Ru Okpo"
+        },
+        {
+          "value": "45314000000",
+          "type": "ru_oktmo",
+          "label": "Ru Oktmo"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "Velyaminovskaya St., 32 Moscow 105318 RUSSIAN FEDERATION",
+        "32 Velyaminovskaya, Moscow, 105318, RU",
+        "300004, \u0422\u0423\u041b\u042c\u0421\u041a\u0410\u042f \u041e\u0411\u041b\u0410\u0421\u0422\u042c, \u0413. \u0422\u0423\u041b\u0410, \u0423\u041b. \u0429\u0415\u0413\u041b\u041e\u0412\u0421\u041a\u0410\u042f \u0417\u0410\u0421\u0415\u041a\u0410, \u0414.53",
+        "300004, TUL\u02b9SKAA OBLAST\u02b9, G. TULA, UL. SEGLOVSKAA ZASEKA, D.53",
+        "300004, TULA REGION, TULA, ST. SHCHEGLOVSKAYA ZASEKA, 53",
+        "157800, \u041e\u0411\u041b\u0410\u0421\u0422\u042c \u041a\u041e\u0421\u0422\u0420\u041e\u041c\u0421\u041a\u0410\u042f, \u0413\u041e\u0420\u041e\u0414 \u041d\u0415\u0420\u0415\u0425\u0422\u0410, \u041f\u041b\u041e\u0429\u0410\u0414\u042c \u041c\u0415\u0422\u0410\u041b\u041b\u0418\u0421\u0422\u041e\u0412, 1",
+        "157800, OBLAST\u02b9 KOSTROMSKAA, GOROD NEREHTA, PLOSAD\u02b9 METALLISTOV, 1",
+        "METALLISTOV SQUARE, 1, CITY OF NEREHTA, KOSTROM REGION, 157800",
+        "141292, \u041c\u041e\u0421\u041a\u041e\u0412\u0421\u041a\u0410\u042f \u041e\u0411\u041b\u0410\u0421\u0422\u042c, \u0413. \u041a\u0420\u0410\u0421\u041d\u041e\u0410\u0420\u041c\u0415\u0419\u0421\u041a, \u0423\u041b. \u0414\u0410\u0427\u041d\u0410\u042f, \u0414.2\"\u0410\"",
+        "141292, MOSKOVSKAA OBLAST\u02b9, G. KRASNOARMEJSK, UL. DACNAA, D.2\"A\"",
+        "141292, MOSCOW REGION, G. KRASNOARMEYSK, UL. DACHNAYA, D.2\"A\"",
+        "105318, \u0413\u041e\u0420\u041e\u0414 \u041c\u041e\u0421\u041a\u0412\u0410, \u0423\u041b\u0418\u0426\u0410 \u0412\u0415\u041b\u042c\u042f\u041c\u0418\u041d\u041e\u0412\u0421\u041a\u0410\u042f, 32",
+        "105318, GOROD MOSKVA, ULICA VEL\u02b9AMINOVSKAA, 32",
+        "105318, MOSCOW, VELYAMINOVSKAYA STREET, 32",
+        "7 (499) 369-01-22",
+        "Telephone",
+        "105318, \u0433 \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b\u0438\u0446\u0430 \u0412\u0435\u043b\u044c\u044f\u043c\u0438\u043d\u043e\u0432\u0441\u043a\u0430\u044f, 32",
+        "105318, g Moskva, ulica Vel\u02b9aminovskaa, 32",
+        "105318, Moscow, Velyaminovskaya street, 32",
+        "32 Velyaminovskaya, Moscow, 105318, RU",
+        "2A Dachnaya Str., Krasnoarmeysk, 141292, RU"
+      ],
+      "countries": [
+        "RUS"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "d357238101a2bb02d97d5d77a56d9455",
+        "6c14405dec0a245d6acd6a3650d49de4",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "ded706ef28cdc649b6fc5142bc542890",
+        "3322a755c28851ec06eda3280cc2a2b2",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "ad6dc774c74b92159422deabc5aee661",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "a9a18eeb901e4376c912e95dc05ceb78",
+        "635021e4e01979cdf95fa7ee76501696",
+        "3f92da650f5a32cf9c50c11333e9b7cb",
+        "a4be698ea3263f7f7f3906d1c98cffc2",
+        "93de05b55a68cc964f34bbfc7ec7bc86",
+        "56bce0e008204712e302271ddd7b4fb1",
+        "f4ce10ac8bdc0bd9bcb31cb868b4b539"
+      ],
+      "typed_matched_queries": [
+        "address|geoCity|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "FEDERAL STATE UNITARY ENTERPRISE RUSSIAN AIRCRAFT <em>CORPORATION</em> <em>MIG</em>",
+          "FEDERAL\u02b9NOE GOSUDARSTYVENNOE UNITARNOE PREDPRIATIE \"ROSSIJSKAA SAMOLETOSTROITEL\u02b9NAA KORPORACIA \"<em>MIG</em>\"",
+          "FEDERAL STATE UNITARY ENTERPRISE RUSSIAN AIRCRAFT CORPORATION <em>MIG</em>"
+        ],
+        "address": [
+          "105318, GOROD <em>MOSKVA</em>, ULICA VEL\u02b9AMINOVSKAA, 32",
+          "105318, g <em>Moskva</em>, ulica Vel\u02b9aminovskaa, 32",
+          "Velyaminovskaya St., 32 <em>Moscow</em> 105318 RUSSIAN FEDERATION",
+          "32 Velyaminovskaya, <em>Moscow</em>, 105318, RU",
+          "141292, <em>MOSCOW</em> REGION, G. KRASNOARMEYSK, UL. DACHNAYA, D.2\"A\""
+        ],
+        "country": [
+          "<em>RUS</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "FEDERAL STATE UNITARY ENTERPRISE RUSSIAN AIRCRAFT <em>CORPORATION</em> <em>MIG</em>",
+            "uploaded": "MiG Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.1346186455814445,
+              "lv": 0.375,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "FEDERAL\u02b9NOE GOSUDARSTYVENNOE UNITARNOE PREDPRIATIE \"ROSSIJSKAA SAMOLETOSTROITEL\u02b9NAA KORPORACIA \"<em>MIG</em>\"",
+            "uploaded": "MiG Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.125,
+              "lv": 0.2232142857142857,
+              "fz": 0.0,
+              "l1": 0.4,
+              "l2": 0.7333333333333333
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "FEDERAL STATE UNITARY ENTERPRISE RUSSIAN AIRCRAFT CORPORATION <em>MIG</em>",
+            "uploaded": "MiG Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.125,
+              "lv": 0.375,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "105318, GOROD <em>MOSKVA</em>, ULICA VEL\u02b9AMINOVSKAA, 32",
+            "uploaded": "6 Leningradskoe Highway Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.058823529411764705
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "105318, g <em>Moskva</em>, ulica Vel\u02b9aminovskaa, 32",
+            "uploaded": "6 Leningradskoe Highway Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.058823529411764705
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "Velyaminovskaya St., 32 <em>Moscow</em> 105318 RUSSIAN FEDERATION",
+            "uploaded": "6 Leningradskoe Highway Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.058823529411764705
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "32 Velyaminovskaya, <em>Moscow</em>, 105318, RU",
+            "uploaded": "6 Leningradskoe Highway Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.058823529411764705
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "141292, <em>MOSCOW</em> REGION, G. KRASNOARMEYSK, UL. DACHNAYA, D.2\"A\"",
+            "uploaded": "6 Leningradskoe Highway Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.058823529411764705
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    }
+  ]
+}

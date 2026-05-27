@@ -1,0 +1,754 @@
+{
+  "fields": {
+    "name": [
+      "Molot-Oruzhie"
+    ],
+    "identifier": null,
+    "profile": null,
+    "country": [
+      "RUS"
+    ],
+    "address": [
+      "135 Lenina St. Vyatskie Polyany Kirov Region"
+    ],
+    "date_of_birth": null,
+    "contact": null,
+    "type": null
+  },
+  "data": [
+    {
+      "profile": "corporate",
+      "score": 230.06638,
+      "entity_id": "fgqxIqm6DgNRyri_hjWioA",
+      "label": "MOLOT-ORUZHIE, OOO",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "4307012765",
+          "type": "ru_inn",
+          "label": "Ru Inn"
+        },
+        {
+          "value": "1094307000633",
+          "type": "ru_ogrn",
+          "label": "Ru Ogrn"
+        },
+        {
+          "value": "22406",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "175404",
+          "type": "eu_fsd_id",
+          "label": "Eu Fsd Id"
+        },
+        {
+          "value": "8091",
+          "type": "fra_asset_freeze_id",
+          "label": "Fra Asset Freeze Id"
+        },
+        {
+          "value": "4307012765",
+          "type": "ru_tin",
+          "label": "Ru Tin"
+        },
+        {
+          "value": "EU.13099.1",
+          "type": "eu_sanction_rn",
+          "label": "Eu Sanction Rn"
+        },
+        {
+          "value": "1094307000633",
+          "type": "ru_registration_number",
+          "label": "Ru Registration Number"
+        },
+        {
+          "value": "C904773",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "5c487db3a18bbce4b8f1546e",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "NK-mfmGT7gfxSBpmGkk82w3EG",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "93417",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "13000",
+          "type": "ukr_sanctions_nazk_company_internal_id",
+          "label": "Ukr Sanctions Nazk Company Internal Id"
+        },
+        {
+          "value": "60615883",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "1094307000633",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "4307012765",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "430701001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "43.\u041e\u0426.01.002.\u041b.000003.10.15",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "43/43-04-53",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0412\u0425-47 801612 \u041f\u0420\u0415\u0414\u041e\u0421\u0422\u0410\u0412",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0410\u041d 43-000247",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "0008532",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041a\u0418\u0420 01951 \u0412\u042d",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "13540-\u041f\u041e",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "43-\u0410/00003",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "43-\u0411/00107",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "0008534",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b059-00106-43/00048149",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "16",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "Ukraine-/Russia-Related Sanctions Regulations, 31 CFR 589.201 and/or 589.209",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "0008530",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b009-00102-77/00099450",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041b008-00102-77/00615730",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "1094307000633 (Russia)",
+          "type": "unknown_commercial_register_id",
+          "label": "Unknown Commercial Register Id"
+        },
+        {
+          "value": "33704000001",
+          "type": "ru_oktmo",
+          "label": "Ru Oktmo"
+        },
+        {
+          "value": "4307012765 (Russia)",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "60615883",
+          "type": "ru_okpo",
+          "label": "Ru Okpo"
+        },
+        {
+          "value": "CE97D1ZRTNN4",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "135 ul. Lenina, Vyatskie Polyany, Kirov Obl., 612960, Russia",
+        "\u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0438\u0440\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0433. \u0412\u044f\u0442\u0441\u043a\u0438\u0435 \u041f\u043e\u043b\u044f\u043d\u044b, \u0443\u043b. \u041b\u0435\u043d\u0438\u043d\u0430, \u0434.135",
+        "Rossia, Kirovskaa oblast\u02b9, g. Vatskie Polany, ul. Lenina, d.135",
+        "Russia, Kirov region, Vyatskie Polyany, ul. Lenina, d.135",
+        "612960 \u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0438\u0440\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0433\u043e\u0440\u043e\u0434 \u0412\u044f\u0442\u0441\u043a\u0438\u0435 \u041f\u043e\u043b\u044f\u043d\u044b, \u041b\u0435\u043d\u0438\u043d\u0430 135612960 \u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0438\u0440\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0433\u043e\u0440\u043e\u0434 \u0412\u044f\u0442\u0441\u043a\u0438\u0435 \u041f\u043e\u043b\u044f\u043d\u044b, \u041b\u0435\u043d\u0438\u043d\u0430 135612960 \u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0438\u0440\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0433\u043e\u0440\u043e\u0434 \u0412\u044f\u0442\u0441\u043a\u0438\u0435 \u041f\u043e\u043b\u044f\u043d\u044b, \u041b\u0435\u043d\u0438\u043d\u0430 135",
+        "612960 Rossia, Kirovskaa oblast\u02b9, gorod Vatskie Polany, Lenina 135612960 Rossia, Kirovskaa oblast\u02b9, gorod Vatskie Polany, Lenina 135612960 Rossia, Kirovskaa oblast\u02b9, gorod Vatskie Polany, Lenina 135",
+        "612960 Russia, Kirov region, city of Vyatskie Polyany, Lenina 135612960 Russia, Kirov region, city of Vyatskie Polyany, Lenina 135612960 Russia, Kirov region, city of Vyatskie Polyany, Lenina 135",
+        "\u0420\u043e\u0441\u0456\u0439\u0441\u044c\u043a\u0430 \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0456\u044f, 612960, \u041a\u0456\u0440\u043e\u0432\u0441\u044c\u043a\u0430 \u043e\u0431\u043b., \u043c. \u0412'\u044f\u0442\u0441\u044c\u043a\u0456 \u041f\u043e\u043b\u044f\u043d\u0438, \u0432\u0443\u043b. \u041b\u0435\u043d\u0456\u043d\u0430, \u0431\u0443\u0434. 135 (\u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0430\u044f \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0438\u044f, 612960, \u041a\u0438\u0440\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b., \u0433. \u0412\u044f\u0442\u0441\u043a\u0438\u0435 \u041f\u043e\u043b\u044f\u043d\u044b, \u0443\u043b. \u041b\u0435\u043d\u0438\u043d\u0430, \u0434.\u00a0135)",
+        "Rosijs\u02b9ka Federacia, 612960, Kirovs\u02b9ka obl., m. V'ats\u02b9ki Polani, vul. Lenina, bud. 135 (Rossijskaa Federacia, 612960, Kirovskaa obl., g. Vatskie Polany, ul. Lenina, d.\u00a0135)",
+        "Russian Federation, 612960, Kirov region, Vyatski Polyany, str. Lenina, bldg. 135 (Russian Federation, 612960, Kirov Region, Vyatskie Polyany, Lenin Street, 135)",
+        "135 Lenina Str., Vyatskie Polyany, Kirov Oblast (Region), 612960, RU"
+      ],
+      "countries": [
+        "RUS",
+        "USA"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "6c14405dec0a245d6acd6a3650d49de4",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "10a889609ddae6cc31773feebe48166b",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "ded706ef28cdc649b6fc5142bc542890",
+        "3322a755c28851ec06eda3280cc2a2b2",
+        "e6e4acebdea4e9e71af8d3586d34fcdd",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "ad6dc774c74b92159422deabc5aee661",
+        "b97ad5c858093e5227b2359a0078696f",
+        "a9a18eeb901e4376c912e95dc05ceb78",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "635021e4e01979cdf95fa7ee76501696",
+        "3f92da650f5a32cf9c50c11333e9b7cb",
+        "ac1fa195f9cd4ccf657bca3c6db0bb19",
+        "a4be698ea3263f7f7f3906d1c98cffc2",
+        "93de05b55a68cc964f34bbfc7ec7bc86",
+        "56bce0e008204712e302271ddd7b4fb1",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "f4ce10ac8bdc0bd9bcb31cb868b4b539"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "address|numericOptional|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "address|sub|phraseStripped|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          " LLC \u201c<em>Molot</em>-<em>Oruzhie</em>\u201d  ou OOO \u201c<em>Molot</em>-<em>Oruzie</em>\u201d  ou OPJC \u201cVyatsko-Polyanskiy Machine-Buildingplant \u2018<em>Molot</em>\u2019",
+          "<em>MOLOT</em>-<em>ORUZHIE</em>, OOO",
+          "OBSHCHESTVO S OGRANICHENNOI OTVETSTVENNOSTYU '<em>MOLOT</em>-<em>ORUZHIE</em>'",
+          "Limited Liability Company \u201c<em>Molot</em>-<em>Oruzhie</em>\u201d",
+          "\u00bb<em>Molot</em>-<em>Oruzhie</em>\u00ab Korl\u00e1tolt Felel\u0151ss\u00e9g\u0171 T\u00e1rsas\u00e1g"
+        ],
+        "address": [
+          "<em>135</em> <em>Lenina</em> <em>Str</em>., <em>Vyatskie</em> <em>Polyany</em>, <em>Kirov</em> <em>Oblast</em> (<em>Region</em>), <em>612960</em>, RU",
+          "Russian Federation, <em>612960</em>, <em>Kirov</em> <em>region</em>, <em>Vyatski</em> <em>Polyany</em>, <em>str</em>. <em>Lenina</em>, bldg. <em>135</em> (Russian",
+          " Federation, <em>612960</em>, <em>Kirov</em> <em>Region</em>, <em>Vyatskie</em> <em>Polyany</em>, <em>Lenin</em> <em>Street</em>, <em>135</em>)",
+          "<em>135</em> ul. <em>Lenina</em>, <em>Vyatskie</em> <em>Polyany</em>, <em>Kirov</em> Obl., <em>612960</em>, Russia",
+          " Federacia, <em>612960</em>, Kirovskaa obl., g. Vatskie <em>Polany</em>, ul. <em>Lenina</em>, d.\u00a0<em>135</em>)"
+        ],
+        "country": [
+          "<em>RUS</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": " LLC \u201c<em>Molot</em>-<em>Oruzhie</em>\u201d  ou OOO \u201c<em>Molot</em>-<em>Oruzie</em>\u201d  ou OPJC \u201cVyatsko-Polyanskiy Machine-Buildingplant \u2018<em>Molot</em>\u2019",
+            "uploaded": "Molot\\-Oruzhie",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.0,
+              "lv": 0.2321428571428571,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>MOLOT</em>-<em>ORUZHIE</em>, OOO",
+            "uploaded": "Molot\\-Oruzhie",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.6666666666666665,
+              "lv": 0.8666666666666667,
+              "fz": 0.7647058823529411,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "OBSHCHESTVO S OGRANICHENNOI OTVETSTVENNOSTYU '<em>MOLOT</em>-<em>ORUZHIE</em>'",
+            "uploaded": "Molot\\-Oruzhie",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.33333333333333326,
+              "lv": 0.3661971830985915,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "Limited Liability Company \u201c<em>Molot</em>-<em>Oruzhie</em>\u201d",
+            "uploaded": "Molot\\-Oruzhie",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.0,
+              "lv": 0.4814814814814815,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          },
+          {
+            "matched": "\u00bb<em>Molot</em>-<em>Oruzhie</em>\u00ab Korl\u00e1tolt Felel\u0151ss\u00e9g\u0171 T\u00e1rsas\u00e1g",
+            "uploaded": "Molot\\-Oruzhie",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.0,
+              "lv": 0.44067796610169496,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>135</em> <em>Lenina</em> <em>Str</em>., <em>Vyatskie</em> <em>Polyany</em>, <em>Kirov</em> <em>Oblast</em> (<em>Region</em>), <em>612960</em>, RU",
+            "uploaded": "135 Lenina St. Vyatskie Polyany Kirov Region",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.9411764705882353
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "Russian Federation, <em>612960</em>, <em>Kirov</em> <em>region</em>, <em>Vyatski</em> <em>Polyany</em>, <em>str</em>. <em>Lenina</em>, bldg. <em>135</em> (Russian",
+            "uploaded": "135 Lenina St. Vyatskie Polyany Kirov Region",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.9411764705882353
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": " Federation, <em>612960</em>, <em>Kirov</em> <em>Region</em>, <em>Vyatskie</em> <em>Polyany</em>, <em>Lenin</em> <em>Street</em>, <em>135</em>)",
+            "uploaded": "135 Lenina St. Vyatskie Polyany Kirov Region",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.9411764705882353
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>135</em> ul. <em>Lenina</em>, <em>Vyatskie</em> <em>Polyany</em>, <em>Kirov</em> Obl., <em>612960</em>, Russia",
+            "uploaded": "135 Lenina St. Vyatskie Polyany Kirov Region",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.9411764705882353
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": " Federacia, <em>612960</em>, Kirovskaa obl., g. Vatskie <em>Polany</em>, ul. <em>Lenina</em>, d.\u00a0<em>135</em>)",
+            "uploaded": "135 Lenina St. Vyatskie Polyany Kirov Region",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.9411764705882353
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    }
+  ]
+}

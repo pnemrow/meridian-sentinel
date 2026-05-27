@@ -1,0 +1,759 @@
+{
+  "fields": {
+    "name": [
+      "NPK Tekhmash OAO"
+    ],
+    "identifier": null,
+    "profile": null,
+    "country": [
+      "RUS"
+    ],
+    "address": [
+      "58 Krasnoproletarskaya St. Moscow"
+    ],
+    "date_of_birth": null,
+    "contact": null,
+    "type": null
+  },
+  "data": [
+    {
+      "profile": "corporate",
+      "score": 147.6131,
+      "entity_id": "GIVMkDyqah36h-CCfdtQJg",
+      "label": "NPK Tekhmash OAO",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "7743813961",
+          "type": "ru_inn",
+          "label": "Ru Inn"
+        },
+        {
+          "value": "1117746260477",
+          "type": "ru_ogrn",
+          "label": "Ru Ogrn"
+        },
+        {
+          "value": "18772",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "7743813961",
+          "type": "ru_tin",
+          "label": "Ru Tin"
+        },
+        {
+          "value": "139129",
+          "type": "eu_fsd_id",
+          "label": "Eu Fsd Id"
+        },
+        {
+          "value": "EU.8089.24",
+          "type": "eu_sanction_rn",
+          "label": "Eu Sanction Rn"
+        },
+        {
+          "value": "4521",
+          "type": "fra_asset_freeze_id",
+          "label": "Fra Asset Freeze Id"
+        },
+        {
+          "value": "1117746260477",
+          "type": "ru_registration_number",
+          "label": "Ru Registration Number"
+        },
+        {
+          "value": "7479",
+          "type": "aus_consolidated_sanctions_reference",
+          "label": "Aus Consolidated Sanctions Reference"
+        },
+        {
+          "value": "C834111",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "5b89582e733fca0001ca39be",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "ENT-124",
+          "type": "nzl_russia_sanctions_uid",
+          "label": "Nzl Russia Sanctions Uid"
+        },
+        {
+          "value": "7579",
+          "type": "aus_consolidated_sanctions_reference",
+          "label": "Aus Consolidated Sanctions Reference"
+        },
+        {
+          "value": "NK-L8tkDasz2u79U3dtLgQ4jd",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "29461",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "54275",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "64146",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "12962",
+          "type": "ukr_sanctions_nazk_company_internal_id",
+          "label": "Ukr Sanctions Nazk Company Internal Id"
+        },
+        {
+          "value": "91420386",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "774301001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "1117746260477",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "7743813961",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "\u0412\u0425-00 017675 \u041f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "770501001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "45338000000",
+          "type": "ru_oktmo",
+          "label": "Ru Oktmo"
+        },
+        {
+          "value": "91420386",
+          "type": "ru_okpo",
+          "label": "Ru Okpo"
+        },
+        {
+          "value": "LBZ5EUWEFQK5",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "YM1KNJBJ1VP1",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "Ul. Bolshaya Tatarskaya D. 35, Str. 5, Moscow, 115184, Russia",
+        "58 Leningradskoe Highway, Building 4, Moscow, 125212, RU",
+        "125212, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u041b\u0435\u043d\u0438\u043d\u0433\u0440\u0430\u0434\u0441\u043a\u043e\u0435 \u0448\u043e\u0441\u0441\u0435, \u0434. 58, \u0441\u0442\u0440. 4",
+        "125212, g. Moskva, Leningradskoe sosse, d. 58, str. 4",
+        "125212, Moscow, Leningradskoe shosse, 58, p. 4",
+        "Bolshaya Tatarskaya Str. 35/5 Moscow 115184 RUSSIAN FEDERATION",
+        "125212, \u0433 \u041c\u041e\u0421\u041a\u0412\u0410, \u0448 \u041b\u0415\u041d\u0418\u041d\u0413\u0420\u0410\u0414\u0421\u041a\u041e\u0415, \u0434\u043e\u043c 58, \u043a\u043e\u0440\u043f\u0443\u0441 \u0421\u0422\u0420.4",
+        "125212, g MOSKVA, s LENINGRADSKOE, dom 58, korpus STR.4",
+        "125212, city of MOSCOW, street LENINGRADSKOE, building 58, building STR.4",
+        "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430",
+        "g. Moskva",
+        "Moscow",
+        "\u0420\u043e\u0441\u0441\u0438\u044f, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u041b\u0435\u043d\u0438\u043d\u0433\u0440\u0430\u0434\u0441\u043a\u043e\u0435 \u0448\u043e\u0441\u0441\u0435, \u0434. 58, \u0441\u0442\u0440. 4",
+        "Rossia, g. Moskva, Leningradskoe sosse, d. 58, str. 4",
+        "Russia, Moscow, Leningradskoe Shosse, 58, p. 4",
+        "115184, Moscow, Bolshaya Tatarskaya Str., 35, Building 5, Office 728, Russian Federation",
+        "d. 58 str. 4 shosse Leningradskoe Moscow",
+        "115184, \u0413.\u041c\u041e\u0421\u041a\u0412\u0410, \u0423\u041b \u0411\u041e\u041b\u042c\u0428\u0410\u042f \u0422\u0410\u0422\u0410\u0420\u0421\u041a\u0410\u042f, \u0414. 35, \u0421\u0422\u0420. 5, \u041e\u0424\u0418\u0421 728",
+        "115184, G.MOSKVA, UL BOL\u02b9SAA TATARSKAA, D. 35, STR. 5, OFIS 728",
+        "115184, MOSCOW, BOLSHAYA TATARSKAYA STREET, D. 35, STR. 5, OFFICE 728",
+        "\u0420\u0424, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u041b\u0435\u043d\u0438\u043d\u0433\u0440\u0430\u0434\u0441\u043a\u043e\u0435 \u0448\u043e\u0441\u0441\u0435, \u0434. 38, \u0441\u0442\u0440.4",
+        "RF, g. Moskva, Leningradskoe sosse, d. 38, str.4",
+        "Russian Federation, Moscow, Leningradskoe shosse, d. 38, p. 4",
+        "425212, \u0433.\u041c\u043e\u0441\u043a\u0432\u0430.\u041b\u0435\u043d\u0438\u043d\u0433\u0440\u0430\u0434\u0441\u043a\u043e\u0435 \u0448\u043e\u0441\u0441\u0435,\u0434.58 \u0441\u0442\u0440.4",
+        "425212, g.Moskva.Leningradskoe sosse,d.58 str.4",
+        "425212, Moscow. Leningradskoe highway, no. 58 building 4",
+        "660027 \u0433 \u041a\u0440\u0430\u0441\u043d\u043e\u044f\u0440\u0441\u043a, \u043f\u0440\u043e\u0435\u0437\u0434 \u0422\u0440\u0430\u043d\u0441\u043f\u043e\u0440\u0442\u043d\u044b\u0439, \u0434 1, \u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435 107",
+        "660027 g Krasnoarsk, proezd Transportnyj, d 1, stroenie 107",
+        "660027 Krasnoyarsk, Transportny proezd, 1, building 107",
+        "\u0420\u043e\u0441\u0456\u0439\u0441\u044c\u043a\u0430 \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0456\u044f, 115184, \u043c. \u041c\u043e\u0441\u043a\u0432\u0430, \u0432\u0443\u043b. \u0412\u0435\u043b\u0438\u043a\u0430 \u0422\u0430\u0442\u0430\u0440\u0441\u044c\u043a\u0430, \u0431\u0443\u0434. 35, \u0431\u0443\u0434\u043e\u0432\u0430 5, \u043e\u0444. 728 (\u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0430\u044f \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0438\u044f, 115184, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b. \u0411\u043e\u043b\u044c\u0448\u0430\u044f \u0422\u0430\u0442\u0430\u0440\u0441\u043a\u0430\u044f, \u0434. 35, \u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435 5, \u043e\u0444. 728)",
+        "Rosijs\u02b9ka Federacia, 115184, m. Moskva, vul. Velika Tatars\u02b9ka, bud. 35, budova 5, of. 728 (Rossijskaa Federacia, 115184, g. Moskva, ul. Bol\u02b9saa Tatarskaa, d. 35, stroenie 5, of. 728)",
+        "Russian Federation, 115184, Moscow, str. Velika Tatarska, bldg. 35, building 5, office 728 (Russian Federation, 115184, Moscow, ul. Bolshaya Tatarskaya, d. 35, building 5, office 728)",
+        "35 (5)  Bolshaya Tatarskaya Str. Office 728, Moscow, 115184, RU"
+      ],
+      "countries": [
+        "RUS"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "d357238101a2bb02d97d5d77a56d9455",
+        "6c14405dec0a245d6acd6a3650d49de4",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "52a7bc4a30e787544ad2d95e7f54adca",
+        "10a889609ddae6cc31773feebe48166b",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "ded706ef28cdc649b6fc5142bc542890",
+        "3322a755c28851ec06eda3280cc2a2b2",
+        "e6e4acebdea4e9e71af8d3586d34fcdd",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "bef2f30139ea37c723ecb0f953b5f024",
+        "b97ad5c858093e5227b2359a0078696f",
+        "a9a18eeb901e4376c912e95dc05ceb78",
+        "ad6dc774c74b92159422deabc5aee661",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "635021e4e01979cdf95fa7ee76501696",
+        "3f92da650f5a32cf9c50c11333e9b7cb",
+        "a4be698ea3263f7f7f3906d1c98cffc2",
+        "56bce0e008204712e302271ddd7b4fb1",
+        "4ff85397f508e4ff8e71c5ca5ea895dd",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "f4ce10ac8bdc0bd9bcb31cb868b4b539",
+        "78b9eb45e7266680e1b9908b7f88dcb7"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|5km|0",
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>NPK</em> <em>Tekhmash</em> <em>OAO</em>",
+          "<em>NPK</em> <em>Tekhmash</em> <em>OAO</em> (<em>Tekhmash</em>)",
+          "<em>OAO</em> \"<em>NPK</em> \"<em>Tehmas</em>\"",
+          "<em>OAO</em> \"<em>NPK</em>\"<em>Tehmas</em>\"",
+          "<em>NPK</em> <em>Tekhmash</em>",
+          "<em>OAO</em> \"<em>NPK</em> \"Tehmas\"",
+          "<em>OAO</em> \"<em>NPK</em>\"Tehmas\""
+        ],
+        "address": [
+          "125212, city of <em>MOSCOW</em>, <em>street</em> LENINGRADSKOE, building <em>58</em>, building <em>STR</em>.4",
+          "125212, g. <em>Moskva</em>, Leningradskoe sosse, d. <em>58</em>, <em>str</em>. 4",
+          "125212, g <em>MOSKVA</em>, s LENINGRADSKOE, dom <em>58</em>, korpus <em>STR</em>.4",
+          "Rossia, g. <em>Moskva</em>, Leningradskoe sosse, d. <em>58</em>, <em>str</em>. 4",
+          "d. <em>58</em> <em>str</em>. 4 shosse Leningradskoe <em>Moscow</em>"
+        ],
+        "country": [
+          "<em>RUS</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>NPK</em> <em>Tekhmash</em> <em>OAO</em>",
+            "uploaded": "NPK Tekhmash OAO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.9999999999999999,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 3,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>NPK</em> <em>Tekhmash</em> <em>OAO</em> (<em>Tekhmash</em>)",
+            "uploaded": "NPK Tekhmash OAO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.75,
+              "lv": 0.7804878048780488,
+              "fz": 0.64,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 3,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>OAO</em> \"<em>NPK</em> \"<em>Tehmas</em>\"",
+            "uploaded": "NPK Tekhmash OAO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.9999999999999999,
+              "lv": 0.6666666666666667,
+              "fz": 0.375,
+              "l1": 0.375,
+              "l2": 0.625
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>OAO</em> \"<em>NPK</em>\"<em>Tehmas</em>\"",
+            "uploaded": "NPK Tekhmash OAO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.9999999999999999,
+              "lv": 0.6666666666666667,
+              "fz": 0.375,
+              "l1": 0.375,
+              "l2": 0.625
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>NPK</em> <em>Tekhmash</em>",
+            "uploaded": "NPK Tekhmash OAO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 1.0,
+              "lv": 0.8571428571428572,
+              "fz": 0.75,
+              "l1": 0.75,
+              "l2": 0.75
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>OAO</em> \"<em>NPK</em> \"Tehmas\"",
+            "uploaded": "NPK Tekhmash OAO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.6666666666666665,
+              "lv": 0.6666666666666667,
+              "fz": 0.375,
+              "l1": 0.375,
+              "l2": 0.625
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>OAO</em> \"<em>NPK</em>\"Tehmas\"",
+            "uploaded": "NPK Tekhmash OAO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.6666666666666665,
+              "lv": 0.6666666666666667,
+              "fz": 0.375,
+              "l1": 0.375,
+              "l2": 0.625
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 2,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "125212, city of <em>MOSCOW</em>, <em>street</em> LENINGRADSKOE, building <em>58</em>, building <em>STR</em>.4",
+            "uploaded": "58 Krasnoproletarskaya St. Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "125212, g. <em>Moskva</em>, Leningradskoe sosse, d. <em>58</em>, <em>str</em>. 4",
+            "uploaded": "58 Krasnoproletarskaya St. Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "125212, g <em>MOSKVA</em>, s LENINGRADSKOE, dom <em>58</em>, korpus <em>STR</em>.4",
+            "uploaded": "58 Krasnoproletarskaya St. Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "Rossia, g. <em>Moskva</em>, Leningradskoe sosse, d. <em>58</em>, <em>str</em>. 4",
+            "uploaded": "58 Krasnoproletarskaya St. Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "d. <em>58</em> <em>str</em>. 4 shosse Leningradskoe <em>Moscow</em>",
+            "uploaded": "58 Krasnoproletarskaya St. Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1945 @@
+{
+  "fields": {
+    "name": [
+      "United Shipbuilding Corporation"
+    ],
+    "identifier": null,
+    "profile": null,
+    "country": [
+      "RUS"
+    ],
+    "address": [
+      "11 Sadovaya-Kudrinskaya St. Moscow"
+    ],
+    "date_of_birth": null,
+    "contact": null,
+    "type": null
+  },
+  "data": [
+    {
+      "profile": "corporate",
+      "score": 151.87207,
+      "entity_id": "C5evl7eZKYvMMZHtGrm5UQ",
+      "label": "\u0410\u041e \"\u041e\u0411\u042a\u0415\u0414\u0418\u041d\u0415\u041d\u041d\u0410\u042f \u0421\u0423\u0414\u041e\u0421\u0422\u0420\u041e\u0418\u0422\u0415\u041b\u042c\u041d\u0410\u042f \u041a\u041e\u0420\u041f\u041e\u0420\u0410\u0426\u0418\u042f\" \u0427\u0415\u0420\u0415\u0417 \u0410\u041e \"\u041f\u0421\u0417 \"\u042f\u041d\u0422\u0410\u0420\u042c\"",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "7838395215",
+          "type": "ru_tin",
+          "label": "Ru Tin"
+        },
+        {
+          "value": "7838395215",
+          "type": "ru_inn",
+          "label": "Ru Inn"
+        },
+        {
+          "value": "16886",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "137733",
+          "type": "eu_fsd_id",
+          "label": "Eu Fsd Id"
+        },
+        {
+          "value": "1079847085966",
+          "type": "ru_ogrn",
+          "label": "Ru Ogrn"
+        },
+        {
+          "value": "14189",
+          "type": "gbr_hm_treasury_sanction_group_id",
+          "label": "Gbr Hm Treasury Sanction Group Id"
+        },
+        {
+          "value": "RUS0242",
+          "type": "gbr_uk_sanctions_id",
+          "label": "Gbr Uk Sanctions Id"
+        },
+        {
+          "value": "EU.7813.40",
+          "type": "eu_sanction_rn",
+          "label": "Eu Sanction Rn"
+        },
+        {
+          "value": "4487",
+          "type": "fra_asset_freeze_id",
+          "label": "Fra Asset Freeze Id"
+        },
+        {
+          "value": "C671787",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "5c48809aa18bbce4b8f16d42",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "6940",
+          "type": "aus_consolidated_sanctions_reference",
+          "label": "Aus Consolidated Sanctions Reference"
+        },
+        {
+          "value": "ENT-24",
+          "type": "nzl_russia_sanctions_uid",
+          "label": "Nzl Russia Sanctions Uid"
+        },
+        {
+          "value": "NK-jqXHr8jsSFcyJZjkP7Jmvd",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "50696",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "50748",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "52472",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "52792",
+          "type": "che_seco_sanction_number",
+          "label": "Che Seco Sanction Number"
+        },
+        {
+          "value": "12792",
+          "type": "ukr_sanctions_nazk_company_internal_id",
+          "label": "Ukr Sanctions Nazk Company Internal Id"
+        },
+        {
+          "value": "1079847085966",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "7838395215",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "783801001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "2653",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "997850001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "\u041b024-00107-00/00582962",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "Ukraine-/Russia-Related Sanctions Regulations, 31 CFR 589.201 and/or 589.209",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "40304000000",
+          "type": "ru_oktmo",
+          "label": "Ru Oktmo"
+        },
+        {
+          "value": "82264639",
+          "type": "ru_okpo",
+          "label": "Ru Okpo"
+        },
+        {
+          "value": "JB8VBLRSF4S3",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "191119, \u0413\u041e\u0420\u041e\u0414, \u0421\u0410\u041d\u041a\u0422-\u041f\u0415\u0422\u0415\u0420\u0411\u0423\u0420\u0413, \u0423\u041b. \u041c\u0410\u0420\u0410\u0422\u0410, 90",
+        "191119, GOROD, SANKT-PETERBURG, UL. MARATA, 90",
+        "191119, CITY, SAINT PETERSBURG, ST. MARATA, 90",
+        "11 Bolshaya Tatarskaya Str.,Moscou 115184, RUSSIE",
+        "191119, \u0433 \u0421\u0410\u041d\u041a\u0422-\u041f\u0415\u0422\u0415\u0420\u0411\u0423\u0420\u0413, \u0443\u043b \u041c\u0410\u0420\u0410\u0422\u0410, \u0434\u043e\u043c 90",
+        "191119, g SANKT-PETERBURG, ul MARATA, dom 90",
+        "191119, SAINT PETERSBURG, MARATA street, building 90",
+        "90 Marata Str., Saint Petersburg, 191119, RU",
+        "191119, \u0420\u0424, \u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0443\u043b. \u041c\u0430\u0440\u0430\u0442\u0430, \u0434.90",
+        "191119, RF, g. Sankt-Peterburg, ul. Marata, d.90",
+        "191119, Russian Federation, St. Petersburg, ul. Marata, d.90",
+        "11, Sadovaya-Kudrinskaya str., Moscow, 123242, Russia",
+        "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+        "g. Sankt-Peterburg",
+        "St. Petersburg",
+        "\u0433. \u041c\u043e\u0441\u043a\u0432\u0430",
+        "g. Moskva",
+        "Moscow",
+        "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0443\u043b\u0438\u0446\u0430 \u041c\u0430\u0440\u0430\u0442\u0430, \u0434\u043e\u043c 90.",
+        "Sankt-Peterburg, ulica Marata, dom 90.",
+        "St. Petersburg, 90 Marata St.",
+        "123242, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b. \u0421\u0430\u0434\u043e\u0432\u0430\u044f-\u041a\u0443\u0434\u0440\u0438\u043d\u0441\u043a\u0430\u044f, \u0434.11",
+        "123242, g. Moskva, ul. Sadovaa-Kudrinskaa, d.11",
+        "123242, Moscow, st. Sadovaya-Kudrinskaya, 11",
+        "\u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0430\u044f \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0438\u044f, 191119, \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u041c\u0430\u0440\u0430\u0442\u0430, 90, -",
+        "Rossijskaa Federacia, 191119, Sankt-Peterburg, Marata, 90, -",
+        "Russian Federation, 191119, St. Petersburg, Marata, 90, -",
+        "\u0443\u043b. \u0411\u043e\u043b\u044c\u0448\u0430\u044f \u0422\u0430\u0442\u0430\u0440\u0441\u043a\u0430\u044f, \u0434. 11, \u043a\u043e\u0440\u043f. \u0412, \u041c\u043e\u0441\u043a\u0432\u0430, 115184, \u0420\u043e\u0441\u0441\u0438\u044f",
+        "ul. Bol\u02b9saa Tatarskaa, d. 11, korp. V, Moskva, 115184, Rossia",
+        "st. Bolshaya Tatarskaya, 11, bldg. V, Moscow, 115184, Russia",
+        "164500, \u0410\u0440\u0445\u0430\u043d\u0433\u0435\u043b\u044c\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0433. \u0421\u0435\u0432\u0435\u0440\u043e\u0434\u0432\u0438\u043d\u0441\u043a, \u0410\u0440\u0445\u0430\u043d\u0433\u0435\u043b\u044c\u0441\u043a\u043e\u0435 \u0448\u043e\u0441\u0441\u0435, \u0434.58",
+        "164500, Arhangel\u02b9skaa oblast\u02b9, g. Severodvinsk, Arhangel\u02b9skoe sosse, d.58",
+        "164500, Arkhangelsk Region, Severodvinsk, Arkhangelskoe Shosse, d.58",
+        "191119, \u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0443\u043b. \u041c\u0430\u0440\u0430\u0442\u0430, \u0434.90, 115407, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430,, \u0443\u043b. \u0420\u0435\u0447\u043d\u0438\u043a\u043e\u0432, \u0434. 7, \u0441\u0442\u0440. 1, \u043a\u043e\u043c\u043d\u0430\u0442\u0430 3",
+        "191119, g. Sankt-Peterburg, ul. Marata, d.90, 115407, g. Moskva,, ul. Recnikov, d. 7, str. 1, komnata 3",
+        "191119, St. Petersburg, st. Marata, 90, 115407, Moscow, st. Rechnikov, 7, building 1, room 3",
+        "11B Bolshaya Tatarskaya Boulevard, Moscow, 115184, RU",
+        "\u0420\u0424, 191119, \u043c. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0432\u0443\u043b. \u041c\u0430\u0440\u0430\u0442\u0430, 90",
+        "RF, 191119, m. Sankt-Peterburg, vul. Marata, 90",
+        "Russian Federation, 191119, m. St. Petersburg, st. Marata, 90",
+        "\u0420\u043e\u0441\u0456\u0439\u0441\u044c\u043a\u0430 \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0456\u044f, 191119, \u043c. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0432\u0443\u043b. \u041c\u0430\u0440\u0430\u0442\u0430, \u0431\u0443\u0434. 90",
+        "Rosijs\u02b9ka Federacia, 191119, m. Sankt-Peterburg, vul. Marata, bud. 90",
+        "Russian Federation, 191119, St. Petersburg, st. Marata, building 90",
+        "Bolshaya Tatarskaya Str., 11, Building V",
+        "Street Marat, 90",
+        "Marata Str., 90"
+      ],
+      "countries": [
+        "RUS"
+      ],
+      "sources": [
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "6c14405dec0a245d6acd6a3650d49de4",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "ded706ef28cdc649b6fc5142bc542890",
+        "e6e4acebdea4e9e71af8d3586d34fcdd",
+        "05bae57e72956e990b4b213cb12b5d66",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "66dfefb726ae00fde8f09f34c5578d35",
+        "635021e4e01979cdf95fa7ee76501696",
+        "a4be698ea3263f7f7f3906d1c98cffc2",
+        "56bce0e008204712e302271ddd7b4fb1",
+        "4ff85397f508e4ff8e71c5ca5ea895dd",
+        "f4ce10ac8bdc0bd9bcb31cb868b4b539",
+        "78b9eb45e7266680e1b9908b7f88dcb7",
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "d357238101a2bb02d97d5d77a56d9455",
+        "10a889609ddae6cc31773feebe48166b",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "3322a755c28851ec06eda3280cc2a2b2",
+        "66dfefb726ae00fde8f09f34c5578d35",
+        "c10d482320f207d92aa814519c3bd686",
+        "bef2f30139ea37c723ecb0f953b5f024",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "a9a18eeb901e4376c912e95dc05ceb78",
+        "ad6dc774c74b92159422deabc5aee661",
+        "b97ad5c858093e5227b2359a0078696f",
+        "3f92da650f5a32cf9c50c11333e9b7cb",
+        "93de05b55a68cc964f34bbfc7ec7bc86",
+        "e85d865943ee6d8369307569d2ad9de0"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "address|numericOptional|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "address|sub|phraseStripped|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "JSC \"<em>UNITED</em> <em>SHIPBUILDING</em> <em>CORPORATION</em>\" THROUGH JSC \"PSZ \"YANTAR\"",
+          "<em>United</em> <em>Shipbuilding</em> <em>Corporation</em>",
+          "JSC \"<em>UNITED</em> <em>SHIPBUILDING</em> <em>CORPORATION</em>\"",
+          "JOINT STOCK COMPANY <em>UNITED</em> <em>SHIPBUILDING</em> <em>CORPORATION</em>",
+          "JSC <em>United</em> <em>Shipbuilding</em> <em>Corporation</em>",
+          "JSC \"<em>UNITED</em> <em>SHIPBUILDING</em> CORPORATION\" THROUGH JSC \"PSZ \"YANTAR\"",
+          "<em>United</em> <em>Shipbuilding</em> Corporation",
+          "JSC \"<em>UNITED</em> <em>SHIPBUILDING</em> CORPORATION\"",
+          "JOINT STOCK COMPANY <em>UNITED</em> <em>SHIPBUILDING</em> CORPORATION",
+          "JSC <em>United</em> <em>Shipbuilding</em> Corporation"
+        ],
+        "address": [
+          "<em>11</em>, <em>Sadovaya</em>-<em>Kudrinskaya</em> <em>str</em>., <em>Moscow</em>, <em>123242</em>, Russia",
+          "<em>123242</em>, <em>Moscow</em>, <em>st</em>. <em>Sadovaya</em>-<em>Kudrinskaya</em>, <em>11</em>",
+          "<em>123242</em>, g. <em>Moskva</em>, ul. <em>Sadovaa</em>-<em>Kudrinskaa</em>, d.<em>11</em>",
+          "<em>123242</em>, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b. \u0421\u0430\u0434\u043e\u0432\u0430\u044f-\u041a\u0443\u0434\u0440\u0438\u043d\u0441\u043a\u0430\u044f, \u0434.<em>11</em>",
+          "ul. Bol\u02b9saa Tatarskaa, d. <em>11</em>, korp. V, <em>Moskva</em>, 115184, Rossia"
+        ],
+        "country": [
+          "<em>RUS</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "JSC \"<em>UNITED</em> <em>SHIPBUILDING</em> <em>CORPORATION</em>\" THROUGH JSC \"PSZ \"YANTAR\"",
+            "uploaded": "United Shipbuilding Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.14373507592318102,
+              "lv": 0.696629213483146,
+              "fz": 0.5344827586206897,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>United</em> <em>Shipbuilding</em> <em>Corporation</em>",
+            "uploaded": "United Shipbuilding Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.38329353579514935,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "JSC \"<em>UNITED</em> <em>SHIPBUILDING</em> <em>CORPORATION</em>\"",
+            "uploaded": "United Shipbuilding Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.28747015184636204,
+              "lv": 0.9393939393939394,
+              "fz": 0.8857142857142857,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "JOINT STOCK COMPANY <em>UNITED</em> <em>SHIPBUILDING</em> <em>CORPORATION</em>",
+            "uploaded": "United Shipbuilding Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19164676789757468,
+              "lv": 0.7560975609756098,
+              "fz": 0.607843137254902,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "JSC <em>United</em> <em>Shipbuilding</em> <em>Corporation</em>",
+            "uploaded": "United Shipbuilding Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.28747015184636204,
+              "lv": 0.9393939393939394,
+              "fz": 0.8857142857142857,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "JSC \"<em>UNITED</em> <em>SHIPBUILDING</em> CORPORATION\" THROUGH JSC \"PSZ \"YANTAR\"",
+            "uploaded": "United Shipbuilding Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.1341164303417365,
+              "lv": 0.696629213483146,
+              "fz": 0.5344827586206897,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>United</em> <em>Shipbuilding</em> Corporation",
+            "uploaded": "United Shipbuilding Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.35764381424463065,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "JSC \"<em>UNITED</em> <em>SHIPBUILDING</em> CORPORATION\"",
+            "uploaded": "United Shipbuilding Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.268232860683473,
+              "lv": 0.9393939393939394,
+              "fz": 0.8857142857142857,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "JOINT STOCK COMPANY <em>UNITED</em> <em>SHIPBUILDING</em> CORPORATION",
+            "uploaded": "United Shipbuilding Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.17882190712231533,
+              "lv": 0.7560975609756098,
+              "fz": 0.607843137254902,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "JSC <em>United</em> <em>Shipbuilding</em> Corporation",
+            "uploaded": "United Shipbuilding Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.268232860683473,
+              "lv": 0.9393939393939394,
+              "fz": 0.8857142857142857,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>11</em>, <em>Sadovaya</em>-<em>Kudrinskaya</em> <em>str</em>., <em>Moscow</em>, <em>123242</em>, Russia",
+            "uploaded": "11 Sadovaya\\-Kudrinskaya St. Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 1.0
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>123242</em>, <em>Moscow</em>, <em>st</em>. <em>Sadovaya</em>-<em>Kudrinskaya</em>, <em>11</em>",
+            "uploaded": "11 Sadovaya\\-Kudrinskaya St. Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 1.0
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>123242</em>, g. <em>Moskva</em>, ul. <em>Sadovaa</em>-<em>Kudrinskaa</em>, d.<em>11</em>",
+            "uploaded": "11 Sadovaya\\-Kudrinskaya St. Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 1.0
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>123242</em>, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b. \u0421\u0430\u0434\u043e\u0432\u0430\u044f-\u041a\u0443\u0434\u0440\u0438\u043d\u0441\u043a\u0430\u044f, \u0434.<em>11</em>",
+            "uploaded": "11 Sadovaya\\-Kudrinskaya St. Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 1.0
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "ul. Bol\u02b9saa Tatarskaa, d. <em>11</em>, korp. V, <em>Moskva</em>, 115184, Rossia",
+            "uploaded": "11 Sadovaya\\-Kudrinskaya St. Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 1.0
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 96.701675,
+      "entity_id": "qETXOGEM-J5b_DsxjXwlyQ",
+      "label": "\u041f\u0443\u0431\u043b\u0438\u0447\u043d\u043e\u0435 \u0430\u043a\u0446\u0438\u043e\u043d\u0435\u0440\u043d\u043e\u0435 \u043e\u0431\u0449\u0435\u0441\u0442\u0432\u043e \u00ab\u0417\u0430\u0432\u043e\u0434 \u00ab\u041a\u0440\u0430\u0441\u043d\u043e\u0435 \u0421\u043e\u0440\u043c\u043e\u0432\u043e\u00bb",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "1025204410110",
+          "type": "ru_ogrn",
+          "label": "Ru Ogrn"
+        },
+        {
+          "value": "5263006629",
+          "type": "ru_inn",
+          "label": "Ru Inn"
+        },
+        {
+          "value": "5263006629",
+          "type": "ru_tin",
+          "label": "Ru Tin"
+        },
+        {
+          "value": "5c6584b3d1df960001c57770",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "1025204410110",
+          "type": "ru_registration_number",
+          "label": "Ru Registration Number"
+        },
+        {
+          "value": "19020",
+          "type": "ukr_sanctions_nazk_company_internal_id",
+          "label": "Ukr Sanctions Nazk Company Internal Id"
+        },
+        {
+          "value": "526301001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "997850001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "52-00.00.00.000-\u0425-\u0414\u0417\u0418\u041e-\u0422-2008-00066/00",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "52.\u041d\u0426.12.001.\u041b.000004.06.13",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "52.\u041d\u0426.12.002.\u041b.000026.03.09",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "52.\u041d\u0426.12.001.\u041b.00004.06.13",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "52\u041b01 0004142 \u0411\u0415\u0421\u0421\u0420\u041e\u0427\u041d\u0410\u042f",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "52 000742 \u0420\u0415\u0413.No8334",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u041d\u0416\u0413 01068",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0410\u041d 52-000687",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0410\u0412 \u0412\u041e-03-207-3764",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0410\u0412 \u0412\u041e-12-101-3536",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "161894",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0413\u0422 0072797 1828",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0412\u041e-12-101-4342",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "\u0410\u0412 \u0412\u041e-03-210-2917",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "480",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "\u041b030-00114-77/00063036",
+          "type": "ru_license_number",
+          "label": "Ru License Number"
+        },
+        {
+          "value": "22701000001",
+          "type": "ru_oktmo",
+          "label": "Ru Oktmo"
+        },
+        {
+          "value": "525350001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "8844022",
+          "type": "ru_okpo",
+          "label": "Ru Okpo"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "\u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0430\u044f \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0438\u044f, 603950, \u0433. \u041d\u0438\u0436\u043d\u0438\u0439 \u041d\u043e\u0432\u0433\u043e\u0440\u043e\u0434, \u0443\u043b. \u0411\u0430\u0440\u0440\u0438\u043a\u0430\u0434, \u0434. 1",
+        "Rossijskaa Federacia, 603950, g. Niznij Novgorod, ul. Barrikad, d. 1",
+        "Russian Federation, 603950, Nizhny Novgorod, st. Barrikad, 1",
+        "603951, \u0433. \u041d\u0438\u0436\u043d\u0438\u0439 \u041d\u043e\u0432\u0433\u043e\u0440\u043e\u0434, \u0443\u043b. \u0411\u0430\u0440\u0440\u0438\u043a\u0430\u0434, \u0434.1",
+        "603951, g. Niznij Novgorod, ul. Barrikad, d.1",
+        "603951, Nizhny Novgorod, st. Barricade, d.1",
+        "\u0420\u043e\u0441\u0441\u0438\u044f, \u0433. \u041d\u0438\u0436\u043d\u0438\u0439 \u041d\u043e\u0432\u0433\u043e\u0440\u043e\u0434",
+        "Rossia, g. Niznij Novgorod",
+        "Russia, Nizhny Novgorod",
+        "\u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0430\u044f \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0438\u044f, 603950, \u041d\u0438\u0436\u0435\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b, \u041d\u0438\u0436\u043d\u0438\u0439 \u041d\u043e\u0432\u0433\u043e\u0440\u043e\u0434 \u0433, \u0411\u0430\u0440\u0440\u0438\u043a\u0430\u0434, 1, -/-",
+        "Rossijskaa Federacia, 603950, Nizegorodskaa obl, Niznij Novgorod g, Barrikad, 1, -/-",
+        "Russian Federation, 603950, Nizhny Novgorod region, Nizhny Novgorod city, Barricade, 1, -/-",
+        "121099, \u0413\u041e\u0420\u041e\u0414 \u041c\u041e\u0421\u041a\u0412\u0410, \u041f\u0415\u0420\u0415\u0423\u041b\u041e\u041a \u0421\u041c\u041e\u041b\u0415\u041d\u0421\u041a\u0418\u0419 2-\u0419, \u0414\u041e\u041c 1/4",
+        "121099, GOROD MOSKVA, PEREULOK SMOLENSKIJ 2-J, DOM 1/4",
+        "121099, CITY MOSCOW, SMOLENSKY 2ND LANE, BUILDING 1/4",
+        "\u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0430\u044f \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0438\u044f, 603003, \u041d\u0438\u0436\u0435\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b, \u041d\u0438\u0436\u043d\u0438\u0439 \u041d\u043e\u0432\u0433\u043e\u0440\u043e\u0434 \u0433, \u0411\u0430\u0440\u0440\u0438\u043a\u0430\u0434, 1/-/-, -/-",
+        "Rossijskaa Federacia, 603003, Nizegorodskaa obl, Niznij Novgorod g, Barrikad, 1/-/-, -/-",
+        "Russian Federation, 603003, Nizhny Novgorod region, Nizhny Novgorod, Barrikad, 1/-/-, -/-",
+        "\u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0430\u044f \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0438\u044f, 603951, \u041d\u0438\u0436\u0435\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b, \u041d\u0438\u0436\u043d\u0438\u0439 \u041d\u043e\u0432\u0433\u043e\u0440\u043e\u0434 \u0433, \u0411\u0430\u0440\u0440\u0438\u043a\u0430\u0434, \u0414\u041e\u041c 1",
+        "Rossijskaa Federacia, 603951, Nizegorodskaa obl, Niznij Novgorod g, Barrikad, DOM 1",
+        "Russian Federation, 603951, Nizhny Novgorod region, Nizhny Novgorod city, Barricade, BUILDING 1",
+        "D. 1, Ul. Barrikad, Nizhny Novgorod, Nizhny Novgorod Oblast, 603951, Russia",
+        "121099 \u0413\u041e\u0420\u041e\u0414 \u041c\u041e\u0421\u041a\u0412\u0410 \u041f\u0415\u0420. \u0421\u041c\u041e\u041b\u0415\u041d\u0421\u041a\u0418\u0419 2-\u0419 \u0414\u041e\u041c 1/4",
+        "121099 GOROD MOSKVA PER. SMOLENSKIJ 2-J DOM 1/4",
+        "121099 CITY OF MOSCOW PER. SMOLENSKY 2ND HOUSE 1/4",
+        "603003, \u0420\u043e\u0441\u0456\u0439\u0441\u044c\u043a\u0430 \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0456\u044f, \u041d\u0438\u0436\u0435\u0433\u043e\u0440\u043e\u0434\u0441\u044c\u043a\u0430 \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u043c. \u041d\u0438\u0436\u043d\u0456\u0439 \u041d\u043e\u0432\u0433\u043e\u0440\u043e\u0434, \u0432\u0443\u043b. \u0411\u0430\u0440\u0438\u043a\u0430\u0434, \u0431\u0443\u0434. 1",
+        "603003, Rosijs\u02b9ka Federacia, Nizegorods\u02b9ka oblast\u02b9, m. Niznij Novgorod, vul. Barikad, bud. 1",
+        "603003, Russian Federation, Nizhny Novgorod Region, Nizhny Novgorod, st. Barricade, building 1"
+      ],
+      "countries": [
+        "RUS"
+      ],
+      "sources": [
+        "66dfefb726ae00fde8f09f34c5578d35",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "a9a18eeb901e4376c912e95dc05ceb78",
+        "635021e4e01979cdf95fa7ee76501696",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "a4be698ea3263f7f7f3906d1c98cffc2",
+        "56bce0e008204712e302271ddd7b4fb1",
+        "3322a755c28851ec06eda3280cc2a2b2",
+        "e6e4acebdea4e9e71af8d3586d34fcdd",
+        "fd46028e08cc491708167e82d0cfbe93"
+      ],
+      "typed_matched_queries": [
+        "address|geoCity|0",
+        "address|geoDistance|5km|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>United</em> <em>Shipbuilding</em> <em>Corporation</em> JSC \u201cKrasnoye Sormovo Plant OJSC\u201d",
+          "<em>United</em> <em>Shipbuilding</em> Corporation JSC \u201cKrasnoye Sormovo Plant OJSC\u201d"
+        ],
+        "address": [
+          "121099, GOROD <em>MOSKVA</em>, PEREULOK SMOLENSKIJ 2-J, DOM 1/4",
+          "121099 GOROD <em>MOSKVA</em> PER. SMOLENSKIJ 2-J DOM 1/4",
+          "Russian Federation, 603950, Nizhny Novgorod, <em>st</em>. Barrikad, 1",
+          "603951, Nizhny Novgorod, <em>st</em>. Barricade, d.1",
+          "121099, CITY <em>MOSCOW</em>, SMOLENSKY 2ND LANE, BUILDING 1/4"
+        ],
+        "country": [
+          "<em>RUS</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>United</em> <em>Shipbuilding</em> <em>Corporation</em> JSC \u201cKrasnoye Sormovo Plant OJSC\u201d",
+            "uploaded": "United Shipbuilding Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.14373507592318102,
+              "lv": 0.6458333333333333,
+              "fz": 0.4769230769230769,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>United</em> <em>Shipbuilding</em> Corporation JSC \u201cKrasnoye Sormovo Plant OJSC\u201d",
+            "uploaded": "United Shipbuilding Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.1341164303417365,
+              "lv": 0.6458333333333333,
+              "fz": 0.4769230769230769,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "121099, GOROD <em>MOSKVA</em>, PEREULOK SMOLENSKIJ 2-J, DOM 1/4",
+            "uploaded": "11 Sadovaya\\-Kudrinskaya St. Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.17647058823529413
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "121099 GOROD <em>MOSKVA</em> PER. SMOLENSKIJ 2-J DOM 1/4",
+            "uploaded": "11 Sadovaya\\-Kudrinskaya St. Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.17647058823529413
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "Russian Federation, 603950, Nizhny Novgorod, <em>st</em>. Barrikad, 1",
+            "uploaded": "11 Sadovaya\\-Kudrinskaya St. Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.17647058823529413
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "603951, Nizhny Novgorod, <em>st</em>. Barricade, d.1",
+            "uploaded": "11 Sadovaya\\-Kudrinskaya St. Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.17647058823529413
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "121099, CITY <em>MOSCOW</em>, SMOLENSKY 2ND LANE, BUILDING 1/4",
+            "uploaded": "11 Sadovaya\\-Kudrinskaya St. Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.17647058823529413
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 65.946945,
+      "entity_id": "BfZDWRP9JB5rsSQmgXLgiA",
+      "label": "\u0410\u043a\u0446\u0438\u043e\u043d\u0435\u0440\u043d\u043e\u0435 \u043e\u0431\u0449\u0435\u0441\u0442\u0432\u043e \u00ab\u041e\u0431\u044a\u0435\u0434\u0438\u043d\u0435\u043d\u043d\u0430\u044f \u0441\u0443\u0434\u043e\u0441\u0442\u0440\u043e\u0438\u0442\u0435\u043b\u044c\u043d\u0430\u044f \u043a\u043e\u0440\u043f\u043e\u0440\u0430\u0446\u0438\u044f\u00bb",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "6167104713",
+          "type": "ru_inn",
+          "label": "Ru Inn"
+        },
+        {
+          "value": "1116165005109",
+          "type": "ru_ogrn",
+          "label": "Ru Ogrn"
+        },
+        {
+          "value": "6167104713",
+          "type": "ru_tin",
+          "label": "Ru Tin"
+        },
+        {
+          "value": "1116165005109",
+          "type": "ru_registration_number",
+          "label": "Ru Registration Number"
+        },
+        {
+          "value": "616701001",
+          "type": "ru_kpp",
+          "label": "Ru Kpp"
+        },
+        {
+          "value": "60701000001",
+          "type": "ru_oktmo",
+          "label": "Ru Oktmo"
+        },
+        {
+          "value": "92156767",
+          "type": "ru_okpo",
+          "label": "Ru Okpo"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "\u0443\u043b. \u041c\u0430\u0440\u0430\u0442\u0430, \u0434. 90, \u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, 191119, \u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0430\u044f \u0424\u0435\u0434\u0435\u0440\u0430\u0446\u0438\u044f",
+        "ul. Marata, d. 90, g. Sankt-Peterburg, 191119, Rossijskaa Federacia",
+        "St. Marata, d. 90, g. St. Petersburg, 191119, Russian Federation",
+        "\u0420\u041e\u0421\u0422\u041e\u0412-\u041d\u0410-\u0414\u041e\u041d\u0423 \u0413\u041e\u0420\u041e\u0414, \u0420\u041e\u0421\u0422\u041e\u0412\u0421\u041a\u0410\u042f \u041e\u0411\u041b\u0410\u0421\u0422\u042c",
+        "ROSTOV-NA-DONU GOROD, ROSTOVSKAA OBLAST\u02b9",
+        "ROSTOV-ON-DON CITY, ROSTOV REGION",
+        "344019, \u0420\u041e\u0421\u0422\u041e\u0412\u0421\u041a\u0410\u042f \u041e\u0411\u041b\u0410\u0421\u0422\u042c, \u0413.\u041e. \u0413\u041e\u0420\u041e\u0414 \u0420\u041e\u0421\u0422\u041e\u0412-\u041d\u0410-\u0414\u041e\u041d\u0423, \u0413 \u0420\u041e\u0421\u0422\u041e\u0412-\u041d\u0410-\u0414\u041e\u041d\u0423, \u041f\u0420-\u041a\u0422 \u0428\u041e\u041b\u041e\u0425\u041e\u0412\u0410, \u0417\u0414. 11, \u0421\u0422\u0420. 4, \u041a\u041e\u041c. 4\u0413",
+        "344019, ROSTOVSKAA OBLAST\u02b9, G.O. GOROD ROSTOV-NA-DONU, G ROSTOV-NA-DONU, PR-KT SOLOHOVA, ZD. 11, STR. 4, KOM. 4G",
+        "344019, Rostov Region, Rostov-on-Don Urban District, Rostov-on-Don, Sholokhov Avenue, Building 11, Building 4, Room 4G"
+      ],
+      "countries": [
+        "RUS"
+      ],
+      "sources": [
+        "a9a18eeb901e4376c912e95dc05ceb78",
+        "635021e4e01979cdf95fa7ee76501696",
+        "72b09952a36b8f7ae72ae6ca7f410d8c",
+        "56bce0e008204712e302271ddd7b4fb1",
+        "3322a755c28851ec06eda3280cc2a2b2",
+        "e61c3b3478534c110b46cd64c7746e82"
+      ],
+      "typed_matched_queries": [
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "Joint Stock Company <em>United</em> <em>Shipbuilding</em> <em>Corporation</em>",
+          "Joint Stock Company <em>United</em> <em>Shipbuilding</em> Corporation"
+        ],
+        "address": [
+          "344019, ROSTOVSKAA OBLAST\u02b9, G.O. GOROD ROSTOV-NA-DONU, G ROSTOV-NA-DONU, PR-KT SOLOHOVA, ZD. <em>11</em>, <em>STR</em>. 4, KOM. 4G",
+          "344019, \u0420\u041e\u0421\u0422\u041e\u0412\u0421\u041a\u0410\u042f \u041e\u0411\u041b\u0410\u0421\u0422\u042c, \u0413.\u041e. \u0413\u041e\u0420\u041e\u0414 \u0420\u041e\u0421\u0422\u041e\u0412-\u041d\u0410-\u0414\u041e\u041d\u0423, \u0413 \u0420\u041e\u0421\u0422\u041e\u0412-\u041d\u0410-\u0414\u041e\u041d\u0423, \u041f\u0420-\u041a\u0422 \u0428\u041e\u041b\u041e\u0425\u041e\u0412\u0410, \u0417\u0414. <em>11</em>, \u0421\u0422\u0420. 4, \u041a\u041e\u041c. 4\u0413",
+          "344019, Rostov Region, Rostov-on-Don Urban District, Rostov-on-Don, Sholokhov Avenue, Building <em>11</em>, Building 4, Room 4G",
+          "<em>St</em>. Marata, d. 90, g. <em>St</em>. Petersburg, 191119, Russian Federation"
+        ],
+        "country": [
+          "<em>RUS</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "Joint Stock Company <em>United</em> <em>Shipbuilding</em> <em>Corporation</em>",
+            "uploaded": "United Shipbuilding Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19164676789757468,
+              "lv": 0.7560975609756098,
+              "fz": 0.607843137254902,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Joint Stock Company <em>United</em> <em>Shipbuilding</em> Corporation",
+            "uploaded": "United Shipbuilding Corporation",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.17882190712231533,
+              "lv": 0.7560975609756098,
+              "fz": 0.607843137254902,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "344019, ROSTOVSKAA OBLAST\u02b9, G.O. GOROD ROSTOV-NA-DONU, G ROSTOV-NA-DONU, PR-KT SOLOHOVA, ZD. <em>11</em>, <em>STR</em>. 4, KOM. 4G",
+            "uploaded": "11 Sadovaya\\-Kudrinskaya St. Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.23529411764705882
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "344019, \u0420\u041e\u0421\u0422\u041e\u0412\u0421\u041a\u0410\u042f \u041e\u0411\u041b\u0410\u0421\u0422\u042c, \u0413.\u041e. \u0413\u041e\u0420\u041e\u0414 \u0420\u041e\u0421\u0422\u041e\u0412-\u041d\u0410-\u0414\u041e\u041d\u0423, \u0413 \u0420\u041e\u0421\u0422\u041e\u0412-\u041d\u0410-\u0414\u041e\u041d\u0423, \u041f\u0420-\u041a\u0422 \u0428\u041e\u041b\u041e\u0425\u041e\u0412\u0410, \u0417\u0414. <em>11</em>, \u0421\u0422\u0420. 4, \u041a\u041e\u041c. 4\u0413",
+            "uploaded": "11 Sadovaya\\-Kudrinskaya St. Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.23529411764705882
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "344019, Rostov Region, Rostov-on-Don Urban District, Rostov-on-Don, Sholokhov Avenue, Building <em>11</em>, Building 4, Room 4G",
+            "uploaded": "11 Sadovaya\\-Kudrinskaya St. Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.23529411764705882
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          },
+          {
+            "matched": "<em>St</em>. Marata, d. 90, g. <em>St</em>. Petersburg, 191119, Russian Federation",
+            "uploaded": "11 Sadovaya\\-Kudrinskaya St. Moscow",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.23529411764705882
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "BLR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KGZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "KAZ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "GEO",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "ARE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AZE",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TKM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    }
+  ]
+}

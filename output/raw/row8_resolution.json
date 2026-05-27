@@ -1,0 +1,4366 @@
+{
+  "fields": {
+    "name": [
+      "National Iranian Oil Company"
+    ],
+    "identifier": null,
+    "profile": null,
+    "country": [
+      "IRN"
+    ],
+    "address": [
+      "No. 18 Roodsar St. Hafez Ave. Tehran"
+    ],
+    "date_of_birth": null,
+    "contact": null,
+    "type": null
+  },
+  "data": [
+    {
+      "profile": "corporate",
+      "score": 164.88306,
+      "entity_id": "xYCkQF4AB2p2YUI7EAL-YQ",
+      "label": "NATIONAL IRANIAN OIL COMPANY",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "11317",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "C498327",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "178363",
+          "type": "eu_fsd_id",
+          "label": "Eu Fsd Id"
+        },
+        {
+          "value": "8561",
+          "type": "fra_asset_freeze_id",
+          "label": "Fra Asset Freeze Id"
+        },
+        {
+          "value": "10100260838",
+          "type": "irn_national_id",
+          "label": "Irn National Id"
+        },
+        {
+          "value": "12741",
+          "type": "gbr_hm_treasury_sanction_group_id",
+          "label": "Gbr Hm Treasury Sanction Group Id"
+        },
+        {
+          "value": "INU0318",
+          "type": "gbr_uk_sanctions_id",
+          "label": "Gbr Uk Sanctions Id"
+        },
+        {
+          "value": "IRC0047087",
+          "type": "xxx_cedar_rose_uid",
+          "label": "Xxx Cedar Rose Uid"
+        },
+        {
+          "value": "5c625abbe88a7e0001cae4d0",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "NK-dEqWCxXHxuQ4tbWFS9UWLv",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "EU.13563.48",
+          "type": "eu_sanction_rn",
+          "label": "Eu Sanction Rn"
+        },
+        {
+          "value": "T06UF0282C",
+          "type": "sgp_unqiue_entity_number",
+          "label": "Sgp Unqiue Entity Number"
+        },
+        {
+          "value": "IR0000047087",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "4976",
+          "type": "irn_reg_number",
+          "label": "Irn Reg Number"
+        },
+        {
+          "value": "4976",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "1863",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "1863",
+          "type": "unknown_commercial_register_id",
+          "label": "Unknown Commercial Register Id"
+        },
+        {
+          "value": "1863 4976 EPTDKB2J3TX1",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "4976",
+          "type": "unknown_commercial_register_id",
+          "label": "Unknown Commercial Register Id"
+        },
+        {
+          "value": "EPTDKB2J3TX1",
+          "type": "unknown_commercial_register_id",
+          "label": "Unknown Commercial Register Id"
+        },
+        {
+          "value": "IR0000047087",
+          "type": "unknown_commercial_register_id",
+          "label": "Unknown Commercial Register Id"
+        },
+        {
+          "value": "JZW7KUPTSC68",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "XESRX67LFPD3",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "First Central Building, Taleghan St P.O. Box 1863 and 2501, Tehran, 1593657919, IR",
+        "National Iranian Oil Company Building, Taleghani Avenue, Hafez Street, Tehran, Iran",
+        "NIOC HQ, National Iranian Oil Company Hafez  Crossing, Taleghani Avenue, Tehran, IR",
+        "Junction Of Taleghani And Hafez Avenue, Taleghani Avenue, Tehran",
+        "NIOC Central Building Junction Of Taleghani Avenue And Hafez Avenue Tehran, 15875-1863, Iran",
+        "National Iranian Oil Company Building 214 Khorramshahr  Avenue, Tehran, IR",
+        "PO Box 15875-1863, Ayatolah Taleghani Avenue, Tehran 1593657919, IRN",
+        "\u062a\u0647\u0631\u0627\u0646 \u062e\u06cc\u0627\u0628\u0627\u0646 \u0637\u0627\u0644\u0642\u0627\u0646\u06cc \u0646\u0628\u0634 \u062d\u0627\u0641\u0638",
+        "thran khyaban talqany nbsh hafz",
+        "Tehran Khayaban Taleqani Nabsh Hafez",
+        "\u0650Tehran Taleghani Street Hafez Intersection",
+        "Tehran Taleghani Street Hafez Intersection",
+        "Room No. 505 5th Floor NIOC Building Taleghani Street, Tehran, IR",
+        "Gandi Street, Taleghani Avenue 53, Tehran, IR",
+        "Public Relations, 1st Floor, 3rd NIOC Headquarters, Tehran, IR",
+        "AE"
+      ],
+      "countries": [
+        "IRN",
+        "GBR",
+        "SGP",
+        "ARE"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "1156f0dc1c28efac99997409689a302c",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "10a889609ddae6cc31773feebe48166b",
+        "4ea8bac1bed868e1510ffd21842e9551",
+        "583b1add2394ddffb7ae8037688319dc",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "ded706ef28cdc649b6fc5142bc542890",
+        "60831d5896725a9cfa00cc749d08b45d",
+        "6ce51469f57d98cad05bbdcb233abf68",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "c10d482320f207d92aa814519c3bd686",
+        "2fd2992624548b40601967eed6d1f358",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "ad6dc774c74b92159422deabc5aee661",
+        "b97ad5c858093e5227b2359a0078696f",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "f4ce10ac8bdc0bd9bcb31cb868b4b539",
+        "b4ced6edb50f667753f1e880d1313231",
+        "c22aabd1653affa3d007fb01dcc66b72"
+      ],
+      "typed_matched_queries": [
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>NATIONAL</em> <em>IRANIAN</em> <em>OIL</em> <em>COMPANY</em>",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> <em>Company</em>",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> <em>Company</em> Private Joint Stock <em>Company</em>",
+          "<em>Iranian</em> <em>National</em> <em>Oil</em> <em>Company</em>",
+          "The <em>National</em> <em>Iranian</em> <em>Oil</em> <em>Company</em>",
+          "<em>NATIONAL</em> <em>IRANIAN</em> <em>OIL</em> COMPANY",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Co",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Company",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Company Private Joint Stock Company",
+          "<em>Iranian</em> <em>National</em> <em>Oil</em> Company"
+        ],
+        "address": [
+          "National Iranian Oil Company Building, Taleghani <em>Avenue</em>, <em>Hafez</em> <em>Street</em>, <em>Tehran</em>, Iran",
+          "NIOC HQ, National Iranian Oil Company <em>Hafez</em>  Crossing, Taleghani <em>Avenue</em>, <em>Tehran</em>, IR",
+          "Junction Of Taleghani And <em>Hafez</em> <em>Avenue</em>, Taleghani <em>Avenue</em>, <em>Tehran</em>",
+          "NIOC Central Building Junction Of Taleghani <em>Avenue</em> And <em>Hafez</em> <em>Avenue</em> <em>Tehran</em>, 15875-1863, Iran",
+          "\u0650<em>Tehran</em> Taleghani <em>Street</em> <em>Hafez</em> Intersection"
+        ],
+        "country": [
+          "<em>IRN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>NATIONAL</em> <em>IRANIAN</em> <em>OIL</em> <em>COMPANY</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3899258598009553,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3899258598009553,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> <em>Company</em> Private Joint Stock <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.23395551588057317,
+              "lv": 0.736842105263158,
+              "fz": 0.5833333333333333,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Iranian</em> <em>National</em> <em>Oil</em> <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3899258598009553,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "The <em>National</em> <em>Iranian</em> <em>Oil</em> <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3899258598009553,
+              "lv": 0.9333333333333333,
+              "fz": 0.875,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>NATIONAL</em> <em>IRANIAN</em> <em>OIL</em> COMPANY",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3899258598009553,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Co",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3899258598009553,
+              "lv": 0.9019607843137255,
+              "fz": 0.8214285714285714,
+              "l1": 0.8214285714285714,
+              "l2": 0.8214285714285714
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3899258598009553,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Company Private Joint Stock Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.23395551588057317,
+              "lv": 0.736842105263158,
+              "fz": 0.5833333333333333,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Iranian</em> <em>National</em> <em>Oil</em> Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3899258598009553,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "National Iranian Oil Company Building, Taleghani <em>Avenue</em>, <em>Hafez</em> <em>Street</em>, <em>Tehran</em>, Iran",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5294117647058824
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "NIOC HQ, National Iranian Oil Company <em>Hafez</em>  Crossing, Taleghani <em>Avenue</em>, <em>Tehran</em>, IR",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5294117647058824
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "Junction Of Taleghani And <em>Hafez</em> <em>Avenue</em>, Taleghani <em>Avenue</em>, <em>Tehran</em>",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5294117647058824
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "NIOC Central Building Junction Of Taleghani <em>Avenue</em> And <em>Hafez</em> <em>Avenue</em> <em>Tehran</em>, 15875-1863, Iran",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5294117647058824
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "\u0650<em>Tehran</em> Taleghani <em>Street</em> <em>Hafez</em> Intersection",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5294117647058824
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>IRN</em>",
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "YEM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 160.38214,
+      "entity_id": "FHVL9G1S-Y0Qk4QzZxHyjQ",
+      "label": "NATIONAL IRANIAN TANKER COMPANY",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "15117",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "15118",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "C683861",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "5c487df2a18bbce4b8f156a9",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "10100258391",
+          "type": "irn_national_id",
+          "label": "Irn National Id"
+        },
+        {
+          "value": "178397",
+          "type": "eu_fsd_id",
+          "label": "Eu Fsd Id"
+        },
+        {
+          "value": "8542",
+          "type": "fra_asset_freeze_id",
+          "label": "Fra Asset Freeze Id"
+        },
+        {
+          "value": "12798",
+          "type": "gbr_hm_treasury_sanction_group_id",
+          "label": "Gbr Hm Treasury Sanction Group Id"
+        },
+        {
+          "value": "INU0351",
+          "type": "gbr_uk_sanctions_id",
+          "label": "Gbr Uk Sanctions Id"
+        },
+        {
+          "value": "AEC0008351",
+          "type": "xxx_cedar_rose_uid",
+          "label": "Xxx Cedar Rose Uid"
+        },
+        {
+          "value": "EU.13569.42",
+          "type": "eu_sanction_rn",
+          "label": "Eu Sanction Rn"
+        },
+        {
+          "value": "5c625acde88a7e0001cae4d8",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "NK-eRmwUfk3rVngHaYVPbUWUW",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "0101754",
+          "type": "int_maritime_org_id",
+          "label": "Int Maritime Org Id"
+        },
+        {
+          "value": "11010100258391",
+          "type": "irn_coc_internal_id_cardno",
+          "label": "Irn Coc Internal Id Cardno"
+        },
+        {
+          "value": "4891",
+          "type": "unknown_national_id_num",
+          "label": "Unknown National Id Num"
+        },
+        {
+          "value": "4891",
+          "type": "irn_reg_number",
+          "label": "Irn Reg Number"
+        },
+        {
+          "value": "100258396",
+          "type": "irn_reg_number",
+          "label": "Irn Reg Number"
+        },
+        {
+          "value": "IRC1809993",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "4891",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "100258396",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "10100258391",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "821415268",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "0045050215",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "0045050215",
+          "type": "unknown_commercial_register_id",
+          "label": "Unknown Commercial Register Id"
+        },
+        {
+          "value": "4891",
+          "type": "unknown_commercial_register_id",
+          "label": "Unknown Commercial Register Id"
+        },
+        {
+          "value": "D3ERTVWL6RG5",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "J8AQG9ZH6CA3",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "J8AQG9ZH6CA3",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "J8AQG9ZH6CA3",
+          "type": "unknown_commercial_register_id",
+          "label": "Unknown Commercial Register Id"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "35 East Shahid Atefi St.,Africa Ave. P.O. Box 19395-4833, Tehran, 19177, IR",
+        "NITC Building, 67-88, Shahid Atefi Street, Africa Avenue, Tehran, Iran",
+        "No. 65 and 67 Shahid Atefi Street, Africa Blvd, Tehran, Iran",
+        "Al Wahda Street, Street No. 4, Sharjah, United Arab Emirates",
+        "P.O. Box 3267, Sharjah, United Arab Emirates",
+        "ARE",
+        "\u062a\u0647\u0631\u0627\u0646 \u062e\u06cc\u0627\u0628\u0627\u0646 \u0622\u0641\u0631\u06cc\u0642\u0627 \u062e\u06cc\u0627\u0628\u0627\u0646 \u0634\u0647\u06cc\u062f \u0639\u0627\u0637\u0641\u06cc \u0634\u0631\u0642\u06cc \u0634\u0645\u0627\u0631\u0647 65\u064867",
+        "thran khyaban afryqa khyaban shhyd \u02bfatfy shrqy shmarh 65w67",
+        "Tehran Khayaban Africa Khayaban Emotional Martyr Sharqi Shamara 65 and 67",
+        "\u062a\u0647\u0631\u0627\u0646 \u0628\u0644\u0648\u0627\u0631 \u0646\u0644\u0633\u0648\u0646 \u0645\u0627\u0646\u062f\u0644\u0627-\u06a9\u0648\u0686\u0647 \u0634\u0647\u06cc\u062f \u0639\u0627\u0637\u0641\u06cc \u0634\u0631\u0642\u06cc -\u067e\u0644\u0627\u06a9 35",
+        "thran blwar nlswn mandla-kwchh shhyd \u02bfatfy shrqy -plak 35",
+        "Tehran, Nelson Mandela-Koche, Eastern Emotional Martyr - Black 35",
+        "67888 Atefi Avenue, Africa Street, 19177 Tehran, Iran",
+        "\u062a\u0647\u0631\u0627\u0646 \u062e\u064a\u0627\u0628\u0627\u0646 \u0622\u0641\u0631\u064a\u0642\u0627 \u062e\u064a\u0627\u0628\u0627\u0646 \u0634\u0647\u064a\u062f \u0639\u0627\u0637\u0641\u06cc \u0634\u0631\u0642\u06cc \u0634\u0645\u0627\u0631\u0647 \u06f6\u06f5 \u0648\u06f6\u06f7",
+        "thran khyaban afryqa khyaban shhyd \u02bfatfy shrqy shmarh 65 w67",
+        "Tehran Khayaban Africa Khayaban Shahid Atef Sharqi Shamarah 65 and 67"
+      ],
+      "countries": [
+        "IRN",
+        "ARE",
+        "CHN",
+        "CYP",
+        "MLT"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "1156f0dc1c28efac99997409689a302c",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "0cf0044442daf17258e27a6ddd49770f",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "e517c714b560f159a89a9501ed7dd84e",
+        "10a889609ddae6cc31773feebe48166b",
+        "feaa37a992b152dd64b445978aea652a",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "ded706ef28cdc649b6fc5142bc542890",
+        "60831d5896725a9cfa00cc749d08b45d",
+        "6ce51469f57d98cad05bbdcb233abf68",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "c10d482320f207d92aa814519c3bd686",
+        "b6382672c6741fe1bca28d2668c1732b",
+        "2fd2992624548b40601967eed6d1f358",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "b97ad5c858093e5227b2359a0078696f",
+        "ad6dc774c74b92159422deabc5aee661",
+        "56cbecf2464d41b7233042b97ed7660a",
+        "b428ecdae0aaf17bf21e7be46ae5bbf7",
+        "b6382672c6741fe1bca28d2668c1732b",
+        "cff31c306a1e06013f2acb980d1255ac",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "f4ce10ac8bdc0bd9bcb31cb868b4b539",
+        "b4ced6edb50f667753f1e880d1313231"
+      ],
+      "typed_matched_queries": [
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Tanker <em>Company</em>",
+          "<em>NATIONAL</em> <em>IRANIAN</em> TANKER <em>COMPANY</em>",
+          "<em>NATIONAL</em> <em>IRANIAN</em> TANKER <em>COMPANY</em> LLC",
+          "<em>NATIONAL</em> <em>IRANIAN</em> TANKER <em>COMPANY</em> LLC SHARJAH BRANCH",
+          "<em>National</em> <em>Iranian</em> Tanker <em>Company</em>",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Tanker Company",
+          "<em>National</em> <em>Oil</em> Tanker Of Iran",
+          "<em>NATIONAL</em> <em>IRANIAN</em> TANKER COMPANY",
+          "<em>NATIONAL</em> <em>IRANIAN</em> TANKER COMPANY LLC",
+          "<em>NATIONAL</em> <em>IRANIAN</em> TANKER COMPANY LLC SHARJAH BRANCH"
+        ],
+        "address": [
+          "35 East Shahid Atefi <em>St</em>.,Africa <em>Ave</em>. P.O. Box 19395-4833, <em>Tehran</em>, 19177, IR",
+          "NITC Building, 67-88, Shahid Atefi <em>Street</em>, Africa <em>Avenue</em>, <em>Tehran</em>, Iran",
+          "<em>No</em>. 65 and 67 Shahid Atefi <em>Street</em>, Africa Blvd, <em>Tehran</em>, Iran",
+          "67888 Atefi <em>Avenue</em>, Africa <em>Street</em>, 19177 <em>Tehran</em>, Iran",
+          "Al Wahda <em>Street</em>, <em>Street</em> <em>No</em>. 4, Sharjah, United Arab Emirates"
+        ],
+        "country": [
+          "<em>IRN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Tanker <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.29244439485071644,
+              "lv": 0.8888888888888888,
+              "fz": 0.8,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>NATIONAL</em> <em>IRANIAN</em> TANKER <em>COMPANY</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3605177887727839,
+              "lv": 0.8135593220338984,
+              "fz": 0.6451612903225806,
+              "l1": 0.6071428571428571,
+              "l2": 0.8571428571428571
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>NATIONAL</em> <em>IRANIAN</em> TANKER <em>COMPANY</em> LLC",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3605177887727839,
+              "lv": 0.7619047619047619,
+              "fz": 0.5714285714285714,
+              "l1": 0.6071428571428571,
+              "l2": 0.8571428571428571
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>NATIONAL</em> <em>IRANIAN</em> TANKER <em>COMPANY</em> LLC SHARJAH BRANCH",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.21631067326367034,
+              "lv": 0.641025641025641,
+              "fz": 0.43999999999999995,
+              "l1": 0.6071428571428571,
+              "l2": 0.8571428571428571
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> Tanker <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3605177887727839,
+              "lv": 0.8135593220338984,
+              "fz": 0.6451612903225806,
+              "l1": 0.6071428571428571,
+              "l2": 0.8571428571428571
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Tanker Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.29244439485071644,
+              "lv": 0.8888888888888888,
+              "fz": 0.8,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Oil</em> Tanker Of Iran",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.04244439485071645,
+              "lv": 0.7454545454545455,
+              "fz": 0.5,
+              "l1": 0.32142857142857145,
+              "l2": 0.6071428571428571
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>NATIONAL</em> <em>IRANIAN</em> TANKER COMPANY",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3605177887727839,
+              "lv": 0.8135593220338984,
+              "fz": 0.6451612903225806,
+              "l1": 0.6071428571428571,
+              "l2": 0.8571428571428571
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>NATIONAL</em> <em>IRANIAN</em> TANKER COMPANY LLC",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3605177887727839,
+              "lv": 0.7619047619047619,
+              "fz": 0.5714285714285714,
+              "l1": 0.6071428571428571,
+              "l2": 0.8571428571428571
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>NATIONAL</em> <em>IRANIAN</em> TANKER COMPANY LLC SHARJAH BRANCH",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.21631067326367034,
+              "lv": 0.641025641025641,
+              "fz": 0.43999999999999995,
+              "l1": 0.6071428571428571,
+              "l2": 0.8571428571428571
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "35 East Shahid Atefi <em>St</em>.,Africa <em>Ave</em>. P.O. Box 19395-4833, <em>Tehran</em>, 19177, IR",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "NITC Building, 67-88, Shahid Atefi <em>Street</em>, Africa <em>Avenue</em>, <em>Tehran</em>, Iran",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "<em>No</em>. 65 and 67 Shahid Atefi <em>Street</em>, Africa Blvd, <em>Tehran</em>, Iran",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "67888 Atefi <em>Avenue</em>, Africa <em>Street</em>, 19177 <em>Tehran</em>, Iran",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "Al Wahda <em>Street</em>, <em>Street</em> <em>No</em>. 4, Sharjah, United Arab Emirates",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>IRN</em>",
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "YEM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 150.9603,
+      "entity_id": "QXzneZlZ-Mj0shAdo7-YTA",
+      "label": "National Iranian Oil Refining and Distribution Company",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "29792",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "10101335408",
+          "type": "irn_national_id",
+          "label": "Irn National Id"
+        },
+        {
+          "value": "178392",
+          "type": "eu_fsd_id",
+          "label": "Eu Fsd Id"
+        },
+        {
+          "value": "C683858",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "8541",
+          "type": "fra_asset_freeze_id",
+          "label": "Fra Asset Freeze Id"
+        },
+        {
+          "value": "12797",
+          "type": "gbr_hm_treasury_sanction_group_id",
+          "label": "Gbr Hm Treasury Sanction Group Id"
+        },
+        {
+          "value": "INU0349",
+          "type": "gbr_uk_sanctions_id",
+          "label": "Gbr Uk Sanctions Id"
+        },
+        {
+          "value": "5c6df2010971f50001a0b290",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "EU.13568.43",
+          "type": "eu_sanction_rn",
+          "label": "Eu Sanction Rn"
+        },
+        {
+          "value": "NK-iuLeLGhKWfJUMYpT5SnWVC",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "89152",
+          "type": "unknown_national_id_num",
+          "label": "Unknown National Id Num"
+        },
+        {
+          "value": "89152",
+          "type": "irn_reg_number",
+          "label": "Irn Reg Number"
+        },
+        {
+          "value": "89152",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "10101335408",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "GU3RSD4MZZK4",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "IR0000365670",
+          "type": "unknown",
+          "label": "Unknown"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "4 Varsho Street, Tehran, Iran",
+        "P.O. Box 15815/3499, No. 4 Varsho Street, 1598666611, Iran",
+        "4 Varsho Street, T\u00e9h\u00e9ran 1598666611, P.O. Box 15815-3499, T\u00e9h\u00e9ran, Iran, IRAN",
+        "4 Varsho Street, Teheran 1598666611, P.O. Box 15815-3499, Teheran, Iran, IRAN",
+        "4 Varsho Street, Tehran 1598666611,, Tehran, 15815/3499,, IRAN (ISLAMIC REPUBLIC OF)",
+        "\u062e \u0637\u0627\u0644\u0642\u0627\u0646\u06cc \u0646\u0628\u0634 \u062e \u062d\u0627\u0641\u0638 \u0633\u0627\u062e\u062a\u0645\u0627\u0646 \u0645\u0631\u06a9\u0632\u06cc \u0634\u0631\u06a9\u062a \u0645\u0644\u06cc \u0646\u0641\u062a \u0627\u06cc\u0631\u0627\u0646",
+        "kh talqany nbsh kh hafz sakhtman mrkzy shrkt mly nft ayran",
+        "Taleghani St., corner of Hafez St., National Iranian Oil Company Central Building",
+        "4 Varsho Street, Tehran, 1598666611, IR",
+        "Talaghani Street Hafez Street Headquarters National Iranian Oil Company",
+        "263 Ostad Nejatollahi Street, Tehran, 14166, IR",
+        "197 Taleghani Avenue, Tehran, 15918, IR",
+        "194 Sepahbod Gharani Ave., Tehran, 15989, IR",
+        "Opposite of Arak Alley, Ostad Nejatollahi Ave, Tehran, 15989, IR",
+        "P.O. Box 79145/3184, Tehran, IR",
+        "PO Box 15815/3499, Tehran, IR",
+        "No. 1, Iranshahr Ave. Shadab St., Tehran, IR",
+        "P.O. Box 11365/6714, Tehran, IR"
+      ],
+      "countries": [
+        "IRN"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "10a889609ddae6cc31773feebe48166b",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "ded706ef28cdc649b6fc5142bc542890",
+        "60831d5896725a9cfa00cc749d08b45d",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "c10d482320f207d92aa814519c3bd686",
+        "2fd2992624548b40601967eed6d1f358",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "ad6dc774c74b92159422deabc5aee661",
+        "b97ad5c858093e5227b2359a0078696f",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "f4ce10ac8bdc0bd9bcb31cb868b4b539",
+        "b4ced6edb50f667753f1e880d1313231"
+      ],
+      "typed_matched_queries": [
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining and Distribution <em>Company</em>",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining &amp; Product Distribution <em>Company</em>",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining &amp; Distribution <em>Company</em>",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining & Product Distribution <em>Company</em>",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining & Distribution <em>Company</em>",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining and Distribution Company",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining &amp; Product Distribution Company",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining &amp; Distribution Company",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining & Product Distribution Company",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining & Distribution Company"
+        ],
+        "address": [
+          "<em>No</em>. 1, Iranshahr <em>Ave</em>. Shadab <em>St</em>., <em>Tehran</em>, IR",
+          "4 Varsho <em>Street</em>, <em>Tehran</em>, Iran",
+          "P.O. Box 15815/3499, <em>No</em>. 4 Varsho <em>Street</em>, 1598666611, Iran",
+          "4 Varsho <em>Street</em>, <em>Tehran</em> 1598666611,, <em>Tehran</em>, 15815/3499,, IRAN (ISLAMIC REPUBLIC OF)",
+          "Taleghani <em>St</em>., corner of <em>Hafez</em> <em>St</em>., National Iranian Oil Company Central Building"
+        ],
+        "country": [
+          "<em>IRN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining and Distribution <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.23395551588057317,
+              "lv": 0.6829268292682926,
+              "fz": 0.5185185185185186,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining &amp; Product Distribution <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.16711108277183798,
+              "lv": 0.6222222222222222,
+              "fz": 0.4516129032258065,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining &amp; Distribution <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19496292990047764,
+              "lv": 0.6829268292682926,
+              "fz": 0.5185185185185186,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining & Product Distribution <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19496292990047764,
+              "lv": 0.6511627906976745,
+              "fz": 0.48275862068965514,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining & Distribution <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.23395551588057317,
+              "lv": 0.717948717948718,
+              "fz": 0.56,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining and Distribution Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.23395551588057317,
+              "lv": 0.6829268292682926,
+              "fz": 0.5185185185185186,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining &amp; Product Distribution Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.16711108277183798,
+              "lv": 0.6222222222222222,
+              "fz": 0.4516129032258065,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining &amp; Distribution Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19496292990047764,
+              "lv": 0.6829268292682926,
+              "fz": 0.5185185185185186,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining & Product Distribution Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19496292990047764,
+              "lv": 0.6511627906976745,
+              "fz": 0.48275862068965514,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Refining & Distribution Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.23395551588057317,
+              "lv": 0.717948717948718,
+              "fz": 0.56,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>No</em>. 1, Iranshahr <em>Ave</em>. Shadab <em>St</em>., <em>Tehran</em>, IR",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5294117647058824
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "4 Varsho <em>Street</em>, <em>Tehran</em>, Iran",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5294117647058824
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "P.O. Box 15815/3499, <em>No</em>. 4 Varsho <em>Street</em>, 1598666611, Iran",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5294117647058824
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "4 Varsho <em>Street</em>, <em>Tehran</em> 1598666611,, <em>Tehran</em>, 15815/3499,, IRAN (ISLAMIC REPUBLIC OF)",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5294117647058824
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "Taleghani <em>St</em>., corner of <em>Hafez</em> <em>St</em>., National Iranian Oil Company Central Building",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5294117647058824
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>IRN</em>",
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "YEM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 140.52853,
+      "entity_id": "HKMbV1WSOmItfx8y9_66Gw",
+      "label": "National Iranian Oil Products Distribution Company",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "29793",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "178437",
+          "type": "eu_fsd_id",
+          "label": "Eu Fsd Id"
+        },
+        {
+          "value": "8546",
+          "type": "fra_asset_freeze_id",
+          "label": "Fra Asset Freeze Id"
+        },
+        {
+          "value": "10101122904",
+          "type": "irn_national_id",
+          "label": "Irn National Id"
+        },
+        {
+          "value": "C704126",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "EU.13578.12",
+          "type": "eu_sanction_rn",
+          "label": "Eu Sanction Rn"
+        },
+        {
+          "value": "NK-MzkcsfSy7ttFacahpaWD4E",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "5f97111d3c27390001ebeac6",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "67337",
+          "type": "unknown_national_id_num",
+          "label": "Unknown National Id Num"
+        },
+        {
+          "value": "67337",
+          "type": "irn_reg_number",
+          "label": "Irn Reg Number"
+        },
+        {
+          "value": "67337",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "4000000128233",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "4000000128233",
+          "type": "irn_reg_number",
+          "label": "Irn Reg Number"
+        },
+        {
+          "value": "H2TWUMD3R3E5",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "No 1, Iransahr Building, Opposite of Honarmandan Park Corner of Iransahr Street, Taleghani Avenue, Tehran, IR",
+        "79145/3184 No.1, Tehran, Iranshahr Ave. Shadab.St, Tehran IRAN (ISLAMIC REPUBLIC OF)",
+        "No.1, T\u00e9h\u00e9ran, Iranshahr Ave.Shadab. St, P.O.Box: 79145/3184; Iran, IRAN",
+        "No.1, Teheran, Iranshahr Ave.Shadab. St, P.O.Box: 79145/3184; Iran, IRAN",
+        "No.1, Tehran, Iranshahr Ave. Shadab.  St, P.O. Box: 79145/3184, Tehran, IR"
+      ],
+      "countries": [
+        "IRN"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "10a889609ddae6cc31773feebe48166b",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "ded706ef28cdc649b6fc5142bc542890",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "2fd2992624548b40601967eed6d1f358",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "ad6dc774c74b92159422deabc5aee661",
+        "b97ad5c858093e5227b2359a0078696f",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "b4ced6edb50f667753f1e880d1313231",
+        "f4ce10ac8bdc0bd9bcb31cb868b4b539"
+      ],
+      "typed_matched_queries": [
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Products Distribution <em>Company</em>",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Products  Distribution <em>Company</em>  (NIOPDC)",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Products Distribution <em>Company</em> (NIOPDC)",
+          "<em>National</em> <em>Iranian</em> Petroleum Products Distribution <em>Company</em> Private Joint Stock <em>Company</em>",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Products Distribution Company",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Products  Distribution Company  (NIOPDC)",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Products Distribution Company (NIOPDC)",
+          "<em>National</em> <em>Iranian</em> Petroleum Products Distribution Company Private Joint Stock Company"
+        ],
+        "address": [
+          "<em>No</em> 1, Iransahr Building, Opposite of Honarmandan Park Corner of Iransahr <em>Street</em>, Taleghani <em>Avenue</em>, <em>Tehran</em>, IR",
+          "<em>No</em>.1, <em>Tehran</em>, Iranshahr <em>Ave</em>. Shadab.  <em>St</em>, P.O. Box: 79145/3184, <em>Tehran</em>, IR",
+          "79145/3184 <em>No</em>.1, <em>Tehran</em>, Iranshahr <em>Ave</em>. Shadab.St, <em>Tehran</em> IRAN (ISLAMIC REPUBLIC OF)",
+          "<em>No</em>.1, <em>T\u00e9h\u00e9ran</em>, Iranshahr Ave.Shadab. <em>St</em>, P.O.Box: 79145/3184; Iran, IRAN",
+          "<em>No</em>.1, <em>Teheran</em>, Iranshahr Ave.Shadab. <em>St</em>, P.O.Box: 79145/3184; Iran, IRAN"
+        ],
+        "country": [
+          "<em>IRN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Products Distribution <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.23395551588057317,
+              "lv": 0.717948717948718,
+              "fz": 0.56,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Products  Distribution <em>Company</em>  (NIOPDC)",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19496292990047764,
+              "lv": 0.6588235294117647,
+              "fz": 0.49122807017543857,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Products Distribution <em>Company</em> (NIOPDC)",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19496292990047764,
+              "lv": 0.6588235294117647,
+              "fz": 0.49122807017543857,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> Petroleum Products Distribution <em>Company</em> Private Joint Stock <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.15450762375976454,
+              "lv": 0.5096153846153846,
+              "fz": 0.0,
+              "l1": 0.6071428571428571,
+              "l2": 0.8928571428571429
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Products Distribution Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.23395551588057317,
+              "lv": 0.717948717948718,
+              "fz": 0.56,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Products  Distribution Company  (NIOPDC)",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19496292990047764,
+              "lv": 0.6588235294117647,
+              "fz": 0.49122807017543857,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Products Distribution Company (NIOPDC)",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19496292990047764,
+              "lv": 0.6588235294117647,
+              "fz": 0.49122807017543857,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> Petroleum Products Distribution Company Private Joint Stock Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.15450762375976454,
+              "lv": 0.5096153846153846,
+              "fz": 0.0,
+              "l1": 0.6071428571428571,
+              "l2": 0.8928571428571429
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>No</em> 1, Iransahr Building, Opposite of Honarmandan Park Corner of Iransahr <em>Street</em>, Taleghani <em>Avenue</em>, <em>Tehran</em>, IR",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "<em>No</em>.1, <em>Tehran</em>, Iranshahr <em>Ave</em>. Shadab.  <em>St</em>, P.O. Box: 79145/3184, <em>Tehran</em>, IR",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "79145/3184 <em>No</em>.1, <em>Tehran</em>, Iranshahr <em>Ave</em>. Shadab.St, <em>Tehran</em> IRAN (ISLAMIC REPUBLIC OF)",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "<em>No</em>.1, <em>T\u00e9h\u00e9ran</em>, Iranshahr Ave.Shadab. <em>St</em>, P.O.Box: 79145/3184; Iran, IRAN",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "<em>No</em>.1, <em>Teheran</em>, Iranshahr Ave.Shadab. <em>St</em>, P.O.Box: 79145/3184; Iran, IRAN",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>IRN</em>",
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "YEM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 133.04568,
+      "entity_id": "K-VdBER8OJQDTND8LgVVRw",
+      "label": "Iranian Oil Pipelines and Telecommunication Co.",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "29794",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "178440",
+          "type": "eu_fsd_id",
+          "label": "Eu Fsd Id"
+        },
+        {
+          "value": "10101921197",
+          "type": "irn_national_id",
+          "label": "Irn National Id"
+        },
+        {
+          "value": "8547",
+          "type": "fra_asset_freeze_id",
+          "label": "Fra Asset Freeze Id"
+        },
+        {
+          "value": "12832",
+          "type": "gbr_hm_treasury_sanction_group_id",
+          "label": "Gbr Hm Treasury Sanction Group Id"
+        },
+        {
+          "value": "INU0322",
+          "type": "gbr_uk_sanctions_id",
+          "label": "Gbr Uk Sanctions Id"
+        },
+        {
+          "value": "C782672",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "EU.13579.11",
+          "type": "eu_sanction_rn",
+          "label": "Eu Sanction Rn"
+        },
+        {
+          "value": "NK-RHtUaq9apknNcpMqnwxTNR",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "5f97111d3c27390001ebeac0",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "149271",
+          "type": "irn_reg_number",
+          "label": "Irn Reg Number"
+        },
+        {
+          "value": "1492714",
+          "type": "irn_reg_number",
+          "label": "Irn Reg Number"
+        },
+        {
+          "value": "149271",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "H2Z4QFK1K3G8",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "Qarani Street, No. 135, Tehran, Tehran Province, IR",
+        "No.194, Sepahbod Gharani Ave., Tehran, Iran Tehran IRAN (ISLAMIC REPUBLIC OF)",
+        "No.188 Sepahbod Gharani Ave Karim Khan Blvd, Tehran, IR"
+      ],
+      "countries": [
+        "IRN"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "10a889609ddae6cc31773feebe48166b",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "ded706ef28cdc649b6fc5142bc542890",
+        "60831d5896725a9cfa00cc749d08b45d",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "c10d482320f207d92aa814519c3bd686",
+        "2fd2992624548b40601967eed6d1f358",
+        "b97ad5c858093e5227b2359a0078696f",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "ad6dc774c74b92159422deabc5aee661",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "b4ced6edb50f667753f1e880d1313231",
+        "f4ce10ac8bdc0bd9bcb31cb868b4b539"
+      ],
+      "typed_matched_queries": [
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Pipelines And Telecommunications <em>Company</em>",
+          "<em>Iranian</em> <em>Oil</em> Pipelines and Telecommunications <em>Company</em>",
+          "<em>Iranian</em> <em>Oil</em> Pipelines and  Telecommunications <em>Company</em>  (IOPTC)",
+          "<em>IRANIAN</em> <em>OIL</em> PIPELINES &amp; TELECOMMUNICATIONS <em>COMPANY</em>",
+          "<em>Iranian</em> <em>Oil</em> Pipeline and Telecommunications <em>Company</em>",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Pipelines And Telecommunications Company",
+          "<em>Iranian</em> <em>Oil</em> Pipelines and Telecommunication Co.",
+          "<em>Iranian</em> <em>Oil</em> Pipelines and Telecommunications Company",
+          "<em>Iranian</em> <em>Oil</em> Pipelines and  Telecommunications Company  (IOPTC)",
+          "<em>IRANIAN</em> <em>OIL</em> PIPELINES &amp; TELECOMMUNICATIONS COMPANY"
+        ],
+        "address": [
+          "Qarani <em>Street</em>, <em>No</em>. 135, <em>Tehran</em>, <em>Tehran</em> Province, IR",
+          "<em>No</em>.194, Sepahbod Gharani <em>Ave</em>., <em>Tehran</em>, Iran <em>Tehran</em> IRAN (ISLAMIC REPUBLIC OF)",
+          "<em>No</em>.188 Sepahbod Gharani <em>Ave</em> Karim Khan Blvd, <em>Tehran</em>, IR"
+        ],
+        "country": [
+          "<em>IRN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Pipelines And Telecommunications <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.23395551588057317,
+              "lv": 0.6292134831460674,
+              "fz": 0.4590163934426229,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Iranian</em> <em>Oil</em> Pipelines and Telecommunications <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.27205605327112853,
+              "lv": 0.5625,
+              "fz": 0.0,
+              "l1": 0.6785714285714286,
+              "l2": 0.6785714285714286
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Iranian</em> <em>Oil</em> Pipelines and  Telecommunications <em>Company</em>  (IOPTC)",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2176448426169028,
+              "lv": 0.5232558139534884,
+              "fz": 0.0,
+              "l1": 0.6785714285714286,
+              "l2": 0.6785714285714286
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>IRANIAN</em> <em>OIL</em> PIPELINES &amp; TELECOMMUNICATIONS <em>COMPANY</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2176448426169028,
+              "lv": 0.55,
+              "fz": 0.0,
+              "l1": 0.6785714285714286,
+              "l2": 0.6785714285714286
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Iranian</em> <em>Oil</em> Pipeline and Telecommunications <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2176448426169028,
+              "lv": 0.5696202531645569,
+              "fz": 0.33333333333333337,
+              "l1": 0.6785714285714286,
+              "l2": 0.6785714285714286
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Pipelines And Telecommunications Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19496292990047764,
+              "lv": 0.6292134831460674,
+              "fz": 0.4590163934426229,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Iranian</em> <em>Oil</em> Pipelines and Telecommunication Co.",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2176448426169028,
+              "lv": 0.5945945945945945,
+              "fz": 0.34782608695652173,
+              "l1": 0.42857142857142855,
+              "l2": 0.6071428571428571
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Iranian</em> <em>Oil</em> Pipelines and Telecommunications Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.27205605327112853,
+              "lv": 0.5625,
+              "fz": 0.0,
+              "l1": 0.6785714285714286,
+              "l2": 0.6785714285714286
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Iranian</em> <em>Oil</em> Pipelines and  Telecommunications Company  (IOPTC)",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2176448426169028,
+              "lv": 0.5232558139534884,
+              "fz": 0.0,
+              "l1": 0.6785714285714286,
+              "l2": 0.6785714285714286
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>IRANIAN</em> <em>OIL</em> PIPELINES &amp; TELECOMMUNICATIONS COMPANY",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2176448426169028,
+              "lv": 0.55,
+              "fz": 0.0,
+              "l1": 0.6785714285714286,
+              "l2": 0.6785714285714286
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "Qarani <em>Street</em>, <em>No</em>. 135, <em>Tehran</em>, <em>Tehran</em> Province, IR",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "<em>No</em>.194, Sepahbod Gharani <em>Ave</em>., <em>Tehran</em>, Iran <em>Tehran</em> IRAN (ISLAMIC REPUBLIC OF)",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "<em>No</em>.188 Sepahbod Gharani <em>Ave</em> Karim Khan Blvd, <em>Tehran</em>, IR",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>IRN</em>",
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "YEM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 133.00485,
+      "entity_id": "8dwa26C06xN9YJCj3GrIGg",
+      "label": "National Iranian Oil Engineering And Construction Company",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "29795",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "178452",
+          "type": "eu_fsd_id",
+          "label": "Eu Fsd Id"
+        },
+        {
+          "value": "8548",
+          "type": "fra_asset_freeze_id",
+          "label": "Fra Asset Freeze Id"
+        },
+        {
+          "value": "10101336865",
+          "type": "irn_national_id",
+          "label": "Irn National Id"
+        },
+        {
+          "value": "C782674",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "EU.13582.84",
+          "type": "eu_sanction_rn",
+          "label": "Eu Sanction Rn"
+        },
+        {
+          "value": "NK-csN8S8g9YfXyAFuqaQLVFL",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "5f97111d3c27390001ebeac2",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "89299",
+          "type": "unknown_national_id_num",
+          "label": "Unknown National Id Num"
+        },
+        {
+          "value": "89299",
+          "type": "irn_reg_number",
+          "label": "Irn Reg Number"
+        },
+        {
+          "value": "89299",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "H37DBQ7LUAL6",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "IR0000047088",
+          "type": "unknown",
+          "label": "Unknown"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "No. 247 Ostad Nejatollahi Avenue, Corner of Shahid Kalantary Street, Tehran, IR",
+        "No.263, Ostad Nejatollahi Ave., Tehran, Iran Tehran IRAN (ISLAMIC REPUBLIC OF)",
+        "No.263 Ostad Nejatollahi Ave. PO Box 11365/6714, Tehran, IR"
+      ],
+      "countries": [
+        "IRN"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "10a889609ddae6cc31773feebe48166b",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "ded706ef28cdc649b6fc5142bc542890",
+        "60831d5896725a9cfa00cc749d08b45d",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "2fd2992624548b40601967eed6d1f358",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "ad6dc774c74b92159422deabc5aee661",
+        "b97ad5c858093e5227b2359a0078696f",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "f4ce10ac8bdc0bd9bcb31cb868b4b539",
+        "b4ced6edb50f667753f1e880d1313231"
+      ],
+      "typed_matched_queries": [
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering And Construction <em>Company</em>",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering  and Construction <em>Company</em>  (NIOEC)",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering and Construction <em>Company</em> Private Joint Stock <em>Company</em>",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering and Construction <em>Company</em> (NIOEC)",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering & Construction <em>Company</em>",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering And Construction Company",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering  and Construction Company  (NIOEC)",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering and Construction Company Private Joint Stock Company",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering and Construction Company (NIOEC)",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering & Construction Company"
+        ],
+        "address": [
+          "<em>No</em>. 247 Ostad Nejatollahi <em>Avenue</em>, Corner of Shahid Kalantary <em>Street</em>, <em>Tehran</em>, IR",
+          "<em>No</em>.263, Ostad Nejatollahi <em>Ave</em>., <em>Tehran</em>, Iran <em>Tehran</em> IRAN (ISLAMIC REPUBLIC OF)",
+          "<em>No</em>.263 Ostad Nejatollahi <em>Ave</em>. PO Box 11365/6714, <em>Tehran</em>, IR"
+        ],
+        "country": [
+          "<em>IRN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering And Construction <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.23395551588057317,
+              "lv": 0.6588235294117647,
+              "fz": 0.49122807017543857,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering  and Construction <em>Company</em>  (NIOEC)",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19496292990047764,
+              "lv": 0.6153846153846154,
+              "fz": 0.4444444444444444,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering and Construction <em>Company</em> Private Joint Stock <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.16711108277183798,
+              "lv": 0.5333333333333333,
+              "fz": 0.36363636363636365,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering and Construction <em>Company</em> (NIOEC)",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19496292990047764,
+              "lv": 0.6153846153846154,
+              "fz": 0.4444444444444444,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering & Construction <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.23395551588057317,
+              "lv": 0.691358024691358,
+              "fz": 0.5283018867924528,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering And Construction Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.23395551588057317,
+              "lv": 0.6588235294117647,
+              "fz": 0.49122807017543857,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering  and Construction Company  (NIOEC)",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19496292990047764,
+              "lv": 0.6153846153846154,
+              "fz": 0.4444444444444444,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering and Construction Company Private Joint Stock Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.16711108277183798,
+              "lv": 0.5333333333333333,
+              "fz": 0.36363636363636365,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering and Construction Company (NIOEC)",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.19496292990047764,
+              "lv": 0.6153846153846154,
+              "fz": 0.4444444444444444,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Engineering & Construction Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.23395551588057317,
+              "lv": 0.691358024691358,
+              "fz": 0.5283018867924528,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>No</em>. 247 Ostad Nejatollahi <em>Avenue</em>, Corner of Shahid Kalantary <em>Street</em>, <em>Tehran</em>, IR",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "<em>No</em>.263, Ostad Nejatollahi <em>Ave</em>., <em>Tehran</em>, Iran <em>Tehran</em> IRAN (ISLAMIC REPUBLIC OF)",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "<em>No</em>.263 Ostad Nejatollahi <em>Ave</em>. PO Box 11365/6714, <em>Tehran</em>, IR",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.47058823529411764
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>IRN</em>",
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "YEM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 118.752975,
+      "entity_id": "CDNwkoEwb9xagn8v2w_rvQ",
+      "label": "Iranian Oil Terminals Company",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "10101920450",
+          "type": "irn_national_id",
+          "label": "Irn National Id"
+        },
+        {
+          "value": "52940",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "178521",
+          "type": "eu_fsd_id",
+          "label": "Eu Fsd Id"
+        },
+        {
+          "value": "8502",
+          "type": "fra_asset_freeze_id",
+          "label": "Fra Asset Freeze Id"
+        },
+        {
+          "value": "C683864",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "EU.13596.49",
+          "type": "eu_sanction_rn",
+          "label": "Eu Sanction Rn"
+        },
+        {
+          "value": "5fa9a70d91617c0001cb4952",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "NK-bHKn5Nb3zqAVPfGZguJuk4",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "149197",
+          "type": "irn_reg_number",
+          "label": "Irn Reg Number"
+        },
+        {
+          "value": "411155817498",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "149197",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "10101920450",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "HZF5UM3STJG1",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "J5Z8CEEL1DS9",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "No. 11 Hojjat Souri Street (7th  Street), Pasdaran Ave, Tehran, IR",
+        "Hafez Corner, National Iranian Oil Company Headquarters, Taleghani Street,, Tehran, 1514846116, IR",
+        "Shomal Oil Terminal, Neka, Mazandaran, Iran",
+        "Kharg Oil Terminal, Kharg Island, Bushehr, IR",
+        "South Pars Condensate Oil Terminal, Asaluyeh, Bushehr, IR",
+        "Mahshahr Oil Terminal, Bandar-e Mahshahr, Khuzestan, IR",
+        "Jask Oil Terminal, Jask, Hormozgan, IR",
+        "No. 11 Hojjat Souri Street (7th Street), Pasdaran Ave., T\u00e9h\u00e9ran, Iran, IRAN",
+        "No. 11 Hojjat Souri Street (7th Street), Pasdaran Ave., Teheran, Iran, IRAN",
+        "Argantin Square Beihaghi Avn opposit Shahrvand #17 2nd floor, Tehran, IR",
+        "No.17 Beyhaghi St, Argentine Sq, Tehran, IR"
+      ],
+      "countries": [
+        "IRN"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "10a889609ddae6cc31773feebe48166b",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "ded706ef28cdc649b6fc5142bc542890",
+        "60831d5896725a9cfa00cc749d08b45d",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "2fd2992624548b40601967eed6d1f358",
+        "ad6dc774c74b92159422deabc5aee661",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "b97ad5c858093e5227b2359a0078696f",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "f4ce10ac8bdc0bd9bcb31cb868b4b539"
+      ],
+      "typed_matched_queries": [
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Terminals <em>Company</em>",
+          "<em>Iranian</em> <em>Oil</em> Terminals <em>Company</em>",
+          "<em>Iranian</em> <em>Oil</em> Terminals Private Joint Stock <em>Company</em>",
+          "<em>Iranian</em> <em>Oil</em> Terminals <em>Company</em> (IOTC)",
+          "<em>National</em> <em>Iranian</em> <em>Oil</em> Terminals Company",
+          "Iran <em>Oil</em> Terminals <em>Company</em>",
+          "<em>Iranian</em> <em>Oil</em> Terminals Company",
+          "<em>Iranian</em> <em>Oil</em> Terminals Private Joint Stock Company",
+          "<em>Iranian</em> <em>Oil</em> Terminals Company (IOTC)",
+          "Iran <em>Oil</em> Terminals Company"
+        ],
+        "address": [
+          "<em>No</em>. 11 Hojjat Souri <em>Street</em> (7th  <em>Street</em>), Pasdaran <em>Ave</em>, <em>Tehran</em>, IR",
+          "<em>No</em>. 11 Hojjat Souri <em>Street</em> (7th <em>Street</em>), Pasdaran <em>Ave</em>., <em>T\u00e9h\u00e9ran</em>, Iran, IRAN",
+          "<em>No</em>. 11 Hojjat Souri <em>Street</em> (7th <em>Street</em>), Pasdaran <em>Ave</em>., <em>Teheran</em>, Iran, IRAN",
+          "<em>Hafez</em> Corner, National Iranian Oil Company Headquarters, Taleghani <em>Street</em>,, <em>Tehran</em>, 1514846116, IR",
+          "<em>No</em>.17 Beyhaghi <em>St</em>, Argentine Sq, <em>Tehran</em>, IR"
+        ],
+        "country": [
+          "<em>IRN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Terminals <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.29244439485071644,
+              "lv": 0.8484848484848485,
+              "fz": 0.736842105263158,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Iranian</em> <em>Oil</em> Terminals <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3627414043615046,
+              "lv": 0.6666666666666667,
+              "fz": 0.3448275862068966,
+              "l1": 0.6785714285714286,
+              "l2": 0.6785714285714286
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Iranian</em> <em>Oil</em> Terminals Private Joint Stock <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2176448426169028,
+              "lv": 0.5324675324675325,
+              "fz": 0.0,
+              "l1": 0.6785714285714286,
+              "l2": 0.6785714285714286
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Iranian</em> <em>Oil</em> Terminals <em>Company</em> (IOTC)",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.27205605327112853,
+              "lv": 0.6129032258064516,
+              "fz": 0.0,
+              "l1": 0.6785714285714286,
+              "l2": 0.6785714285714286
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Iran <em>Oil</em> Terminals <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.029408071028171355,
+              "lv": 0.5925925925925926,
+              "fz": 0.0,
+              "l1": 0.39285714285714285,
+              "l2": 0.39285714285714285
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> <em>Oil</em> Terminals Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.29244439485071644,
+              "lv": 0.8484848484848485,
+              "fz": 0.736842105263158,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Iranian</em> <em>Oil</em> Terminals Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3627414043615046,
+              "lv": 0.6666666666666667,
+              "fz": 0.3448275862068966,
+              "l1": 0.6785714285714286,
+              "l2": 0.6785714285714286
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Iranian</em> <em>Oil</em> Terminals Private Joint Stock Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2176448426169028,
+              "lv": 0.5324675324675325,
+              "fz": 0.0,
+              "l1": 0.6785714285714286,
+              "l2": 0.6785714285714286
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Iranian</em> <em>Oil</em> Terminals Company (IOTC)",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.27205605327112853,
+              "lv": 0.6129032258064516,
+              "fz": 0.0,
+              "l1": 0.6785714285714286,
+              "l2": 0.6785714285714286
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "Iran <em>Oil</em> Terminals Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.029408071028171355,
+              "lv": 0.5925925925925926,
+              "fz": 0.0,
+              "l1": 0.39285714285714285,
+              "l2": 0.39285714285714285
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>No</em>. 11 Hojjat Souri <em>Street</em> (7th  <em>Street</em>), Pasdaran <em>Ave</em>, <em>Tehran</em>, IR",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5294117647058824
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "<em>No</em>. 11 Hojjat Souri <em>Street</em> (7th <em>Street</em>), Pasdaran <em>Ave</em>., <em>T\u00e9h\u00e9ran</em>, Iran, IRAN",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5294117647058824
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "<em>No</em>. 11 Hojjat Souri <em>Street</em> (7th <em>Street</em>), Pasdaran <em>Ave</em>., <em>Teheran</em>, Iran, IRAN",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5294117647058824
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "<em>Hafez</em> Corner, National Iranian Oil Company Headquarters, Taleghani <em>Street</em>,, <em>Tehran</em>, 1514846116, IR",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5294117647058824
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "<em>No</em>.17 Beyhaghi <em>St</em>, Argentine Sq, <em>Tehran</em>, IR",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.5294117647058824
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>IRN</em>",
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "YEM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 142.78395,
+      "entity_id": "Y5pi9FBTyz6h8vq2AoqmKQ",
+      "label": "NATIONAL IRANIAN OIL COMPANY",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "888722",
+          "type": "ontario_corporation_number",
+          "label": "Ontario Corporation Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "Tehran, Iran, Islamic Republic Of",
+        "Toronto, Ontario, Canada"
+      ],
+      "countries": [
+        "CAN",
+        "IRN"
+      ],
+      "sources": [
+        "1f87dab0aa74bd636fc42f26aa49bb00"
+      ],
+      "typed_matched_queries": [
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>NATIONAL</em> <em>IRANIAN</em> <em>OIL</em> <em>COMPANY</em>",
+          "<em>NATIONAL</em> <em>IRANIAN</em> <em>OIL</em> COMPANY"
+        ],
+        "address": [
+          "<em>Tehran</em>, Iran, Islamic Republic Of"
+        ],
+        "country": [
+          "<em>IRN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>NATIONAL</em> <em>IRANIAN</em> <em>OIL</em> <em>COMPANY</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3899258598009553,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>NATIONAL</em> <em>IRANIAN</em> <em>OIL</em> COMPANY",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3899258598009553,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>Tehran</em>, Iran, Islamic Republic Of",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.4117647058823529
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>IRN</em>",
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "YEM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 110.10089,
+      "entity_id": "9h91OYAo0olZFbcjDEvKwQ",
+      "label": "NATIONAL IRANIAN OIL CO",
+      "type": "company",
+      "identifiers": [],
+      "psa_id": null,
+      "addresses": [
+        "Hafez Crossing, Taleqani Avenue Tehran, Iran."
+      ],
+      "countries": [
+        "IRN"
+      ],
+      "sources": [
+        "feaa37a992b152dd64b445978aea652a"
+      ],
+      "typed_matched_queries": [
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>NATIONAL</em> <em>IRANIAN</em> <em>OIL</em> CO"
+        ],
+        "address": [
+          "<em>Hafez</em> Crossing, Taleqani <em>Avenue</em> <em>Tehran</em>, Iran."
+        ],
+        "country": [
+          "<em>IRN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>NATIONAL</em> <em>IRANIAN</em> <em>OIL</em> CO",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3899258598009553,
+              "lv": 0.9019607843137255,
+              "fz": 0.8214285714285714,
+              "l1": 0.8214285714285714,
+              "l2": 0.8214285714285714
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>Hafez</em> Crossing, Taleqani <em>Avenue</em> <em>Tehran</em>, Iran.",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.4117647058823529
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>IRN</em>",
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "YEM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 130.24051,
+      "entity_id": "WdkpzGFcFZ1vIcP1uqpLdw",
+      "label": "\u0634\u0631\u06a9\u062a \u0645\u0644\u06cc \u0645\u0646\u0627\u0637\u0642 \u0646\u0641\u062a \u062e\u06cc\u0632 \u062c\u0646\u0648\u0628",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "10101862318",
+          "type": "irn_national_id",
+          "label": "Irn National Id"
+        },
+        {
+          "value": "C683859",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "5f5f89017e6d080001736a26",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "143256",
+          "type": "irn_reg_number",
+          "label": "Irn Reg Number"
+        },
+        {
+          "value": "48519",
+          "type": "irn_reg_number",
+          "label": "Irn Reg Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "NISOC Building, Fadaeyane Islam St., Ahwaz, IR",
+        "Fadaeyane Islam St. - Panj Tabagheh Bldg. - Block, Ahwaz, IR",
+        "Opposite of Shahrvand - Arjantin Sq. (Tehran HQ), Tehran, IR"
+      ],
+      "countries": [
+        "IRN"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "2fd2992624548b40601967eed6d1f358",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "e85d865943ee6d8369307569d2ad9de0"
+      ],
+      "typed_matched_queries": [
+        "address|V3|0",
+        "address|geoCity|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>National</em> <em>Iranian</em> South <em>Oil</em> Fields <em>Company</em>",
+          "<em>NATIONAL</em> <em>IRANIAN</em> SOUTH <em>OIL</em> <em>COMPANY</em>",
+          "<em>National</em> <em>Iranian</em> South <em>Oil</em> <em>Company</em>",
+          "<em>National</em> <em>Iranian</em> South <em>Oil</em> <em>Company</em>-NISOC",
+          "<em>NATIONAL</em> <em>IRANIAN</em> SOUTH OILFIELDS <em>COMPANY</em>",
+          "<em>National</em> <em>Iranian</em> South <em>Oil</em> Fields Company",
+          "<em>NATIONAL</em> <em>IRANIAN</em> SOUTH <em>OIL</em> COMPANY",
+          "<em>National</em> <em>Iranian</em> South <em>Oil</em> Fields Co",
+          "<em>National</em> <em>Iranian</em> South <em>Oil</em> Company",
+          "<em>National</em> <em>Iranian</em> South <em>Oil</em> Company-NISOC"
+        ],
+        "address": [
+          "NISOC Building, Fadaeyane Islam <em>St</em>., Ahwaz, IR",
+          "Fadaeyane Islam <em>St</em>. - Panj Tabagheh Bldg. - Block, Ahwaz, IR",
+          "Opposite of Shahrvand - Arjantin Sq. (<em>Tehran</em> HQ), <em>Tehran</em>, IR"
+        ],
+        "country": [
+          "<em>IRN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>National</em> <em>Iranian</em> South <em>Oil</em> Fields <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.23395551588057317,
+              "lv": 0.8115942028985508,
+              "fz": 0.6829268292682926,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>NATIONAL</em> <em>IRANIAN</em> SOUTH <em>OIL</em> <em>COMPANY</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.29244439485071644,
+              "lv": 0.9032258064516129,
+              "fz": 0.8235294117647058,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> South <em>Oil</em> <em>Company</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.29244439485071644,
+              "lv": 0.9032258064516129,
+              "fz": 0.8235294117647058,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> South <em>Oil</em> <em>Company</em>-NISOC",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.23395551588057317,
+              "lv": 0.8235294117647058,
+              "fz": 0.7,
+              "l1": 0.75,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>NATIONAL</em> <em>IRANIAN</em> SOUTH OILFIELDS <em>COMPANY</em>",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2703883415795879,
+              "lv": 0.7058823529411764,
+              "fz": 0.5,
+              "l1": 0.6071428571428571,
+              "l2": 0.8571428571428571
+            },
+            "n_common_term_matches": 1,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> South <em>Oil</em> Fields Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.23395551588057317,
+              "lv": 0.8115942028985508,
+              "fz": 0.6829268292682926,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>NATIONAL</em> <em>IRANIAN</em> SOUTH <em>OIL</em> COMPANY",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.29244439485071644,
+              "lv": 0.9032258064516129,
+              "fz": 0.8235294117647058,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> South <em>Oil</em> Fields Co",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.23395551588057317,
+              "lv": 0.78125,
+              "fz": 0.6111111111111112,
+              "l1": 0.75,
+              "l2": 0.8214285714285714
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> South <em>Oil</em> Company",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.29244439485071644,
+              "lv": 0.9032258064516129,
+              "fz": 0.8235294117647058,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>National</em> <em>Iranian</em> South <em>Oil</em> Company-NISOC",
+            "uploaded": "National Iranian Oil Company",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.23395551588057317,
+              "lv": 0.8235294117647058,
+              "fz": 0.7,
+              "l1": 0.75,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "NISOC Building, Fadaeyane Islam <em>St</em>., Ahwaz, IR",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.4117647058823529
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "Fadaeyane Islam <em>St</em>. - Panj Tabagheh Bldg. - Block, Ahwaz, IR",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.4117647058823529
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "Opposite of Shahrvand - Arjantin Sq. (<em>Tehran</em> HQ), <em>Tehran</em>, IR",
+            "uploaded": "No. 18 Roodsar St. Hafez Ave. Tehran",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.4117647058823529
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>IRN</em>",
+            "uploaded": "IRN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "IRQ",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "LBN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SYR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "YEM",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "AFG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PAK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TJK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "UZB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TUR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    }
+  ]
+}

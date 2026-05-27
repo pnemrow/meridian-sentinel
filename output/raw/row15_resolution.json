@@ -1,0 +1,156 @@
+{
+  "fields": {
+    "name": [
+      "Cubametales"
+    ],
+    "identifier": null,
+    "profile": null,
+    "country": [
+      "CUB"
+    ],
+    "address": [
+      "Calle 28 No. 113 e/ 1ra y 3ra Miramar Havana"
+    ],
+    "date_of_birth": null,
+    "contact": null,
+    "type": null
+  },
+  "data": [
+    {
+      "profile": "corporate",
+      "score": 101.89615,
+      "entity_id": "yPMqDvYBVDqz8q9iJmlqpA",
+      "label": "EMPRESA CUBANA IMPORTADORA Y EXPORTADORA DE COMBUSTIBLES Y LUBRICANTES",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "4963",
+          "type": "cub_cod",
+          "label": "Cub Cod"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "CALLE 30, NO. 512, ENTRE 5TA Y 7MA, MIRAMAR"
+      ],
+      "countries": [
+        "CUB"
+      ],
+      "sources": [
+        "60c5205d5c2c3f4dc9b14658d0fd1163"
+      ],
+      "typed_matched_queries": [
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>CUBAMETALES</em>"
+        ],
+        "address": [
+          "<em>CALLE</em> 30, <em>NO</em>. 512, ENTRE 5TA <em>Y</em> 7MA, <em>MIRAMAR</em>"
+        ],
+        "country": [
+          "<em>CUB</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>CUBAMETALES</em>",
+            "uploaded": "Cubametales",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 1.0,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>CALLE</em> 30, <em>NO</em>. 512, ENTRE 5TA <em>Y</em> 7MA, <em>MIRAMAR</em>",
+            "uploaded": "Calle 28 No. 113 e\\/ 1ra y 3ra Miramar Havana",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.058823529411764705
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>CUB</em>",
+            "uploaded": "CUB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "VEN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "NIC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BOL",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1372 @@
+{
+  "fields": {
+    "name": [
+      "PDVSA"
+    ],
+    "identifier": null,
+    "profile": null,
+    "country": [
+      "VEN"
+    ],
+    "address": null,
+    "date_of_birth": null,
+    "contact": null,
+    "type": null
+  },
+  "data": [
+    {
+      "profile": "corporate",
+      "score": 125.56092,
+      "entity_id": "tA9blnIZJ8CO-RnLHLYwqw",
+      "label": "PETROLEOS DE VENEZUELA S A",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "D11300057",
+          "type": "ven_saren_internal_employer_number",
+          "label": "Ven Saren Internal Employer Number"
+        },
+        {
+          "value": "549300YWR8TN1OFD4P06",
+          "type": "lei",
+          "label": "Lei"
+        },
+        {
+          "value": "26367",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "J000950369",
+          "type": "ven_rif",
+          "label": "Ven Rif"
+        },
+        {
+          "value": "108990",
+          "type": "xxx_edi_global_issuer_id",
+          "label": "Xxx Edi Global Issuer Id"
+        },
+        {
+          "value": "f3656fad-4b4b-4fcf-870f-19023a3f44ab",
+          "type": "sesamm_company_id",
+          "label": "Sesamm Company Id"
+        },
+        {
+          "value": "C42512",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "5c5484ddc98dbf7d7023b33b",
+          "type": "xxx_intel_internal_id",
+          "label": "Xxx Intel Internal Id"
+        },
+        {
+          "value": "J-00095036-9",
+          "type": "ven_rif",
+          "label": "Ven Rif"
+        },
+        {
+          "value": "NK-gGV2Tg7C77XZ9C6svLPHep",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "4011142",
+          "type": "int_maritime_org_id",
+          "label": "Int Maritime Org Id"
+        },
+        {
+          "value": "J000950369",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "MM41L9H5ULU1",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "YUM1TH9133P9",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "Centro Refinador Paraguana-Cardon, Avenida Principal, Punta Cardon, Edo Falcon, 4154, Venezuela.",
+        "Edificio Petroleos De Venezuela, Torre Este, Piso 9, Avenida Libertador con calle El Empalme, La Campina, Caracas, 1010, Venezuela",
+        "Torre Este Piso 9, Edif Petroleos de Venezuela, Avenida Libertador, Urb La Campina, Caracas, Distrito Federal, Venezuela",
+        "VEN",
+        "Corporate Public Affairs Apartado Postal 169, Caracas 1010-A, VE"
+      ],
+      "countries": [
+        "VEN",
+        "NLD"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "701bbfc53dd09fad95b177d1f07f3667",
+        "5b1375783448347064745954e331bbe9",
+        "feaa37a992b152dd64b445978aea652a",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "df4535e7fc3682517e1815ed87ddf2f6",
+        "db3416894cd5f0c4d2d6ecc79bdaf366",
+        "92edb8fe6615498f6e3e7b0e220f74e6",
+        "1da6904ab38f4df6812377b68c685d2f",
+        "8c348062e7ad53fad00a530672296068",
+        "b97ad5c858093e5227b2359a0078696f",
+        "fdfedf11a5122e2aef9dc3f176c7427d",
+        "b428ecdae0aaf17bf21e7be46ae5bbf7",
+        "99332266c3556e0b05bcf6dec37d344b",
+        "e85d865943ee6d8369307569d2ad9de0",
+        "b812677c0a32a1746b3ac741c7b97ae0"
+      ],
+      "typed_matched_queries": [
+        "country|0",
+        "name|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>PDVSA</em>",
+          "PETROLEOS DE VENEZUELA SA (<em>PDVSA</em>)"
+        ],
+        "country": [
+          "<em>VEN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>PDVSA</em>",
+            "uploaded": "PDVSA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 1.0,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "PETROLEOS DE VENEZUELA SA (<em>PDVSA</em>)",
+            "uploaded": "PDVSA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2,
+              "lv": 0.2777777777777778,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>VEN</em>",
+            "uploaded": "VEN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "CUB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "NIC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BOL",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 138.75742,
+      "entity_id": "-n_KnoVJLLkifl9YmgTW5A",
+      "label": "PDVSA ASFALTO",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "D24190908",
+          "type": "ven_saren_internal_employer_number",
+          "label": "Ven Saren Internal Employer Number"
+        },
+        {
+          "value": "J000925119",
+          "type": "ven_rif",
+          "label": "Ven Rif"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "AV FRANCISCOSOLANO CRUCE/CLL LOS APAMATES/CLL NEGRIN EDIF CENTRO EMPRESARIAL SABANAGRANDE PISO 25 OF 25 URB SABANA GRANDE CARACAS DISTRITO CAPITAL"
+      ],
+      "countries": [
+        "VEN"
+      ],
+      "sources": [
+        "8c348062e7ad53fad00a530672296068",
+        "99332266c3556e0b05bcf6dec37d344b",
+        "df4535e7fc3682517e1815ed87ddf2f6"
+      ],
+      "typed_matched_queries": [
+        "country|0",
+        "name|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>PDVSA</em> ASFALTO",
+          "<em>PDVSA</em> ASFALTO S.A"
+        ],
+        "country": [
+          "<em>VEN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>PDVSA</em> ASFALTO",
+            "uploaded": "PDVSA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.5,
+              "lv": 0.5555555555555556,
+              "fz": 0.3846153846153846,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>PDVSA</em> ASFALTO S.A",
+            "uploaded": "PDVSA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.25,
+              "lv": 0.4545454545454546,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>VEN</em>",
+            "uploaded": "VEN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "CUB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "NIC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BOL",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 92.40693,
+      "entity_id": "s7sofSpAVF83yDNubz3Naw",
+      "label": "PDVSA Servicios Petroleros S.A.",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "C843316",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "VE"
+      ],
+      "countries": [
+        "VEN"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "e85d865943ee6d8369307569d2ad9de0"
+      ],
+      "typed_matched_queries": [
+        "country|0",
+        "name|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>PDVSA</em> Servicios Petroleros S.A.",
+          "<em>PDVSA</em> Servicios"
+        ],
+        "country": [
+          "<em>VEN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>PDVSA</em> Servicios Petroleros S.A.",
+            "uploaded": "PDVSA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2,
+              "lv": 0.2857142857142857,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>PDVSA</em> Servicios",
+            "uploaded": "PDVSA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.5,
+              "lv": 0.5,
+              "fz": 0.33333333333333337,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>VEN</em>",
+            "uploaded": "VEN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "CUB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "NIC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BOL",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 91.155594,
+      "entity_id": "MOCvq2ImpVWc2_pSMFWCxQ",
+      "label": "PDVSA CUBA, S.A.",
+      "type": "company",
+      "identifiers": [],
+      "psa_id": null,
+      "addresses": [
+        "Lonja del Comercio de la Habana, Piso 5, Oficina C, Baratillo, La Habana, Cuba"
+      ],
+      "countries": [
+        "CUB",
+        "VEN"
+      ],
+      "sources": [
+        "b042849de597966c83666350b3c502d8"
+      ],
+      "typed_matched_queries": [
+        "country|0",
+        "country|1",
+        "name|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>PDVSA</em> CUBA, S.A."
+        ],
+        "country": [
+          "<em>CUB</em>",
+          "<em>VEN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>PDVSA</em> CUBA, S.A.",
+            "uploaded": "PDVSA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.25,
+              "lv": 0.5263157894736843,
+              "fz": 0.3571428571428571,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>VEN</em>",
+            "uploaded": "VEN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": "<em>CUB</em>",
+            "uploaded": "CUB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "NIC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BOL",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 89.697205,
+      "entity_id": "yTghFKSHkkfCUff4okYj-g",
+      "label": "PDVSA Bolivia S.A.",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "C1083049",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "Edificio Tunipa, 2do piso, oficina 201 Esquina calle 10 Avenida Hernando Siles Zona de Obrajes, La Paz, La Paz, BO"
+      ],
+      "countries": [
+        "BOL"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "e85d865943ee6d8369307569d2ad9de0"
+      ],
+      "typed_matched_queries": [
+        "country|3",
+        "name|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>PDVSA</em> Bolivia S.A.",
+          "<em>PDVSA</em> - Bolivia",
+          "<em>PDVSA</em> Bolivia Plc"
+        ],
+        "country": [
+          "<em>BOL</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>PDVSA</em> Bolivia S.A.",
+            "uploaded": "PDVSA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.25,
+              "lv": 0.4545454545454546,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>PDVSA</em> - Bolivia",
+            "uploaded": "PDVSA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.5,
+              "lv": 0.5555555555555556,
+              "fz": 0.3846153846153846,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>PDVSA</em> Bolivia Plc",
+            "uploaded": "PDVSA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.33333333333333326,
+              "lv": 0.4545454545454546,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": null,
+            "uploaded": "VEN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": "<em>BOL</em>",
+            "uploaded": "BOL",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "CUB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "NIC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 89.40693,
+      "entity_id": "oMXmmDZoDxjll6K6ijOmHw",
+      "label": "PDVSA, Petroleos de Venezuela, S.A.",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "000950369",
+          "type": "partial_ven_cedula",
+          "label": "Partial Ven Cedula"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [],
+      "countries": [
+        "VEN"
+      ],
+      "sources": [
+        "df4535e7fc3682517e1815ed87ddf2f6"
+      ],
+      "typed_matched_queries": [
+        "country|0",
+        "name|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>PDVSA</em>, Petroleos de Venezuela, S.A.",
+          "<em>PDVSA</em>"
+        ],
+        "country": [
+          "<em>VEN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>PDVSA</em>, Petroleos de Venezuela, S.A.",
+            "uploaded": "PDVSA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.16666666666666663,
+              "lv": 0.2702702702702703,
+              "fz": 0.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>PDVSA</em>",
+            "uploaded": "PDVSA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 1.0,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>VEN</em>",
+            "uploaded": "VEN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "CUB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "NIC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BOL",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 88.87359,
+      "entity_id": "QAyJ5wmye2QLIn1fdHhw3w",
+      "label": "PDVSA Gas",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "C776785",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "VE"
+      ],
+      "countries": [
+        "VEN"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "e85d865943ee6d8369307569d2ad9de0"
+      ],
+      "typed_matched_queries": [
+        "country|0",
+        "name|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>PDVSA</em> Gas"
+        ],
+        "country": [
+          "<em>VEN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>PDVSA</em> Gas",
+            "uploaded": "PDVSA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.5,
+              "lv": 0.7142857142857143,
+              "fz": 0.5555555555555556,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>VEN</em>",
+            "uploaded": "VEN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "CUB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "NIC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BOL",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 87.87359,
+      "entity_id": "CR_bSqtLse6lzgifdZMpsA",
+      "label": "Pdvsa Agricola",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "C787163",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "VE"
+      ],
+      "countries": [
+        "VEN"
+      ],
+      "sources": [
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "e85d865943ee6d8369307569d2ad9de0"
+      ],
+      "typed_matched_queries": [
+        "country|0",
+        "name|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Pdvsa</em> Agricola"
+        ],
+        "country": [
+          "<em>VEN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Pdvsa</em> Agricola",
+            "uploaded": "PDVSA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.5,
+              "lv": 0.5263157894736843,
+              "fz": 0.3571428571428571,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>VEN</em>",
+            "uploaded": "VEN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "CUB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "NIC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BOL",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 87.13122,
+      "entity_id": "10qoy8QrwS6jdR9SSC3TEA",
+      "label": "PDVSA",
+      "type": "person",
+      "identifiers": [
+        {
+          "value": "V249825154",
+          "type": "ven_rif",
+          "label": "Ven Rif"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [],
+      "countries": [
+        "VEN"
+      ],
+      "sources": [
+        "df4535e7fc3682517e1815ed87ddf2f6"
+      ],
+      "typed_matched_queries": [
+        "country|0",
+        "name|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>PDVSA</em>"
+        ],
+        "country": [
+          "<em>VEN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>PDVSA</em>",
+            "uploaded": "PDVSA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 1.0,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>VEN</em>",
+            "uploaded": "VEN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "CUB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "NIC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BOL",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 87.13122,
+      "entity_id": "a52SMXQYvZdcxPj-AUM9XQ",
+      "label": "pdvsa",
+      "type": "company",
+      "identifiers": [],
+      "psa_id": null,
+      "addresses": [
+        "Valencia, Carabobo",
+        "Puerto Cabello, Carabobo"
+      ],
+      "countries": [
+        "VEN"
+      ],
+      "sources": [
+        "df4535e7fc3682517e1815ed87ddf2f6"
+      ],
+      "typed_matched_queries": [
+        "country|0",
+        "name|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>pdvsa</em>"
+        ],
+        "country": [
+          "<em>VEN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>pdvsa</em>",
+            "uploaded": "PDVSA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 1.0,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 0,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>VEN</em>",
+            "uploaded": "VEN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "CUB",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "NIC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BOL",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "weak"
+      },
+      "match_strength_v2": {
+        "value": "partial"
+      }
+    }
+  ]
+}

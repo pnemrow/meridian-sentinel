@@ -1,0 +1,2358 @@
+{
+  "fields": {
+    "name": [
+      "Hangzhou Hikvision Digital Technology Co. Ltd."
+    ],
+    "identifier": null,
+    "profile": null,
+    "country": [
+      "CHN"
+    ],
+    "address": [
+      "No. 555 Qianmo Road Binjiang District Hangzhou"
+    ],
+    "date_of_birth": null,
+    "contact": null,
+    "type": null
+  },
+  "data": [
+    {
+      "profile": "corporate",
+      "score": 222.33392,
+      "entity_id": "CF2ca8pzwEMGmKrENIifNA",
+      "label": "Hangzhou Hikvision Digital Technology Co., Ltd.",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "91330000733796106P",
+          "type": "cn_unified_social_credit_code",
+          "label": "Cn Unified Social Credit Code"
+        },
+        {
+          "value": "30946",
+          "type": "usa_ofac_sdn_number",
+          "label": "Usa Ofac Sdn Number"
+        },
+        {
+          "value": "3003000T24CMHQ382Y71",
+          "type": "lei",
+          "label": "Lei"
+        },
+        {
+          "value": "330100400011434",
+          "type": "cn_registration_number",
+          "label": "Cn Registration Number"
+        },
+        {
+          "value": "C1096381",
+          "type": "xxx_acuris_id",
+          "label": "Xxx Acuris Id"
+        },
+        {
+          "value": "138372",
+          "type": "xxx_edi_global_issuer_id",
+          "label": "Xxx Edi Global Issuer Id"
+        },
+        {
+          "value": "3300733796106",
+          "type": "cn_importexport_code",
+          "label": "Cn Importexport Code"
+        },
+        {
+          "value": "HHDCCNBH",
+          "type": "swift_bic_code",
+          "label": "Swift Bic Code"
+        },
+        {
+          "value": "HHDCCNBHXXX",
+          "type": "swift_bic_code",
+          "label": "Swift Bic Code"
+        },
+        {
+          "value": "47557ff5-eda1-57c1-89b8-f4384df73aa9",
+          "type": "sesamm_company_id",
+          "label": "Sesamm Company Id"
+        },
+        {
+          "value": "733796106",
+          "type": "cn_organization_code",
+          "label": "Cn Organization Code"
+        },
+        {
+          "value": "NK-HYQpJVFfjnrATqKwpZpit7",
+          "type": "open_sanctions_internal_id",
+          "label": "Open Sanctions Internal Id"
+        },
+        {
+          "value": "002415",
+          "type": "chn_csrc_no",
+          "label": "Chn Csrc No"
+        },
+        {
+          "value": "CNE100000PM8",
+          "type": "isin",
+          "label": "Isin"
+        },
+        {
+          "value": "91330000733796106P",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "91330000733796 106P",
+          "type": "unknown_commercial_register_id",
+          "label": "Unknown Commercial Register Id"
+        },
+        {
+          "value": "DAKCTJEKKR18",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        },
+        {
+          "value": "L78SCHFL4JN8",
+          "type": "usa_sam_uei_number",
+          "label": "Usa Sam Uei Number"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "\u6d59\u6c5f\u7701",
+        "zhe jiang sheng",
+        "Zhejiang Province",
+        "555, Qianmo Road, Binjiang District, Hangzhou, 310051, China",
+        "\u6d59\u6c5f\u7701\u676d\u5dde\u5e02\u6ee8\u6c5f\u533a\u897f\u5174\u8857\u9053\u9621\u964c\u8def555\u53f7",
+        "zhe jiang sheng hang zhou shi bin jiang qu xi xing jie dao qian mo lu555hao",
+        "No. 555, Xixing Road, Chenjiang District, Hangzhou, Zhejiang Province",
+        "CHN",
+        "\u6ee8\u6c5f\u533a\u9621\u964c\u8def555\u53f7, \u676d\u5dde\u5e02, CN-ZJ, 310051, CN",
+        "bin jiang qu qian mo lu555hao, hang zhou shi, CN-ZJ, 310051, CN",
+        "No. 555, Qianmo Road, Binjiang District, Hangzhou, CN-ZJ, 310051, CN",
+        "No.555,Qianmo Road,Binjiang District, Hangzhou, CN-ZJ, 310051, CN",
+        "\u6d59\u6c5f\u7701\u676d\u5dde\u5e02\u676d\u5dde\u9ad8\u65b0\u6280\u672f\u4ea7\u4e1a\u5f00\u53d1\u533a\u676d\u5dde\u5e02\u6ee8\u6c5f\u533a\u9621\u964c\u8def555\u53f7 310051",
+        "zhe jiang sheng hang zhou shi hang zhou gao xin ji shu chan ye kai fa qu hang zhou shi bin jiang qu qian mo lu555hao 310051",
+        "No. 555 Qianmo Road, Binjiang District, Hangzhou High-tech Industrial Development Zone, Hangzhou City, Zhejiang Province 310051",
+        "No. 555 Qianmo Road, Binjiang District, Hangzhou, 310052, CN",
+        "No.518, Wulianwang Street, Binjiang District Hangzhou China",
+        "\u676d\u5dde\u5e02\u897f\u6e56\u533a\u9a6c\u584d\u8def36\u53f7",
+        "hang zhou shi xi hu qu ma cheng lu36hao",
+        "No. 36, Ma Cheng Road, Xihu District, Hangzhou",
+        "23rd Floor, Block A, Yingke Plaza, No. 217 Gaoxin Street, Gaoxin District, Urumqi, CN",
+        "\u6d59\u6c5f\u7701\u676d\u5dde\u5e02\u6ee8\u6c5f\u533a\u7269\u8054\u7f51\u8857518\u53f7",
+        "zhe jiang sheng hang zhou shi bin jiang qu wu lian wang jie518hao",
+        "No. 518, IoT Street, Binjiang District, Hangzhou City, Zhejiang Province",
+        "\u676d\u5dde\u5e02\u6ee8\u6c5f\u533a\u7269\u8054\u7f51\u8857 518 \u53f7 \u676d\u5dde\u5e02\u6ee8\u6c5f\u533a\u7269\u8054\u7f51\u8857 518 \u53f7",
+        "hang zhou shi bin jiang qu wu lian wang jie 518 hao hang zhou shi bin jiang qu wu lian wang jie 518 hao",
+        "No. 518, Internet of Things Street, Binjiang District, Hangzhou No. 518, Internet of Things Street, Binjiang District, Hangzhou",
+        "\u676d\u5dde\u5e02\u897f\u6e56\u533a\u9a6c\u584d\u8def 36 \u53f7 , 310012",
+        "hang zhou shi xi hu qu ma cheng lu 36 hao , 310012",
+        "No. 36, Ma Cheng Road, Xihu District, Hangzhou, 310012",
+        "700 Dongliu Road, Binjiang District, Hanzhou, CN",
+        "No36, \u041c\u0410\u0427\u0415\u041d\u0413 \u0420\u041e\u0410\u0414, \u0420\u0410\u0419\u041e\u041d \u041a\u0421\u0418\u0425\u0423, \u0425\u0410\u041d\u0427\u0416\u041e\u0423, \u041a\u0418\u0422\u0410\u0419",
+        "No36, MACENG ROAD, RAJON KSIHU, HANCZOU, KITAJ",
+        "No36, MACHENG ROAD, XIHU DISTRICT, HANGZHOU, CHINA",
+        "\u6d59\u6c5f\u7701\u676d\u5dde\u5e02\u6ee8\u6c5f\u533a\u9621\u964c\u8def 555 \u53f7 , 310051",
+        "zhe jiang sheng hang zhou shi bin jiang qu qian mo lu 555 hao , 310051",
+        "No. 555, Qianmo Road, Binjiang District, Hangzhou City, Zhejiang Province, 310051",
+        "\u6d59\u6c5f\u7701\u676d\u5dde\u5e02\u6ee8\u6c5f\u533a\u7269\u8054\u7f51\u8857 518 \u53f7 , 310051",
+        "zhe jiang sheng hang zhou shi bin jiang qu wu lian wang jie 518 hao , 310051",
+        "No. 518, Lianqing Street, Binjiang District, Hangzhou, Zhejiang Province, 310051",
+        "\u6d59\u6c5f \u676d\u5dde",
+        "zhe jiang hang zhou",
+        "Zhejiang Hangzhou",
+        "\u6ee8\u6c5f\u533a, \u676d\u5dde",
+        "bin jiang qu, hang zhou",
+        "Binjiang District, Hangzhou",
+        "\u676d\u5dde\u5e02\u6ee8\u6c5f\u533a\u4e1c\u6d41\u8def 700 \u53f7\u6d77\u5eb7\u5a01\u89c6\u5236\u9020\u57fa\u5730 , 310052",
+        "hang zhou shi bin jiang qu dong liu lu 700 hao hai kang wei shi zhi zao ji de , 310052",
+        "Haikangwei Monitoring Production Base, No. 700, Dongliu Road, Tengjiang District, Hangzhou City, 310052",
+        "\u4e2d\u56fd\u676d\u5dde\u5e02\u6ee8\u6c5f\u533a\u524d\u78e8\u8def555\u53f7\uff0c\u90ae\u7f16310052\uff1b",
+        "zhong guo hang zhou shi bin jiang qu qian mo lu555hao, you bian310052;",
+        "No. 555, Qianma Road, Fenjiang District, Hangzhou, China, 310052;",
+        "\u676d\u5dde\u5e02\u6ee8\u6c5f\u533a\u9621\u964c\u8def 555 \u53f7 , 310052",
+        "hang zhou shi bin jiang qu qian mo lu 555 hao , 310052",
+        "No. 555, Qianmo Road, Binjiang District, Hangzhou, 310052",
+        "\u676d\u5dde\u5e02\u6ee8\u6c5f\u533a\u9621\u964c\u8def 555 \u53f7 \u676d\u5dde\u5e02\u6ee8\u6c5f\u533a\u9621\u964c\u8def 555 \u53f7",
+        "hang zhou shi bin jiang qu qian mo lu 555 hao hang zhou shi bin jiang qu qian mo lu 555 hao",
+        "No. 555, Qianmo Road, Binjiang District, Hangzhou No. 555, Qianmo Road, Binjiang District, Hangzhou"
+      ],
+      "countries": [
+        "CHN",
+        "NZL",
+        "RUS",
+        "NLD",
+        "USA"
+      ],
+      "sources": [
+        "5d8c06ba0b85ff599bca851e7bf43c30",
+        "79df2dc92a22705bb2500d6819e6c64b",
+        "24ca9e1480ab586a153d3ae12a7b83a0",
+        "52a7bc4a30e787544ad2d95e7f54adca",
+        "1fbdc8f3abdf32274f4c7657c048294a",
+        "148946e7e3e5b2ba031bfcefa28e4d83",
+        "860ee022bacc1a11b8aa3f33b205269c",
+        "1da6904ab38f4df6812377b68c685d2f",
+        "bf68c3a9a482c02f1f76342feb79af8d",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "b6382672c6741fe1bca28d2668c1732b",
+        "3c2f8498797d861dbdfb901731883c9f",
+        "a4be698ea3263f7f7f3906d1c98cffc2",
+        "56bce0e008204712e302271ddd7b4fb1",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "b812677c0a32a1746b3ac741c7b97ae0",
+        "4b58375256689dae9c9b05ffb03ac4f2",
+        "a8c6ee1cd4dfc952105ee8c0e4836f08",
+        "0cf0044442daf17258e27a6ddd49770f",
+        "e85f886caf11a16c40512647def393e0",
+        "5b1375783448347064745954e331bbe9",
+        "417400a1ac439843fda5bb2f05fb4161",
+        "db3416894cd5f0c4d2d6ecc79bdaf366",
+        "1fbdc8f3abdf32274f4c7657c048294a",
+        "b6382672c6741fe1bca28d2668c1732b",
+        "b97ad5c858093e5227b2359a0078696f",
+        "a9a18eeb901e4376c912e95dc05ceb78",
+        "1fbdc8f3abdf32274f4c7657c048294a",
+        "e85d865943ee6d8369307569d2ad9de0"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "address|sub|phraseStripped|0",
+        "country|0",
+        "country|5",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|critical",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> <em>Co</em>., <em>Ltd</em>.",
+          "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> <em>Co</em>. <em>Ltd</em>.",
+          "<em>Hangzhou</em> <em>HIKVISION</em> <em>Digital</em> <em>Technology</em> <em>Co</em>.,<em>Ltd</em>.",
+          "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> <em>Co</em>., <em>Ltd</em>. (<em>Hikvision</em>)",
+          "<em>Hangzhou</em> Hik-Vision <em>Digital</em> <em>Technology</em> <em>Co</em>., <em>Ltd</em>.",
+          "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> Co., Ltd.",
+          "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em>",
+          "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> Co. Ltd.",
+          "<em>Hangzhou</em> <em>HIKVISION</em> <em>Digital</em> <em>Technology</em> Co.,Ltd.",
+          "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> Company"
+        ],
+        "address": [
+          "<em>No</em>. <em>555</em> <em>Qianmo</em> <em>Road</em>, <em>Binjiang</em> <em>District</em>, <em>Hangzhou</em> High-tech Industrial Development Zone, <em>Hangzhou</em> City, <em>Zhejiang</em> Province 310051",
+          "<em>No</em>. <em>555</em>, <em>Qianmo</em> <em>Road</em>, <em>Binjiang</em> <em>District</em>, <em>Hangzhou</em> City, <em>Zhejiang</em> Province, 310051",
+          "<em>No</em>. <em>555</em>, <em>Qianmo</em> <em>Road</em>, <em>Binjiang</em> <em>District</em>, <em>Hangzhou</em>, CN-ZJ, 310051, CN",
+          "<em>No</em>.<em>555</em>,<em>Qianmo</em> <em>Road</em>,<em>Binjiang</em> <em>District</em>, <em>Hangzhou</em>, CN-ZJ, 310051, CN",
+          "<em>No</em>. <em>555</em>, Xixing <em>Road</em>, Chenjiang <em>District</em>, <em>Hangzhou</em>, <em>Zhejiang</em> Province"
+        ],
+        "country": [
+          "<em>CHN</em>",
+          "<em>RUS</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> <em>Co</em>., <em>Ltd</em>.",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.31104644910147283,
+              "lv": 0.9318181818181819,
+              "fz": 0.8636363636363636,
+              "l1": 0.8636363636363636,
+              "l2": 0.9318181818181818
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> <em>Co</em>. <em>Ltd</em>.",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.31104644910147283,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Hangzhou</em> <em>HIKVISION</em> <em>Digital</em> <em>Technology</em> <em>Co</em>.,<em>Ltd</em>.",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.31104644910147283,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> <em>Co</em>., <em>Ltd</em>. (<em>Hikvision</em>)",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.24883715928117828,
+              "lv": 0.8673469387755102,
+              "fz": 0.7592592592592593,
+              "l1": 0.8636363636363636,
+              "l2": 0.9318181818181818
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Hangzhou</em> Hik-Vision <em>Digital</em> <em>Technology</em> <em>Co</em>., <em>Ltd</em>.",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": false,
+            "scores": {
+              "tf": 0.048837159281178266,
+              "lv": 0.9213483146067416,
+              "fz": 0.8444444444444444,
+              "l1": 0.5909090909090909,
+              "l2": 0.9318181818181818
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 0,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> Co., Ltd.",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.31104644910147283,
+              "lv": 0.9318181818181819,
+              "fz": 0.8636363636363636,
+              "l1": 0.8636363636363636,
+              "l2": 0.9318181818181818
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em>",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.31104644910147283,
+              "lv": 0.9135802469135803,
+              "fz": 0.8409090909090909,
+              "l1": 0.8409090909090909,
+              "l2": 0.8409090909090909
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> Co. Ltd.",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.31104644910147283,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Hangzhou</em> <em>HIKVISION</em> <em>Digital</em> <em>Technology</em> Co.,Ltd.",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.31104644910147283,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> Company",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.31104644910147283,
+              "lv": 0.9438202247191011,
+              "fz": 0.8888888888888888,
+              "l1": 0.9090909090909091,
+              "l2": 0.9090909090909091
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>No</em>. <em>555</em> <em>Qianmo</em> <em>Road</em>, <em>Binjiang</em> <em>District</em>, <em>Hangzhou</em> High-tech Industrial Development Zone, <em>Hangzhou</em> City, <em>Zhejiang</em> Province 310051",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>No</em>. <em>555</em>, <em>Qianmo</em> <em>Road</em>, <em>Binjiang</em> <em>District</em>, <em>Hangzhou</em> City, <em>Zhejiang</em> Province, 310051",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>No</em>. <em>555</em>, <em>Qianmo</em> <em>Road</em>, <em>Binjiang</em> <em>District</em>, <em>Hangzhou</em>, CN-ZJ, 310051, CN",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>No</em>.<em>555</em>,<em>Qianmo</em> <em>Road</em>,<em>Binjiang</em> <em>District</em>, <em>Hangzhou</em>, CN-ZJ, 310051, CN",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>No</em>. <em>555</em>, Xixing <em>Road</em>, Chenjiang <em>District</em>, <em>Hangzhou</em>, <em>Zhejiang</em> Province",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>CHN</em>",
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": "<em>RUS</em>",
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 138.67868,
+      "entity_id": "3CTGe5vDXal32W8CiHKcWQ",
+      "label": "HANGZHOU HIKVISION TECHNOLOGY CO.,LTD",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "91330108685810232H",
+          "type": "cn_unified_social_credit_code",
+          "label": "Cn Unified Social Credit Code"
+        },
+        {
+          "value": "685810232",
+          "type": "cn_organization_code",
+          "label": "Cn Organization Code"
+        },
+        {
+          "value": "330108000032077",
+          "type": "cn_registration_number",
+          "label": "Cn Registration Number"
+        },
+        {
+          "value": "330100685810232",
+          "type": "cn_tax_identification_number",
+          "label": "Cn Tax Identification Number"
+        },
+        {
+          "value": "91330108685810195",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "000140727-0201",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "000142126-0201",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "91330108685810232H",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "\uff081/15\uff09",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "91330108685810195B",
+          "type": "unknown",
+          "label": "Unknown"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        ", ZHEJIANG, HANGZHOU, 700 DONGLIU ROAD, BINJIANG AREA,",
+        "700 DONGLIU ROAD,BINJIANG AREA,HANGZHOU,ZHEJIANG,CHINA HANGZHOU CN",
+        "NO.700 , DONGLIU ROAD , BINJIANG DISTRICT , HANGZHOU 310052 , CHINA , CN",
+        "700 DONGLIU ROAD, BINJIANG AREA, HANGZHOU ZHEJIANG, CHINA",
+        "China",
+        "\u041a\u0418\u0422\u0410\u0419|HANGZHOU, ZHEJIANG|700 DONGLIU ROAD,BINJIANG AREA",
+        "KITAJ|HANGZHOU, ZHEJIANG|700 DONGLIU ROAD,BINJIANG AREA",
+        "CHINA|HANGZHOU, ZHEJIANG|700 DONGLIU ROAD,BINJIANG AREA",
+        "No.700, Dongliu Road, Binjiang District, Hangzhou,Zhejiang, , P. R. CHINA",
+        "DONGLIU ROAD BINJIANG AREA HANGZHOU 310051",
+        "\u041a\u0418\u0422\u0410\u0419|,BINJIANG DISTRICT|HANGZHOU 310052,CHINA",
+        "KITAJ|,BINJIANG DISTRICT|HANGZHOU 310052,CHINA",
+        "700 Donglu Road, Binjiang Area Hangzhou Zhejiang China-\u041a\u0438\u0442\u0430\u0439 , 0",
+        "700 Donglu Road, Binjiang Area Hangzhou Zhejiang China-Kitaj , 0",
+        "700 Donglu Road, Binjiang Area Hangzhou Zhejiang China-China, 0",
+        "\"\u041e\u041e\u041e \"\"\u0425\u0418\u041a\u0412\u0418\u0416\u041d\"\"\"",
+        "\"OOO \"\"HIKVIZN\"\"\"",
+        "\u041a\u0418\u0422\u0410\u0419BINJIANG AREAHANGZHOU 310052, ZHEJIANG, CHINA",
+        "KITAJBINJIANG AREAHANGZHOU 310052, ZHEJIANG, CHINA",
+        "URDESA CENTRAL AV. LAS LOMAS 403 ENTRE 4TA Y 5TA",
+        "\u041a\u0418\u0422\u0410\u0419|HANGZHOU|BINJIANG AREA, 700 DONGLIU ROAD",
+        "KITAJ|HANGZHOU|BINJIANG AREA, 700 DONGLIU ROAD",
+        "ISLA FERNANDINA N 42-129 Y TOMAS DE BERLANGA",
+        "310052, ZHEJIANG, HANGZHOU, NO.700 DONGLIU ROAD,",
+        "700 DONGLIU ROAD,BINJIANG AREA,HANGZHOU,ZHEJIANG,CHIN 310000",
+        "#N/A China",
+        "\u041a\u0418\u0422\u0410\u0419|HANGZHOU|NO.700, DONGLIU ROAD, BINJIANG DISTRICT",
+        "KITAJ|HANGZHOU|NO.700, DONGLIU ROAD, BINJIANG DISTRICT",
+        "DONGLIU ROAD ZHEJIANG S/N",
+        ", BINJIANG DIS\u0422RIC\u0422, HANGZHOU, NO.700. DONGLIU ROAD, ,,,",
+        ", BINJIANG DISTRICT, HANGZHOU, NO.700. DONGLIU ROAD, ,,,",
+        "700 DONGLIU ROAD, BINJIANG AREA, HANGZHOU, ZJ 310052 CHINA HANGZHOU ZJ310052 CN",
+        "NO.555, QIANMO ROAD,BINJIANG DISTRI,OU, CHINA,CHINA CHINA CHINA",
+        "ADDRESS: 700 DONGLIU ROAD, BINJIANG AREA,HANGZHOU,ZHEJIANG,CHINA CITY HANGZHOU",
+        "700 DONGLIU ROAD,BINJIANG AREA,HANGZHOU, ZHEJIANG,CHINA ZHEJIANG CN",
+        "COSTANERA 506 ENTRE MONJAS Y EBANOS (URDESA CENTRAL),GUAYAQU",
+        "GUAYAS / GUAYAQUIL / COSTANERA 506 Y MONJAS - EBANOS / URDES",
+        "PICHINCHA / QUITO / SAN ISIDRO DEL INCA / ISLA FERNANDINA N",
+        "YANEZ PINZON N26-67 Y LA NINA",
+        "NO 555 QIANMO ROAD BINJIANG AREA HANGZHOU CHINA",
+        "ISLA FERNANDINA N 42-129 QUITO ECUADOR",
+        "\"\u041e\u041e\u041e \"\"\u0421\u0422\u0421-\u041b\u041e\u0413\u0418\u0421\u0422\u0418\u041a\u0410\"\" \u041f\u041e \u041f\u041e\u0420\u0423\u0427\u0415\u041d\u0418\u042e \u041e\u041e\u041e \"\"\u0422\u041e\u0420\u0423\u0421\u041f\u0420\u041e\"\"\"",
+        "\"OOO \"\"STS-LOGISTIKA\"\" PO PORUCENIU OOO \"\"TORUSPRO\"\"\"",
+        "NO.555, QIANMO ROAD,BINJIANG DISTRICT, HANGZH,OU, CHINA,HANGZHOU CHINA",
+        "700 DONGLIU ROAD BINJIANG AREA IMNGZHOU ZHEJMNG CHINA CHINA",
+        "\u6ee8\u6c5f\u533a",
+        "bin jiang qu",
+        "Binjiang District",
+        "\u6d59\u6c5f\u7701\u676d\u5dde\u5e02\u6ee8\u6c5f\u533a\u9621\u964c\u8def555\u53f71\u5e62B\u697c19\u5c42",
+        "zhe jiang sheng hang zhou shi bin jiang qu qian mo lu555hao1chuangB lou19ceng",
+        "19th Floor, Building B, No. 555, Qianmo Road, Binjiang District, Hangzhou City, Zhejiang Province",
+        "\u041a\u0418\u0422\u0410\u0419 700 DONGLIU ROAD,BINJIANG AREA,HANGZHOU",
+        "KITAJ 700 DONGLIU ROAD,BINJIANG AREA,HANGZHOU",
+        "AV. LAS LOMAS, INTERSECCION: CU 403 GUAYAQUIL ECUADOR",
+        "., HAVING A PLACE OF BUSINESS AT NO.700, HANGZHOU, DONGLIU ROAD,",
+        "20 GANGWAN STREET,MINGSHIFORTUNE CENTER",
+        "BINJIANG AREADONGLIU ROAD700",
+        "700 DONGLIU ROAD , BINJIANG AREA , HANGZHOU , ZHEJIANG , CHINA , TEL: 0086 - 571 - 88075998 , FAX: 0086 - 571 - 89935635 , CN",
+        "700 Dongliu Road, Binjiang Area, Hangzhou, Zhejiang China., On Behaef Of It Gallery Fzco Dso, Ddp, Building A, Dubai, United Arab Emirates",
+        "BARRIO URDESA CENTRAL CALLE COSTAN",
+        "NO 255,QIUSHI ROAD,TONGLU HANGZHOU ZHEJIANG,CHINA,TONGLU,HANGZHOU CHINA CHINA",
+        "NO. 500 OIANMO ROAD BINJIANG DISTRICT HANGZHOU CHINA",
+        "ADDRESS: 700 DONGLIU ROAD,BINJIANGA REA,HANGZHOU,ZHEJIANG,CHINA .",
+        "\u676d\u5dde\u5e02\u6ee8\u6c5f\u533a\u9621\u964c\u8def555\u53f7",
+        "hang zhou shi bin jiang qu qian mo lu555hao",
+        "No. 555, Qianmo Road, Binjiang District, Hangzhou",
+        "700 Dongl\u0131u Road, B\u0131nj\u0131ang Area, Hangzhou, Zhej\u0131ang, Ch\u0131na.On Behalf Of It Gallery Sg Pte. Ltd., 10 Anson Road #10-11 Internat\u0131onal Plaza, S\u0131ngapore (079903), S\u0131ngapore, S\u0131ngapore.",
+        "0 , 700 Dongliu Road, Binjiang Dist. Hangzhou City, Zhejiang 310012.",
+        "AV. LAS LOMAS N403, MZ.42 SOLAR 2, ENTRE LAS CALLES 4TA Y 5T",
+        "PICHINCHA QUITO SAN JUAN YANEZ PINZON 295 Y LA NI\u00d1A",
+        "PICHINCHA QUITO SAN JUAN YANEZ PINZON 295 Y LA NINA",
+        "BOLIVAR 8-20 Y MALDONADO",
+        "COSTANERA 506 ENTRE MONJAS Y EBANOGUAYAQUIL ECUADOR",
+        "700 DONGLIU ROAD,BIN JIANG AREA HAN ZHEJIANG THE MAINLAND OF CHINA HANGZHOU",
+        "700 Dongliu Road, Binjiang Hangzhou, China.On Behalf Of It Gallery Fzco Po Box No 211531 Office No 104 07 1St Floor Emitac Building ' Dubai 211531Ae Uae.",
+        "\u676d\u5dde\u5e02\u897f\u6e56\u533a\u9a6c\u584d\u8def36\u53f7\u79d1\u7814\u7efc\u5408\u697c7\u5c42, 310052",
+        "hang zhou shi xi hu qu ma cheng lu36hao ke yan zong he lou7ceng, 310052",
+        "7th Floor, Scientific Research Complex Building, No. 36 Ma Cheng Road, Xihu District, Hangzhou 310052",
+        "700 Dongliu Road,Binjiang Hangzhou, China. On Behalf Ofit Gallery Fzco Dubai Silicon Oasis Building A Dubai,Uae.",
+        "NO.518, WULIANG STREET, BINJIANG AREA, HANGZHOU, ZHEJIANG, CHINA",
+        "RM 09, 8F,KWAI CHEONG CENTRE50 KWAI CHEONG ROAD,,HONGKONG,HK",
+        "\"\u041e\u041e\u041e \"\"\u041c\u0415\u0420\u041b\u0418\u041e\u041d\"\"\"",
+        "\"OOO \"\"MERLION\"\"\"",
+        "\"\"MERLION\"\"\" LLC\"",
+        "NO.555, QIANMO ROAD,BINJIANG DISTRI,HANGZHOU, CHINA,CHINA CHINA",
+        "700 DONGLIU ROAD,BINJIANG AREA,HANG ZHOU, ZHEJIANG,CHINA TEL : 0086-5 HANGZHOU,ZHEJIANG,CN",
+        "ROOM 8496 1ST FLOOR B2 BUILDING 118 JIANQIAO CHONGQING CHINA CN",
+        "3F A BUILDING SHOUFASHI NO 555 QIAN MU ROAD BINJIANG DISTRICT HANGZHOU",
+        "HANGZHOU H KV S ON TECHNOLOGY CO. LTD. 700 DONGL U ROAD B NJ ANG AREA HANGZHOU ZHEJ ANG CH NA TEL:",
+        "WULIANGWANG ST 518 HANGZHOU ZHEJIANG, 310051 CN",
+        "(N3P)(SPB) NO.518 WULIANWANG ST BIN BINJIANG DISTRICT HANGZHOU",
+        "310052, HANGZHOU,ZHEJIANG, HANGZHOU, BINJIANG DIS\u0422",
+        "310052, HANGZHOU,ZHEJIANG, HANGZHOU, BINJIANG DIST",
+        "\u676d\u5dde\u5e02\u6ee8\u6c5f\u533a\u4e1c\u6d41\u8def700\u53f72\u53f7\u697c, 310052",
+        "hang zhou shi bin jiang qu dong liu lu700hao2hao lou, 310052",
+        "Building 2, No. 700 Dongliu Road, Binjiang District, Hangzhou, 310052",
+        "\u676d\u5dde\u6d77\u5eb7\u5a01\u89c6\u7cfb\u7edf\u6280\u672f\u6709\u9650\u516c\u53f8",
+        "hang zhou hai kang wei shi xi tong ji shu you xian gong si",
+        "Hangzhou Hikvision System Technology Co., Ltd.",
+        "NO 555 QIANMO ROAD BINJIANG AREA HANGZHOU CHINA 31",
+        "\u6d59\u6c5f\u7701\u676d\u5dde\u5e02\u6ee8\u6c5f\u533a\u9621\u964c\u8def55\u53f7",
+        "zhe jiang sheng hang zhou shi bin jiang qu qian mo lu55hao",
+        "No. 55, Qianmo Road, Binjiang District, Hangzhou City, Zhejiang Province",
+        "\u676d\u5dde\u5e02\u897f\u6e56\u533a",
+        "hang zhou shi xi hu qu",
+        "Xihu District, Hangzhou City",
+        "GUAYAS / GUAYAQUIL / TARQUI / AV. PRINCIPAL S/N",
+        "310052, , HANGZHOU, NO.555, QIANMO ROAD, BINJIANG AREA,",
+        "FRIBOURG, CHINA",
+        "0519-88068620",
+        "NO 299 QIUSHI ROAD, TONGLU COUNTY, HANGZHOU, ZHEJIANG PROVINCE 310000 CHINA",
+        "BUILDING 2, NO. 700, DONGLIU ROAD, BINJIANG DISTRICT, HANGZHOU CN"
+      ],
+      "countries": [
+        "CHN",
+        "ECU",
+        "TUR",
+        "SEN",
+        "SGP",
+        "THA",
+        "ARE",
+        "KOR",
+        "HKG",
+        "JPN",
+        "DEU",
+        "ESP",
+        "ROU",
+        "USA"
+      ],
+      "sources": [
+        "04eae776f662e518c977d5df3598ae69",
+        "9615bab28dddcc89548c928ab192ee7c",
+        "441b8bd29977208d312f2192675b05d9",
+        "546a239179eb5ba24177e29e308005bf",
+        "148946e7e3e5b2ba031bfcefa28e4d83",
+        "4a34a8375e7041cf8661fa82366c60ea",
+        "d9c1f85551cb7558ee9fbbf7d78a2ddb",
+        "4ef4e9dd7aa6dc5d662692548e62ef0c",
+        "2090fa91e691e3f15d2ea13594a286d8",
+        "e5de7b52cc88ef4cd1a10e201bdf46ee",
+        "0ff02c63234d4447c803acd7748b9afc",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "b6382672c6741fe1bca28d2668c1732b",
+        "35f323ab28e6ad0bf35e6cae8ac4d271",
+        "a35d4c24787e761d64ef7025fabc8b25",
+        "4a34a8375e7041cf8661fa82366c60ea",
+        "0b325d9555f1011ae80446f3778bc3c8",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "181623bfb16b56c7214aeb0ac1ca9425",
+        "8511f57f6098dcc36e3a814c3ea5bdd7",
+        "a8a8ffcd95b8f701749b22c3f8292f15",
+        "e5de7b52cc88ef4cd1a10e201bdf46ee",
+        "16a4cc2d0f467fa993b28587d542a25d",
+        "1f8774c85ab4fd71295015396bb08be1",
+        "a7829d9c8999fcaa78af55886da9be06",
+        "95d4ee257c785546e66a87a37fa183f4",
+        "8f21460f1cc54773b9672cb5efdb01cf",
+        "b7593dcf982bcb9ca86f24ef369ed1e5",
+        "96c06a5a03b61b91324c7e05b3114fb6",
+        "c7c2684a1a28cce25025c6b7c6a97bf1",
+        "9f22a5470e1faf82004e203d094cca29",
+        "faa9caafcfabcee04ef2f0b21dd9197a",
+        "4abad52c15462323519564cccef5bf07",
+        "a0bc9f7913cb345cc685e3f65532dd70",
+        "ce462e9deea545cce35df38c48512a0c",
+        "b2695e88b6f5b89ba1d9011e06dbcbc7",
+        "3456014d7aa3d82207e36f321980d49b",
+        "5547652362cfeeb62963e058f95d6fdd",
+        "46c82ef2437564acca9fb5de8c382778",
+        "33ce74530696fdc957af6e05194905a2",
+        "bf68c3a9a482c02f1f76342feb79af8d",
+        "66dfefb726ae00fde8f09f34c5578d35",
+        "1b27af6fa4018a70fbce9ca6f316e21c",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "d147d93876aa0653c0e120cf2c96a936",
+        "a6a639808cdad385ab27296aa6d98b98",
+        "4b58375256689dae9c9b05ffb03ac4f2",
+        "0cf0044442daf17258e27a6ddd49770f",
+        "9fe5d8ce0ab236a01f22e9d0cf8e8585",
+        "41c82cb8bda87edc819b7790081e1e26",
+        "93f0d99bcf2cc0b9f09cacc92640e54c",
+        "b1d2f50f163413806366618fed7cfac4",
+        "7e0b45866bdcca61b2cfd455e5403dc2",
+        "8de630b7a702183da138321ae0f1c4b0",
+        "d302aa0d7153d87aeaa4406f9a3b28fa",
+        "66dfefb726ae00fde8f09f34c5578d35",
+        "ee100f9b5dfdae8991ba43f5de6e1854",
+        "ee100f9b5dfdae8991ba43f5de6e1854",
+        "b6382672c6741fe1bca28d2668c1732b",
+        "d302aa0d7153d87aeaa4406f9a3b28fa",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "83ffee6075e54030397fa4c499a5a7ba",
+        "31df3cc3a57cc4a39dcc29dd4b9ce5e5",
+        "e27afa7f0d06d3ceac903a03143950bd"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "address|sub|phraseStripped|0",
+        "country|0",
+        "country|1",
+        "country|7",
+        "country|8",
+        "name|StrictV2|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> <em>CO</em>.,<em>LTD</em>",
+          "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> <em>CO</em> <em>LTD</em>",
+          "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> <em>CO</em>., <em>LTD</em>",
+          "<em>Hangzhou</em> <em>Hikvision</em> System <em>Technology</em> <em>Co</em>., <em>Ltd</em>.",
+          "<em>Hangzhou</em> <em>Hikvision</em> <em>Technology</em> <em>Co</em>., <em>Ltd</em>.",
+          "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> CO.,LTD",
+          "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> CO LTD",
+          "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> CO",
+          "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> \u0421\u041e., LTD",
+          "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> SO., LTD"
+        ],
+        "address": [
+          "19th Floor, Building B, <em>No</em>. <em>555</em>, <em>Qianmo</em> <em>Road</em>, <em>Binjiang</em> <em>District</em>, <em>Hangzhou</em> City, <em>Zhejiang</em> Province",
+          "<em>NO</em>.<em>555</em>, <em>QIANMO</em> <em>ROAD</em>,<em>BINJIANG</em> <em>DISTRICT</em>, <em>HANGZH</em>,OU, CHINA,<em>HANGZHOU</em> CHINA",
+          "<em>No</em>. <em>555</em>, <em>Qianmo</em> <em>Road</em>, <em>Binjiang</em> <em>District</em>, <em>Hangzhou</em>",
+          "3F A BUILDING SHOUFASHI <em>NO</em> <em>555</em> <em>QIAN</em> MU <em>ROAD</em> <em>BINJIANG</em> <em>DISTRICT</em> <em>HANGZHOU</em>",
+          "<em>NO</em> <em>555</em> <em>QIANMO</em> <em>ROAD</em> <em>BINJIANG</em> AREA <em>HANGZHOU</em> CHINA"
+        ],
+        "country": [
+          "<em>CHN</em>",
+          "<em>SGP</em>",
+          "<em>THA</em>",
+          "<em>HKG</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> <em>CO</em>.,<em>LTD</em>",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3859010055677926,
+              "lv": 0.9,
+              "fz": 0.8181818181818181,
+              "l1": 0.4318181818181818,
+              "l2": 0.8181818181818182
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> <em>CO</em> <em>LTD</em>",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3859010055677926,
+              "lv": 0.9,
+              "fz": 0.8181818181818181,
+              "l1": 0.4318181818181818,
+              "l2": 0.8181818181818182
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> <em>CO</em>., <em>LTD</em>",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3859010055677926,
+              "lv": 0.9,
+              "fz": 0.8181818181818181,
+              "l1": 0.4318181818181818,
+              "l2": 0.8181818181818182
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Hangzhou</em> <em>Hikvision</em> System <em>Technology</em> <em>Co</em>., <em>Ltd</em>.",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2894257541758445,
+              "lv": 0.7816091954022988,
+              "fz": 0.5681818181818181,
+              "l1": 0.4318181818181818,
+              "l2": 0.75
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Hangzhou</em> <em>Hikvision</em> <em>Technology</em> <em>Co</em>., <em>Ltd</em>.",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3859010055677926,
+              "lv": 0.825,
+              "fz": 0.6818181818181819,
+              "l1": 0.4318181818181818,
+              "l2": 0.75
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> CO.,LTD",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3859010055677926,
+              "lv": 0.9,
+              "fz": 0.8181818181818181,
+              "l1": 0.4318181818181818,
+              "l2": 0.8181818181818182
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> CO LTD",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3859010055677926,
+              "lv": 0.9,
+              "fz": 0.8181818181818181,
+              "l1": 0.4318181818181818,
+              "l2": 0.8181818181818182
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> CO",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3859010055677926,
+              "lv": 0.8421052631578947,
+              "fz": 0.7272727272727273,
+              "l1": 0.4318181818181818,
+              "l2": 0.7272727272727273
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> \u0421\u041e., LTD",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.2894257541758445,
+              "lv": 0.875,
+              "fz": 0.7727272727272727,
+              "l1": 0.4318181818181818,
+              "l2": 0.7727272727272727
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> SO., LTD",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3859010055677926,
+              "lv": 0.8875,
+              "fz": 0.7954545454545454,
+              "l1": 0.4318181818181818,
+              "l2": 0.7954545454545454
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "19th Floor, Building B, <em>No</em>. <em>555</em>, <em>Qianmo</em> <em>Road</em>, <em>Binjiang</em> <em>District</em>, <em>Hangzhou</em> City, <em>Zhejiang</em> Province",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>NO</em>.<em>555</em>, <em>QIANMO</em> <em>ROAD</em>,<em>BINJIANG</em> <em>DISTRICT</em>, <em>HANGZH</em>,OU, CHINA,<em>HANGZHOU</em> CHINA",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>No</em>. <em>555</em>, <em>Qianmo</em> <em>Road</em>, <em>Binjiang</em> <em>District</em>, <em>Hangzhou</em>",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "3F A BUILDING SHOUFASHI <em>NO</em> <em>555</em> <em>QIAN</em> MU <em>ROAD</em> <em>BINJIANG</em> <em>DISTRICT</em> <em>HANGZHOU</em>",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>NO</em> <em>555</em> <em>QIANMO</em> <em>ROAD</em> <em>BINJIANG</em> AREA <em>HANGZHOU</em> CHINA",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>CHN</em>",
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": "<em>SGP</em>",
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>THA</em>",
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HKG</em>",
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 134.71948,
+      "entity_id": "wBI-KQ0WGysF-ba_pLpBBg",
+      "label": "\u676d\u5dde\u6d77\u5eb7\u5a01\u89c6\u6570\u5b57\u6280\u672f\u80a1\u4efd\u6709\u9650\u516c\u53f8",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "47557ff5-eda1-57c1-89b8-f4384df73aa9",
+          "type": "sesamm_company_id",
+          "label": "Sesamm Company Id"
+        },
+        {
+          "value": "15.213.744/0001-61",
+          "type": "bra_cnpj",
+          "label": "Bra Cnpj"
+        },
+        {
+          "value": "91330100785316127G",
+          "type": "cn_unified_social_credit_code",
+          "label": "Cn Unified Social Credit Code"
+        },
+        {
+          "value": "330100500000912",
+          "type": "cn_registration_number",
+          "label": "Cn Registration Number"
+        },
+        {
+          "value": "T11UF3387B",
+          "type": "sgp_unqiue_entity_number",
+          "label": "Sgp Unqiue Entity Number"
+        },
+        {
+          "value": "785316127",
+          "type": "cn_organization_code",
+          "label": "Cn Organization Code"
+        },
+        {
+          "value": "002415",
+          "type": "chn_csrc_no",
+          "label": "Chn Csrc No"
+        },
+        {
+          "value": "011434",
+          "type": "unknown",
+          "label": "Unknown"
+        },
+        {
+          "value": "91330000733796069",
+          "type": "unknown",
+          "label": "Unknown"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "No.555 Qianmo Road, Binjiang District, Hangzhou, 310052, CN",
+        "QIANMO ROAD NUM. EXT. 555",
+        "\u676d\u5dde\u5e02\u6ee8\u6c5f\u533a\u9621\u964c\u8def555\u53f7",
+        "hang zhou shi bin jiang qu qian mo lu555hao",
+        "No. 555, Qianmo Road, Binjiang District, Hangzhou",
+        "QUIANMO ROAD NUM. EXT. 556",
+        "36 MACHENG ROAD, XIHU DISTRICT",
+        "No.556 Qianmo Road, Binjiang District,Hangzhou,311052, CHINA",
+        "36 Macheng Road, Xihu District Hangzhou, Zhejiang 310061, CHINA",
+        "\u5e7f\u4e1c \u6f6e\u5b89\u53bf \u5f69\u7530\u5357\u8def \u4e2d\u6df1\u82b1\u56edA\u5ea72101 515600",
+        "guang dong chao an xian cai tian nan lu zhong shen hua yuanA zuo2101 515600",
+        "Room 2101, Block A, Zhongshen Garden, Caitian South Road, Chao'an County, Guangdong 515600",
+        "\u676d\u5dde\u5e02",
+        "hang zhou shi",
+        "Hangzhou City",
+        "36 Macheng Road, Hangzhou City Zhejiang Province, 310012, CN",
+        "\u5e7f\u4e1c \u6f6e\u5dde",
+        "guang dong chao zhou",
+        "Guangdong Chaozhou",
+        "\u6d59\u6c5f\u7701\u676d\u5dde\u5e02\u897f\u6e56\u533a\u9a6c\u584d\u8def36\u53f7, 310012",
+        "zhe jiang sheng hang zhou shi xi hu qu ma cheng lu36hao, 310012",
+        "No. 36, Ma Cheng Road, Xihu District, Hangzhou City, Zhejiang Province, 310012",
+        "555 Qianmo Road, Binjiang District, Hangzhou, 310051, CN",
+        "QIANMO ROAD  NUM. EXT. 55, BINJIANG DISTRICT",
+        "\u5e7f\u5dde\u5e02\u6d77\u73e0\u533a\u65b0\u6e2f\u4e1c\u8def1166\u53f7\u73af\u6c47\u5546\u4e1a\u5e7f\u573a7\u697c08\u5ba4",
+        "guang zhou shi hai zhu qu xin gang dong lu1166hao huan hui shang ye guang chang7lou08shi",
+        "Room 08, Building 7, Ring Hui Commercial Square, No. 1166, Xingang East Road, Haizhu District, Guangzhou City",
+        "NO. 700 DONGLIU ROAD, CHANGHE STREET, SEVENTH FLOOR, BUILDING 1, HANGZHOU CITY, 310000, CN",
+        "555 Qianmo Road,, Binjiang District,, Hangzhou Zhejiang Province, CHINA",
+        "\u5b81\u590f\u94f6\u5ddd\u91d1\u51e4\u533a\u4eb2\u6c34\u5927\u8857\u4e1c\u4fa7\u4e07\u8fbe\u4e2d\u5fc3A\u5ea78\u697c\u6d77\u5eb7\u5a01\u89c6",
+        "ning xia yin chuan jin feng qu qin shui da jie dong ce wan da zhong xinA zuo8lou hai kang wei shi",
+        "Building 8, Building A, Wanda Center, East of Bishui Street, Ningxia Yinchuan Jinling District, Hai Kangwei View",
+        ", QIANMO ROAD, HANGZHOU, ZHEIJANG, HANGZHOU, ZHEIJANG, , CHINA",
+        "\u6e56\u5317\u7701\u6b66\u6c49\u5e02\u6d2a\u5c71\u533a\u5173\u5c71\u5927\u9053\u5149\u8c37\u8f6f\u4ef6\u56edF\u533a4\u680b21\u5c42",
+        "hu bei sheng wu han shi hong shan qu guan shan da dao guang gu ruan jian yuanF qu4dong21ceng",
+        "Floor 21, Building 4, Zone F, Optics Valley Software Park, Guanshan Avenue, Hongshan District, Wuhan City, Hubei Province",
+        "\u676d\u5dde\u5e02\u6ee8\u6c5f\u533a\u7269\u8054\u7f51\u8857518\u53f7",
+        "hang zhou shi bin jiang qu wu lian wang jie518hao",
+        "No. 518, Internet of Things Street, Binjiang District, Hangzhou City",
+        "\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u6b66\u4faf\u533a\u77f3\u7f8a\u8857\u9053",
+        "si chuan sheng cheng dou shi wu hou qu shi yang jie dao",
+        "Shiyang Road, Wuhou District, Chengdu City, Sichuan Province",
+        "\u6e56\u5317\u7701\u6b66\u6c49\u5e02\u6d2a\u5c71\u533a\u5173\u5c71\u4e00\u8def\u8f6f\u4ef6\u56edF4\u680b",
+        "hu bei sheng wu han shi hong shan qu guan shan yi lu ruan jian yuanF4dong",
+        "F4, Guanshan 1st Road Property Park, Hongshan District, Wuhan City, Hubei Province",
+        "\u6ee8\u6c5f\u533a, \u676d\u5dde",
+        "bin jiang qu, hang zhou",
+        "Binjiang District, Hangzhou",
+        ", QUIANMO ROAD, , HANGZHOU, 310052, CHINA",
+        "\u5173\u5c71\u5927\u9053\u5173\u8c37\u8f6f\u4ef6\u56edF\u533a4\u680b21\u5c42",
+        "guan shan da dao guan gu ruan jian yuanF qu4dong21ceng",
+        "21F, Building 4, Zone F, Guangu Software Park, Guanshan Avenue"
+      ],
+      "countries": [
+        "CHN",
+        "MEX",
+        "USA",
+        "CAN",
+        "AUS",
+        "BRA",
+        "SGP",
+        "GBR"
+      ],
+      "sources": [
+        "5d8c06ba0b85ff599bca851e7bf43c30",
+        "c5cc650876d65288c8ae6b63c8c7fd4f",
+        "701bbfc53dd09fad95b177d1f07f3667",
+        "441b8bd29977208d312f2192675b05d9",
+        "1fbdc8f3abdf32274f4c7657c048294a",
+        "148946e7e3e5b2ba031bfcefa28e4d83",
+        "a4475601393f5a6a27154175556f7a85",
+        "a585b440ea74d837aef0e485fd2942f3",
+        "bf68c3a9a482c02f1f76342feb79af8d",
+        "fecea39fdc2bbbca36ed77ff68c8c89b",
+        "0ff02c63234d4447c803acd7748b9afc",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "542ad2352af9ce07202a2f34d402d5bf",
+        "4b58375256689dae9c9b05ffb03ac4f2",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "8f50655ba1d1552ab4b89d119bd9c318",
+        "0cf0044442daf17258e27a6ddd49770f",
+        "53025b5e8f2032f5f23878503e1edc34",
+        "959a385fac146762e5d8d2119e0d8edc",
+        "8f21460f1cc54773b9672cb5efdb01cf",
+        "1fbdc8f3abdf32274f4c7657c048294a",
+        "b6382672c6741fe1bca28d2668c1732b",
+        "1fbdc8f3abdf32274f4c7657c048294a",
+        "ac1fa195f9cd4ccf657bca3c6db0bb19",
+        "fcfa3d1c6b5f9744188fc01d0999fb76",
+        "b9d809b02049993ba8dc2e4c5f7cceca",
+        "c22aabd1653affa3d007fb01dcc66b72"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "address|subclause|0",
+        "address|sub|cleanedAddress|0",
+        "address|sub|phraseFirstHalf|0",
+        "address|sub|phraseStripped|0",
+        "country|0",
+        "country|7",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|elevated",
+        "riskLevelBoost|high"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> <em>Co</em>., <em>Ltd</em>.",
+          "<em>HANGZHOU</em> <em>HIKVISION</em> <em>DIGITAL</em> <em>TECHNOLOGY</em> <em>CO</em>., <em>LTD</em>.",
+          "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> <em>Co</em>., <em>Ltd</em>. Branch",
+          "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> Tech.Co.,<em>Ltd</em>",
+          "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> Co., Ltd.",
+          "<em>HANGZHOU</em> <em>HIKVISION</em> <em>DIGITAL</em> <em>TECHNOLOGY</em> CO., LTD.",
+          "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> Co., Ltd. Branch",
+          "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> Tech.Co.,Ltd"
+        ],
+        "address": [
+          "<em>555</em> <em>Qianmo</em> <em>Road</em>,, <em>Binjiang</em> <em>District</em>,, <em>Hangzhou</em> <em>Zhejiang</em> Province, CHINA",
+          "<em>No</em>.<em>555</em> <em>Qianmo</em> <em>Road</em>, <em>Binjiang</em> <em>District</em>, <em>Hangzhou</em>, 310052, CN",
+          "<em>No</em>. <em>555</em>, <em>Qianmo</em> <em>Road</em>, <em>Binjiang</em> <em>District</em>, <em>Hangzhou</em>",
+          "<em>555</em> <em>Qianmo</em> <em>Road</em>, <em>Binjiang</em> <em>District</em>, <em>Hangzhou</em>, 310051, CN",
+          "<em>QIANMO</em> <em>ROAD</em> NUM. EXT. <em>555</em>"
+        ],
+        "country": [
+          "<em>CHN</em>",
+          "<em>SGP</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> <em>Co</em>., <em>Ltd</em>.",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.31104644910147283,
+              "lv": 0.9318181818181819,
+              "fz": 0.8636363636363636,
+              "l1": 0.8636363636363636,
+              "l2": 0.9318181818181818
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HANGZHOU</em> <em>HIKVISION</em> <em>DIGITAL</em> <em>TECHNOLOGY</em> <em>CO</em>., <em>LTD</em>.",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.31104644910147283,
+              "lv": 0.9318181818181819,
+              "fz": 0.8636363636363636,
+              "l1": 0.8636363636363636,
+              "l2": 0.9318181818181818
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> <em>Co</em>., <em>Ltd</em>. Branch",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.24883715928117828,
+              "lv": 0.8947368421052632,
+              "fz": 0.803921568627451,
+              "l1": 0.8636363636363636,
+              "l2": 0.9318181818181818
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> Tech.Co.,<em>Ltd</em>",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.29464766492729977,
+              "lv": 0.926829268292683,
+              "fz": 0.8636363636363636,
+              "l1": 0.7045454545454546,
+              "l2": 0.8636363636363636
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> Co., Ltd.",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.31104644910147283,
+              "lv": 0.9318181818181819,
+              "fz": 0.8636363636363636,
+              "l1": 0.8636363636363636,
+              "l2": 0.9318181818181818
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HANGZHOU</em> <em>HIKVISION</em> <em>DIGITAL</em> <em>TECHNOLOGY</em> CO., LTD.",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.31104644910147283,
+              "lv": 0.9318181818181819,
+              "fz": 0.8636363636363636,
+              "l1": 0.8636363636363636,
+              "l2": 0.9318181818181818
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> <em>Technology</em> Co., Ltd. Branch",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.24883715928117828,
+              "lv": 0.8947368421052632,
+              "fz": 0.803921568627451,
+              "l1": 0.8636363636363636,
+              "l2": 0.9318181818181818
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>Hangzhou</em> <em>Hikvision</em> <em>Digital</em> Tech.Co.,Ltd",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.29464766492729977,
+              "lv": 0.926829268292683,
+              "fz": 0.8636363636363636,
+              "l1": 0.7045454545454546,
+              "l2": 0.8636363636363636
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>555</em> <em>Qianmo</em> <em>Road</em>,, <em>Binjiang</em> <em>District</em>,, <em>Hangzhou</em> <em>Zhejiang</em> Province, CHINA",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>No</em>.<em>555</em> <em>Qianmo</em> <em>Road</em>, <em>Binjiang</em> <em>District</em>, <em>Hangzhou</em>, 310052, CN",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>No</em>. <em>555</em>, <em>Qianmo</em> <em>Road</em>, <em>Binjiang</em> <em>District</em>, <em>Hangzhou</em>",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>555</em> <em>Qianmo</em> <em>Road</em>, <em>Binjiang</em> <em>District</em>, <em>Hangzhou</em>, 310051, CN",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          },
+          {
+            "matched": "<em>QIANMO</em> <em>ROAD</em> NUM. EXT. <em>555</em>",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.8235294117647058
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "high"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>CHN</em>",
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": "<em>SGP</em>",
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 149.3543,
+      "entity_id": "l9otPRKUt0JPajsn_4ZoPQ",
+      "label": "HANGZHOU HIKVISION DIGITAL TECHNOLOGY CO. LTD",
+      "type": "company",
+      "identifiers": [],
+      "psa_id": null,
+      "addresses": [
+        "URDESA CENTRAL AV. LAS LOMAS 403 ENTRE 4TA Y 5TA",
+        "555 QIANMO ROAD,BINJIANG AREA,,ZHEJ ZHEJIANG CHINA",
+        "CHINA"
+      ],
+      "countries": [
+        "CHN"
+      ],
+      "sources": [
+        "d302aa0d7153d87aeaa4406f9a3b28fa",
+        "546a239179eb5ba24177e29e308005bf",
+        "4a34a8375e7041cf8661fa82366c60ea",
+        "4a34a8375e7041cf8661fa82366c60ea",
+        "33ce74530696fdc957af6e05194905a2",
+        "1b27af6fa4018a70fbce9ca6f316e21c",
+        "a7829d9c8999fcaa78af55886da9be06",
+        "d302aa0d7153d87aeaa4406f9a3b28fa",
+        "97715c5e088bd6abff1b8d5df156f150"
+      ],
+      "typed_matched_queries": [
+        "address|V2|Strict|0",
+        "address|V3|0",
+        "address|numericFirst|0",
+        "address|numericFull|0",
+        "country|0",
+        "name|100match|0",
+        "name|100phrase|0",
+        "name|StrictV2|0",
+        "name|exactFallback|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|elevated"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>HANGZHOU</em> <em>HIKVISION</em> <em>DIGITAL</em> <em>TECHNOLOGY</em> <em>CO</em>. <em>LTD</em>",
+          "<em>HANGZHOU</em> <em>HIKVISION</em> <em>DIGITAL</em> <em>TECHNOLOGY</em> CO. LTD"
+        ],
+        "address": [
+          "<em>555</em> <em>QIANMO</em> <em>ROAD</em>,<em>BINJIANG</em> AREA,,ZHEJ <em>ZHEJIANG</em> CHINA"
+        ],
+        "country": [
+          "<em>CHN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>HANGZHOU</em> <em>HIKVISION</em> <em>DIGITAL</em> <em>TECHNOLOGY</em> <em>CO</em>. <em>LTD</em>",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.31104644910147283,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HANGZHOU</em> <em>HIKVISION</em> <em>DIGITAL</em> <em>TECHNOLOGY</em> CO. LTD",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.31104644910147283,
+              "lv": 1.0,
+              "fz": 1.0,
+              "l1": 1.0,
+              "l2": 1.0
+            },
+            "n_common_term_matches": 3,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "<em>555</em> <em>QIANMO</em> <em>ROAD</em>,<em>BINJIANG</em> AREA,,ZHEJ <em>ZHEJIANG</em> CHINA",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.23529411764705882
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "low"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>CHN</em>",
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    },
+    {
+      "profile": "corporate",
+      "score": 91.42403,
+      "entity_id": "b1t0-MlRInmfkbRnOHYypA",
+      "label": "HANGZHOU HIKVISION TECHNOLOGY CO L",
+      "type": "company",
+      "identifiers": [
+        {
+          "value": "000559851-0503",
+          "type": "unknown",
+          "label": "Unknown"
+        }
+      ],
+      "psa_id": null,
+      "addresses": [
+        "700 DONGLIU ROAD BINJIANG AREA HA NGZHOU ZHEJIANG CN",
+        "700 DONGLIU ROAD,BINJIANG AREA,HANGZHOU,ZHEJIANG,CHINA HANGZHOU 33310000 CN",
+        "DONGLIU ROAT BINJIANG AREA700",
+        "BINJIANG AREADONGLIU ROAD700",
+        "DONGLIU ROAD700",
+        "ADDRESS 700 DONGLIU ROAD BINJIANG AREA HANGZHOU CN",
+        "N3P SPBA NO 518 WULIANWANG ST B",
+        "DONGLIU 700",
+        "700 DONGLIU RD BINJIANG AREA 310051 HANGZHOU HANGZHOU 33310051 CN"
+      ],
+      "countries": [
+        "CHN",
+        "ESP"
+      ],
+      "sources": [
+        "9615bab28dddcc89548c928ab192ee7c",
+        "b1d2f50f163413806366618fed7cfac4",
+        "35f323ab28e6ad0bf35e6cae8ac4d271",
+        "83ffee6075e54030397fa4c499a5a7ba",
+        "16a4cc2d0f467fa993b28587d542a25d",
+        "d9c1f85551cb7558ee9fbbf7d78a2ddb",
+        "1b27af6fa4018a70fbce9ca6f316e21c",
+        "a0bc9f7913cb345cc685e3f65532dd70",
+        "d147d93876aa0653c0e120cf2c96a936",
+        "b7593dcf982bcb9ca86f24ef369ed1e5"
+      ],
+      "typed_matched_queries": [
+        "address|V3|0",
+        "address|geoDistance|1km|0",
+        "address|geoDistance|5km|0",
+        "address|sub|phraseFirstHalf|0",
+        "country|0",
+        "name|StrictV2|0",
+        "name|newTfIdfUncommonTokensMatch|0",
+        "riskLevelBoost|elevated"
+      ],
+      "matched_queries": [
+        "address",
+        "country",
+        "name",
+        "riskLevelBoost"
+      ],
+      "highlight": {
+        "name": [
+          "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> <em>CO</em> L",
+          "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> CO L"
+        ],
+        "address": [
+          "700 DONGLIU <em>ROAD</em>,<em>BINJIANG</em> AREA,<em>HANGZHOU</em>,<em>ZHEJIANG</em>,CHINA <em>HANGZHOU</em> 33310000 CN",
+          "700 DONGLIU <em>ROAD</em> <em>BINJIANG</em> AREA HA NGZHOU <em>ZHEJIANG</em> CN",
+          "ADDRESS 700 DONGLIU <em>ROAD</em> <em>BINJIANG</em> AREA <em>HANGZHOU</em> CN",
+          "700 DONGLIU <em>RD</em> <em>BINJIANG</em> AREA 310051 <em>HANGZHOU</em> <em>HANGZHOU</em> 33310051 CN",
+          "DONGLIU ROAT <em>BINJIANG</em> AREA700"
+        ],
+        "country": [
+          "<em>CHN</em>"
+        ]
+      },
+      "explanation": {
+        "name": [
+          {
+            "matched": "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> <em>CO</em> L",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3859010055677926,
+              "lv": 0.8717948717948718,
+              "fz": 0.7727272727272727,
+              "l1": 0.4318181818181818,
+              "l2": 0.7727272727272727
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          },
+          {
+            "matched": "<em>HANGZHOU</em> <em>HIKVISION</em> <em>TECHNOLOGY</em> CO L",
+            "uploaded": "Hangzhou Hikvision Digital Technology Co. Ltd.",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": true,
+            "scores": {
+              "tf": 0.3859010055677926,
+              "lv": 0.8717948717948718,
+              "fz": 0.7727272727272727,
+              "l1": 0.4318181818181818,
+              "l2": 0.7727272727272727
+            },
+            "n_common_term_matches": 2,
+            "n_uncommon_term_matches": 1,
+            "match_quality": null
+          }
+        ],
+        "address": [
+          {
+            "matched": "700 DONGLIU <em>ROAD</em>,<em>BINJIANG</em> AREA,<em>HANGZHOU</em>,<em>ZHEJIANG</em>,CHINA <em>HANGZHOU</em> 33310000 CN",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.4117647058823529
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "700 DONGLIU <em>ROAD</em> <em>BINJIANG</em> AREA HA NGZHOU <em>ZHEJIANG</em> CN",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.4117647058823529
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "ADDRESS 700 DONGLIU <em>ROAD</em> <em>BINJIANG</em> AREA <em>HANGZHOU</em> CN",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.4117647058823529
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "700 DONGLIU <em>RD</em> <em>BINJIANG</em> AREA 310051 <em>HANGZHOU</em> <em>HANGZHOU</em> 33310051 CN",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.4117647058823529
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          },
+          {
+            "matched": "DONGLIU ROAT <em>BINJIANG</em> AREA700",
+            "uploaded": "No. 555 Qianmo Road Binjiang District Hangzhou",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": {
+              "9p": 0.4117647058823529
+            },
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": "medium"
+          }
+        ],
+        "country": [
+          {
+            "matched": "<em>CHN</em>",
+            "uploaded": "CHN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ],
+        "country_expansion": [
+          {
+            "matched": null,
+            "uploaded": "HKG",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MAC",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "TWN",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "PRK",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "RUS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MYS",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "SGP",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "THA",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "MMR",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "IND",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          },
+          {
+            "matched": null,
+            "uploaded": "BGD",
+            "name_custom_tf_idf_score": null,
+            "high_quality_match_name": null,
+            "scores": null,
+            "n_common_term_matches": null,
+            "n_uncommon_term_matches": null,
+            "match_quality": null
+          }
+        ]
+      },
+      "match_strength": {
+        "value": "strong"
+      },
+      "match_strength_v2": {
+        "value": "strong"
+      }
+    }
+  ]
+}
