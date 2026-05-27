@@ -452,13 +452,75 @@ npx create-next-app@latest . --typescript --tailwind --app
 
 ---
 
-## Known issues / deferred until live API available
+## Live-API session results (completed with SAYARI_CLIENT_ID)
 
-- **Kalashnikov Concern** resolution: pinned to Innovation Center subsidiary, not parent.
-  Parent ID `zqpMddadf94y39RfB3AgcA` confirmed sanctioned. See step 1 above.
-- **Sukhoi ownership path**: UAC has "sukhoi" as SDN alias. Whether Sukhoi is ≥50% owned
-  by UAC determines if `ofac_only` → `screen_ambiguous`. See step 2 above.
-- **traverse_ownership** requires live SAYARI_CLIENT_ID. The 49 cached entity profiles
-  don't include traversal data. Risk factors in cached profiles (e.g., `ofac_50_percent_rule`)
-  are the ownership-aware signal — computed server-side by Sayari in the cached JSON.
+### Step 1 — Kalashnikov Concern re-resolution (commit 8a3af7b)
+
+Fetched parent entity `zqpMddadf94y39RfB3AgcA`; updated `entities.csv`; added to `PINNED_IDS`.
+
+**INN/reg cross-reference proves same legal entity:**
+- Sayari INN `1832090230` = SDN 16911 Tax ID No. `1832090230` ✓
+- Sayari reg `1111832003018` = SDN 16911 Registration Number `1111832003018` ✓
+- SDN strong a.k.a.: "KALASHNIKOV CONCERN" [uid=68546] ✓
+
+**Outcome: `ofac_only` (not `both_catch`)** — Sayari entity is MISSING `sanctioned_usa_ofac_sdn`
+despite confirmed INN match to SDN 16911. Sayari data gap. Screen correctly finds parent at 0.97.
+`ofac_only` = screen is CORRECT; Sayari has not linked the OFAC designation to this entity record.
+
+Compare after step 1:
+`both_catch=33, sayari_only=2, screen_ambiguous=2, matcher_miss=3, ofac_only=2, no_ofac=7, ownership_gap=4`
+
+---
+
+### Step 2 — Sukhoi ownership traversal evidence (this session)
+
+UBO traversal depth=3; fetched Sukhoi relationships; fetched UAC entity; INN cross-ref to SDN.
+
+**Ownership path:**
+```
+Sukhoi [5wVHdujAfKLkHO7efPnAjQ]
+  └── direct shareholder: UAC [T8xxeh7qY1AW7ISrGZKLdQ]
+      label: ПАО "ОБЪЕДИНЕННАЯ АВИАСТРОИТЕЛЬНАЯ КОРПОРАЦИЯ"
+      sanctioned_usa_ofac_sdn=True; SDN sdn_id=36431 (INN 7708619320 confirmed)
+      Ownership percentage: NOT REPORTED by API
+  └── via UAC → Rostec [D-jLpScdAGFGgR4dtYnu_A] (sanctioned)
+```
+
+**Sukhoi OFAC risk factors: NONE** (no `ofac_50_percent_rule`, no `owned_by_sanctioned_usa_ofac_sdn_entity`)
+
+**Decision: classification stays `ofac_only`.** UAC is a Sukhoi shareholder AND is on OFAC SDN
+[36431]. However, Sayari does not flag the 50% rule for Sukhoi. Either UAC owns <50% of Sukhoi
+(ownership % not available from API), or another Sayari data gap. Do NOT reclassify — Sayari does
+not confirm the OFAC block applies to Sukhoi itself.
+
+Cached: `output/raw/traversal/5wVHdujAfKLkHO7efPnAjQ_ubo.json` (4.0 MB, 50 paths)
+
+---
+
+### Step 3 — Traversal cache for 8 marquee entities (this session)
+
+All cached to `output/raw/traversal/` (API limit=50 paths per request):
+
+| Entity | Paths | Size | Sanctioned/PEP UBOs |
+|--------|-------|------|---------------------|
+| Sberbank | 50 | 503 KB | 13 (BPS-Sberbank, Loyalty Programs Center, ...) |
+| VTB Bank | 50 | 908 KB | 9 (Insurance Deposit Agency, Gavrilov, ...) |
+| Transneft | 7 | 217 KB | 0 (state-owned, simple structure) |
+| Gazprom | 50 | 687 KB | 10 (Aksyutin, Gazprom Dobycha Noyabrsk, ...) |
+| Rosneft | 45 | 1.9 MB | 4 (Sechin, Casimiro, Akimov) |
+| Rosoboronexport | 1 | 1.2 MB | 1 (Rostec — sanctioned) |
+| Belorusskaya Kaliynaya | 50 | 2.0 MB | 5 (Kerimov, Prokhorov, Mutsoev) |
+| Russian Railways | 50 | 871 KB | 1 PEP (Shakhanov) |
+
+Phase 3 graph note: limit=50 is API max. Large networks (Sberbank, Gazprom, Russian Railways)
+have more paths beyond 50 — Phase 3 should paginate or request additional offsets.
+
+---
+
+## Remaining open issues
+
+- **Kalashnikov OFAC data gap**: Sayari entity `zqpMddadf94y39RfB3AgcA` confirmed =
+  SDN 16911 by INN/reg but missing `sanctioned_usa_ofac_sdn`. Reportable to Sayari.
+- **Sukhoi ownership %**: UAC→Sukhoi share not reported by API; blocks definitive
+  50%-rule assessment. Public sources suggest UAC acquired Sukhoi as a division post-2023.
 - **generate_briefing PDF** — currently outputs HTML. `pip install weasyprint` for PDF.
