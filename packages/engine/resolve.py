@@ -24,10 +24,14 @@ from .helpers import to_dict, first_present
 # Sberbank               | OWwtbp9y51OcLHJQakLaMw     | 59,632  | [0] was LLC Sberbank Service (degree 780)
 # VTB Bank               | dy-rh2g0QtzUN_jC_e9S_A     | 15,509  | [0] was VTB Capital Holdings (degree 208)
 # Transneft              | 9-IuyJoA08bELHrSY3mXXA     |  1,526  | [0] was TRANSNEFT (degree 464, stub)
+# Kalashnikov Concern    | zqpMddadf94y39RfB3AgcA     |     60  | [0] was Innovation Center subsidiary SyiWoXAi7JAAOfdzOWpBDQ
+#                        |                            |         | Parent confirmed = SDN 16911 via INN 1832090230 + reg 1111832003018
+#                        |                            |         | NOTE: parent lacks sanctioned_usa_ofac_sdn in Sayari (data gap)
 PINNED_IDS: dict[str, str] = {
-    "Sberbank":  "OWwtbp9y51OcLHJQakLaMw",
-    "VTB Bank":  "dy-rh2g0QtzUN_jC_e9S_A",
-    "Transneft": "9-IuyJoA08bELHrSY3mXXA",
+    "Sberbank":             "OWwtbp9y51OcLHJQakLaMw",
+    "VTB Bank":             "dy-rh2g0QtzUN_jC_e9S_A",
+    "Transneft":            "9-IuyJoA08bELHrSY3mXXA",
+    "Kalashnikov Concern":  "zqpMddadf94y39RfB3AgcA",
 }
 
 RETRY_NAMES: dict[str, list[str]] = {
