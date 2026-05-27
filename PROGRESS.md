@@ -236,7 +236,191 @@ Left for morning session. See `apps/web/README.md`.
 
 ## Exact next steps (in order)
 
-### 1. Install FastAPI + start API server (5 min)
+### 0. Prerequisites for steps 1–3 (requires live credentials)
+```bash
+export SAYARI_CLIENT_ID=...
+export SAYARI_CLIENT_SECRET=...
+# Verify: python3 -c "from packages.engine import build_client; c=build_client(); print(c)"
+```
+
+### 1. Fix Kalashnikov Concern resolution [REQUIRES LIVE API] (commit after)
+
+**Why:** Sayari resolved "Kalashnikov Concern" to the Innovation Center subsidiary
+[SyiWoXAi7JAAOfdzOWpBDQ] instead of the parent [zqpMddadf94y39RfB3AgcA]. Parent is
+sanctioned=True per the Innovation Center's relationship graph. The OFAC screen correctly
+finds "JSC CONCERN KALASHNIKOV" [SDN 16911] at 0.97. Without the fix, this is classified
+`screen_ambiguous`; with it, it should be `both_catch`.
+
+```python
+# 1a. Fetch and cache parent entity JSON
+import json
+from pathlib import Path
+from packages.engine import build_client
+
+client = build_client()
+parent_id = "zqpMddadf94y39RfB3AgcA"
+response = client.entity.get(parent_id)           # GET /v1/entity/{id}
+raw = response.dict() if hasattr(response, 'dict') else vars(response)
+Path(f"output/raw/{parent_id}.json").write_text(json.dumps(raw, default=str))
+print(raw.get('label'), raw.get('sanctioned'), [k for k,v in raw.get('risk',{}).items() if isinstance(v,dict) and v.get('value')])
+```
+
+```python
+# 1b. Add to PINNED_IDS in packages/engine/resolve.py
+PINNED_IDS = {
+    ...existing...,
+    "Kalashnikov Concern": "zqpMddadf94y39RfB3AgcA",
+}
+```
+
+```bash
+# 1c. Re-run compare and verify reclassification
+python3 -c "
+from packages.engine import EntityCache
+from services.api.ofac.matcher import OfacMatcher
+from services.api.tools.compare_ofac_vs_sayari import compare_ofac_vs_sayari_tool
+cache = EntityCache('./output')
+ofac = OfacMatcher.load('services/api/data')
+r = compare_ofac_vs_sayari_tool(cache, ofac)
+s = r.data['summary']
+print(s)
+# Expect: both_catch=34, screen_ambiguous=2
+"
+```
+
+Expected outcome: `screen_ambiguous` drops by 1 (Kalashnikov → `both_catch`).
+ownership_gap drops to 4 (Gazprom + MiG remain screen_ambiguous; both are genuine
+ownership exposures where the *parent* isn't named on the SDN).
+
+---
+
+### 2. Sukhoi ownership traversal [REQUIRES LIVE API] (commit after)
+
+**Why:** Sukhoi Company [5wVHdujAfKLkHO7efPnAjQ] is classified `ofac_only` — the screen
+matched UAC [SDN 36431] via alias "sukhoi". Sayari shows EU/CA/CH/FR/NZ + US BIS sanctions
+but NOT `sanctioned_usa_ofac_sdn`. Need to determine: does Sukhoi → UAC ownership chain
+exist, and is UAC's OFAC designation enough to trigger the 50% rule for Sukhoi?
+
+**Do NOT reclassify until you have the evidence. Show the ownership path.**
+
+```python
+# 2a. Run UBO traversal on Sukhoi
+from packages.engine import build_client
+from services.api.tools.traverse_ownership import traverse_ownership_tool
+from packages.engine import EntityCache
+
+client = build_client()
+cache = EntityCache('./output')
+result = traverse_ownership_tool(cache, client, entity_id="5wVHdujAfKLkHO7efPnAjQ", depth=3)
+print(result.data)
+# Look for: UAC (entity_id for PJSC UAC = sdn 36431) in the ownership chain
+# UAC Sayari entity_id is likely in index — search output/raw/ for "united aircraft"
+```
+
+```python
+# 2b. For each entity in the path, check Sayari risk factors
+# Key question: is UAC ≥50% owner of Sukhoi?
+# If yes: Sukhoi should have ofac_50_percent_rule risk factor (check it)
+# If yes: ofac_only → screen_ambiguous or sayari_only depending on current screen result
+# If no: ofac_only is correct (screen is flagging UAC's alias, but no ownership block)
+```
+
+```bash
+# 2c. Cache traversal result
+import json
+from pathlib import Path
+Path("output/raw/traversal").mkdir(exist_ok=True)
+Path("output/raw/traversal/5wVHdujAfKLkHO7efPnAjQ.json").write_text(
+    json.dumps(result.data, default=str)
+)
+```
+
+**Report format expected:**
+```
+Sukhoi [5wVHdujAfKLkHO7efPnAjQ]
+  └── has_shareholder: [intermediate entity if any]
+      └── has_shareholder / subsidiary_of: UAC [<sayari_id>]
+          OFAC status: sanctioned_usa_ofac_sdn = True/False
+          SDN sdn_id: 36431 (if confirmed same entity)
+Ownership share: XX% → triggers/does not trigger OFAC 50% rule
+Sayari ofac_50_percent_rule for Sukhoi: present / absent
+```
+
+---
+
+### 3. Cache ownership traversal for marquee entities [REQUIRES LIVE API] (commit after)
+
+**Why:** Phase 3 ownership graph (Cytoscape) needs real edges. Cache traversal JSON now
+so the front-end has real data without needing live API calls during the demo.
+
+```python
+# Rate-limit: 1 request per second. Cache to output/raw/traversal/{id}.json
+import time, json
+from pathlib import Path
+from packages.engine import build_client, EntityCache
+from services.api.tools.traverse_ownership import traverse_ownership_tool
+
+client = build_client()
+cache = EntityCache('./output')
+Path("output/raw/traversal").mkdir(exist_ok=True)
+
+MARQUEE = {
+    "Sberbank":       "OWwtbp9y51OcLHJQakLaMw",
+    "VTB Bank":       "dy-rh2g0QtzUN_jC_e9S_A",
+    "Transneft":      "9-IuyJoA08bELHrSY3mXXA",
+    "Gazprom":        "RZAPsBRdYXTToVqy4ZuNow",
+    "Rosneft":        "<id-from-output/raw/>",   # grep entities.csv
+    "Rosoboronexport":"9LtTGZXn_LlN05C47cwZ5w",
+    # ownership_gap entities:
+    "Belorusskaya Kaliynaya Companya": "BSsUPVlxsICOW4GCjb4fqQ",
+    "Russian Railways":                "RqBOnCZOD5pWG-tCf8wr8A",
+}
+
+for name, entity_id in MARQUEE.items():
+    out = Path(f"output/raw/traversal/{entity_id}.json")
+    if out.exists():
+        print(f"  {name}: already cached, skipping")
+        continue
+    try:
+        r = traverse_ownership_tool(cache, client, entity_id=entity_id, depth=3)
+        out.write_text(json.dumps(r.data, default=str))
+        print(f"  {name}: cached {len(str(r.data))} bytes")
+    except Exception as e:
+        print(f"  {name}: ERROR — {e}")
+    time.sleep(1.0)   # respect rate limits
+```
+
+After caching, verify:
+```bash
+ls -lh output/raw/traversal/
+# Expect 8 files, each with ownership edges
+```
+
+---
+
+### 4. Re-run compare + update PROGRESS.md (commit after steps 1–3)
+
+After each fix above:
+```bash
+python3 -c "
+import sys; sys.path.insert(0, '.')
+from packages.engine import EntityCache
+from services.api.ofac.matcher import OfacMatcher
+from services.api.tools.compare_ofac_vs_sayari import compare_ofac_vs_sayari_tool
+cache = EntityCache('./output')
+ofac = OfacMatcher.load('services/api/data')
+r = compare_ofac_vs_sayari_tool(cache, ofac)
+s = r.data['summary']
+for k,v in s.items():
+    if k != 'structural_argument': print(f'  {k}: {v}')
+print()
+print(s['structural_argument'])
+"
+```
+
+---
+
+### 5. Install FastAPI + start API server
 ```bash
 cd "/Users/peternemrow/Documents/Claude/Projects/Sayari Interview/services/api"
 pip install fastapi uvicorn[standard]
@@ -246,7 +430,7 @@ uvicorn main:app --reload --port 8000
 # Verify: curl "http://localhost:8000/tools/risk_summary/OWwtbp9y51OcLHJQakLaMw"
 ```
 
-### 2. Set up Postgres + load data (15-20 min)
+### 6. Set up Postgres + load data
 ```bash
 createdb sentinel
 psql sentinel -f db/schema.sql
@@ -254,24 +438,12 @@ psql sentinel -c "CREATE EXTENSION IF NOT EXISTS pg_trgm;"
 export DATABASE_URL=postgresql://localhost/sentinel
 python db/loaders/load_cache.py   # 49 entities
 python db/loaders/load_ofac.py    # ~10k SDN entries (downloads ~15MB)
-# Verify: psql sentinel -c "SELECT count(*) FROM entity_cache;"
 ```
 
-### 3. OFAC matcher download (automatic on first API call)
-The SDN XML will be downloaded to `services/api/data/sdn.xml` on first
-request to `/tools/screen_ofac` or `/tools/compare_ofac_vs_sayari`.
-Alternatively pre-download:
-```bash
-python -c "
-from services.api.ofac.matcher import OfacMatcher
-OfacMatcher.load('services/api/data')
-"
-```
-
-### 4. Phase 2 — Agent (if ANTHROPIC_API_KEY available)
+### 7. Phase 2 — Agent (requires ANTHROPIC_API_KEY)
 Build `services/agent/agent.py` using Anthropic tool-use loop.
 
-### 5. Phase 3 — Next.js UI
+### 8. Phase 3 — Next.js UI
 ```bash
 cd apps/web
 npx create-next-app@latest . --typescript --tailwind --app
@@ -280,17 +452,13 @@ npx create-next-app@latest . --typescript --tailwind --app
 
 ---
 
-## Uncertainties / things to verify
+## Known issues / deferred until live API available
 
-1. **FastAPI startup time** — the OFAC matcher downloads ~15 MB on first cold start.
-   Background thread means API is immediately available; OFAC endpoints return empty
-   results until the download completes (~30-60s depending on Treasury.gov).
-
-2. **traverse_ownership** — requires live SAYARI_CLIENT_ID. The 49 cached entity profiles
-   don't include traversal data. The tool returns an error dict if creds are absent.
-   For the demo, the `risk_factors` array in cached profiles (e.g., `ofac_50_percent_rule`,
-   `owner_of_sanctioned_entity`) is the ownership-aware signal — it was computed by Sayari
-   server-side and is in the cached JSON.
-
-3. **generate_briefing PDF** — currently outputs HTML (WeasyPrint not in .venv).
-   `pip install weasyprint` to enable PDF. HTML briefings are fully functional.
+- **Kalashnikov Concern** resolution: pinned to Innovation Center subsidiary, not parent.
+  Parent ID `zqpMddadf94y39RfB3AgcA` confirmed sanctioned. See step 1 above.
+- **Sukhoi ownership path**: UAC has "sukhoi" as SDN alias. Whether Sukhoi is ≥50% owned
+  by UAC determines if `ofac_only` → `screen_ambiguous`. See step 2 above.
+- **traverse_ownership** requires live SAYARI_CLIENT_ID. The 49 cached entity profiles
+  don't include traversal data. Risk factors in cached profiles (e.g., `ofac_50_percent_rule`)
+  are the ownership-aware signal — computed server-side by Sayari in the cached JSON.
+- **generate_briefing PDF** — currently outputs HTML. `pip install weasyprint` for PDF.
