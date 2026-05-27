@@ -10,14 +10,17 @@ Startup:
     pip install -r requirements.txt
     uvicorn main:app --reload --port 8000
 
-Environment variables (optional — omit to run in cache-only mode):
-    SAYARI_CLIENT_ID=...
-    SAYARI_CLIENT_SECRET=...
-    OUTPUT_DIR=../../output          # path to the ground-truth output/ directory
-    OFAC_CACHE_DIR=./data            # where sdn.xml is cached
+Environment variables:
+    SAYARI_CLIENT_ID=...         (optional — omit for cache-only mode)
+    SAYARI_CLIENT_SECRET=...     (optional)
+    ANTHROPIC_API_KEY=...        (required for /agent/ask in LIVE mode)
+    DATABASE_URL=postgresql://localhost/sentinel   (optional — falls back to JSON seed)
+    OUTPUT_DIR=../../output      (path to the ground-truth output/ directory)
+    OFAC_CACHE_DIR=./data        (where sdn.xml is cached)
 """
 from __future__ import annotations
 
+import json
 import logging
 import os
 import sys
@@ -27,6 +30,7 @@ from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 
 # ── Path setup ────────────────────────────────────────────────────────────────
@@ -45,6 +49,7 @@ from services.api.tools.compare_ofac_vs_sayari import compare_ofac_vs_sayari_too
 from services.api.tools.risk_summary import risk_summary_tool, list_risk_summary_tool
 from services.api.tools.generate_briefing import generate_briefing_tool
 from services.api.ofac.matcher import OfacMatcher
+from services.api.routers.investigations import router as investigations_router
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
 log = logging.getLogger("sentinel.api")
@@ -105,16 +110,25 @@ app = FastAPI(
         "Compliance co-pilot API. Every response includes a `source` object "
         "citing the exact Sayari API endpoint and field path that produced the data."
     ),
-    version="1.0.0",
+    version="1.1.0",
     lifespan=lifespan,
 )
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # tighten for production
+    allow_origins=[
+        "http://localhost:3000",    # Next.js dev
+        "http://localhost:3001",
+        "http://127.0.0.1:3000",
+        "*",                        # tighten for production
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["*"],
 )
+
+# ── Routers ───────────────────────────────────────────────────────────────────
+app.include_router(investigations_router)
 
 
 # ── Request / response models ─────────────────────────────────────────────────
@@ -137,6 +151,12 @@ class BriefingRequest(BaseModel):
     entity_id: str
 
 
+class AgentRequest(BaseModel):
+    question: str
+    mode: str = "live"       # "live" | "cached"
+    run_id: str | None = None  # for CACHED: specific golden run to replay
+
+
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
 def _result(cited) -> dict:
@@ -152,10 +172,83 @@ def health():
         "status": "ok",
         "cache_ready": _cache is not None,
         "ofac_ready": _ofac_matcher is not None,
+        "agent_ready": bool(os.environ.get("ANTHROPIC_API_KEY")),
+        "db_ready": bool(os.environ.get("DATABASE_URL")),
         "cached_entities": len(_cache.all_profiles()) if _cache else 0,
         "ofac_entries": len(_ofac_matcher._entries) if _ofac_matcher else 0,
     }
 
+
+# ── Agent endpoint ────────────────────────────────────────────────────────────
+
+@app.post("/agent/ask")
+async def agent_ask(req: AgentRequest):
+    """
+    Grounded streaming co-pilot. Returns Server-Sent Events.
+
+    SSE event protocol:
+      token       — text chunk from the model
+      tool_call   — tool invocation {id, name, input}
+      tool_result — tool result {id, name, duration_ms, ok, summary, source}
+      citation    — source citation {ref, label, source}
+      flag        — verify flag {kind, entity_id, reason}
+      answer_meta — {confidence, sources_count, tools_used}
+      done        — stream end
+      error       — {message}
+
+    mode=live    → calls Anthropic API + executes real tools (ANTHROPIC_API_KEY required)
+    mode=cached  → replays captured golden run from output/agent_runs/{run_id}.json
+    """
+    cache = _get_cache()
+    ofac = _get_ofac()
+
+    from services.api.agent.runner import run_agent_live, run_agent_cached
+
+    if req.mode == "cached":
+        stream = run_agent_cached(question=req.question, run_id=req.run_id)
+    else:
+        stream = run_agent_live(
+            question=req.question,
+            cache=cache,
+            ofac_matcher=ofac,
+            capture=False,
+        )
+
+    return StreamingResponse(
+        stream,
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "X-Accel-Buffering": "no",
+            "Connection": "keep-alive",
+        },
+    )
+
+
+@app.post("/agent/capture")
+async def agent_capture():
+    """
+    Run all 4 golden questions live and save their event streams to
+    output/agent_runs/golden_00{1-4}.json. Requires ANTHROPIC_API_KEY.
+    """
+    cache = _get_cache()
+    ofac = _get_ofac()
+
+    if not os.environ.get("ANTHROPIC_API_KEY"):
+        raise HTTPException(status_code=503, detail="ANTHROPIC_API_KEY not set")
+
+    from services.api.agent.runner import capture_golden_runs
+    import asyncio
+
+    # Run capture in background task
+    async def _run():
+        await capture_golden_runs(cache, ofac)
+
+    asyncio.create_task(_run())
+    return {"status": "capturing", "message": "Golden runs starting in background. Check output/agent_runs/."}
+
+
+# ── Tool endpoints ─────────────────────────────────────────────────────────────
 
 @app.post("/tools/resolve_entity")
 def resolve_entity(req: ResolveRequest):
@@ -180,7 +273,7 @@ def get_profile(entity_id: str):
 
 @app.post("/tools/traverse_ownership")
 def traverse_ownership(req: TraverseRequest):
-    """Walk the ownership graph from entity_id."""
+    """Walk the ownership graph from entity_id. Cache-first for 8 marquee entities."""
     result = traverse_ownership_tool(
         entity_id=req.entity_id,
         depth=req.depth,
@@ -190,7 +283,7 @@ def traverse_ownership(req: TraverseRequest):
 
 
 @app.get("/tools/screen_ofac")
-def screen_ofac(name: str = Query(...), threshold: float = 0.7, limit: int = 5):
+def screen_ofac(name: str = Query(...), threshold: float = 0.85, limit: int = 5):
     """Screen a name against the OFAC SDN feed."""
     result = screen_ofac_tool(
         name=name,
@@ -202,7 +295,7 @@ def screen_ofac(name: str = Query(...), threshold: float = 0.7, limit: int = 5):
 
 
 @app.get("/tools/compare_ofac_vs_sayari")
-def compare_ofac_vs_sayari(threshold: float = 0.7):
+def compare_ofac_vs_sayari(threshold: float = 0.85):
     """Side-by-side OFAC name-screen vs Sayari for all cached entities."""
     result = compare_ofac_vs_sayari_tool(
         cache=_get_cache(),
@@ -228,7 +321,7 @@ def list_risk_summary():
 
 @app.post("/tools/generate_briefing")
 def generate_briefing(req: BriefingRequest):
-    """Render a compliance briefing PDF (or HTML fallback)."""
+    """Render a compliance briefing (HTML; PDF if WeasyPrint installed)."""
     result = generate_briefing_tool(entity_id=req.entity_id, cache=_get_cache())
     return _result(result)
 

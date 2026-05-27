@@ -252,6 +252,8 @@ def compare_ofac_vs_sayari_tool(
                 "unresolved": unresolved,
                 "ofac_screen_finds": ofac_screen_finds,
                 "ownership_gap": ownership_gap,
+                "ownership_missed": ownership_gap,   # UI alias: entities not directly on SDN, caught by Sayari
+                "matcher_missed": matcher_miss,       # UI alias: directly on SDN but name-screen failed
                 "total_ofac_exposed": ofac_total,
                 "structural_argument": structural_argument,
             },

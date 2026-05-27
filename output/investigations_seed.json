@@ -1,0 +1,188 @@
+{
+  "investigations": [
+    {
+      "id": 1,
+      "source": "upload",
+      "source_detail": "list_1.xlsx",
+      "status": "complete",
+      "created_at": "2026-05-24T21:44:14.292797+00:00",
+      "completed_at": "2026-05-24T22:44:14.293103+00:00",
+      "total_entities": 49,
+      "flagged_count": 42,
+      "cleared_count": 4,
+      "escalated_count": 2,
+      "blocked_count": 40,
+      "pending_count": 3
+    },
+    {
+      "id": 2,
+      "source": "sftp",
+      "source_detail": "/inbound/sftp/may2025_vendors.xlsx",
+      "status": "pending",
+      "created_at": "2026-05-27T17:44:14.293107+00:00",
+      "completed_at": null,
+      "total_entities": 0,
+      "flagged_count": 0,
+      "cleared_count": 0,
+      "escalated_count": 0,
+      "blocked_count": 0,
+      "pending_count": 0
+    },
+    {
+      "id": 3,
+      "source": "upload",
+      "source_detail": "emergency_counterparty_check.xlsx",
+      "status": "complete",
+      "created_at": "2026-05-26T21:44:14.293109+00:00",
+      "completed_at": "2026-05-26T23:44:14.293111+00:00",
+      "total_entities": 12,
+      "flagged_count": 8,
+      "cleared_count": 2,
+      "escalated_count": 2,
+      "blocked_count": 4,
+      "pending_count": 4
+    },
+    {
+      "id": 4,
+      "source": "api",
+      "source_detail": "POST /v1/screen via Meridian Risk API",
+      "status": "complete",
+      "created_at": "2026-05-20T21:44:14.293113+00:00",
+      "completed_at": "2026-05-21T00:44:14.293115+00:00",
+      "total_entities": 31,
+      "flagged_count": 18,
+      "cleared_count": 10,
+      "escalated_count": 3,
+      "blocked_count": 5,
+      "pending_count": 13
+    }
+  ],
+  "entity_results": [
+    {
+      "investigation_id": 1,
+      "entity_id": "OWwtbp9y51OcLHJQakLaMw",
+      "input_name": "Sberbank",
+      "match_label": "PJSC Sberbank",
+      "outcome": "both_catch",
+      "risk_level": "critical",
+      "ofac_programs": [
+        "RUSSIA"
+      ],
+      "ownership_factor": null,
+      "direct_factor": "sanctioned_usa_ofac_sdn",
+      "ofac_match_name": "SBERBANK OF RUSSIA",
+      "ofac_sdn_id": 12765,
+      "is_directly_designated": true,
+      "is_ownership_exposed": false
+    },
+    {
+      "investigation_id": 1,
+      "entity_id": "dy-rh2g0QtzUN_jC_e9S_A",
+      "input_name": "VTB Bank",
+      "match_label": "VTB Bank (PJSC)",
+      "outcome": "both_catch",
+      "risk_level": "critical",
+      "ofac_programs": [
+        "RUSSIA"
+      ],
+      "ownership_factor": null,
+      "direct_factor": "sanctioned_usa_ofac_sdn",
+      "ofac_match_name": "BANK VTB",
+      "ofac_sdn_id": 30714,
+      "is_directly_designated": true,
+      "is_ownership_exposed": false
+    },
+    {
+      "investigation_id": 1,
+      "entity_id": "BSsUPVlxsICOW4GCjb4fqQ",
+      "input_name": "Belorusskaya Kaliynaya Companya",
+      "match_label": "Belarusian Potash Company",
+      "outcome": "sayari_only",
+      "risk_level": "critical",
+      "ofac_programs": [],
+      "ownership_factor": "owned_by_sanctioned_usa_ofac_sdn_entity",
+      "direct_factor": null,
+      "ofac_match_name": null,
+      "ofac_sdn_id": null,
+      "is_directly_designated": false,
+      "is_ownership_exposed": true
+    },
+    {
+      "investigation_id": 1,
+      "entity_id": "RqBOnCZOD5pWG-tCf8wr8A",
+      "input_name": "Russian Railways",
+      "match_label": "JSC Russian Railways",
+      "outcome": "sayari_only",
+      "risk_level": "critical",
+      "ofac_programs": [],
+      "ownership_factor": "controlled_by_ofac_sdn",
+      "direct_factor": null,
+      "ofac_match_name": null,
+      "ofac_sdn_id": null,
+      "is_directly_designated": false,
+      "is_ownership_exposed": true
+    },
+    {
+      "investigation_id": 1,
+      "entity_id": "RZAPsBRdYXTToVqy4ZuNow",
+      "input_name": "Gazprom",
+      "match_label": "PJSC Gazprom",
+      "outcome": "screen_ambiguous",
+      "risk_level": "critical",
+      "ofac_programs": [],
+      "ownership_factor": "owner_of_sanctioned_usa_ofac_sdn_entity",
+      "direct_factor": null,
+      "ofac_match_name": "GAZPROM NEFT",
+      "ofac_sdn_id": 19640,
+      "is_directly_designated": false,
+      "is_ownership_exposed": true
+    },
+    {
+      "investigation_id": 1,
+      "entity_id": "zqpMddadf94y39RfB3AgcA",
+      "input_name": "Kalashnikov Concern",
+      "match_label": "JSC Concern Kalashnikov",
+      "outcome": "ofac_only",
+      "risk_level": "critical",
+      "ofac_programs": [
+        "RUSSIA"
+      ],
+      "ownership_factor": null,
+      "direct_factor": null,
+      "ofac_match_name": "JSC CONCERN KALASHNIKOV",
+      "ofac_sdn_id": 16911,
+      "is_directly_designated": false,
+      "is_ownership_exposed": false
+    }
+  ],
+  "dispositions": [
+    {
+      "entity_result_id": 1,
+      "status": "blocked",
+      "reviewer": "alice.chen@meridian.ch",
+      "rationale": "OFAC SDN confirmed. No transactions permitted.",
+      "created_at": "2026-05-25T21:44:14.293121+00:00"
+    },
+    {
+      "entity_result_id": 2,
+      "status": "blocked",
+      "reviewer": "alice.chen@meridian.ch",
+      "rationale": "OFAC SDN confirmed. Blocked.",
+      "created_at": "2026-05-25T21:44:14.293123+00:00"
+    },
+    {
+      "entity_result_id": 3,
+      "status": "escalated",
+      "reviewer": "mark.osei@meridian.ch",
+      "rationale": "Ownership-exposure via Uralchem (OFAC SDN). Escalated to CCO.",
+      "created_at": "2026-05-25T21:44:14.293125+00:00"
+    },
+    {
+      "entity_result_id": 5,
+      "status": "pending",
+      "reviewer": null,
+      "rationale": null,
+      "created_at": "2026-05-25T21:44:14.293126+00:00"
+    }
+  ]
+}

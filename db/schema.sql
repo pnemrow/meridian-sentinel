@@ -88,3 +88,78 @@ CREATE TABLE IF NOT EXISTS screening_run (
     ofac_fetched_at     timestamptz,               -- when SDN XML was downloaded
     result_json         jsonb       NOT NULL        -- full compare result
 );
+
+
+-- ── investigation ─────────────────────────────────────────────────────────────
+-- One row per analyst investigation (a vendor list run).
+-- Powers GET /api/investigations.
+
+CREATE TABLE IF NOT EXISTS investigation (
+    id                  bigserial   PRIMARY KEY,
+    source              text        NOT NULL,  -- 'upload' | 'sftp' | 'api'
+    source_detail       text,                  -- filename or SFTP path
+    status              text        NOT NULL DEFAULT 'pending',
+                                               -- pending | running | complete
+    created_at          timestamptz NOT NULL DEFAULT now(),
+    completed_at        timestamptz,
+    total_entities      integer     NOT NULL DEFAULT 0,
+    flagged_count       integer     NOT NULL DEFAULT 0,
+    cleared_count       integer     NOT NULL DEFAULT 0,
+    escalated_count     integer     NOT NULL DEFAULT 0,
+    blocked_count       integer     NOT NULL DEFAULT 0,
+    pending_count       integer     NOT NULL DEFAULT 0,
+    result_json         jsonb                  -- snapshot of compare_ofac_vs_sayari result
+);
+
+CREATE INDEX IF NOT EXISTS investigation_status_idx
+    ON investigation (status, created_at DESC);
+
+
+-- ── entity_result ─────────────────────────────────────────────────────────────
+-- One row per entity per investigation.
+-- Powers GET /api/results/{run_id} and /{run_id}/{entity_id}.
+
+CREATE TABLE IF NOT EXISTS entity_result (
+    id                  bigserial   PRIMARY KEY,
+    investigation_id    bigint      NOT NULL REFERENCES investigation(id) ON DELETE CASCADE,
+    entity_id           text,                  -- Sayari entity_id (NULL if unresolved)
+    input_name          text        NOT NULL,
+    match_label         text,
+    outcome             text,                  -- both_catch | sayari_only | etc.
+    risk_level          text,                  -- critical | high | medium | low
+    ofac_programs       text[]      NOT NULL DEFAULT '{}',
+    ownership_factor    text,
+    direct_factor       text,
+    ofac_match_name     text,
+    ofac_sdn_id         integer,
+    is_directly_designated  boolean NOT NULL DEFAULT false,
+    is_ownership_exposed    boolean NOT NULL DEFAULT false,
+    result_json         jsonb       NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS entity_result_investigation_idx
+    ON entity_result (investigation_id);
+
+CREATE INDEX IF NOT EXISTS entity_result_entity_id_idx
+    ON entity_result (entity_id) WHERE entity_id IS NOT NULL;
+
+
+-- ── disposition ───────────────────────────────────────────────────────────────
+-- Analyst decisions on individual entity results.
+-- Powers POST /api/results/{run_id}/{entity_id}/disposition.
+
+CREATE TABLE IF NOT EXISTS disposition (
+    id                  bigserial   PRIMARY KEY,
+    entity_result_id    bigint      NOT NULL REFERENCES entity_result(id) ON DELETE CASCADE,
+    status              text        NOT NULL,  -- pending | cleared | escalated | blocked
+    reviewer            text,
+    rationale           text,
+    created_at          timestamptz NOT NULL DEFAULT now(),
+    updated_at          timestamptz NOT NULL DEFAULT now()
+);
+
+CREATE UNIQUE INDEX IF NOT EXISTS disposition_entity_result_unique_idx
+    ON disposition (entity_result_id);
+
+CREATE INDEX IF NOT EXISTS disposition_entity_result_idx
+    ON disposition (entity_result_id);

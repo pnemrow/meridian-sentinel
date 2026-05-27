@@ -1,0 +1,1799 @@
+{
+  "run_id": "golden_003",
+  "question": "How many entities does OFAC name-screening catch vs Sayari? What's the gap?",
+  "captured_at": "2026-05-27T21:57:36.048910+00:00",
+  "model": "claude-sonnet-4-6",
+  "events": [
+    {
+      "event": "tool_call",
+      "data": {
+        "id": "toolu_01JWPdkNqefqNp6otKmD6z2m",
+        "name": "compare_ofac_vs_sayari",
+        "input": {}
+      }
+    },
+    {
+      "event": "tool_result",
+      "data": {
+        "id": "toolu_01JWPdkNqefqNp6otKmD6z2m",
+        "name": "compare_ofac_vs_sayari",
+        "duration_ms": 198,
+        "ok": true,
+        "summary": "33 both_catch, 4 ownership_gap, 3 matcher_miss \u2014 40 total OFAC exposed",
+        "source": {
+          "entity_url": null,
+          "raw_field_path": "data.risk.sanctioned_usa_ofac_sdn.value (direct), data.risk.ofac_50_percent_rule.value (ownership), data.risk.controlled_by_ofac_sdn.value (ownership)",
+          "cache_file": "output/raw/*.json (all 49 cached entity profiles)",
+          "api_endpoint": "cached GET /v1/entity/{id} responses + OFAC SDN.XML"
+        }
+      }
+    },
+    {
+      "event": "citation",
+      "data": {
+        "ref": "toolu_01JWPdkNqefqNp6otKmD6z2m",
+        "label": "compare_ofac_vs_sayari",
+        "source": {
+          "entity_url": null,
+          "raw_field_path": "data.risk.sanctioned_usa_ofac_sdn.value (direct), data.risk.ofac_50_percent_rule.value (ownership), data.risk.controlled_by_ofac_sdn.value (ownership)",
+          "cache_file": "output/raw/*.json (all 49 cached entity profiles)",
+          "api_endpoint": "cached GET /v1/entity/{id} responses + OFAC SDN.XML"
+        }
+      }
+    },
+    {
+      "event": "token",
+      "data": "Here "
+    },
+    {
+      "event": "token",
+      "data": "is "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "full "
+    },
+    {
+      "event": "token",
+      "data": "picture "
+    },
+    {
+      "event": "token",
+      "data": "across "
+    },
+    {
+      "event": "token",
+      "data": "your "
+    },
+    {
+      "event": "token",
+      "data": "49-vendor "
+    },
+    {
+      "event": "token",
+      "data": "list.\n\n---\n\nHEADLINE "
+    },
+    {
+      "event": "token",
+      "data": "NUMBERS\n\nTotal "
+    },
+    {
+      "event": "token",
+      "data": "vendors "
+    },
+    {
+      "event": "token",
+      "data": "screened: "
+    },
+    {
+      "event": "token",
+      "data": "49\nTotal "
+    },
+    {
+      "event": "token",
+      "data": "OFAC-exposed "
+    },
+    {
+      "event": "token",
+      "data": "(any "
+    },
+    {
+      "event": "token",
+      "data": "basis): "
+    },
+    {
+      "event": "token",
+      "data": "40\nOFAC "
+    },
+    {
+      "event": "token",
+      "data": "name-screen "
+    },
+    {
+      "event": "token",
+      "data": "finds: "
+    },
+    {
+      "event": "token",
+      "data": "33 "
+    },
+    {
+      "event": "token",
+      "data": "(83% "
+    },
+    {
+      "event": "token",
+      "data": "of "
+    },
+    {
+      "event": "token",
+      "data": "exposed "
+    },
+    {
+      "event": "token",
+      "data": "entities)\nSayari "
+    },
+    {
+      "event": "token",
+      "data": "ownership "
+    },
+    {
+      "event": "token",
+      "data": "graph "
+    },
+    {
+      "event": "token",
+      "data": "finds: "
+    },
+    {
+      "event": "token",
+      "data": "37 "
+    },
+    {
+      "event": "token",
+      "data": "(93% "
+    },
+    {
+      "event": "token",
+      "data": "of "
+    },
+    {
+      "event": "token",
+      "data": "exposed "
+    },
+    {
+      "event": "token",
+      "data": "entities)\nThe "
+    },
+    {
+      "event": "token",
+      "data": "gap "
+    },
+    {
+      "event": "token",
+      "data": "\u2014 "
+    },
+    {
+      "event": "token",
+      "data": "entities "
+    },
+    {
+      "event": "token",
+      "data": "screen "
+    },
+    {
+      "event": "token",
+      "data": "misses "
+    },
+    {
+      "event": "token",
+      "data": "but "
+    },
+    {
+      "event": "token",
+      "data": "Sayari "
+    },
+    {
+      "event": "token",
+      "data": "catches: "
+    },
+    {
+      "event": "token",
+      "data": "7 "
+    },
+    {
+      "event": "token",
+      "data": "vendors\n\n---\n\nBREAKDOWN "
+    },
+    {
+      "event": "token",
+      "data": "BY "
+    },
+    {
+      "event": "token",
+      "data": "OUTCOME "
+    },
+    {
+      "event": "token",
+      "data": "CATEGORY\n\n1. "
+    },
+    {
+      "event": "token",
+      "data": "Both "
+    },
+    {
+      "event": "token",
+      "data": "Catch "
+    },
+    {
+      "event": "token",
+      "data": "(33 "
+    },
+    {
+      "event": "token",
+      "data": "entities) "
+    },
+    {
+      "event": "token",
+      "data": "\u2014 "
+    },
+    {
+      "event": "token",
+      "data": "directly "
+    },
+    {
+      "event": "token",
+      "data": "on "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "SDN "
+    },
+    {
+      "event": "token",
+      "data": "list "
+    },
+    {
+      "event": "token",
+      "data": "AND "
+    },
+    {
+      "event": "token",
+      "data": "name-screen "
+    },
+    {
+      "event": "token",
+      "data": "found "
+    },
+    {
+      "event": "token",
+      "data": "them. "
+    },
+    {
+      "event": "token",
+      "data": "Examples: "
+    },
+    {
+      "event": "token",
+      "data": "Sberbank, "
+    },
+    {
+      "event": "token",
+      "data": "VTB "
+    },
+    {
+      "event": "token",
+      "data": "Bank, "
+    },
+    {
+      "event": "token",
+      "data": "Rosneft, "
+    },
+    {
+      "event": "token",
+      "data": "Rostec, "
+    },
+    {
+      "event": "token",
+      "data": "Promsvyazbank, "
+    },
+    {
+      "event": "token",
+      "data": "Alfa-Bank, "
+    },
+    {
+      "event": "token",
+      "data": "National "
+    },
+    {
+      "event": "token",
+      "data": "Iranian "
+    },
+    {
+      "event": "token",
+      "data": "Oil "
+    },
+    {
+      "event": "token",
+      "data": "Company, "
+    },
+    {
+      "event": "token",
+      "data": "Korea "
+    },
+    {
+      "event": "token",
+      "data": "Mining "
+    },
+    {
+      "event": "token",
+      "data": "Development "
+    },
+    {
+      "event": "token",
+      "data": "Trading "
+    },
+    {
+      "event": "token",
+      "data": "Corporation.\n\n2. "
+    },
+    {
+      "event": "token",
+      "data": "Sayari "
+    },
+    {
+      "event": "token",
+      "data": "Only "
+    },
+    {
+      "event": "token",
+      "data": "(2 "
+    },
+    {
+      "event": "token",
+      "data": "entities) "
+    },
+    {
+      "event": "token",
+      "data": "\u2014 "
+    },
+    {
+      "event": "token",
+      "data": "NOT "
+    },
+    {
+      "event": "token",
+      "data": "named "
+    },
+    {
+      "event": "token",
+      "data": "on "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "SDN "
+    },
+    {
+      "event": "token",
+      "data": "list, "
+    },
+    {
+      "event": "token",
+      "data": "but "
+    },
+    {
+      "event": "token",
+      "data": "OFAC-exposed "
+    },
+    {
+      "event": "token",
+      "data": "via "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "50% "
+    },
+    {
+      "event": "token",
+      "data": "rule "
+    },
+    {
+      "event": "token",
+      "data": "because "
+    },
+    {
+      "event": "token",
+      "data": "a "
+    },
+    {
+      "event": "token",
+      "data": "sanctioned "
+    },
+    {
+      "event": "token",
+      "data": "entity "
+    },
+    {
+      "event": "token",
+      "data": "owns "
+    },
+    {
+      "event": "token",
+      "data": "or "
+    },
+    {
+      "event": "token",
+      "data": "controls "
+    },
+    {
+      "event": "token",
+      "data": "them. "
+    },
+    {
+      "event": "token",
+      "data": "Name-screening "
+    },
+    {
+      "event": "token",
+      "data": "can "
+    },
+    {
+      "event": "token",
+      "data": "never "
+    },
+    {
+      "event": "token",
+      "data": "find "
+    },
+    {
+      "event": "token",
+      "data": "these "
+    },
+    {
+      "event": "token",
+      "data": "by "
+    },
+    {
+      "event": "token",
+      "data": "design.\n "
+    },
+    {
+      "event": "token",
+      "data": " "
+    },
+    {
+      "event": "token",
+      "data": " "
+    },
+    {
+      "event": "token",
+      "data": "\u2014 "
+    },
+    {
+      "event": "token",
+      "data": "Belorusskaya "
+    },
+    {
+      "event": "token",
+      "data": "Kaliynaya "
+    },
+    {
+      "event": "token",
+      "data": "Companya "
+    },
+    {
+      "event": "token",
+      "data": "(Belarusian "
+    },
+    {
+      "event": "token",
+      "data": "Potash "
+    },
+    {
+      "event": "token",
+      "data": "Company): "
+    },
+    {
+      "event": "token",
+      "data": "owned "
+    },
+    {
+      "event": "token",
+      "data": "by "
+    },
+    {
+      "event": "token",
+      "data": "an "
+    },
+    {
+      "event": "token",
+      "data": "SDN-designated "
+    },
+    {
+      "event": "token",
+      "data": "entity. "
+    },
+    {
+      "event": "token",
+      "data": "Sayari "
+    },
+    {
+      "event": "token",
+      "data": "risk "
+    },
+    {
+      "event": "token",
+      "data": "factor: "
+    },
+    {
+      "event": "token",
+      "data": "owned_by_sanctioned_usa_ofac_sdn_entity.\n "
+    },
+    {
+      "event": "token",
+      "data": " "
+    },
+    {
+      "event": "token",
+      "data": " "
+    },
+    {
+      "event": "token",
+      "data": "\u2014 "
+    },
+    {
+      "event": "token",
+      "data": "Gazprom "
+    },
+    {
+      "event": "token",
+      "data": "(screen_ambiguous): "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "name-screen "
+    },
+    {
+      "event": "token",
+      "data": "hit "
+    },
+    {
+      "event": "token",
+      "data": "Gazprom "
+    },
+    {
+      "event": "token",
+      "data": "Neft "
+    },
+    {
+      "event": "token",
+      "data": "(a "
+    },
+    {
+      "event": "token",
+      "data": "different "
+    },
+    {
+      "event": "token",
+      "data": "SDN "
+    },
+    {
+      "event": "token",
+      "data": "entity), "
+    },
+    {
+      "event": "token",
+      "data": "not "
+    },
+    {
+      "event": "token",
+      "data": "Gazprom "
+    },
+    {
+      "event": "token",
+      "data": "itself. "
+    },
+    {
+      "event": "token",
+      "data": "Gazprom's "
+    },
+    {
+      "event": "token",
+      "data": "exposure "
+    },
+    {
+      "event": "token",
+      "data": "is "
+    },
+    {
+      "event": "token",
+      "data": "via "
+    },
+    {
+      "event": "token",
+      "data": "controlled_by_ofac_sdn "
+    },
+    {
+      "event": "token",
+      "data": "in "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "ownership "
+    },
+    {
+      "event": "token",
+      "data": "graph.\n\n3. "
+    },
+    {
+      "event": "token",
+      "data": "Matcher "
+    },
+    {
+      "event": "token",
+      "data": "Miss "
+    },
+    {
+      "event": "token",
+      "data": "(3 "
+    },
+    {
+      "event": "token",
+      "data": "entities) "
+    },
+    {
+      "event": "token",
+      "data": "\u2014 "
+    },
+    {
+      "event": "token",
+      "data": "directly "
+    },
+    {
+      "event": "token",
+      "data": "on "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "SDN "
+    },
+    {
+      "event": "token",
+      "data": "list "
+    },
+    {
+      "event": "token",
+      "data": "but "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "name-screen "
+    },
+    {
+      "event": "token",
+      "data": "failed "
+    },
+    {
+      "event": "token",
+      "data": "to "
+    },
+    {
+      "event": "token",
+      "data": "match "
+    },
+    {
+      "event": "token",
+      "data": "above "
+    },
+    {
+      "event": "token",
+      "data": "threshold. "
+    },
+    {
+      "event": "token",
+      "data": "These "
+    },
+    {
+      "event": "token",
+      "data": "are "
+    },
+    {
+      "event": "token",
+      "data": "false "
+    },
+    {
+      "event": "token",
+      "data": "negatives "
+    },
+    {
+      "event": "token",
+      "data": "caused "
+    },
+    {
+      "event": "token",
+      "data": "by "
+    },
+    {
+      "event": "token",
+      "data": "name "
+    },
+    {
+      "event": "token",
+      "data": "variation, "
+    },
+    {
+      "event": "token",
+      "data": "aliasing, "
+    },
+    {
+      "event": "token",
+      "data": "or "
+    },
+    {
+      "event": "token",
+      "data": "legal-form "
+    },
+    {
+      "event": "token",
+      "data": "differences.\n "
+    },
+    {
+      "event": "token",
+      "data": " "
+    },
+    {
+      "event": "token",
+      "data": " "
+    },
+    {
+      "event": "token",
+      "data": "\u2014 "
+    },
+    {
+      "event": "token",
+      "data": "PDVSA "
+    },
+    {
+      "event": "token",
+      "data": "(input: "
+    },
+    {
+      "event": "token",
+      "data": "\"Venezuelan "
+    },
+    {
+      "event": "token",
+      "data": "State-Owned "
+    },
+    {
+      "event": "token",
+      "data": "Oil "
+    },
+    {
+      "event": "token",
+      "data": "Company "
+    },
+    {
+      "event": "token",
+      "data": "(PDVSA)\")\n "
+    },
+    {
+      "event": "token",
+      "data": " "
+    },
+    {
+      "event": "token",
+      "data": " "
+    },
+    {
+      "event": "token",
+      "data": "\u2014 "
+    },
+    {
+      "event": "token",
+      "data": "State "
+    },
+    {
+      "event": "token",
+      "data": "Development "
+    },
+    {
+      "event": "token",
+      "data": "Bank "
+    },
+    {
+      "event": "token",
+      "data": "VEB.RF "
+    },
+    {
+      "event": "token",
+      "data": "(input "
+    },
+    {
+      "event": "token",
+      "data": "name "
+    },
+    {
+      "event": "token",
+      "data": "differs "
+    },
+    {
+      "event": "token",
+      "data": "from "
+    },
+    {
+      "event": "token",
+      "data": "SDN "
+    },
+    {
+      "event": "token",
+      "data": "listing)\n "
+    },
+    {
+      "event": "token",
+      "data": " "
+    },
+    {
+      "event": "token",
+      "data": " "
+    },
+    {
+      "event": "token",
+      "data": "\u2014 "
+    },
+    {
+      "event": "token",
+      "data": "One "
+    },
+    {
+      "event": "token",
+      "data": "additional "
+    },
+    {
+      "event": "token",
+      "data": "entity "
+    },
+    {
+      "event": "token",
+      "data": "(partial "
+    },
+    {
+      "event": "token",
+      "data": "data "
+    },
+    {
+      "event": "token",
+      "data": "returned)\n\n4. "
+    },
+    {
+      "event": "token",
+      "data": "Ownership "
+    },
+    {
+      "event": "token",
+      "data": "Gap "
+    },
+    {
+      "event": "token",
+      "data": "total: "
+    },
+    {
+      "event": "token",
+      "data": "4 "
+    },
+    {
+      "event": "token",
+      "data": "entities "
+    },
+    {
+      "event": "token",
+      "data": "exposed "
+    },
+    {
+      "event": "token",
+      "data": "only "
+    },
+    {
+      "event": "token",
+      "data": "through "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "graph, "
+    },
+    {
+      "event": "token",
+      "data": "invisible "
+    },
+    {
+      "event": "token",
+      "data": "to "
+    },
+    {
+      "event": "token",
+      "data": "screening "
+    },
+    {
+      "event": "token",
+      "data": "alone.\n\n5. "
+    },
+    {
+      "event": "token",
+      "data": "No "
+    },
+    {
+      "event": "token",
+      "data": "OFAC "
+    },
+    {
+      "event": "token",
+      "data": "exposure: "
+    },
+    {
+      "event": "token",
+      "data": "7 "
+    },
+    {
+      "event": "token",
+      "data": "vendors "
+    },
+    {
+      "event": "token",
+      "data": "came "
+    },
+    {
+      "event": "token",
+      "data": "back "
+    },
+    {
+      "event": "token",
+      "data": "clean "
+    },
+    {
+      "event": "token",
+      "data": "on "
+    },
+    {
+      "event": "token",
+      "data": "both "
+    },
+    {
+      "event": "token",
+      "data": "methods.\n\n---\n\nTHE "
+    },
+    {
+      "event": "token",
+      "data": "CORE "
+    },
+    {
+      "event": "token",
+      "data": "GAP\n\nA "
+    },
+    {
+      "event": "token",
+      "data": "well-tuned "
+    },
+    {
+      "event": "token",
+      "data": "OFAC "
+    },
+    {
+      "event": "token",
+      "data": "name-screen "
+    },
+    {
+      "event": "token",
+      "data": "misses "
+    },
+    {
+      "event": "token",
+      "data": "7 "
+    },
+    {
+      "event": "token",
+      "data": "of "
+    },
+    {
+      "event": "token",
+      "data": "40 "
+    },
+    {
+      "event": "token",
+      "data": "exposed "
+    },
+    {
+      "event": "token",
+      "data": "vendors "
+    },
+    {
+      "event": "token",
+      "data": "\u2014 "
+    },
+    {
+      "event": "token",
+      "data": "a "
+    },
+    {
+      "event": "token",
+      "data": "17.5% "
+    },
+    {
+      "event": "token",
+      "data": "miss "
+    },
+    {
+      "event": "token",
+      "data": "rate. "
+    },
+    {
+      "event": "token",
+      "data": "The "
+    },
+    {
+      "event": "token",
+      "data": "reasons "
+    },
+    {
+      "event": "token",
+      "data": "split "
+    },
+    {
+      "event": "token",
+      "data": "into "
+    },
+    {
+      "event": "token",
+      "data": "two "
+    },
+    {
+      "event": "token",
+      "data": "categories:\n\nA. "
+    },
+    {
+      "event": "token",
+      "data": "Structural "
+    },
+    {
+      "event": "token",
+      "data": "misses "
+    },
+    {
+      "event": "token",
+      "data": "(4 "
+    },
+    {
+      "event": "token",
+      "data": "entities): "
+    },
+    {
+      "event": "token",
+      "data": "These "
+    },
+    {
+      "event": "token",
+      "data": "vendors "
+    },
+    {
+      "event": "token",
+      "data": "are "
+    },
+    {
+      "event": "token",
+      "data": "not "
+    },
+    {
+      "event": "token",
+      "data": "named "
+    },
+    {
+      "event": "token",
+      "data": "on "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "SDN "
+    },
+    {
+      "event": "token",
+      "data": "list "
+    },
+    {
+      "event": "token",
+      "data": "at "
+    },
+    {
+      "event": "token",
+      "data": "all. "
+    },
+    {
+      "event": "token",
+      "data": "They "
+    },
+    {
+      "event": "token",
+      "data": "are "
+    },
+    {
+      "event": "token",
+      "data": "blocked "
+    },
+    {
+      "event": "token",
+      "data": "under "
+    },
+    {
+      "event": "token",
+      "data": "OFAC's "
+    },
+    {
+      "event": "token",
+      "data": "50% "
+    },
+    {
+      "event": "token",
+      "data": "rule "
+    },
+    {
+      "event": "token",
+      "data": "(31 "
+    },
+    {
+      "event": "token",
+      "data": "CFR "
+    },
+    {
+      "event": "token",
+      "data": "\u00a7501.801) "
+    },
+    {
+      "event": "token",
+      "data": "because "
+    },
+    {
+      "event": "token",
+      "data": "a "
+    },
+    {
+      "event": "token",
+      "data": "designated "
+    },
+    {
+      "event": "token",
+      "data": "entity "
+    },
+    {
+      "event": "token",
+      "data": "owns "
+    },
+    {
+      "event": "token",
+      "data": "or "
+    },
+    {
+      "event": "token",
+      "data": "controls "
+    },
+    {
+      "event": "token",
+      "data": "them. "
+    },
+    {
+      "event": "token",
+      "data": "No "
+    },
+    {
+      "event": "token",
+      "data": "name-screen, "
+    },
+    {
+      "event": "token",
+      "data": "however "
+    },
+    {
+      "event": "token",
+      "data": "well-tuned, "
+    },
+    {
+      "event": "token",
+      "data": "can "
+    },
+    {
+      "event": "token",
+      "data": "catch "
+    },
+    {
+      "event": "token",
+      "data": "these. "
+    },
+    {
+      "event": "token",
+      "data": "Only "
+    },
+    {
+      "event": "token",
+      "data": "ownership "
+    },
+    {
+      "event": "token",
+      "data": "graph "
+    },
+    {
+      "event": "token",
+      "data": "traversal "
+    },
+    {
+      "event": "token",
+      "data": "finds "
+    },
+    {
+      "event": "token",
+      "data": "them.\n\nB. "
+    },
+    {
+      "event": "token",
+      "data": "Matcher "
+    },
+    {
+      "event": "token",
+      "data": "misses "
+    },
+    {
+      "event": "token",
+      "data": "(3 "
+    },
+    {
+      "event": "token",
+      "data": "entities): "
+    },
+    {
+      "event": "token",
+      "data": "These "
+    },
+    {
+      "event": "token",
+      "data": "vendors "
+    },
+    {
+      "event": "token",
+      "data": "ARE "
+    },
+    {
+      "event": "token",
+      "data": "directly "
+    },
+    {
+      "event": "token",
+      "data": "on "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "SDN "
+    },
+    {
+      "event": "token",
+      "data": "list "
+    },
+    {
+      "event": "token",
+      "data": "but "
+    },
+    {
+      "event": "token",
+      "data": "were "
+    },
+    {
+      "event": "token",
+      "data": "submitted "
+    },
+    {
+      "event": "token",
+      "data": "under "
+    },
+    {
+      "event": "token",
+      "data": "a "
+    },
+    {
+      "event": "token",
+      "data": "colloquial, "
+    },
+    {
+      "event": "token",
+      "data": "abbreviated, "
+    },
+    {
+      "event": "token",
+      "data": "or "
+    },
+    {
+      "event": "token",
+      "data": "translated "
+    },
+    {
+      "event": "token",
+      "data": "name "
+    },
+    {
+      "event": "token",
+      "data": "that "
+    },
+    {
+      "event": "token",
+      "data": "scored "
+    },
+    {
+      "event": "token",
+      "data": "below "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "match "
+    },
+    {
+      "event": "token",
+      "data": "threshold. "
+    },
+    {
+      "event": "token",
+      "data": "These "
+    },
+    {
+      "event": "token",
+      "data": "represent "
+    },
+    {
+      "event": "token",
+      "data": "a "
+    },
+    {
+      "event": "token",
+      "data": "process "
+    },
+    {
+      "event": "token",
+      "data": "risk "
+    },
+    {
+      "event": "token",
+      "data": "\u2014 "
+    },
+    {
+      "event": "token",
+      "data": "if "
+    },
+    {
+      "event": "token",
+      "data": "your "
+    },
+    {
+      "event": "token",
+      "data": "vendor "
+    },
+    {
+      "event": "token",
+      "data": "intake "
+    },
+    {
+      "event": "token",
+      "data": "forms "
+    },
+    {
+      "event": "token",
+      "data": "accept "
+    },
+    {
+      "event": "token",
+      "data": "informal "
+    },
+    {
+      "event": "token",
+      "data": "names, "
+    },
+    {
+      "event": "token",
+      "data": "your "
+    },
+    {
+      "event": "token",
+      "data": "screen "
+    },
+    {
+      "event": "token",
+      "data": "will "
+    },
+    {
+      "event": "token",
+      "data": "silently "
+    },
+    {
+      "event": "token",
+      "data": "fail.\n\n---\n\nCONFIDENCE "
+    },
+    {
+      "event": "token",
+      "data": "STATEMENT\n\nResults "
+    },
+    {
+      "event": "token",
+      "data": "are "
+    },
+    {
+      "event": "token",
+      "data": "based "
+    },
+    {
+      "event": "token",
+      "data": "on "
+    },
+    {
+      "event": "token",
+      "data": "compare_ofac_vs_sayari "
+    },
+    {
+      "event": "token",
+      "data": "run "
+    },
+    {
+      "event": "token",
+      "data": "at "
+    },
+    {
+      "event": "token",
+      "data": "default "
+    },
+    {
+      "event": "token",
+      "data": "threshold "
+    },
+    {
+      "event": "token",
+      "data": "(0.85) "
+    },
+    {
+      "event": "token",
+      "data": "across "
+    },
+    {
+      "event": "token",
+      "data": "all "
+    },
+    {
+      "event": "token",
+      "data": "49 "
+    },
+    {
+      "event": "token",
+      "data": "cached "
+    },
+    {
+      "event": "token",
+      "data": "vendor "
+    },
+    {
+      "event": "token",
+      "data": "profiles. "
+    },
+    {
+      "event": "token",
+      "data": "Outcome "
+    },
+    {
+      "event": "token",
+      "data": "categories "
+    },
+    {
+      "event": "token",
+      "data": "(both_catch, "
+    },
+    {
+      "event": "token",
+      "data": "sayari_only, "
+    },
+    {
+      "event": "token",
+      "data": "matcher_miss) "
+    },
+    {
+      "event": "token",
+      "data": "are "
+    },
+    {
+      "event": "token",
+      "data": "sourced "
+    },
+    {
+      "event": "token",
+      "data": "directly "
+    },
+    {
+      "event": "token",
+      "data": "from "
+    },
+    {
+      "event": "token",
+      "data": "that "
+    },
+    {
+      "event": "token",
+      "data": "tool. "
+    },
+    {
+      "event": "token",
+      "data": "No "
+    },
+    {
+      "event": "token",
+      "data": "figures "
+    },
+    {
+      "event": "token",
+      "data": "have "
+    },
+    {
+      "event": "token",
+      "data": "been "
+    },
+    {
+      "event": "token",
+      "data": "inferred "
+    },
+    {
+      "event": "token",
+      "data": "or "
+    },
+    {
+      "event": "token",
+      "data": "extrapolated.\n\n\u26a0 "
+    },
+    {
+      "event": "token",
+      "data": "VERIFY: "
+    },
+    {
+      "event": "token",
+      "data": "Gazprom "
+    },
+    {
+      "event": "token",
+      "data": "is "
+    },
+    {
+      "event": "token",
+      "data": "classified "
+    },
+    {
+      "event": "token",
+      "data": "screen_ambiguous "
+    },
+    {
+      "event": "token",
+      "data": "\u2014 "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "OFAC "
+    },
+    {
+      "event": "token",
+      "data": "name-screen "
+    },
+    {
+      "event": "token",
+      "data": "returned "
+    },
+    {
+      "event": "token",
+      "data": "a "
+    },
+    {
+      "event": "token",
+      "data": "hit "
+    },
+    {
+      "event": "token",
+      "data": "on "
+    },
+    {
+      "event": "token",
+      "data": "Gazprom "
+    },
+    {
+      "event": "token",
+      "data": "Neft "
+    },
+    {
+      "event": "token",
+      "data": "(SDN "
+    },
+    {
+      "event": "token",
+      "data": "#17143, "
+    },
+    {
+      "event": "token",
+      "data": "UKRAINE-EO13662 "
+    },
+    {
+      "event": "token",
+      "data": "/ "
+    },
+    {
+      "event": "token",
+      "data": "RUSSIA-EO14024), "
+    },
+    {
+      "event": "token",
+      "data": "which "
+    },
+    {
+      "event": "token",
+      "data": "is "
+    },
+    {
+      "event": "token",
+      "data": "a "
+    },
+    {
+      "event": "token",
+      "data": "related "
+    },
+    {
+      "event": "token",
+      "data": "but "
+    },
+    {
+      "event": "token",
+      "data": "distinct "
+    },
+    {
+      "event": "token",
+      "data": "entity. "
+    },
+    {
+      "event": "token",
+      "data": "Sayari's "
+    },
+    {
+      "event": "token",
+      "data": "ownership "
+    },
+    {
+      "event": "token",
+      "data": "graph "
+    },
+    {
+      "event": "token",
+      "data": "confirms "
+    },
+    {
+      "event": "token",
+      "data": "Gazprom "
+    },
+    {
+      "event": "token",
+      "data": "itself "
+    },
+    {
+      "event": "token",
+      "data": "is "
+    },
+    {
+      "event": "token",
+      "data": "controlled_by_ofac_sdn. "
+    },
+    {
+      "event": "token",
+      "data": "Recommend "
+    },
+    {
+      "event": "token",
+      "data": "running "
+    },
+    {
+      "event": "token",
+      "data": "risk_summary "
+    },
+    {
+      "event": "token",
+      "data": "on "
+    },
+    {
+      "event": "token",
+      "data": "entity_id "
+    },
+    {
+      "event": "token",
+      "data": "RZAPsBRdYXTToVqy4ZuNow "
+    },
+    {
+      "event": "token",
+      "data": "to "
+    },
+    {
+      "event": "token",
+      "data": "confirm "
+    },
+    {
+      "event": "token",
+      "data": "before "
+    },
+    {
+      "event": "token",
+      "data": "any "
+    },
+    {
+      "event": "token",
+      "data": "onboarding "
+    },
+    {
+      "event": "token",
+      "data": "decision."
+    },
+    {
+      "event": "answer_meta",
+      "data": {
+        "confidence": "high",
+        "sources_count": 1,
+        "tools_used": [
+          "compare_ofac_vs_sayari"
+        ]
+      }
+    },
+    {
+      "event": "done",
+      "data": {}
+    }
+  ]
+}
