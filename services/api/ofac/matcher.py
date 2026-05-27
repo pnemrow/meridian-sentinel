@@ -24,16 +24,22 @@ any entity it MISSES is genuinely not findable by name. The algorithm:
        "Sberbank Rossii" → SDN alias "SBERBANK ROSSII".
 
   3. Primary-name token-coverage match (index-assisted).
-       Build a token index keyed on the first normalised token of each
-       primary name AND alias (both original and transliterated forms).
-       For a query with N tokens, the SDN entry must contain at least
-       max(1, N-1) of them in its primary name (original or ASCII form).
+       Build a token index keyed on EVERY normalised token of each primary
+       name AND alias (both original and transliterated forms). This means
+       "Rostec" (first query token) finds "STATE CORPORATION ROSTEC" because
+       "rostec" is indexed as an interior token of the primary name; and
+       "Alfa-Bank" finds "JOINT STOCK COMPANY ALFA-BANK" because alias
+       "alfa-bank" is normalised to ["alfa","bank"] before indexing (the
+       prior alias.split()[0] approach preserved hyphens and broke this).
+       Coverage rule: for a query with N tokens, the SDN entry must contain
+       ALL N tokens in its primary name when N ≤ 2; for N > 2, at least N-1.
        Scores: 0.92 (multi-token), 0.85 (single-token).
-       This catches "Tupolev PJSC" → primary "TUPOLEV" or alias "TUPOLEV PJSC".
 
   4. Single-token alias fallback (full scan).
-       If the first query token matches any token in any alias, score = 0.72.
-       This is the last resort; a threshold of 0.7 already filters most noise.
+       If the first query token matches any token in any alias:
+       score = 0.85 for single-token queries (entire query satisfied by an
+       exact alias token match → high confidence); 0.72 for multi-token
+       queries (other tokens unmatched → last resort).
 
 Scores are semantic labels (high/medium/low confidence), not a continuous
 similarity metric. The default threshold=0.7 in the compare tool keeps only
@@ -221,19 +227,34 @@ class OfacMatcher:
         self._entries = entries
         self.fetched_at = fetched_at
 
-        # Token index: normalised_first_token → [SdnEntry, ...]
-        # Covers both original and ASCII (transliterated) first tokens of
-        # primary names and aliases, so Cyrillic and Latin both route correctly.
+        # Token index: normalised_token → [SdnEntry, ...]
+        #
+        # Index by ALL normalised tokens of each surface (primary name +
+        # transliterated primary + all aliases + transliterated aliases),
+        # NOT just the first token. This ensures that a query whose first
+        # token matches any token of an SDN name (e.g. "Rostec" → finds
+        # "STATE CORPORATION ROSTEC") reaches stage-2 coverage check.
+        #
+        # Aliases are normalised with the same pipeline as queries (strips
+        # hyphens, legal suffixes, stopwords) so "alfa-bank" → index["alfa"]
+        # rather than index["alfa-bank"]. Previously this was alias.split()[0]
+        # which preserved hyphens and caused "Alfa-Bank" to get zero candidates.
+        #
+        # Deduplication per entry per token prevents the same entry appearing
+        # multiple times in a candidates list for a single query token.
         self._index: dict[str, list[SdnEntry]] = {}
+        _seen: dict[str, set[int]] = {}  # token → set of sdn_ids already added
         for e in entries:
             for surface in (e.primary_name, e.primary_name_ascii):
-                toks = normalize(surface)
-                if toks:
-                    self._index.setdefault(toks[0], []).append(e)
+                for tok in normalize(surface):
+                    if e.sdn_id not in _seen.setdefault(tok, set()):
+                        self._index.setdefault(tok, []).append(e)
+                        _seen[tok].add(e.sdn_id)
             for alias in e.aliases_lower + e.aliases_ascii:
-                parts = alias.split()
-                if parts:
-                    self._index.setdefault(parts[0], []).append(e)
+                for tok in normalize(alias):
+                    if e.sdn_id not in _seen.setdefault(tok, set()):
+                        self._index.setdefault(tok, []).append(e)
+                        _seen[tok].add(e.sdn_id)
 
         log.info("OfacMatcher: indexed %d SDN entries", len(entries))
 
@@ -345,8 +366,16 @@ class OfacMatcher:
 
         # ── Stage 3: Single-token alias fallback (full scan) ─────────────
         # Last resort: first query token appears as a whole word in any alias
-        # (original or ASCII). Score 0.72 — cleared by the default threshold=0.7.
+        # (original or ASCII).
+        #
+        # Score: 0.85 for single-token queries, 0.72 for multi-token queries.
+        # Rationale: if the caller supplies exactly one distinctive token (e.g.
+        # "Rostec", "Sevmash") and it matches verbatim as a whole word in an SDN
+        # alias, that is a high-confidence identification — the entire query is
+        # satisfied. For multi-token queries, matching only the first token is
+        # genuinely a last resort (other tokens went unmatched), so 0.72 is apt.
         if len(results) < limit:
+            stage3_score = 0.85 if len(tokens) == 1 else 0.72
             for entry in self._entries:
                 if entry.sdn_id in seen_ids:
                     continue
@@ -359,7 +388,7 @@ class OfacMatcher:
                             programs=entry.programs,
                             matched_via="alias_ascii" if alias not in entry.aliases_lower else "alias",
                             matched_text=alias,
-                            match_score=0.72,
+                            match_score=stage3_score,
                         ))
                         seen_ids.add(entry.sdn_id)
                         break
