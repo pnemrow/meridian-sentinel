@@ -7,12 +7,12 @@ Cache-first: reads from output/raw/traversal/{entity_id}.json when available
 (for the 8 marquee entities pre-fetched in the live-API session).
 Falls back to live Sayari API for uncached entities.
 
-Returns CitedResult with data shape:
+Returns CitedResult with data shape (matches design contract):
   {
     root_entity_id: str,
-    nodes: [{entity_id, name, type, country, sanctioned, pep, is_root}],
-    edges: [{parent_id, child_id, relationship_type, percentage, former}],
-    sanction_hits: [nodes where sanctioned=True],
+    nodes: [{id, label, type, country, sanctioned, pep}],
+    edges: [{source, target, relationship, percentage, former, last_observed}],
+    sanction_hits: [{id, label}],
     explored_count: int | None,   # total graph nodes Sayari explored
     shown: int,                   # paths returned (capped at 50)
     next: bool | None,            # True = more paths available
@@ -74,13 +74,12 @@ def _transform_traversal(root_id: str, traversal_data: dict) -> dict:
 
     # Root node placeholder (label filled from profile cache if available)
     nodes_by_id[root_id] = {
-        "entity_id": root_id,
-        "name": None,
+        "id": root_id,
+        "label": None,
         "type": None,
         "country": None,
         "sanctioned": None,
         "pep": None,
-        "is_root": True,
     }
 
     items = traversal_data.get("data", [])
@@ -99,13 +98,12 @@ def _transform_traversal(root_id: str, traversal_data: dict) -> dict:
             if ent_id not in nodes_by_id:
                 countries = ent.get("countries") or []
                 nodes_by_id[ent_id] = {
-                    "entity_id": ent_id,
-                    "name": ent.get("label") or ent.get("translated_label"),
+                    "id": ent_id,
+                    "label": ent.get("label") or ent.get("translated_label"),
                     "type": ent.get("type"),
                     "country": countries[0] if countries else None,
                     "sanctioned": ent.get("sanctioned"),
                     "pep": ent.get("pep"),
-                    "is_root": False,
                 }
 
             # Build edge: ent_id → prev_id (ent_id is owner of prev_id)
@@ -114,15 +112,17 @@ def _transform_traversal(root_id: str, traversal_data: dict) -> dict:
             rel_data: dict = rels.get(field) or {}
             pct = rel_data.get("most_recent_percentage")
             former = bool(rel_data.get("former", False))
+            last_observed = rel_data.get("last_observed")
 
             edge_key = (ent_id, prev_id)
             if edge_key not in edge_seen:
                 edges.append({
-                    "parent_id": ent_id,
-                    "child_id": prev_id,
-                    "relationship_type": field,
+                    "source": ent_id,
+                    "target": prev_id,
+                    "relationship": field,
                     "percentage": pct,
                     "former": former,
+                    "last_observed": last_observed,
                 })
                 edge_seen.add(edge_key)
 
@@ -135,18 +135,19 @@ def _transform_traversal(root_id: str, traversal_data: dict) -> dict:
             if t_id and t_id not in nodes_by_id:
                 countries = target.get("countries") or []
                 nodes_by_id[t_id] = {
-                    "entity_id": t_id,
-                    "name": target.get("label") or target.get("translated_label"),
+                    "id": t_id,
+                    "label": target.get("label") or target.get("translated_label"),
                     "type": target.get("type"),
                     "country": countries[0] if countries else None,
                     "sanctioned": target.get("sanctioned"),
                     "pep": target.get("pep"),
-                    "is_root": False,
                 }
 
+    root_node = nodes_by_id.get(root_id, {})
     sanction_hits = [
-        n for n in nodes_by_id.values()
-        if n.get("sanctioned") and not n.get("is_root")
+        {"id": n["id"], "label": n.get("label")}
+        for n in nodes_by_id.values()
+        if n.get("sanctioned") and n["id"] != root_id
     ]
 
     return {
@@ -187,25 +188,25 @@ def _absorb_live(payload: dict, root_id: str, is_upstream: bool,
         if tgt_id and tgt_id not in nodes_by_id:
             countries = target.get("countries") or []
             nodes_by_id[tgt_id] = {
-                "entity_id": tgt_id,
-                "name": target.get("label") or target.get("name") or "",
+                "id": tgt_id,
+                "label": target.get("label") or target.get("name") or "",
                 "type": target.get("type"),
                 "country": countries[0] if countries else None,
                 "sanctioned": target.get("sanctioned"),
                 "pep": target.get("pep"),
-                "is_root": False,
             }
         if tgt_id and src_id:
-            parent = tgt_id if is_upstream else src_id
-            child = src_id if is_upstream else tgt_id
-            edge_key = (parent, child)
+            src_node = tgt_id if is_upstream else src_id
+            tgt_node = src_id if is_upstream else tgt_id
+            edge_key = (src_node, tgt_node)
             if edge_key not in edge_seen:
                 edges.append({
-                    "parent_id": parent,
-                    "child_id": child,
-                    "relationship_type": rel_type or None,
+                    "source": src_node,
+                    "target": tgt_node,
+                    "relationship": rel_type or None,
                     "percentage": pct_f,
                     "former": False,
+                    "last_observed": None,
                 })
                 edge_seen.add(edge_key)
 
@@ -213,8 +214,8 @@ def _absorb_live(payload: dict, root_id: str, is_upstream: bool,
 def _live_traversal(entity_id: str, depth: int, direction: str) -> CitedResult:
     entity_url = f"/v1/entity/{entity_id}"
     nodes_by_id: dict[str, dict] = {
-        entity_id: {"entity_id": entity_id, "name": None, "type": None,
-                    "country": None, "sanctioned": None, "pep": None, "is_root": True}
+        entity_id: {"id": entity_id, "label": None, "type": None,
+                    "country": None, "sanctioned": None, "pep": None}
     }
     edges: list[dict] = []
     edge_seen: set = set()
@@ -267,8 +268,11 @@ def _live_traversal(entity_id: str, depth: int, direction: str) -> CitedResult:
     except Exception:
         pass
 
-    sanction_hits = [n for n in nodes_by_id.values()
-                     if n.get("sanctioned") and not n.get("is_root")]
+    sanction_hits = [
+        {"id": n["id"], "label": n.get("label")}
+        for n in nodes_by_id.values()
+        if n.get("sanctioned") and n["id"] != entity_id
+    ]
 
     return CitedResult(
         data={

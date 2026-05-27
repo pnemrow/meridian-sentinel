@@ -35,18 +35,24 @@ if str(_REPO) not in sys.path:
 _AGENT_RUNS_DIR = _REPO / "output" / "agent_runs"
 
 # Golden run index: question keywords → run_id
+# Primary keys match design's exact chip strings; legacy keys kept for backward compat.
 _GOLDEN_QUESTIONS: dict[str, str] = {
+    # Design chip strings (exact substrings)
+    "vendors can't we onboard": "golden_001",
+    "aren't on the ofac list but are still blocked": "golden_002",
+    "who actually owns belorusskaya": "golden_003",
+    "single riskiest entity": "golden_004",
+    # Legacy / partial-match fallbacks
     "can't we onboard": "golden_001",
     "cannot onboard": "golden_001",
     "which entities": "golden_001",
-    "ownership": "golden_002",
-    "sberbank": "golden_002",
-    "ofac catch": "golden_003",
-    "ownership gap": "golden_003",
-    "sayari advantage": "golden_003",
-    "gazprom": "golden_004",
-    "worst entity": "golden_004",
+    "companies that aren't on the ofac": "golden_002",
+    "ownership gap": "golden_002",
+    "belorusskaya kaliynaya": "golden_003",
+    "who owns": "golden_003",
+    "riskiest entity": "golden_004",
     "highest risk": "golden_004",
+    "worst entity": "golden_004",
 }
 
 MODEL = "claude-sonnet-4-6"
@@ -307,11 +313,12 @@ def _save_golden_run(question: str, events: list[dict]) -> None:
 
 async def capture_golden_runs(cache, ofac_matcher) -> None:
     """Run all golden questions live and save their event streams."""
+    # These strings MUST match the chip buttons in design-prototype/data/fixtures.js COPILOT_GOLDEN_QUESTIONS
     questions = [
-        ("golden_001", "Which of these entities can't we onboard, and why?"),
-        ("golden_002", "Show me the ownership structure for Sberbank and explain the risk."),
-        ("golden_003", "How many entities does OFAC name-screening catch vs Sayari? What's the gap?"),
-        ("golden_004", "Which entity has the highest risk, and what specifically makes it dangerous?"),
+        ("golden_001", "Which of these vendors can't we onboard, and why?"),
+        ("golden_002", "Show me the companies that aren't on the OFAC list but are still blocked."),
+        ("golden_003", "Who actually owns Belorusskaya Kaliynaya Companya?"),
+        ("golden_004", "What's the single riskiest entity on this list?"),
     ]
 
     for run_id, question in questions:

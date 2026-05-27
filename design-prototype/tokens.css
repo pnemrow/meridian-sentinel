@@ -1,0 +1,86 @@
+/* Meridian Sentinel — design tokens (verbatim from brief §3) */
+:root {
+  --bg-primary: #0A1628;
+  --bg-surface: #1A2436;
+  --bg-elevated: #243149;
+  --bg-terminal: #050B14;
+  --text-primary: #F0F4F8;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --text-terminal: #CBD5E1;
+  --border-default: #2A3854;
+  --border-subtle: #1F2A40;
+  --accent: #C9A961;
+  --accent-hover: #D4B675;
+  --accent-dim: #8A7440;
+  --risk-critical: #F85149;
+  --risk-high: #DB6D28;
+  --risk-medium: #D29922;
+  --risk-low: #3FB950;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+
+  --shadow-1: 0 1px 2px rgba(0,0,0,0.05);
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+button { font-family: inherit; cursor: pointer; }
+input, select, textarea { font-family: inherit; color: inherit; }
+a { color: inherit; text-decoration: none; }
+
+/* utility classes */
+.mono { font-family: var(--font-mono); font-variant-ligatures: none; font-feature-settings: 'tnum'; }
+.serif { font-family: var(--font-serif); font-weight: 500; }
+.muted { color: var(--text-muted); }
+.secondary { color: var(--text-secondary); }
+.hairline { border-top: 1px solid var(--border-subtle); }
+
+/* Scrollbars — keep it quiet */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #1f2a40; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #2A3854; }
+
+/* Focus */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+/* Cursor types */
+.clickable { cursor: pointer; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Streaming caret */
+@keyframes blink { 0%,49%{opacity:1} 50%,100%{opacity:0} }
+.caret { display: inline-block; width: 7px; height: 14px; background: var(--accent); margin-left: 2px; vertical-align: -2px; animation: blink 1s steps(1) infinite; }
+
+/* Tool row pulse */
+@keyframes pulse { 0%,100% { opacity: 1 } 50% { opacity: 0.45 } }
+.pulse { animation: pulse 1.2s ease-in-out infinite; }
+
+/* Fade-in for streaming list rows */
+@keyframes fadein { from { opacity: 0; transform: translateY(-2px); } to { opacity: 1; transform: none; } }
+.fadein { animation: fadein 160ms ease-out both; }
