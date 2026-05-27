@@ -463,35 +463,60 @@ Fetched parent entity `zqpMddadf94y39RfB3AgcA`; updated `entities.csv`; added to
 - Sayari reg `1111832003018` = SDN 16911 Registration Number `1111832003018` ✓
 - SDN strong a.k.a.: "KALASHNIKOV CONCERN" [uid=68546] ✓
 
-**Outcome: `ofac_only` (not `both_catch`)** — Sayari entity is MISSING `sanctioned_usa_ofac_sdn`
-despite confirmed INN match to SDN 16911. Sayari data gap. Screen correctly finds parent at 0.97.
-`ofac_only` = screen is CORRECT; Sayari has not linked the OFAC designation to this entity record.
+**Outcome: `ofac_only` (not `both_catch`)** — investigated thoroughly.
+
+**Exact JSON field paths (verified):**
+- `raw["risk"]` keys: `['sanctioned_aus_dfat', 'cpi_score', 'sanctioned_can_gac', ...]` — NO OFAC keys
+- `raw["identifiers"]`: `ru_tin`, `ru_registration_number`, `aus_consolidated_sanctions_reference`,
+  `ru_kpp`, `nzl_russia_sanctions_uid` — NO `usa_ofac_sdn_number`
+- `sanctioned_usa_ofac_sdn` appears only at `relationships.data[1|5|8|16|21|37].target.risk`
+  — these are Kalashnikov's **subsidiaries** (KBP [SDN 16864], Iskra [47746], Izhmash [18317],
+  Zavod No.9 [47478], etc.), each with their own OFAC designation
+- `usa_ofac_sdn_number` identifiers also only on those subsidiary targets, not on Kalashnikov itself
+
+**Confirmed: NOT an extraction bug.** The OFAC risk factor and identifier are genuinely absent
+from the Kalashnikov entity record. Sayari has the entity, knows its INN matches SDN 16911,
+but has NOT mapped `sanctioned_usa_ofac_sdn` to this entity. **Real Sayari data gap.**
+Classification `ofac_only` is correct: screen finds it at 0.97; Sayari doesn't confirm.
 
 Compare after step 1:
 `both_catch=33, sayari_only=2, screen_ambiguous=2, matcher_miss=3, ofac_only=2, no_ofac=7, ownership_gap=4`
 
 ---
 
-### Step 2 — Sukhoi ownership traversal evidence (this session)
+### Step 2 — Sukhoi ownership traversal evidence (verified)
 
-UBO traversal depth=3; fetched Sukhoi relationships; fetched UAC entity; INN cross-ref to SDN.
+UBO traversal depth=3; inspected all path step `relationships` fields for ownership percentages.
 
-**Ownership path:**
+**UAC → Sukhoi ownership path — exact field paths:**
 ```
-Sukhoi [5wVHdujAfKLkHO7efPnAjQ]
-  └── direct shareholder: UAC [T8xxeh7qY1AW7ISrGZKLdQ]
-      label: ПАО "ОБЪЕДИНЕННАЯ АВИАСТРОИТЕЛЬНАЯ КОРПОРАЦИЯ"
-      sanctioned_usa_ofac_sdn=True; SDN sdn_id=36431 (INN 7708619320 confirmed)
-      Ownership percentage: NOT REPORTED by API
-  └── via UAC → Rostec [D-jLpScdAGFGgR4dtYnu_A] (sanctioned)
+traversal_data[N].path[0].field = "has_shareholder"
+traversal_data[N].path[0].entity.id = "T8xxeh7qY1AW7ISrGZKLdQ"  (UAC)
+traversal_data[N].path[0].relationships.has_shareholder.most_recent_percentage = 81.25
+traversal_data[N].path[0].relationships.has_shareholder.former = True
+traversal_data[N].path[0].relationships.has_shareholder.last_observed = "2023-03-09"
+traversal_data[N].path[0].relationships.has_shareholder.values[*].former = True (all 74 records)
 ```
 
-**Sukhoi OFAC risk factors: NONE** (no `ofac_50_percent_rule`, no `owned_by_sanctioned_usa_ofac_sdn_entity`)
+**Historical UAC ownership of Sukhoi (selected records):**
+- 98.83% (pub 2012-08-27) → 91.67% (pub 2012-08-29) → 83.19% (pub 2014-01-09)
+- 57.06% (pub 2015-01-12) → 81.25% (pub 2018-04-03) — **most_recent_percentage: 81.25**
+- All records `former=True`, last_observed 2023-03-09
 
-**Decision: classification stays `ofac_only`.** UAC is a Sukhoi shareholder AND is on OFAC SDN
-[36431]. However, Sayari does not flag the 50% rule for Sukhoi. Either UAC owns <50% of Sukhoi
-(ownership % not available from API), or another Sayari data gap. Do NOT reclassify — Sayari does
-not confirm the OFAC block applies to Sukhoi itself.
+**Why all former=True:** Sukhoi was integrated into UAC as a division (2023). UAC no longer
+holds a separate share stake in Sukhoi as a subsidiary — they became the same entity for
+operating purposes. The legal corporate shell ("ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО 'АВИАЦИОННАЯ
+ХОЛДИНГОВАЯ КОМПАНИЯ 'СУХОЙ'") persists but is no longer independently owned by UAC.
+
+**Sukhoi OFAC risk factors: NONE** — Sayari correctly omits `ofac_50_percent_rule` because
+the ownership relationship ended (former). The 50% rule requires current ≥50% ownership.
+
+**Decision: classification stays `ofac_only`.** UAC historically held 81.25% of Sukhoi (well
+above OFAC 50% threshold) but the relationship is now former. Sayari's absence of
+`ofac_50_percent_rule` is correct given the current (post-merger) structure. The screen's
+"sukhoi" alias hit on SDN 36431 (UAC) surfaces a real historical connection that a compliance
+officer should investigate — but Sayari data accurately reflects no current OFAC block.
+`ofac_only` is the honest classification.
 
 Cached: `output/raw/traversal/5wVHdujAfKLkHO7efPnAjQ_ubo.json` (4.0 MB, 50 paths)
 
@@ -521,6 +546,9 @@ have more paths beyond 50 — Phase 3 should paginate or request additional offs
 
 - **Kalashnikov OFAC data gap**: Sayari entity `zqpMddadf94y39RfB3AgcA` confirmed =
   SDN 16911 by INN/reg but missing `sanctioned_usa_ofac_sdn`. Reportable to Sayari.
-- **Sukhoi ownership %**: UAC→Sukhoi share not reported by API; blocks definitive
-  50%-rule assessment. Public sources suggest UAC acquired Sukhoi as a division post-2023.
+- **Sukhoi `ofac_only` — verified, no reclassification needed**: UAC historically held
+  81.25% of Sukhoi (`path[0].relationships.has_shareholder.most_recent_percentage`), but
+  ALL 74 ownership records are `former=True` (last_observed 2023-03-09; Sukhoi merged into
+  UAC as a division). Sayari correctly omits `ofac_50_percent_rule`. `ofac_only` classification
+  is accurate: screen surfaces a real historical connection; no current OFAC block.
 - **generate_briefing PDF** — currently outputs HTML. `pip install weasyprint` for PDF.

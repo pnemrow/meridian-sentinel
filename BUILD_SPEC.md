@@ -65,7 +65,12 @@ engine directly — no HTTP hop) · **thin Postgres** (3 tables only:
 
 ## 5. The 4 surfaces (UX)
 
-1. **Landing — upload/select.** Upload an .xlsx or pick the seeded *real* list_1.
+1. **Landing — upload → review/map/validate → run.** Upload an .xlsx (or pick the
+   seeded *real* list_1), then show a preview and let the analyst **confirm/correct the
+   column mapping** (name/address/country — surfaces the COLUMN_HINTS auto-detection)
+   and eyeball/flag rows before the analysis runs. This pre-run human checkpoint is a
+   trust moment and is what lets the tool handle messy/unfamiliar lists. (Design intent —
+   build in Phase 3; keep it lightweight: preview + confirm mapping, not a data-wrangling IDE.)
 2. **Co-pilot chat.** NL question ("who shouldn't we onboard, and why?") → grounded,
    cited answer + a "shows its work" panel (the tool calls, timings, sources).
 3. **Compare hero.** Real OFAC name-screen vs Sayari resolution+ownership across the
