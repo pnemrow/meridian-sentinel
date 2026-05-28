@@ -17,15 +17,22 @@ const CACHED_TRAVERSAL_IDS = new Set([
 
 const SENTINEL_BASE = () => (typeof window !== 'undefined' && window.SENTINEL_API_BASE) || '';
 
+// Append ?run_id=… to a URL when runId is set. Default behavior unchanged.
+function withRun(url, runId) {
+  if (!runId) return url;
+  const sep = url.includes('?') ? '&' : '?';
+  return `${url}${sep}run_id=${encodeURIComponent(runId)}`;
+}
+
 // Fetch the three real backend payloads for an entity. Returns the same shape
 // the rest of the surface expects (risk_summary, raw_risk_factors, identifiers,
 // source_count) so we don't have to refactor downstream components.
-async function fetchEntityFromBackend(entityId) {
+async function fetchEntityFromBackend(entityId, runId) {
   const base = SENTINEL_BASE();
   const [rsResp, profResp, rawResp] = await Promise.all([
-    fetch(`${base}/tools/risk_summary/${entityId}`),
-    fetch(`${base}/tools/get_profile/${entityId}`),
-    fetch(`${base}/tools/raw_profile/${entityId}`),
+    fetch(withRun(`${base}/tools/risk_summary/${entityId}`, runId)),
+    fetch(withRun(`${base}/tools/get_profile/${entityId}`, runId)),
+    fetch(withRun(`${base}/tools/raw_profile/${entityId}`, runId)),
   ]);
   if (!rsResp.ok)   throw new Error(`risk_summary HTTP ${rsResp.status}`);
   if (!profResp.ok) throw new Error(`get_profile HTTP ${profResp.status}`);
@@ -52,7 +59,7 @@ async function fetchEntityFromBackend(entityId) {
   };
 }
 
-function Entity({ entityId, onBack, onOpenEntity, trail = [] }) {
+function Entity({ entityId, onBack, onOpenEntity, trail = [], runId = null }) {
   const [entity, setEntity] = useState(null);
   const [loadError, setLoadError] = useState(null);
 
@@ -60,7 +67,7 @@ function Entity({ entityId, onBack, onOpenEntity, trail = [] }) {
     let cancelled = false;
     setEntity(null);
     setLoadError(null);
-    fetchEntityFromBackend(entityId).then(payload => {
+    fetchEntityFromBackend(entityId, runId).then(payload => {
       if (cancelled) return;
       setEntity(payload);
     }).catch(err => {
@@ -75,7 +82,7 @@ function Entity({ entityId, onBack, onOpenEntity, trail = [] }) {
       setLoadError(err.message);
     });
     return () => { cancelled = true; };
-  }, [entityId]);
+  }, [entityId, runId]);
 
   const [showBriefing, setShowBriefing] = useState(false);
   const [showApi, setShowApi] = useState(false);
@@ -142,13 +149,13 @@ function Entity({ entityId, onBack, onOpenEntity, trail = [] }) {
         {/* LiveGraphFetcher routes ALL entities through POST /tools/traverse_ownership:
              cached marquee IDs auto-fetch on mount; others sit behind a click-gated
              "fetch live" button. Either way the nodes/edges come from the backend —
-             never from a procedural generator. */}
-        <LiveGraphFetcher entityId={rs.entity_id} entityName={rs.input_name} onOpenEntity={onOpenEntity} trail={trail} currentLabel={rs.input_name} />
+             never from a procedural generator. runId scopes the call to the active run. */}
+        <LiveGraphFetcher entityId={rs.entity_id} entityName={rs.input_name} runId={runId} onOpenEntity={onOpenEntity} trail={trail} currentLabel={rs.input_name} />
         {/* hasCachedGraph kept in scope for future use (e.g. graph header badge) */}
         {hasCachedGraph ? null : null}
       </div>
 
-      {showBriefing ? <BriefingModal entity={rs} onClose={() => setShowBriefing(false)} /> : null}
+      {showBriefing ? <BriefingModal entity={rs} runId={runId} onClose={() => setShowBriefing(false)} /> : null}
       {showApi ? <window.ApiPayloadPanel entityId={rs.entity_id} onClose={() => setShowApi(false)} /> : null}
     </div>
   );
@@ -393,11 +400,13 @@ function SourceBreakdown({ rows }) {
 // -------- Briefing modal --------
 // Real flow: clicking "Generate PDF" hits GET /tools/generate_briefing/{id}/download
 // which streams a WeasyPrint-rendered PDF with Content-Disposition: attachment.
-function BriefingModal({ entity, onClose }) {
+function BriefingModal({ entity, onClose, runId = null }) {
   const [status, setStatus] = useState('idle'); // 'idle' | 'generating' | 'done' | 'error'
   const [errMsg, setErrMsg] = useState(null);
 
-  const downloadUrl = `${SENTINEL_BASE()}/tools/generate_briefing/${entity.entity_id}/download`;
+  const downloadUrl = runId
+    ? `${SENTINEL_BASE()}/tools/generate_briefing/${entity.entity_id}/download?run_id=${encodeURIComponent(runId)}`
+    : `${SENTINEL_BASE()}/tools/generate_briefing/${entity.entity_id}/download`;
 
   const generate = async () => {
     setStatus('generating');
@@ -632,7 +641,7 @@ function EntityLoading({ entityId, onBack }) {
 // Either way: the nodes/edges come from POST /tools/traverse_ownership — never
 // from a procedural generator.
 // ============================================================
-function LiveGraphFetcher({ entityId, entityName, onOpenEntity, trail, currentLabel }) {
+function LiveGraphFetcher({ entityId, entityName, onOpenEntity, trail, currentLabel, runId = null }) {
   const isCached = CACHED_TRAVERSAL_IDS.has(entityId);
   const [state, setState] = useState(isCached ? 'fetching' : 'idle'); // 'idle' | 'fetching' | 'loaded' | 'error'
   const [graphData, setGraphData] = useState(null);
@@ -642,7 +651,10 @@ function LiveGraphFetcher({ entityId, entityName, onOpenEntity, trail, currentLa
     setState('fetching');
     setErrMsg(null);
     try {
-      const resp = await fetch(`${SENTINEL_BASE()}/tools/traverse_ownership`, {
+      // traverse_ownership takes run_id as a query (not body) for consistency
+      // with the other ?run_id= endpoints.
+      const qs = runId ? `?run_id=${encodeURIComponent(runId)}` : '';
+      const resp = await fetch(`${SENTINEL_BASE()}/tools/traverse_ownership${qs}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ entity_id: entityId, depth: 3 }),

@@ -1,6 +1,5 @@
 /* Surface 2 — Co-Pilot chat (streaming, grounded) §7
- * A reducer over the AgentEvent stream. Replays the §A.5 transcript with realistic timing.
- * Swap the mock source for an EventSource(SSE) connection for the production wire-up.
+ * Tries live SSE from /agent/ask; falls back to COPILOT_SAMPLE_STREAM timer replay.
  */
 
 // Backend base URL — override via window.SENTINEL_API_BASE if needed
@@ -11,17 +10,15 @@ function normalizeBackendEvent(payload) {
   const { event, data } = payload;
   switch (event) {
     case 'token':
-      // backend data is a plain string chunk; design expects {text: string}
-      return { type: 'token', data: { text: data } };
+      return { type: 'token', data: { text: typeof data === 'string' ? data : (data?.text || '') } };
     case 'tool_call':
-      // backend: {id, name, input: {...}}; design ToolTraceRow uses call.args
-      return { type: 'tool_call', data: { id: data.id, name: data.name, args: data.input, started_at: 'live' } };
+      return { type: 'tool_call', data: { id: data.id, name: data.name, args: data.input || data.args, started_at: 'live' } };
     default:
       return { type: event, data };
   }
 }
 
-function CoPilot({ onOpenEntity, initialState, runMode }) {
+function CoPilot({ onOpenEntity, onOpenCompare, initialState, runMode, runId = null }) {
   const [question, setQuestion] = useState('');
   const [conversation, setConversation] = useState(initialState?.conversation || []);
   const [tools, setTools] = useState(initialState?.tools || []);
@@ -79,28 +76,35 @@ function CoPilot({ onOpenEntity, initialState, runMode }) {
   }
 
   // -------- Fixture-replay fallback (no backend) --------
-  function askFixture(q) {
+  function replayFromStream() {
     const stream = window.COPILOT_SAMPLE_STREAM;
     let t = 0;
+    const schedule = [];
     stream.forEach((ev) => {
       if (ev.type === 'tool_call') {
-        setTimeout(() => applyEvent(ev), t); t += 100;
+        schedule.push({ at: t, ev });
+        t += 100;
       } else if (ev.type === 'tool_result') {
-        setTimeout(() => applyEvent(ev), t + ev.data.duration_ms);
+        schedule.push({ at: t + ev.data.duration_ms, ev });
         t += ev.data.duration_ms + 80;
       } else if (ev.type === 'token') {
-        ev.data.text.split(/(\s+)/).forEach(w => {
-          setTimeout(() => applyEvent({ type: 'token', data: { text: w } }), t); t += 28;
+        const words = ev.data.text.split(/(\s+)/);
+        words.forEach(w => {
+          schedule.push({ at: t, ev: { type: 'token', data: { text: w } } });
+          t += 28;
         });
       } else if (ev.type === 'citation' || ev.type === 'flag') {
-        setTimeout(() => applyEvent(ev), t); t += 60;
-      } else {
-        setTimeout(() => applyEvent(ev), t + 200); t += 300;
+        schedule.push({ at: t, ev });
+        t += 60;
+      } else if (ev.type === 'answer_meta' || ev.type === 'done' || ev.type === 'error') {
+        schedule.push({ at: t + 200, ev });
+        t += 300;
       }
     });
+    schedule.forEach(({ at, ev }) => setTimeout(() => applyEvent(ev), at));
   }
 
-  // -------- Live SSE fetch (LIVE or CACHED mode via backend) --------
+  // -------- Live SSE fetch → fallback to replay --------
   async function ask(q) {
     if (streaming) return;
     setConversation(prev => [...prev,
@@ -113,10 +117,15 @@ function CoPilot({ onOpenEntity, initialState, runMode }) {
 
     const mode = (runMode || 'CACHED').toLowerCase();
     try {
+      // run_id scopes the agent's tools to a specific uploaded run when set.
+      // When runId is null, the agent operates against the default list_1
+      // cache, which is what CACHED golden runs were captured against.
+      const body = { question: q, mode };
+      if (runId) body.run_id = runId;
       const resp = await fetch(`${SENTINEL_API_BASE}/agent/ask`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question: q, mode }),
+        body: JSON.stringify(body),
       });
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
 
@@ -144,7 +153,7 @@ function CoPilot({ onOpenEntity, initialState, runMode }) {
       setStreaming(false);
     } catch (err) {
       console.warn('[copilot] backend unavailable, replaying fixture stream:', err.message);
-      askFixture(q);
+      replayFromStream();
     }
   }
 
@@ -174,7 +183,7 @@ function CoPilot({ onOpenEntity, initialState, runMode }) {
         <div ref={messagesEndRef} style={{ flex: 1, overflowY: 'auto', padding: '32px 40px', display: 'flex', flexDirection: 'column', gap: 22 }}>
           {conversation.length === 0 ? (
             <EmptyState />
-          ) : conversation.map((msg, i) => <MessageBubble key={i} msg={msg} citations={citations} onCitationOpen={() => {}} onOpenEntity={onOpenEntity} />)}
+          ) : conversation.map((msg, i) => <MessageBubble key={i} msg={msg} citations={citations} onOpenEntity={onOpenEntity} onOpenCompare={onOpenCompare} />)}
           {streaming && conversation[conversation.length-1]?.role === 'assistant' && conversation[conversation.length-1].segments.length === 0 ? (
             <div className="muted" style={{ fontSize: 13, fontStyle: 'italic' }}>thinking…</div>
           ) : null}
@@ -231,7 +240,7 @@ function CoPilot({ onOpenEntity, initialState, runMode }) {
             <div className="muted" style={{ fontSize: 11, marginTop: 2 }}>live tool trace · {tools.length} call{tools.length === 1 ? '' : 's'}</div>
           </div>
           {streaming ? (
-            <span className="mono" style={{ fontSize: 11, color: 'var(--accent)' }} >
+            <span className="mono" style={{ fontSize: 11, color: 'var(--accent)' }}>
               <span className="pulse">● </span>streaming
             </span>
           ) : tools.length > 0 ? (
@@ -299,7 +308,7 @@ function EmptyState() {
 }
 
 // -------- Message bubble --------
-function MessageBubble({ msg, citations, onOpenEntity }) {
+function MessageBubble({ msg, citations, onOpenEntity, onOpenCompare }) {
   if (msg.role === 'user') {
     return (
       <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
@@ -326,7 +335,28 @@ function MessageBubble({ msg, citations, onOpenEntity }) {
       <div style={{ maxWidth: 700, fontSize: 14, lineHeight: 1.65 }}>
         <AssistantSegments segments={msg.segments} citations={citations} />
         {msg.meta ? <AnswerFooter meta={msg.meta} /> : null}
+        {msg.meta ? <AnswerActions onOpenEntity={onOpenEntity} onOpenCompare={onOpenCompare} /> : null}
       </div>
+    </div>
+  );
+}
+
+// Inline action chips that hand off the analyst into the payoff (the destination).
+function AnswerActions({ onOpenEntity, onOpenCompare }) {
+  const Chip = ({ onClick, children, primary }) => (
+    <button onClick={onClick} style={{
+      background: primary ? 'var(--accent)' : 'transparent',
+      color: primary ? '#0A1628' : 'var(--accent)',
+      border: `1px solid ${primary ? 'var(--accent)' : 'var(--accent-dim)'}`,
+      padding: '6px 12px', borderRadius: 4, fontSize: 12,
+      fontWeight: 600,
+      display: 'inline-flex', alignItems: 'center', gap: 6,
+    }}>{children}</button>
+  );
+  return (
+    <div style={{ marginTop: 14, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+      <Chip primary onClick={onOpenCompare}>→ See the reconciliation</Chip>
+      <Chip onClick={() => onOpenEntity && onOpenEntity("BSsUPVlxsICOW4GCjb4fqQ")}>→ Open ownership graph (Belorusskaya)</Chip>
     </div>
   );
 }

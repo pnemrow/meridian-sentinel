@@ -1,8 +1,63 @@
 /* Surface 3 — Compare hero: OFAC name-screen vs Sayari (§8) */
 
-function Compare({ onOpenEntity, focusEntityId }) {
-  const result = window.COMPARE_RESULT;
+const COMPARE_API_BASE = (typeof window !== 'undefined' && window.SENTINEL_API_BASE) || '';
+
+function Compare({ onOpenEntity, focusEntityId, runId }) {
+  // When runId is set, fetch this run's compare result + /summary. Otherwise
+  // use window.COMPARE_RESULT (already populated by api.js for list_1).
+  const [perRunResult, setPerRunResult] = useState(null);
+  const [perRunSummary, setPerRunSummary] = useState(null);
+  const [perRunError, setPerRunError] = useState(null);
+
+  useEffect(() => {
+    if (!runId) {
+      setPerRunResult(null);
+      setPerRunSummary(null);
+      setPerRunError(null);
+      return;
+    }
+    let cancelled = false;
+    Promise.all([
+      fetch(`${COMPARE_API_BASE}/tools/compare_ofac_vs_sayari?threshold=0.85&run_id=${encodeURIComponent(runId)}`).then(r => r.ok ? r.json() : Promise.reject(`HTTP ${r.status}`)),
+      fetch(`${COMPARE_API_BASE}/summary?run_id=${encodeURIComponent(runId)}`).then(r => r.ok ? r.json() : null),
+    ]).then(([cmp, sum]) => {
+      if (cancelled) return;
+      setPerRunResult(cmp);
+      setPerRunSummary(sum);
+    }).catch(err => {
+      if (cancelled) return;
+      setPerRunError(String(err));
+    });
+    return () => { cancelled = true; };
+  }, [runId]);
+
+  // While a per-run fetch is in flight, show a quiet loading state instead
+  // of falling through to window.COMPARE_RESULT (which is list_1 — that'd
+  // flash the wrong data).
+  if (runId && !perRunResult && !perRunError) {
+    return (
+      <div style={{ padding: '32px 40px', color: 'var(--text-muted)', fontSize: 13 }}>
+        <span className="pulse mono" style={{ color: 'var(--accent)' }}>●</span>{' '}
+        Loading compare for <span className="mono" style={{ color: 'var(--text-primary)' }}>{runId}</span>…
+        <div className="mono muted" style={{ fontSize: 11, marginTop: 6 }}>
+          GET /tools/compare_ofac_vs_sayari?run_id={runId}
+        </div>
+      </div>
+    );
+  }
+  if (runId && perRunError) {
+    return (
+      <div style={{ padding: '32px 40px', color: 'var(--risk-critical)', fontSize: 13 }}>
+        Failed to load compare for run {runId}: {perRunError}
+      </div>
+    );
+  }
+
+  const result = perRunResult || window.COMPARE_RESULT;
   const { rows, summary, ofac_fetched_at } = result.data;
+  // Make the per-run /summary available to the top header line (read inside
+  // the existing IIFE below) without leaking into window.RUN_SUMMARY.
+  const localRunSummary = perRunSummary;
   const [filterOutcome, setFilterOutcome] = useState(null);
   const [expandedRowId, setExpandedRowId] = useState(null);
   const [exportOpen, setExportOpen] = useState(false);
@@ -60,9 +115,11 @@ function Compare({ onOpenEntity, focusEntityId }) {
 
       {(() => {
         // Top header: bind to real /summary (input/resolved/sanctioned counts)
-        // and to compare summary.ownership_gap. Falls back to fixture-equivalent
-        // values from compare summary if /summary wasn't fetched.
-        const rs = (window.RUN_SUMMARY && window.RUN_SUMMARY.data) || {};
+        // and to compare summary.ownership_gap. Per-run summary (when runId is
+        // set) wins over the cached window.RUN_SUMMARY.
+        const rs = (localRunSummary && localRunSummary.data)
+                || (window.RUN_SUMMARY && window.RUN_SUMMARY.data)
+                || {};
         const totalInput      = rs.total_input      != null ? rs.total_input      : summary.total_entities + (summary.unresolved || 0);
         const resolved        = rs.resolved         != null ? rs.resolved         : summary.total_entities;
         const sanctionedCount = rs.sanctioned_count != null ? rs.sanctioned_count : null;

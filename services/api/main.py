@@ -207,8 +207,11 @@ class BriefingRequest(BaseModel):
 
 class AgentRequest(BaseModel):
     question: str
-    mode: str = "live"       # "live" | "cached"
-    run_id: str | None = None  # for CACHED: specific golden run to replay
+    mode: str = "live"           # "live" | "cached"
+    run_id: str | None = None    # scopes LIVE tools to a specific uploaded run's
+                                 # cache. In CACHED mode this is informational —
+                                 # golden replays are still chip-keyword routed
+                                 # (and were captured against list_1).
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -253,13 +256,15 @@ async def agent_ask(req: AgentRequest):
     mode=live    → calls Anthropic API + executes real tools (ANTHROPIC_API_KEY required)
     mode=cached  → replays captured golden run from output/agent_runs/{run_id}.json
     """
-    cache = _get_cache()
+    cache = _get_cache_for_run(req.run_id)
     ofac = _get_ofac()
 
     from services.api.agent.runner import run_agent_live, run_agent_cached
 
     if req.mode == "cached":
-        stream = run_agent_cached(question=req.question, run_id=req.run_id)
+        # Golden replays were captured against list_1; chip-keyword routing
+        # picks one of golden_001-004. run_id is recorded for telemetry only.
+        stream = run_agent_cached(question=req.question)
     else:
         stream = run_agent_live(
             question=req.question,
