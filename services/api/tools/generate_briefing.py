@@ -253,13 +253,32 @@ def _build_sanctions_grid(raw: dict) -> list[dict[str, str]]:
 
 
 def _load_traversal(entity_id: str) -> dict | None:
-    """Load cached UBO traversal. Tries {id}.json then {id}_ubo.json (Sukhoi)."""
+    """
+    Load a cached UBO traversal. Tries {id}.json then {id}_ubo.json (Sukhoi).
+
+    Two on-disk shapes exist in the wild:
+      - **UBO path-shape** (what `_build_ownership` consumes): each `data[N]`
+        has a `path[]` list of entity steps + a `target` dict with full
+        identifiers / sanctioned / pep details.
+      - **Live-API flat-shape**: each `data[N]` has scalar `source` / `target`
+        ids and edge metadata, but *no entity details* and `path` is null.
+        This shape doesn't carry sanctioned/identifier data per owner, so the
+        briefing's ownership block has nothing useful to surface — we treat
+        it the same as "no cached traversal" and fall back to the honest
+        "fetch live for full chain" line.
+    """
     for candidate in (TRAVERSAL_DIR / f"{entity_id}.json", TRAVERSAL_DIR / f"{entity_id}_ubo.json"):
-        if candidate.exists():
-            try:
-                return json.loads(candidate.read_text(encoding="utf-8"))
-            except Exception:
-                continue
+        if not candidate.exists():
+            continue
+        try:
+            data = json.loads(candidate.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        items = data.get("data") or []
+        if items and items[0].get("path") is None:
+            # Flat live-API shape — unusable for the briefing's ownership block.
+            return None
+        return data
     return None
 
 
