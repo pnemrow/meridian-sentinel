@@ -1,42 +1,225 @@
-/* Surface 1 — Upload: source → map → preview → run (§6) */
+/* Surface 1 — Upload: source → (sheet pick) → map → run (§6)
+ *
+ * Real flow (no decorative drop zone anymore):
+ *   1. User picks a file (drop or browse, hidden <input type="file"> is the
+ *      single source of truth). SheetJS enumerates sheets client-side.
+ *   2. If the workbook has >1 sheet, show a SHEET PICKER. Single sheets auto-pick.
+ *   3. POST file + sheet_name to /uploads. Backend returns the *canonical*
+ *      column_mapping + preview (engine-detected) and matches_seeded.
+ *   4. POST /uploads/{id}/run streams real per-row progress via SSE.
+ *      matches_seeded → instant cached path (run_id="default").
+ *      Otherwise → live run, ~1s/row, new run_id is the new investigation.
+ *
+ * The "Use the seeded list" card is a one-click shortcut that bypasses
+ * /uploads entirely and lands on the existing demo flow (run_id="default").
+ */
 
-function Upload({ onRunComplete, initialStep }) {
-  const [step, setStep] = useState(initialStep || 'source'); // source | map | running | resolved
-  const [running, setRunning] = useState(false);
+const UPLOAD_API_BASE = (typeof window !== 'undefined' && window.SENTINEL_API_BASE) || '';
 
-  const onSelectSeeded = () => {
-    setStep('map');
+function Upload({ onRunComplete }) {
+  const [step, setStep] = useState('source');      // source | sheet | map | running | resolved
+  const [file, setFile] = useState(null);
+  const [pendingUploadId, setPendingUploadId] = useState(null);  // when multi-sheet & still picking
+  const [sheets, setSheets] = useState([]);
+  const [uploadResponse, setUploadResponse] = useState(null);    // backend canonical response
+  const [runEvents, setRunEvents] = useState([]);                // SSE stream
+  const [runResult, setRunResult] = useState(null);              // {run_id, matches_seeded, ...}
+  const [errorMsg, setErrorMsg] = useState(null);
+  const [dragOver, setDragOver] = useState(false);
+  const fileInputRef = useRef(null);
+
+  // ── Source step handlers ─────────────────────────────────────────────────
+
+  const openFilePicker = () => fileInputRef.current?.click();
+
+  const handleFile = async (f) => {
+    setErrorMsg(null);
+    setFile(f);
+    const isXlsx = /\.(xlsx|xls)$/i.test(f.name);
+    if (isXlsx && window.XLSX) {
+      // Enumerate sheets client-side first. Single-sheet workbooks skip the picker.
+      try {
+        const buf = await f.arrayBuffer();
+        const wb = window.XLSX.read(buf, { type: 'array' });
+        const names = wb.SheetNames || [];
+        if (names.length > 1) {
+          setSheets(names);
+          setStep('sheet');
+          return;
+        }
+        await postUpload(f, names[0] || null);
+        return;
+      } catch (err) {
+        console.warn('[upload] SheetJS read failed, falling back to backend enumeration:', err);
+      }
+    }
+    // CSV or SheetJS-unavailable fallback: POST without sheet_name, let backend respond.
+    await postUpload(f, null);
   };
 
-  const onRun = () => {
-    setRunning(true);
+  const postUpload = async (f, sheetName) => {
+    setErrorMsg(null);
+    const fd = new FormData();
+    fd.append('file', f);
+    if (sheetName) fd.append('sheet_name', sheetName);
+    try {
+      const resp = await fetch(`${UPLOAD_API_BASE}/uploads`, { method: 'POST', body: fd });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status} from /uploads`);
+      const json = await resp.json();
+      if (json.needs_sheet_choice) {
+        setPendingUploadId(json.upload_id);
+        setSheets(json.sheets);
+        setStep('sheet');
+        return;
+      }
+      setUploadResponse(json);
+      setStep('map');
+    } catch (err) {
+      setErrorMsg(`Upload failed: ${err.message}. Is the backend running at ${UPLOAD_API_BASE || '/'}?`);
+    }
+  };
+
+  const handleSheetPicked = async (sheetName) => {
+    if (!file) {
+      setErrorMsg("Internal: file reference lost — please re-pick the file.");
+      return;
+    }
+    await postUpload(file, sheetName);
+  };
+
+  const handleSelectSeeded = () => {
+    // Shortcut path — no upload, jump straight to the existing list_1 demo.
+    setRunResult({ run_id: 'default', matches_seeded: true, resolved: 49, total: 50 });
+    setStep('resolved');
+  };
+
+  // ── Drag / drop ───────────────────────────────────────────────────────────
+
+  const onDragOver = (e) => { e.preventDefault(); setDragOver(true); };
+  const onDragLeave = () => setDragOver(false);
+  const onDrop = (e) => {
+    e.preventDefault();
+    setDragOver(false);
+    const f = e.dataTransfer?.files?.[0];
+    if (f) handleFile(f);
+  };
+
+  // ── Run step ──────────────────────────────────────────────────────────────
+
+  const onRun = async () => {
+    if (!uploadResponse?.upload_id) return;
     setStep('running');
-    setTimeout(() => { setStep('resolved'); setRunning(false); }, 1400);
+    setRunEvents([]);
+    setErrorMsg(null);
+    try {
+      const resp = await fetch(`${UPLOAD_API_BASE}/uploads/${uploadResponse.upload_id}/run`, { method: 'POST' });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status} from /uploads/{id}/run`);
+      const reader = resp.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = '';
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+        const parts = buffer.split('\n\n');
+        buffer = parts.pop();
+        for (const part of parts) {
+          const line = part.trim();
+          if (!line.startsWith('data: ')) continue;
+          try {
+            const payload = JSON.parse(line.slice(6));
+            setRunEvents(prev => [...prev, payload]);
+            if (payload.event === 'run_complete') {
+              setRunResult(payload.data);
+            }
+            if (payload.event === 'done') {
+              setStep('resolved');
+            }
+            if (payload.event === 'error') {
+              setErrorMsg(payload.data?.message || 'Run failed');
+            }
+          } catch (_) { /* ignore parse errors */ }
+        }
+      }
+    } catch (err) {
+      setErrorMsg(`Run failed: ${err.message}`);
+      setStep('map');
+    }
   };
+
+  const onContinue = () => {
+    if (typeof onRunComplete === 'function') {
+      onRunComplete(
+        runResult?.run_id || 'default',
+        !!runResult?.matches_seeded
+      );
+    }
+  };
+
+  // ── Render ────────────────────────────────────────────────────────────────
 
   return (
     <div style={{ padding: '32px 40px 80px', maxWidth: 1100, margin: '0 auto' }}>
-      <SectionHeader
-        kicker="Surface 1 · Upload"
-        title="Screen a vendor list"
-      />
+      <SectionHeader kicker="Surface 1 · Upload" title="Screen a vendor list" />
       <div className="muted" style={{ fontSize: 14, marginTop: -8, marginBottom: 28 }}>
         Resolve every name to a real corporate entity, screen against OFAC, map ownership.
       </div>
 
+      {/* Hidden real file input — both the drop zone and the browse link trigger it */}
+      <input
+        ref={fileInputRef}
+        type="file"
+        accept=".xlsx,.csv,.xls"
+        style={{ display: 'none' }}
+        onChange={(e) => { const f = e.target.files?.[0]; if (f) handleFile(f); e.target.value = ''; }}
+      />
+
+      {errorMsg ? (
+        <div style={{
+          background: 'rgba(248,81,73,0.08)', border: '1px solid rgba(248,81,73,0.35)',
+          color: 'var(--risk-critical)', padding: '10px 14px', borderRadius: 4, marginBottom: 18, fontSize: 13,
+        }}>{errorMsg}</div>
+      ) : null}
+
       {/* Step 1 */}
-      <StepCard num={1} label="Source" active={step === 'source'} done={step !== 'source'}>
-        <SourcePicker onSeeded={onSelectSeeded} />
+      <StepCard num={1} label="Source"
+        active={step === 'source' || step === 'sheet'}
+        done={step !== 'source' && step !== 'sheet'}
+      >
+        {step === 'sheet'
+          ? <SheetPicker sheets={sheets} file={file} onPick={handleSheetPicked} onBack={() => setStep('source')} />
+          : <SourcePicker
+              onBrowse={openFilePicker}
+              onSeeded={handleSelectSeeded}
+              dragOver={dragOver}
+              onDragOver={onDragOver}
+              onDragLeave={onDragLeave}
+              onDrop={onDrop}
+            />}
       </StepCard>
 
       {/* Step 2 */}
-      <StepCard num={2} label="Map & preview" active={step === 'map'} done={step === 'running' || step === 'resolved'} disabled={step === 'source'}>
-        {step !== 'source' ? <MapAndPreview onRun={onRun} canRun={step === 'map'} /> : <span className="muted">Pick a source above to begin.</span>}
+      <StepCard num={2} label="Map & preview"
+        active={step === 'map'}
+        done={step === 'running' || step === 'resolved'}
+        disabled={step === 'source' || step === 'sheet'}
+      >
+        {(step === 'map' || step === 'running' || step === 'resolved') && uploadResponse
+          ? <MapAndPreview response={uploadResponse} onRun={onRun} canRun={step === 'map'} />
+          : <span className="muted">Pick a source above to begin.</span>}
       </StepCard>
 
       {/* Step 3 */}
-      <StepCard num={3} label="Validate & run" active={step === 'running' || step === 'resolved'} done={step === 'resolved'} disabled={step === 'source' || step === 'map'}>
-        {step === 'running' ? <RunningState /> : step === 'resolved' ? <ResolvedSummary onContinue={onRunComplete} /> : <span className="muted">Confirm the mapping, then run screening.</span>}
+      <StepCard num={3} label="Validate & run"
+        active={step === 'running' || step === 'resolved'}
+        done={step === 'resolved'}
+        disabled={step === 'source' || step === 'sheet' || step === 'map'}
+      >
+        {step === 'running'
+          ? <RunningState events={runEvents} total={uploadResponse?.total_rows || 0} />
+          : step === 'resolved'
+            ? <ResolvedSummary runResult={runResult} uploadResponse={uploadResponse} onContinue={onContinue} />
+            : <span className="muted">Confirm the mapping, then run screening.</span>}
       </StepCard>
     </div>
   );
@@ -70,17 +253,26 @@ function StepCard({ num, label, active, done, disabled, children }) {
   );
 }
 
-function SourcePicker({ onSeeded }) {
+// ── Source / drop zone ──────────────────────────────────────────────────────
+
+function SourcePicker({ onBrowse, onSeeded, dragOver, onDragOver, onDragLeave, onDrop }) {
   return (
     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
-      <div style={{
-        border: '1.5px dashed var(--border-default)',
-        borderRadius: 4,
-        padding: '32px 24px',
-        textAlign: 'center',
-        background: 'var(--bg-primary)',
-      }}>
-        <div className="mono" style={{ fontSize: 24, color: 'var(--text-muted)', marginBottom: 10 }}>⬆</div>
+      <div
+        onClick={onBrowse}
+        onDragOver={onDragOver}
+        onDragLeave={onDragLeave}
+        onDrop={onDrop}
+        className="clickable"
+        style={{
+          border: `1.5px dashed ${dragOver ? 'var(--accent)' : 'var(--border-default)'}`,
+          background: dragOver ? 'rgba(201,169,97,0.06)' : 'var(--bg-primary)',
+          borderRadius: 4,
+          padding: '32px 24px',
+          textAlign: 'center',
+          transition: 'border-color 120ms, background 120ms',
+        }}>
+        <div className="mono" style={{ fontSize: 24, color: dragOver ? 'var(--accent)' : 'var(--text-muted)', marginBottom: 10 }}>⬆</div>
         <div style={{ fontSize: 14, color: 'var(--text-secondary)', marginBottom: 6 }}>
           Drop an <span className="mono">.xlsx</span> or <span className="mono">.csv</span> file
         </div>
@@ -110,91 +302,141 @@ function SourcePicker({ onSeeded }) {
   );
 }
 
-function MapAndPreview({ onRun, canRun }) {
-  const hints = window.COLUMN_HINTS;
-  const preview = window.SEEDED_LIST_PREVIEW;
+// ── Sheet picker ────────────────────────────────────────────────────────────
+
+function SheetPicker({ sheets, file, onPick, onBack }) {
   return (
     <div>
-      {/* Column mapper */}
-      <div style={{
-        background: 'var(--bg-primary)', border: '1px solid var(--border-subtle)',
-        borderRadius: 4, padding: '16px 18px', marginBottom: 16,
-      }}>
-        <div className="mono" style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: 1.2, textTransform: 'uppercase', marginBottom: 10 }}>
-          Column mapping · auto-detected
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
+        <div style={{ fontSize: 13, color: 'var(--text-secondary)' }}>
+          <span className="mono" style={{ color: 'var(--text-primary)' }}>{file?.name || 'workbook'}</span> contains{' '}
+          <span className="mono" style={{ color: 'var(--text-primary)' }}>{sheets.length}</span> sheets — pick one to screen.
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 14 }}>
-          {Object.entries(hints).map(([field, cfg]) => (
-            <ColumnSelect key={field} field={field} cfg={cfg} />
-          ))}
-        </div>
+        <button onClick={onBack} style={{
+          background: 'transparent', color: 'var(--text-muted)',
+          border: '1px solid var(--border-default)',
+          padding: '4px 10px', borderRadius: 3, fontSize: 11,
+        }}>← change file</button>
       </div>
-
-      {/* Preview table */}
-      <div style={{ border: '1px solid var(--border-default)', borderRadius: 4, overflow: 'hidden' }}>
-        <div style={{
-          display: 'grid', gridTemplateColumns: '40px 1fr 80px 100px 1fr 160px',
-          gap: 12, padding: '8px 14px',
-          background: 'var(--bg-elevated)',
-          fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--text-muted)',
-          letterSpacing: 0.8, textTransform: 'uppercase',
-        }}>
-          <div>row</div><div>name (detected)</div><div>country</div><div>type</div><div>identifier</div><div>status</div>
-        </div>
-        {preview.map((r) => (
-          <div key={r.row} style={{
-            display: 'grid', gridTemplateColumns: '40px 1fr 80px 100px 1fr 160px',
-            gap: 12, padding: '8px 14px',
-            borderTop: '1px solid var(--border-subtle)',
-            fontSize: 12,
-            background: r.status === 'no_name' ? 'rgba(248,81,73,0.04)' : (r.status === 'low_confidence' ? 'rgba(210,153,34,0.04)' : 'transparent'),
-            color: r.status === 'no_name' ? 'var(--text-muted)' : 'var(--text-primary)',
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 10 }}>
+        {sheets.map((name, i) => (
+          <button key={name} onClick={() => onPick(name)} className="clickable" style={{
+            textAlign: 'left',
+            background: i === 0 ? 'rgba(201,169,97,0.08)' : 'var(--bg-primary)',
+            border: `1px solid ${i === 0 ? 'var(--accent-dim)' : 'var(--border-default)'}`,
+            borderRadius: 4,
+            padding: '12px 14px',
+            color: 'var(--text-primary)',
+            cursor: 'pointer',
           }}>
-            <div className="mono muted">{r.row}</div>
-            <div>{r.name || <span className="muted">(blank)</span>}</div>
-            <div className="mono"><CountryCode code={r.country} /></div>
-            <div className="mono muted">{r.type}</div>
-            <div className="mono muted" style={{ fontSize: 11 }}>{r.identifier || '—'}</div>
-            <div>
-              {r.status === 'ready' ? <span style={{ color: 'var(--risk-low)' }}>✓ ready</span> :
-               r.status === 'no_name' ? <span style={{ color: 'var(--risk-critical)' }}>⚠ no name — skip</span> :
-               r.status === 'low_confidence' ? <ConfidenceFlag reason="match score < 50; resolved candidate is likely a related entity, not the input — verify before relying on results." inline /> : null}
+            <div className="mono" style={{ fontSize: 14, fontWeight: 600 }}>{name}</div>
+            <div className="muted" style={{ fontSize: 11, marginTop: 4 }}>
+              {i === 0 ? 'first sheet · default' : 'click to use this sheet'}
             </div>
-          </div>
+          </button>
         ))}
-      </div>
-      <div className="muted" style={{ fontSize: 12, marginTop: 10, fontStyle: 'italic' }}>
-        Showing 15 of 50 rows. Column detection follows backend <span className="mono">COLUMN_HINTS</span>; you can override any field above.
-      </div>
-
-      <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 18 }}>
-        <button onClick={onRun} disabled={!canRun} style={{
-          background: canRun ? 'var(--accent)' : 'transparent',
-          color: canRun ? '#0A1628' : 'var(--text-muted)',
-          border: canRun ? 0 : '1px solid var(--border-default)',
-          padding: '10px 18px', borderRadius: 4, fontSize: 14, fontWeight: 600,
-        }}>Run screening →</button>
       </div>
     </div>
   );
 }
 
-function ColumnSelect({ field, cfg }) {
+// ── Map & preview (driven by /uploads response) ─────────────────────────────
+
+function MapAndPreview({ response, onRun, canRun }) {
+  const mapping = response.column_mapping || {};
+  const preview = response.preview || [];
+  return (
+    <div>
+      <div style={{
+        background: 'var(--bg-primary)', border: '1px solid var(--border-subtle)',
+        borderRadius: 4, padding: '16px 18px', marginBottom: 16,
+      }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
+          <span className="mono" style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: 1.2, textTransform: 'uppercase' }}>
+            Column mapping · auto-detected from headers
+          </span>
+          <span className="mono muted" style={{ fontSize: 11 }}>
+            sheet: <span style={{ color: 'var(--text-primary)' }}>{response.sheet || '—'}</span>
+            {response.matches_seeded ? <span style={{ color: 'var(--accent)', marginLeft: 12 }}>★ matches seeded list_1</span> : null}
+          </span>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 14 }}>
+          {Object.entries(mapping).map(([field, cfg]) => (
+            <ColumnSelect key={field} field={field} cfg={cfg} required={field === 'name'} />
+          ))}
+        </div>
+      </div>
+
+      {preview.length > 0 ? (
+        <div style={{ border: '1px solid var(--border-default)', borderRadius: 4, overflow: 'hidden' }}>
+          <div style={{
+            display: 'grid', gridTemplateColumns: '40px 1fr 80px 100px 1fr 120px',
+            gap: 12, padding: '8px 14px',
+            background: 'var(--bg-elevated)',
+            fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--text-muted)',
+            letterSpacing: 0.8, textTransform: 'uppercase',
+          }}>
+            <div>row</div><div>name</div><div>country</div><div>type</div><div>identifier</div><div>status</div>
+          </div>
+          {preview.map((r) => (
+            <div key={r.row} style={{
+              display: 'grid', gridTemplateColumns: '40px 1fr 80px 100px 1fr 120px',
+              gap: 12, padding: '8px 14px',
+              borderTop: '1px solid var(--border-subtle)',
+              fontSize: 12,
+              background: r.status === 'no_name' ? 'rgba(248,81,73,0.04)' : 'transparent',
+              color: r.status === 'no_name' ? 'var(--text-muted)' : 'var(--text-primary)',
+            }}>
+              <div className="mono muted">{r.row}</div>
+              <div>{r.name || <span className="muted">(blank)</span>}</div>
+              <div className="mono">{r.country ? <CountryCode code={r.country} /> : <span className="muted">—</span>}</div>
+              <div className="mono muted">{r.type || '—'}</div>
+              <div className="mono muted" style={{ fontSize: 11 }}>{r.identifier || '—'}</div>
+              <div>
+                {r.status === 'ready'
+                  ? <span style={{ color: 'var(--risk-low)' }}>✓ ready</span>
+                  : <span style={{ color: 'var(--risk-critical)' }}>⚠ no name — skip</span>}
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : null}
+
+      <div className="muted" style={{ fontSize: 12, marginTop: 10, fontStyle: 'italic' }}>
+        Showing {preview.length} of {response.total_rows} rows. Column detection uses the backend's COLUMN_HINTS
+        against the actual file headers.
+      </div>
+
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 18 }}>
+        <span className="mono muted" style={{ fontSize: 11 }}>POST /uploads/{response.upload_id}/run</span>
+        <button onClick={onRun} disabled={!canRun} style={{
+          background: canRun ? 'var(--accent)' : 'transparent',
+          color: canRun ? '#0A1628' : 'var(--text-muted)',
+          border: canRun ? 0 : '1px solid var(--border-default)',
+          padding: '10px 18px', borderRadius: 4, fontSize: 14, fontWeight: 600,
+        }}>{response.matches_seeded ? 'Run screening (cached) →' : 'Run screening live →'}</button>
+      </div>
+    </div>
+  );
+}
+
+function ColumnSelect({ field, cfg, required }) {
+  const detected = cfg?.detected_header;
   return (
     <div>
       <div style={{ fontSize: 11, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 4, display: 'flex', gap: 6, alignItems: 'center' }}>
         <span className="mono">{field}</span>
-        {cfg.required ? <span style={{ color: 'var(--accent)' }}>•</span> : null}
+        {required ? <span style={{ color: 'var(--accent)' }}>•</span> : null}
       </div>
       <div style={{
         background: 'var(--bg-elevated)', border: '1px solid var(--border-default)',
         borderRadius: 3, padding: '6px 10px', display: 'flex', justifyContent: 'space-between',
         fontSize: 12, alignItems: 'center',
       }}>
-        <span style={{ color: cfg.detected ? 'var(--text-primary)' : 'var(--text-muted)' }}>{cfg.detected || '— none —'}</span>
+        <span style={{ color: detected ? 'var(--text-primary)' : 'var(--text-muted)' }}>{detected || '— none —'}</span>
         <span className="muted" style={{ fontSize: 10 }}>▾</span>
       </div>
-      {cfg.detected ? (
+      {detected ? (
         <div className="mono" style={{ fontSize: 9, color: 'var(--accent-dim)', marginTop: 4, letterSpacing: 0.5 }}>
           auto-detected
         </div>
@@ -203,77 +445,125 @@ function ColumnSelect({ field, cfg }) {
   );
 }
 
-function RunningState() {
-  return (
-    <div style={{ padding: '24px 0', display: 'flex', flexDirection: 'column', gap: 14 }}>
-      {[
-        ['Parsing rows', 'done'],
-        ['Resolving names to Sayari entities', 'running'],
-        ['Screening against OFAC SDN feed', 'pending'],
-        ['Traversing ownership graphs', 'pending'],
-      ].map(([label, state], i) => (
-        <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+// ── Running state — real SSE-driven progress ────────────────────────────────
+
+function RunningState({ events, total }) {
+  const cachedEvent = events.find(e => e.event === 'matched_seeded');
+  if (cachedEvent) {
+    return (
+      <div style={{ padding: '24px 0', display: 'flex', flexDirection: 'column', gap: 14 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <span style={{
-            width: 16, height: 16, borderRadius: 999,
-            border: '1px solid var(--border-default)',
-            background: state === 'done' ? 'var(--risk-low)' : 'transparent',
-            color: state === 'done' ? '#0A1628' : 'var(--accent)',
+            width: 18, height: 18, borderRadius: 999,
+            background: 'var(--risk-low)', color: '#0A1628',
             display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-            fontSize: 10, fontWeight: 700,
-          }} className={state === 'running' ? 'pulse' : ''}>
-            {state === 'done' ? '✓' : state === 'running' ? '⋯' : ''}
-          </span>
-          <span style={{ fontSize: 13, color: state === 'pending' ? 'var(--text-muted)' : 'var(--text-secondary)' }}>{label}</span>
+            fontSize: 11, fontWeight: 700,
+          }}>✓</span>
+          <span style={{ fontSize: 13, color: 'var(--text-secondary)' }}>{cachedEvent.data.message}</span>
         </div>
-      ))}
+      </div>
+    );
+  }
+
+  const resolved = events.filter(e => e.event === 'row_resolved').length;
+  const unresolved = events.filter(e => e.event === 'row_unresolved').length;
+  const errored = events.filter(e => e.event === 'row_error').length;
+  const processed = resolved + unresolved + errored;
+  const pct = total > 0 ? Math.round((processed / total) * 100) : 0;
+
+  // Recent activity: last 6 row_* events
+  const recent = events
+    .filter(e => e.event === 'row_resolved' || e.event === 'row_unresolved' || e.event === 'row_error')
+    .slice(-6);
+
+  return (
+    <div style={{ padding: '8px 0', display: 'flex', flexDirection: 'column', gap: 14 }}>
+      <div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 6 }}>
+          <span className="mono" style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: 1.2, textTransform: 'uppercase' }}>
+            Resolving live from Sayari · ~1 req/sec
+          </span>
+          <span className="mono" style={{ fontSize: 12, color: 'var(--accent)' }}>{processed} / {total}</span>
+        </div>
+        <div style={{ height: 6, background: 'var(--bg-elevated)', borderRadius: 3, overflow: 'hidden' }}>
+          <div style={{
+            height: '100%', width: `${pct}%`,
+            background: 'linear-gradient(90deg, var(--accent), var(--accent-hover))',
+            transition: 'width 240ms',
+          }} />
+        </div>
+        <div style={{ display: 'flex', gap: 18, marginTop: 8, fontSize: 11, color: 'var(--text-secondary)' }}>
+          <span><span className="mono" style={{ color: 'var(--risk-low)' }}>{resolved}</span> resolved</span>
+          <span><span className="mono" style={{ color: 'var(--text-muted)' }}>{unresolved}</span> unresolved</span>
+          {errored ? <span><span className="mono" style={{ color: 'var(--risk-critical)' }}>{errored}</span> errored</span> : null}
+        </div>
+      </div>
+
+      {recent.length > 0 ? (
+        <div style={{
+          background: 'var(--bg-terminal)', border: '1px solid var(--border-subtle)',
+          borderRadius: 4, padding: '10px 12px', maxHeight: 180, overflow: 'auto',
+        }}>
+          <div className="mono" style={{ fontSize: 10, color: 'var(--text-muted)', letterSpacing: 1.2, textTransform: 'uppercase', marginBottom: 6 }}>
+            Recent rows
+          </div>
+          {recent.map((e, i) => (
+            <div key={i} className="mono" style={{ fontSize: 11, color: 'var(--text-terminal)', padding: '2px 0' }}>
+              <span style={{ color: e.event === 'row_resolved' ? 'var(--risk-low)' : e.event === 'row_error' ? 'var(--risk-critical)' : 'var(--text-muted)' }}>●</span>
+              {' '}row {e.data.row} · {(e.data.name || '').slice(0, 40)}
+              {e.data.sanctioned ? <span style={{ color: 'var(--risk-critical)', marginLeft: 8 }}>sanctioned</span> : null}
+              {e.data.pep ? <span style={{ color: 'var(--risk-medium)', marginLeft: 8 }}>PEP</span> : null}
+              {e.data.entity_id ? <span style={{ color: 'var(--text-muted)', marginLeft: 8 }}>{e.data.entity_id.slice(0, 12)}…</span> : null}
+              {e.data.duration_ms != null ? <span style={{ color: 'var(--text-muted)', marginLeft: 8 }}>{e.data.duration_ms}ms</span> : null}
+            </div>
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 }
 
-function ResolvedSummary({ onContinue }) {
-  const sum = window.UPLOAD_SUMMARY.data;
-  const source = window.UPLOAD_SUMMARY.source;
+// ── Resolved summary ────────────────────────────────────────────────────────
+
+function ResolvedSummary({ runResult, uploadResponse, onContinue }) {
+  const matchedSeeded = !!runResult?.matches_seeded;
+  const resolved = runResult?.resolved ?? 0;
+  const total = runResult?.total ?? uploadResponse?.total_rows ?? 0;
+  const sanctioned = runResult?.sanctioned_count;
+
   return (
     <div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, marginBottom: 18 }}>
-        <Stat label="rows" value={sum.total_input} mono />
-        <Stat label="resolved" value={sum.resolved} mono accent />
-        <Stat label="unresolved" value={sum.unresolved} mono />
-        <Stat label="rate" value={(sum.resolution_rate * 100).toFixed(0) + '%'} mono />
-      </div>
-
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, marginBottom: 20 }}>
-        <Stat label="sanctioned" value={sum.sanctioned_count} risk="critical" />
-        <Stat label="PEPs" value={sum.pep_count} />
-        <Stat label="countries" value={Object.keys(sum.country_breakdown).length} />
-        <Stat label="low-conf" value={sum.low_confidence_matches.length} risk="medium" />
-      </div>
-
-      {/* Low-confidence call-out */}
-      <div style={{
-        background: 'rgba(210,153,34,0.05)',
-        border: '1px solid rgba(210,153,34,0.3)',
-        borderRadius: 4, padding: 14, marginBottom: 20,
-      }}>
-        <div className="mono" style={{ fontSize: 11, color: 'var(--risk-medium)', letterSpacing: 1.2, textTransform: 'uppercase', marginBottom: 8 }}>
-          ⚠ 2 entities matched with low confidence — verify before relying on results
+      {matchedSeeded ? (
+        <div style={{
+          background: 'rgba(201,169,97,0.06)',
+          border: '1px solid var(--accent-dim)',
+          borderRadius: 4, padding: '14px 16px', marginBottom: 18,
+        }}>
+          <div className="mono" style={{ fontSize: 11, color: 'var(--accent)', letterSpacing: 1.2, textTransform: 'uppercase', marginBottom: 6 }}>
+            ★ Matched seeded list_1
+          </div>
+          <div style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.5 }}>
+            The uploaded sheet hashes identically to the seeded list_1. Skipping the live re-run
+            and serving the verified cached results: <span className="mono">49</span> resolved of <span className="mono">50</span>, <span className="mono">45</span> sanctioned.
+          </div>
         </div>
-        {sum.low_confidence_matches.map(m => (
-          <CitedValue key={m.input_name} source={source}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', padding: '6px 0', fontSize: 13 }}>
-              <span>{m.input_name}</span>
-              <span className="mono muted">score {m.score} · {m.reason}</span>
-            </div>
-          </CitedValue>
-        ))}
-      </div>
+      ) : (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, marginBottom: 18 }}>
+          <Stat label="rows" value={total} mono />
+          <Stat label="resolved" value={resolved} mono accent />
+          <Stat label="unresolved" value={total - resolved} mono />
+          <Stat label="sanctioned" value={sanctioned ?? '—'} mono risk={sanctioned ? 'critical' : null} />
+        </div>
+      )}
 
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <span className="mono muted" style={{ fontSize: 11 }}>GET /summary</span>
+        <span className="mono muted" style={{ fontSize: 11 }}>
+          run_id: <span style={{ color: 'var(--text-primary)' }}>{runResult?.run_id || 'default'}</span>
+        </span>
         <button onClick={onContinue} style={{
           background: 'var(--accent)', color: '#0A1628', border: 0,
           padding: '10px 18px', borderRadius: 4, fontWeight: 600, fontSize: 14,
-        }}>Continue to Co-Pilot →</button>
+        }}>Continue to Compare →</button>
       </div>
     </div>
   );
