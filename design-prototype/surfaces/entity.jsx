@@ -125,7 +125,24 @@ function Entity({ entityId, onBack, onOpenEntity, trail = [], runId = null }) {
   const [showBriefing, setShowBriefing] = useState(false);
   const [showApi, setShowApi] = useState(false);
   const [tick, setTick] = useState(0);
-  const disposition = (window.DISPOSITIONS && window.DISPOSITIONS[entityId]) || null;
+  // Persisted disposition loaded from /api/results/{run_id}/{entity_id}. null
+  // until the request completes; renders as "pending review" in that interim.
+  const [disposition, setDispositionState] = useState(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    setDispositionState(null);
+    const scope = runId || 'default';
+    const url = `${SENTINEL_BASE()}/api/results/${encodeURIComponent(scope)}/${encodeURIComponent(entityId)}`;
+    fetch(url).then(r => r.ok ? r.json() : null).then(payload => {
+      if (cancelled) return;
+      // Endpoint returns either the full per-entity record (disk runs) or a
+      // thin {entity_id, disposition} stub (default scope). Either way the
+      // disposition is at .disposition.
+      if (payload && payload.disposition) setDispositionState(payload.disposition);
+    }).catch(() => {});
+    return () => { cancelled = true; };
+  }, [entityId, runId]);
 
   // Hooks must run unconditionally before any early return. sourceBreakdown
   // tolerates a null entity (source_count → {}) and the scroll-reset effect
@@ -152,14 +169,33 @@ function Entity({ entityId, onBack, onOpenEntity, trail = [], runId = null }) {
   const rs = risk_summary.data;
   const hasCachedGraph = CACHED_TRAVERSAL_IDS.has(entityId);
 
-  const setDisposition = (status, rationale) => {
-    window.DISPOSITIONS[entityId] = {
+  const setDisposition = async (status, rationale) => {
+    // Persist via the backend so a refresh keeps the decision. Falls back to
+    // a transient in-memory optimistic update if the POST fails, so the UI
+    // doesn't silently swallow the click.
+    const optimistic = {
       status,
-      reviewer: { initials: "PV", name: "P. Volkov" },
-      decided_at: new Date().toISOString(),
+      reviewer: "P. Volkov",            // single string — backend stores as-is
       rationale,
+      decided_at: new Date().toISOString(),
     };
+    setDispositionState(optimistic);
     setTick(t => t + 1);
+    try {
+      const scope = runId || 'default';
+      const url = `${SENTINEL_BASE()}/api/results/${encodeURIComponent(scope)}/${encodeURIComponent(entityId)}/disposition`;
+      const resp = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ status, reviewer: 'P. Volkov', rationale }),
+      });
+      if (resp.ok) {
+        const json = await resp.json();
+        if (json?.disposition) setDispositionState(json.disposition);
+      }
+    } catch (err) {
+      console.warn('[entity] disposition POST failed — kept optimistic local copy:', err);
+    }
   };
 
   return (
@@ -597,7 +633,11 @@ function DispositionControl({ disposition, onSet }) {
             fontSize: 11, color: 'var(--text-muted)',
           }}>
             <span className="mono">
-              {disposition.reviewer.name} · {new Date(disposition.decided_at).toISOString().slice(0,10)}
+              {/* Reviewer is a string from the backend; the old fixture used
+                  {initials, name}. Tolerate both shapes. */}
+              {(typeof disposition.reviewer === 'string'
+                  ? disposition.reviewer
+                  : disposition.reviewer?.name) || 'unassigned'} · {disposition.decided_at ? new Date(disposition.decided_at).toISOString().slice(0,10) : ''}
             </span>
             <button onClick={() => setDrafting(true)} style={{
               background: 'transparent', color: 'var(--text-secondary)',

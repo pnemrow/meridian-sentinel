@@ -8,6 +8,20 @@ function Compare({ onOpenEntity, focusEntityId, runId }) {
   const [perRunResult, setPerRunResult] = useState(null);
   const [perRunSummary, setPerRunSummary] = useState(null);
   const [perRunError, setPerRunError] = useState(null);
+  // Disposition map keyed by entity_id — fetched from /api/dispositions/{run_id}
+  // so the reconciliation table paints persisted decisions without window state.
+  const [dispositions, setDispositions] = useState({});
+
+  // Per-run dispositions — reload whenever the active runId changes.
+  useEffect(() => {
+    let cancelled = false;
+    const scope = runId || 'default';
+    fetch(`${COMPARE_API_BASE}/api/dispositions/${encodeURIComponent(scope)}`)
+      .then(r => r.ok ? r.json() : {})
+      .then(map => { if (!cancelled) setDispositions(map || {}); })
+      .catch(() => { if (!cancelled) setDispositions({}); });
+    return () => { cancelled = true; };
+  }, [runId]);
 
   useEffect(() => {
     if (!runId) {
@@ -60,7 +74,6 @@ function Compare({ onOpenEntity, focusEntityId, runId }) {
   const localRunSummary = perRunSummary;
   const [filterOutcome, setFilterOutcome] = useState(null);
   const [expandedRowId, setExpandedRowId] = useState(null);
-  const [exportOpen, setExportOpen] = useState(false);
   const [highlightId, setHighlightId] = useState(null);
 
   const gapRows = useMemo(
@@ -204,16 +217,14 @@ function Compare({ onOpenEntity, focusEntityId, runId }) {
             ) : (
               <span className="mono muted" style={{ fontSize: 11 }}>OFAC SDN feed downloaded {ofac_fetched_at?.slice(0,10)}</span>
             )}
-            <button onClick={() => setExportOpen(true)} style={{
-              background: 'transparent', color: 'var(--text-secondary)',
-              border: '1px solid var(--border-default)', padding: '6px 12px', borderRadius: 4, fontSize: 12,
-            }}>↓ Export investigation report</button>
+            {/* The "↓ Export investigation report" button was removed in Pass 2 —
+                it opened a modal that just set local state and never produced a
+                file. Per-entity Briefing PDFs (the real, WeasyPrint-rendered
+                ones) remain on the Entity surface. */}
           </div>
         }
       />
-      <ReconciliationTable rows={visibleRows} expandedId={expandedRowId} onToggle={setExpandedRowId} onOpenEntity={onOpenEntity} highlightId={highlightId} />
-
-      {exportOpen ? <InvestigationReportModal onClose={() => setExportOpen(false)} /> : null}
+      <ReconciliationTable rows={visibleRows} expandedId={expandedRowId} onToggle={setExpandedRowId} onOpenEntity={onOpenEntity} highlightId={highlightId} dispositions={dispositions} />
     </div>
   );
 }
@@ -356,55 +367,11 @@ function FunnelGhost({ label }) {
   );
 }
 
-function InvestigationReportModal({ onClose }) {
-  const [generated, setGenerated] = useState(false);
-  return (
-    <div onClick={onClose} style={{
-      position: 'fixed', inset: 0, background: 'rgba(5,11,20,0.7)', zIndex: 100,
-      display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 40,
-    }}>
-      <div onClick={(e) => e.stopPropagation()} style={{
-        background: 'var(--bg-elevated)', border: '1px solid var(--border-default)',
-        borderRadius: 8, maxWidth: 560, width: '100%', padding: 28,
-      }}>
-        <div style={{ fontSize: 18, fontWeight: 600, marginBottom: 6 }}>Export investigation report</div>
-        <div className="mono" style={{ fontSize: 11, color: 'var(--text-muted)', marginBottom: 16 }}>
-          POST /tools/generate_investigation_report
-        </div>
-        <div style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.55, marginBottom: 18 }}>
-          A full PDF audit artifact for <span style={{ color: 'var(--text-primary)' }}>list_1 · Q1 Vendor Onboarding</span>:
-          run summary, the funnel, all 4 ownership-gap findings with their evidence, the reconciliation table, and current dispositions.
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 18 }}>
-          <ReportOption label="Format" value="PDF (print theme)" />
-          <ReportOption label="Pages" value="~14" />
-          <ReportOption label="Section count" value="6" />
-          <ReportOption label="Cited sources" value="62 entries" />
-        </div>
-        <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
-          <button onClick={onClose} style={{
-            background: 'transparent', color: 'var(--text-secondary)',
-            border: '1px solid var(--border-default)', padding: '8px 14px', borderRadius: 4, fontSize: 13,
-          }}>Cancel</button>
-          <button onClick={() => { setGenerated(true); setTimeout(onClose, 800); }} style={{
-            background: generated ? 'var(--risk-low)' : 'var(--accent)',
-            color: '#0A1628', border: 0,
-            padding: '8px 14px', borderRadius: 4, fontWeight: 600, fontSize: 13,
-          }}>{generated ? '✓ Generated' : 'Generate report'}</button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function ReportOption({ label, value }) {
-  return (
-    <div style={{ background: 'var(--bg-primary)', border: '1px solid var(--border-subtle)', padding: '8px 12px', borderRadius: 3 }}>
-      <div className="mono" style={{ fontSize: 10, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: 0.8 }}>{label}</div>
-      <div className="mono" style={{ fontSize: 12, color: 'var(--text-primary)', marginTop: 2 }}>{value}</div>
-    </div>
-  );
-}
+// InvestigationReportModal + ReportOption removed in Pass 2 — they rendered
+// a confident modal listing fictitious counts ("~14 pages / 6 sections / 62
+// cited sources") and a "Generate report" button that only toggled local
+// state. The per-entity Briefing PDF on Entity surface (real, WeasyPrint-
+// backed) is the honest report path.
 
 function GapCard({ row, marquee, onOpen }) {
   return (
@@ -450,7 +417,7 @@ function GapCard({ row, marquee, onOpen }) {
   );
 }
 
-function ReconciliationTable({ rows, expandedId, onToggle, onOpenEntity, highlightId }) {
+function ReconciliationTable({ rows, expandedId, onToggle, onOpenEntity, highlightId, dispositions = {} }) {
   return (
     <div style={{ background: 'var(--bg-surface)', border: '1px solid var(--border-default)', borderRadius: 6, overflow: 'hidden' }}>
       <div style={{
@@ -496,7 +463,7 @@ function ReconciliationTable({ rows, expandedId, onToggle, onOpenEntity, highlig
               <div>
                 <div style={{ fontWeight: 500, display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
                   <span>{row.input_name}</span>
-                  {window.DISPOSITIONS && window.DISPOSITIONS[row.entity_id] ? <StatusChip status={window.DISPOSITIONS[row.entity_id].status} small /> : null}
+                  {dispositions[row.entity_id] ? <StatusChip status={dispositions[row.entity_id].status} small /> : null}
                 </div>
                 <div className="mono muted" style={{ fontSize: 10 }}>{row.match_label ? truncate(row.match_label, 36) : '—'}</div>
               </div>

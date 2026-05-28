@@ -54,15 +54,53 @@ def _scan_disk_investigations() -> list[dict]:
     return out
 
 
+def _disposition_path(run_id_str: str) -> Path:
+    """Where this run's disposition store lives on disk."""
+    if run_id_str == "default":
+        return _REPO / "output" / "dispositions.json"
+    return _RUNS_DIR / run_id_str / "dispositions.json"
+
+
+def _load_dispositions(run_id_str: str) -> dict:
+    """Return {entity_id: {status, reviewer, rationale, decided_at}} for a run."""
+    p = _disposition_path(run_id_str)
+    if not p.exists():
+        return {}
+    try:
+        return json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def _save_dispositions(run_id_str: str, dispositions: dict) -> None:
+    p = _disposition_path(run_id_str)
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(json.dumps(dispositions, indent=2, default=str, ensure_ascii=False), encoding="utf-8")
+
+
 def _scan_disk_results(run_id_str: str) -> list[dict]:
-    """Per-entity results for a disk-stored run. Empty if absent."""
+    """Per-entity results for a disk-stored run. Empty if absent.
+
+    Merges any persisted dispositions from output/runs/{run_id}/dispositions.json
+    (or output/dispositions.json for run_id=="default") so the front-end sees
+    recorded analyst decisions on first load.
+    """
     path = _RUNS_DIR / run_id_str / "results.json"
     if not path.exists():
         return []
     try:
-        return json.loads(path.read_text(encoding="utf-8"))
+        rows = json.loads(path.read_text(encoding="utf-8"))
     except Exception:
         return []
+
+    dispositions = _load_dispositions(run_id_str)
+    if not dispositions:
+        return rows
+    for row in rows:
+        eid = row.get("entity_id")
+        if eid and eid in dispositions:
+            row["disposition"] = dispositions[eid]
+    return rows
 
 
 # ── DB helpers ────────────────────────────────────────────────────────────────
@@ -266,9 +304,20 @@ def get_entity_result(run_id: str, entity_id: str):
     Customer payload for one entity: resolved + screening + disposition + sources.
 
     This is the per-entity briefing shape the front-end consumes for entity detail.
-    Accepts both integer IDs (seed/DB) and string run_ids (disk runs).
+    Accepts both integer IDs (seed/DB), string run_ids (disk runs), and the
+    sentinel string "default" (the seeded list_1 cache).
     """
-    # Disk runs first
+    # default = list_1 cache. No results.json exists here, so we return a thin
+    # record containing just entity_id + the disposition from disk (if any).
+    # The entity's risk / profile data is fetched separately via /tools/*.
+    if str(run_id) == "default":
+        disp = _load_dispositions("default").get(entity_id)
+        return {
+            "entity_id": entity_id,
+            "disposition": disp,  # null when no decision has been recorded
+        }
+
+    # Disk runs (uploaded) — _scan_disk_results merges in dispositions.json.
     for r in _scan_disk_results(str(run_id)):
         if r.get("entity_id") == entity_id:
             return r
@@ -358,6 +407,16 @@ def _format_entity_result(r: dict) -> dict:
     }
 
 
+@router.get("/dispositions/{run_id}")
+def list_dispositions(run_id: str):
+    """All persisted dispositions for a run, keyed by entity_id.
+
+    Used by the Compare reconciliation table to paint per-row status chips
+    without N round-trips. Returns {} when no decisions have been recorded.
+    """
+    return _load_dispositions(str(run_id))
+
+
 @router.post("/results/{run_id}/{entity_id}/disposition")
 def set_disposition(run_id: str, entity_id: str, req: DispositionRequest):
     """Record analyst decision on an entity result."""
@@ -413,13 +472,21 @@ def set_disposition(run_id: str, entity_id: str, req: DispositionRequest):
                 conn.close()
             raise HTTPException(status_code=500, detail=str(exc))
 
-    # JSON fallback: disposition not persisted without DB
-    return {
-        "ok": True,
-        "disposition": {
-            "status": req.status,
-            "reviewer": req.reviewer,
-            "rationale": req.rationale,
-            "note": "Disposition not persisted — DATABASE_URL not set.",
-        },
+    # Disk-stored runs (and any seed run when DB is absent) persist to
+    # output/runs/{run_id}/dispositions.json (or output/dispositions.json
+    # when run_id=="default"). Keyed by entity_id so the analyst can replace
+    # a prior decision with a new one in-place.
+    from datetime import datetime, timezone
+    store = _load_dispositions(run_id)
+    record = {
+        "status":     req.status,
+        "reviewer":   req.reviewer,
+        "rationale":  req.rationale,
+        "decided_at": datetime.now(timezone.utc).isoformat(),
     }
+    store[entity_id] = record
+    try:
+        _save_dispositions(run_id, store)
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=f"Could not persist disposition: {exc}")
+    return {"ok": True, "disposition": record}
