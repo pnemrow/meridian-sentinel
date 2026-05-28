@@ -1,4 +1,62 @@
-/* Meridian Sentinel — app shell, nav, routing
+/* Meridian Sentinel — app shell, nav, routing */
+
+// Default-entity resolver for in-app navigation that says "open an entity"
+// without specifying which one (e.g. the left-rail "Entities" step click and
+// the Entity-surface fallback when the URL is missing an entityId).
+//
+// Strategy:
+//   1. If we've already resolved a default for this runId in-session, return it.
+//   2. Otherwise call /tools/compare_ofac_vs_sayari?run_id=… and pick the
+//      first sanctioned/ownership-exposed row, falling back to first resolved.
+//   3. Hard fallback to Belorusskaya so callers always get *some* id.
+//
+// The cache is intentionally per-session — bookmarks persist via the URL, not
+// this lookup.
+
+window._SENTINEL_DEFAULT_ENTITY_CACHE = window._SENTINEL_DEFAULT_ENTITY_CACHE || {};
+const _HARDCODED_FALLBACK_ENTITY = 'BSsUPVlxsICOW4GCjb4fqQ';
+
+function _pickDefaultEntityFromRows(rows) {
+  const flagged = new Set(['both_catch', 'sayari_only', 'screen_ambiguous', 'matcher_miss']);
+  let row = (rows || []).find(r => r && r.entity_id && flagged.has(r.outcome));
+  if (!row) row = (rows || []).find(r => r && r.entity_id);
+  return row ? row.entity_id : null;
+}
+
+function defaultEntityIdSync(runId) {
+  const key = runId || '__default';
+  if (window._SENTINEL_DEFAULT_ENTITY_CACHE[key]) return window._SENTINEL_DEFAULT_ENTITY_CACHE[key];
+  // For the default run we already have compare rows on window — use them.
+  if (!runId && window.COMPARE_ROWS) {
+    const eid = _pickDefaultEntityFromRows(window.COMPARE_ROWS);
+    if (eid) { window._SENTINEL_DEFAULT_ENTITY_CACHE[key] = eid; return eid; }
+  }
+  return null;
+}
+
+async function openDefaultEntity(runId, openEntity) {
+  const cached = defaultEntityIdSync(runId);
+  if (cached) return openEntity(cached);
+  try {
+    const base = (typeof window !== 'undefined' && window.SENTINEL_API_BASE) || '';
+    const qs = runId
+      ? `?run_id=${encodeURIComponent(runId)}&threshold=0.85`
+      : '?threshold=0.85';
+    const resp = await fetch(`${base}/tools/compare_ofac_vs_sayari${qs}`);
+    if (resp.ok) {
+      const json = await resp.json();
+      const rows = (json.data && json.data.rows) || [];
+      const eid = _pickDefaultEntityFromRows(rows);
+      if (eid) {
+        window._SENTINEL_DEFAULT_ENTITY_CACHE[runId || '__default'] = eid;
+        return openEntity(eid);
+      }
+    }
+  } catch (_) { /* fall through */ }
+  openEntity(_HARDCODED_FALLBACK_ENTITY);
+}
+
+/* App shell, nav, routing
  *
  * Routing: URL-hash-driven so refreshes preserve state. Encodings:
  *   #/investigations              workflow home
@@ -170,7 +228,7 @@ function App() {
 
   return (
     <div style={{ display: 'grid', gridTemplateColumns: '232px 1fr', height: '100vh', background: 'var(--bg-primary)' }}>
-      <LeftRail route={route} go={go} openEntity={openEntity} />
+      <LeftRail route={route} go={go} openEntity={openEntity} runId={runId} />
       <div style={{ display: 'flex', flexDirection: 'column', minWidth: 0, height: '100vh', minHeight: 0 }}>
         <GlobalHeader runMode={runMode} setRunMode={setRunMode} route={route} go={go} runId={runId} signOut={signOut} />
         <main style={{ flex: 1, minWidth: 0, minHeight: 0, overflowY: 'auto', overflowX: 'hidden' }} data-screen-label={`${route.name}`}>
@@ -183,10 +241,18 @@ function App() {
 }
 
 // -------- Left rail --------
-function LeftRail({ route, go, openEntity }) {
+function LeftRail({ route, go, openEntity, runId }) {
   const insideInvestigation = ['upload', 'copilot', 'compare', 'entity'].includes(route.name);
-  // For the demo, the active investigation is always the hero (Q1 Vendor Onboarding)
-  const activeInvestigation = window.INVESTIGATIONS?.find(i => i.hero) || window.INVESTIGATIONS?.[0];
+  // Active investigation = the one matching the current runId; if no runId is
+  // set AND we're on an inside-investigation surface, fall back to the hero
+  // (the seeded "current" demo investigation). Otherwise nothing — we're not
+  // inside an investigation, so don't render the active-investigation card.
+  const activeInvestigation = useMemo(() => {
+    const list = window.INVESTIGATIONS || [];
+    if (runId) return list.find(i => String(i.id) === String(runId)) || null;
+    if (insideInvestigation) return list.find(i => i.hero) || list[0] || null;
+    return null;
+  }, [runId, insideInvestigation]);
 
   return (
     <aside style={{
@@ -214,7 +280,7 @@ function LeftRail({ route, go, openEntity }) {
       </div>
 
       {insideInvestigation
-        ? <InvestigationStepsNav route={route} go={go} openEntity={openEntity} investigation={activeInvestigation} />
+        ? <InvestigationStepsNav route={route} go={go} openEntity={openEntity} investigation={activeInvestigation} runId={runId} />
         : <HomeNav route={route} go={go} />}
 
       <div style={{ flex: 1 }} />
@@ -287,7 +353,7 @@ function HomeNav({ route, go }) {
 }
 
 // Inside-an-investigation nav: 4-step flow scoped to the active run.
-function InvestigationStepsNav({ route, go, openEntity, investigation }) {
+function InvestigationStepsNav({ route, go, openEntity, investigation, runId }) {
   const steps = [
     { key: 'upload',  label: 'Upload',   num: '1', desc: 'list intake' },
     { key: 'copilot', label: 'Co-Pilot', num: '2', desc: 'ask anything' },
@@ -332,7 +398,7 @@ function InvestigationStepsNav({ route, go, openEntity, investigation }) {
           const active = route.name === it.key;
           return (
             <button key={it.key} onClick={() => {
-              if (it.key === 'entity') openEntity('BSsUPVlxsICOW4GCjb4fqQ');
+              if (it.key === 'entity') openDefaultEntity(runId, openEntity);
               else go(it.key);
             }} style={{
               background: active ? 'rgba(201,169,97,0.08)' : 'transparent',
@@ -362,6 +428,51 @@ function InvestigationStepsNav({ route, go, openEntity, investigation }) {
   );
 }
 
+// -------- Active-run line (right of header "Active run" label) --------
+// Derived for both runId=null (default list_1) and runId=string (uploaded run).
+function ActiveRunHeader({ runId, onCustomRun }) {
+  const list = window.INVESTIGATIONS || [];
+  const inv = runId
+    ? list.find(i => String(i.id) === String(runId))
+    : (list.find(i => i.hero) || list[0]);
+  const summary = window.RUN_SUMMARY && window.RUN_SUMMARY.data;
+
+  // Display name: the investigation's own name takes priority over list_ref;
+  // last-resort fallback labels the run as "uploaded list" when runId is set
+  // and "list_1" otherwise (default cache).
+  const displayName = inv?.name || inv?.list_ref || (onCustomRun ? 'uploaded list' : 'list_1');
+
+  // Counts: prefer per-run /summary numbers; fall back to /api/investigations
+  // counts (real per-run data from the backend, not fixtures).
+  const total    = !onCustomRun && summary?.total_input != null ? summary.total_input : (inv?.counts?.total ?? inv?.entity_count);
+  const resolved = !onCustomRun && summary?.resolved   != null ? summary.resolved   : (inv?.counts?.total ?? inv?.entity_count);
+  const date     = inv?.created_at ? String(inv.created_at).slice(0, 10) : '';
+
+  return (
+    <div style={{ fontSize: 13, color: 'var(--text-secondary)', display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
+      <span className="mono" style={{ color: onCustomRun ? 'var(--accent)' : 'var(--text-primary)' }}>
+        {displayName}
+      </span>
+      {total != null ? <>
+        <span className="muted">·</span>
+        <span><span className="mono" style={{ color: 'var(--text-primary)' }}>{total}</span> entities</span>
+      </> : null}
+      {resolved != null && resolved !== total ? <>
+        <span className="muted">·</span>
+        <span><span className="mono" style={{ color: 'var(--risk-low)' }}>{resolved}</span> resolved</span>
+      </> : null}
+      {date ? <>
+        <span className="muted">·</span>
+        <span className="mono muted" style={{ fontSize: 12 }}>{date}</span>
+      </> : null}
+      {onCustomRun && runId ? <>
+        <span className="muted">·</span>
+        <span className="mono" style={{ fontSize: 11, color: 'var(--text-muted)' }} title={runId}>{runId.slice(0, 22)}…</span>
+      </> : null}
+    </div>
+  );
+}
+
 // -------- Global header --------
 function GlobalHeader({ runMode, setRunMode, route, go, runId, signOut }) {
   const showRunContext = route.name !== 'investigations' && route.name !== 'integrations';
@@ -381,25 +492,7 @@ function GlobalHeader({ runMode, setRunMode, route, go, runId, signOut }) {
             <div className="mono" style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: 1, textTransform: 'uppercase' }}>
               Active run
             </div>
-            <div style={{ fontSize: 13, color: 'var(--text-secondary)', display: 'flex', gap: 12, alignItems: 'center' }}>
-              {onCustomRun ? (
-                <>
-                  <span className="mono" style={{ color: 'var(--accent)' }}>{runId}</span>
-                  <span className="muted">·</span>
-                  <span className="mono muted" style={{ fontSize: 12 }}>uploaded list</span>
-                </>
-              ) : (
-                <>
-                  <span className="mono" style={{ color: 'var(--text-primary)' }}>list_1</span>
-                  <span className="muted">·</span>
-                  <span><span className="mono" style={{ color: 'var(--text-primary)' }}>50</span> entities</span>
-                  <span className="muted">·</span>
-                  <span><span className="mono" style={{ color: 'var(--risk-low)' }}>49</span> resolved</span>
-                  <span className="muted">·</span>
-                  <span className="mono muted" style={{ fontSize: 12 }}>run 2026-05-27</span>
-                </>
-              )}
-            </div>
+            <ActiveRunHeader runId={runId} onCustomRun={onCustomRun} />
           </>
         ) : (
           <div className="mono" style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: 1, textTransform: 'uppercase' }}>
@@ -610,7 +703,9 @@ function Surfaces({ route, go, openEntity, runMode, runId, setRunId, onUploadCom
   if (route.name === 'entity') {
     return (
       <Entity
-        entityId={route.params.entityId || 'BSsUPVlxsICOW4GCjb4fqQ'}
+        entityId={route.params.entityId
+                   || defaultEntityIdSync(runId)
+                   || _HARDCODED_FALLBACK_ENTITY}
         trail={route.params.trail || []}
         runId={runId}
         onBack={() => go('compare', { focusEntityId: route.params.entityId })}

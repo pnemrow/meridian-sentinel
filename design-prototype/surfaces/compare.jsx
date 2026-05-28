@@ -127,7 +127,16 @@ function Compare({ onOpenEntity, focusEntityId, runId }) {
           <>
             <div style={{ marginBottom: 12 }}>
               <div className="mono" style={{ color: 'var(--text-muted)', fontSize: 11, letterSpacing: 1.4, textTransform: 'uppercase', marginBottom: 6 }}>
-                list_1 · threshold 0.85
+                {(() => {
+                  // Active investigation lookup — derive the kicker label from
+                  // the run we're looking at, not a hardcoded "list_1".
+                  const list = window.INVESTIGATIONS || [];
+                  const inv = runId
+                    ? list.find(i => String(i.id) === String(runId))
+                    : (list.find(i => i.hero) || list[0]);
+                  const label = inv?.name || inv?.list_ref || (runId ? 'uploaded list' : 'list_1');
+                  return `${label} · threshold 0.85`;
+                })()}
               </div>
               <div style={{ fontSize: 14, color: 'var(--text-secondary)' }}>
                 <span className="mono" style={{ color: 'var(--text-primary)' }}>{totalInput}</span> vendors ·{' '}
@@ -162,13 +171,26 @@ function Compare({ onOpenEntity, focusEntityId, runId }) {
 
       <SectionHeader
         kicker="Ownership-gap spotlight"
-        title="The 4 entities a name-screen can't catch"
+        title={gapRows.length === 0
+          ? "No ownership-gap findings in this run"
+          : `The ${gapRows.length} entit${gapRows.length === 1 ? 'y' : 'ies'} a name-screen can't catch`}
       />
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 16, marginBottom: 48 }}>
-        {gapRows.map((row, i) => (
-          <GapCard key={`${row.input_name}::${row.entity_id}`} row={row} marquee={i === 0} onOpen={() => onOpenEntity(row.entity_id)} />
-        ))}
-      </div>
+      {gapRows.length === 0 ? (
+        <div style={{
+          background: 'var(--bg-surface)', border: '1px solid var(--border-default)',
+          borderRadius: 6, padding: '20px 24px', marginBottom: 48,
+          fontSize: 13, color: 'var(--text-muted)', fontStyle: 'italic',
+        }}>
+          Every OFAC-exposed vendor in this run is caught by the name-screen directly.
+          No 50% rule or screen-ambiguous cases to investigate.
+        </div>
+      ) : (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 16, marginBottom: 48 }}>
+          {gapRows.map((row, i) => (
+            <GapCard key={`${row.input_name}::${row.entity_id}`} row={row} marquee={i === 0} onOpen={() => onOpenEntity(row.entity_id)} />
+          ))}
+        </div>
+      )}
 
       <SectionHeader
         kicker="Full reconciliation"
@@ -413,10 +435,11 @@ function GapCard({ row, marquee, onOpen }) {
           {row.ownership_factor}
         </div>
         <div style={{ fontSize: 12, color: 'var(--text-secondary)', lineHeight: 1.5 }}>
-          {marquee
-            ? <>5 sanctioned owners incl. <span style={{ color: 'var(--text-primary)' }}>Suleyman Kerimov</span>; name absent from SDN.</>
-            : (row.outcome === 'sayari_only' ? 'Not on SDN by name; ownership/control exposure.' : `Screen fired on "${row.ofac_match_name}" — a different SDN entity.`)
-          }
+          {row.outcome === 'sayari_only'
+            ? 'Not named on SDN; blocked by ownership/control exposure (OFAC 50% rule).'
+            : row.outcome === 'screen_ambiguous'
+              ? <>Screen fired on <span style={{ color: 'var(--text-primary)' }}>{row.ofac_match_name || 'a different SDN entity'}</span> — not this entity. Sayari confirms exposure via the ownership graph.</>
+              : 'Investigate via the ownership graph.'}
         </div>
       </div>
       <div style={{ display: 'flex', gap: 8, marginTop: 'auto', paddingTop: 8, justifyContent: 'space-between', alignItems: 'center' }}>

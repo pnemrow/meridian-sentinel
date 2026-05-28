@@ -363,7 +363,7 @@ def _sse(event: str, data: Any) -> str:
 
 
 @router.post("/{upload_id}/run")
-async def run_upload(upload_id: str):
+async def run_upload(upload_id: str, name: str | None = None):
     """
     Execute the engine on the upload's parsed rows. Returns SSE.
 
@@ -376,6 +376,11 @@ async def run_upload(upload_id: str):
     On completion, writes entities.csv + summary.json + results.json +
     investigation.json so /entities, /summary, /tools/compare_ofac_vs_sayari,
     and /api/investigations all serve the new run when called with ?run_id=.
+
+    Args:
+        upload_id:  the upload's transient id (from POST /uploads).
+        name:       optional analyst-chosen investigation name. Falls back to
+                    the original filename. Persisted into investigation.json.
     """
     upload = _uploads.get(upload_id)
     if upload is None:
@@ -562,8 +567,12 @@ async def run_upload(upload_id: str):
 
         # Investigation index entry — picked up by /api/investigations
         now = datetime.now(timezone.utc).isoformat()
+        chosen_name = (name or "").strip() or (
+            (upload.get("filename") or "uploaded file")
+        )
         investigation = {
             "id": run_id,
+            "name": chosen_name,
             "source": "upload",
             "source_detail": upload.get("filename") or "uploaded file",
             "status": "complete",

@@ -134,6 +134,8 @@ def _format_investigations(rows: list[dict]) -> list[dict]:
     return [
         {
             "id": r["id"],
+            "name": r.get("name") or r.get("list_ref") or r.get("source_detail"),
+            "list_ref": r.get("list_ref") or r.get("source_detail"),
             "source": r["source"],
             "source_detail": r.get("source_detail"),
             "status": r["status"],
@@ -147,6 +149,7 @@ def _format_investigations(rows: list[dict]) -> list[dict]:
                 "blocked": r.get("blocked_count", 0),
                 "pending": r.get("pending_count", 0),
             },
+            "ownership_gap_count": r.get("ownership_gap_count", 0),
         }
         for r in rows
     ]

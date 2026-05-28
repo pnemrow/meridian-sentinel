@@ -106,13 +106,17 @@ function Upload({ onRunComplete }) {
 
   // ── Run step ──────────────────────────────────────────────────────────────
 
-  const onRun = async () => {
+  const onRun = async (investigationName) => {
     if (!uploadResponse?.upload_id) return;
     setStep('running');
     setRunEvents([]);
     setErrorMsg(null);
     try {
-      const resp = await fetch(`${UPLOAD_API_BASE}/uploads/${uploadResponse.upload_id}/run`, { method: 'POST' });
+      // Send the analyst-chosen investigation name as a query param so the
+      // backend can write it into output/runs/{run_id}/investigation.json
+      // and surface it on the dashboard + sidebar without a follow-up call.
+      const qs = investigationName ? `?name=${encodeURIComponent(investigationName)}` : '';
+      const resp = await fetch(`${UPLOAD_API_BASE}/uploads/${uploadResponse.upload_id}/run${qs}`, { method: 'POST' });
       if (!resp.ok) throw new Error(`HTTP ${resp.status} from /uploads/{id}/run`);
       const reader = resp.body.getReader();
       const decoder = new TextDecoder();
@@ -345,6 +349,15 @@ function SheetPicker({ sheets, file, onPick, onBack }) {
 function MapAndPreview({ response, onRun, canRun }) {
   const mapping = response.column_mapping || {};
   const preview = response.preview || [];
+
+  // Investigation name: defaults to "<filename stem> · <sheet>" so it lands as
+  // a sensible label without manual typing. Editable inline before Run.
+  const _defaultName = (() => {
+    const stem = (response.filename || '').replace(/\.(xlsx|xls|csv)$/i, '').trim();
+    return stem ? `${stem} · ${response.sheet || ''}`.replace(/ · $/, '') : (response.sheet || 'New investigation');
+  })();
+  const [investigationName, setInvestigationName] = useState(_defaultName);
+
   return (
     <div>
       <div style={{
@@ -407,9 +420,38 @@ function MapAndPreview({ response, onRun, canRun }) {
         against the actual file headers.
       </div>
 
+      {/* Investigation name input — surfaces on the dashboard + sidebar after the run completes */}
+      <div style={{
+        background: 'var(--bg-primary)', border: '1px solid var(--border-subtle)',
+        borderRadius: 4, padding: '12px 14px', marginTop: 18,
+        display: 'flex', alignItems: 'center', gap: 14,
+      }}>
+        <div style={{ flex: '0 0 180px' }}>
+          <div className="mono" style={{ fontSize: 10, color: 'var(--text-muted)', letterSpacing: 1.2, textTransform: 'uppercase' }}>
+            Investigation name
+          </div>
+          <div className="muted" style={{ fontSize: 10, marginTop: 2, fontStyle: 'italic' }}>
+            shown on dashboard + sidebar
+          </div>
+        </div>
+        <input
+          value={investigationName}
+          onChange={(e) => setInvestigationName(e.target.value)}
+          maxLength={120}
+          style={{
+            flex: 1,
+            background: 'var(--bg-surface)',
+            border: '1px solid var(--border-default)',
+            borderRadius: 3, padding: '7px 10px',
+            fontSize: 13, color: 'var(--text-primary)',
+            fontFamily: 'var(--font-sans)', outline: 'none',
+          }}
+        />
+      </div>
+
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 18 }}>
         <span className="mono muted" style={{ fontSize: 11 }}>POST /uploads/{response.upload_id}/run</span>
-        <button onClick={onRun} disabled={!canRun} style={{
+        <button onClick={() => onRun(investigationName.trim() || _defaultName)} disabled={!canRun} style={{
           background: canRun ? 'var(--accent)' : 'transparent',
           color: canRun ? '#0A1628' : 'var(--text-muted)',
           border: canRun ? 0 : '1px solid var(--border-default)',
