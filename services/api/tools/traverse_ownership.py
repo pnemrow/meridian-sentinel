@@ -302,16 +302,43 @@ def traverse_ownership_tool(
     entity_id: str,
     depth: int = 3,
     direction: str = "upstream",
+    cache=None,  # Optional EntityCache — used for root-node label lookup
 ) -> CitedResult:
     """
     Walk the ownership graph for entity_id. Cache-first.
 
     Returns normalized {nodes, edges, sanction_hits, explored_count, shown, next, partial_results}.
     Reads from output/raw/traversal/{entity_id}.json when available; fetches live otherwise.
+
+    The optional `cache` arg (a run-scoped EntityCache) is used to look up the
+    root entity's label so the response carries a meaningful name for the
+    active run. Without it, the root node renders with label=None.
     """
     raw = _load_traversal_cache(entity_id)
     if raw is not None:
         graph = _transform_traversal(entity_id, raw)
+        # Fill the root-node label from the provided cache so a run_id-scoped
+        # call cites the right cache_file in the response source. Without this
+        # the root carries label=None and the UI shows just the entity_id.
+        if cache is not None and graph.get("nodes"):
+            try:
+                raw_entity = cache.get_entity_raw(entity_id)
+                if raw_entity:
+                    root_label = raw_entity.get("label") or raw_entity.get("translated_label")
+                    root_country = (raw_entity.get("countries") or [None])[0]
+                    for n in graph["nodes"]:
+                        if n.get("id") == entity_id:
+                            if not n.get("label"):
+                                n["label"] = root_label
+                            if not n.get("translated_label"):
+                                n["translated_label"] = raw_entity.get("translated_label")
+                            if not n.get("country"):
+                                n["country"] = root_country
+                            if not n.get("type"):
+                                n["type"] = raw_entity.get("type")
+                            break
+            except Exception:
+                pass
         return CitedResult(
             data=graph,
             source=SourceCitation(

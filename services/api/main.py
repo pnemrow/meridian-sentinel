@@ -199,6 +199,7 @@ class TraverseRequest(BaseModel):
     entity_id: str
     depth: int = 3
     direction: str = "upstream"
+    run_id: str | None = None
 
 
 class BriefingRequest(BaseModel):
@@ -357,12 +358,18 @@ def raw_profile(entity_id: str, run_id: str | None = None):
 
 
 @app.post("/tools/traverse_ownership")
-def traverse_ownership(req: TraverseRequest):
-    """Walk the ownership graph from entity_id. Cache-first for 8 marquee entities."""
+def traverse_ownership(req: TraverseRequest, run_id: str | None = None):
+    """Walk the ownership graph from entity_id. Cache-first for 8 marquee entities.
+
+    run_id (query or body) scopes the root-node label lookup to the run's
+    EntityCache so a run_id-qualified call always cites the right cache_file.
+    """
+    effective_run_id = req.run_id or run_id
     result = traverse_ownership_tool(
         entity_id=req.entity_id,
         depth=req.depth,
         direction=req.direction,
+        cache=_get_cache_for_run(effective_run_id),
     )
     return _result(result)
 

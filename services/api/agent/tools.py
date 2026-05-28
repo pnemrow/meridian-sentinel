@@ -197,6 +197,7 @@ def execute_tool(
             r = traverse_ownership_tool(
                 entity_id=inputs["entity_id"],
                 depth=int(inputs.get("depth", 3)),
+                cache=cache,  # honors the active run scope
             )
         elif name == "screen_ofac":
             r = screen_ofac_tool(

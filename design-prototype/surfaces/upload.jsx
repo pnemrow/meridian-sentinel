@@ -87,11 +87,11 @@ function Upload({ onRunComplete }) {
     await postUpload(file, sheetName);
   };
 
-  const handleSelectSeeded = () => {
-    // Shortcut path — no upload, jump straight to the existing list_1 demo.
-    setRunResult({ run_id: 'default', matches_seeded: true, resolved: 49, total: 50 });
-    setStep('resolved');
-  };
+  // The "Use the seeded list" shortcut was removed in Pass 2 — it bypassed
+  // the upload flow and hardcoded {resolved: 49, total: 50}. The seeded path
+  // now goes through the real upload: postUpload's matches_seeded detection
+  // recognises list_1 by content hash and gives the same instant-cached
+  // result, but honestly through the same SSE pipeline.
 
   // ── Drag / drop ───────────────────────────────────────────────────────────
 
@@ -194,7 +194,6 @@ function Upload({ onRunComplete }) {
           ? <SheetPicker sheets={sheets} file={file} onPick={handleSheetPicked} onBack={() => setStep('source')} />
           : <SourcePicker
               onBrowse={openFilePicker}
-              onSeeded={handleSelectSeeded}
               dragOver={dragOver}
               onDragOver={onDragOver}
               onDragLeave={onDragLeave}
@@ -259,48 +258,29 @@ function StepCard({ num, label, active, done, disabled, children }) {
 
 // ── Source / drop zone ──────────────────────────────────────────────────────
 
-function SourcePicker({ onBrowse, onSeeded, dragOver, onDragOver, onDragLeave, onDrop }) {
+function SourcePicker({ onBrowse, dragOver, onDragOver, onDragLeave, onDrop }) {
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
-      <div
-        onClick={onBrowse}
-        onDragOver={onDragOver}
-        onDragLeave={onDragLeave}
-        onDrop={onDrop}
-        className="clickable"
-        style={{
-          border: `1.5px dashed ${dragOver ? 'var(--accent)' : 'var(--border-default)'}`,
-          background: dragOver ? 'rgba(201,169,97,0.06)' : 'var(--bg-primary)',
-          borderRadius: 4,
-          padding: '32px 24px',
-          textAlign: 'center',
-          transition: 'border-color 120ms, background 120ms',
-        }}>
-        <div className="mono" style={{ fontSize: 24, color: dragOver ? 'var(--accent)' : 'var(--text-muted)', marginBottom: 10 }}>⬆</div>
-        <div style={{ fontSize: 14, color: 'var(--text-secondary)', marginBottom: 6 }}>
-          Drop an <span className="mono">.xlsx</span> or <span className="mono">.csv</span> file
-        </div>
-        <div className="muted" style={{ fontSize: 12 }}>or click to browse</div>
-      </div>
-      <div onClick={onSeeded} className="clickable" style={{
-        border: '1px solid var(--accent-dim)',
-        background: 'linear-gradient(180deg, rgba(201,169,97,0.08), rgba(201,169,97,0.01))',
+    <div
+      onClick={onBrowse}
+      onDragOver={onDragOver}
+      onDragLeave={onDragLeave}
+      onDrop={onDrop}
+      className="clickable"
+      style={{
+        border: `1.5px dashed ${dragOver ? 'var(--accent)' : 'var(--border-default)'}`,
+        background: dragOver ? 'rgba(201,169,97,0.06)' : 'var(--bg-primary)',
         borderRadius: 4,
-        padding: '24px 22px',
-        display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
+        padding: '40px 24px',
+        textAlign: 'center',
+        transition: 'border-color 120ms, background 120ms',
       }}>
-        <div>
-          <div className="mono" style={{ fontSize: 11, color: 'var(--accent)', letterSpacing: 1.2, textTransform: 'uppercase', marginBottom: 8 }}>
-            ▸ Use the seeded list
-          </div>
-          <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 6 }}>list_1 · 50 entities</div>
-          <div style={{ fontSize: 12, color: 'var(--text-secondary)', lineHeight: 1.5 }}>
-            A real vendor list captured from a prior screening run. Resolves instantly from cache.
-          </div>
-        </div>
-        <div style={{ marginTop: 14, display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: 6, color: 'var(--accent)', fontSize: 13 }}>
-          Load <span style={{ fontFamily: 'var(--font-mono)' }}>→</span>
-        </div>
+      <div className="mono" style={{ fontSize: 28, color: dragOver ? 'var(--accent)' : 'var(--text-muted)', marginBottom: 12 }}>⬆</div>
+      <div style={{ fontSize: 14, color: 'var(--text-secondary)', marginBottom: 6 }}>
+        Drop an <span className="mono">.xlsx</span> or <span className="mono">.csv</span> file
+      </div>
+      <div className="muted" style={{ fontSize: 12 }}>or click to browse</div>
+      <div className="muted" style={{ fontSize: 11, fontStyle: 'italic', marginTop: 14, maxWidth: 460, marginLeft: 'auto', marginRight: 'auto' }}>
+        Re-uploading the seeded list_1.xlsx is recognised by content hash and short-circuits to the verified cached results.
       </div>
     </div>
   );
@@ -570,7 +550,12 @@ function RunningState({ events, total }) {
 function ResolvedSummary({ runResult, uploadResponse, onContinue }) {
   const matchedSeeded = !!runResult?.matches_seeded;
   const resolved = runResult?.resolved ?? 0;
-  const total = runResult?.total ?? uploadResponse?.total_rows ?? 0;
+  // total = parsed-rows that the engine actually attempted to resolve.
+  // The full sheet may have had more rows — blank-name rows are dropped
+  // at parse time (Pass 1 confusion: a 52-row sheet showed "48 of 48").
+  const parsed = runResult?.total ?? uploadResponse?.total_rows ?? 0;
+  const skipped = uploadResponse?.skipped_rows ?? 0;
+  const inputRows = parsed + skipped;
   const sanctioned = runResult?.sanctioned_count;
 
   return (
@@ -590,12 +575,24 @@ function ResolvedSummary({ runResult, uploadResponse, onContinue }) {
           </div>
         </div>
       ) : (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, marginBottom: 18 }}>
-          <Stat label="rows" value={total} mono />
-          <Stat label="resolved" value={resolved} mono accent />
-          <Stat label="unresolved" value={total - resolved} mono />
-          <Stat label="sanctioned" value={sanctioned ?? '—'} mono risk={sanctioned ? 'critical' : null} />
-        </div>
+        <>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12, marginBottom: 8 }}>
+            <Stat label="input rows" value={inputRows} mono />
+            <Stat label="parsed"     value={parsed} mono />
+            <Stat label="resolved"   value={resolved} mono accent />
+          </div>
+          {skipped > 0 ? (
+            <div className="muted" style={{ fontSize: 11, fontStyle: 'italic', marginBottom: 14, paddingLeft: 4 }}>
+              <span className="mono">{skipped}</span> row{skipped === 1 ? '' : 's'} skipped (blank name)
+            </div>
+          ) : <div style={{ marginBottom: 14 }} />}
+          {sanctioned != null ? (
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 12, marginBottom: 18 }}>
+              <Stat label="unresolved" value={parsed - resolved} mono />
+              <Stat label="sanctioned" value={sanctioned} mono risk={sanctioned ? 'critical' : null} />
+            </div>
+          ) : null}
+        </>
       )}
 
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
