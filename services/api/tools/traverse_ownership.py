@@ -40,6 +40,74 @@ from packages.engine import (
 _TRAVERSAL_DIR = _REPO / "output" / "raw" / "traversal"
 
 
+# ── Shared node/edge absorbers ───────────────────────────────────────────────
+# The cached UBO JSON and the live Sayari traversal API return the same nested
+# shape: `data[].path[].entity` walking from root toward a `target` at the end.
+# Both `_transform_traversal` (cache) and `_absorb_live` (live API) use the
+# same step-by-step walker so they stay in lockstep.
+
+def _absorb_path_step(step: dict, prev_id: str,
+                      nodes_by_id: dict, edges: list, edge_seen: set) -> str:
+    """
+    Absorb one entity in a traversal path: register the node, build the edge
+    `entity → prev_id` (entity is the owner of prev_id). Returns the entity_id
+    so the caller can advance `prev_id` for the next step.
+
+    Returns prev_id unchanged if the step is unusable (no entity id).
+    """
+    ent = step.get("entity") or {}
+    ent_id = ent.get("id") or ""
+    if not ent_id:
+        return prev_id
+
+    if ent_id not in nodes_by_id:
+        countries = ent.get("countries") or []
+        nodes_by_id[ent_id] = {
+            "id": ent_id,
+            "label": ent.get("label") or ent.get("translated_label"),
+            "translated_label": ent.get("translated_label"),
+            "type": ent.get("type"),
+            "country": countries[0] if countries else None,
+            "sanctioned": ent.get("sanctioned"),
+            "pep": ent.get("pep"),
+        }
+
+    field = step.get("field") or "has_shareholder"
+    rel_data = (step.get("relationships") or {}).get(field) or {}
+
+    edge_key = (ent_id, prev_id)
+    if edge_key not in edge_seen:
+        edges.append({
+            "source": ent_id,
+            "target": prev_id,
+            "relationship": field,
+            "percentage": rel_data.get("most_recent_percentage"),
+            "former": bool(rel_data.get("former", False)),
+            "last_observed": rel_data.get("last_observed"),
+        })
+        edge_seen.add(edge_key)
+    return ent_id
+
+
+def _absorb_target(target: dict, nodes_by_id: dict) -> None:
+    """Register the path's `target` node (often == path[-1].entity; dedupe by id)."""
+    if not isinstance(target, dict):
+        return
+    t_id = target.get("id") or ""
+    if not t_id or t_id in nodes_by_id:
+        return
+    countries = target.get("countries") or []
+    nodes_by_id[t_id] = {
+        "id": t_id,
+        "label": target.get("label") or target.get("translated_label"),
+        "translated_label": target.get("translated_label"),
+        "type": target.get("type"),
+        "country": countries[0] if countries else None,
+        "sanctioned": target.get("sanctioned"),
+        "pep": target.get("pep"),
+    }
+
+
 # ── Cache-based transform ─────────────────────────────────────────────────────
 
 def _load_traversal_cache(entity_id: str) -> dict | None:
@@ -85,65 +153,10 @@ def _transform_traversal(root_id: str, traversal_data: dict) -> dict:
     items = traversal_data.get("data", [])
 
     for item in items:
-        path_steps: list[dict] = item.get("path", [])
-
         prev_id = root_id
-        for step in path_steps:
-            ent: dict = step.get("entity") or {}
-            ent_id: str = ent.get("id") or ""
-            if not ent_id:
-                continue
-
-            # Add/update node
-            if ent_id not in nodes_by_id:
-                countries = ent.get("countries") or []
-                nodes_by_id[ent_id] = {
-                    "id": ent_id,
-                    "label": ent.get("label") or ent.get("translated_label"),
-                    "translated_label": ent.get("translated_label"),
-                    "type": ent.get("type"),
-                    "country": countries[0] if countries else None,
-                    "sanctioned": ent.get("sanctioned"),
-                    "pep": ent.get("pep"),
-                }
-
-            # Build edge: ent_id → prev_id (ent_id is owner of prev_id)
-            field: str = step.get("field") or "has_shareholder"
-            rels: dict = step.get("relationships") or {}
-            rel_data: dict = rels.get(field) or {}
-            pct = rel_data.get("most_recent_percentage")
-            former = bool(rel_data.get("former", False))
-            last_observed = rel_data.get("last_observed")
-
-            edge_key = (ent_id, prev_id)
-            if edge_key not in edge_seen:
-                edges.append({
-                    "source": ent_id,
-                    "target": prev_id,
-                    "relationship": field,
-                    "percentage": pct,
-                    "former": former,
-                    "last_observed": last_observed,
-                })
-                edge_seen.add(edge_key)
-
-            prev_id = ent_id
-
-        # Also process target (may be same as path[-1].entity; dedup handles it)
-        target: dict = item.get("target") or {}
-        if isinstance(target, dict):
-            t_id = target.get("id") or ""
-            if t_id and t_id not in nodes_by_id:
-                countries = target.get("countries") or []
-                nodes_by_id[t_id] = {
-                    "id": t_id,
-                    "label": target.get("label") or target.get("translated_label"),
-                    "translated_label": target.get("translated_label"),
-                    "type": target.get("type"),
-                    "country": countries[0] if countries else None,
-                    "sanctioned": target.get("sanctioned"),
-                    "pep": target.get("pep"),
-                }
+        for step in item.get("path", []) or []:
+            prev_id = _absorb_path_step(step, prev_id, nodes_by_id, edges, edge_seen)
+        _absorb_target(item.get("target"), nodes_by_id)
 
     root_node = nodes_by_id.get(root_id, {})
     sanction_hits = [
@@ -168,50 +181,24 @@ def _transform_traversal(root_id: str, traversal_data: dict) -> dict:
 
 def _absorb_live(payload: dict, root_id: str, is_upstream: bool,
                  nodes_by_id: dict, edges: list, edge_seen: set) -> None:
-    """Extract nodes/edges from a live Sayari traversal/ownership API response."""
-    data = payload.get("data") or []
-    for rel in data:
-        target = rel.get("target") or {}
-        source = rel.get("source") or {}
-        if isinstance(target, str):
-            target = {"id": target}
-        if isinstance(source, str):
-            source = {"id": source}
-        rel_type = rel.get("type") or rel.get("relationship") or ""
-        pct = rel.get("percentage") or rel.get("ownership_percentage")
-        try:
-            pct_f = float(pct) if pct is not None else None
-        except (TypeError, ValueError):
-            pct_f = None
+    """Extract nodes/edges from a live Sayari traversal/ownership API response.
 
-        tgt_id = target.get("id") or target.get("entity_id") or ""
-        src_id = source.get("id") or source.get("entity_id") or root_id
+    The live API returns the same nested `data[].path[].entity` shape as the
+    cached JSON — earlier versions of this function assumed a flat
+    `data[].target / source` shape, which is why live-fetched ownership graphs
+    rendered with only the root node. Now mirrors `_transform_traversal` via
+    the shared `_absorb_path_step` / `_absorb_target` helpers.
 
-        if tgt_id and tgt_id not in nodes_by_id:
-            countries = target.get("countries") or []
-            nodes_by_id[tgt_id] = {
-                "id": tgt_id,
-                "label": target.get("label") or target.get("name") or "",
-                "translated_label": target.get("translated_label"),
-                "type": target.get("type"),
-                "country": countries[0] if countries else None,
-                "sanctioned": target.get("sanctioned"),
-                "pep": target.get("pep"),
-            }
-        if tgt_id and src_id:
-            src_node = tgt_id if is_upstream else src_id
-            tgt_node = src_id if is_upstream else tgt_id
-            edge_key = (src_node, tgt_node)
-            if edge_key not in edge_seen:
-                edges.append({
-                    "source": src_node,
-                    "target": tgt_node,
-                    "relationship": rel_type or None,
-                    "percentage": pct_f,
-                    "former": False,
-                    "last_observed": None,
-                })
-                edge_seen.add(edge_key)
+    `is_upstream` is kept in the signature for call-site compatibility; the
+    walker already produces owner→owned edges, so upstream vs downstream is
+    just a matter of which Sayari endpoint the caller queried.
+    """
+    items = payload.get("data") or []
+    for item in items:
+        prev_id = root_id
+        for step in item.get("path", []) or []:
+            prev_id = _absorb_path_step(step, prev_id, nodes_by_id, edges, edge_seen)
+        _absorb_target(item.get("target"), nodes_by_id)
 
 
 def _live_traversal(entity_id: str, depth: int, direction: str) -> CitedResult:
@@ -238,11 +225,16 @@ def _live_traversal(entity_id: str, depth: int, direction: str) -> CitedResult:
                                   api_endpoint="N/A — SAYARI_CLIENT_ID not set"),
         )
 
+    # Hold the raw Sayari payload so we can persist it verbatim on success —
+    # that way the next call cache-hits via _transform_traversal exactly the
+    # same way as the pre-fetched marquee entities.
+    raw_upstream_payload: dict | None = None
+
     try:
         if direction in ("upstream", "both"):
-            payload = to_dict(client.traversal.ubo(id=entity_id, limit=50, max_depth=depth))
-            explored_count = payload.get("explored_count")
-            _absorb_live(payload, entity_id, True, nodes_by_id, edges, edge_seen)
+            raw_upstream_payload = to_dict(client.traversal.ubo(id=entity_id, limit=50, max_depth=depth))
+            explored_count = raw_upstream_payload.get("explored_count")
+            _absorb_live(raw_upstream_payload, entity_id, True, nodes_by_id, edges, edge_seen)
         if direction in ("downstream", "both"):
             try:
                 payload = to_dict(client.traversal.ownership(id=entity_id, limit=50, max_depth=depth))
@@ -262,14 +254,20 @@ def _live_traversal(entity_id: str, depth: int, direction: str) -> CitedResult:
                                   api_endpoint=f"GET /v1/traversal/ubo?id={entity_id}"),
         )
 
-    # Cache result for future use
-    _TRAVERSAL_DIR.mkdir(parents=True, exist_ok=True)
-    cache_path = _TRAVERSAL_DIR / f"{entity_id}.json"
-    try:
-        cache_path.write_text(json.dumps({"data": edges, "explored_count": explored_count},
-                                         default=str), encoding="utf-8")
-    except Exception:
-        pass
+    # Persist the RAW Sayari upstream payload (the path-nested shape) so the
+    # next call cache-hits via _transform_traversal and produces the same
+    # nodes/edges. Previous versions wrote the *normalised* edges array under
+    # the "data" key, which then failed to re-parse via the path walker.
+    if raw_upstream_payload is not None:
+        _TRAVERSAL_DIR.mkdir(parents=True, exist_ok=True)
+        cache_path = _TRAVERSAL_DIR / f"{entity_id}.json"
+        try:
+            cache_path.write_text(
+                json.dumps(raw_upstream_payload, default=str, ensure_ascii=False),
+                encoding="utf-8",
+            )
+        except Exception:
+            pass
 
     sanction_hits = [
         {"id": n["id"], "label": n.get("label")}

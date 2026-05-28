@@ -375,7 +375,9 @@ function OwnershipGraph({ entityId, onOpenEntity, graphData, trail, currentLabel
         <span>⚠</span>
         <span>
           <span className="mono">{(totalPaths || 0).toLocaleString()}</span> ownership paths in this network ·
-          showing the <span className="mono">{riskTouchingEdgeCount.toLocaleString()}</span> that touch a sanctioned or PEP entity
+          {riskFilter === 'all'
+            ? <> showing all <span className="mono">{visibleEdges.length.toLocaleString()}</span></>
+            : <> showing the <span className="mono">{riskTouchingEdgeCount.toLocaleString()}</span> that touch a sanctioned or PEP entity</>}
           {riskFilter === 'all' && clusterCount > 0
             ? <> · <span style={{ color: 'var(--text-secondary)' }}>+{clusterCount} non-risk direct owners clustered</span></>
             : null}
