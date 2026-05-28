@@ -12,7 +12,8 @@
       "cleared_count": 4,
       "escalated_count": 2,
       "blocked_count": 40,
-      "pending_count": 3
+      "pending_count": 3,
+      "ownership_gap_count": 4
     },
     {
       "id": 2,
@@ -26,7 +27,8 @@
       "cleared_count": 0,
       "escalated_count": 0,
       "blocked_count": 0,
-      "pending_count": 0
+      "pending_count": 0,
+      "ownership_gap_count": 0
     },
     {
       "id": 3,
@@ -40,7 +42,8 @@
       "cleared_count": 2,
       "escalated_count": 2,
       "blocked_count": 4,
-      "pending_count": 4
+      "pending_count": 4,
+      "ownership_gap_count": 0
     },
     {
       "id": 4,
@@ -54,7 +57,8 @@
       "cleared_count": 10,
       "escalated_count": 3,
       "blocked_count": 5,
-      "pending_count": 13
+      "pending_count": 13,
+      "ownership_gap_count": 0
     }
   ],
   "entity_results": [

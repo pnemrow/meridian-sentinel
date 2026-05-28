@@ -555,6 +555,29 @@ async def run_upload(upload_id: str, name: str | None = None):
         cache = EntityCache(str(run_dir))
         profiles = cache.all_profiles()
         summary = build_summary(profiles)
+
+        # Compute the ownership-gap count from this run's compare summary, so
+        # the dashboard KPI ("ownership-gap findings") lights up without the
+        # client having to recompute it. The matcher comes from the main app's
+        # global (loaded once at startup). If the cold-start race leaves it
+        # unloaded, fall back to 0 rather than blocking the run on it.
+        ownership_gap = 0
+        try:
+            from services.api.main import _get_ofac
+            matcher = _get_ofac()
+            if matcher is None:
+                log.warning("OFAC matcher not ready when computing ownership_gap_count for %s — defaulting to 0", run_id)
+            else:
+                from services.api.tools.compare_ofac_vs_sayari import compare_ofac_vs_sayari_tool
+                cmp_data = compare_ofac_vs_sayari_tool(cache=cache, ofac_matcher=matcher, threshold=0.85).data
+                cmp_summary = cmp_data.get("summary") or {}
+                ownership_gap = int((cmp_summary.get("sayari_only") or 0)
+                                    + (cmp_summary.get("screen_ambiguous") or 0))
+        except Exception as exc:
+            log.warning("ownership_gap_count compute failed for %s: %s — defaulting to 0", run_id, exc)
+
+        # Persist gap on summary.json too so future reads don't recompute.
+        summary["ownership_gap_count"] = ownership_gap
         (run_dir / "summary.json").write_text(
             json.dumps(summary, indent=2, default=str, ensure_ascii=False), encoding="utf-8"
         )
@@ -584,6 +607,7 @@ async def run_upload(upload_id: str, name: str | None = None):
             "escalated_count": 0,
             "blocked_count": 0,
             "pending_count": summary.get("resolved", 0),
+            "ownership_gap_count": ownership_gap,
         }
         (run_dir / "investigation.json").write_text(
             json.dumps(investigation, indent=2, default=str, ensure_ascii=False), encoding="utf-8"
