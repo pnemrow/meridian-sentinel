@@ -11,6 +11,14 @@ function Compare({ onOpenEntity, focusEntityId, runId }) {
   // Disposition map keyed by entity_id — fetched from /api/dispositions/{run_id}
   // so the reconciliation table paints persisted decisions without window state.
   const [dispositions, setDispositions] = useState({});
+  // Hooks below USED to live after the loading/error early-returns at lines
+  // ~51-68, which violated React Rules-of-Hooks: the loading render ran 4
+  // hooks while the post-load render ran 7, and React silently blanked the
+  // component on the transition. Hoisted up here so the hook count is
+  // identical on every render path.
+  const [filterOutcome, setFilterOutcome] = useState(null);
+  const [expandedRowId, setExpandedRowId] = useState(null);
+  const [highlightId, setHighlightId] = useState(null);
 
   // Per-run dispositions — reload whenever the active runId changes.
   useEffect(() => {
@@ -45,36 +53,17 @@ function Compare({ onOpenEntity, focusEntityId, runId }) {
     return () => { cancelled = true; };
   }, [runId]);
 
-  // While a per-run fetch is in flight, show a quiet loading state instead
-  // of falling through to window.COMPARE_RESULT (which is list_1 — that'd
-  // flash the wrong data).
-  if (runId && !perRunResult && !perRunError) {
-    return (
-      <div style={{ padding: '32px 40px', color: 'var(--text-muted)', fontSize: 13 }}>
-        <span className="pulse mono" style={{ color: 'var(--accent)' }}>●</span>{' '}
-        Loading compare for <span className="mono" style={{ color: 'var(--text-primary)' }}>{runId}</span>…
-        <div className="mono muted" style={{ fontSize: 11, marginTop: 6 }}>
-          GET /tools/compare_ofac_vs_sayari?run_id={runId}
-        </div>
-      </div>
-    );
-  }
-  if (runId && perRunError) {
-    return (
-      <div style={{ padding: '32px 40px', color: 'var(--risk-critical)', fontSize: 13 }}>
-        Failed to load compare for run {runId}: {perRunError}
-      </div>
-    );
-  }
-
+  // Derive view data WITH null-tolerant guards so the useMemo / useEffect
+  // calls below run unconditionally on every render path (loading, error,
+  // or loaded). The early returns at the end of this block consume the
+  // values — they do NOT short-circuit hook execution.
   const result = perRunResult || window.COMPARE_RESULT;
-  const { rows, summary, ofac_fetched_at } = result.data;
+  const rows = result?.data?.rows || [];
+  const summary = result?.data?.summary || {};
+  const ofac_fetched_at = result?.data?.ofac_fetched_at;
   // Make the per-run /summary available to the top header line (read inside
   // the existing IIFE below) without leaking into window.RUN_SUMMARY.
   const localRunSummary = perRunSummary;
-  const [filterOutcome, setFilterOutcome] = useState(null);
-  const [expandedRowId, setExpandedRowId] = useState(null);
-  const [highlightId, setHighlightId] = useState(null);
 
   const gapRows = useMemo(
     () => rows.filter(r => r.outcome === 'sayari_only' || r.outcome === 'screen_ambiguous'),
@@ -113,6 +102,38 @@ function Compare({ onOpenEntity, focusEntityId, runId }) {
     const t2 = setTimeout(() => setHighlightId(null), 1800);
     return () => { clearTimeout(t); clearTimeout(t2); };
   }, [focusEntityId]);
+
+  // ── Early returns AFTER all hooks ────────────────────────────────────────
+  // While a per-run fetch is in flight, show a quiet loading state instead
+  // of falling through to window.COMPARE_RESULT (which is list_1 — that'd
+  // flash the wrong data).
+  if (runId && !perRunResult && !perRunError) {
+    return (
+      <div style={{ padding: '32px 40px', color: 'var(--text-muted)', fontSize: 13 }}>
+        <span className="pulse mono" style={{ color: 'var(--accent)' }}>●</span>{' '}
+        Loading compare for <span className="mono" style={{ color: 'var(--text-primary)' }}>{runId}</span>…
+        <div className="mono muted" style={{ fontSize: 11, marginTop: 6 }}>
+          GET /tools/compare_ofac_vs_sayari?run_id={runId}
+        </div>
+      </div>
+    );
+  }
+  if (runId && perRunError) {
+    return (
+      <div style={{ padding: '32px 40px', color: 'var(--risk-critical)', fontSize: 13 }}>
+        Failed to load compare for run {runId}: {perRunError}
+      </div>
+    );
+  }
+  if (!result) {
+    // No data yet AND no error AND no runId — happens transiently before
+    // window.COMPARE_RESULT loads. Render the same loading affordance.
+    return (
+      <div style={{ padding: '32px 40px', color: 'var(--text-muted)', fontSize: 13 }}>
+        <span className="pulse mono" style={{ color: 'var(--accent)' }}>●</span> Loading compare…
+      </div>
+    );
+  }
 
   const buckets = [
     { key: 'sayari_only',      count: summary.sayari_only },
