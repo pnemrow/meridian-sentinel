@@ -48,7 +48,14 @@ function CoPilot({ onOpenEntity, onOpenCompare, initialState, runMode, runId = n
         return [...prev.slice(0, -1), { ...last, segments: segs }];
       });
     } else if (ev.type === 'citation') {
-      setCitations(prev => ({ ...prev, [ev.data.ref]: ev.data }));
+      // Tool-use IDs from Anthropic (e.g. toolu_018HBjryvzsY7C8sc6RBvmqX) are
+      // 30+ char hex blobs. Map them to stable, sequential [1] [2] [3] … per
+      // assistant turn so the inline markers are readable instead of opaque.
+      setCitations(prev => {
+        if (prev[ev.data.ref]) return prev;
+        const displayRef = Object.values(prev).reduce((m, c) => Math.max(m, c.displayRef || 0), 0) + 1;
+        return { ...prev, [ev.data.ref]: { ...ev.data, displayRef } };
+      });
       setConversation(prev => {
         const last = prev[prev.length - 1];
         if (!last || last.role !== 'assistant') return prev;
@@ -362,15 +369,22 @@ function AnswerActions({ onOpenEntity, onOpenCompare }) {
 }
 
 function AssistantSegments({ segments, citations }) {
+  // white-space: pre-wrap preserves the newlines + double-newlines + ---
+  // separators the model emits, so the answer reads as paragraphs and lists
+  // instead of one wall of text. (Babel-standalone can't easily ship a
+  // markdown parser; this is the cheapest readability win.)
   return (
-    <span>
+    <span style={{ whiteSpace: 'pre-wrap' }}>
       {segments.map((s, i) => {
         if (s.type === 'text') return <span key={i}>{s.text}</span>;
         if (s.type === 'cite') {
           const c = citations[s.ref];
-          if (!c) return <sup key={i} className="mono" style={{ color: 'var(--accent)' }}>[{s.ref}]</sup>;
+          // Always prefer the sequential displayRef; the raw toolu_xxx id is
+          // never shown to the user.
+          const ref = c?.displayRef;
+          if (!c || ref == null) return null;
           return (
-            <CitedValue key={i} source={c.source} refNum={s.ref}>
+            <CitedValue key={i} source={c.source} refNum={ref}>
               <span style={{ display: 'none' }} />
             </CitedValue>
           );
