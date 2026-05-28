@@ -55,6 +55,46 @@ function computeNodeDepths(nodes, edges, rootId) {
   return depths;
 }
 
+// Auto-fit default depth. Pick the smallest N ∈ {1,2,3} such that:
+//   (i)  every sanctioned-OR-PEP node reachable anywhere in the cached
+//        traversal sits at depth ≤ N, OR
+//   (ii) bumping further would push the visible (sanctioned-only) node
+//        count over a 25-node readability envelope.
+// Applied once per entity at mount; the analyst overrides via the 1/2/3
+// selector. Generic — no per-entity hardcoding.
+const AUTOFIT_MAX_VISIBLE = 25;
+function computeAutoFitDepth(nodes, edges, rootId) {
+  if (!nodes || !nodes.length) return 1;
+  const depths = computeNodeDepths(nodes, edges, rootId);
+  const riskIds = nodes.filter(n => n.sanctioned || n.pep).map(n => n.id);
+
+  // Visible-at-N count under the *default* risk filter (sanctioned-only):
+  // root is always included; everything else must be sanctioned AND in depth.
+  const visibleCount = (N) => {
+    let c = 0;
+    for (const n of nodes) {
+      const d = depths.get(n.id);
+      if (d == null || d > N) continue;
+      if (n.id === rootId || n.sanctioned) c++;
+    }
+    return c;
+  };
+
+  // Are all sanctioned/PEP nodes (across the entire cache) reachable at depth ≤ N?
+  const allRiskCovered = (N) => riskIds.every(id => {
+    const d = depths.get(id);
+    return d != null && d <= N;
+  });
+
+  let N = 1;
+  while (N < 3) {
+    if (allRiskCovered(N)) break;          // (i) all risk surfaced — don't bump
+    if (visibleCount(N + 1) > AUTOFIT_MAX_VISIBLE) break;  // (ii) would exceed envelope
+    N += 1;
+  }
+  return N;
+}
+
 // ── Main component ────────────────────────────────────────────────────────
 
 const CLUSTER_ID = '__cluster_non_risk_owners';
@@ -75,18 +115,28 @@ function OwnershipGraph({ entityId, onOpenEntity, graphData, trail, currentLabel
   const { nodes: baseNodes, edges: baseEdges, explored_count, shown, sanction_hits } = graph.data;
 
   // ── State ────────────────────────────────────────────────────────────────
-  // Default: gap-collapsed. Sanctioned-only, depth 1.
+  // Default: gap-collapsed. Sanctioned-only filter; depth is auto-fit per
+  // entity on first render (see computeAutoFitDepth above).
+  const rootId = graph.data.root_entity_id;
   const [riskFilter, setRiskFilter] = useState('sanctioned');  // 'sanctioned' | 'sanctioned_pep' | 'all'
-  const [depth, setDepth] = useState(1);                       // 1 | 2 | 3
+  const [depth, setDepth] = useState(() => computeAutoFitDepth(baseNodes, baseEdges, rootId));
   const [nameQuery, setNameQuery] = useState('');
   const [hoverEdge, setHoverEdge] = useState(null);
   const [hoverNode, setHoverNode] = useState(null);
   const [focusNode, setFocusNode] = useState(null);
 
+  // Re-run auto-fit when the entity changes (e.g. user opens a different
+  // detail page and OwnershipGraph re-renders with a new graphData). The
+  // analyst's prior manual override on a different entity doesn't carry over.
+  useEffect(() => {
+    setDepth(computeAutoFitDepth(baseNodes, baseEdges, rootId));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [rootId]);
+
   // ── BFS depth map (memoized — depends only on the data) ──────────────────
   const depthMap = useMemo(
-    () => computeNodeDepths(baseNodes, baseEdges, graph.data.root_entity_id),
-    [baseNodes, baseEdges, graph.data.root_entity_id]
+    () => computeNodeDepths(baseNodes, baseEdges, rootId),
+    [baseNodes, baseEdges, rootId]
   );
 
   // ── Risk-passes test ─────────────────────────────────────────────────────
@@ -300,7 +350,10 @@ function OwnershipGraph({ entityId, onOpenEntity, graphData, trail, currentLabel
             fontFamily: 'var(--font-sans)', outline: 'none',
           }}
         />
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+        <div
+          style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}
+          title="Default depth chosen to surface every sanctioned-touching path; override to explore wider."
+        >
           <span className="mono" style={{ fontSize: 10, color: 'var(--text-muted)', letterSpacing: 1, textTransform: 'uppercase' }}>Depth</span>
           <div style={{ display: 'inline-flex', border: '1px solid var(--border-default)', borderRadius: 4, overflow: 'hidden' }}>
             {[1, 2, 3].map(d => (
