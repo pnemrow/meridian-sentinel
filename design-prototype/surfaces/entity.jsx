@@ -656,6 +656,7 @@ function LiveGraphFetcher({ entityId, entityName, onOpenEntity, trail, currentLa
       const nodes = (data.nodes || []).map(n => ({
         id: n.id || n.entity_id,
         label: n.label || n.name || (n.id || n.entity_id || '').slice(0,16),
+        translated_label: n.translated_label || null,
         type: n.type || 'company',
         country: n.country || (Array.isArray(n.countries) ? n.countries[0] : null),
         sanctioned: !!n.sanctioned,

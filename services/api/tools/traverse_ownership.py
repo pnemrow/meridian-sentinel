@@ -100,6 +100,7 @@ def _transform_traversal(root_id: str, traversal_data: dict) -> dict:
                 nodes_by_id[ent_id] = {
                     "id": ent_id,
                     "label": ent.get("label") or ent.get("translated_label"),
+                    "translated_label": ent.get("translated_label"),
                     "type": ent.get("type"),
                     "country": countries[0] if countries else None,
                     "sanctioned": ent.get("sanctioned"),
@@ -137,6 +138,7 @@ def _transform_traversal(root_id: str, traversal_data: dict) -> dict:
                 nodes_by_id[t_id] = {
                     "id": t_id,
                     "label": target.get("label") or target.get("translated_label"),
+                    "translated_label": target.get("translated_label"),
                     "type": target.get("type"),
                     "country": countries[0] if countries else None,
                     "sanctioned": target.get("sanctioned"),
@@ -190,6 +192,7 @@ def _absorb_live(payload: dict, root_id: str, is_upstream: bool,
             nodes_by_id[tgt_id] = {
                 "id": tgt_id,
                 "label": target.get("label") or target.get("name") or "",
+                "translated_label": target.get("translated_label"),
                 "type": target.get("type"),
                 "country": countries[0] if countries else None,
                 "sanctioned": target.get("sanctioned"),
