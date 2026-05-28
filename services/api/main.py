@@ -59,6 +59,7 @@ from services.api.tools.risk_summary import risk_summary_tool, list_risk_summary
 from services.api.tools.generate_briefing import generate_briefing_tool
 from services.api.ofac.matcher import OfacMatcher
 from services.api.routers.investigations import router as investigations_router
+from services.api.routers.uploads import router as uploads_router
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
 log = logging.getLogger("sentinel.api")
@@ -68,11 +69,42 @@ log = logging.getLogger("sentinel.api")
 _cache: EntityCache | None = None
 _ofac_matcher: OfacMatcher | None = None
 
+# Per-run EntityCache memoization. Keyed by run_id; value is an EntityCache
+# pointed at output/runs/{run_id}/. The default cache (list_1) is the global
+# `_cache` and is *not* keyed in here — it's served when run_id is empty.
+_run_caches: dict[str, EntityCache] = {}
+
 
 def _get_cache() -> EntityCache:
     if _cache is None:
         raise HTTPException(status_code=503, detail="Entity cache not ready")
     return _cache
+
+
+def _get_cache_for_run(run_id: str | None) -> EntityCache:
+    """
+    Return the EntityCache for a given run_id. When run_id is None / empty /
+    "default", returns the global default cache (list_1). Otherwise loads
+    (and memoizes) an EntityCache rooted at output/runs/{run_id}/.
+
+    A 404 is raised if the run directory does not exist — callers must have a
+    valid upload_id before hitting any read endpoint with run_id set.
+    """
+    if not run_id or run_id == "default":
+        return _get_cache()
+    if run_id in _run_caches:
+        return _run_caches[run_id]
+    run_dir = _REPO / "output" / "runs" / run_id
+    if not run_dir.exists() or not (run_dir / "entities.csv").exists():
+        raise HTTPException(status_code=404, detail=f"run_id not found: {run_id}")
+    cache = EntityCache(str(run_dir))
+    _run_caches[run_id] = cache
+    return cache
+
+
+def _invalidate_run_cache(run_id: str) -> None:
+    """Drop a memoized run cache (called after a run completes/updates on disk)."""
+    _run_caches.pop(run_id, None)
 
 
 def _get_ofac() -> OfacMatcher | None:
@@ -138,6 +170,7 @@ app.add_middleware(
 
 # ── Routers ───────────────────────────────────────────────────────────────────
 app.include_router(investigations_router)
+app.include_router(uploads_router)
 
 
 # ── Static front-end (design-prototype mounted at /ui/) ──────────────────────
@@ -272,7 +305,7 @@ async def agent_capture():
 # ── Tool endpoints ─────────────────────────────────────────────────────────────
 
 @app.post("/tools/resolve_entity")
-def resolve_entity(req: ResolveRequest):
+def resolve_entity(req: ResolveRequest, run_id: str | None = None):
     """Resolve a vendor name to Sayari entity candidates."""
     result = resolve_entity_tool(
         name=req.name,
@@ -280,27 +313,27 @@ def resolve_entity(req: ResolveRequest):
         address=req.address,
         identifier=req.identifier,
         limit=req.limit,
-        cache=_get_cache(),
+        cache=_get_cache_for_run(run_id),
     )
     return _result(result)
 
 
 @app.get("/tools/get_profile/{entity_id}")
-def get_profile(entity_id: str):
+def get_profile(entity_id: str, run_id: str | None = None):
     """Get full entity profile from cache or live API."""
-    result = get_profile_tool(entity_id=entity_id, cache=_get_cache())
+    result = get_profile_tool(entity_id=entity_id, cache=_get_cache_for_run(run_id))
     return _result(result)
 
 
 @app.get("/tools/raw_profile/{entity_id}")
-def raw_profile(entity_id: str):
+def raw_profile(entity_id: str, run_id: str | None = None):
     """
     Return the cached raw Sayari API response for an entity. Exposes the
     fields the Profile dataclass omits (identifiers, the source_count map,
     full risk metadata) so the front-end can render Identity Evidence and
     feed-broken-down Sources without inventing data.
     """
-    cache = _get_cache()
+    cache = _get_cache_for_run(run_id)
     try:
         raw = cache.get_entity_raw(entity_id)
     except (FileNotFoundError, KeyError):
@@ -342,10 +375,10 @@ def screen_ofac(name: str = Query(...), threshold: float = 0.85, limit: int = 5)
 
 
 @app.get("/tools/compare_ofac_vs_sayari")
-def compare_ofac_vs_sayari(threshold: float = 0.85):
+def compare_ofac_vs_sayari(threshold: float = 0.85, run_id: str | None = None):
     """Side-by-side OFAC name-screen vs Sayari for all cached entities."""
     result = compare_ofac_vs_sayari_tool(
-        cache=_get_cache(),
+        cache=_get_cache_for_run(run_id),
         ofac_matcher=_get_ofac(),
         threshold=threshold,
     )
@@ -353,34 +386,34 @@ def compare_ofac_vs_sayari(threshold: float = 0.85):
 
 
 @app.get("/tools/risk_summary/{entity_id}")
-def risk_summary(entity_id: str):
+def risk_summary(entity_id: str, run_id: str | None = None):
     """Structured risk summary for a single entity."""
-    result = risk_summary_tool(entity_id=entity_id, cache=_get_cache())
+    result = risk_summary_tool(entity_id=entity_id, cache=_get_cache_for_run(run_id))
     return _result(result)
 
 
 @app.get("/tools/risk_summary")
-def list_risk_summary():
+def list_risk_summary(run_id: str | None = None):
     """Aggregate risk summary for the full entity list."""
-    result = list_risk_summary_tool(cache=_get_cache())
+    result = list_risk_summary_tool(cache=_get_cache_for_run(run_id))
     return _result(result)
 
 
 @app.post("/tools/generate_briefing")
-def generate_briefing(req: BriefingRequest):
+def generate_briefing(req: BriefingRequest, run_id: str | None = None):
     """Render a compliance briefing (HTML; PDF if WeasyPrint installed)."""
-    result = generate_briefing_tool(entity_id=req.entity_id, cache=_get_cache())
+    result = generate_briefing_tool(entity_id=req.entity_id, cache=_get_cache_for_run(run_id))
     return _result(result)
 
 
 @app.get("/tools/generate_briefing/{entity_id}/download")
-def generate_briefing_download(entity_id: str):
+def generate_briefing_download(entity_id: str, run_id: str | None = None):
     """
     Stream the briefing back as an attachment for the browser to download.
     Returns application/pdf when WeasyPrint is available, text/html otherwise.
     The browser's filename is derived from the entity_id.
     """
-    result = generate_briefing_tool(entity_id=entity_id, cache=_get_cache())
+    result = generate_briefing_tool(entity_id=entity_id, cache=_get_cache_for_run(run_id))
     data = result.data
     if data.get("format") == "pdf":
         path = Path(data["pdf_path"])
@@ -401,10 +434,11 @@ def generate_briefing_download(entity_id: str):
 # ── Convenience data endpoints ────────────────────────────────────────────────
 
 @app.get("/entities")
-def list_entities():
+def list_entities(run_id: str | None = None):
     """List all cached entities (from entities.csv)."""
-    cache = _get_cache()
+    cache = _get_cache_for_run(run_id)
     profiles = cache.all_profiles()
+    base = f"output/runs/{run_id}" if run_id else "output"
     return {
         "count": len(profiles),
         "entities": [
@@ -421,24 +455,25 @@ def list_entities():
             for p in profiles
         ],
         "source": {
-            "cache_file": "output/entities.csv + output/raw/*.json",
+            "cache_file": f"{base}/entities.csv + {base}/raw/*.json",
             "api_endpoint": "cached GET /v1/entity/{id} responses",
         },
     }
 
 
 @app.get("/summary")
-def get_summary():
+def get_summary(run_id: str | None = None):
     """Macro-level risk summary for the full entity list."""
-    cache = _get_cache()
+    cache = _get_cache_for_run(run_id)
     summary = cache.get_summary()
     if summary is None:
         from packages.engine import build_summary
         summary = build_summary(cache.all_profiles())
+    base = f"output/runs/{run_id}" if run_id else "output"
     return {
         "data": summary,
         "source": {
-            "cache_file": "output/summary.json",
+            "cache_file": f"{base}/summary.json",
             "api_endpoint": "aggregated from cached GET /v1/entity/{id} responses",
         },
     }

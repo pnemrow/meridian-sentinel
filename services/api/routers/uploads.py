@@ -1,0 +1,658 @@
+"""
+Uploads router — turns the upload surface into a real screening pipeline.
+
+Endpoints:
+  POST /uploads                       — multipart .xlsx upload + sheet pick
+  POST /uploads/{upload_id}/run       — SSE stream that executes the engine
+
+Persistence layout for a completed run (mirrors output/ so the existing
+EntityCache and tools work unchanged when pointed at it):
+
+  output/runs/{run_id}/
+    raw/{entity_id}.json     — cached Sayari entity responses (one per resolve)
+    raw/row{n}_resolution.json — raw resolution responses (audit trail)
+    entities.csv             — input_name → entity_id index
+    summary.json             — macro summary (build_summary output)
+    results.json             — per-entity customer payload (for /api/results)
+    investigation.json       — index entry consumed by /api/investigations
+"""
+from __future__ import annotations
+
+import asyncio
+import csv
+import hashlib
+import io
+import json
+import logging
+import os
+import re
+import sys
+import time
+import uuid
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any, AsyncGenerator
+
+from fastapi import APIRouter, File, Form, HTTPException, UploadFile
+from fastapi.responses import StreamingResponse
+from pydantic import BaseModel
+
+_REPO = Path(__file__).resolve().parents[3]
+if str(_REPO) not in sys.path:
+    sys.path.insert(0, str(_REPO))
+
+from packages.engine import (
+    InputEntity,
+    build_client,
+    build_summary,
+    load_entities_from_xlsx,
+)
+from packages.engine.loader import _detect_columns, COLUMN_HINTS
+from packages.engine.profile import extract_profile, fetch_profile
+from packages.engine.resolve import resolve_with_fallback
+from packages.engine.helpers import to_dict
+
+log = logging.getLogger("sentinel.uploads")
+
+router = APIRouter(prefix="/uploads", tags=["uploads"])
+
+# ── Storage paths ────────────────────────────────────────────────────────────
+
+UPLOAD_TMP = Path("/tmp/sentinel-uploads")
+UPLOAD_TMP.mkdir(parents=True, exist_ok=True)
+RUNS_DIR = _REPO / "output" / "runs"
+RUNS_DIR.mkdir(parents=True, exist_ok=True)
+
+# Seed file (used to recognise list_1 by content hash)
+SEEDED_XLSX = _REPO / "Sayari_Interview_Exercise_List.xlsx"
+
+# Sayari rate limit — one request per second, conservatively
+SAYARI_TICK_SECONDS = 1.0
+
+# Max input rows we'll run in one job (safety brake)
+MAX_RUN_ROWS = 200
+
+# In-memory upload registry: upload_id → dict(file_path, sheet, entities, mapping)
+_uploads: dict[str, dict] = {}
+
+
+# ── Helpers ──────────────────────────────────────────────────────────────────
+
+
+def _new_upload_id() -> str:
+    ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+    suffix = uuid.uuid4().hex[:6]
+    return f"u_{ts}_{suffix}"
+
+
+def _new_run_id() -> str:
+    ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+    suffix = uuid.uuid4().hex[:6]
+    return f"run_{ts}_{suffix}"
+
+
+def _content_hash(entities: list[InputEntity]) -> str:
+    """
+    Deterministic content hash of the parsed input rows. Used to recognise
+    list_1 even when uploaded under a different filename / row order.
+
+    Hash is over the sorted (name_normalized, country_upper) tuples so it's
+    insensitive to row reordering, header rename, or column drift around the
+    name column.
+    """
+    tuples = sorted(
+        [
+            (e.name.strip().lower(), (e.country or "").strip().upper())
+            for e in entities
+            if e.name
+        ]
+    )
+    payload = json.dumps(tuples, ensure_ascii=False)
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
+def _list_sheets(path: Path) -> list[str]:
+    from openpyxl import load_workbook
+
+    wb = load_workbook(path, read_only=True, data_only=True)
+    return list(wb.sheetnames)
+
+
+def _read_header(path: Path, sheet: str) -> list[Any]:
+    from openpyxl import load_workbook
+
+    wb = load_workbook(path, read_only=True, data_only=True)
+    ws = wb[sheet] if sheet in wb.sheetnames else wb.active
+    row_iter = ws.iter_rows(values_only=True)
+    try:
+        return list(next(row_iter))
+    except StopIteration:
+        return []
+
+
+def _build_mapping(header: list[Any]) -> dict[str, Any]:
+    cols = _detect_columns(header)
+    return {
+        # logical_field → { detected_header, detected_index, hints }
+        field: {
+            "detected_header": header[idx] if idx is not None and idx < len(header) else None,
+            "detected_index": idx,
+            "hints": COLUMN_HINTS[field],
+        }
+        for field, idx in (
+            (f, cols.get(f)) for f in COLUMN_HINTS.keys()
+        )
+    }
+
+
+def _preview_rows(entities: list[InputEntity], limit: int = 12) -> list[dict]:
+    return [
+        {
+            "row": e.row,
+            "name": e.name,
+            "country": e.country,
+            "address": e.address,
+            "type": e.type,
+            "identifier": e.identifier,
+            "status": "ready" if e.name else "no_name",
+        }
+        for e in entities[:limit]
+    ]
+
+
+# ── LIST_1_HASH (lazy, computed once) ─────────────────────────────────────────
+
+_LIST_1_HASH_CACHED: str | None = None
+
+
+def _list_1_hash() -> str | None:
+    global _LIST_1_HASH_CACHED
+    if _LIST_1_HASH_CACHED is not None:
+        return _LIST_1_HASH_CACHED
+    if not SEEDED_XLSX.exists():
+        return None
+    try:
+        ents = load_entities_from_xlsx(SEEDED_XLSX, sheet="list_1")
+        _LIST_1_HASH_CACHED = _content_hash(ents)
+        log.info("LIST_1_HASH computed: %s (%d rows)", _LIST_1_HASH_CACHED[:16], len(ents))
+        return _LIST_1_HASH_CACHED
+    except Exception as exc:
+        log.warning("Could not compute LIST_1_HASH: %s", exc)
+        return None
+
+
+# ── POST /uploads ─────────────────────────────────────────────────────────────
+
+
+@router.post("")
+async def upload_file(
+    file: UploadFile = File(...),
+    sheet_name: str | None = Form(None),
+):
+    """
+    Accept a .xlsx (or .csv) upload, optionally with a chosen sheet_name.
+
+    Two-phase usage:
+      1) First POST with only `file`. Response includes the full sheet list.
+         If only one sheet is present it's auto-selected and the response
+         already contains preview + column_mapping + matches_seeded.
+      2) If multi-sheet, POST again with `sheet_name=<chosen>` to parse that
+         sheet and get the preview / matches_seeded outcome.
+
+    Reusing the same `file` between phases is supported by saving it to
+    /tmp/sentinel-uploads/{upload_id}/source.{ext} on the first call.
+
+    Returns:
+      {
+        upload_id, filename, sheets, sheet, total_rows, skipped_rows,
+        preview, column_mapping, matches_seeded, content_hash
+      }
+    """
+    if not file.filename:
+        raise HTTPException(400, "Upload missing filename")
+    suffix = Path(file.filename).suffix.lower()
+    if suffix not in (".xlsx", ".csv", ".xls"):
+        raise HTTPException(415, f"Unsupported file type: {suffix} (use .xlsx or .csv)")
+
+    upload_id = _new_upload_id()
+    upload_dir = UPLOAD_TMP / upload_id
+    upload_dir.mkdir(parents=True, exist_ok=True)
+    saved = upload_dir / f"source{suffix}"
+    saved.write_bytes(await file.read())
+
+    sheets: list[str] = []
+    if suffix in (".xlsx", ".xls"):
+        sheets = _list_sheets(saved)
+    else:
+        sheets = ["(csv)"]
+
+    # If multi-sheet and no choice provided, return early with the sheet list.
+    if len(sheets) > 1 and not sheet_name:
+        first = sheets[0]
+        header = _read_header(saved, first) if suffix in (".xlsx", ".xls") else []
+        _uploads[upload_id] = {
+            "file_path": str(saved),
+            "filename": file.filename,
+            "sheet": None,
+            "sheets": sheets,
+            "entities": [],
+            "content_hash": None,
+        }
+        return {
+            "upload_id": upload_id,
+            "filename": file.filename,
+            "sheets": sheets,
+            "sheet": None,
+            "needs_sheet_choice": True,
+            "total_rows": 0,
+            "skipped_rows": 0,
+            "preview": [],
+            "column_mapping": _build_mapping(header) if header else {},
+            "matches_seeded": False,
+            "content_hash": None,
+        }
+
+    # Single-sheet or sheet_name supplied: parse.
+    chosen = sheet_name or sheets[0]
+    if suffix == ".csv":
+        # Convert CSV → in-memory xlsx is overkill; just parse with csv lib.
+        entities = _load_entities_from_csv(saved)
+    else:
+        try:
+            entities = load_entities_from_xlsx(saved, sheet=chosen)
+        except ValueError as exc:
+            raise HTTPException(422, str(exc))
+
+    if len(entities) > MAX_RUN_ROWS:
+        raise HTTPException(
+            413,
+            f"This sheet has {len(entities)} rows; current MAX_RUN_ROWS is {MAX_RUN_ROWS}.",
+        )
+
+    header = _read_header(saved, chosen) if suffix in (".xlsx", ".xls") else _csv_header(saved)
+    mapping = _build_mapping(header)
+    chash = _content_hash(entities)
+    seeded_hash = _list_1_hash()
+    matches_seeded = bool(seeded_hash and chash == seeded_hash)
+
+    # Count skipped (rows with no name) by reading the raw sheet length minus parsed
+    skipped = max(0, _row_count(saved, chosen, suffix) - 1 - len(entities))  # -1 for header
+
+    _uploads[upload_id] = {
+        "file_path": str(saved),
+        "filename": file.filename,
+        "sheet": chosen,
+        "sheets": sheets,
+        "entities": entities,
+        "content_hash": chash,
+    }
+
+    return {
+        "upload_id": upload_id,
+        "filename": file.filename,
+        "sheets": sheets,
+        "sheet": chosen,
+        "needs_sheet_choice": False,
+        "total_rows": len(entities),
+        "skipped_rows": skipped,
+        "preview": _preview_rows(entities),
+        "column_mapping": mapping,
+        "matches_seeded": matches_seeded,
+        "content_hash": chash,
+    }
+
+
+def _row_count(path: Path, sheet: str, suffix: str) -> int:
+    if suffix == ".csv":
+        with path.open(newline="", encoding="utf-8") as f:
+            return sum(1 for _ in f)
+    from openpyxl import load_workbook
+
+    wb = load_workbook(path, read_only=True, data_only=True)
+    ws = wb[sheet] if sheet in wb.sheetnames else wb.active
+    return sum(1 for _ in ws.iter_rows(values_only=True))
+
+
+def _csv_header(path: Path) -> list[Any]:
+    with path.open(newline="", encoding="utf-8") as f:
+        reader = csv.reader(f)
+        try:
+            return next(reader)
+        except StopIteration:
+            return []
+
+
+def _load_entities_from_csv(path: Path) -> list[InputEntity]:
+    with path.open(newline="", encoding="utf-8") as f:
+        reader = csv.reader(f)
+        header = next(reader)
+        cols = _detect_columns(header)
+        if "name" not in cols:
+            raise HTTPException(422, f"Could not find a name column in {header!r}.")
+
+        def cell(values: list[str], key: str) -> str | None:
+            idx = cols.get(key)
+            if idx is None or idx >= len(values):
+                return None
+            v = values[idx]
+            return v.strip() if v and v.strip() else None
+
+        out: list[InputEntity] = []
+        for n, values in enumerate(reader, start=2):
+            name = cell(values, "name")
+            if not name:
+                continue
+            out.append(
+                InputEntity(
+                    row=n,
+                    name=name,
+                    address=cell(values, "address"),
+                    country=cell(values, "country"),
+                    type=cell(values, "type"),
+                    identifier=cell(values, "identifier"),
+                )
+            )
+        return out
+
+
+# ── POST /uploads/{upload_id}/run (SSE) ───────────────────────────────────────
+
+
+def _sse(event: str, data: Any) -> str:
+    return f"data: {json.dumps({'event': event, 'data': data}, default=str)}\n\n"
+
+
+@router.post("/{upload_id}/run")
+async def run_upload(upload_id: str):
+    """
+    Execute the engine on the upload's parsed rows. Returns SSE.
+
+    Cached path (matches_seeded=true): emits a single "matched seeded list_1"
+    event and a "run_complete" with run_id="default", so the front-end falls
+    back to the existing demo cache without any work.
+
+    Live path: walks each row, resolves via Sayari, fetches the profile, caches
+    the raw response to output/runs/{run_id}/raw/. Streams per-row progress.
+    On completion, writes entities.csv + summary.json + results.json +
+    investigation.json so /entities, /summary, /tools/compare_ofac_vs_sayari,
+    and /api/investigations all serve the new run when called with ?run_id=.
+    """
+    upload = _uploads.get(upload_id)
+    if upload is None:
+        raise HTTPException(404, f"Unknown upload_id: {upload_id}")
+    if not upload.get("entities"):
+        raise HTTPException(400, "Upload has no parsed rows. Re-POST with a sheet_name.")
+
+    entities: list[InputEntity] = upload["entities"]
+    matches_seeded = bool(
+        _list_1_hash() and upload.get("content_hash") == _list_1_hash()
+    )
+
+    async def stream() -> AsyncGenerator[str, None]:
+        if matches_seeded:
+            yield _sse(
+                "matched_seeded",
+                {
+                    "filename": upload.get("filename"),
+                    "sheet": upload.get("sheet"),
+                    "total_rows": len(entities),
+                    "message": "matched seeded list_1 — using verified cached results",
+                },
+            )
+            yield _sse(
+                "run_complete",
+                {
+                    "run_id": "default",          # routes UI to the existing list_1 cache
+                    "matches_seeded": True,
+                    "resolved": 49,
+                    "total": len(entities),
+                },
+            )
+            yield _sse("done", {})
+            return
+
+        # ── Live run ────────────────────────────────────────────────────────
+        client = build_client()
+        if client is None:
+            yield _sse(
+                "error",
+                {
+                    "message": "Live run requires SAYARI_CLIENT_ID + SAYARI_CLIENT_SECRET in .env",
+                },
+            )
+            yield _sse("done", {})
+            return
+
+        run_id = _new_run_id()
+        run_dir = RUNS_DIR / run_id
+        (run_dir / "raw").mkdir(parents=True, exist_ok=True)
+
+        yield _sse(
+            "run_started",
+            {
+                "run_id": run_id,
+                "filename": upload.get("filename"),
+                "sheet": upload.get("sheet"),
+                "total": len(entities),
+            },
+        )
+
+        # csv rows we accumulate as we resolve
+        csv_rows: list[dict] = []
+        loop = asyncio.get_event_loop()
+
+        for i, e in enumerate(entities):
+            yield _sse("row_start", {"row": e.row, "index": i, "name": e.name, "country": e.country})
+            t0 = time.time()
+            try:
+                # Resolve (executed off-loop because the SDK is blocking)
+                match, raw_resolution, retry_name = await loop.run_in_executor(
+                    None, lambda: resolve_with_fallback(client, e)
+                )
+                # Persist resolution raw for audit
+                (run_dir / "raw" / f"row{e.row}_resolution.json").write_text(
+                    json.dumps(raw_resolution, default=str, ensure_ascii=False), encoding="utf-8"
+                )
+
+                if not match or not match.get("entity_id"):
+                    yield _sse(
+                        "row_unresolved",
+                        {
+                            "row": e.row,
+                            "index": i,
+                            "name": e.name,
+                            "duration_ms": int((time.time() - t0) * 1000),
+                        },
+                    )
+                    csv_rows.append({
+                        "input_row": e.row,
+                        "input_name": e.name,
+                        "entity_id": "",
+                        "match_label": "",
+                        "match_score": "",
+                        "name_mismatch_flag": "",
+                        "retry_name_used": "",
+                        "country": e.country or "",
+                    })
+                    await asyncio.sleep(SAYARI_TICK_SECONDS)
+                    continue
+
+                entity_id = match["entity_id"]
+
+                # Fetch full profile
+                raw_entity = await loop.run_in_executor(
+                    None, lambda: fetch_profile(client, entity_id)
+                )
+                # Cache the raw response
+                (run_dir / "raw" / f"{entity_id}.json").write_text(
+                    json.dumps(raw_entity, default=str, ensure_ascii=False), encoding="utf-8"
+                )
+
+                # Build a Profile object so we can emit a useful progress event
+                # (and so we can persist the entities.csv index line)
+                p = extract_profile(e, match, raw_entity, effective_name=retry_name)
+                csv_rows.append({
+                    "input_row": e.row,
+                    "input_name": e.name,
+                    "entity_id": entity_id,
+                    "match_label": p.match_label or "",
+                    "match_score": p.match_score if p.match_score is not None else "",
+                    "name_mismatch_flag": "1" if p.name_mismatch_flag else "",
+                    "retry_name_used": retry_name or "",
+                    "country": e.country or "",
+                })
+
+                yield _sse(
+                    "row_resolved",
+                    {
+                        "row": e.row,
+                        "index": i,
+                        "name": e.name,
+                        "entity_id": entity_id,
+                        "match_label": p.match_label,
+                        "sanctioned": bool(p.sanctioned),
+                        "pep": bool(p.pep),
+                        "risk_factor_count": len(p.risk_factors),
+                        "warn_verify": bool(p.name_mismatch_flag),
+                        "duration_ms": int((time.time() - t0) * 1000),
+                    },
+                )
+            except Exception as exc:
+                log.exception("Run %s row %d failed", run_id, e.row)
+                yield _sse(
+                    "row_error",
+                    {
+                        "row": e.row,
+                        "index": i,
+                        "name": e.name,
+                        "error": str(exc),
+                        "duration_ms": int((time.time() - t0) * 1000),
+                    },
+                )
+
+            # Rate-limit between Sayari calls
+            await asyncio.sleep(SAYARI_TICK_SECONDS)
+
+        # ── Persist the run as a complete EntityCache-compatible directory ──
+        with (run_dir / "entities.csv").open("w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(
+                f,
+                fieldnames=[
+                    "input_row", "input_name", "entity_id", "match_label",
+                    "match_score", "name_mismatch_flag", "retry_name_used", "country",
+                ],
+            )
+            writer.writeheader()
+            writer.writerows(csv_rows)
+
+        # Build profiles list (using the new cache) and macro summary
+        from packages.engine import EntityCache  # local to avoid early init
+        cache = EntityCache(str(run_dir))
+        profiles = cache.all_profiles()
+        summary = build_summary(profiles)
+        (run_dir / "summary.json").write_text(
+            json.dumps(summary, indent=2, default=str, ensure_ascii=False), encoding="utf-8"
+        )
+
+        # Per-entity results (customer payload — drop-in for /api/results)
+        results = _build_results_payload(run_id, cache, profiles)
+        (run_dir / "results.json").write_text(
+            json.dumps(results, indent=2, default=str, ensure_ascii=False), encoding="utf-8"
+        )
+
+        # Investigation index entry — picked up by /api/investigations
+        now = datetime.now(timezone.utc).isoformat()
+        investigation = {
+            "id": run_id,
+            "source": "upload",
+            "source_detail": upload.get("filename") or "uploaded file",
+            "status": "complete",
+            "created_at": now,
+            "completed_at": now,
+            "total_entities": summary.get("resolved", 0),
+            "flagged_count": summary.get("sanctioned_count", 0),
+            "cleared_count": 0,
+            "escalated_count": 0,
+            "blocked_count": 0,
+            "pending_count": summary.get("resolved", 0),
+        }
+        (run_dir / "investigation.json").write_text(
+            json.dumps(investigation, indent=2, default=str, ensure_ascii=False), encoding="utf-8"
+        )
+
+        # Tell the API layer to drop any cached EntityCache for this run_id so the
+        # next read picks up the freshly written entities.csv.
+        try:
+            from services.api.main import _invalidate_run_cache
+            _invalidate_run_cache(run_id)
+        except Exception:
+            pass
+
+        yield _sse(
+            "run_complete",
+            {
+                "run_id": run_id,
+                "matches_seeded": False,
+                "resolved": summary.get("resolved", 0),
+                "total": summary.get("total_input", len(entities)),
+                "sanctioned_count": summary.get("sanctioned_count", 0),
+            },
+        )
+        yield _sse("done", {})
+
+    return StreamingResponse(
+        stream(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "X-Accel-Buffering": "no",
+            "Connection": "keep-alive",
+        },
+    )
+
+
+def _build_results_payload(run_id: str, cache, profiles: list) -> list[dict]:
+    """Shape per-entity results so /api/results/{run_id} can return them as-is."""
+    out = []
+    for p in profiles:
+        eid = p.entity_id
+        if not eid:
+            continue
+        out.append(
+            {
+                "entity_id": eid,
+                "input_name": p.input_name,
+                "resolved": {
+                    "entity_id": eid,
+                    "label": p.match_label,
+                    "confidence": "low" if p.name_mismatch_flag else "high",
+                    "entity_url": p.entity_url or f"/v1/entity/{eid}",
+                },
+                "screening": {
+                    "ofac_sdn": {"hit": False, "sdn_id": None, "programs": [], "match_name": None},
+                    "ownership_exposure": {"has_exposure": False, "factor": None},
+                    "other_sanctions": [],
+                    "risk_level": (
+                        "critical" if p.sanctioned
+                        else "high" if (p.risk_factors and len(p.risk_factors) > 4)
+                        else "medium" if p.risk_factors
+                        else "low"
+                    ),
+                    "outcome": "both_catch" if p.sanctioned else "no_ofac",
+                    "is_directly_designated": bool(p.sanctioned),
+                },
+                "disposition": {
+                    "status": "pending_review",
+                    "reviewer": None,
+                    "rationale": None,
+                    "updated_at": "",
+                },
+                "sources": [
+                    {
+                        "cache_file": f"output/runs/{run_id}/raw/{eid}.json",
+                        "api_endpoint": "GET /v1/entity/{id} (cached during this run)",
+                    }
+                ],
+            }
+        )
+    return out

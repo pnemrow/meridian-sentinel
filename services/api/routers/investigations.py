@@ -27,8 +27,42 @@ if str(_REPO) not in sys.path:
     sys.path.insert(0, str(_REPO))
 
 _SEED_PATH = _REPO / "output" / "investigations_seed.json"
+_RUNS_DIR  = _REPO / "output" / "runs"
 
 router = APIRouter(prefix="/api", tags=["investigations"])
+
+
+# ── On-disk-run discovery ────────────────────────────────────────────────────
+
+def _scan_disk_investigations() -> list[dict]:
+    """
+    Each successful /uploads/{id}/run writes an investigation.json into
+    output/runs/{run_id}/. Surface those alongside the JSON seed so newly
+    captured runs appear in /api/investigations without needing Postgres.
+    """
+    out: list[dict] = []
+    if not _RUNS_DIR.exists():
+        return out
+    for d in sorted(_RUNS_DIR.iterdir(), reverse=True):
+        meta = d / "investigation.json"
+        if not meta.exists():
+            continue
+        try:
+            out.append(json.loads(meta.read_text(encoding="utf-8")))
+        except Exception:
+            continue
+    return out
+
+
+def _scan_disk_results(run_id_str: str) -> list[dict]:
+    """Per-entity results for a disk-stored run. Empty if absent."""
+    path = _RUNS_DIR / run_id_str / "results.json"
+    if not path.exists():
+        return []
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return []
 
 
 # ── DB helpers ────────────────────────────────────────────────────────────────
@@ -64,7 +98,15 @@ class DispositionRequest(BaseModel):
 
 @router.get("/investigations")
 def list_investigations():
-    """List all investigations with source, status, and outcome counts."""
+    """List all investigations with source, status, and outcome counts.
+
+    Merges three sources, newest first:
+      1. Postgres `investigation` table (if DATABASE_URL is set + reachable)
+      2. output/runs/*/investigation.json   (one file per /uploads/{id}/run)
+      3. output/investigations_seed.json    (the demo seed)
+    """
+    disk_runs = _scan_disk_investigations()
+
     conn = _get_conn()
     if conn:
         try:
@@ -79,13 +121,13 @@ def list_investigations():
             """)
             rows = [dict(r) for r in cur.fetchall()]
             conn.close()
-            return {"investigations": _format_investigations(rows)}
+            return {"investigations": _format_investigations(disk_runs + rows)}
         except Exception:
             conn.close()
 
-    # JSON fallback
+    # JSON fallback — disk runs first (most recent), then the seed
     seed = _load_seed()
-    return {"investigations": _format_investigations(seed.get("investigations", []))}
+    return {"investigations": _format_investigations(disk_runs + seed.get("investigations", []))}
 
 
 def _format_investigations(rows: list[dict]) -> list[dict]:
@@ -111,15 +153,32 @@ def _format_investigations(rows: list[dict]) -> list[dict]:
 
 
 @router.get("/investigations/{investigation_id}")
-def get_investigation(investigation_id: int):
-    """Single investigation with all entity results."""
+def get_investigation(investigation_id: str):
+    """Single investigation with all entity results.
+
+    investigation_id may be:
+      - a stringified int (matches Postgres + seed integer IDs)
+      - a run_id string like "upload_20260528_142359_a8c6" (matches disk runs)
+    """
+    # Try disk runs first (string-keyed)
+    for inv in _scan_disk_investigations():
+        if str(inv.get("id")) == str(investigation_id):
+            results = _scan_disk_results(str(inv["id"]))
+            return {**_format_investigations([inv])[0], "results": results}
+
+    # Then DB / seed — these use integer keys
+    try:
+        int_id = int(investigation_id)
+    except (TypeError, ValueError):
+        raise HTTPException(status_code=404, detail="Investigation not found")
+
     conn = _get_conn()
     if conn:
         try:
             import psycopg2.extras
             cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
             cur.execute(
-                "SELECT * FROM investigation WHERE id = %s", (investigation_id,)
+                "SELECT * FROM investigation WHERE id = %s", (int_id,)
             )
             inv = cur.fetchone()
             if not inv:
@@ -133,7 +192,7 @@ def get_investigation(investigation_id: int):
                    LEFT JOIN disposition d ON d.entity_result_id = er.id
                    WHERE er.investigation_id = %s
                    ORDER BY er.id""",
-                (investigation_id,),
+                (int_id,),
             )
             results = [dict(r) for r in cur.fetchall()]
             conn.close()
@@ -147,17 +206,31 @@ def get_investigation(investigation_id: int):
     # JSON fallback
     seed = _load_seed()
     investigations = seed.get("investigations", [])
-    inv = next((i for i in investigations if i["id"] == investigation_id), None)
+    inv = next((i for i in investigations if i["id"] == int_id), None)
     if not inv:
         raise HTTPException(status_code=404, detail="Investigation not found")
     entity_results = [r for r in seed.get("entity_results", [])
-                      if r.get("investigation_id") == investigation_id]
+                      if r.get("investigation_id") == int_id]
     return {**_format_investigations([inv])[0], "results": entity_results}
 
 
 @router.get("/results/{run_id}")
-def list_results(run_id: int, request: Request):
-    """All entity results for a screening run."""
+def list_results(run_id: str, request: Request):
+    """All entity results for a screening run.
+
+    Accepts both integer IDs (seed/DB) and string run_ids (disk runs).
+    """
+    # Disk runs first
+    disk_results = _scan_disk_results(str(run_id))
+    if disk_results:
+        return {"run_id": run_id, "results": disk_results, "count": len(disk_results)}
+
+    try:
+        int_id = int(run_id)
+    except (TypeError, ValueError):
+        # Pure-string run that has no disk results — return empty
+        return {"run_id": run_id, "results": [], "count": 0}
+
     conn = _get_conn()
     if conn:
         try:
@@ -169,7 +242,7 @@ def list_results(run_id: int, request: Request):
                    LEFT JOIN disposition d ON d.entity_result_id = er.id
                    WHERE er.investigation_id = %s
                    ORDER BY er.id""",
-                (run_id,),
+                (int_id,),
             )
             rows = [_format_entity_result(dict(r)) for r in cur.fetchall()]
             conn.close()
@@ -180,17 +253,28 @@ def list_results(run_id: int, request: Request):
 
     seed = _load_seed()
     entity_results = [r for r in seed.get("entity_results", [])
-                      if r.get("investigation_id") == run_id]
+                      if r.get("investigation_id") == int_id]
     return {"run_id": run_id, "results": entity_results, "count": len(entity_results)}
 
 
 @router.get("/results/{run_id}/{entity_id}")
-def get_entity_result(run_id: int, entity_id: str):
+def get_entity_result(run_id: str, entity_id: str):
     """
     Customer payload for one entity: resolved + screening + disposition + sources.
 
     This is the per-entity briefing shape the front-end consumes for entity detail.
+    Accepts both integer IDs (seed/DB) and string run_ids (disk runs).
     """
+    # Disk runs first
+    for r in _scan_disk_results(str(run_id)):
+        if r.get("entity_id") == entity_id:
+            return r
+
+    try:
+        int_id = int(run_id)
+    except (TypeError, ValueError):
+        raise HTTPException(status_code=404, detail="Entity result not found")
+
     conn = _get_conn()
     result_row = None
 
@@ -205,7 +289,7 @@ def get_entity_result(run_id: int, entity_id: str):
                    LEFT JOIN disposition d ON d.entity_result_id = er.id
                    WHERE er.investigation_id = %s AND er.entity_id = %s
                    LIMIT 1""",
-                (run_id, entity_id),
+                (int_id, entity_id),
             )
             row = cur.fetchone()
             conn.close()
@@ -219,7 +303,7 @@ def get_entity_result(run_id: int, entity_id: str):
         # JSON fallback
         seed = _load_seed()
         for r in seed.get("entity_results", []):
-            if r.get("investigation_id") == run_id and r.get("entity_id") == entity_id:
+            if r.get("investigation_id") == int_id and r.get("entity_id") == entity_id:
                 result_row = r
                 break
 
@@ -272,13 +356,22 @@ def _format_entity_result(r: dict) -> dict:
 
 
 @router.post("/results/{run_id}/{entity_id}/disposition")
-def set_disposition(run_id: int, entity_id: str, req: DispositionRequest):
+def set_disposition(run_id: str, entity_id: str, req: DispositionRequest):
     """Record analyst decision on an entity result."""
     valid_statuses = {"pending", "cleared", "escalated", "blocked"}
     if req.status not in valid_statuses:
         raise HTTPException(status_code=422, detail=f"status must be one of {valid_statuses}")
 
-    conn = _get_conn()
+    # DB persistence is only attempted for integer-keyed runs (seed/Postgres).
+    # Disk-stored runs (string upload_ids) fall through to the JSON-fallback
+    # branch below, which surfaces the disposition to the analyst but does
+    # not yet persist — honestly representative.
+    try:
+        int_run_id = int(run_id)
+    except (TypeError, ValueError):
+        int_run_id = None
+
+    conn = _get_conn() if int_run_id is not None else None
     if conn:
         try:
             import psycopg2.extras
@@ -287,7 +380,7 @@ def set_disposition(run_id: int, entity_id: str, req: DispositionRequest):
             # Find entity_result id
             cur.execute(
                 "SELECT id FROM entity_result WHERE investigation_id=%s AND entity_id=%s LIMIT 1",
-                (run_id, entity_id),
+                (int_run_id, entity_id),
             )
             row = cur.fetchone()
             if not row:
