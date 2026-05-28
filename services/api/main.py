@@ -184,6 +184,15 @@ if _FRONTEND_DIR.exists():
     def _root_redirect():
         return RedirectResponse(url="/ui/")
 
+# ── Static output/ (cache files + raw JSON) ──────────────────────────────────
+# The audit-trace SSE rows include cache_file paths like
+# "output/runs/{run_id}/raw/{file}.json". Mounting the directory at /output
+# means the Validate-and-Run trace's "Sources" links resolve directly to the
+# raw JSON — analysts can click through to inspect the actual API responses.
+_OUTPUT_DIR = _REPO / "output"
+if _OUTPUT_DIR.exists():
+    app.mount("/output", StaticFiles(directory=str(_OUTPUT_DIR), html=False), name="output")
+
 
 # ── Request / response models ─────────────────────────────────────────────────
 

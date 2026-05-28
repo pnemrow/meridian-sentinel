@@ -49,7 +49,7 @@ from packages.engine import (
 )
 from packages.engine.loader import _detect_columns, COLUMN_HINTS
 from packages.engine.profile import extract_profile, fetch_profile
-from packages.engine.resolve import resolve_with_fallback
+from packages.engine.resolve import PINNED_IDS, RETRY_NAMES, resolve_entity, resolve_with_fallback
 from packages.engine.helpers import to_dict
 
 log = logging.getLogger("sentinel.uploads")
@@ -379,6 +379,104 @@ def _sse(event: str, data: Any) -> str:
     return f"data: {json.dumps({'event': event, 'data': data}, default=str)}\n\n"
 
 
+def _derive_risk_level(p) -> str:
+    """Match the front-end's stat colouring rule, server-side."""
+    if p.sanctioned:
+        return "critical"
+    if len(p.risk_factors or []) > 4:
+        return "high"
+    if p.risk_factors:
+        return "medium"
+    return "low"
+
+
+def _attempt_record(name: str, country: str | None, address: str | None,
+                     duration_ms: int, raw: dict, match: dict | None,
+                     pinned: bool = False, retry_name: str | None = None) -> dict:
+    """One resolve-call audit record — shape mirrors the SSE 'steps' contract."""
+    request = {"name": name}
+    if country: request["country"] = country
+    if address: request["address"] = address
+    cand_count = (
+        1 if pinned
+        else len((raw or {}).get("data") or [])
+    )
+    rec = {
+        "step": "resolve_entity",
+        "endpoint": "POST /v1/entity/resolution",
+        "duration_ms": duration_ms,
+        "request": request,
+        "response_summary": {
+            "candidate_count": cand_count,
+            "best_label": (match or {}).get("label"),
+            "best_score": (match or {}).get("score"),
+            "pinned": bool(pinned),
+        },
+    }
+    if retry_name:
+        rec["response_summary"]["retry_name"] = retry_name
+    return rec
+
+
+def _resolve_with_audit(client, e):
+    """
+    Drop-in replacement for `resolve_with_fallback` that *also* returns a list
+    of per-attempt audit records (one per Sayari /v1/entity/resolution call,
+    or one synthetic entry for a PINNED_IDS short-circuit).
+
+    Returns: (match | None, raw_resolution, retry_name | None, attempts: list[dict])
+    """
+    attempts: list[dict] = []
+
+    # 1) Pinned short-circuit — no live API call. We still record the audit
+    #    entry so the UI can show the "[pinned:…]" badge with near-zero duration.
+    pinned_id = PINNED_IDS.get(e.name)
+    if pinned_id:
+        t0 = time.time()
+        synthetic_match = {"entity_id": pinned_id, "label": f"[pinned] {e.name}", "score": None}
+        synthetic_raw = {"pinned": True, "entity_id": pinned_id, "input_name": e.name}
+        dur = int((time.time() - t0) * 1000)
+        attempts.append(_attempt_record(
+            e.name, e.country, e.address, dur, synthetic_raw, synthetic_match,
+            pinned=True, retry_name=f"[pinned:{pinned_id}]",
+        ))
+        return synthetic_match, synthetic_raw, f"[pinned:{pinned_id}]", attempts
+
+    # 2) Primary name
+    t0 = time.time()
+    match, raw = resolve_entity(client, e)
+    dur = int((time.time() - t0) * 1000)
+    attempts.append(_attempt_record(
+        e.name, e.country, e.address, dur, raw, match,
+    ))
+    if match:
+        return match, raw, None, attempts
+
+    # 3) RETRY_NAMES + acronym fallback
+    alternates: list[str] = list(RETRY_NAMES.get(e.name, []))
+    m = re.search(r'\(([A-Z]{2,})\)', e.name)
+    if m:
+        acronym = m.group(1)
+        if acronym not in alternates:
+            alternates.insert(0, acronym)
+
+    from packages.engine import InputEntity
+    last_raw = raw
+    for alt in alternates:
+        e_alt = InputEntity(row=e.row, name=alt, country=e.country)
+        t0 = time.time()
+        match, raw = resolve_entity(client, e_alt)
+        dur = int((time.time() - t0) * 1000)
+        last_raw = raw
+        attempts.append(_attempt_record(
+            alt, e.country, e.address, dur, raw, match, retry_name=alt,
+        ))
+        if match:
+            return match, raw, alt, attempts
+
+    return None, last_raw, None, attempts
+
+
 @router.post("/{upload_id}/run")
 async def run_upload(upload_id: str, name: str | None = None):
     """
@@ -466,12 +564,16 @@ async def run_upload(upload_id: str, name: str | None = None):
         for i, e in enumerate(entities):
             yield _sse("row_start", {"row": e.row, "index": i, "name": e.name, "country": e.country})
             t0 = time.time()
+
+            # Cache file paths — relative to repo root for the SSE event and
+            # for the front-end's "Sources" links.
+            resolution_cache = f"output/runs/{run_id}/raw/row{e.row}_resolution.json"
             try:
-                # Resolve (executed off-loop because the SDK is blocking)
-                match, raw_resolution, retry_name = await loop.run_in_executor(
-                    None, lambda: resolve_with_fallback(client, e)
+                # ── Step 1: resolve_entity (with per-attempt audit) ───────────
+                match, raw_resolution, retry_name, attempts = await loop.run_in_executor(
+                    None, lambda: _resolve_with_audit(client, e)
                 )
-                # Persist resolution raw for audit
+                # Persist the raw resolution payload for audit
                 (run_dir / "raw" / f"row{e.row}_resolution.json").write_text(
                     json.dumps(raw_resolution, default=str, ensure_ascii=False), encoding="utf-8"
                 )
@@ -484,6 +586,16 @@ async def run_upload(upload_id: str, name: str | None = None):
                             "index": i,
                             "name": e.name,
                             "duration_ms": int((time.time() - t0) * 1000),
+                            # Audit-trace enrichment
+                            "steps": attempts,
+                            "reason": (
+                                f"No candidates above threshold after "
+                                f"{len(attempts)} attempt{'' if len(attempts) == 1 else 's'} "
+                                f"({', '.join(a['request']['name'] for a in attempts)})."
+                            ),
+                            "sources": {
+                                "resolution_cache": resolution_cache,
+                            },
                         },
                     )
                     csv_rows.append({
@@ -501,17 +613,18 @@ async def run_upload(upload_id: str, name: str | None = None):
 
                 entity_id = match["entity_id"]
 
-                # Fetch full profile
+                # ── Step 2: fetch_profile (its own timing boundary) ──────────
+                t_profile = time.time()
                 raw_entity = await loop.run_in_executor(
                     None, lambda: fetch_profile(client, entity_id)
                 )
-                # Cache the raw response
+                profile_duration_ms = int((time.time() - t_profile) * 1000)
+                # Cache the raw profile response
                 (run_dir / "raw" / f"{entity_id}.json").write_text(
                     json.dumps(raw_entity, default=str, ensure_ascii=False), encoding="utf-8"
                 )
 
-                # Build a Profile object so we can emit a useful progress event
-                # (and so we can persist the entities.csv index line)
+                # Build the Profile object — single source of truth for findings
                 p = extract_profile(e, match, raw_entity, effective_name=retry_name)
                 csv_rows.append({
                     "input_row": e.row,
@@ -524,9 +637,44 @@ async def run_upload(upload_id: str, name: str | None = None):
                     "country": e.country or "",
                 })
 
+                # Compose the audit-trace payload
+                steps = list(attempts)
+                steps.append({
+                    "step": "fetch_profile",
+                    "endpoint": "GET /v1/entity/{id}",
+                    "duration_ms": profile_duration_ms,
+                    "request": {"entity_id": entity_id},
+                    "response_summary": {
+                        "countries": p.countries,
+                        "degree": p.degree,
+                        "source_count": p.source_count,
+                        "risk_factor_count": len(p.risk_factors),
+                    },
+                })
+                sanctioned_lists = [
+                    f for f in (p.risk_factors or []) if f.startswith("sanctioned_")
+                ]
+                findings = {
+                    "match_label": p.match_label,
+                    "match_score": p.match_score,
+                    "name_mismatch_flag": bool(p.name_mismatch_flag),
+                    "type": p.type,
+                    "countries": p.countries,
+                    "risk_level": _derive_risk_level(p),
+                    "sanctioned": bool(p.sanctioned),
+                    "sanctioned_lists": sanctioned_lists,
+                    "pep": bool(p.pep),
+                    "top_risks": (p.risk_factors or [])[:5],
+                }
+                sources = {
+                    "resolution_cache": resolution_cache,
+                    "profile_cache": f"output/runs/{run_id}/raw/{entity_id}.json",
+                }
+
                 yield _sse(
                     "row_resolved",
                     {
+                        # Existing fields — preserved for backward compatibility
                         "row": e.row,
                         "index": i,
                         "name": e.name,
@@ -537,6 +685,10 @@ async def run_upload(upload_id: str, name: str | None = None):
                         "risk_factor_count": len(p.risk_factors),
                         "warn_verify": bool(p.name_mismatch_flag),
                         "duration_ms": int((time.time() - t0) * 1000),
+                        # Audit-trace enrichment
+                        "steps":    steps,
+                        "findings": findings,
+                        "sources":  sources,
                     },
                 )
             except Exception as exc:

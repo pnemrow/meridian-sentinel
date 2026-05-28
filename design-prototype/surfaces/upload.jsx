@@ -221,7 +221,7 @@ function Upload({ onRunComplete }) {
         {step === 'running'
           ? <RunningState events={runEvents} total={uploadResponse?.total_rows || 0} />
           : step === 'resolved'
-            ? <ResolvedSummary runResult={runResult} uploadResponse={uploadResponse} onContinue={onContinue} />
+            ? <ResolvedSummary runResult={runResult} uploadResponse={uploadResponse} runEvents={runEvents} onContinue={onContinue} />
             : <span className="muted">Confirm the mapping, then run screening.</span>}
       </StepCard>
     </div>
@@ -487,16 +487,12 @@ function RunningState({ events, total }) {
     );
   }
 
+  const rowEvents = events.filter(e => e.event === 'row_resolved' || e.event === 'row_unresolved' || e.event === 'row_error');
   const resolved = events.filter(e => e.event === 'row_resolved').length;
   const unresolved = events.filter(e => e.event === 'row_unresolved').length;
   const errored = events.filter(e => e.event === 'row_error').length;
   const processed = resolved + unresolved + errored;
   const pct = total > 0 ? Math.round((processed / total) * 100) : 0;
-
-  // Recent activity: last 6 row_* events
-  const recent = events
-    .filter(e => e.event === 'row_resolved' || e.event === 'row_unresolved' || e.event === 'row_error')
-    .slice(-6);
 
   return (
     <div style={{ padding: '8px 0', display: 'flex', flexDirection: 'column', gap: 14 }}>
@@ -521,34 +517,273 @@ function RunningState({ events, total }) {
         </div>
       </div>
 
-      {recent.length > 0 ? (
-        <div style={{
-          background: 'var(--bg-terminal)', border: '1px solid var(--border-subtle)',
-          borderRadius: 4, padding: '10px 12px', maxHeight: 180, overflow: 'auto',
-        }}>
-          <div className="mono" style={{ fontSize: 10, color: 'var(--text-muted)', letterSpacing: 1.2, textTransform: 'uppercase', marginBottom: 6 }}>
-            Recent rows
-          </div>
-          {recent.map((e, i) => (
-            <div key={i} className="mono" style={{ fontSize: 11, color: 'var(--text-terminal)', padding: '2px 0' }}>
-              <span style={{ color: e.event === 'row_resolved' ? 'var(--risk-low)' : e.event === 'row_error' ? 'var(--risk-critical)' : 'var(--text-muted)' }}>●</span>
-              {' '}row {e.data.row} · {(e.data.name || '').slice(0, 40)}
-              {e.data.sanctioned ? <span style={{ color: 'var(--risk-critical)', marginLeft: 8 }}>sanctioned</span> : null}
-              {e.data.pep ? <span style={{ color: 'var(--risk-medium)', marginLeft: 8 }}>PEP</span> : null}
-              {e.data.entity_id ? <span style={{ color: 'var(--text-muted)', marginLeft: 8 }}>{e.data.entity_id.slice(0, 12)}…</span> : null}
-              {e.data.duration_ms != null ? <span style={{ color: 'var(--text-muted)', marginLeft: 8 }}>{e.data.duration_ms}ms</span> : null}
+      <RunTrace
+        rowEvents={rowEvents}
+        cap={6}
+        title="Recent rows"
+        maxHeight={220}
+      />
+    </div>
+  );
+}
+
+// ── RunTrace: expandable per-row audit ──────────────────────────────────────
+// Used during streaming (cap=6) and post-run (no cap). Each row reveals the
+// per-call API timings, findings, and source file links from the SSE payload.
+
+function RunTrace({ rowEvents, cap, title, maxHeight }) {
+  const [expanded, setExpanded] = useState(null); // row index used as key
+  const visible = cap ? rowEvents.slice(-cap) : rowEvents;
+  if (visible.length === 0) return null;
+  return (
+    <div style={{
+      background: 'var(--bg-terminal)', border: '1px solid var(--border-subtle)',
+      borderRadius: 4, padding: '10px 4px 6px',
+      maxHeight: maxHeight || undefined, overflowY: maxHeight ? 'auto' : 'visible',
+    }}>
+      {title ? (
+        <div className="mono" style={{ fontSize: 10, color: 'var(--text-muted)', letterSpacing: 1.2, textTransform: 'uppercase', marginBottom: 6, padding: '0 8px' }}>
+          {title}
+        </div>
+      ) : null}
+      {visible.map((e) => {
+        const key = e.data.index ?? e.data.row;
+        const open = expanded === key;
+        return (
+          <TraceRow key={key} ev={e} open={open} onToggle={() => setExpanded(open ? null : key)} />
+        );
+      })}
+    </div>
+  );
+}
+
+function TraceRow({ ev, open, onToggle }) {
+  const d = ev.data || {};
+  const kind = ev.event;
+  const dotColor =
+    kind === 'row_resolved' ? 'var(--risk-low)' :
+    kind === 'row_error'    ? 'var(--risk-critical)' :
+    'var(--text-muted)';
+  return (
+    <div style={{ borderTop: '1px solid transparent' }}>
+      <button
+        onClick={onToggle}
+        className="clickable"
+        style={{
+          width: '100%', textAlign: 'left',
+          background: open ? 'rgba(201,169,97,0.04)' : 'transparent',
+          border: 0, padding: '4px 8px',
+          fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-terminal)',
+          display: 'flex', alignItems: 'center', gap: 8,
+        }}
+      >
+        <span style={{ color: 'var(--text-muted)', width: 12, textAlign: 'center' }}>{open ? '▾' : '▸'}</span>
+        <span style={{ color: dotColor }}>●</span>
+        <span>row {d.row}</span>
+        <span style={{ color: 'var(--text-primary)' }}>{(d.name || '').slice(0, 44)}</span>
+        {d.sanctioned ? <span style={{ color: 'var(--risk-critical)' }}>sanctioned</span> : null}
+        {d.pep ? <span style={{ color: 'var(--risk-medium)' }}>PEP</span> : null}
+        {d.warn_verify ? <span style={{ color: 'var(--risk-medium)' }}>⚠ verify</span> : null}
+        {d.entity_id ? <span style={{ color: 'var(--text-muted)' }}>{d.entity_id.slice(0, 12)}…</span> : null}
+        <span style={{ marginLeft: 'auto', color: 'var(--text-muted)' }}>{d.duration_ms != null ? `${d.duration_ms}ms` : ''}</span>
+      </button>
+      {open ? <TraceDetail ev={ev} /> : null}
+    </div>
+  );
+}
+
+function TraceDetail({ ev }) {
+  const d = ev.data || {};
+  const steps = d.steps || [];
+  const findings = d.findings || null;
+  const sources = d.sources || null;
+  const reason = d.reason;
+
+  return (
+    <div style={{
+      background: 'rgba(5,11,20,0.55)',
+      borderTop: '1px solid var(--border-subtle)',
+      borderLeft: '2px solid var(--accent-dim)',
+      padding: '8px 12px 10px 18px',
+      margin: '2px 8px 6px',
+      fontFamily: 'var(--font-mono)', fontSize: 11,
+      color: 'var(--text-terminal)',
+    }}>
+      {/* STEPS */}
+      <TraceSection label="Steps" />
+      {steps.length === 0 ? (
+        <div style={{ color: 'var(--text-muted)', fontStyle: 'italic' }}>(no steps recorded)</div>
+      ) : steps.map((s, i) => <TraceStep key={i} index={i + 1} step={s} />)}
+
+      {/* REASON (unresolved only) */}
+      {reason ? (
+        <>
+          <TraceSection label="Reason" />
+          <div style={{ color: 'var(--risk-critical)' }}>{reason}</div>
+        </>
+      ) : null}
+
+      {/* FINDINGS */}
+      {findings ? (
+        <>
+          <TraceSection label="Findings" />
+          <TraceFindings findings={findings} />
+        </>
+      ) : null}
+
+      {/* SOURCES */}
+      {sources ? (
+        <>
+          <TraceSection label="Sources" />
+          {Object.entries(sources).filter(([_, v]) => !!v).map(([k, path]) => (
+            <div key={k} style={{ marginTop: 2 }}>
+              <span style={{ color: 'var(--text-muted)' }}>{k.padEnd(18, ' ')}</span>
+              {' '}
+              <a
+                href={`/${path}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: 'var(--accent)', textDecoration: 'none', borderBottom: '1px dotted var(--accent-dim)' }}
+              >{path}</a>
             </div>
           ))}
-        </div>
+        </>
       ) : null}
     </div>
   );
 }
 
+function TraceSection({ label }) {
+  return (
+    <div style={{
+      fontSize: 9, color: 'var(--accent-dim)', letterSpacing: 1.4,
+      textTransform: 'uppercase', marginTop: 10, marginBottom: 4, fontWeight: 600,
+    }}>{label}</div>
+  );
+}
+
+function TraceStep({ index, step }) {
+  const r = step.response_summary || {};
+  const isResolve = step.step === 'resolve_entity';
+  const isFetch   = step.step === 'fetch_profile';
+  return (
+    <div style={{ marginBottom: 6 }}>
+      <div style={{ display: 'flex', gap: 8, alignItems: 'baseline' }}>
+        <span style={{ color: 'var(--text-muted)' }}>[{index}]</span>
+        <span style={{ color: 'var(--accent)' }}>{step.endpoint}</span>
+        <span style={{ marginLeft: 'auto', color: 'var(--text-muted)' }}>{step.duration_ms}ms</span>
+      </div>
+      <div style={{ paddingLeft: 18, color: 'var(--text-muted)' }}>
+        payload: <span style={{ color: 'var(--text-secondary)' }}>{JSON.stringify(step.request)}</span>
+      </div>
+      <div style={{ paddingLeft: 18 }}>
+        {isResolve ? (
+          <span style={{ color: 'var(--text-secondary)' }}>
+            → <span style={{ color: 'var(--text-primary)' }}>{r.candidate_count ?? 0}</span> candidate{r.candidate_count === 1 ? '' : 's'}
+            {r.best_label ? <> · best: <span style={{ color: 'var(--text-primary)' }}>"{(r.best_label || '').slice(0, 40)}"</span></> : null}
+            {r.best_score != null ? <> · score <span style={{ color: 'var(--text-primary)' }}>{Number(r.best_score).toFixed(2)}</span></> : null}
+            {r.pinned ? <span style={{ marginLeft: 6, color: 'var(--accent)' }}>[{r.retry_name || 'pinned'}]</span> : null}
+            {!r.pinned && r.retry_name ? <span style={{ marginLeft: 6, color: 'var(--risk-medium)' }}>[retry: {r.retry_name}]</span> : null}
+          </span>
+        ) : isFetch ? (
+          <span style={{ color: 'var(--text-secondary)' }}>
+            → degree <span style={{ color: 'var(--text-primary)' }}>{(r.degree ?? 0).toLocaleString()}</span>
+            {' · '}source_count <span style={{ color: 'var(--text-primary)' }}>{r.source_count ?? '—'}</span>
+            {' · '}<span style={{ color: 'var(--text-primary)' }}>{r.risk_factor_count ?? 0}</span> risk factors
+          </span>
+        ) : (
+          <span style={{ color: 'var(--text-secondary)' }}>{JSON.stringify(r)}</span>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function TraceFindings({ findings }) {
+  const f = findings;
+  const lvlColor = {
+    critical: 'var(--risk-critical)',
+    high:     'var(--risk-high)',
+    medium:   'var(--risk-medium)',
+    low:      'var(--risk-low)',
+  }[f.risk_level] || 'var(--text-secondary)';
+  return (
+    <div>
+      <FindRow k="match_label" v={f.match_label} />
+      <FindRow k="match_score" v={f.match_score != null ? (
+        <>
+          <span style={{ color: 'var(--text-primary)' }}>{Number(f.match_score).toFixed(2)}</span>
+          {f.name_mismatch_flag ? <span style={{ color: 'var(--risk-medium)', marginLeft: 8 }}>⚠ verify</span> : null}
+        </>
+      ) : '—'} />
+      <FindRow k="type" v={
+        <>
+          <span style={{ color: 'var(--text-primary)' }}>{f.type || '—'}</span>
+          {(f.countries && f.countries.length) ? (
+            <> · countries: <span style={{ color: 'var(--text-primary)' }}>
+              {(f.countries.slice(0, 4) || []).join(', ')}
+              {f.countries.length > 4 ? ` +${f.countries.length - 4}` : ''}
+            </span></>
+          ) : null}
+        </>
+      } />
+      <FindRow k="risk_level" v={<span style={{ color: lvlColor, fontWeight: 600 }}>{(f.risk_level || '').toUpperCase()}</span>} />
+      <FindRow k="sanctioned" v={
+        f.sanctioned ? (
+          <>
+            <span style={{ color: 'var(--risk-critical)' }}>✓</span>
+            {(f.sanctioned_lists || []).length ? (
+              <span style={{ marginLeft: 6, display: 'inline-flex', gap: 4, flexWrap: 'wrap' }}>
+                {f.sanctioned_lists.slice(0, 4).map(l => <Chip key={l} text={l} kind="critical" />)}
+                {f.sanctioned_lists.length > 4 ? <span style={{ color: 'var(--text-muted)' }}>+{f.sanctioned_lists.length - 4}</span> : null}
+              </span>
+            ) : null}
+          </>
+        ) : <span style={{ color: 'var(--text-muted)' }}>false</span>
+      } />
+      <FindRow k="pep" v={f.pep ? <span style={{ color: 'var(--risk-medium)' }}>true</span> : <span style={{ color: 'var(--text-muted)' }}>false</span>} />
+      {(f.top_risks || []).length ? (
+        <FindRow k="top_risks" v={
+          <span style={{ display: 'inline-flex', gap: 4, flexWrap: 'wrap' }}>
+            {f.top_risks.slice(0, 5).map(r => <Chip key={r} text={r} kind="muted" />)}
+          </span>
+        } />
+      ) : null}
+    </div>
+  );
+}
+
+function FindRow({ k, v }) {
+  return (
+    <div style={{ marginTop: 2, display: 'flex', alignItems: 'baseline', gap: 6 }}>
+      <span style={{ color: 'var(--text-muted)', width: 116, flexShrink: 0 }}>{k}:</span>
+      <span style={{ color: 'var(--text-secondary)' }}>{v ?? '—'}</span>
+    </div>
+  );
+}
+
+function Chip({ text, kind }) {
+  const palette = kind === 'critical'
+    ? { bg: 'rgba(248,81,73,0.08)', border: 'rgba(248,81,73,0.35)', fg: 'var(--risk-critical)' }
+    : { bg: 'var(--bg-elevated)', border: 'var(--border-default)', fg: 'var(--text-secondary)' };
+  return (
+    <span style={{
+      display: 'inline-flex', alignItems: 'center',
+      padding: '1px 6px', borderRadius: 2,
+      background: palette.bg, border: `1px solid ${palette.border}`,
+      color: palette.fg, fontSize: 10, letterSpacing: 0.2,
+    }}>{text}</span>
+  );
+}
+
 // ── Resolved summary ────────────────────────────────────────────────────────
 
-function ResolvedSummary({ runResult, uploadResponse, onContinue }) {
+function ResolvedSummary({ runResult, uploadResponse, runEvents = [], onContinue }) {
   const matchedSeeded = !!runResult?.matches_seeded;
+  // Full post-run trace: every row, expandable. Streaming cap doesn't apply.
+  const allRows = (runEvents || []).filter(e =>
+    e.event === 'row_resolved' || e.event === 'row_unresolved' || e.event === 'row_error'
+  );
   const resolved = runResult?.resolved ?? 0;
   // total = parsed-rows that the engine actually attempted to resolve.
   // The full sheet may have had more rows — blank-name rows are dropped
@@ -604,6 +839,26 @@ function ResolvedSummary({ runResult, uploadResponse, onContinue }) {
           padding: '10px 18px', borderRadius: 4, fontWeight: 600, fontSize: 14,
         }}>Continue to Compare →</button>
       </div>
+
+      {/* Full post-run audit trace — every row, expandable, no streaming cap. */}
+      {!matchedSeeded && allRows.length > 0 ? (
+        <div style={{ marginTop: 24 }}>
+          <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 8 }}>
+            <div>
+              <div className="mono" style={{ fontSize: 10, color: 'var(--text-muted)', letterSpacing: 1.4, textTransform: 'uppercase' }}>
+                Audit log
+              </div>
+              <div style={{ fontSize: 14, fontWeight: 500 }}>
+                Run trace · <span className="mono">{allRows.length}</span> rows
+              </div>
+            </div>
+            <div className="muted" style={{ fontSize: 11, fontStyle: 'italic' }}>
+              click any row to expand · cache files open in a new tab
+            </div>
+          </div>
+          <RunTrace rowEvents={allRows} title={null} />
+        </div>
+      ) : null}
     </div>
   );
 }
