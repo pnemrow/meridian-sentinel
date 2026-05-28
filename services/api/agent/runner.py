@@ -34,25 +34,17 @@ if str(_REPO) not in sys.path:
 
 _AGENT_RUNS_DIR = _REPO / "output" / "agent_runs"
 
-# Golden run index: question keywords → run_id
-# Primary keys match design's exact chip strings; legacy keys kept for backward compat.
+# Golden-run keyword index. Each key MUST be a direct, near-verbatim restatement
+# of one of the four chip questions. Loose substrings ("ownership gap", "highest
+# risk", "worst entity", "who owns") were removed in Pass 2 because they
+# routed unrelated questions to a canned-but-irrelevant golden replay. When in
+# doubt → no match → CACHED falls back to an honest "no cached answer" message
+# (see run_agent_cached below). Only the genuine chips get a replay.
 _GOLDEN_QUESTIONS: dict[str, str] = {
-    # Design chip strings (exact substrings)
-    "vendors can't we onboard": "golden_001",
-    "aren't on the ofac list but are still blocked": "golden_002",
-    "who actually owns belorusskaya": "golden_003",
-    "single riskiest entity": "golden_004",
-    # Legacy / partial-match fallbacks
-    "can't we onboard": "golden_001",
-    "cannot onboard": "golden_001",
-    "which entities": "golden_001",
-    "companies that aren't on the ofac": "golden_002",
-    "ownership gap": "golden_002",
-    "belorusskaya kaliynaya": "golden_003",
-    "who owns": "golden_003",
-    "riskiest entity": "golden_004",
-    "highest risk": "golden_004",
-    "worst entity": "golden_004",
+    "vendors can't we onboard":                       "golden_001",
+    "aren't on the ofac list but are still blocked":  "golden_002",
+    "who actually owns belorusskaya":                 "golden_003",
+    "single riskiest entity":                         "golden_004",
 }
 
 MODEL = "claude-sonnet-4-6"
@@ -75,10 +67,30 @@ def _find_golden_run_id(question: str) -> str | None:
 
 
 async def run_agent_cached(question: str, run_id: str | None = None) -> AsyncGenerator[str, None]:
-    """Replay a captured golden-run event stream."""
+    """
+    Replay a captured golden-run event stream when the question matches one
+    of the four chip phrasings (see _GOLDEN_QUESTIONS). Anything else streams
+    an honest "no cached answer" message — we do NOT play a wrong recording
+    back to the user.
+    """
     resolved_id = run_id or _find_golden_run_id(question)
     if not resolved_id:
-        resolved_id = "golden_001"  # default
+        # Honest fallback — stream as tokens so the front-end's existing
+        # AssistantSegments renderer handles it the same way as any answer.
+        message = (
+            "I don't have a cached answer for that question. "
+            "Switch to LIVE mode to ask freely against the active run."
+        )
+        for word in message.split(" "):
+            yield _sse("token", word + " ")
+            await asyncio.sleep(0.025)
+        yield _sse("answer_meta", {
+            "confidence": "high",
+            "sources_count": 0,
+            "tools_used": [],
+        })
+        yield _sse("done", {})
+        return
 
     path = _AGENT_RUNS_DIR / f"{resolved_id}.json"
     if not path.exists():

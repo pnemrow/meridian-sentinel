@@ -140,9 +140,12 @@ MANDATORY RULES — never violate:
 6. If a tool returns an error or no data, say so — do not invent alternative information.
 
 WORKFLOW GUIDANCE:
-- Start with compare_ofac_vs_sayari to get the full list picture.
-- For specific entities needing detail, use risk_summary (quick) or get_profile (full).
+- For a single-entity question, call resolve_entity OR risk_summary directly. Do NOT call compare
+  unless the question is about the full list.
+- For a list-level question (e.g. "which vendors can't we onboard"), call compare_ofac_vs_sayari
+  once; only enrich with risk_summary for entities you specifically need to discuss.
 - For ownership questions, use traverse_ownership.
+- Match tool count to question scope. Two tool calls is often the right answer.
 - Mention outcome categories when relevant: both_catch (screen + Sayari agree),
   sayari_only / screen_ambiguous (Sayari finds via ownership graph — the key advantage),
   matcher_miss (on SDN but screen failed — name variation issue).

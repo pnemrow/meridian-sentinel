@@ -189,7 +189,7 @@ function CoPilot({ onOpenEntity, onOpenCompare, initialState, runMode, runId = n
       <div style={{ display: 'flex', flexDirection: 'column', borderRight: '1px solid var(--border-default)' }}>
         <div ref={messagesEndRef} style={{ flex: 1, overflowY: 'auto', padding: '32px 40px', display: 'flex', flexDirection: 'column', gap: 22 }}>
           {conversation.length === 0 ? (
-            <EmptyState />
+            <EmptyState runMode={runMode} runId={runId} />
           ) : conversation.map((msg, i) => <MessageBubble key={i} msg={msg} citations={citations} onOpenEntity={onOpenEntity} onOpenCompare={onOpenCompare} />)}
           {streaming && conversation[conversation.length-1]?.role === 'assistant' && conversation[conversation.length-1].segments.length === 0 ? (
             <div className="muted" style={{ fontSize: 13, fontStyle: 'italic' }}>thinking…</div>
@@ -294,11 +294,28 @@ function CoPilot({ onOpenEntity, onOpenCompare, initialState, runMode, runId = n
 }
 
 // -------- Empty state --------
-function EmptyState() {
+function EmptyState({ runMode, runId }) {
+  // Derive run-context line from the real summary + active investigation,
+  // not a hardcoded "list_1 · 49 entities". Falls back to "Ask anything about
+  // this run." when neither is loaded yet.
+  const summary = window.RUN_SUMMARY && window.RUN_SUMMARY.data;
+  const list = window.INVESTIGATIONS || [];
+  const inv = runId
+    ? list.find(i => String(i.id) === String(runId))
+    : (list.find(i => i.hero) || list[0]);
+
+  const runLabel = inv?.name || inv?.list_ref || (runId ? 'uploaded list' : 'list_1');
+  const total    = inv?.counts?.total ?? summary?.total_input;
+  const resolved = inv?.counts?.total ?? summary?.resolved;
+  const mode     = (runMode || 'CACHED').toUpperCase();
+
+  const pillParts = [mode, runLabel];
+  if (resolved != null && total != null) pillParts.push(`${resolved} of ${total} resolved`);
+
   return (
     <div style={{ paddingTop: 60 }}>
       <div className="serif" style={{ fontSize: 36, lineHeight: 1.2, color: 'var(--text-primary)', maxWidth: 600, marginBottom: 16 }}>
-        Ask the co-pilot.
+        Ask anything about this run.
       </div>
       <div className="muted" style={{ fontSize: 15, maxWidth: 540, marginBottom: 24, lineHeight: 1.55 }}>
         Free-text questions over your screening run. Every answer cites its sources, shows the tool
@@ -307,7 +324,7 @@ function EmptyState() {
       <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 10px', border: '1px solid var(--border-default)', borderRadius: 2 }}>
         <span style={{ width: 6, height: 6, borderRadius: 999, background: 'var(--text-muted)' }} />
         <span className="mono" style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: 0.6 }}>
-          CACHED · recorded real run · list_1 · 49 entities resolved
+          {pillParts.join(' · ')}
         </span>
       </div>
     </div>
@@ -349,21 +366,20 @@ function MessageBubble({ msg, citations, onOpenEntity, onOpenCompare }) {
 }
 
 // Inline action chips that hand off the analyst into the payoff (the destination).
-function AnswerActions({ onOpenEntity, onOpenCompare }) {
-  const Chip = ({ onClick, children, primary }) => (
-    <button onClick={onClick} style={{
-      background: primary ? 'var(--accent)' : 'transparent',
-      color: primary ? '#0A1628' : 'var(--accent)',
-      border: `1px solid ${primary ? 'var(--accent)' : 'var(--accent-dim)'}`,
-      padding: '6px 12px', borderRadius: 4, fontSize: 12,
-      fontWeight: 600,
-      display: 'inline-flex', alignItems: 'center', gap: 6,
-    }}>{children}</button>
-  );
+// In Pass 2 the entity-specific "→ Open ownership graph (Belorusskaya)" chip
+// was removed — it hardcoded one entity_id regardless of which run was active
+// or what the answer was about. The reconciliation handoff is the one chip
+// that's always honest: every answer is about the current run's compare.
+function AnswerActions({ onOpenCompare }) {
   return (
     <div style={{ marginTop: 14, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-      <Chip primary onClick={onOpenCompare}>→ See the reconciliation</Chip>
-      <Chip onClick={() => onOpenEntity && onOpenEntity("BSsUPVlxsICOW4GCjb4fqQ")}>→ Open ownership graph (Belorusskaya)</Chip>
+      <button onClick={onOpenCompare} style={{
+        background: 'var(--accent)', color: '#0A1628',
+        border: '1px solid var(--accent)',
+        padding: '6px 12px', borderRadius: 4, fontSize: 12,
+        fontWeight: 600,
+        display: 'inline-flex', alignItems: 'center', gap: 6,
+      }}>→ See the reconciliation</button>
     </div>
   );
 }
