@@ -67,26 +67,43 @@ window.SENTINEL_LIVE_FETCHED = window.SENTINEL_LIVE_FETCHED || {};
   }
 
   // ── 3. Investigations list ────────────────────────────────────────────────
+  // Backend returns {"investigations": [{ id, name, list_ref, source,
+  // source_detail, status, created_at, counts:{total,flagged,cleared,
+  // escalated,blocked,pending}, ownership_gap_count }, …]}.
   try {
     const resp = await fetch(`${base}/api/investigations`);
     if (resp.ok) {
       const json = await resp.json();
-      // Backend returns array of investigation objects; normalize to fixture shape
-      if (Array.isArray(json) && json.length > 0) {
-        window.INVESTIGATIONS = json.map((inv, i) => ({
-          id: inv.id,
-          name: inv.name || inv.list_ref,
-          list_ref: inv.list_ref,
-          source: inv.list_source || 'Manual upload',
-          source_kind: inv.list_source?.toLowerCase().includes('sftp') ? 'sftp' : 'manual',
-          created_at: inv.created_at ? inv.created_at.slice(0, 10) : '2026-05-27',
-          entity_count: inv.entity_count || 0,
-          sanctioned_count: inv.sanctioned_count || 0,
-          ownership_gap_count: inv.ownership_gap_count || 0,
-          status: inv.status || 'pending_review',
-          reviewer: inv.reviewer || null,
-          hero: i === 0, // first from backend is the active one
-        }));
+      const list = Array.isArray(json) ? json : (json && json.investigations);
+      if (Array.isArray(list) && list.length > 0) {
+        window.INVESTIGATIONS = list.map((inv, i) => {
+          const sourceLabel = inv.source_detail || inv.source || 'Manual upload';
+          const sourceLower = (inv.source || '').toLowerCase();
+          const detailLower = (inv.source_detail || '').toLowerCase();
+          const isSftp = sourceLower.includes('sftp') || detailLower.includes('sftp');
+          const counts = inv.counts || {};
+          return {
+            id: inv.id,
+            name: inv.name || inv.list_ref || sourceLabel,
+            list_ref: inv.list_ref || sourceLabel,
+            source: sourceLabel,
+            source_kind: isSftp ? 'sftp' : 'manual',
+            created_at: inv.created_at ? String(inv.created_at).slice(0, 10) : '',
+            entity_count: counts.total ?? 0,
+            // "Findings" semantics: flagged maps to sanctioned-style findings.
+            sanctioned_count: counts.flagged ?? 0,
+            ownership_gap_count: inv.ownership_gap_count ?? 0,
+            status: inv.status || 'pending_review',
+            reviewer: inv.reviewer || null,
+            // counts surfaced as nested for components that prefer the
+            // backend shape directly:
+            counts,
+            // First entry (newest from the backend ordering) is the active hero
+            // when the user is inside an investigation without an explicit runId.
+            hero: i === 0,
+          };
+        });
+        window.SENTINEL_LIVE_FETCHED.INVESTIGATIONS = true;
         console.log('[sentinel/api] investigations loaded from backend:', window.INVESTIGATIONS.length);
       }
     }
