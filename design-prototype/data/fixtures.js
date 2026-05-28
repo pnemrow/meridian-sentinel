@@ -770,30 +770,11 @@ const GRAPH_BELORUSSKAYA = {
   source: src("/v1/entity/BSsUPVlxsICOW4GCjb4fqQ", "data[].target.sanctioned", "output/raw/traversal/BSsUPVlxsICOW4GCjb4fqQ.json", "GET /v1/traversal/ownership"),
 };
 
-// "Expanded" set of neighbour nodes the user can reveal — keeps the gap-collapsed default honest
-const GRAPH_BELORUSSKAYA_EXPANDED_NODES = [
-  // a thin slice of the broader network (50 of 3,666 paths)
-  { id: "rt01RTCxxxxxxxxxxxxxxxxxQ", label: "State Corporation Rostec", type: "company", country: "RUS", sanctioned: true,  pep: false },
-  { id: "ua01UACxxxxxxxxxxxxxxxxxQ", label: "United Aircraft Corp.", type: "company", country: "RUS", sanctioned: true,  pep: false },
-  { id: "blr_minpotash_xxxxxxxxxxQ", label: "Ministry of Industry (BLR)", type: "company", country: "BLR", sanctioned: false, pep: false },
-  { id: "blk_belaruskali_xxxxxxxQ", label: "Belaruskali OAO", type: "company", country: "BLR", sanctioned: true,  pep: false },
-  { id: "ru_uralkali_xxxxxxxxxxxQ", label: "Uralkali PJSC", type: "company", country: "RUS", sanctioned: false, pep: false },
-  { id: "cy_potashco_holding_xxxQ", label: "Potash Holding Ltd (CY)", type: "company", country: "CYP", sanctioned: false, pep: false },
-  { id: "cy_belintershop_xxxxxxxQ", label: "BPC Trading (CY)", type: "company", country: "CYP", sanctioned: false, pep: false },
-  { id: "che_bpcfin_xxxxxxxxxxxxQ", label: "BPC Finance AG (CHE)", type: "company", country: "CHE", sanctioned: false, pep: false },
-  { id: "ru_lukoil_xxxxxxxxxxxxxQ", label: "Lukoil PJSC", type: "company", country: "RUS", sanctioned: false, pep: false },
-  { id: "kerimov_holding_grp_xxxQ", label: "Kerimov Holding Group", type: "company", country: "RUS", sanctioned: true, pep: false },
-];
-const GRAPH_BELORUSSKAYA_EXPANDED_EDGES = [
-  { source: "blr_minpotash_xxxxxxxxxxQ", target: "blk_belaruskali_xxxxxxxQ", relationship: "controls", percentage: 100, former: false, last_observed: "2026-01-01" },
-  { source: "blk_belaruskali_xxxxxxxQ", target: "BSsUPVlxsICOW4GCjb4fqQ", relationship: "has_shareholder", percentage: 45, former: false, last_observed: "2026-03-26" },
-  { source: "ru_uralkali_xxxxxxxxxxxQ", target: "BSsUPVlxsICOW4GCjb4fqQ", relationship: "has_shareholder", percentage: 45, former: false, last_observed: "2026-03-26" },
-  { source: "cy_potashco_holding_xxxQ", target: "BSsUPVlxsICOW4GCjb4fqQ", relationship: "has_shareholder", percentage: 10, former: false, last_observed: "2026-03-26" },
-  { source: "BSsUPVlxsICOW4GCjb4fqQ", target: "cy_belintershop_xxxxxxxQ", relationship: "controls", percentage: 100, former: false, last_observed: "2025-09-01" },
-  { source: "BSsUPVlxsICOW4GCjb4fqQ", target: "che_bpcfin_xxxxxxxxxxxxQ", relationship: "controls", percentage: 100, former: false, last_observed: "2025-09-01" },
-  { source: "kerimov_holding_grp_xxxQ", target: "6lxsLluBad0ijzroLtLqTg", relationship: "controlled_by", percentage: 100, former: false, last_observed: "2025-12-01" },
-  { source: "rt01RTCxxxxxxxxxxxxxxxxxQ", target: "ua01UACxxxxxxxxxxxxxxxxxQ", relationship: "has_shareholder", percentage: 96, former: false, last_observed: "2026-01-01" },
-];
+// NOTE: GRAPH_BELORUSSKAYA_EXPANDED_NODES / _EDGES were removed (real-or-nothing rule):
+// they were synthetic neighbour records with placeholder IDs (e.g. blk_belaruskali_xxxxxxxQ)
+// appended on the "expand to full network" toggle. The toggle has been removed from
+// graph.jsx, and any additional paths must come from real /tools/traverse_ownership
+// pagination (the partial-network banner exposes explored_count + next/offset).
 
 // ============================================================
 // A.5 — Co-Pilot golden questions + sample event stream
@@ -889,11 +870,182 @@ Object.assign(window, {
   ENTITY_SBERBANK,
   ENTITY_INDEX,
   GRAPH_BELORUSSKAYA,
-  GRAPH_BELORUSSKAYA_EXPANDED_NODES,
-  GRAPH_BELORUSSKAYA_EXPANDED_EDGES,
   COPILOT_GOLDEN_QUESTIONS,
   COPILOT_SAMPLE_STREAM,
   SEEDED_LIST_PREVIEW,
   UPLOAD_SUMMARY,
   COLUMN_HINTS,
+});
+
+// ============================================================
+// NEW — Investigations (workflow), Integrations catalog, Dispositions
+// ============================================================
+
+// Investigations list — each is a screening run with workflow state
+const INVESTIGATIONS = [
+  {
+    id: "inv_2026_q1_vendor",
+    name: "Q1 2026 Vendor Onboarding",
+    list_ref: "list_1",
+    source: "Manual upload",
+    source_kind: "manual",
+    created_at: "2026-05-27",
+    entity_count: 50,
+    sanctioned_count: 45,
+    ownership_gap_count: 4,
+    status: "in_review",
+    reviewer: { initials: "PV", name: "P. Volkov" },
+    hero: true, // the demo path
+  },
+  {
+    id: "inv_procurement_feed",
+    name: "Procurement feed",
+    list_ref: "feed_2026-05-27",
+    source: "SFTP integration",
+    source_kind: "sftp",
+    created_at: "2026-05-27",
+    entity_count: 18,
+    sanctioned_count: 2,
+    ownership_gap_count: 0,
+    status: "pending_review",
+    reviewer: null,
+    just_arrived: true,
+  },
+  {
+    id: "inv_swiss_intermediary",
+    name: "Swiss Intermediary Audit",
+    list_ref: "audit_apr_2026",
+    source: "Manual upload",
+    source_kind: "manual",
+    created_at: "2026-04-12",
+    entity_count: 22,
+    sanctioned_count: 1,
+    ownership_gap_count: 0,
+    status: "cleared",
+    reviewer: { initials: "AM", name: "A. Müller" },
+  },
+  {
+    id: "inv_apac_distribution",
+    name: "APAC Distribution Partners · Q4",
+    list_ref: "apac_q4_2025",
+    source: "Manual upload",
+    source_kind: "manual",
+    created_at: "2025-11-08",
+    entity_count: 64,
+    sanctioned_count: 0,
+    ownership_gap_count: 0,
+    status: "cleared",
+    reviewer: { initials: "RS", name: "R. Singh" },
+  },
+];
+
+// Integrations catalog
+const INTEGRATIONS = {
+  ingestion: [
+    { id: "sftp",       name: "SFTP",              purpose: "Drop CSV/XLSX vendor lists into a watched folder; Sentinel picks them up.", status: "active", note: "powers the Procurement feed row" },
+    { id: "snowflake",  name: "Snowflake",          purpose: "Query a vendor table on a schedule; ingest deltas.",                        status: "available" },
+    { id: "databricks", name: "Databricks",         purpose: "Read counterparty Delta tables for periodic re-screening.",                  status: "available" },
+    { id: "s3",         name: "Amazon S3",          purpose: "Watch a bucket prefix for new list drops.",                                  status: "available" },
+    { id: "ariba",      name: "SAP Ariba / Coupa",  purpose: "Pull suppliers + change events from procurement source-of-record.",          status: "available" },
+  ],
+  outbound: [
+    { id: "wb_snowflake",  name: "Snowflake (write-back)",  purpose: "Persist screening outcomes + dispositions back into the warehouse.",   status: "available" },
+    { id: "wb_databricks", name: "Databricks (write-back)", purpose: "Append rows to a compliance Delta table.",                             status: "available" },
+    { id: "rest_webhook",  name: "REST API / Webhook",      purpose: "POST outcomes to a downstream system as soon as they're decided.",     status: "available" },
+    { id: "servicenow",    name: "ServiceNow / Jira",       purpose: "Auto-file an investigation ticket on Escalated/Blocked dispositions.", status: "available" },
+  ],
+  identity: [
+    { id: "okta",  name: "Okta SSO",           purpose: "Sign-in via your existing IdP; user roles map to reviewer/approver.", status: "available" },
+    { id: "entra", name: "Microsoft Entra ID", purpose: "Same — SAML/OIDC.",                                                    status: "available" },
+  ],
+};
+
+// Dispositions — mutable in-memory store. entity_id -> { status, reviewer, decided_at, rationale }
+const DISPOSITIONS = {
+  // Seed one blocked example so the UI shows a non-empty disposition somewhere
+  "5wVHdujAfKLkHO7efPnAjQ": { // Sukhoi
+    status: "blocked",
+    reviewer: { initials: "PV", name: "P. Volkov" },
+    decided_at: "2026-05-27T10:14:00Z",
+    rationale: "Directly designated on OFAC SDN; UAC ownership confirms parent control. No path to onboard.",
+  },
+};
+
+const DISPOSITION_STATUSES = {
+  pending_review: { label: "Pending review", color: "var(--risk-medium)",   bg: "rgba(210,153,34,0.08)" },
+  in_review:      { label: "In review",      color: "var(--accent)",        bg: "rgba(201,169,97,0.08)" },
+  cleared:        { label: "Cleared",        color: "var(--risk-low)",      bg: "rgba(63,185,80,0.08)" },
+  escalated:      { label: "Escalated",      color: "var(--risk-high)",     bg: "rgba(219,109,40,0.08)" },
+  blocked:        { label: "Blocked",        color: "var(--risk-critical)", bg: "rgba(248,81,73,0.08)" },
+};
+
+// Per-entity API payload (representative — what a downstream system would consume)
+function buildEntityPayload(entityId) {
+  const row = COMPARE_ROWS.find(r => r.entity_id === entityId);
+  const ent = ENTITY_INDEX[entityId];
+  const rs = ent?.risk_summary?.data;
+  const disp = DISPOSITIONS[entityId] || null;
+  const isOwnership = row?.is_ownership_exposed;
+  return {
+    input_name: row?.input_name || rs?.input_name,
+    screened_at: "2026-05-27T08:14:00Z",
+    run_id: "list_1",
+    list_source: "Manual upload",
+    resolved: {
+      entity_id: entityId,
+      label: row?.match_label || rs?.match_label,
+      country: row?.countries?.[0] || rs?.countries?.[0],
+      confidence: rs?.confidence || "high",
+      warn_verify: rs?.warn_verify || false,
+    },
+    screening: {
+      ofac_sdn: {
+        hit: row?.ofac_hit || false,
+        directly_designated: row?.is_directly_designated || false,
+        sdn_id: row?.ofac_sdn_id || null,
+        programs: row?.ofac_programs || [],
+        match_basis: row?.ofac_hit ? "fuzzy_name_match@0.85" : null,
+      },
+      ownership_exposure: {
+        exposed: !!isOwnership,
+        factor: row?.ownership_factor || null,
+        rule: "OFAC 50% (31 CFR 501.801)",
+        path_to_sanctioned_owner: entityId === "BSsUPVlxsICOW4GCjb4fqQ"
+          ? [
+              { id: "6lxsLluBad0ijzroLtLqTg", label: "Suleyman Abusaidovich Kerimov", relationship: "has_shareholder", former: false, last_observed: "2026-03-26" },
+              { id: "BSsUPVlxsICOW4GCjb4fqQ", label: "Belarusian Potash Company",     relationship: null,             former: null, last_observed: null },
+            ]
+          : [],
+      },
+      other_sanctions: rs?.sanctioned_lists?.filter(l => l !== 'sanctioned_usa_ofac_sdn') || [],
+      risk_level: rs?.risk_level || "medium",
+      outcome: row?.outcome || "unresolved",
+    },
+    disposition: disp ? {
+      status: disp.status,
+      reviewer: disp.reviewer.name,
+      decided_at: disp.decided_at,
+      rationale: disp.rationale,
+    } : { status: "pending_review", reviewer: null, decided_at: null, rationale: null },
+    sources: [
+      { entity_url: `/v1/entity/${entityId}`, raw_field_path: "data.risk", cache_file: `output/raw/${entityId}.json` },
+      ...(entityId === "BSsUPVlxsICOW4GCjb4fqQ" ? [
+        { entity_url: "/v1/entity/6lxsLluBad0ijzroLtLqTg", raw_field_path: "data[].target.sanctioned", cache_file: "output/raw/traversal/BSsUPVlxsICOW4GCjb4fqQ.json" }
+      ] : []),
+    ],
+  };
+}
+
+// NOTE: buildLiveGraphFor() was removed (real-or-nothing rule). It used to mint
+// synthetic owner/subsidiary nodes for non-Belorusskaya entities from a hand-coded
+// TEMPLATES dict (e.g. ru_cbr_xxxxxxxxxxxxxxxxxQ). The frontend now always routes
+// through POST /tools/traverse_ownership; the backend serves the 9 cached marquee
+// traversals from output/raw/traversal/* and goes live to Sayari for others.
+
+Object.assign(window, {
+  INVESTIGATIONS,
+  INTEGRATIONS,
+  DISPOSITIONS,
+  DISPOSITION_STATUSES,
+  buildEntityPayload,
 });

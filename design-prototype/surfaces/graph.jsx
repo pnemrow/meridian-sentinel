@@ -3,8 +3,19 @@
  * SVG-based; hand-positioned for control. Hover edges/nodes for detail.
  */
 
-function OwnershipGraph({ entityId, onOpenEntity }) {
-  const graph = window.GRAPH_BELORUSSKAYA;
+function OwnershipGraph({ entityId, onOpenEntity, graphData, trail, currentLabel }) {
+  // graphData must be supplied by the caller (LiveGraphFetcher in entity.jsx).
+  // We no longer fall back to a window.GRAPH_BELORUSSKAYA fixture — that masked
+  // missing real data and risked rendering Belorusskaya's network for every entity.
+  const graph = graphData;
+  if (!graph || !graph.data) {
+    return (
+      <div style={{ background: 'var(--bg-surface)', border: '1px solid var(--border-default)', borderRadius: 6, padding: 24, color: 'var(--text-muted)', fontSize: 13 }}>
+        No graph data supplied to OwnershipGraph (this component requires a graphData prop from a real backend fetch).
+      </div>
+    );
+  }
+  const isMarquee = graph.data.root_entity_id === "BSsUPVlxsICOW4GCjb4fqQ";
   const { nodes: baseNodes, edges: baseEdges, explored_count, shown, next, sanction_hits } = graph.data;
 
   const [expanded, setExpanded] = useState(false);
@@ -13,38 +24,61 @@ function OwnershipGraph({ entityId, onOpenEntity }) {
   const [hoverNode, setHoverNode] = useState(null);
   const [focusNode, setFocusNode] = useState(null);
 
-  // Deterministic positions for the marquee graph
-  const POS = {
-    "BSsUPVlxsICOW4GCjb4fqQ":     { x: 480, y: 320 }, // root (center)
-    "6lxsLluBad0ijzroLtLqTg":     { x: 720, y: 150 }, // Kerimov (current — top-right)
-    "o6TuHzcOzX2jcRRIP9MQ3g":     { x: 760, y: 360 }, // Skurov
-    "gGRzPXe6TBs4vdzSh6HFng":     { x: 700, y: 510 }, // Prokhorov
-    "j7QjfVQ_BRp8srxl1eVTIQ":     { x: 220, y: 480 }, // Mutsoev
-    "dn2EQBF260mfXVpfJKNfhw":     { x: 240, y: 200 }, // Metafrax
-    // expanded
-    "blk_belaruskali_xxxxxxxQ":   { x: 480, y: 80  },
-    "blr_minpotash_xxxxxxxxxxQ":  { x: 480, y: -40 },
-    "ru_uralkali_xxxxxxxxxxxQ":   { x: 120, y: 100 },
-    "cy_potashco_holding_xxxQ":   { x: 840, y: 230 },
-    "cy_belintershop_xxxxxxxQ":   { x: 360, y: 560 },
-    "che_bpcfin_xxxxxxxxxxxxQ":   { x: 600, y: 580 },
-    "kerimov_holding_grp_xxxQ":   { x: 880, y: 60  },
-    "rt01RTCxxxxxxxxxxxxxxxxxQ":  { x: 100, y: 320 },
-    "ua01UACxxxxxxxxxxxxxxxxxQ":  { x: -10, y: 230 },
-    "ru_lukoil_xxxxxxxxxxxxxQ":   { x: 60,  y: 600 },
-  };
+  // Position map: hand-placed for the marquee Belorusskaya graph, algorithmic otherwise.
+  const POS = useMemo(() => {
+    if (isMarquee) {
+      return {
+        "BSsUPVlxsICOW4GCjb4fqQ":     { x: 480, y: 320 },
+        "6lxsLluBad0ijzroLtLqTg":     { x: 720, y: 150 },
+        "o6TuHzcOzX2jcRRIP9MQ3g":     { x: 760, y: 360 },
+        "gGRzPXe6TBs4vdzSh6HFng":     { x: 700, y: 510 },
+        "j7QjfVQ_BRp8srxl1eVTIQ":     { x: 220, y: 480 },
+        "dn2EQBF260mfXVpfJKNfhw":     { x: 240, y: 200 },
+        "blk_belaruskali_xxxxxxxQ":   { x: 480, y: 80  },
+        "blr_minpotash_xxxxxxxxxxQ":  { x: 480, y: -40 },
+        "ru_uralkali_xxxxxxxxxxxQ":   { x: 120, y: 100 },
+        "cy_potashco_holding_xxxQ":   { x: 840, y: 230 },
+        "cy_belintershop_xxxxxxxQ":   { x: 360, y: 560 },
+        "che_bpcfin_xxxxxxxxxxxxQ":   { x: 600, y: 580 },
+        "kerimov_holding_grp_xxxQ":   { x: 880, y: 60  },
+        "rt01RTCxxxxxxxxxxxxxxxxxQ":  { x: 100, y: 320 },
+        "ua01UACxxxxxxxxxxxxxxxxxQ":  { x: -10, y: 230 },
+        "ru_lukoil_xxxxxxxxxxxxxQ":   { x: 60,  y: 600 },
+      };
+    }
+    // Algorithmic placement for non-marquee graphs.
+    // root at center. Owners (edge → root) arc on top. Subsidiaries (edge root → x) arc on bottom.
+    const root = graph.data.root_entity_id;
+    const center = { x: 480, y: 320 };
+    const map = { [root]: center };
+    const owners = baseEdges.filter(e => e.target === root).map(e => e.source);
+    const subs   = baseEdges.filter(e => e.source === root).map(e => e.target);
+    const placeArc = (ids, baseY, radius) => {
+      const n = ids.length;
+      ids.forEach((id, i) => {
+        const t = n === 1 ? 0.5 : i / (n - 1);
+        const angle = (t - 0.5) * Math.PI * 0.85;
+        map[id] = { x: center.x + Math.sin(angle) * radius, y: baseY - Math.cos(angle) * (radius * 0.55) };
+      });
+    };
+    placeArc(owners, center.y - 100, 260);
+    placeArc(subs,   center.y + 380, 260);
+    // any orphans (rare): grid them
+    baseNodes.forEach(n => { if (!map[n.id]) map[n.id] = { x: center.x + 240, y: center.y + 240 }; });
+    return map;
+  }, [isMarquee, baseNodes, baseEdges, graph.data.root_entity_id]);
 
-  const allNodes = useMemo(() => {
-    return expanded ? [...baseNodes, ...window.GRAPH_BELORUSSKAYA_EXPANDED_NODES] : baseNodes;
-  }, [expanded, baseNodes]);
-  const allEdges = useMemo(() => {
-    return expanded ? [...baseEdges, ...window.GRAPH_BELORUSSKAYA_EXPANDED_EDGES] : baseEdges;
-  }, [expanded, baseEdges]);
+  // The "expand to full network" toggle previously appended fixture-only synthetic
+  // nodes (GRAPH_BELORUSSKAYA_EXPANDED_*). Those have been removed to honor the
+  // "never invented nodes" rule — every node here is a real Sayari record from the
+  // backend traversal cache. The honest partial-network banner below already shows
+  // "showing N of explored_count paths" and the explored_count comes from the API.
+  const allNodes = baseNodes;
+  const allEdges = baseEdges;
 
   const visibleNodes = useMemo(() => {
     if (!filterSanctionedOnly) return allNodes;
     const sancIds = new Set(allNodes.filter(n => n.sanctioned).map(n => n.id));
-    // include root + all sanctioned-path nodes (and any node on the direct path)
     sancIds.add(entityId);
     return allNodes.filter(n => sancIds.has(n.id));
   }, [allNodes, filterSanctionedOnly, entityId]);
@@ -65,8 +99,12 @@ function OwnershipGraph({ entityId, onOpenEntity }) {
       borderRadius: 6,
       overflow: 'hidden',
       display: 'flex', flexDirection: 'column',
-      minHeight: 720,
     }}>
+      {/* Trail: investigation navigation */}
+      {trail && trail.length > 0 && window.GraphTrail
+        ? <window.GraphTrail trail={trail} onOpenEntity={onOpenEntity} currentLabel={currentLabel} />
+        : null}
+
       {/* Header */}
       <div style={{
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
@@ -77,14 +115,15 @@ function OwnershipGraph({ entityId, onOpenEntity }) {
             Ownership network
           </div>
           <div style={{ fontSize: 14, color: 'var(--text-secondary)', marginTop: 2 }}>
-            {expanded ? 'Full network' : 'Collapsed to the sanctioned-ownership path'}
+            {isMarquee ? (expanded ? 'Full network' : 'Collapsed to the sanctioned-ownership path') : 'Live-fetched · top relationships'}
           </div>
         </div>
         <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
           <ToggleBtn active={filterSanctionedOnly} onClick={() => setFilterSanctionedOnly(v => !v)}>only sanctioned paths</ToggleBtn>
-          <ToggleBtn active={expanded} onClick={() => setExpanded(v => !v)} primary>
-            {expanded ? 'collapse to gap' : 'expand to full network'}
-          </ToggleBtn>
+          {/* "Expand to full network" removed: the previous expansion appended
+              synthetic fixture nodes, which violated the "never invented nodes"
+              rule. Real pagination via the partial-network "load more" affordance
+              below remains the honest path to additional records. */}
         </div>
       </div>
 
@@ -109,9 +148,8 @@ function OwnershipGraph({ entityId, onOpenEntity }) {
       </div>
 
       {/* Graph SVG */}
-      <div style={{ flex: 1, position: 'relative', background: 'radial-gradient(ellipse at center, #0E1B30 0%, var(--bg-surface) 100%)', minHeight: 480 }}>
+      <div style={{ position: 'relative', background: 'radial-gradient(ellipse at center, #0E1B30 0%, var(--bg-surface) 100%)', aspectRatio: '7 / 5' }}>
         <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" style={{ width: '100%', height: '100%', display: 'block' }}>
-          {/* faint grid */}
           <defs>
             <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
               <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#152339" strokeWidth="0.5" />
@@ -149,12 +187,10 @@ function OwnershipGraph({ entityId, onOpenEntity }) {
             const marker = isSanctionPath ? 'url(#arrowRed)' : (color === 'var(--accent)' ? 'url(#arrowGold)' : 'url(#arrow)');
             const dx = b.x - a.x, dy = b.y - a.y;
             const mid = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
-            // gentle curve
             const curve = Math.min(40, Math.hypot(dx, dy) / 6);
             const nx = -dy / Math.hypot(dx, dy) * curve;
             const ny =  dx / Math.hypot(dx, dy) * curve;
             const cx2 = mid.x + nx, cy2 = mid.y + ny;
-            // shorten endpoints so the arrow head doesn't overlap the node
             const offset = 26;
             const len = Math.hypot(dx, dy);
             const ux = dx / len, uy = dy / len;
@@ -171,7 +207,6 @@ function OwnershipGraph({ entityId, onOpenEntity }) {
                   strokeDasharray={isFormer ? "5 4" : null}
                   markerEnd={marker}
                 />
-                {/* edge label on hover */}
                 {isHover ? (
                   <g transform={`translate(${cx2 + 6}, ${cy2 - 6})`}>
                     <rect x="0" y="-14" width={140} height={isFormer ? 42 : 30} fill="#243149" stroke="#2A3854" rx="3" />
@@ -205,22 +240,17 @@ function OwnershipGraph({ entityId, onOpenEntity }) {
                 onClick={() => { if (!isRoot && n.country) setFocusNode(focusNode === n.id ? null : n.id); }}
                 style={{ cursor: isRoot ? 'default' : 'pointer' }}
               >
-                {/* halo */}
                 {n.sanctioned ? <circle r={r + 14} fill="url(#sancHalo)" /> : null}
                 {n.pep && !n.sanctioned ? <circle r={r + 12} fill="url(#pepRing)" /> : null}
-                {/* outer ring */}
                 {isRoot ? <circle r={r + 6} fill="none" stroke="var(--accent)" strokeWidth="1.5" strokeDasharray="3 3" /> : null}
-                {/* node body */}
                 <circle r={r}
                   fill={isRoot ? 'var(--bg-elevated)' : (n.type === 'person' ? '#1F2A40' : 'var(--bg-elevated)')}
                   stroke={n.sanctioned ? 'var(--risk-critical)' : (n.pep ? 'var(--risk-medium)' : 'var(--border-default)')}
                   strokeWidth={n.sanctioned ? 2 : 1.2}
                 />
-                {/* glyph */}
                 <text textAnchor="middle" dy="4" fill={n.sanctioned ? 'var(--risk-critical)' : (n.pep ? 'var(--risk-medium)' : 'var(--text-secondary)')} fontFamily="JetBrains Mono, monospace" fontSize={isRoot ? 16 : 13}>
                   {n.type === 'person' ? '◆' : '■'}
                 </text>
-                {/* label */}
                 <g transform={`translate(0, ${r + 18})`}>
                   <text textAnchor="middle" fill={isRoot ? 'var(--accent)' : 'var(--text-primary)'} fontSize={isRoot ? 13 : 12} fontWeight={isRoot ? 600 : 500} fontFamily="Inter, sans-serif">
                     {truncate(n.label, 24)}
@@ -231,7 +261,6 @@ function OwnershipGraph({ entityId, onOpenEntity }) {
                     </text>
                   ) : null}
                 </g>
-                {/* root flag */}
                 {isRoot ? (
                   <g transform="translate(0, -38)">
                     <rect x="-22" y="-9" width="44" height="16" rx="2" fill="var(--accent)" />
@@ -241,15 +270,36 @@ function OwnershipGraph({ entityId, onOpenEntity }) {
               </g>
             );
           })}
-        </svg>
 
-        {/* Focus card overlay */}
-        {focusNode ? <NodeFocusCard
-          node={allNodes.find(n => n.id === focusNode)}
-          edges={allEdges.filter(e => e.source === focusNode || e.target === focusNode)}
-          onClose={() => setFocusNode(null)}
-          onOpenEntity={onOpenEntity}
-        /> : null}
+          {/* Focus card — anchored to the clicked node via foreignObject */}
+          {focusNode ? (() => {
+            const node = allNodes.find(n => n.id === focusNode);
+            const p = POS[focusNode];
+            if (!node || !p) return null;
+            const r = node.id === entityId ? 22 : (node.sanctioned ? 16 : 14);
+            const cardW = 280;
+            const cardH = 210;
+            const [vbX, vbY, vbW, vbH] = viewBox.split(' ').map(Number);
+            const aboveY = p.y - r - 12 - cardH;
+            const placeAbove = aboveY > vbY + 8;
+            const y = placeAbove ? aboveY : p.y + r + 12;
+            let x = p.x - cardW / 2;
+            if (x < vbX + 8) x = vbX + 8;
+            if (x + cardW > vbX + vbW - 8) x = vbX + vbW - 8 - cardW;
+            return (
+              <foreignObject x={x} y={y} width={cardW} height={cardH} style={{ overflow: 'visible' }}>
+                <div xmlns="http://www.w3.org/1999/xhtml" style={{ width: '100%' }}>
+                  <NodeFocusCard
+                    node={node}
+                    edges={allEdges.filter(e => e.source === focusNode || e.target === focusNode)}
+                    onClose={() => setFocusNode(null)}
+                    onOpenEntity={onOpenEntity}
+                  />
+                </div>
+              </foreignObject>
+            );
+          })() : null}
+        </svg>
       </div>
 
       {/* Footer: legend + sanction-hits */}
@@ -322,15 +372,15 @@ function LegendDot({ color, label, halo }) {
   );
 }
 
-// Focus card for a node — quick details + jump to that entity
+// Focus card for a node — quick details + jump to that entity.
 function NodeFocusCard({ node, edges, onClose, onOpenEntity }) {
   if (!node) return null;
   return (
     <div style={{
-      position: 'absolute', right: 16, top: 16,
-      width: 280,
+      width: '100%',
       background: 'var(--bg-elevated)', border: '1px solid var(--border-default)', borderRadius: 6,
       padding: 14, fontSize: 12,
+      boxShadow: '0 8px 24px rgba(0,0,0,0.35)',
     }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8, marginBottom: 8 }}>
         <div>
