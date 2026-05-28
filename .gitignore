@@ -9,3 +9,5 @@ services/api/data/sdn.xml
 services/api/data/sdn_meta.json
 # Local backups taken before re-captures, not source of truth
 output/agent_runs.bak-*/
+# Per-upload runs: ~50MB each (50 raw Sayari responses), regenerated on demand
+output/runs/
