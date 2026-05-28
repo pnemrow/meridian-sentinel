@@ -30,7 +30,8 @@ from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse
+from fastapi.responses import FileResponse, StreamingResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 # ── Path setup ────────────────────────────────────────────────────────────────
@@ -38,6 +39,14 @@ _HERE = Path(__file__).resolve().parent
 _REPO = _HERE.parents[1]
 if str(_REPO) not in sys.path:
     sys.path.insert(0, str(_REPO))
+
+# Load .env from repo root (override=True so newly populated values win over
+# previously-empty shell exports; no-op if file missing or python-dotenv absent)
+try:
+    from dotenv import load_dotenv  # type: ignore[import]
+    load_dotenv(_REPO / ".env", override=True)
+except ImportError:
+    pass
 
 from packages.engine import EntityCache
 
@@ -129,6 +138,18 @@ app.add_middleware(
 
 # ── Routers ───────────────────────────────────────────────────────────────────
 app.include_router(investigations_router)
+
+
+# ── Static front-end (design-prototype mounted at /ui/) ──────────────────────
+_FRONTEND_DIR = _REPO / "design-prototype"
+if _FRONTEND_DIR.exists():
+    app.mount("/ui", StaticFiles(directory=str(_FRONTEND_DIR), html=True), name="ui")
+
+    from fastapi.responses import RedirectResponse
+
+    @app.get("/", include_in_schema=False)
+    def _root_redirect():
+        return RedirectResponse(url="/ui/")
 
 
 # ── Request / response models ─────────────────────────────────────────────────
@@ -271,6 +292,32 @@ def get_profile(entity_id: str):
     return _result(result)
 
 
+@app.get("/tools/raw_profile/{entity_id}")
+def raw_profile(entity_id: str):
+    """
+    Return the cached raw Sayari API response for an entity. Exposes the
+    fields the Profile dataclass omits (identifiers, the source_count map,
+    full risk metadata) so the front-end can render Identity Evidence and
+    feed-broken-down Sources without inventing data.
+    """
+    cache = _get_cache()
+    try:
+        raw = cache.get_entity_raw(entity_id)
+    except (FileNotFoundError, KeyError):
+        raw = None
+    if raw is None:
+        raise HTTPException(404, f"No cached raw profile for {entity_id}")
+    return {
+        "data": raw,
+        "source": {
+            "entity_url": f"/v1/entity/{entity_id}",
+            "raw_field_path": "data",
+            "cache_file": cache.cache_file_path(entity_id),
+            "api_endpoint": "GET /v1/entity/{id} (cached)",
+        },
+    }
+
+
 @app.post("/tools/traverse_ownership")
 def traverse_ownership(req: TraverseRequest):
     """Walk the ownership graph from entity_id. Cache-first for 8 marquee entities."""
@@ -324,6 +371,31 @@ def generate_briefing(req: BriefingRequest):
     """Render a compliance briefing (HTML; PDF if WeasyPrint installed)."""
     result = generate_briefing_tool(entity_id=req.entity_id, cache=_get_cache())
     return _result(result)
+
+
+@app.get("/tools/generate_briefing/{entity_id}/download")
+def generate_briefing_download(entity_id: str):
+    """
+    Stream the briefing back as an attachment for the browser to download.
+    Returns application/pdf when WeasyPrint is available, text/html otherwise.
+    The browser's filename is derived from the entity_id.
+    """
+    result = generate_briefing_tool(entity_id=entity_id, cache=_get_cache())
+    data = result.data
+    if data.get("format") == "pdf":
+        path = Path(data["pdf_path"])
+        return FileResponse(
+            path,
+            media_type="application/pdf",
+            filename=f"meridian-sentinel-briefing-{entity_id}.pdf",
+        )
+    # HTML fallback (no WeasyPrint)
+    path = Path(data["html_path"])
+    return FileResponse(
+        path,
+        media_type="text/html",
+        filename=f"meridian-sentinel-briefing-{entity_id}.html",
+    )
 
 
 # ── Convenience data endpoints ────────────────────────────────────────────────

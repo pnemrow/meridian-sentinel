@@ -3,6 +3,9 @@ node_modules/
 __pycache__/
 *.pyc
 .env
+.DS_Store
 replit_reference/
 services/api/data/sdn.xml
 services/api/data/sdn_meta.json
+# Local backups taken before re-captures, not source of truth
+output/agent_runs.bak-*/

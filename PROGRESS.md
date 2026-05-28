@@ -551,4 +551,24 @@ have more paths beyond 50 — Phase 3 should paginate or request additional offs
   ALL 74 ownership records are `former=True` (last_observed 2023-03-09; Sukhoi merged into
   UAC as a division). Sayari correctly omits `ofac_50_percent_rule`. `ofac_only` classification
   is accurate: screen surfaces a real historical connection; no current OFAC block.
-- **generate_briefing PDF** — currently outputs HTML. `pip install weasyprint` for PDF.
+
+---
+
+## Repo / runtime decisions (post-orientation hardening)
+
+- **Front-end location: `design-prototype/` is the app.** The old `apps/web/`
+  placeholder (Phase-3 README only — never actually built) has been **deleted**
+  to remove the ambiguity. The wired React/Babel standalone in `design-prototype/`
+  *is* the front-end for the demo. BUILD_SPEC's reference to `apps/web/` is
+  superseded by this decision.
+- **Front-end served by FastAPI.** `services/api/main.py` mounts
+  `design-prototype/` at `/ui/` (StaticFiles, `html=True`), with `/` → `/ui/`
+  redirect. One process serves both the API and the UI on `http://localhost:8000`.
+- **`.env` at repo root (gitignored).** `services/api/main.py` calls
+  `load_dotenv(_REPO / ".env")` so both `make run` and the Docker image pick up
+  `SAYARI_CLIENT_ID`, `SAYARI_CLIENT_SECRET`, `ANTHROPIC_API_KEY`. A tracked
+  `.env.example` documents the keys.
+- **WeasyPrint enabled.** `requirements.txt` pins `weasyprint>=62.0`; the new
+  `GET /tools/generate_briefing/{entity_id}/download` endpoint streams the
+  rendered PDF as `application/pdf` so the browser can download it directly.
+- **generate_briefing PDF**: now live via WeasyPrint (see decision above).
