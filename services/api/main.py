@@ -407,7 +407,12 @@ def list_risk_summary(run_id: str | None = None):
 @app.post("/tools/generate_briefing")
 def generate_briefing(req: BriefingRequest, run_id: str | None = None):
     """Render a compliance briefing (HTML; PDF if WeasyPrint installed)."""
-    result = generate_briefing_tool(entity_id=req.entity_id, cache=_get_cache_for_run(run_id))
+    result = generate_briefing_tool(
+        entity_id=req.entity_id,
+        cache=_get_cache_for_run(run_id),
+        ofac_matcher=_get_ofac(),
+        run_id=run_id,
+    )
     return _result(result)
 
 
@@ -418,7 +423,12 @@ def generate_briefing_download(entity_id: str, run_id: str | None = None):
     Returns application/pdf when WeasyPrint is available, text/html otherwise.
     The browser's filename is derived from the entity_id.
     """
-    result = generate_briefing_tool(entity_id=entity_id, cache=_get_cache_for_run(run_id))
+    result = generate_briefing_tool(
+        entity_id=entity_id,
+        cache=_get_cache_for_run(run_id),
+        ofac_matcher=_get_ofac(),
+        run_id=run_id,
+    )
     data = result.data
     if data.get("format") == "pdf":
         path = Path(data["pdf_path"])
