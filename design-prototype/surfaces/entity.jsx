@@ -24,9 +24,22 @@ function withRun(url, runId) {
   return `${url}${sep}run_id=${encodeURIComponent(runId)}`;
 }
 
+// A sentinel error subclass so the catch can render an honest "not in cache"
+// state instead of mis-rendering with another entity's data.
+class EntityNotCachedError extends Error {
+  constructor(entityId, msg) {
+    super(msg || `Entity ${entityId} not in cache`);
+    this.entityId = entityId;
+    this.notCached = true;
+  }
+}
+
 // Fetch the three real backend payloads for an entity. Returns the same shape
 // the rest of the surface expects (risk_summary, raw_risk_factors, identifiers,
 // source_count) so we don't have to refactor downstream components.
+//
+// Throws EntityNotCachedError when the engine reports the entity as missing
+// (e.g. a graph node the user clicked that isn't in any cache yet).
 async function fetchEntityFromBackend(entityId, runId) {
   const base = SENTINEL_BASE();
   const [rsResp, profResp, rawResp] = await Promise.all([
@@ -34,10 +47,20 @@ async function fetchEntityFromBackend(entityId, runId) {
     fetch(withRun(`${base}/tools/get_profile/${entityId}`, runId)),
     fetch(withRun(`${base}/tools/raw_profile/${entityId}`, runId)),
   ]);
-  if (!rsResp.ok)   throw new Error(`risk_summary HTTP ${rsResp.status}`);
-  if (!profResp.ok) throw new Error(`get_profile HTTP ${profResp.status}`);
+  if (!rsResp.ok)   throw new EntityNotCachedError(entityId, `risk_summary HTTP ${rsResp.status}`);
+  if (!profResp.ok) throw new EntityNotCachedError(entityId, `get_profile HTTP ${profResp.status}`);
 
   const [rs, prof] = await Promise.all([rsResp.json(), profResp.json()]);
+
+  // The engine returns 200 with {data: {error: "...", entity_id: ...}} when
+  // the entity is unknown — treat that the same as a 404.
+  if (rs?.data?.error) {
+    throw new EntityNotCachedError(entityId, rs.data.error);
+  }
+  if (prof?.data?.error) {
+    throw new EntityNotCachedError(entityId, prof.data.error);
+  }
+
   // raw_profile is optional — if it 404s we render without identifiers/feed map
   // rather than inventing them.
   const raw = rawResp.ok ? (await rawResp.json()).data : null;
@@ -62,23 +85,38 @@ async function fetchEntityFromBackend(entityId, runId) {
 function Entity({ entityId, onBack, onOpenEntity, trail = [], runId = null }) {
   const [entity, setEntity] = useState(null);
   const [loadError, setLoadError] = useState(null);
+  const [notCached, setNotCached] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
     setEntity(null);
     setLoadError(null);
+    setNotCached(false);
     fetchEntityFromBackend(entityId, runId).then(payload => {
       if (cancelled) return;
       setEntity(payload);
     }).catch(err => {
       if (cancelled) return;
-      // Backend unavailable: fall back to fixture so the page still renders.
-      // Mark loadError so we can label the surface honestly.
+      // "Entity not in this run's cache" is the common case for graph nodes
+      // the user clicked — render an honest empty state rather than another
+      // entity's fixture data (which would mislabel everything on screen).
+      if (err && err.notCached) {
+        console.info('[entity] not in cache:', err.message);
+        setNotCached(true);
+        setLoadError(err.message);
+        return;
+      }
+      // Backend unreachable (network error): fall back to fixture so the demo
+      // page still renders something — but only for entities we actually have
+      // a fixture for.
       console.warn('[entity] backend fetch failed, using fixture fallback:', err.message);
-      const row = window.COMPARE_ROWS.find(r => r.entity_id === entityId);
-      const fallback = window.ENTITY_INDEX[entityId]
-        || (row ? buildStubFromCompareRow(row) : window.ENTITY_BELORUSSKAYA);
-      setEntity({ ...fallback, _live: false });
+      const row = (window.COMPARE_ROWS || []).find(r => r.entity_id === entityId);
+      const fixtureMatch = window.ENTITY_INDEX?.[entityId] || (row ? buildStubFromCompareRow(row) : null);
+      if (fixtureMatch) {
+        setEntity({ ...fixtureMatch, _live: false });
+      } else {
+        setNotCached(true);
+      }
       setLoadError(err.message);
     });
     return () => { cancelled = true; };
@@ -103,6 +141,9 @@ function Entity({ entityId, onBack, onOpenEntity, trail = [], runId = null }) {
     window.scrollTo(0, 0);
   }, [entityId]);
 
+  if (notCached) {
+    return <EntityNotCached entityId={entityId} runId={runId} reason={loadError} onBack={onBack} />;
+  }
   if (!entity) {
     return <EntityLoading entityId={entityId} onBack={onBack} />;
   }
@@ -190,6 +231,10 @@ window.GraphTrail = GraphTrail;
 
 // -------- Header --------
 function EntityHeader({ rs, source, disposition, onDownloadBriefing, onOpenApi }) {
+  // Defensive: backend may return partial profiles for entities reached via
+  // graph navigation (no countries array, no sanctioned_lists, etc.).
+  const countries = Array.isArray(rs.countries) ? rs.countries : [];
+  const sanctionedLists = Array.isArray(rs.sanctioned_lists) ? rs.sanctioned_lists : [];
   return (
     <div style={{
       background: 'var(--bg-surface)',
@@ -200,7 +245,7 @@ function EntityHeader({ rs, source, disposition, onDownloadBriefing, onOpenApi }
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 24 }}>
         <div style={{ flex: 1, minWidth: 0 }}>
           <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap', marginBottom: 6 }}>
-            <h1 style={{ fontSize: 28, margin: 0, fontWeight: 600, lineHeight: 1.2 }}>{rs.input_name}</h1>
+            <h1 style={{ fontSize: 28, margin: 0, fontWeight: 600, lineHeight: 1.2 }}>{rs.input_name || rs.match_label || rs.entity_id}</h1>
             <RiskBadge level={rs.risk_level} />
             {disposition ? <StatusChip status={disposition.status} /> : <StatusChip status="pending_review" />}
             {rs.warn_verify ? <ConfidenceFlag reason="matched label differs from input name — verify identity" /> : null}
@@ -217,15 +262,17 @@ function EntityHeader({ rs, source, disposition, onDownloadBriefing, onOpenApi }
             <span><span className="muted">type</span> · {rs.type || '—'}</span>
             <span><span className="muted">degree</span> · <span className="mono">{rs.degree != null ? rs.degree.toLocaleString() : '—'}</span></span>
             <span><span className="muted">sources</span> · <span className="mono">{rs.source_count != null ? rs.source_count.toLocaleString() : '—'}</span></span>
-            <span style={{ display: 'inline-flex', gap: 4 }}>
-              {rs.countries.slice(0,6).map(c => <CountryCode key={c} code={c} />)}
-              {rs.countries.length > 6 ? <span className="muted mono" style={{ fontSize: 10 }}>+{rs.countries.length - 6}</span> : null}
-            </span>
+            {countries.length > 0 ? (
+              <span style={{ display: 'inline-flex', gap: 4 }}>
+                {countries.slice(0,6).map(c => <CountryCode key={c} code={c} />)}
+                {countries.length > 6 ? <span className="muted mono" style={{ fontSize: 10 }}>+{countries.length - 6}</span> : null}
+              </span>
+            ) : null}
           </div>
 
           <div style={{ display: 'flex', gap: 8, marginTop: 16, flexWrap: 'wrap' }}>
             {rs.sanctioned ? <FlagChip color="critical" label="sanctioned" /> : null}
-            {rs.sanctioned_lists?.map(l => <FlagChip key={l} color="critical" label={l} mono />)}
+            {sanctionedLists.map(l => <FlagChip key={l} color="critical" label={l} mono />)}
             {rs.pep_adjacent ? <FlagChip color="medium" label="PEP adjacent" /> : null}
             {rs.state_owned ? <FlagChip color="medium" label="state-owned" /> : null}
           </div>
@@ -276,13 +323,17 @@ function FlagChip({ color, label, mono }) {
 
 // -------- Risk signals --------
 function RiskSignals({ topRisks, raw, entityId }) {
+  const risks = Array.isArray(topRisks) ? topRisks : [];
+  const rawMap = raw && typeof raw === 'object' ? raw : {};
   return (
     <div>
       <div className="mono" style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: 1.2, textTransform: 'uppercase', marginBottom: 12 }}>
         Risk signals
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-        {topRisks.map(r => <RiskSignalCard key={r.factor} factor={r.factor} description={r.description} meta={raw[r.factor]} entityId={entityId} />)}
+        {risks.length > 0
+          ? risks.map(r => <RiskSignalCard key={r.factor} factor={r.factor} description={r.description} meta={rawMap[r.factor]} entityId={entityId} />)
+          : <div className="muted" style={{ fontSize: 12, fontStyle: 'italic' }}>No risk signals on file for this entity.</div>}
       </div>
     </div>
   );
@@ -346,13 +397,24 @@ function RiskSignalCard({ factor, description, meta, entityId }) {
 
 // -------- Identity Evidence --------
 function IdentityEvidence({ identifiers }) {
+  const ids = Array.isArray(identifiers) ? identifiers : [];
+  if (ids.length === 0) {
+    return (
+      <div>
+        <div className="mono" style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: 1.2, textTransform: 'uppercase', marginBottom: 12 }}>
+          Identity evidence
+        </div>
+        <div className="muted" style={{ fontSize: 12, fontStyle: 'italic' }}>No identifiers on file for this entity.</div>
+      </div>
+    );
+  }
   return (
     <div>
       <div className="mono" style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: 1.2, textTransform: 'uppercase', marginBottom: 12 }}>
         Identity evidence
       </div>
       <div style={{ background: 'var(--bg-surface)', border: '1px solid var(--border-default)', borderRadius: 4 }}>
-        {identifiers.map((id, i) => (
+        {ids.map((id, i) => (
           <div key={id.type} style={{
             display: 'grid', gridTemplateColumns: '160px 1fr', gap: 12,
             padding: '10px 14px',
@@ -602,6 +664,66 @@ function DispositionControl({ disposition, onSet }) {
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+// ============================================================
+// EntityNotCached — honest empty state for an entity we can't render.
+// Triggered when the engine reports "not in cache" (typically because the
+// user clicked a non-root ownership-graph node whose profile we haven't
+// fetched). Renders the entity_id, the run scope, and the back link — no
+// invented data, no mis-rendered other-entity fixture.
+// ============================================================
+function EntityNotCached({ entityId, runId, reason, onBack }) {
+  return (
+    <div style={{ padding: '24px 40px 80px', maxWidth: 1500, margin: '0 auto' }}>
+      <button onClick={onBack} style={{
+        background: 'transparent', border: 'none', color: 'var(--text-muted)', padding: 0,
+        fontSize: 13, marginBottom: 16, display: 'inline-flex', alignItems: 'center', gap: 6,
+      }}>
+        <span style={{ fontFamily: 'var(--font-mono)' }}>‹</span> back
+      </button>
+      <div style={{
+        background: 'var(--bg-surface)',
+        border: '1px solid var(--accent-dim)',
+        borderLeft: '3px solid var(--accent)',
+        borderRadius: 8,
+        padding: '24px 28px',
+      }}>
+        <div className="mono" style={{ fontSize: 11, color: 'var(--accent)', letterSpacing: 1.2, textTransform: 'uppercase', marginBottom: 8 }}>
+          Entity not in this run's cache
+        </div>
+        <h2 style={{ fontSize: 20, margin: '0 0 12px', fontWeight: 600 }}>
+          <span className="mono" style={{ fontSize: 14, color: 'var(--text-secondary)' }}>{entityId}</span>
+        </h2>
+        <div style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.55, marginBottom: 14, maxWidth: 720 }}>
+          This entity appears in an ownership graph but its full profile hasn't been retrieved
+          for the active run. The screening pipeline only caches the root entities of an
+          uploaded list; deeper graph neighbours are fetched on demand and aren't yet wired
+          to a one-click "live fetch" affordance.
+        </div>
+        <div style={{
+          background: 'var(--bg-primary)',
+          border: '1px solid var(--border-subtle)',
+          borderRadius: 4,
+          padding: 12,
+          fontFamily: 'var(--font-mono)',
+          fontSize: 11,
+          color: 'var(--text-terminal)',
+          marginBottom: 14,
+        }}>
+          run_id:        <span style={{ color: 'var(--text-primary)' }}>{runId || 'default (list_1)'}</span>{"\n"}
+          entity_id:     <span style={{ color: 'var(--text-primary)' }}>{entityId}</span>{"\n"}
+          reason:        <span style={{ color: 'var(--text-muted)' }}>{reason || 'no cached profile'}</span>{"\n"}
+          would resolve: <span style={{ color: 'var(--text-muted)' }}>GET /v1/entity/{entityId}</span>{" (live Sayari call)"}
+        </div>
+        <div className="muted" style={{ fontSize: 11, fontStyle: 'italic', maxWidth: 720 }}>
+          Honestly representative: nothing on this page is being invented. Return to the
+          parent entity and use the ownership graph's "fetch live" path to investigate
+          adjacent nodes, or upload a list that includes this entity by name.
+        </div>
+      </div>
     </div>
   );
 }

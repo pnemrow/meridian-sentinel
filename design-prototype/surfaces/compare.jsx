@@ -166,7 +166,7 @@ function Compare({ onOpenEntity, focusEntityId, runId }) {
       />
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 16, marginBottom: 48 }}>
         {gapRows.map((row, i) => (
-          <GapCard key={row.entity_id} row={row} marquee={i === 0} onOpen={() => onOpenEntity(row.entity_id)} />
+          <GapCard key={`${row.input_name}::${row.entity_id}`} row={row} marquee={i === 0} onOpen={() => onOpenEntity(row.entity_id)} />
         ))}
       </div>
 
@@ -452,7 +452,7 @@ function ReconciliationTable({ rows, expandedId, onToggle, onOpenEntity, highlig
         const expanded = expandedId === row.entity_id;
         const highlighted = highlightId === row.entity_id;
         return (
-          <div key={row.entity_id} style={{ display: 'contents' }}>
+          <div key={`${row.input_name}::${row.entity_id}`} style={{ display: 'contents' }}>
             <div
               data-entity-row={row.entity_id}
               className="clickable"
