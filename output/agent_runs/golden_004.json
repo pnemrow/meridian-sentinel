@@ -1,32 +1,16 @@
 {
   "run_id": "golden_004",
-  "question": "Which entity has the highest risk, and what specifically makes it dangerous?",
-  "captured_at": "2026-05-27T21:58:26.557939+00:00",
+  "question": "What's the single riskiest entity on this list?",
+  "captured_at": "2026-05-28T03:05:48.535327+00:00",
   "model": "claude-sonnet-4-6",
   "events": [
     {
       "event": "token",
-      "data": "Great "
+      "data": "I'll "
     },
     {
       "event": "token",
-      "data": "question. "
-    },
-    {
-      "event": "token",
-      "data": "Let "
-    },
-    {
-      "event": "token",
-      "data": "me "
-    },
-    {
-      "event": "token",
-      "data": "start "
-    },
-    {
-      "event": "token",
-      "data": "with "
+      "data": "run "
     },
     {
       "event": "token",
@@ -34,11 +18,19 @@
     },
     {
       "event": "token",
-      "data": "portfolio-level "
+      "data": "full "
+    },
+    {
+      "event": "token",
+      "data": "portfolio "
     },
     {
       "event": "token",
       "data": "comparison "
+    },
+    {
+      "event": "token",
+      "data": "first "
     },
     {
       "event": "token",
@@ -50,15 +42,67 @@
     },
     {
       "event": "token",
+      "data": "all "
+    },
+    {
+      "event": "token",
+      "data": "flagged "
+    },
+    {
+      "event": "token",
+      "data": "entities, "
+    },
+    {
+      "event": "token",
+      "data": "then "
+    },
+    {
+      "event": "token",
+      "data": "drill "
+    },
+    {
+      "event": "token",
+      "data": "down "
+    },
+    {
+      "event": "token",
+      "data": "on "
+    },
+    {
+      "event": "token",
       "data": "the "
     },
     {
       "event": "token",
-      "data": "highest-risk "
+      "data": "riskiest "
     },
     {
       "event": "token",
-      "data": "entity "
+      "data": "one.\n\n**Step "
+    },
+    {
+      "event": "token",
+      "data": "1 "
+    },
+    {
+      "event": "token",
+      "data": "\u2014 "
+    },
+    {
+      "event": "token",
+      "data": "Get "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "big "
+    },
+    {
+      "event": "token",
+      "data": "picture "
     },
     {
       "event": "token",
@@ -70,12 +114,12 @@
     },
     {
       "event": "token",
-      "data": "vendors."
+      "data": "vendors:**"
     },
     {
       "event": "tool_call",
       "data": {
-        "id": "toolu_013uRjFzbWyi1rARC9yNza6C",
+        "id": "toolu_018mQrnrRNMvZW8ZJZybfJVn",
         "name": "compare_ofac_vs_sayari",
         "input": {}
       }
@@ -83,9 +127,9 @@
     {
       "event": "tool_result",
       "data": {
-        "id": "toolu_013uRjFzbWyi1rARC9yNza6C",
+        "id": "toolu_018mQrnrRNMvZW8ZJZybfJVn",
         "name": "compare_ofac_vs_sayari",
-        "duration_ms": 192,
+        "duration_ms": 215,
         "ok": true,
         "summary": "33 both_catch, 4 ownership_gap, 3 matcher_miss \u2014 40 total OFAC exposed",
         "source": {
@@ -99,7 +143,7 @@
     {
       "event": "citation",
       "data": {
-        "ref": "toolu_013uRjFzbWyi1rARC9yNza6C",
+        "ref": "toolu_018mQrnrRNMvZW8ZJZybfJVn",
         "label": "compare_ofac_vs_sayari",
         "source": {
           "entity_url": null,
@@ -111,6 +155,26 @@
     },
     {
       "event": "token",
+      "data": "The "
+    },
+    {
+      "event": "token",
+      "data": "portfolio "
+    },
+    {
+      "event": "token",
+      "data": "scan "
+    },
+    {
+      "event": "token",
+      "data": "is "
+    },
+    {
+      "event": "token",
+      "data": "complete. "
+    },
+    {
+      "event": "token",
       "data": "VTB "
     },
     {
@@ -119,7 +183,15 @@
     },
     {
       "event": "token",
-      "data": "has "
+      "data": "stands "
+    },
+    {
+      "event": "token",
+      "data": "out "
+    },
+    {
+      "event": "token",
+      "data": "with "
     },
     {
       "event": "token",
@@ -131,7 +203,7 @@
     },
     {
       "event": "token",
-      "data": "raw "
+      "data": "Sayari "
     },
     {
       "event": "token",
@@ -143,15 +215,7 @@
     },
     {
       "event": "token",
-      "data": "(109 "
-    },
-    {
-      "event": "token",
-      "data": "risk "
-    },
-    {
-      "event": "token",
-      "data": "signals). "
+      "data": "(109). "
     },
     {
       "event": "token",
@@ -163,10 +227,6 @@
     },
     {
       "event": "token",
-      "data": "now "
-    },
-    {
-      "event": "token",
       "data": "pull "
     },
     {
@@ -175,7 +235,7 @@
     },
     {
       "event": "token",
-      "data": "detailed "
+      "data": "full "
     },
     {
       "event": "token",
@@ -187,24 +247,72 @@
     },
     {
       "event": "token",
-      "data": "and "
+      "data": "right "
     },
     {
       "event": "token",
-      "data": "ownership "
+      "data": "now "
     },
     {
       "event": "token",
-      "data": "graph "
+      "data": "to "
     },
     {
       "event": "token",
-      "data": "simultaneously."
+      "data": "confirm "
+    },
+    {
+      "event": "token",
+      "data": "it "
+    },
+    {
+      "event": "token",
+      "data": "as "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "riskiest.\n\n**Step "
+    },
+    {
+      "event": "token",
+      "data": "2 "
+    },
+    {
+      "event": "token",
+      "data": "\u2014 "
+    },
+    {
+      "event": "token",
+      "data": "Drill "
+    },
+    {
+      "event": "token",
+      "data": "down "
+    },
+    {
+      "event": "token",
+      "data": "on "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "top "
+    },
+    {
+      "event": "token",
+      "data": "candidate:**"
     },
     {
       "event": "tool_call",
       "data": {
-        "id": "toolu_019RTjpGxadWYtoq9YjuCo98",
+        "id": "toolu_01Gmr2xPBaMD1zFKwrcMvfrZ",
         "name": "risk_summary",
         "input": {
           "entity_id": "dy-rh2g0QtzUN_jC_e9S_A"
@@ -214,7 +322,7 @@
     {
       "event": "tool_result",
       "data": {
-        "id": "toolu_019RTjpGxadWYtoq9YjuCo98",
+        "id": "toolu_01Gmr2xPBaMD1zFKwrcMvfrZ",
         "name": "risk_summary",
         "duration_ms": 0,
         "ok": true,
@@ -230,7 +338,7 @@
     {
       "event": "citation",
       "data": {
-        "ref": "toolu_019RTjpGxadWYtoq9YjuCo98",
+        "ref": "toolu_01Gmr2xPBaMD1zFKwrcMvfrZ",
         "label": "risk_summary",
         "source": {
           "entity_url": "/v1/entity/dy-rh2g0QtzUN_jC_e9S_A",
@@ -241,128 +349,8 @@
       }
     },
     {
-      "event": "tool_call",
-      "data": {
-        "id": "toolu_012xysPTvUKTGLY5YxdTvmX9",
-        "name": "traverse_ownership",
-        "input": {
-          "entity_id": "dy-rh2g0QtzUN_jC_e9S_A",
-          "depth": 3
-        }
-      }
-    },
-    {
-      "event": "tool_result",
-      "data": {
-        "id": "toolu_012xysPTvUKTGLY5YxdTvmX9",
-        "name": "traverse_ownership",
-        "duration_ms": 8,
-        "ok": true,
-        "summary": "51 nodes, 50 edges, 8 sanction hits",
-        "source": {
-          "entity_url": "/v1/entity/dy-rh2g0QtzUN_jC_e9S_A",
-          "raw_field_path": "data[].{source, target, path[].{entity, field, relationships}}",
-          "cache_file": "output/raw/traversal/dy-rh2g0QtzUN_jC_e9S_A.json",
-          "api_endpoint": "GET /v1/traversal/ubo (cached)"
-        }
-      }
-    },
-    {
-      "event": "citation",
-      "data": {
-        "ref": "toolu_012xysPTvUKTGLY5YxdTvmX9",
-        "label": "traverse_ownership",
-        "source": {
-          "entity_url": "/v1/entity/dy-rh2g0QtzUN_jC_e9S_A",
-          "raw_field_path": "data[].{source, target, path[].{entity, field, relationships}}",
-          "cache_file": "output/raw/traversal/dy-rh2g0QtzUN_jC_e9S_A.json",
-          "api_endpoint": "GET /v1/traversal/ubo (cached)"
-        }
-      }
-    },
-    {
       "event": "token",
-      "data": "Here "
-    },
-    {
-      "event": "token",
-      "data": "is "
-    },
-    {
-      "event": "token",
-      "data": "the "
-    },
-    {
-      "event": "token",
-      "data": "complete "
-    },
-    {
-      "event": "token",
-      "data": "picture.\n\n---\n\n**VTB "
-    },
-    {
-      "event": "token",
-      "data": "Bank "
-    },
-    {
-      "event": "token",
-      "data": "is "
-    },
-    {
-      "event": "token",
-      "data": "the "
-    },
-    {
-      "event": "token",
-      "data": "highest-risk "
-    },
-    {
-      "event": "token",
-      "data": "entity "
-    },
-    {
-      "event": "token",
-      "data": "in "
-    },
-    {
-      "event": "token",
-      "data": "the "
-    },
-    {
-      "event": "token",
-      "data": "vendor "
-    },
-    {
-      "event": "token",
-      "data": "list.**\n\nIt "
-    },
-    {
-      "event": "token",
-      "data": "carries "
-    },
-    {
-      "event": "token",
-      "data": "109 "
-    },
-    {
-      "event": "token",
-      "data": "Sayari "
-    },
-    {
-      "event": "token",
-      "data": "risk "
-    },
-    {
-      "event": "token",
-      "data": "signals "
-    },
-    {
-      "event": "token",
-      "data": "\u2014 "
-    },
-    {
-      "event": "token",
-      "data": "the "
+      "data": "**The "
     },
     {
       "event": "token",
@@ -370,151 +358,11 @@
     },
     {
       "event": "token",
-      "data": "highest "
+      "data": "riskiest "
     },
     {
       "event": "token",
-      "data": "count "
-    },
-    {
-      "event": "token",
-      "data": "across "
-    },
-    {
-      "event": "token",
-      "data": "all "
-    },
-    {
-      "event": "token",
-      "data": "49 "
-    },
-    {
-      "event": "token",
-      "data": "vendors "
-    },
-    {
-      "event": "token",
-      "data": "\u2014 "
-    },
-    {
-      "event": "token",
-      "data": "and "
-    },
-    {
-      "event": "token",
-      "data": "is "
-    },
-    {
-      "event": "token",
-      "data": "rated "
-    },
-    {
-      "event": "token",
-      "data": "CRITICAL. "
-    },
-    {
-      "event": "token",
-      "data": "It "
-    },
-    {
-      "event": "token",
-      "data": "was "
-    },
-    {
-      "event": "token",
-      "data": "caught "
-    },
-    {
-      "event": "token",
-      "data": "by "
-    },
-    {
-      "event": "token",
-      "data": "both "
-    },
-    {
-      "event": "token",
-      "data": "OFAC "
-    },
-    {
-      "event": "token",
-      "data": "name "
-    },
-    {
-      "event": "token",
-      "data": "screening "
-    },
-    {
-      "event": "token",
-      "data": "and "
-    },
-    {
-      "event": "token",
-      "data": "Sayari "
-    },
-    {
-      "event": "token",
-      "data": "ownership "
-    },
-    {
-      "event": "token",
-      "data": "graph "
-    },
-    {
-      "event": "token",
-      "data": "traversal "
-    },
-    {
-      "event": "token",
-      "data": "(outcome: "
-    },
-    {
-      "event": "token",
-      "data": "both_catch). "
-    },
-    {
-      "event": "token",
-      "data": "Here "
-    },
-    {
-      "event": "token",
-      "data": "is "
-    },
-    {
-      "event": "token",
-      "data": "what "
-    },
-    {
-      "event": "token",
-      "data": "specifically "
-    },
-    {
-      "event": "token",
-      "data": "makes "
-    },
-    {
-      "event": "token",
-      "data": "it "
-    },
-    {
-      "event": "token",
-      "data": "dangerous, "
-    },
-    {
-      "event": "token",
-      "data": "layer "
-    },
-    {
-      "event": "token",
-      "data": "by "
-    },
-    {
-      "event": "token",
-      "data": "layer.\n\n---\n\n**1. "
-    },
-    {
-      "event": "token",
-      "data": "Directly "
+      "data": "entity "
     },
     {
       "event": "token",
@@ -522,43 +370,11 @@
     },
     {
       "event": "token",
-      "data": "OFAC "
+      "data": "your "
     },
     {
       "event": "token",
-      "data": "SDN "
-    },
-    {
-      "event": "token",
-      "data": "\u2014 "
-    },
-    {
-      "event": "token",
-      "data": "Two "
-    },
-    {
-      "event": "token",
-      "data": "Programs**\nVTB "
-    },
-    {
-      "event": "token",
-      "data": "Bank "
-    },
-    {
-      "event": "token",
-      "data": "(entity_id: "
-    },
-    {
-      "event": "token",
-      "data": "dy-rh2g0QtzUN_jC_e9S_A, "
-    },
-    {
-      "event": "token",
-      "data": "field: "
-    },
-    {
-      "event": "token",
-      "data": "sanctioned_usa_ofac_sdn) "
+      "data": "list "
     },
     {
       "event": "token",
@@ -566,15 +382,107 @@
     },
     {
       "event": "token",
-      "data": "formally "
+      "data": "VTB "
     },
     {
       "event": "token",
-      "data": "designated "
+      "data": "Bank.**\n\nHere "
     },
     {
       "event": "token",
-      "data": "under "
+      "data": "is "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "full "
+    },
+    {
+      "event": "token",
+      "data": "case:\n\nRISK "
+    },
+    {
+      "event": "token",
+      "data": "LEVEL: "
+    },
+    {
+      "event": "token",
+      "data": "Critical\nEntity "
+    },
+    {
+      "event": "token",
+      "data": "ID: "
+    },
+    {
+      "event": "token",
+      "data": "dy-rh2g0QtzUN_jC_e9S_A "
+    },
+    {
+      "event": "token",
+      "data": "(Sayari, "
+    },
+    {
+      "event": "token",
+      "data": "high "
+    },
+    {
+      "event": "token",
+      "data": "confidence, "
+    },
+    {
+      "event": "token",
+      "data": "warn_verify: "
+    },
+    {
+      "event": "token",
+      "data": "false)\nOFAC "
+    },
+    {
+      "event": "token",
+      "data": "SDN "
+    },
+    {
+      "event": "token",
+      "data": "ID: "
+    },
+    {
+      "event": "token",
+      "data": "17013 "
+    },
+    {
+      "event": "token",
+      "data": "\u2014 "
+    },
+    {
+      "event": "token",
+      "data": "\"VTB "
+    },
+    {
+      "event": "token",
+      "data": "BANK "
+    },
+    {
+      "event": "token",
+      "data": "PUBLIC "
+    },
+    {
+      "event": "token",
+      "data": "JOINT "
+    },
+    {
+      "event": "token",
+      "data": "STOCK "
+    },
+    {
+      "event": "token",
+      "data": "COMPANY\"\nOFAC "
+    },
+    {
+      "event": "token",
+      "data": "Programs: "
     },
     {
       "event": "token",
@@ -586,127 +494,51 @@
     },
     {
       "event": "token",
-      "data": "RUSSIA-EO14024. "
+      "data": "RUSSIA-EO14024\nOutcome: "
     },
     {
       "event": "token",
-      "data": "Any "
+      "data": "both_catch "
     },
     {
       "event": "token",
-      "data": "transaction "
+      "data": "\u2014 "
     },
     {
       "event": "token",
-      "data": "with "
+      "data": "found "
     },
     {
       "event": "token",
-      "data": "it "
+      "data": "by "
     },
     {
       "event": "token",
-      "data": "is "
+      "data": "both "
     },
     {
       "event": "token",
-      "data": "presumptively "
+      "data": "name-screen "
     },
     {
       "event": "token",
-      "data": "prohibited "
+      "data": "and "
     },
     {
       "event": "token",
-      "data": "for "
+      "data": "Sayari "
     },
     {
       "event": "token",
-      "data": "U.S.-nexus "
+      "data": "ownership "
     },
     {
       "event": "token",
-      "data": "activity.\nSource: "
+      "data": "graph\n\nWhat "
     },
     {
       "event": "token",
-      "data": "compare_ofac_vs_sayari, "
-    },
-    {
-      "event": "token",
-      "data": "OFAC "
-    },
-    {
-      "event": "token",
-      "data": "SDN "
-    },
-    {
-      "event": "token",
-      "data": "ID "
-    },
-    {
-      "event": "token",
-      "data": "17013.\n\n**2. "
-    },
-    {
-      "event": "token",
-      "data": "Sanctioned "
-    },
-    {
-      "event": "token",
-      "data": "Across "
-    },
-    {
-      "event": "token",
-      "data": "11 "
-    },
-    {
-      "event": "token",
-      "data": "Jurisdictions "
-    },
-    {
-      "event": "token",
-      "data": "Simultaneously**\nThis "
-    },
-    {
-      "event": "token",
-      "data": "is "
-    },
-    {
-      "event": "token",
-      "data": "not "
-    },
-    {
-      "event": "token",
-      "data": "just "
-    },
-    {
-      "event": "token",
-      "data": "a "
-    },
-    {
-      "event": "token",
-      "data": "U.S. "
-    },
-    {
-      "event": "token",
-      "data": "problem. "
-    },
-    {
-      "event": "token",
-      "data": "The "
-    },
-    {
-      "event": "token",
-      "data": "risk_summary "
-    },
-    {
-      "event": "token",
-      "data": "tool "
-    },
-    {
-      "event": "token",
-      "data": "confirms "
+      "data": "makes "
     },
     {
       "event": "token",
@@ -714,59 +546,183 @@
     },
     {
       "event": "token",
-      "data": "Bank "
+      "data": "stand "
     },
     {
       "event": "token",
-      "data": "appears "
+      "data": "out "
     },
     {
       "event": "token",
-      "data": "on:\nUSA "
+      "data": "above "
     },
     {
       "event": "token",
-      "data": "(OFAC "
+      "data": "all "
     },
     {
       "event": "token",
-      "data": "SDN), "
+      "data": "40 "
     },
     {
       "event": "token",
-      "data": "EU "
+      "data": "OFAC-exposed "
     },
     {
       "event": "token",
-      "data": "(DG "
+      "data": "entities "
     },
     {
       "event": "token",
-      "data": "FISMA, "
+      "data": "on "
     },
     {
       "event": "token",
-      "data": "EC "
+      "data": "the "
     },
     {
       "event": "token",
-      "data": "Regulation "
+      "data": "list:\n\n1. "
     },
     {
       "event": "token",
-      "data": "269/2014, "
+      "data": "Highest "
     },
     {
       "event": "token",
-      "data": "EU "
+      "data": "Sayari "
     },
     {
       "event": "token",
-      "data": "Sanctions "
+      "data": "risk "
     },
     {
       "event": "token",
-      "data": "Map), "
+      "data": "factor "
+    },
+    {
+      "event": "token",
+      "data": "count "
+    },
+    {
+      "event": "token",
+      "data": "on "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "entire "
+    },
+    {
+      "event": "token",
+      "data": "list: "
+    },
+    {
+      "event": "token",
+      "data": "109 "
+    },
+    {
+      "event": "token",
+      "data": "distinct "
+    },
+    {
+      "event": "token",
+      "data": "risk "
+    },
+    {
+      "event": "token",
+      "data": "signals, "
+    },
+    {
+      "event": "token",
+      "data": "far "
+    },
+    {
+      "event": "token",
+      "data": "above "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "next "
+    },
+    {
+      "event": "token",
+      "data": "closest "
+    },
+    {
+      "event": "token",
+      "data": "(Sberbank "
+    },
+    {
+      "event": "token",
+      "data": "at "
+    },
+    {
+      "event": "token",
+      "data": "68, "
+    },
+    {
+      "event": "token",
+      "data": "NIOC "
+    },
+    {
+      "event": "token",
+      "data": "at "
+    },
+    {
+      "event": "token",
+      "data": "95 "
+    },
+    {
+      "event": "token",
+      "data": "for "
+    },
+    {
+      "event": "token",
+      "data": "comparison).\n\n2. "
+    },
+    {
+      "event": "token",
+      "data": "Sanctioned "
+    },
+    {
+      "event": "token",
+      "data": "on "
+    },
+    {
+      "event": "token",
+      "data": "12 "
+    },
+    {
+      "event": "token",
+      "data": "separate "
+    },
+    {
+      "event": "token",
+      "data": "lists "
+    },
+    {
+      "event": "token",
+      "data": "simultaneously: "
+    },
+    {
+      "event": "token",
+      "data": "OFAC "
+    },
+    {
+      "event": "token",
+      "data": "SDN, "
+    },
+    {
+      "event": "token",
+      "data": "EU, "
     },
     {
       "event": "token",
@@ -774,23 +730,7 @@
     },
     {
       "event": "token",
-      "data": "(FCDO/OFSI), "
-    },
-    {
-      "event": "token",
-      "data": "Canada "
-    },
-    {
-      "event": "token",
-      "data": "(GAC), "
-    },
-    {
-      "event": "token",
-      "data": "Australia "
-    },
-    {
-      "event": "token",
-      "data": "(DFAT), "
+      "data": "FCDO, "
     },
     {
       "event": "token",
@@ -798,7 +738,23 @@
     },
     {
       "event": "token",
-      "data": "(SECO), "
+      "data": "SECO, "
+    },
+    {
+      "event": "token",
+      "data": "Canada "
+    },
+    {
+      "event": "token",
+      "data": "GAC, "
+    },
+    {
+      "event": "token",
+      "data": "Australia "
+    },
+    {
+      "event": "token",
+      "data": "DFAT, "
     },
     {
       "event": "token",
@@ -806,7 +762,15 @@
     },
     {
       "event": "token",
-      "data": "(MOF), "
+      "data": "MOF, "
+    },
+    {
+      "event": "token",
+      "data": "Ukraine "
+    },
+    {
+      "event": "token",
+      "data": "NSDC, "
     },
     {
       "event": "token",
@@ -818,15 +782,7 @@
     },
     {
       "event": "token",
-      "data": "(MFAT), "
-    },
-    {
-      "event": "token",
-      "data": "Ukraine "
-    },
-    {
-      "event": "token",
-      "data": "(NSDC), "
+      "data": "MFAT, "
     },
     {
       "event": "token",
@@ -834,139 +790,7 @@
     },
     {
       "event": "token",
-      "data": "others.\nFor "
-    },
-    {
-      "event": "token",
-      "data": "a "
-    },
-    {
-      "event": "token",
-      "data": "Geneva-based "
-    },
-    {
-      "event": "token",
-      "data": "firm "
-    },
-    {
-      "event": "token",
-      "data": "like "
-    },
-    {
-      "event": "token",
-      "data": "Meridian, "
-    },
-    {
-      "event": "token",
-      "data": "the "
-    },
-    {
-      "event": "token",
-      "data": "Swiss "
-    },
-    {
-      "event": "token",
-      "data": "SECO "
-    },
-    {
-      "event": "token",
-      "data": "listing "
-    },
-    {
-      "event": "token",
-      "data": "is "
-    },
-    {
-      "event": "token",
-      "data": "of "
-    },
-    {
-      "event": "token",
-      "data": "direct "
-    },
-    {
-      "event": "token",
-      "data": "and "
-    },
-    {
-      "event": "token",
-      "data": "immediate "
-    },
-    {
-      "event": "token",
-      "data": "domestic "
-    },
-    {
-      "event": "token",
-      "data": "relevance.\nSource: "
-    },
-    {
-      "event": "token",
-      "data": "risk_summary, "
-    },
-    {
-      "event": "token",
-      "data": "field: "
-    },
-    {
-      "event": "token",
-      "data": "sanctioned_lists.\n\n**3. "
-    },
-    {
-      "event": "token",
-      "data": "Russian "
-    },
-    {
-      "event": "token",
-      "data": "State-Owned "
-    },
-    {
-      "event": "token",
-      "data": "Enterprise "
-    },
-    {
-      "event": "token",
-      "data": "(SOE)**\nVTB "
-    },
-    {
-      "event": "token",
-      "data": "Bank "
-    },
-    {
-      "event": "token",
-      "data": "is "
-    },
-    {
-      "event": "token",
-      "data": "confirmed "
-    },
-    {
-      "event": "token",
-      "data": "as "
-    },
-    {
-      "event": "token",
-      "data": "a "
-    },
-    {
-      "event": "token",
-      "data": "Russian "
-    },
-    {
-      "event": "token",
-      "data": "SOE "
-    },
-    {
-      "event": "token",
-      "data": "(risk "
-    },
-    {
-      "event": "token",
-      "data": "factor: "
-    },
-    {
-      "event": "token",
-      "data": "state_owned_rus). "
+      "data": "others. "
     },
     {
       "event": "token",
@@ -974,22 +798,6 @@
     },
     {
       "event": "token",
-      "data": "means "
-    },
-    {
-      "event": "token",
-      "data": "its "
-    },
-    {
-      "event": "token",
-      "data": "controlling "
-    },
-    {
-      "event": "token",
-      "data": "shareholder "
-    },
-    {
-      "event": "token",
       "data": "is "
     },
     {
@@ -998,295 +806,19 @@
     },
     {
       "event": "token",
-      "data": "Russian "
+      "data": "broadest "
     },
     {
       "event": "token",
-      "data": "state "
+      "data": "multi-jurisdictional "
     },
     {
       "event": "token",
-      "data": "\u2014 "
+      "data": "sanctions "
     },
     {
       "event": "token",
-      "data": "itself "
-    },
-    {
-      "event": "token",
-      "data": "a "
-    },
-    {
-      "event": "token",
-      "data": "sanctioned "
-    },
-    {
-      "event": "token",
-      "data": "node "
-    },
-    {
-      "event": "token",
-      "data": "in "
-    },
-    {
-      "event": "token",
-      "data": "the "
-    },
-    {
-      "event": "token",
-      "data": "ownership "
-    },
-    {
-      "event": "token",
-      "data": "graph.\nSource: "
-    },
-    {
-      "event": "token",
-      "data": "risk_summary, "
-    },
-    {
-      "event": "token",
-      "data": "field: "
-    },
-    {
-      "event": "token",
-      "data": "state_owned_rus.\n\n**4. "
-    },
-    {
-      "event": "token",
-      "data": "The "
-    },
-    {
-      "event": "token",
-      "data": "Ownership "
-    },
-    {
-      "event": "token",
-      "data": "Graph "
-    },
-    {
-      "event": "token",
-      "data": "Exposes "
-    },
-    {
-      "event": "token",
-      "data": "Eight "
-    },
-    {
-      "event": "token",
-      "data": "Additional "
-    },
-    {
-      "event": "token",
-      "data": "Sanctioned "
-    },
-    {
-      "event": "token",
-      "data": "Nodes**\nThe "
-    },
-    {
-      "event": "token",
-      "data": "traverse_ownership "
-    },
-    {
-      "event": "token",
-      "data": "tool "
-    },
-    {
-      "event": "token",
-      "data": "identified "
-    },
-    {
-      "event": "token",
-      "data": "8 "
-    },
-    {
-      "event": "token",
-      "data": "sanctioned "
-    },
-    {
-      "event": "token",
-      "data": "entities "
-    },
-    {
-      "event": "token",
-      "data": "within "
-    },
-    {
-      "event": "token",
-      "data": "VTB's "
-    },
-    {
-      "event": "token",
-      "data": "ownership "
-    },
-    {
-      "event": "token",
-      "data": "and "
-    },
-    {
-      "event": "token",
-      "data": "subsidiary "
-    },
-    {
-      "event": "token",
-      "data": "network "
-    },
-    {
-      "event": "token",
-      "data": "across "
-    },
-    {
-      "event": "token",
-      "data": "3 "
-    },
-    {
-      "event": "token",
-      "data": "hops, "
-    },
-    {
-      "event": "token",
-      "data": "including:\n\n\u2014 "
-    },
-    {
-      "event": "token",
-      "data": "Russia "
-    },
-    {
-      "event": "token",
-      "data": "(entity_id: "
-    },
-    {
-      "event": "token",
-      "data": "ufk9msbEdFxzHh4IyETV3Q, "
-    },
-    {
-      "event": "token",
-      "data": "32.88% "
-    },
-    {
-      "event": "token",
-      "data": "current "
-    },
-    {
-      "event": "token",
-      "data": "shareholder, "
-    },
-    {
-      "event": "token",
-      "data": "sanctioned: "
-    },
-    {
-      "event": "token",
-      "data": "true)\n\u2014 "
-    },
-    {
-      "event": "token",
-      "data": "Sergei "
-    },
-    {
-      "event": "token",
-      "data": "Anatolyevich "
-    },
-    {
-      "event": "token",
-      "data": "GAVRILOV "
-    },
-    {
-      "event": "token",
-      "data": "(entity_id: "
-    },
-    {
-      "event": "token",
-      "data": "ik_lKH2vP-NKmZ315XINyA, "
-    },
-    {
-      "event": "token",
-      "data": "current "
-    },
-    {
-      "event": "token",
-      "data": "shareholder, "
-    },
-    {
-      "event": "token",
-      "data": "sanctioned: "
-    },
-    {
-      "event": "token",
-      "data": "true, "
-    },
-    {
-      "event": "token",
-      "data": "PEP: "
-    },
-    {
-      "event": "token",
-      "data": "true) "
-    },
-    {
-      "event": "token",
-      "data": "\u2014 "
-    },
-    {
-      "event": "token",
-      "data": "a "
-    },
-    {
-      "event": "token",
-      "data": "sanctioned "
-    },
-    {
-      "event": "token",
-      "data": "individual "
-    },
-    {
-      "event": "token",
-      "data": "who "
-    },
-    {
-      "event": "token",
-      "data": "is "
-    },
-    {
-      "event": "token",
-      "data": "also "
-    },
-    {
-      "event": "token",
-      "data": "a "
-    },
-    {
-      "event": "token",
-      "data": "politically "
-    },
-    {
-      "event": "token",
-      "data": "exposed "
-    },
-    {
-      "event": "token",
-      "data": "person\n\u2014 "
-    },
-    {
-      "event": "token",
-      "data": "State "
-    },
-    {
-      "event": "token",
-      "data": "Corporation "
-    },
-    {
-      "event": "token",
-      "data": "\"Agency "
-    },
-    {
-      "event": "token",
-      "data": "for "
-    },
-    {
-      "event": "token",
-      "data": "Insurance "
+      "data": "exposure "
     },
     {
       "event": "token",
@@ -1294,47 +826,7 @@
     },
     {
       "event": "token",
-      "data": "Deposits\" "
-    },
-    {
-      "event": "token",
-      "data": "(entity_id: "
-    },
-    {
-      "event": "token",
-      "data": "QwvjCdlrnzQz46xVkp0jMQ, "
-    },
-    {
-      "event": "token",
-      "data": "47.22% "
-    },
-    {
-      "event": "token",
-      "data": "current "
-    },
-    {
-      "event": "token",
-      "data": "shareholder, "
-    },
-    {
-      "event": "token",
-      "data": "sanctioned: "
-    },
-    {
-      "event": "token",
-      "data": "true) "
-    },
-    {
-      "event": "token",
-      "data": "\u2014 "
-    },
-    {
-      "event": "token",
-      "data": "this "
-    },
-    {
-      "event": "token",
-      "data": "single "
+      "data": "any "
     },
     {
       "event": "token",
@@ -1342,27 +834,27 @@
     },
     {
       "event": "token",
-      "data": "holds "
+      "data": "scanned.\n\n3. "
     },
     {
       "event": "token",
-      "data": "nearly "
+      "data": "Directly "
     },
     {
       "event": "token",
-      "data": "half "
+      "data": "designated "
     },
     {
       "event": "token",
-      "data": "of "
+      "data": "AND "
     },
     {
       "event": "token",
-      "data": "VTB, "
+      "data": "ownership-exposed: "
     },
     {
       "event": "token",
-      "data": "and "
+      "data": "VTB "
     },
     {
       "event": "token",
@@ -1370,247 +862,7 @@
     },
     {
       "event": "token",
-      "data": "itself "
-    },
-    {
-      "event": "token",
-      "data": "sanctioned\n\u2014 "
-    },
-    {
-      "event": "token",
-      "data": "PJSC "
-    },
-    {
-      "event": "token",
-      "data": "VTB "
-    },
-    {
-      "event": "token",
-      "data": "BANK "
-    },
-    {
-      "event": "token",
-      "data": "(KIEV) "
-    },
-    {
-      "event": "token",
-      "data": "(entity_id: "
-    },
-    {
-      "event": "token",
-      "data": "xewbL0MO2Dc7s2upoJsZkQ, "
-    },
-    {
-      "event": "token",
-      "data": "Ukraine, "
-    },
-    {
-      "event": "token",
-      "data": "sanctioned: "
-    },
-    {
-      "event": "token",
-      "data": "true)\n\u2014 "
-    },
-    {
-      "event": "token",
-      "data": "BANCO "
-    },
-    {
-      "event": "token",
-      "data": "VTB "
-    },
-    {
-      "event": "token",
-      "data": "AFRICA "
-    },
-    {
-      "event": "token",
-      "data": "SA "
-    },
-    {
-      "event": "token",
-      "data": "(entity_id: "
-    },
-    {
-      "event": "token",
-      "data": "PgB9MTTbfq2wYS85CE17eQ, "
-    },
-    {
-      "event": "token",
-      "data": "Angola, "
-    },
-    {
-      "event": "token",
-      "data": "sanctioned: "
-    },
-    {
-      "event": "token",
-      "data": "true)\n\u2014 "
-    },
-    {
-      "event": "token",
-      "data": "LIMITED "
-    },
-    {
-      "event": "token",
-      "data": "LIABILITY "
-    },
-    {
-      "event": "token",
-      "data": "COMPANY "
-    },
-    {
-      "event": "token",
-      "data": "VTB "
-    },
-    {
-      "event": "token",
-      "data": "INFRASTRUCTURE "
-    },
-    {
-      "event": "token",
-      "data": "INVESTMENTS "
-    },
-    {
-      "event": "token",
-      "data": "(entity_id: "
-    },
-    {
-      "event": "token",
-      "data": "EzNwF5IkSSO77Z8_luRcPw, "
-    },
-    {
-      "event": "token",
-      "data": "Russia, "
-    },
-    {
-      "event": "token",
-      "data": "sanctioned: "
-    },
-    {
-      "event": "token",
-      "data": "true)\n\u2014 "
-    },
-    {
-      "event": "token",
-      "data": "Kordex "
-    },
-    {
-      "event": "token",
-      "data": "Joint "
-    },
-    {
-      "event": "token",
-      "data": "Stock "
-    },
-    {
-      "event": "token",
-      "data": "Company "
-    },
-    {
-      "event": "token",
-      "data": "(entity_id: "
-    },
-    {
-      "event": "token",
-      "data": "XixXVhDok27QlGYrv5WByw, "
-    },
-    {
-      "event": "token",
-      "data": "Russia, "
-    },
-    {
-      "event": "token",
-      "data": "sanctioned: "
-    },
-    {
-      "event": "token",
-      "data": "true)\n\u2014 "
-    },
-    {
-      "event": "token",
-      "data": "OBSHCHESTVO "
-    },
-    {
-      "event": "token",
-      "data": "S "
-    },
-    {
-      "event": "token",
-      "data": "OGRANICHENNOI "
-    },
-    {
-      "event": "token",
-      "data": "OTVETSTVENNOSTYU "
-    },
-    {
-      "event": "token",
-      "data": "DOLGOVOI "
-    },
-    {
-      "event": "token",
-      "data": "TSENTR "
-    },
-    {
-      "event": "token",
-      "data": "(entity_id: "
-    },
-    {
-      "event": "token",
-      "data": "swxT28xq1pv7VfLE4JEAXA, "
-    },
-    {
-      "event": "token",
-      "data": "Russia, "
-    },
-    {
-      "event": "token",
-      "data": "sanctioned: "
-    },
-    {
-      "event": "token",
-      "data": "true)\nSource: "
-    },
-    {
-      "event": "token",
-      "data": "traverse_ownership, "
-    },
-    {
-      "event": "token",
-      "data": "field: "
-    },
-    {
-      "event": "token",
-      "data": "sanction_hits.\n\n**5. "
-    },
-    {
-      "event": "token",
-      "data": "Export "
-    },
-    {
-      "event": "token",
-      "data": "Controls "
-    },
-    {
-      "event": "token",
-      "data": "and "
-    },
-    {
-      "event": "token",
-      "data": "Forced "
-    },
-    {
-      "event": "token",
-      "data": "Labour "
-    },
-    {
-      "event": "token",
-      "data": "Exposure**\nBeyond "
-    },
-    {
-      "event": "token",
-      "data": "sanctions, "
+      "data": "on "
     },
     {
       "event": "token",
@@ -1618,35 +870,163 @@
     },
     {
       "event": "token",
-      "data": "risk_summary "
+      "data": "SDN "
     },
     {
       "event": "token",
-      "data": "flags "
+      "data": "list "
     },
     {
       "event": "token",
-      "data": "VTB "
+      "data": "in "
     },
     {
       "event": "token",
-      "data": "for "
+      "data": "its "
     },
     {
       "event": "token",
-      "data": "export "
+      "data": "own "
     },
     {
       "event": "token",
-      "data": "controls, "
+      "data": "name "
     },
     {
       "event": "token",
-      "data": "imports "
+      "data": "AND "
     },
     {
       "event": "token",
-      "data": "of "
+      "data": "is "
+    },
+    {
+      "event": "token",
+      "data": "controlled "
+    },
+    {
+      "event": "token",
+      "data": "by "
+    },
+    {
+      "event": "token",
+      "data": "another "
+    },
+    {
+      "event": "token",
+      "data": "SDN-designated "
+    },
+    {
+      "event": "token",
+      "data": "entity, "
+    },
+    {
+      "event": "token",
+      "data": "triggering "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "OFAC "
+    },
+    {
+      "event": "token",
+      "data": "50% "
+    },
+    {
+      "event": "token",
+      "data": "rule "
+    },
+    {
+      "event": "token",
+      "data": "from "
+    },
+    {
+      "event": "token",
+      "data": "both "
+    },
+    {
+      "event": "token",
+      "data": "directions.\n\n4. "
+    },
+    {
+      "event": "token",
+      "data": "Russian "
+    },
+    {
+      "event": "token",
+      "data": "state-owned "
+    },
+    {
+      "event": "token",
+      "data": "enterprise "
+    },
+    {
+      "event": "token",
+      "data": "with "
+    },
+    {
+      "event": "token",
+      "data": "PEP-adjacent "
+    },
+    {
+      "event": "token",
+      "data": "connections "
+    },
+    {
+      "event": "token",
+      "data": "\u2014 "
+    },
+    {
+      "event": "token",
+      "data": "confirmed "
+    },
+    {
+      "event": "token",
+      "data": "by "
+    },
+    {
+      "event": "token",
+      "data": "Sayari "
+    },
+    {
+      "event": "token",
+      "data": "fields "
+    },
+    {
+      "event": "token",
+      "data": "state_owned_rus "
+    },
+    {
+      "event": "token",
+      "data": "and "
+    },
+    {
+      "event": "token",
+      "data": "pep_adjacent.\n\n5. "
+    },
+    {
+      "event": "token",
+      "data": "Export "
+    },
+    {
+      "event": "token",
+      "data": "controls "
+    },
+    {
+      "event": "token",
+      "data": "exposure: "
+    },
+    {
+      "event": "token",
+      "data": "flagged "
+    },
+    {
+      "event": "token",
+      "data": "under "
     },
     {
       "event": "token",
@@ -1658,7 +1038,7 @@
     },
     {
       "event": "token",
-      "data": "items, "
+      "data": "items "
     },
     {
       "event": "token",
@@ -1666,43 +1046,23 @@
     },
     {
       "event": "token",
-      "data": "even "
+      "data": "export "
+    },
+    {
+      "event": "token",
+      "data": "control "
+    },
+    {
+      "event": "token",
+      "data": "lists, "
+    },
+    {
+      "event": "token",
+      "data": "adding "
     },
     {
       "event": "token",
       "data": "a "
-    },
-    {
-      "event": "token",
-      "data": "Xinjiang-origin "
-    },
-    {
-      "event": "token",
-      "data": "forced "
-    },
-    {
-      "event": "token",
-      "data": "labour "
-    },
-    {
-      "event": "token",
-      "data": "supply "
-    },
-    {
-      "event": "token",
-      "data": "chain "
-    },
-    {
-      "event": "token",
-      "data": "signal. "
-    },
-    {
-      "event": "token",
-      "data": "These "
-    },
-    {
-      "event": "token",
-      "data": "are "
     },
     {
       "event": "token",
@@ -1710,11 +1070,15 @@
     },
     {
       "event": "token",
+      "data": "regulatory "
+    },
+    {
+      "event": "token",
       "data": "risk "
     },
     {
       "event": "token",
-      "data": "vectors "
+      "data": "layer "
     },
     {
       "event": "token",
@@ -1722,39 +1086,7 @@
     },
     {
       "event": "token",
-      "data": "the "
-    },
-    {
-      "event": "token",
-      "data": "core "
-    },
-    {
-      "event": "token",
-      "data": "sanctions "
-    },
-    {
-      "event": "token",
-      "data": "issue.\nSource: "
-    },
-    {
-      "event": "token",
-      "data": "risk_summary, "
-    },
-    {
-      "event": "token",
-      "data": "fields: "
-    },
-    {
-      "event": "token",
-      "data": "export_controls, "
-    },
-    {
-      "event": "token",
-      "data": "imports_bis_high_priority_items, "
-    },
-    {
-      "event": "token",
-      "data": "forced_labor_xinjiang_origin_subtier_product_blueprint.\n\n**6. "
+      "data": "sanctions.\n\n6. "
     },
     {
       "event": "token",
@@ -1762,19 +1094,11 @@
     },
     {
       "event": "token",
-      "data": "Counterparty "
+      "data": "network "
     },
     {
       "event": "token",
-      "data": "Footprint**\nVTB "
-    },
-    {
-      "event": "token",
-      "data": "has "
-    },
-    {
-      "event": "token",
-      "data": "a "
+      "data": "footprint: "
     },
     {
       "event": "token",
@@ -1790,47 +1114,11 @@
     },
     {
       "event": "token",
-      "data": "\u2014 "
+      "data": "connected "
     },
     {
       "event": "token",
-      "data": "meaning "
-    },
-    {
-      "event": "token",
-      "data": "Sayari "
-    },
-    {
-      "event": "token",
-      "data": "has "
-    },
-    {
-      "event": "token",
-      "data": "mapped "
-    },
-    {
-      "event": "token",
-      "data": "over "
-    },
-    {
-      "event": "token",
-      "data": "15,000 "
-    },
-    {
-      "event": "token",
-      "data": "relationships "
-    },
-    {
-      "event": "token",
-      "data": "in "
-    },
-    {
-      "event": "token",
-      "data": "its "
-    },
-    {
-      "event": "token",
-      "data": "network "
+      "data": "entities "
     },
     {
       "event": "token",
@@ -1842,11 +1130,175 @@
     },
     {
       "event": "token",
-      "data": "data "
+      "data": "source "
     },
     {
       "event": "token",
-      "data": "sources. "
+      "data": "datasets, "
+    },
+    {
+      "event": "token",
+      "data": "meaning "
+    },
+    {
+      "event": "token",
+      "data": "a "
+    },
+    {
+      "event": "token",
+      "data": "VTB "
+    },
+    {
+      "event": "token",
+      "data": "relationship "
+    },
+    {
+      "event": "token",
+      "data": "carries "
+    },
+    {
+      "event": "token",
+      "data": "substantial "
+    },
+    {
+      "event": "token",
+      "data": "contagion "
+    },
+    {
+      "event": "token",
+      "data": "risk "
+    },
+    {
+      "event": "token",
+      "data": "to "
+    },
+    {
+      "event": "token",
+      "data": "the "
+    },
+    {
+      "event": "token",
+      "data": "rest "
+    },
+    {
+      "event": "token",
+      "data": "of "
+    },
+    {
+      "event": "token",
+      "data": "your "
+    },
+    {
+      "event": "token",
+      "data": "portfolio.\n\nRECOMMENDATION: "
+    },
+    {
+      "event": "token",
+      "data": "Do "
+    },
+    {
+      "event": "token",
+      "data": "not "
+    },
+    {
+      "event": "token",
+      "data": "onboard. "
+    },
+    {
+      "event": "token",
+      "data": "Any "
+    },
+    {
+      "event": "token",
+      "data": "transaction "
+    },
+    {
+      "event": "token",
+      "data": "with "
+    },
+    {
+      "event": "token",
+      "data": "VTB "
+    },
+    {
+      "event": "token",
+      "data": "Bank "
+    },
+    {
+      "event": "token",
+      "data": "\u2014 "
+    },
+    {
+      "event": "token",
+      "data": "or "
+    },
+    {
+      "event": "token",
+      "data": "entities "
+    },
+    {
+      "event": "token",
+      "data": "it "
+    },
+    {
+      "event": "token",
+      "data": "owns "
+    },
+    {
+      "event": "token",
+      "data": "at "
+    },
+    {
+      "event": "token",
+      "data": "\u226550% "
+    },
+    {
+      "event": "token",
+      "data": "\u2014 "
+    },
+    {
+      "event": "token",
+      "data": "is "
+    },
+    {
+      "event": "token",
+      "data": "presumptively "
+    },
+    {
+      "event": "token",
+      "data": "blocked "
+    },
+    {
+      "event": "token",
+      "data": "under "
+    },
+    {
+      "event": "token",
+      "data": "OFAC's "
+    },
+    {
+      "event": "token",
+      "data": "50% "
+    },
+    {
+      "event": "token",
+      "data": "rule "
+    },
+    {
+      "event": "token",
+      "data": "(31 "
+    },
+    {
+      "event": "token",
+      "data": "CFR "
+    },
+    {
+      "event": "token",
+      "data": "\u00a7 "
+    },
+    {
+      "event": "token",
+      "data": "501.801). "
     },
     {
       "event": "token",
@@ -1858,99 +1310,15 @@
     },
     {
       "event": "token",
-      "data": "an "
+      "data": "a "
     },
     {
       "event": "token",
-      "data": "extraordinarily "
+      "data": "hard "
     },
     {
       "event": "token",
-      "data": "large "
-    },
-    {
-      "event": "token",
-      "data": "and "
-    },
-    {
-      "event": "token",
-      "data": "complex "
-    },
-    {
-      "event": "token",
-      "data": "web "
-    },
-    {
-      "event": "token",
-      "data": "that "
-    },
-    {
-      "event": "token",
-      "data": "makes "
-    },
-    {
-      "event": "token",
-      "data": "full "
-    },
-    {
-      "event": "token",
-      "data": "exposure "
-    },
-    {
-      "event": "token",
-      "data": "mapping "
-    },
-    {
-      "event": "token",
-      "data": "impractical "
-    },
-    {
-      "event": "token",
-      "data": "in "
-    },
-    {
-      "event": "token",
-      "data": "real "
-    },
-    {
-      "event": "token",
-      "data": "time.\nSource: "
-    },
-    {
-      "event": "token",
-      "data": "risk_summary, "
-    },
-    {
-      "event": "token",
-      "data": "fields: "
-    },
-    {
-      "event": "token",
-      "data": "degree, "
-    },
-    {
-      "event": "token",
-      "data": "source_count.\n\n---\n\n**Bottom "
-    },
-    {
-      "event": "token",
-      "data": "Line "
-    },
-    {
-      "event": "token",
-      "data": "for "
-    },
-    {
-      "event": "token",
-      "data": "Meridian:**\nVTB "
-    },
-    {
-      "event": "token",
-      "data": "Bank "
-    },
-    {
-      "event": "token",
-      "data": "must "
+      "data": "stop, "
     },
     {
       "event": "token",
@@ -1958,243 +1326,35 @@
     },
     {
       "event": "token",
-      "data": "be "
-    },
-    {
-      "event": "token",
-      "data": "onboarded. "
-    },
-    {
-      "event": "token",
-      "data": "It "
-    },
-    {
-      "event": "token",
-      "data": "is "
-    },
-    {
-      "event": "token",
-      "data": "hard-prohibited "
-    },
-    {
-      "event": "token",
-      "data": "under "
-    },
-    {
-      "event": "token",
-      "data": "OFAC "
-    },
-    {
-      "event": "token",
-      "data": "SDN "
-    },
-    {
-      "event": "token",
-      "data": "and "
-    },
-    {
-      "event": "token",
-      "data": "Swiss "
-    },
-    {
-      "event": "token",
-      "data": "SECO "
-    },
-    {
-      "event": "token",
-      "data": "simultaneously, "
-    },
-    {
-      "event": "token",
-      "data": "is "
-    },
-    {
-      "event": "token",
-      "data": "majority-controlled "
-    },
-    {
-      "event": "token",
-      "data": "by "
-    },
-    {
-      "event": "token",
-      "data": "two "
-    },
-    {
-      "event": "token",
-      "data": "active "
-    },
-    {
-      "event": "token",
-      "data": "sanctioned "
-    },
-    {
-      "event": "token",
-      "data": "shareholders "
-    },
-    {
-      "event": "token",
-      "data": "(47.22% "
-    },
-    {
-      "event": "token",
-      "data": "+ "
-    },
-    {
-      "event": "token",
-      "data": "32.88%), "
-    },
-    {
-      "event": "token",
-      "data": "has "
-    },
-    {
-      "event": "token",
       "data": "a "
     },
     {
       "event": "token",
-      "data": "sanctioned "
+      "data": "risk-accept "
     },
     {
       "event": "token",
-      "data": "PEP "
+      "data": "scenario.\n\nConfidence: "
     },
     {
       "event": "token",
-      "data": "as "
+      "data": "High. "
     },
     {
       "event": "token",
-      "data": "a "
+      "data": "No "
     },
     {
       "event": "token",
-      "data": "current "
+      "data": "\u26a0 "
     },
     {
       "event": "token",
-      "data": "shareholder, "
+      "data": "flags. "
     },
     {
       "event": "token",
-      "data": "and "
-    },
-    {
-      "event": "token",
-      "data": "radiates "
-    },
-    {
-      "event": "token",
-      "data": "sanctions "
-    },
-    {
-      "event": "token",
-      "data": "exposure "
-    },
-    {
-      "event": "token",
-      "data": "across "
-    },
-    {
-      "event": "token",
-      "data": "eight "
-    },
-    {
-      "event": "token",
-      "data": "subsidiary/affiliate "
-    },
-    {
-      "event": "token",
-      "data": "nodes "
-    },
-    {
-      "event": "token",
-      "data": "globally. "
-    },
-    {
-      "event": "token",
-      "data": "There "
-    },
-    {
-      "event": "token",
-      "data": "is "
-    },
-    {
-      "event": "token",
-      "data": "no "
-    },
-    {
-      "event": "token",
-      "data": "OFAC "
-    },
-    {
-      "event": "token",
-      "data": "licence "
-    },
-    {
-      "event": "token",
-      "data": "pathway "
-    },
-    {
-      "event": "token",
-      "data": "that "
-    },
-    {
-      "event": "token",
-      "data": "would "
-    },
-    {
-      "event": "token",
-      "data": "make "
-    },
-    {
-      "event": "token",
-      "data": "this "
-    },
-    {
-      "event": "token",
-      "data": "a "
-    },
-    {
-      "event": "token",
-      "data": "viable "
-    },
-    {
-      "event": "token",
-      "data": "counterparty.\n\nConfidence: "
-    },
-    {
-      "event": "token",
-      "data": "HIGH. "
-    },
-    {
-      "event": "token",
-      "data": "Resolution "
-    },
-    {
-      "event": "token",
-      "data": "warn_verify "
-    },
-    {
-      "event": "token",
-      "data": "flag "
-    },
-    {
-      "event": "token",
-      "data": "is "
-    },
-    {
-      "event": "token",
-      "data": "not "
-    },
-    {
-      "event": "token",
-      "data": "set. "
-    },
-    {
-      "event": "token",
-      "data": "Identity "
+      "data": "Match "
     },
     {
       "event": "token",
@@ -2202,7 +1362,11 @@
     },
     {
       "event": "token",
-      "data": "across "
+      "data": "by "
+    },
+    {
+      "event": "token",
+      "data": "both "
     },
     {
       "event": "token",
@@ -2214,11 +1378,15 @@
     },
     {
       "event": "token",
-      "data": "ID "
+      "data": "name-screen "
     },
     {
       "event": "token",
-      "data": "17013 "
+      "data": "(SDN "
+    },
+    {
+      "event": "token",
+      "data": "#17013) "
     },
     {
       "event": "token",
@@ -2234,7 +1402,7 @@
     },
     {
       "event": "token",
-      "data": "dy-rh2g0QtzUN_jC_e9S_A "
+      "data": "resolution "
     },
     {
       "event": "token",
@@ -2242,29 +1410,20 @@
     },
     {
       "event": "token",
-      "data": "39 "
+      "data": "high "
     },
     {
       "event": "token",
-      "data": "corroborating "
-    },
-    {
-      "event": "token",
-      "data": "data "
-    },
-    {
-      "event": "token",
-      "data": "sources."
+      "data": "confidence."
     },
     {
       "event": "answer_meta",
       "data": {
         "confidence": "high",
-        "sources_count": 3,
+        "sources_count": 2,
         "tools_used": [
           "compare_ofac_vs_sayari",
-          "risk_summary",
-          "traverse_ownership"
+          "risk_summary"
         ]
       }
     },
