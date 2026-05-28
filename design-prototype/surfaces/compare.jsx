@@ -1,62 +1,108 @@
 /* Surface 3 — Compare hero: OFAC name-screen vs Sayari (§8) */
 
-function Compare({ onOpenEntity }) {
+function Compare({ onOpenEntity, focusEntityId }) {
   const result = window.COMPARE_RESULT;
   const { rows, summary, ofac_fetched_at } = result.data;
   const [filterOutcome, setFilterOutcome] = useState(null);
   const [expandedRowId, setExpandedRowId] = useState(null);
+  const [exportOpen, setExportOpen] = useState(false);
+  const [highlightId, setHighlightId] = useState(null);
 
   const gapRows = useMemo(
     () => rows.filter(r => r.outcome === 'sayari_only' || r.outcome === 'screen_ambiguous'),
     [rows]
   );
 
+  const OUTCOME_ORDER = { sayari_only: 0, screen_ambiguous: 1, matcher_miss: 2, ofac_only: 3, both_catch: 4, no_ofac: 5, unresolved: 6 };
+  const sortedRows = useMemo(() => [...rows].sort((a, b) => (OUTCOME_ORDER[a.outcome] ?? 9) - (OUTCOME_ORDER[b.outcome] ?? 9)), [rows]);
+
   const visibleRows = useMemo(
-    () => filterOutcome ? rows.filter(r => r.outcome === filterOutcome) : rows,
-    [rows, filterOutcome]
+    () => filterOutcome ? sortedRows.filter(r => r.outcome === filterOutcome) : sortedRows,
+    [sortedRows, filterOutcome]
   );
 
+  useEffect(() => {
+    if (!focusEntityId) {
+      const main = document.querySelector('main');
+      if (main) main.scrollTop = 0;
+      window.scrollTo(0, 0);
+      return;
+    }
+    setExpandedRowId(focusEntityId);
+    setHighlightId(focusEntityId);
+    const t = setTimeout(() => {
+      const el = document.querySelector(`[data-entity-row="${focusEntityId}"]`);
+      if (!el) return;
+      const main = document.querySelector('main');
+      const rect = el.getBoundingClientRect();
+      if (main && main.scrollHeight > main.clientHeight + 4) {
+        const mainRect = main.getBoundingClientRect();
+        main.scrollTop += rect.top - mainRect.top - 100;
+      } else {
+        window.scrollTo({ top: window.scrollY + rect.top - 100, behavior: 'smooth' });
+      }
+    }, 30);
+    const t2 = setTimeout(() => setHighlightId(null), 1800);
+    return () => { clearTimeout(t); clearTimeout(t2); };
+  }, [focusEntityId]);
+
   const buckets = [
-    { key: 'both_catch',       count: summary.both_catch },
     { key: 'sayari_only',      count: summary.sayari_only },
     { key: 'screen_ambiguous', count: summary.screen_ambiguous },
     { key: 'matcher_miss',     count: summary.matcher_miss },
     { key: 'ofac_only',        count: summary.ofac_only },
+    { key: 'both_catch',       count: summary.both_catch },
     { key: 'no_ofac',          count: summary.no_ofac },
   ];
 
   return (
     <div style={{ padding: '32px 40px 80px', maxWidth: 1400, margin: '0 auto' }}>
 
-      {/* Executive glance */}
-      <div style={{
-        padding: '20px 0 24px',
-        borderBottom: '1px solid var(--border-subtle)',
-        marginBottom: 36,
-      }}>
-        <div className="mono" style={{ color: 'var(--text-muted)', fontSize: 11, letterSpacing: 1.4, textTransform: 'uppercase', marginBottom: 8 }}>
-          Executive glance · list_1 · threshold 0.85
-        </div>
-        <div style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.4, maxWidth: 940 }}>
-          Of <span className="mono" style={{ color: 'var(--text-primary)' }}>50</span> vendors,{' '}
-          <span className="mono" style={{ color: 'var(--text-primary)' }}>45</span> are sanctioned —{' '}
-          and <span style={{ color: 'var(--accent)' }}><span className="mono">4 of those</span> are blocked only because of who owns them</span>,{' '}
-          invisible to a name-based screen.
-        </div>
-      </div>
+      {(() => {
+        // Top header: bind to real /summary (input/resolved/sanctioned counts)
+        // and to compare summary.ownership_gap. Falls back to fixture-equivalent
+        // values from compare summary if /summary wasn't fetched.
+        const rs = (window.RUN_SUMMARY && window.RUN_SUMMARY.data) || {};
+        const totalInput      = rs.total_input      != null ? rs.total_input      : summary.total_entities + (summary.unresolved || 0);
+        const resolved        = rs.resolved         != null ? rs.resolved         : summary.total_entities;
+        const sanctionedCount = rs.sanctioned_count != null ? rs.sanctioned_count : null;
+        return (
+          <>
+            <div style={{ marginBottom: 12 }}>
+              <div className="mono" style={{ color: 'var(--text-muted)', fontSize: 11, letterSpacing: 1.4, textTransform: 'uppercase', marginBottom: 6 }}>
+                list_1 · threshold 0.85
+              </div>
+              <div style={{ fontSize: 14, color: 'var(--text-secondary)' }}>
+                <span className="mono" style={{ color: 'var(--text-primary)' }}>{totalInput}</span> vendors ·{' '}
+                <span className="mono" style={{ color: 'var(--text-primary)' }}>{resolved}</span> resolved ·{' '}
+                <span className="mono" style={{ color: 'var(--text-primary)' }}>{sanctionedCount != null ? sanctionedCount : '—'}</span> sanctioned
+              </div>
+            </div>
 
-      {/* Hero — the ownership gap */}
-      <CompareHero summary={summary} />
+            <div style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.4, maxWidth: 940, marginBottom: 32, paddingBottom: 24, borderBottom: '1px solid var(--border-subtle)' }}>
+              <span style={{ color: 'var(--accent)' }}>{summary.ownership_gap} vendor{summary.ownership_gap === 1 ? '' : 's'} a clean name-screen would wave through</span> are actually blocked.
+            </div>
+          </>
+        );
+      })()}
 
-      {/* Bucket legend */}
+      <CompareFunnel summary={summary} />
+
       <div style={{ marginTop: 28, marginBottom: 40, display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-        <OutcomeBadge outcome="both_catch" count={summary.both_catch} large active={filterOutcome === null} onClick={() => setFilterOutcome(null)} />
-        {buckets.slice(1).map(b => (
+        <OutcomeBadge outcome="both_catch" count={summary.both_catch} large active={filterOutcome === null && true} onClick={() => setFilterOutcome(filterOutcome === 'both_catch' ? null : 'both_catch')} />
+        {buckets.filter(b => b.key !== 'both_catch').map(b => (
           <OutcomeBadge key={b.key} outcome={b.key} count={b.count} large active={filterOutcome === b.key} onClick={() => setFilterOutcome(b.key === filterOutcome ? null : b.key)} />
         ))}
+        {filterOutcome ? (
+          <button onClick={() => setFilterOutcome(null)} style={{
+            background: 'transparent', color: 'var(--text-muted)',
+            border: '1px solid var(--border-default)',
+            padding: '4px 10px', borderRadius: 2, fontSize: 11,
+            fontFamily: 'var(--font-mono)', letterSpacing: 0.4, alignSelf: 'center',
+          }}>show all</button>
+        ) : null}
       </div>
 
-      {/* Ownership-gap spotlight */}
       <SectionHeader
         kicker="Ownership-gap spotlight"
         title="The 4 entities a name-screen can't catch"
@@ -67,53 +113,70 @@ function Compare({ onOpenEntity }) {
         ))}
       </div>
 
-      {/* Full reconciliation table */}
       <SectionHeader
         kicker="Full reconciliation"
         title={`${visibleRows.length} ${visibleRows.length === 1 ? 'entity' : 'entities'}${filterOutcome ? ' · filtered' : ''}`}
         right={
-          filterOutcome ? (
-            <button onClick={() => setFilterOutcome(null)} style={{ background: 'transparent', border: '1px solid var(--border-default)', color: 'var(--text-secondary)', padding: '6px 12px', borderRadius: 4, fontSize: 12 }}>
-              clear filter
-            </button>
-          ) : (
-            <span className="mono muted" style={{ fontSize: 11 }}>OFAC SDN feed downloaded {ofac_fetched_at?.slice(0,10)}</span>
-          )
+          <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
+            {filterOutcome ? (
+              <button onClick={() => setFilterOutcome(null)} style={{ background: 'transparent', border: '1px solid var(--border-default)', color: 'var(--text-secondary)', padding: '6px 12px', borderRadius: 4, fontSize: 12 }}>
+                clear filter
+              </button>
+            ) : (
+              <span className="mono muted" style={{ fontSize: 11 }}>OFAC SDN feed downloaded {ofac_fetched_at?.slice(0,10)}</span>
+            )}
+            <button onClick={() => setExportOpen(true)} style={{
+              background: 'transparent', color: 'var(--text-secondary)',
+              border: '1px solid var(--border-default)', padding: '6px 12px', borderRadius: 4, fontSize: 12,
+            }}>↓ Export investigation report</button>
+          </div>
         }
       />
-      <ReconciliationTable rows={visibleRows} expandedId={expandedRowId} onToggle={setExpandedRowId} onOpenEntity={onOpenEntity} />
+      <ReconciliationTable rows={visibleRows} expandedId={expandedRowId} onToggle={setExpandedRowId} onOpenEntity={onOpenEntity} highlightId={highlightId} />
+
+      {exportOpen ? <InvestigationReportModal onClose={() => setExportOpen(false)} /> : null}
     </div>
   );
 }
 
-// -------- Hero ---------
-function CompareHero({ summary }) {
+function CompareFunnel({ summary }) {
+  // All funnel numbers bind to the live /tools/compare_ofac_vs_sayari?threshold=0.85
+  // summary — no hardcoded JSX values. `total_ofac_exposed` is the universe;
+  // `ofac_screen_finds` is the name-screen catch; the gap is the rest.
+  const exposed      = summary.total_ofac_exposed;
+  const screenFinds  = summary.ofac_screen_finds;
+  const missedByName = (exposed != null && screenFinds != null) ? (exposed - screenFinds) : null;
+  const ownershipGap = summary.ownership_gap;
+  const nameMissed   = summary.matcher_miss;
+
   return (
     <div style={{
       background: 'linear-gradient(180deg, rgba(201,169,97,0.04) 0%, rgba(201,169,97,0) 100%)',
       border: '1px solid var(--border-default)',
       borderRadius: 8,
       padding: '40px 44px',
-      position: 'relative',
-      overflow: 'hidden',
     }}>
       <div className="mono" style={{ color: 'var(--accent-dim)', fontSize: 11, letterSpacing: 1.6, textTransform: 'uppercase', marginBottom: 16 }}>
-        The Ownership Gap
-      </div>
-      <div className="serif" style={{ fontSize: 44, lineHeight: 1.15, letterSpacing: -0.4, maxWidth: 980, marginBottom: 12 }}>
-        A fair OFAC name-screen catches{' '}
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 40, color: 'var(--text-primary)' }}>33</span>{' '}
-        of <span style={{ fontFamily: 'var(--font-mono)', fontSize: 40, color: 'var(--text-primary)' }}>40</span>{' '}
-        OFAC-exposed entities.
-      </div>
-      <div className="serif" style={{ fontSize: 28, lineHeight: 1.3, color: 'var(--text-secondary)', maxWidth: 920, marginBottom: 28 }}>
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 28, color: 'var(--accent)' }}>4</span> are blocked under the
-        50% rule — owned or controlled by a sanctioned party, never named on the SDN list.
-        No name-screen can see them.
+        The Ownership Gap · funnel
       </div>
 
-      {/* Flow diagram */}
-      <GapFlow summary={summary} />
+      <div className="serif" style={{ fontSize: 32, lineHeight: 1.3, letterSpacing: -0.2, maxWidth: 1000, marginBottom: 36 }}>
+        A fair OFAC name-screen catches{' '}
+        <span style={{ fontFamily: 'var(--font-mono)', color: 'var(--text-primary)' }}>{screenFinds}</span> of{' '}
+        <span style={{ fontFamily: 'var(--font-mono)', color: 'var(--text-primary)' }}>{exposed}</span> OFAC-exposed entities. It misses{' '}
+        <span style={{ fontFamily: 'var(--font-mono)', color: 'var(--risk-high)' }}>{missedByName}</span> —{' '}
+        <span style={{ color: 'var(--accent)' }}><span style={{ fontFamily: 'var(--font-mono)' }}>{ownershipGap}</span> hidden behind ownership</span>,{' '}
+        <span style={{ color: 'var(--text-secondary)' }}><span style={{ fontFamily: 'var(--font-mono)' }}>{nameMissed}</span> lost to name variations</span>.{' '}
+        <span style={{ color: 'var(--text-primary)' }}>Sayari catches all {exposed}.</span>
+      </div>
+
+      <FunnelDiagram
+        exposed={exposed}
+        screenFinds={screenFinds}
+        missedByName={missedByName}
+        ownershipGap={ownershipGap}
+        nameMissed={nameMissed}
+      />
 
       <div className="muted" style={{ fontSize: 12, marginTop: 24, fontStyle: 'italic', maxWidth: 800 }}>
         Reconciliation, not a scoreboard. Disagreements between sources are signals to investigate,
@@ -123,92 +186,147 @@ function CompareHero({ summary }) {
   );
 }
 
-// -------- Flow diagram ---------
-function GapFlow({ summary }) {
+function FunnelDiagram({ exposed, screenFinds, missedByName, ownershipGap, nameMissed }) {
+  return (
+    <div style={{ position: 'relative' }}>
+      <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 0 }} preserveAspectRatio="none">
+        <defs>
+          <marker id="fnArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--text-muted)" />
+          </marker>
+        </defs>
+      </svg>
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0, rowGap: 36 }}>
+        <div style={{ gridColumn: '1 / -1' }}>
+          <FunnelCell label="OFAC-exposed entities" value={exposed} tone="neutral" anchor />
+        </div>
+
+        <div style={{ gridColumn: '1 / 3' }}>
+          <FunnelCell label="OFAC name-screen catches" value={screenFinds} tone="low" sub="agreement — both sources flag" />
+        </div>
+        <div style={{ gridColumn: '3 / 5' }}>
+          <FunnelCell label="missed by name-screen" value={missedByName} tone="warn" sub="invisible to string-matching" />
+        </div>
+
+        <div style={{ gridColumn: '1 / 3', minHeight: 70 }}>
+          <FunnelGhost label="(also caught by Sayari)" />
+        </div>
+        <div style={{ gridColumn: '3 / 4' }}>
+          <FunnelCell label="hidden behind ownership" value={ownershipGap} tone="gold" sub="OFAC 50% rule · 31 CFR §501.801" emphasis />
+        </div>
+        <div style={{ gridColumn: '4 / 5' }}>
+          <FunnelCell label="lost to name variation" value={nameMissed} tone="muted" sub="resolution beats string-match" />
+        </div>
+
+        <div style={{ gridColumn: '1 / -1' }}>
+          <FunnelCell label="Sayari catches all" value={exposed} tone="accent-strong" anchor sub="resolved identity + ownership graph traversal" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function FunnelCell({ label, value, tone, sub, emphasis, anchor }) {
+  const palette = {
+    neutral:        { bg: 'var(--bg-surface)',             border: 'var(--border-default)', fg: 'var(--text-primary)',  accent: 'var(--text-secondary)' },
+    low:            { bg: 'rgba(63,185,80,0.04)',           border: 'rgba(63,185,80,0.25)',  fg: 'var(--text-primary)',  accent: 'var(--risk-low)' },
+    warn:           { bg: 'rgba(219,109,40,0.04)',          border: 'rgba(219,109,40,0.3)',  fg: 'var(--risk-high)',     accent: 'var(--risk-high)' },
+    gold:           { bg: 'rgba(201,169,97,0.1)',           border: 'var(--accent)',         fg: 'var(--accent)',        accent: 'var(--accent)' },
+    muted:          { bg: 'rgba(100,116,139,0.05)',         border: 'var(--border-default)', fg: 'var(--text-secondary)',accent: 'var(--text-muted)' },
+    'accent-strong':{ bg: 'rgba(201,169,97,0.04)',          border: 'var(--accent-dim)',     fg: 'var(--text-primary)',  accent: 'var(--accent)' },
+  }[tone || 'neutral'];
   return (
     <div style={{
-      display: 'grid',
-      gridTemplateColumns: '1fr 60px 1.4fr',
-      gap: 16,
-      alignItems: 'stretch',
-      marginTop: 8,
+      background: palette.bg,
+      border: `1px solid ${palette.border}`,
+      borderRadius: 3,
+      padding: anchor ? '18px 22px' : '14px 16px',
+      margin: '0 6px',
+      minHeight: 84,
+      position: 'relative', zIndex: 1,
     }}>
-      {/* Left: OFAC name-screen */}
-      <div style={{
-        background: 'var(--bg-surface)',
-        border: '1px solid var(--border-default)',
-        borderRadius: 4,
-        padding: '20px 22px',
-      }}>
-        <div className="mono" style={{ color: 'var(--text-muted)', fontSize: 11, letterSpacing: 0.8, textTransform: 'uppercase', marginBottom: 10 }}>
-          OFAC name-screen
-        </div>
-        <div style={{ display: 'flex', alignItems: 'baseline', gap: 12 }}>
-          <div className="serif" style={{ fontSize: 56, lineHeight: 1, color: 'var(--text-primary)' }}>33</div>
-          <div className="muted">caught</div>
-        </div>
-        <div className="muted" style={{ fontSize: 12, marginTop: 8 }}>
-          Catches everything listed by name. Cannot see ownership.
-        </div>
-        <div style={{ marginTop: 14, paddingTop: 14, borderTop: '1px solid var(--border-subtle)' }}>
-          <Bar label="caught" value={33} max={40} color="var(--risk-low)" />
-          <Bar label="missed" value={3} max={40} color="var(--risk-high)" />
-          <Bar label="hit wrong party" value={2} max={40} color="var(--accent-dim)" />
-          <Bar label="50%-rule entities (invisible)" value={2} max={40} color="var(--accent)" muted />
-        </div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 12 }}>
+        <div style={{ fontSize: 11, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: 0.8, fontFamily: 'var(--font-mono)' }}>{label}</div>
+        <div style={{
+          fontFamily: 'var(--font-mono)',
+          fontSize: anchor ? 40 : (emphasis ? 36 : 30),
+          fontWeight: 600,
+          color: palette.fg,
+          lineHeight: 1,
+        }}>{value}</div>
       </div>
-
-      {/* Arrow */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)' }}>
-        <svg width="48" height="60" viewBox="0 0 48 60" fill="none">
-          <path d="M4 30 H 38" stroke="var(--text-muted)" strokeWidth="1" strokeDasharray="2 3" />
-          <path d="M34 24 L 42 30 L 34 36" stroke="var(--text-muted)" strokeWidth="1" fill="none" />
-        </svg>
-      </div>
-
-      {/* Right: Sayari */}
-      <div style={{
-        background: 'linear-gradient(180deg, rgba(201,169,97,0.08) 0%, rgba(201,169,97,0.02) 100%)',
-        border: '1px solid var(--accent-dim)',
-        borderRadius: 4,
-        padding: '20px 22px',
-      }}>
-        <div className="mono" style={{ color: 'var(--accent)', fontSize: 11, letterSpacing: 0.8, textTransform: 'uppercase', marginBottom: 10 }}>
-          Sayari resolution + ownership
-        </div>
-        <div style={{ display: 'flex', alignItems: 'baseline', gap: 12 }}>
-          <div className="serif" style={{ fontSize: 56, lineHeight: 1, color: 'var(--text-primary)' }}>37</div>
-          <div className="muted">of 40 OFAC-exposed</div>
-        </div>
-        <div className="muted" style={{ fontSize: 12, marginTop: 8 }}>
-          Resolves names against corporate registries, then traverses the ownership graph.
-        </div>
-        <div style={{ marginTop: 14, paddingTop: 14, borderTop: '1px solid var(--border-subtle)' }}>
-          <Bar label="caught directly (both)" value={33} max={40} color="var(--risk-low)" />
-          <Bar label="caught via ownership gap" value={4} max={40} color="var(--accent)" highlight />
-          <Bar label="screen-only ambiguity" value={3} max={40} color="var(--risk-high)" muted />
-        </div>
-      </div>
+      {sub ? (
+        <div style={{ fontSize: 11, color: palette.accent, marginTop: 6, lineHeight: 1.5 }}>{sub}</div>
+      ) : null}
     </div>
   );
 }
 
-function Bar({ label, value, max, color, highlight, muted }) {
-  const pct = Math.max(2, (value / max) * 100);
+function FunnelGhost({ label }) {
   return (
-    <div style={{ marginBottom: 8, opacity: muted ? 0.55 : 1 }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, marginBottom: 3 }}>
-        <span style={{ color: highlight ? 'var(--accent)' : 'var(--text-secondary)' }}>{label}</span>
-        <span className="mono" style={{ color: highlight ? 'var(--accent)' : 'var(--text-secondary)' }}>{value}</span>
-      </div>
-      <div style={{ height: 4, background: 'var(--border-subtle)', borderRadius: 1, overflow: 'hidden' }}>
-        <div style={{ width: `${pct}%`, height: '100%', background: color, transition: 'width 200ms' }} />
+    <div style={{
+      padding: '14px 16px', margin: '0 6px', minHeight: 84,
+      border: '1px dashed var(--border-subtle)',
+      borderRadius: 3,
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      color: 'var(--text-muted)', fontSize: 11, fontFamily: 'var(--font-mono)',
+      letterSpacing: 0.4,
+      position: 'relative', zIndex: 1,
+    }}>{label}</div>
+  );
+}
+
+function InvestigationReportModal({ onClose }) {
+  const [generated, setGenerated] = useState(false);
+  return (
+    <div onClick={onClose} style={{
+      position: 'fixed', inset: 0, background: 'rgba(5,11,20,0.7)', zIndex: 100,
+      display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 40,
+    }}>
+      <div onClick={(e) => e.stopPropagation()} style={{
+        background: 'var(--bg-elevated)', border: '1px solid var(--border-default)',
+        borderRadius: 8, maxWidth: 560, width: '100%', padding: 28,
+      }}>
+        <div style={{ fontSize: 18, fontWeight: 600, marginBottom: 6 }}>Export investigation report</div>
+        <div className="mono" style={{ fontSize: 11, color: 'var(--text-muted)', marginBottom: 16 }}>
+          POST /tools/generate_investigation_report
+        </div>
+        <div style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.55, marginBottom: 18 }}>
+          A full PDF audit artifact for <span style={{ color: 'var(--text-primary)' }}>list_1 · Q1 Vendor Onboarding</span>:
+          run summary, the funnel, all 4 ownership-gap findings with their evidence, the reconciliation table, and current dispositions.
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 18 }}>
+          <ReportOption label="Format" value="PDF (print theme)" />
+          <ReportOption label="Pages" value="~14" />
+          <ReportOption label="Section count" value="6" />
+          <ReportOption label="Cited sources" value="62 entries" />
+        </div>
+        <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
+          <button onClick={onClose} style={{
+            background: 'transparent', color: 'var(--text-secondary)',
+            border: '1px solid var(--border-default)', padding: '8px 14px', borderRadius: 4, fontSize: 13,
+          }}>Cancel</button>
+          <button onClick={() => { setGenerated(true); setTimeout(onClose, 800); }} style={{
+            background: generated ? 'var(--risk-low)' : 'var(--accent)',
+            color: '#0A1628', border: 0,
+            padding: '8px 14px', borderRadius: 4, fontWeight: 600, fontSize: 13,
+          }}>{generated ? '✓ Generated' : 'Generate report'}</button>
+        </div>
       </div>
     </div>
   );
 }
 
-// -------- Gap card --------
+function ReportOption({ label, value }) {
+  return (
+    <div style={{ background: 'var(--bg-primary)', border: '1px solid var(--border-subtle)', padding: '8px 12px', borderRadius: 3 }}>
+      <div className="mono" style={{ fontSize: 10, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: 0.8 }}>{label}</div>
+      <div className="mono" style={{ fontSize: 12, color: 'var(--text-primary)', marginTop: 2 }}>{value}</div>
+    </div>
+  );
+}
+
 function GapCard({ row, marquee, onOpen }) {
   return (
     <div
@@ -240,7 +358,7 @@ function GapCard({ row, marquee, onOpen }) {
         <div style={{ fontSize: 12, color: 'var(--text-secondary)', lineHeight: 1.5 }}>
           {marquee
             ? <>5 sanctioned owners incl. <span style={{ color: 'var(--text-primary)' }}>Suleyman Kerimov</span>; name absent from SDN.</>
-            : (row.outcome === 'sayari_only' ? 'Not on SDN by name; ownership/control exposure.' : `Screen fired on “${row.ofac_match_name}” — a different SDN entity.`)
+            : (row.outcome === 'sayari_only' ? 'Not on SDN by name; ownership/control exposure.' : `Screen fired on "${row.ofac_match_name}" — a different SDN entity.`)
           }
         </div>
       </div>
@@ -252,8 +370,7 @@ function GapCard({ row, marquee, onOpen }) {
   );
 }
 
-// -------- Reconciliation table --------
-function ReconciliationTable({ rows, expandedId, onToggle, onOpenEntity }) {
+function ReconciliationTable({ rows, expandedId, onToggle, onOpenEntity, highlightId }) {
   return (
     <div style={{ background: 'var(--bg-surface)', border: '1px solid var(--border-default)', borderRadius: 6, overflow: 'hidden' }}>
       <div style={{
@@ -276,9 +393,11 @@ function ReconciliationTable({ rows, expandedId, onToggle, onOpenEntity }) {
       </div>
       {rows.map((row) => {
         const expanded = expandedId === row.entity_id;
+        const highlighted = highlightId === row.entity_id;
         return (
           <div key={row.entity_id} style={{ display: 'contents' }}>
             <div
+              data-entity-row={row.entity_id}
               className="clickable"
               onClick={() => onToggle(expanded ? null : row.entity_id)}
               style={{
@@ -287,13 +406,18 @@ function ReconciliationTable({ rows, expandedId, onToggle, onOpenEntity }) {
                 gap: 16,
                 padding: '12px 16px',
                 borderTop: '1px solid var(--border-subtle)',
+                borderLeft: highlighted ? '2px solid var(--accent)' : '2px solid transparent',
                 fontSize: 13,
                 alignItems: 'center',
-                background: expanded ? 'rgba(201,169,97,0.03)' : 'transparent',
+                background: highlighted ? 'rgba(201,169,97,0.10)' : (expanded ? 'rgba(201,169,97,0.03)' : 'transparent'),
+                transition: 'background 600ms ease, border-color 600ms ease',
               }}
             >
               <div>
-                <div style={{ fontWeight: 500 }}>{row.input_name}</div>
+                <div style={{ fontWeight: 500, display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+                  <span>{row.input_name}</span>
+                  {window.DISPOSITIONS && window.DISPOSITIONS[row.entity_id] ? <StatusChip status={window.DISPOSITIONS[row.entity_id].status} small /> : null}
+                </div>
                 <div className="mono muted" style={{ fontSize: 10 }}>{row.match_label ? truncate(row.match_label, 36) : '—'}</div>
               </div>
               <div>
