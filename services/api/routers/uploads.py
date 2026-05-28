@@ -303,14 +303,31 @@ async def upload_file(
 
 
 def _row_count(path: Path, sheet: str, suffix: str) -> int:
+    """
+    Count rows that actually contain data.
+
+    openpyxl's iter_rows walks the worksheet's *used range*, which
+    includes phantom rows below the data whenever cell formatting (borders,
+    background fills, etc.) was applied past the last real row. A 50-row
+    sheet can report 997 because of that. We filter to rows where at least
+    one cell is non-None and not whitespace, so the front-end's "input rows"
+    count reflects what an analyst would actually see in the file.
+    """
     if suffix == ".csv":
         with path.open(newline="", encoding="utf-8") as f:
-            return sum(1 for _ in f)
+            return sum(1 for line in f if line.strip())
     from openpyxl import load_workbook
 
     wb = load_workbook(path, read_only=True, data_only=True)
     ws = wb[sheet] if sheet in wb.sheetnames else wb.active
-    return sum(1 for _ in ws.iter_rows(values_only=True))
+    count = 0
+    for row in ws.iter_rows(values_only=True):
+        if any(
+            v is not None and (not isinstance(v, str) or v.strip())
+            for v in row
+        ):
+            count += 1
+    return count
 
 
 def _csv_header(path: Path) -> list[Any]:
