@@ -1,17 +1,112 @@
-/* Meridian Sentinel — app shell, nav, routing */
+/* Meridian Sentinel — app shell, nav, routing
+ *
+ * Routing: URL-hash-driven so refreshes preserve state. Encodings:
+ *   #/investigations              workflow home
+ *   #/investigations/{runId}      open that run (renders compare)
+ *   #/upload                      new investigation flow
+ *   #/integrations                tenant integrations
+ *   #/compare/{runId?}            compare surface (runId optional)
+ *   #/copilot/{runId?}            co-pilot surface
+ *   #/entity/{entityId}?run={runId?}
+ *
+ * Auth: localStorage('sentinel.authed') === '1' survives refresh. Sign-out
+ * clears it. Unauthed → landing regardless of hash.
+ */
+
+const _AUTH_KEY = 'sentinel.authed';
+
+function parseHash() {
+  let raw = (typeof window !== 'undefined' ? window.location.hash : '') || '';
+  if (raw.startsWith('#')) raw = raw.slice(1);
+  if (raw.startsWith('/')) raw = raw.slice(1);
+  const [pathPart, qsPart] = raw.split('?');
+  const parts = pathPart.split('/').filter(Boolean);
+  const qs = {};
+  if (qsPart) {
+    qsPart.split('&').forEach(kv => {
+      const [k, v] = kv.split('=');
+      if (k) qs[k] = decodeURIComponent(v || '');
+    });
+  }
+
+  switch (parts[0]) {
+    case undefined:
+    case '':
+    case 'investigations': {
+      // /investigations/{runId} → open the compare view of that run
+      if (parts[1]) return { route: { name: 'compare', params: {} }, runId: parts[1] };
+      return { route: { name: 'investigations', params: {} }, runId: null };
+    }
+    case 'integrations':
+      return { route: { name: 'integrations', params: {} }, runId: null };
+    case 'upload':
+      return { route: { name: 'upload', params: {} }, runId: null };
+    case 'copilot':
+      return { route: { name: 'copilot', params: {} }, runId: parts[1] || null };
+    case 'compare':
+      return { route: { name: 'compare', params: {} }, runId: parts[1] || null };
+    case 'entity':
+      return {
+        route: { name: 'entity', params: { entityId: parts[1] || null } },
+        runId: qs.run || null,
+      };
+    default:
+      return { route: { name: 'investigations', params: {} }, runId: null };
+  }
+}
+
+function serializeHash(route, runId) {
+  switch (route.name) {
+    case 'investigations': return '#/investigations';
+    case 'integrations':   return '#/integrations';
+    case 'upload':         return '#/upload';
+    case 'compare':        return runId ? `#/compare/${encodeURIComponent(runId)}` : '#/compare';
+    case 'copilot':        return runId ? `#/copilot/${encodeURIComponent(runId)}` : '#/copilot';
+    case 'entity': {
+      const eid = route.params?.entityId || '';
+      const qs = runId ? `?run=${encodeURIComponent(runId)}` : '';
+      return `#/entity/${encodeURIComponent(eid)}${qs}`;
+    }
+    default: return '';
+  }
+}
 
 function App() {
-  // route state: { name, params }
-  const [route, setRoute] = useState({ name: 'landing', params: {} });
-  const [authed, setAuthed] = useState(false);
+  // Auth + URL state — both initialised from persistent storage / hash on
+  // first render so a refresh on any deep page comes back to the same place.
+  const [authed, setAuthed] = useState(() => {
+    try { return typeof localStorage !== 'undefined' && localStorage.getItem(_AUTH_KEY) === '1'; }
+    catch (_) { return false; }
+  });
   const [runMode, setRunMode] = useState('CACHED'); // CACHED | LIVE
 
-  // Active run scope. null → default list_1 cache (existing demo data).
-  // A real string (e.g. "run_20260528_142359_a8c6") → the surfaces append
-  // ?run_id=<that> to every backend call, so the page renders that run's
-  // data instead of list_1. matchesSeeded carries the badge state.
-  const [runId, setRunId] = useState(null);
+  const _initial = useMemo(() => parseHash(), []);
+  const [route, setRoute] = useState(_initial.route);
+  const [runId, setRunId] = useState(_initial.runId);
   const [matchesSeeded, setMatchesSeeded] = useState(true);
+
+  // Keep window.location.hash in sync with (route, runId) whenever they change
+  // while authenticated. Guarded against the trivial no-op so we don't push a
+  // duplicate hashchange (which would feed back in via the listener below).
+  useEffect(() => {
+    if (!authed) return;
+    const desired = serializeHash(route, runId);
+    if (desired && window.location.hash !== desired) {
+      window.location.hash = desired;
+    }
+  }, [authed, route.name, route.params?.entityId, runId]);
+
+  // back/forward button + manual hash edits → re-parse and resync state.
+  useEffect(() => {
+    if (!authed) return;
+    const onHash = () => {
+      const parsed = parseHash();
+      setRoute(parsed.route);
+      setRunId(parsed.runId);
+    };
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, [authed]);
 
   const go = (name, params = {}) => setRoute({ name, params });
 
@@ -27,9 +122,26 @@ function App() {
     go('compare');
   };
 
+  const signOut = () => {
+    try { localStorage.removeItem(_AUTH_KEY); } catch (_) {}
+    setAuthed(false);
+    setRoute({ name: 'landing', params: {} });
+    setRunId(null);
+    if (typeof window !== 'undefined') window.location.hash = '';
+  };
+
   const onLogin = () => {
+    try { localStorage.setItem(_AUTH_KEY, '1'); } catch (_) {}
     setAuthed(true);
-    setRoute({ name: 'investigations', params: {} });
+    // Honor any pre-existing hash so a deep-linked bookmark survives login.
+    const parsed = parseHash();
+    if (parsed.route.name === 'landing' || !window.location.hash) {
+      setRoute({ name: 'investigations', params: {} });
+      setRunId(null);
+    } else {
+      setRoute(parsed.route);
+      setRunId(parsed.runId);
+    }
   };
 
   // Open an entity — push the current entity (if any) onto the trail
@@ -60,7 +172,7 @@ function App() {
     <div style={{ display: 'grid', gridTemplateColumns: '232px 1fr', height: '100vh', background: 'var(--bg-primary)' }}>
       <LeftRail route={route} go={go} openEntity={openEntity} />
       <div style={{ display: 'flex', flexDirection: 'column', minWidth: 0, height: '100vh', minHeight: 0 }}>
-        <GlobalHeader runMode={runMode} setRunMode={setRunMode} route={route} go={go} runId={runId} />
+        <GlobalHeader runMode={runMode} setRunMode={setRunMode} route={route} go={go} runId={runId} signOut={signOut} />
         <main style={{ flex: 1, minWidth: 0, minHeight: 0, overflowY: 'auto', overflowX: 'hidden' }} data-screen-label={`${route.name}`}>
           <Surfaces route={route} go={go} openEntity={openEntity} runMode={runMode}
                     runId={runId} setRunId={setRunId} onUploadComplete={onUploadComplete} />
@@ -251,7 +363,7 @@ function InvestigationStepsNav({ route, go, openEntity, investigation }) {
 }
 
 // -------- Global header --------
-function GlobalHeader({ runMode, setRunMode, route, go, runId }) {
+function GlobalHeader({ runMode, setRunMode, route, go, runId, signOut }) {
   const showRunContext = route.name !== 'investigations' && route.name !== 'integrations';
   const onCustomRun = !!runId;
   return (
@@ -297,14 +409,14 @@ function GlobalHeader({ runMode, setRunMode, route, go, runId }) {
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
         <RunModeBadge mode={runMode} setMode={setRunMode} />
-        <SettingsMenu go={go} route={route} />
+        <SettingsMenu go={go} route={route} signOut={signOut} />
       </div>
     </header>
   );
 }
 
 // Settings menu — gear icon → popover with tenant-scope settings.
-function SettingsMenu({ go, route }) {
+function SettingsMenu({ go, route, signOut }) {
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
   useEffect(() => {
@@ -369,7 +481,7 @@ function SettingsMenu({ go, route }) {
             </button>
           ))}
           <div style={{ borderTop: '1px solid var(--border-subtle)', marginTop: 4 }}>
-            <button onClick={() => setOpen(false)} style={{
+            <button onClick={() => { setOpen(false); if (signOut) signOut(); }} style={{
               width: '100%', textAlign: 'left',
               background: 'transparent', border: 0, padding: '10px',
               fontSize: 12, color: 'var(--text-muted)',
