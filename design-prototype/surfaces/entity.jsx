@@ -284,7 +284,7 @@ function EntityHeader({ rs, source, disposition, onDownloadBriefing, onOpenApi }
             <h1 style={{ fontSize: 28, margin: 0, fontWeight: 600, lineHeight: 1.2 }}>{rs.input_name || rs.match_label || rs.entity_id}</h1>
             <RiskBadge level={rs.risk_level} />
             {disposition ? <StatusChip status={disposition.status} /> : <StatusChip status="pending_review" />}
-            {rs.warn_verify ? <ConfidenceFlag reason="matched label differs from input name — verify identity" /> : null}
+            {rs.warn_verify ? <ConfidenceFlag reason={(typeof buildVerifyReason === 'function') ? buildVerifyReason(rs.input_name, rs.match_label) : 'matched label differs from input name — verify identity'} /> : null}
           </div>
           {rs.match_label ? (
             <div className="mono" style={{ fontSize: 14, color: 'var(--text-secondary)', marginBottom: 14 }}>

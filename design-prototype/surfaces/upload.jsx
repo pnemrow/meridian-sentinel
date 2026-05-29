@@ -16,7 +16,7 @@
 
 const UPLOAD_API_BASE = (typeof window !== 'undefined' && window.SENTINEL_API_BASE) || '';
 
-function Upload({ onRunComplete }) {
+function Upload({ onRunComplete, onOpenEntity }) {
   const [step, setStep] = useState('source');      // source | sheet | map | running | resolved
   const [file, setFile] = useState(null);
   const [pendingUploadId, setPendingUploadId] = useState(null);  // when multi-sheet & still picking
@@ -219,9 +219,9 @@ function Upload({ onRunComplete }) {
         disabled={step === 'source' || step === 'sheet' || step === 'map'}
       >
         {step === 'running'
-          ? <RunningState events={runEvents} total={uploadResponse?.total_rows || 0} />
+          ? <RunningState events={runEvents} total={uploadResponse?.total_rows || 0} onOpenEntity={onOpenEntity} />
           : step === 'resolved'
-            ? <ResolvedSummary runResult={runResult} uploadResponse={uploadResponse} runEvents={runEvents} onContinue={onContinue} />
+            ? <ResolvedSummary runResult={runResult} uploadResponse={uploadResponse} runEvents={runEvents} onContinue={onContinue} onOpenEntity={onOpenEntity} />
             : <span className="muted">Confirm the mapping, then run screening.</span>}
       </StepCard>
     </div>
@@ -469,7 +469,7 @@ function ColumnSelect({ field, cfg, required }) {
 
 // ── Running state — real SSE-driven progress ────────────────────────────────
 
-function RunningState({ events, total }) {
+function RunningState({ events, total, onOpenEntity }) {
   const cachedEvent = events.find(e => e.event === 'matched_seeded');
   if (cachedEvent) {
     return (
@@ -519,45 +519,128 @@ function RunningState({ events, total }) {
 
       <RunTrace
         rowEvents={rowEvents}
-        cap={6}
-        title="Recent rows"
-        maxHeight={220}
+        title="Live trace · grows as rows resolve"
+        maxHeight={360}
+        autoScroll
+        onOpenEntity={onOpenEntity}
       />
     </div>
   );
 }
 
-// ── RunTrace: expandable per-row audit ──────────────────────────────────────
-// Used during streaming (cap=6) and post-run (no cap). Each row reveals the
-// per-call API timings, findings, and source file links from the SSE payload.
+// ── RunTrace: growing scrollable per-row audit ──────────────────────────────
+// One component for both streaming (autoScroll on, maxHeight=360) and post-
+// run (autoScroll off, no maxHeight). Auto-scroll pauses when the user has
+// scrolled up or has a row expanded; a "↓ jump to latest" pill appears when
+// new rows arrive in that state.
 
-function RunTrace({ rowEvents, cap, title, maxHeight }) {
-  const [expanded, setExpanded] = useState(null); // row index used as key
-  const visible = cap ? rowEvents.slice(-cap) : rowEvents;
-  if (visible.length === 0) return null;
+function RunTrace({ rowEvents, title, maxHeight, autoScroll, onOpenEntity }) {
+  const [expanded, setExpanded] = useState(null);     // row index used as key
+  const scrollRef = useRef(null);
+  // Whether auto-scroll should follow new events.
+  const [follow, setFollow] = useState(true);
+  // Number of new events that arrived while we were NOT following — drives
+  // the "↓ jump to latest" pill.
+  const [unseen, setUnseen] = useState(0);
+  const prevCountRef = useRef(rowEvents.length);
+  const isPaused = expanded != null || !follow;
+
+  // Auto-scroll handler — fires on every event-list change while autoScroll
+  // is on. If we're following, snap to bottom; otherwise count the unseen.
+  useEffect(() => {
+    if (!autoScroll) return;
+    const grew = rowEvents.length > prevCountRef.current;
+    prevCountRef.current = rowEvents.length;
+    if (!grew) return;
+    const el = scrollRef.current;
+    if (!el) return;
+    if (isPaused) {
+      setUnseen((n) => n + 1);
+      return;
+    }
+    // Use requestAnimationFrame so the new row is in the DOM before we scroll.
+    requestAnimationFrame(() => {
+      if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+    });
+  }, [rowEvents.length, autoScroll, isPaused]);
+
+  // Reset follow + unseen when the user collapses the row that was pausing.
+  useEffect(() => {
+    if (expanded == null && follow) setUnseen(0);
+  }, [expanded, follow]);
+
+  const onScroll = (e) => {
+    if (!autoScroll) return;
+    const el = e.currentTarget;
+    const atBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 12;
+    if (atBottom && !follow) {
+      setFollow(true);
+      setUnseen(0);
+    } else if (!atBottom && follow) {
+      setFollow(false);
+    }
+  };
+
+  const jumpToLatest = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.scrollTop = el.scrollHeight;
+    setFollow(true);
+    setUnseen(0);
+  };
+
+  if (rowEvents.length === 0) return null;
+
   return (
-    <div style={{
-      background: 'var(--bg-terminal)', border: '1px solid var(--border-subtle)',
-      borderRadius: 4, padding: '10px 4px 6px',
-      maxHeight: maxHeight || undefined, overflowY: maxHeight ? 'auto' : 'visible',
-    }}>
+    <div style={{ position: 'relative' }}>
       {title ? (
-        <div className="mono" style={{ fontSize: 10, color: 'var(--text-muted)', letterSpacing: 1.2, textTransform: 'uppercase', marginBottom: 6, padding: '0 8px' }}>
-          {title}
-        </div>
+        <div className="mono" style={{
+          fontSize: 10, color: 'var(--text-muted)', letterSpacing: 1.2,
+          textTransform: 'uppercase', marginBottom: 6, padding: '0 4px',
+        }}>{title}</div>
       ) : null}
-      {visible.map((e) => {
-        const key = e.data.index ?? e.data.row;
-        const open = expanded === key;
-        return (
-          <TraceRow key={key} ev={e} open={open} onToggle={() => setExpanded(open ? null : key)} />
-        );
-      })}
+      <div
+        ref={scrollRef}
+        onScroll={onScroll}
+        style={{
+          background: 'var(--bg-terminal)', border: '1px solid var(--border-subtle)',
+          borderRadius: 4, padding: '8px 4px',
+          maxHeight: maxHeight || undefined,
+          overflowY: maxHeight ? 'auto' : 'visible',
+        }}
+      >
+        {rowEvents.map((e) => {
+          const key = e.data.index ?? e.data.row;
+          const open = expanded === key;
+          return (
+            <TraceRow
+              key={key}
+              ev={e}
+              open={open}
+              onToggle={() => setExpanded(open ? null : key)}
+              onOpenEntity={onOpenEntity}
+            />
+          );
+        })}
+      </div>
+      {/* ↓ jump-to-latest pill — only shown while paused and new events arrived */}
+      {autoScroll && isPaused && unseen > 0 ? (
+        <button
+          onClick={jumpToLatest}
+          style={{
+            position: 'absolute', right: 14, bottom: 12,
+            background: 'var(--accent)', color: '#0A1628',
+            border: 0, padding: '4px 10px', borderRadius: 999,
+            fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600,
+            cursor: 'pointer', boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+          }}
+        >↓ jump to latest · {unseen}</button>
+      ) : null}
     </div>
   );
 }
 
-function TraceRow({ ev, open, onToggle }) {
+function TraceRow({ ev, open, onToggle, onOpenEntity }) {
   const d = ev.data || {};
   const kind = ev.event;
   const dotColor =
@@ -583,21 +666,60 @@ function TraceRow({ ev, open, onToggle }) {
         <span style={{ color: 'var(--text-primary)' }}>{(d.name || '').slice(0, 44)}</span>
         {d.sanctioned ? <span style={{ color: 'var(--risk-critical)' }}>sanctioned</span> : null}
         {d.pep ? <span style={{ color: 'var(--risk-medium)' }}>PEP</span> : null}
-        {d.warn_verify ? <span style={{ color: 'var(--risk-medium)' }}>⚠ verify</span> : null}
+        {d.warn_verify ? (
+          <span onClick={(e) => e.stopPropagation()}>
+            <ConfidenceFlag
+              reason={(typeof buildVerifyReason === 'function')
+                ? buildVerifyReason(d.name, d.findings?.match_label || d.match_label)
+                : 'matched label differs from input name — verify identity'}
+              inline
+            />
+          </span>
+        ) : null}
         {d.entity_id ? <span style={{ color: 'var(--text-muted)' }}>{d.entity_id.slice(0, 12)}…</span> : null}
         <span style={{ marginLeft: 'auto', color: 'var(--text-muted)' }}>{d.duration_ms != null ? `${d.duration_ms}ms` : ''}</span>
       </button>
-      {open ? <TraceDetail ev={ev} /> : null}
+      {open ? <TraceDetail ev={ev} onOpenEntity={onOpenEntity} /> : null}
     </div>
   );
 }
 
-function TraceDetail({ ev }) {
+function _whyThisRowMatters(d) {
+  const f = d.findings || {};
+  const outcome = f.outcome;
+  const ownFactor = f.ownership_factor;
+  const ownFriendly = ownFactor && typeof sanctionDisplayName === 'function'
+    ? sanctionDisplayName(ownFactor)
+    : (ownFactor || 'ownership exposure');
+  if (!outcome) return null; // in-flight or missing — omit the banner
+  switch (outcome) {
+    case 'both_catch':
+      return "Name-screen and Sayari agree — directly sanctioned by name. Block.";
+    case 'sayari_only':
+      return `Name-screen would miss this. Sayari catches it via ${ownFriendly} (OFAC 50% Rule).`;
+    case 'screen_ambiguous':
+      return "Name-screen fires on a related but different entity. Sayari resolves the correct one.";
+    case 'matcher_miss':
+      return "Sayari catches this; the name-screen missed it (likely transliteration or aliasing).";
+    case 'ofac_only':
+      return "Name-screen flagged this; Sayari finds no risk factor — review as possible false positive.";
+    case 'no_ofac':
+      if (f.name_mismatch_flag) return "Resolution match has low lexical overlap with input — verify entity identity before clearing.";
+      return "Clean of OFAC SDN exposure on both sides.";
+    default:
+      return null;
+  }
+}
+
+function TraceDetail({ ev, onOpenEntity }) {
   const d = ev.data || {};
   const steps = d.steps || [];
   const findings = d.findings || null;
   const sources = d.sources || null;
   const reason = d.reason;
+  const banner = _whyThisRowMatters(d);
+  const identifiers = (findings && findings.identifiers) || [];
+  const entityId = d.entity_id;
 
   return (
     <div style={{
@@ -609,6 +731,17 @@ function TraceDetail({ ev }) {
       fontFamily: 'var(--font-mono)', fontSize: 11,
       color: 'var(--text-terminal)',
     }}>
+      {/* WHY THIS ROW MATTERS — demo-narrative banner. Top of the expansion. */}
+      {banner ? (
+        <>
+          <TraceSection label="Why this row matters" />
+          <div style={{
+            color: 'var(--text-primary)', fontSize: 12, lineHeight: 1.5,
+            padding: '4px 0',
+          }}>{banner}</div>
+        </>
+      ) : null}
+
       {/* STEPS */}
       <TraceSection label="Steps" />
       {steps.length === 0 ? (
@@ -627,7 +760,20 @@ function TraceDetail({ ev }) {
       {findings ? (
         <>
           <TraceSection label="Findings" />
-          <TraceFindings findings={findings} />
+          <TraceFindings findings={findings} inputName={d.name} />
+        </>
+      ) : null}
+
+      {/* IDENTIFIERS — top 5 prioritized from the raw entity profile */}
+      {identifiers.length > 0 ? (
+        <>
+          <TraceSection label="Identifiers" />
+          {identifiers.map((id, i) => (
+            <div key={i} style={{ marginTop: 2, display: 'flex', alignItems: 'baseline', gap: 6 }}>
+              <span style={{ color: 'var(--text-muted)', width: 180, flexShrink: 0 }}>{id.type}:</span>
+              <span style={{ color: 'var(--text-primary)' }}>{id.value}</span>
+            </div>
+          ))}
         </>
       ) : null}
 
@@ -648,6 +794,21 @@ function TraceDetail({ ev }) {
             </div>
           ))}
         </>
+      ) : null}
+
+      {/* Open full entity detail — navigates to the Entity surface for this entity_id */}
+      {entityId && typeof onOpenEntity === 'function' ? (
+        <div style={{ marginTop: 12, paddingTop: 8, borderTop: '1px solid var(--border-subtle)', display: 'flex' }}>
+          <button
+            onClick={() => onOpenEntity(entityId)}
+            style={{
+              background: 'transparent', color: 'var(--accent)',
+              border: '1px solid var(--accent-dim)', borderRadius: 3,
+              padding: '4px 10px', fontFamily: 'var(--font-mono)', fontSize: 11,
+              cursor: 'pointer', letterSpacing: 0.2,
+            }}
+          >→ Open full entity detail</button>
+        </div>
       ) : null}
     </div>
   );
@@ -699,8 +860,10 @@ function TraceStep({ index, step }) {
   );
 }
 
-function TraceFindings({ findings }) {
+function TraceFindings({ findings, inputName }) {
   const f = findings;
+  const friendly = (code) => (typeof sanctionDisplayName === 'function')
+    ? sanctionDisplayName(code) : code;
   const lvlColor = {
     critical: 'var(--risk-critical)',
     high:     'var(--risk-high)',
@@ -713,9 +876,26 @@ function TraceFindings({ findings }) {
       <FindRow k="match_score" v={f.match_score != null ? (
         <>
           <span style={{ color: 'var(--text-primary)' }}>{Number(f.match_score).toFixed(2)}</span>
-          {f.name_mismatch_flag ? <span style={{ color: 'var(--risk-medium)', marginLeft: 8 }}>⚠ verify</span> : null}
+          {f.name_mismatch_flag ? (
+            <span style={{ marginLeft: 8, display: 'inline-block' }}>
+              <ConfidenceFlag
+                reason={(typeof buildVerifyReason === 'function')
+                  ? buildVerifyReason(inputName, f.match_label)
+                  : 'matched label differs from input name — verify identity'}
+                inline
+              />
+            </span>
+          ) : null}
         </>
       ) : '—'} />
+      {f.name_mismatch_flag ? (
+        <div style={{
+          paddingLeft: 122, color: 'var(--risk-medium)',
+          fontStyle: 'italic', fontSize: 10.5, marginTop: 2,
+        }}>
+          Low lexical overlap between input and match label — human verification recommended.
+        </div>
+      ) : null}
       <FindRow k="type" v={
         <>
           <span style={{ color: 'var(--text-primary)' }}>{f.type || '—'}</span>
@@ -734,7 +914,11 @@ function TraceFindings({ findings }) {
             <span style={{ color: 'var(--risk-critical)' }}>✓</span>
             {(f.sanctioned_lists || []).length ? (
               <span style={{ marginLeft: 6, display: 'inline-flex', gap: 4, flexWrap: 'wrap' }}>
-                {f.sanctioned_lists.slice(0, 4).map(l => <Chip key={l} text={l} kind="critical" />)}
+                {f.sanctioned_lists.slice(0, 4).map(l => (
+                  <span key={l} title={l /* raw factor code on hover so citations resolve */}>
+                    <Chip text={friendly(l)} kind="critical" />
+                  </span>
+                ))}
                 {f.sanctioned_lists.length > 4 ? <span style={{ color: 'var(--text-muted)' }}>+{f.sanctioned_lists.length - 4}</span> : null}
               </span>
             ) : null}
@@ -745,7 +929,11 @@ function TraceFindings({ findings }) {
       {(f.top_risks || []).length ? (
         <FindRow k="top_risks" v={
           <span style={{ display: 'inline-flex', gap: 4, flexWrap: 'wrap' }}>
-            {f.top_risks.slice(0, 5).map(r => <Chip key={r} text={r} kind="muted" />)}
+            {f.top_risks.slice(0, 5).map(r => (
+              <span key={r} title={r}>
+                <Chip text={friendly(r)} kind="muted" />
+              </span>
+            ))}
           </span>
         } />
       ) : null}
@@ -856,7 +1044,7 @@ function ResolvedSummary({ runResult, uploadResponse, runEvents = [], onContinue
               click any row to expand · cache files open in a new tab
             </div>
           </div>
-          <RunTrace rowEvents={allRows} title={null} />
+          <RunTrace rowEvents={allRows} title={null} onOpenEntity={onOpenEntity} />
         </div>
       ) : null}
     </div>

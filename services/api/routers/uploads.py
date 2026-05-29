@@ -390,6 +390,76 @@ def _derive_risk_level(p) -> str:
     return "low"
 
 
+# Ownership-exposure factors, in priority order. The first one present on the
+# profile drives the demo-narrative banner on the Validate-and-Run row.
+_OWNERSHIP_FACTORS = [
+    "owned_by_sanctioned_usa_ofac_sdn_entity",
+    "controlled_by_ofac_sdn",
+    "ofac_50_percent_rule",
+    "owned_by_sanctioned_entity",
+]
+
+# Identifier types surfaced first on the expansion (top-5 cap). Anything not
+# in this priority list comes after, in raw-order, up to the cap.
+_IDENTIFIER_PRIORITY = [
+    "usa_ofac_sdn_number", "ru_tin", "ru_ogrn", "lei", "eu_sanction_rn",
+]
+
+
+def _derive_outcome(p, ofac_hit: bool) -> tuple[str, str | None]:
+    """
+    Classify a resolved row into one of the compare outcomes from a profile
+    + a yes/no OFAC name-screen result. Mirrors the logic in compare_ofac_vs_sayari
+    closely enough that the Validate-and-Run banner stays honest.
+
+    Returns (outcome, ownership_factor or None).
+    """
+    factors = set(p.risk_factors or [])
+    own = next((f for f in _OWNERSHIP_FACTORS if f in factors), None)
+    directly = "sanctioned_usa_ofac_sdn" in factors
+    if directly and ofac_hit:
+        return "both_catch", own
+    if directly and not ofac_hit:
+        return "matcher_miss", own
+    if own and ofac_hit:
+        return "screen_ambiguous", own
+    if own and not ofac_hit:
+        return "sayari_only", own
+    if ofac_hit:
+        return "ofac_only", None
+    return "no_ofac", None
+
+
+def _top_identifiers(raw_entity: dict, limit: int = 5) -> list[dict]:
+    """Pick the most useful identifiers up to `limit`, prioritized by type."""
+    if not raw_entity:
+        return []
+    ids = raw_entity.get("identifiers") or []
+    out: list[dict] = []
+    seen_types: set[str] = set()
+    # Priority pass
+    for prefer in _IDENTIFIER_PRIORITY:
+        for i in ids:
+            t = (i.get("type") or "").lower()
+            if t == prefer and prefer not in seen_types:
+                out.append({"type": prefer, "value": (i.get("value") or "").strip(),
+                            "label": i.get("label") or prefer})
+                seen_types.add(prefer)
+                break
+        if len(out) >= limit:
+            return out
+    # Fill remaining slots from any unseen types in original order
+    for i in ids:
+        t = (i.get("type") or "").lower()
+        if t and t not in seen_types and t != "unknown":
+            out.append({"type": t, "value": (i.get("value") or "").strip(),
+                        "label": i.get("label") or t})
+            seen_types.add(t)
+            if len(out) >= limit:
+                break
+    return out
+
+
 def _attempt_record(name: str, country: str | None, address: str | None,
                      duration_ms: int, raw: dict, match: dict | None,
                      pinned: bool = False, retry_name: str | None = None) -> dict:
@@ -654,6 +724,29 @@ async def run_upload(upload_id: str, name: str | None = None):
                 sanctioned_lists = [
                     f for f in (p.risk_factors or []) if f.startswith("sanctioned_")
                 ]
+
+                # OFAC name-screen for outcome classification. Pulled from the
+                # main app's global matcher (loaded once at startup, in-memory,
+                # microsecond lookups — cheap to call per row).
+                ofac_hit = False
+                ofac_match_name = None
+                ofac_sdn_id = None
+                try:
+                    from services.api.main import _get_ofac
+                    matcher = _get_ofac()
+                    if matcher is not None:
+                        matches = matcher.screen(e.name, threshold=0.85, limit=1) or []
+                        if matches:
+                            ofac_hit = True
+                            top = matches[0]
+                            ofac_match_name = top.get("primary_name")
+                            ofac_sdn_id = top.get("sdn_id")
+                except Exception:
+                    pass
+
+                outcome, ownership_factor = _derive_outcome(p, ofac_hit)
+                identifiers = _top_identifiers(raw_entity, limit=5)
+
                 findings = {
                     "match_label": p.match_label,
                     "match_score": p.match_score,
@@ -665,6 +758,15 @@ async def run_upload(upload_id: str, name: str | None = None):
                     "sanctioned_lists": sanctioned_lists,
                     "pep": bool(p.pep),
                     "top_risks": (p.risk_factors or [])[:5],
+                    "identifiers": identifiers,
+                    # Demo-narrative drivers — frontend WHY-THIS-ROW banner
+                    # selects copy from `outcome`; ownership_factor names the
+                    # specific exposure mode when applicable.
+                    "outcome": outcome,
+                    "ownership_factor": ownership_factor,
+                    "ofac_hit": ofac_hit,
+                    "ofac_match_name": ofac_match_name,
+                    "ofac_sdn_id": ofac_sdn_id,
                 }
                 sources = {
                     "resolution_cache": resolution_cache,
