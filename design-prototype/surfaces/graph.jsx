@@ -99,6 +99,33 @@ function computeAutoFitDepth(nodes, edges, rootId) {
 
 const CLUSTER_ID = '__cluster_non_risk_owners';
 
+// Collision radii — tuned to clear the existing label/halo footprints so the
+// force layout doesn't overlap a sanctioned node's red halo with a neighbour's
+// label, and gives the +N cluster pill (180×36) enough horizontal room.
+function collisionRadius(n, rootId) {
+  if (n._isCluster)     return 110;
+  if (n.id === rootId)  return 56;
+  if (n.sanctioned)     return 50;
+  if (n.pep)            return 42;
+  // Unlabeled "other" nodes render as small dots — keep their collision
+  // small so the dot constellation stays dense and readable.
+  return 18;
+}
+
+// Belorusskaya hand-laid initial seeds — passed to the force simulation as
+// starting positions, NOT pinned. The sim refines from here, removing any
+// overlap while preserving the broad spatial story (Kerimov upper-right,
+// historic owners ringing the root).
+const BELORUSSKAYA_SEEDS = {
+  "BSsUPVlxsICOW4GCjb4fqQ":     { x: 480, y: 320 },
+  "6lxsLluBad0ijzroLtLqTg":     { x: 720, y: 150 },
+  "o6TuHzcOzX2jcRRIP9MQ3g":     { x: 760, y: 360 },
+  "gGRzPXe6TBs4vdzSh6HFng":     { x: 700, y: 510 },
+  "j7QjfVQ_BRp8srxl1eVTIQ":     { x: 220, y: 480 },
+  "dn2EQBF260mfXVpfJKNfhw":     { x: 240, y: 200 },
+  [CLUSTER_ID]:                 { x: 250, y: 580 },
+};
+
 function OwnershipGraph({ entityId, onOpenEntity, graphData, trail, currentLabel }) {
   // graphData must be supplied by the caller (LiveGraphFetcher in entity.jsx).
   // We no longer fall back to a window.GRAPH_BELORUSSKAYA fixture — that masked
@@ -233,49 +260,175 @@ function OwnershipGraph({ entityId, onOpenEntity, graphData, trail, currentLabel
   // Belorusskaya keeps its hand-laid coordinates verbatim. Other entities use
   // an owner/sub arc layout against `baseEdges`; the cluster (if any) takes
   // one slot on the owners arc.
-  const POS = useMemo(() => {
-    if (isMarquee) {
-      const base = {
-        "BSsUPVlxsICOW4GCjb4fqQ":     { x: 480, y: 320 },
-        "6lxsLluBad0ijzroLtLqTg":     { x: 720, y: 150 },
-        "o6TuHzcOzX2jcRRIP9MQ3g":     { x: 760, y: 360 },
-        "gGRzPXe6TBs4vdzSh6HFng":     { x: 700, y: 510 },
-        "j7QjfVQ_BRp8srxl1eVTIQ":     { x: 220, y: 480 },
-        "dn2EQBF260mfXVpfJKNfhw":     { x: 240, y: 200 },
-      };
-      // Cluster sits below-left of root; any non-POS node falls through to the
-      // ring placement below.
-      base[CLUSTER_ID] = { x: 250, y: 580 };
-      return base;
+  // ── d3-force layout (replaces the old hand-laid POS map) ────────────────────
+  // Positions are mutable state outside React's normal reconciliation — d3's
+  // tick callback writes into positionsRef and we force re-renders via setTick.
+  // viewBox is React state so we can auto-fit it as the simulation cools.
+  const positionsRef = useRef({});
+  const simRef       = useRef(null);
+  const svgRef       = useRef(null);
+  const zoomGroupRef = useRef(null);
+  const zoomRef      = useRef(null);
+  const [tick, setTick] = useState(0);
+  const [viewBox, setViewBox] = useState("100 30 700 580");
+  // Skip silently when d3 hasn't loaded (shouldn't happen in production but
+  // makes hot-reload + SSR tolerant).
+  const d3Ready = typeof window !== 'undefined' && !!window.d3;
+
+  // Auto-fit current positions into the viewBox with 80px padding. Called
+  // after the warmup ticks finish and when the user clicks Reset Layout —
+  // NOT on every per-tick re-render (otherwise the camera would chase the
+  // simulation and feel motion-sick).
+  const autoFitViewBox = () => {
+    const positions = Object.values(positionsRef.current);
+    if (positions.length === 0) return;
+    const xs = positions.map(p => p.x);
+    const ys = positions.map(p => p.y);
+    const minX = Math.min(...xs) - 80;
+    const maxX = Math.max(...xs) + 80;
+    const minY = Math.min(...ys) - 80;
+    const maxY = Math.max(...ys) + 80;
+    setViewBox(`${minX} ${minY} ${Math.max(1, maxX - minX)} ${Math.max(1, maxY - minY)}`);
+  };
+
+  // Build the simulation whenever the visible set changes. We re-use prior
+  // positions for nodes that survived a filter/depth flip so the layout
+  // doesn't jolt; new nodes seed from Belorusskaya's hand-laid coordinates
+  // (if applicable) or from a jittered ring around the viewport center.
+  useEffect(() => {
+    if (!d3Ready || !visibleNodes.length) return;
+    const d3 = window.d3;
+    const centerX = 480, centerY = 320;
+    const ringRadius = 220;
+    const rootId = entityId;
+
+    const simNodes = visibleNodes.map((n, i) => {
+      const prior = positionsRef.current[n.id];
+      const marqueeSeed = isMarquee ? BELORUSSKAYA_SEEDS[n.id] : null;
+      let x, y;
+      if (n.id === rootId) {
+        x = prior?.x ?? centerX;
+        y = prior?.y ?? centerY;
+      } else if (prior) {
+        x = prior.x; y = prior.y;
+      } else if (marqueeSeed) {
+        x = marqueeSeed.x; y = marqueeSeed.y;
+      } else {
+        const angle = (i / visibleNodes.length) * Math.PI * 2;
+        x = centerX + Math.cos(angle) * ringRadius + (Math.random() - 0.5) * 60;
+        y = centerY + Math.sin(angle) * ringRadius + (Math.random() - 0.5) * 60;
+      }
+      return { ...n, x, y };
+    });
+    const simEdges = visibleEdges.map(e => ({ source: e.source, target: e.target }));
+
+    // Stop the prior sim cleanly to avoid leaking ticks (would burn CPU).
+    if (simRef.current) {
+      simRef.current.stop();
+      simRef.current.on('tick', null);
     }
-    // Algorithmic placement for non-marquee graphs.
-    const root = graph.data.root_entity_id;
-    const center = { x: 480, y: 320 };
-    const map = { [root]: center };
+    const sim = d3.forceSimulation(simNodes)
+      .force('charge', d3.forceManyBody().strength(-450))
+      .force('link', d3.forceLink(simEdges).id(d => d.id).distance(180).strength(0.6))
+      .force('collide', d3.forceCollide().radius(d => collisionRadius(d, rootId)).strength(1).iterations(2))
+      .force('x', d3.forceX(centerX).strength(0.04))
+      .force('y', d3.forceY(centerY).strength(0.04))
+      .stop();
+    simRef.current = sim;
 
-    // Owners list: real owners minus clustered + cluster chip (if any)
-    const ownerIdsAll = baseEdges.filter(e => e.target === root).map(e => e.source);
-    const ownerIdsViz = ownerIdsAll.filter(id => !clusteredOwnerIds.has(id));
-    if (clusterCount > 0) ownerIdsViz.push(CLUSTER_ID);
-    const subIds = baseEdges.filter(e => e.source === root).map(e => e.target);
+    // Warmup synchronously so first paint already has a settled layout.
+    for (let i = 0; i < 300; i++) sim.tick();
+    sim.nodes().forEach(n => { positionsRef.current[n.id] = { x: n.x, y: n.y }; });
+    autoFitViewBox();
 
-    const placeArc = (ids, baseY, radius) => {
-      const n = ids.length;
-      ids.forEach((id, i) => {
-        const t = n === 1 ? 0.5 : i / (n - 1);
-        const angle = (t - 0.5) * Math.PI * 0.85;
-        map[id] = { x: center.x + Math.sin(angle) * radius, y: baseY - Math.cos(angle) * (radius * 0.55) };
-      });
+    // Re-heat ticking is needed for drag re-settling — keep alphaTarget=0
+    // so the sim stays quiescent until a drag bumps it.
+    sim.alphaTarget(0).restart();
+    sim.on('tick', () => {
+      sim.nodes().forEach(n => { positionsRef.current[n.id] = { x: n.x, y: n.y }; });
+      setTick(t => t + 1);
+    });
+    setTick(t => t + 1);
+
+    return () => {
+      sim.stop();
+      sim.on('tick', null);
     };
-    placeArc(ownerIdsViz, center.y - 100, 260);
-    placeArc(subIds,      center.y + 380, 260);
-    // Orphans drift to bottom-right.
-    baseNodes.forEach(n => { if (!map[n.id]) map[n.id] = { x: center.x + 240, y: center.y + 240 }; });
-    return map;
-  }, [isMarquee, baseNodes, baseEdges, graph.data.root_entity_id, clusteredOwnerIds, clusterCount]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [visibleNodes, visibleEdges, entityId, isMarquee, d3Ready]);
 
-  // viewBox — single wide framing (collapse/expand toggle removed earlier)
-  const viewBox = "100 30 700 580";
+  // Zoom — wired once on mount. The filter lets drag take precedence on nodes
+  // so click-dragging a node doesn't also pan the canvas.
+  useEffect(() => {
+    if (!d3Ready || !svgRef.current) return;
+    const d3 = window.d3;
+    const svg = d3.select(svgRef.current);
+    const zoom = d3.zoom()
+      .scaleExtent([0.3, 4])
+      .filter((event) => {
+        const t = event.target;
+        if (t && t.closest && t.closest('[data-graph-node]')) return false;
+        return !event.ctrlKey && !event.button;
+      })
+      .on('zoom', (event) => {
+        if (zoomGroupRef.current) {
+          d3.select(zoomGroupRef.current).attr('transform', event.transform);
+        }
+      });
+    svg.call(zoom);
+    zoomRef.current = zoom;
+    return () => { svg.on('.zoom', null); };
+  }, [d3Ready]);
+
+  // Drag — re-attach when the visible set changes (new node groups appear).
+  // We look up sim nodes by data-node-id rather than relying on d3's data
+  // binding (which is awkward against React-managed children).
+  useEffect(() => {
+    if (!d3Ready || !zoomGroupRef.current || !simRef.current) return;
+    const d3 = window.d3;
+    // event.x / event.y come from d3.drag in the SVG's local coord system,
+    // NOT the zoom-group's post-transform space. Since the simulation lives
+    // in the zoom group's pre-transform space, invert the current zoom to
+    // get the simulation coords the node should pin to.
+    const toSimCoords = (event) => {
+      const t = (svgRef.current && d3.zoomTransform(svgRef.current)) || { x: 0, y: 0, k: 1 };
+      return { x: (event.x - t.x) / t.k, y: (event.y - t.y) / t.k };
+    };
+
+    const drag = d3.drag()
+      .on('start', function(event) {
+        const id = this.getAttribute('data-node-id');
+        const node = simRef.current?.nodes().find(n => n.id === id);
+        if (!node) return;
+        if (!event.active) simRef.current.alphaTarget(0.3).restart();
+        node.fx = node.x; node.fy = node.y;
+      })
+      .on('drag', function(event) {
+        const id = this.getAttribute('data-node-id');
+        const node = simRef.current?.nodes().find(n => n.id === id);
+        if (!node) return;
+        const { x, y } = toSimCoords(event);
+        node.fx = x; node.fy = y;
+      })
+      .on('end', function(event) {
+        if (!event.active) simRef.current?.alphaTarget(0);
+        // INTENTIONALLY do NOT clear fx/fy — user pinning persists.
+      });
+    const sel = d3.select(zoomGroupRef.current).selectAll('[data-graph-node]');
+    sel.call(drag);
+    return () => { sel.on('.drag', null); };
+  }, [visibleNodes, d3Ready]);
+
+  // Reset Layout button: identity zoom, drop all fx/fy pins, re-heat the sim,
+  // auto-fit the viewBox once it settles.
+  const resetLayout = () => {
+    if (!d3Ready || !svgRef.current || !zoomRef.current || !simRef.current) return;
+    const d3 = window.d3;
+    d3.select(svgRef.current).call(zoomRef.current.transform, d3.zoomIdentity);
+    simRef.current.nodes().forEach(n => { delete n.fx; delete n.fy; });
+    simRef.current.alpha(1).alphaTarget(0).restart();
+    setTimeout(() => autoFitViewBox(), 700);
+  };
 
   // ── Banner: paths in network, count touching risk ────────────────────────
   // Y = explored_count (the real "ownership paths" Sayari explored)
@@ -361,6 +514,22 @@ function OwnershipGraph({ entityId, onOpenEntity, graphData, trail, currentLabel
             ))}
           </div>
         </div>
+        <button
+          onClick={resetLayout}
+          title="Re-fit the graph and release pinned nodes."
+          style={{
+            background: 'transparent',
+            border: '1px solid var(--border-default)',
+            color: 'var(--text-secondary)',
+            padding: '5px 10px', borderRadius: 4,
+            fontSize: 11, fontFamily: 'var(--font-mono)',
+            letterSpacing: 0.4,
+            cursor: 'pointer',
+            display: 'inline-flex', alignItems: 'center', gap: 6,
+          }}
+        >
+          <span style={{ fontSize: 12 }}>↻</span> reset layout
+        </button>
       </div>
 
       {/* Banner — N paths touching sanctioned/PEP */}
@@ -386,7 +555,7 @@ function OwnershipGraph({ entityId, onOpenEntity, graphData, trail, currentLabel
 
       {/* Graph SVG */}
       <div style={{ position: 'relative', background: 'radial-gradient(ellipse at center, #0E1B30 0%, var(--bg-surface) 100%)', aspectRatio: '7 / 5' }}>
-        <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" style={{ width: '100%', height: '100%', display: 'block' }}>
+        <svg ref={svgRef} viewBox={viewBox} preserveAspectRatio="xMidYMid meet" style={{ width: '100%', height: '100%', display: 'block', cursor: 'grab' }}>
           <defs>
             <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
               <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#152339" strokeWidth="0.5" />
@@ -409,11 +578,13 @@ function OwnershipGraph({ entityId, onOpenEntity, graphData, trail, currentLabel
               <path d="M 0 0 L 10 5 L 0 10 z" fill="#F85149" />
             </marker>
           </defs>
+          {/* zoom/pan transforms apply to this <g>; nodes opt out via data-graph-node so drag wins */}
+          <g ref={zoomGroupRef}>
           <rect x="-200" y="-200" width="1400" height="1100" fill="url(#grid)" opacity="0.5" />
 
           {/* edges */}
           {visibleEdges.map((e, i) => {
-            const a = POS[e.source]; const b = POS[e.target];
+            const a = positionsRef.current[e.source]; const b = positionsRef.current[e.target];
             if (!a || !b) return null;
             const sourceNode = visibleNodes.find(n => n.id === e.source) || baseNodes.find(n => n.id === e.source);
             const targetNode = visibleNodes.find(n => n.id === e.target) || baseNodes.find(n => n.id === e.target);
@@ -469,7 +640,7 @@ function OwnershipGraph({ entityId, onOpenEntity, graphData, trail, currentLabel
 
           {/* nodes */}
           {visibleNodes.map((n) => {
-            const p = POS[n.id];
+            const p = positionsRef.current[n.id];
             if (!p) return null;
             const isRoot = n.id === entityId;
             const isHover = hoverNode === n.id || focusNode === n.id;
@@ -490,10 +661,12 @@ function OwnershipGraph({ entityId, onOpenEntity, graphData, trail, currentLabel
               const w = 180, h = 36;
               return (
                 <g key={n.id}
+                  data-graph-node="true"
+                  data-node-id={n.id}
                   transform={`translate(${p.x}, ${p.y})`}
                   onMouseEnter={() => setHoverNode(n.id)}
                   onMouseLeave={() => setHoverNode(null)}
-                  style={{ cursor: 'default', opacity: dimmed ? 0.35 : 1 }}
+                  style={{ cursor: 'grab', opacity: dimmed ? 0.35 : 1 }}
                 >
                   <title>{n.label}. Direct owners with no sanctioned and no PEP status. Switch to a different risk filter to inspect them individually.</title>
                   <rect x={-w/2} y={-h/2} width={w} height={h}
@@ -515,11 +688,13 @@ function OwnershipGraph({ entityId, onOpenEntity, graphData, trail, currentLabel
 
             return (
               <g key={n.id}
+                data-graph-node="true"
+                data-node-id={n.id}
                 transform={`translate(${p.x}, ${p.y})`}
                 onMouseEnter={() => setHoverNode(n.id)}
                 onMouseLeave={() => setHoverNode(null)}
                 onClick={() => { if (!isRoot) setFocusNode(focusNode === n.id ? null : n.id); }}
-                style={{ cursor: isRoot ? 'default' : 'pointer', opacity: baseOpacity }}
+                style={{ cursor: 'grab', opacity: baseOpacity }}
               >
                 <title>{display}{n.country ? ` · ${n.country}` : ''}{n.sanctioned ? ' · sanctioned' : ''}{n.pep ? ' · PEP' : ''}</title>
 
@@ -569,7 +744,7 @@ function OwnershipGraph({ entityId, onOpenEntity, graphData, trail, currentLabel
           {/* Focus card — anchored to the clicked node via foreignObject */}
           {focusNode ? (() => {
             const node = visibleNodes.find(n => n.id === focusNode) || baseNodes.find(n => n.id === focusNode);
-            const p = POS[focusNode];
+            const p = positionsRef.current[focusNode];
             if (!node || !p || node._isCluster) return null;
             const r = node.id === entityId ? 22 : (node.sanctioned ? 16 : 14);
             const cardW = 280;
@@ -594,6 +769,7 @@ function OwnershipGraph({ entityId, onOpenEntity, graphData, trail, currentLabel
               </foreignObject>
             );
           })() : null}
+          </g>
         </svg>
       </div>
 
