@@ -214,7 +214,7 @@ This repo is the primary deliverable. Two supplementary files:
 
 `Meridian_Sentinel_FDE_Report.docx` is a two page narrative covering the engagement, approach, headline finding, assumptions, challenges, and what is real versus representative. It is the document to read before the live review.
 
-`demo.mp4` is a roughly six minute walkthrough covering the list_1 ownership gap story, the list_3 false positive story, the entity detail flow, the copilot, and a brief live upload demonstration.
+`[demo](https://www.loom.com/share/1ad0ffcf45bf4a609bf0263c23411007)` is a roughly 13 minute walkthrough covering the list_1 ownership gap story, the list_3 false positive story, the entity detail flow, the copilot, and a brief live upload demonstration.
 
 The two lists from the original exercise are included as `Sayari_Interview_Exercise_List.xlsx`. Tab 1 is the seeded list_1. Tab 3 is the list_3 used for the false positive story.
 
