@@ -105,6 +105,12 @@ This run replays the captured results, which is instant. I'll show you the live 
 
 `[SCREEN: app, Compare surface]`
 
+*Click the "Run composition: expand" chevron at the top.*
+
+Above the funnel you'll see the run composition. Fifty input rows, forty-nine resolved, forty-five sanctioned by some regime, forty exposed to OFAC SDN. The funnel below is the OFAC subset.
+
+*Re-collapse the panel before the Voice-C beat.*
+
 > **[VOICE C — let it land. Two beats of silence after the funnel appears, then speak slowly.]**
 >
 > This is what your current screening would have missed.

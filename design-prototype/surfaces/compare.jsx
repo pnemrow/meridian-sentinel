@@ -19,6 +19,11 @@ function Compare({ onOpenEntity, focusEntityId, runId }) {
   const [filterOutcome, setFilterOutcome] = useState(null);
   const [expandedRowId, setExpandedRowId] = useState(null);
   const [highlightId, setHighlightId] = useState(null);
+  // Ref on the ownership-gap spotlight wrapper so the run-composition tree's
+  // "hidden behind ownership" leaf can scroll the user to it (that leaf
+  // covers two outcomes — sayari_only + screen_ambiguous — and the spotlight
+  // is the canonical place those rows live, so scrolling beats filtering).
+  const spotlightRef = useRef(null);
 
   // Per-run dispositions — reload whenever the active runId changes.
   useEffect(() => {
@@ -147,6 +152,12 @@ function Compare({ onOpenEntity, focusEntityId, runId }) {
   return (
     <div style={{ padding: '32px 40px 80px', maxWidth: 1400, margin: '0 auto' }}>
 
+      <RunComposition
+        summary={summary}
+        onSelectOutcome={(o) => setFilterOutcome(o)}
+        spotlightRef={spotlightRef}
+      />
+
       {(() => {
         // Top header: bind to real /summary (input/resolved/sanctioned counts)
         // and to compare summary.ownership_gap. Per-run summary (when runId is
@@ -203,6 +214,7 @@ function Compare({ onOpenEntity, focusEntityId, runId }) {
         ) : null}
       </div>
 
+      <div ref={spotlightRef}>
       <SectionHeader
         kicker="Ownership-gap spotlight"
         title={gapRows.length === 0
@@ -225,6 +237,7 @@ function Compare({ onOpenEntity, focusEntityId, runId }) {
           ))}
         </div>
       )}
+      </div>{/* /spotlightRef wrapper */}
 
       <SectionHeader
         kicker="Full reconciliation"
@@ -246,6 +259,162 @@ function Compare({ onOpenEntity, focusEntityId, runId }) {
         }
       />
       <ReconciliationTable rows={visibleRows} expandedId={expandedRowId} onToggle={setExpandedRowId} onOpenEntity={onOpenEntity} highlightId={highlightId} dispositions={dispositions} />
+    </div>
+  );
+}
+
+// ─── Run composition tree ────────────────────────────────────────────────────
+// Collapsible panel that sits above the kicker on Compare. Closes a real UX
+// gap: the headline numbers ("46 sanctioned" in the header, "40 OFAC exposed"
+// in the funnel below) used to appear in the same surface with no obvious
+// relationship between them. The tree shows how they nest:
+//
+//   input rows
+//   └─ resolved
+//      ├─ clean (no sanctions)
+//      ├─ sanctioned non-OFAC
+//      └─ OFAC exposed   ← funnel scope below
+//         ├─ both caught
+//         ├─ ownership gap (50% rule)
+//         └─ matcher miss
+//   unresolved
+//
+// The four OFAC-subset leaves are clickable and filter the reconciliation
+// table via setFilterOutcome. "Hidden behind ownership" maps to TWO outcomes
+// (sayari_only + screen_ambiguous) so instead of inventing a group filter we
+// scroll the user to the ownership-gap spotlight section above the table —
+// the same rows live there already as cards. The two non-OFAC leaves are
+// non-clickable: their filtering would require new client-side logic for a
+// minor navigation aid and the spec explicitly allows skipping it.
+
+function RunComposition({ summary, onSelectOutcome, spotlightRef }) {
+  const [open, setOpen] = useState(false);
+  if (!summary) return null;
+
+  const totalInput        = summary.total_input        ?? summary.total_entities ?? 0;
+  const resolved          = summary.total_entities     ?? 0;
+  const unresolved        = summary.unresolved_input   ?? summary.unresolved      ?? 0;
+  const totalSanctioned   = summary.total_sanctioned   ?? 0;
+  const totalOfacExposed  = summary.total_ofac_exposed ?? 0;
+  const sanctionedNonOfac = summary.sanctioned_non_ofac ?? Math.max(0, totalSanctioned - totalOfacExposed);
+  const resolvedClean     = summary.resolved_clean     ?? Math.max(0, resolved - totalSanctioned);
+  const bothCatch         = summary.both_catch         ?? 0;
+  const ownershipGap      = summary.ownership_gap      ?? 0;
+  const matcherMiss       = summary.matcher_miss       ?? 0;
+  const pct = (resolved && totalInput) ? Math.round((resolved / totalInput) * 100) : null;
+
+  const scrollToSpotlight = () => {
+    if (spotlightRef && spotlightRef.current) {
+      spotlightRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  if (!open) {
+    return (
+      <div style={{
+        display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap',
+        padding: '8px 0', marginBottom: 14,
+      }}>
+        <span className="mono" style={{
+          fontSize: 10, color: 'var(--text-muted)', letterSpacing: 1.4, textTransform: 'uppercase',
+        }}>Run composition</span>
+        <span style={{ fontSize: 13, color: 'var(--text-secondary)' }}>
+          <span className="mono" style={{ color: 'var(--text-primary)' }}>{resolved}</span> resolved
+          <span className="muted" style={{ margin: '0 8px' }}>·</span>
+          <span className="mono" style={{ color: 'var(--text-primary)' }}>{totalSanctioned}</span> sanctioned
+          <span className="muted" style={{ margin: '0 8px' }}>·</span>
+          <span className="mono" style={{ color: 'var(--accent)' }}>{totalOfacExposed}</span> OFAC exposed
+        </span>
+        <button onClick={() => setOpen(true)} style={{
+          background: 'transparent', color: 'var(--text-muted)',
+          border: '1px solid var(--border-default)',
+          padding: '3px 9px', borderRadius: 2,
+          fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 0.6,
+          cursor: 'pointer',
+        }}>expand ▾</button>
+      </div>
+    );
+  }
+
+  return (
+    <div style={{
+      background: 'var(--bg-surface)', border: '1px solid var(--border-default)',
+      borderRadius: 4, padding: '16px 22px', marginBottom: 20,
+    }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
+        <span className="mono" style={{
+          fontSize: 10, color: 'var(--text-muted)', letterSpacing: 1.4, textTransform: 'uppercase',
+        }}>Run composition</span>
+        <button onClick={() => setOpen(false)} style={{
+          background: 'transparent', color: 'var(--text-muted)',
+          border: '1px solid var(--border-default)',
+          padding: '3px 9px', borderRadius: 2,
+          fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 0.6,
+          cursor: 'pointer',
+        }}>collapse ▴</button>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+        <CompositionRow indent={0} prefix=""   count={totalInput}        label="input rows" />
+        <CompositionRow indent={1} prefix="└─" count={resolved}          label={`resolved${pct != null ? ` (${pct}%)` : ''}`} />
+        <CompositionRow indent={5} prefix="├─" count={resolvedClean}     label="with no sanctions anywhere" />
+        <CompositionRow indent={5} prefix="├─" count={sanctionedNonOfac} label="sanctioned by non OFAC regimes only" />
+        <CompositionRow indent={5} prefix="└─" count={totalOfacExposed}  label="OFAC exposed"
+                        leafKind="group" annotation="← funnel scope below" />
+        <CompositionRow indent={9} prefix="├─" count={bothCatch}         label="caught by both"
+                        leafKind="ofac" onClick={() => onSelectOutcome('both_catch')} />
+        <CompositionRow indent={9} prefix="├─" count={ownershipGap}      label="hidden behind ownership (50% rule)"
+                        leafKind="ofac" onClick={scrollToSpotlight}
+                        clickHint="scrolls to ownership-gap spotlight" />
+        <CompositionRow indent={9} prefix="└─" count={matcherMiss}       label="lost to name variation"
+                        leafKind="ofac" onClick={() => onSelectOutcome('matcher_miss')} />
+        <CompositionRow indent={0} prefix=""   count={unresolved}        label="unresolved" />
+      </div>
+      <div className="muted" style={{
+        fontSize: 10, fontStyle: 'italic', marginTop: 12, paddingTop: 8,
+        borderTop: '1px dashed var(--border-subtle)', lineHeight: 1.5,
+      }}>
+        Click an accent-coloured leaf to filter the reconciliation table below.
+        The OFAC-exposed group and the two non-OFAC leaves are not directly
+        clickable — they live above or in the spotlight section, not the
+        outcome-bucket filter.
+      </div>
+    </div>
+  );
+}
+
+function CompositionRow({ indent, prefix, count, label, leafKind, onClick, annotation, clickHint }) {
+  // leafKind: undefined/'plain' → text-primary; 'ofac' → accent (clickable);
+  // 'group' → text-secondary (non-clickable structural node).
+  const isClickable = typeof onClick === 'function';
+  const countColor = leafKind === 'ofac'   ? 'var(--accent)'
+                   : leafKind === 'group'  ? 'var(--text-secondary)'
+                                           : 'var(--text-primary)';
+  // Approximate 2.5 em per indent unit so the ├/└ characters align in
+  // monospace without manually padding strings.
+  const indentPx = indent * 8;
+  return (
+    <div
+      onClick={isClickable ? onClick : undefined}
+      title={clickHint || (isClickable ? 'click to filter the reconciliation table' : undefined)}
+      style={{
+        display: 'flex', alignItems: 'baseline', gap: 0,
+        fontFamily: 'var(--font-mono)', fontSize: 12,
+        color: 'var(--text-secondary)',
+        padding: '3px 6px',
+        borderRadius: 2,
+        cursor: isClickable ? 'pointer' : 'default',
+        background: isClickable ? 'rgba(201,169,97,0.04)' : 'transparent',
+        border: '1px solid', borderColor: isClickable ? 'var(--accent-dim)' : 'transparent',
+        transition: 'background 100ms',
+      }}
+    >
+      <span style={{ width: indentPx, display: 'inline-block', flexShrink: 0 }} />
+      <span style={{ color: 'var(--text-muted)', minWidth: 28 }}>{prefix}</span>
+      <span style={{ color: countColor, fontWeight: 600, marginRight: 6, minWidth: 24, textAlign: 'right' }}>{count}</span>
+      <span>{label}</span>
+      {annotation ? (
+        <span className="muted" style={{ fontStyle: 'italic', marginLeft: 12, fontSize: 11 }}>{annotation}</span>
+      ) : null}
     </div>
   );
 }

@@ -222,6 +222,31 @@ def compare_ofac_vs_sayari_tool(
     # What the name-screen unambiguously caught (entity is directly on SDN + screen hit)
     ofac_screen_finds = both_catch
 
+    # ── Run-composition counts (Compare's "Run composition" panel) ────────────
+    # These show how the headline numbers nest: every input row is either
+    # unresolved or resolved, every resolved row is either clean (no sanctions
+    # anywhere), sanctioned only by non-OFAC regimes (EU/UK/etc.), or OFAC-
+    # exposed (the funnel scope below). The OFAC-exposed bucket then breaks
+    # down into the four reconciliation outcomes the rest of the surface
+    # already shows.
+    #
+    # Subtlety: the cache only stores resolved entity profiles, so `rows`
+    # here doesn't include unresolved input lines. The true input row count
+    # (e.g. a 50-row spreadsheet of which 1 didn't resolve) lives in
+    # summary.json. Read it from the cache so the composition tree shows the
+    # spreadsheet-shape number, not the cache-shape number. Falls back to
+    # len(rows) when summary.json isn't present (older runs).
+    resolved_count      = len(rows) - unresolved
+    total_sanctioned    = sum(1 for r in rows if r["sayari_sanctioned"] is True)
+    sanctioned_non_ofac = total_sanctioned - ofac_total
+    resolved_clean      = resolved_count - total_sanctioned
+    run_summary = cache.get_summary() or {}
+    total_input = run_summary.get("total_input", len(rows))
+    # Surface the spreadsheet-level unresolved count too, so the tree's
+    # "1 unresolved" line is accurate even when none of those rows made it
+    # into the compare call's `rows`.
+    unresolved_input = run_summary.get("unresolved", unresolved)
+
     # sayari_only + screen_ambiguous = entities NOT directly named on the SDN
     # that Sayari identifies via ownership traversal. The name-screen either
     # misses them entirely (sayari_only) or fires on a *different* SDN entity
@@ -255,6 +280,12 @@ def compare_ofac_vs_sayari_tool(
                 "ownership_missed": ownership_gap,   # UI alias: entities not directly on SDN, caught by Sayari
                 "matcher_missed": matcher_miss,       # UI alias: directly on SDN but name-screen failed
                 "total_ofac_exposed": ofac_total,
+                # Run-composition fields (nest the headline numbers honestly)
+                "total_sanctioned":    total_sanctioned,
+                "sanctioned_non_ofac": sanctioned_non_ofac,
+                "resolved_clean":      resolved_clean,
+                "total_input":         total_input,
+                "unresolved_input":    unresolved_input,
                 "structural_argument": structural_argument,
             },
             "ofac_matcher_ready": ofac_matcher is not None,
