@@ -661,6 +661,44 @@ function RunTrace({ rowEvents, title, maxHeight, autoScroll, onOpenEntity }) {
   );
 }
 
+// Sort sanction factor codes by visual-priority band, then alphabetically
+// within each band:
+//   0: USA OFAC SDN (the headline regime)
+//   1: EU regimes  (any sanctioned_eu_*)
+//   2: Other Western regimes (UK FCDO, Australia DFAT, Canada GAC,
+//      Switzerland SECO, France DGT, Japan MOF, New Zealand MFAT)
+//   3: Everything else (UN SC, Ukraine, USA OFAC Non-SDN, generic, etc.)
+function _sanctionBand(code) {
+  if (code === 'sanctioned_usa_ofac_sdn') return 0;
+  if (code.startsWith('sanctioned_eu_')) return 1;
+  if (/^sanctioned_(gbr|aus|can|che|fra|jpn|nzl)_/.test(code)) return 2;
+  return 3;
+}
+
+function _sortSanctionCodes(codes) {
+  return [...codes].sort((a, b) => {
+    const ba = _sanctionBand(a);
+    const bb = _sanctionBand(b);
+    if (ba !== bb) return ba - bb;
+    return a.localeCompare(b);
+  });
+}
+
+// Compact inline sanction chip — visually paired with the FINDINGS chips
+// but smaller (10px) since they sit on a single-line row summary.
+const _SANCTION_CHIP_STYLE = {
+  display: 'inline-flex', alignItems: 'center',
+  padding: '1px 7px',
+  borderRadius: 3,
+  background: 'rgba(248,81,73,0.10)',
+  border: '1px solid rgba(248,81,73,0.45)',
+  color: 'var(--risk-critical)',
+  fontSize: 10,
+  fontFamily: 'var(--font-mono)',
+  letterSpacing: 0.2,
+  whiteSpace: 'nowrap',
+};
+
 function TraceRow({ ev, open, onToggle, onOpenEntity }) {
   const d = ev.data || {};
   const kind = ev.event;
@@ -668,6 +706,19 @@ function TraceRow({ ev, open, onToggle, onOpenEntity }) {
     kind === 'row_resolved' ? 'var(--risk-low)' :
     kind === 'row_error'    ? 'var(--risk-critical)' :
     'var(--text-muted)';
+
+  // Sanction chips on the row summary: prioritized + alphabetical, cap at 3,
+  // surface the overflow count after the visible chips.
+  const sanctionCodes = (d.findings && d.findings.sanctioned_lists) || [];
+  const sortedCodes   = d.sanctioned ? _sortSanctionCodes(sanctionCodes) : [];
+  const visibleCodes  = sortedCodes.slice(0, 3);
+  const overflowCount = sortedCodes.length - visibleCodes.length;
+  // PEP badge is implicit when also sanctioned — sanction chips carry the signal.
+  const showPep       = !!d.pep && !d.sanctioned;
+  const isUnresolved  = kind === 'row_unresolved';
+  const friendly = (code) => (typeof sanctionDisplayName === 'function')
+    ? sanctionDisplayName(code) : code;
+
   return (
     <div style={{ borderTop: '1px solid transparent' }}>
       <button
@@ -678,15 +729,40 @@ function TraceRow({ ev, open, onToggle, onOpenEntity }) {
           background: open ? 'rgba(201,169,97,0.04)' : 'transparent',
           border: 0, padding: '4px 8px',
           fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-terminal)',
-          display: 'flex', alignItems: 'center', gap: 8,
+          // Wrap is allowed: if chips push past the line, the entity_id drops
+          // to its own line (still right-aligned via marginLeft: auto).
+          display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 8,
         }}
       >
-        <span style={{ color: 'var(--text-muted)', width: 12, textAlign: 'center' }}>{open ? '▾' : '▸'}</span>
-        <span style={{ color: dotColor }}>●</span>
-        <span>row {d.row}</span>
+        <span style={{ color: 'var(--text-muted)', width: 12, textAlign: 'center', flexShrink: 0 }}>{open ? '▾' : '▸'}</span>
+        <span style={{ color: dotColor, flexShrink: 0 }}>●</span>
+        <span style={{ flexShrink: 0 }}>row {d.row}</span>
         <span style={{ color: 'var(--text-primary)' }}>{(d.name || '').slice(0, 44)}</span>
-        {d.sanctioned ? <span style={{ color: 'var(--risk-critical)' }}>sanctioned</span> : null}
-        {d.pep ? <span style={{ color: 'var(--risk-medium)' }}>PEP</span> : null}
+
+        {/* Sanctioned: friendly-name chips (band priority + alphabetical, cap 3 + overflow) */}
+        {d.sanctioned && visibleCodes.length > 0 ? (
+          <span style={{ display: 'inline-flex', flexWrap: 'wrap', alignItems: 'center', gap: 4 }}>
+            {visibleCodes.map((code) => (
+              <span key={code} title={code} style={_SANCTION_CHIP_STYLE}>{friendly(code)}</span>
+            ))}
+            {overflowCount > 0 ? (
+              <span style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', fontSize: 10 }}>+{overflowCount}</span>
+            ) : null}
+          </span>
+        ) : null}
+
+        {/* Defensive fallback: sanctioned=true but no factor codes available */}
+        {d.sanctioned && visibleCodes.length === 0 ? (
+          <span style={{ color: 'var(--risk-critical)' }}>sanctioned</span>
+        ) : null}
+
+        {/* PEP — only when not also sanctioned (sanction chips dominate visually) */}
+        {showPep ? <span style={{ color: 'var(--risk-medium)' }}>PEP</span> : null}
+
+        {/* Unresolved indicator — muted red */}
+        {isUnresolved ? <span style={{ color: 'var(--risk-critical)', opacity: 0.7 }}>unresolved</span> : null}
+
+        {/* ⚠ verify badge — popover-on-hover with specific input vs match-label reason */}
         {d.warn_verify ? (
           <span onClick={(e) => e.stopPropagation()}>
             <ConfidenceFlag
@@ -697,8 +773,13 @@ function TraceRow({ ev, open, onToggle, onOpenEntity }) {
             />
           </span>
         ) : null}
-        {d.entity_id ? <span style={{ color: 'var(--text-muted)' }}>{d.entity_id.slice(0, 12)}…</span> : null}
-        <span style={{ marginLeft: 'auto', color: 'var(--text-muted)' }}>{d.duration_ms != null ? `${d.duration_ms}ms` : ''}</span>
+
+        {/* Entity ID slice — pushed right; drops to its own line when chips wrap */}
+        {d.entity_id ? (
+          <span style={{ color: 'var(--text-muted)', marginLeft: 'auto', flexShrink: 0 }}>
+            {d.entity_id.slice(0, 12)}…
+          </span>
+        ) : null}
       </button>
       {open ? <TraceDetail ev={ev} onOpenEntity={onOpenEntity} /> : null}
     </div>
