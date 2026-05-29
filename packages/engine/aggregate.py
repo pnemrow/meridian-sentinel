@@ -1,7 +1,8 @@
 """
-Macro-level aggregation over a list of profiles.
+Macro level aggregation over a list of profiles.
 
-Ported directly from sayari_ground_truth.py::build_summary.
+Computes build_summary across resolved profiles, including the
+reconciliation buckets the Compare surface and the report read from.
 """
 from __future__ import annotations
 

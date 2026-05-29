@@ -1,8 +1,7 @@
 """
-Spreadsheet loader — reads entities from .xlsx.
+Spreadsheet loader. Reads entities from .xlsx.
 
-Ported from sayari_ground_truth.py. Column detection is hint-based so
-the loader survives minor header renaming.
+Column detection is hint based so the loader survives minor header renaming.
 """
 from __future__ import annotations
 

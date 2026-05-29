@@ -1,5 +1,5 @@
 """
-Generic helper utilities ported from sayari_ground_truth.py.
+Generic helper utilities for the engine.
 """
 from __future__ import annotations
 from typing import Any

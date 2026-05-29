@@ -1,8 +1,7 @@
 """
 Shared data types for the Meridian Sentinel engine.
 
-Ported directly from sayari_ground_truth.py — these are the canonical
-structures every layer of the stack depends on.
+The canonical structures every layer of the stack depends on.
 """
 from __future__ import annotations
 

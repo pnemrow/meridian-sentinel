@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meridian Sentinel — Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-primary: #0A1628;
+      --bg-surface: #0E1B30;
+      --bg-elevated: #152339;
+      --border-default: #243149;
+      --border-subtle: #1B2A41;
+      --text-primary: #F0F4F8;
+      --text-secondary: #C0CCD8;
+      --text-muted: #6E7A88;
+      --accent: #C9A961;
+      --accent-dim: #8A6D1F;
+      --accent-hover: #D8B975;
+      --risk-critical: #F85149;
+      --risk-high: #DB6D28;
+      --risk-medium: #D29922;
+      --risk-low: #3FB950;
+      --font-sans: 'Inter', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      height: 100%;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      overflow: hidden;
+    }
+    .deck {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      padding: 80px 120px;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 240ms ease;
+    }
+    .slide.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .kicker {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .serif {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      letter-spacing: -1px;
+      line-height: 1.05;
+    }
+    .accent { color: var(--accent); }
+    .critical { color: var(--risk-critical); }
+    .muted { color: var(--text-muted); }
+    .secondary { color: var(--text-secondary); }
+    .mono { font-family: var(--font-mono); }
+    .center { text-align: center; }
+
+    /* Slide 1: title */
+    .s1 {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .s1 .wordmark {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+    .s1 .wordmark svg { width: 56px; height: 56px; }
+    .s1 .wordmark .tag {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .s1 h1 {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      letter-spacing: -2px;
+      line-height: 0.95;
+      margin: 0;
+      font-size: 128px;
+    }
+    .s1 h1 .second { color: var(--accent); display: block; }
+    .s1 .sub {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      color: var(--text-secondary);
+      margin-top: 32px;
+      max-width: 800px;
+    }
+    .s1 .footer {
+      position: absolute;
+      bottom: 60px;
+      left: 0; right: 0;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 1.6px;
+      color: var(--text-muted);
+    }
+
+    /* Slides 2 and 4: mirrored argument slides, centered */
+    .s2, .s4 {
+      justify-content: center;
+    }
+    .s2 .kicker, .s4 .kicker {
+      text-align: center;
+    }
+    .argument-lead {
+      font-family: var(--font-serif);
+      font-size: 50px;
+      line-height: 1.15;
+      text-align: center;
+      max-width: 1100px;
+      margin: 0 auto 40px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+    .single-card {
+      border-radius: 8px;
+      padding: 40px 48px;
+      margin: 0 auto;
+      max-width: 880px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+    }
+    .single-card.pain-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-default);
+      border-left: 4px solid var(--risk-critical);
+    }
+    .single-card.resolution-card {
+      background: linear-gradient(180deg, rgba(201,169,97,0.06), rgba(201,169,97,0.01));
+      border: 1px solid var(--accent-dim);
+      border-left: 4px solid var(--accent);
+    }
+    .single-card .card-label {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .single-card.pain-card .card-label { color: var(--risk-critical); }
+    .single-card.resolution-card .card-label { color: var(--accent); }
+    .single-card .card-title {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 42px;
+      line-height: 1.1;
+      margin-bottom: 22px;
+      letter-spacing: -0.3px;
+    }
+    .single-card .card-body {
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+    }
+    .single-card .card-citation {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 1.2px;
+      color: var(--text-muted);
+    }
+    .single-card .entity-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 6px 0 4px;
+    }
+    .single-card .entity-chip {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(201,169,97,0.1);
+      border: 1px solid var(--accent-dim);
+      color: var(--accent);
+    }
+    .slide-footnote {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-muted);
+      font-style: italic;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    /* Slide 3: cure */
+    .s3 .lead {
+      font-family: var(--font-serif);
+      font-size: 64px;
+      line-height: 1.05;
+      max-width: 1200px;
+      margin: 0 0 24px;
+    }
+    .s3 .lead .accent { color: var(--accent); }
+    .s3 .sub {
+      font-size: 18px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      max-width: 900px;
+      margin-bottom: 80px;
+    }
+    .s3 .three {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+    }
+    .pillar {
+      border-top: 1px solid var(--accent-dim);
+      padding-top: 24px;
+    }
+    .pillar .num {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--accent);
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    .pillar .name {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 32px;
+      margin-bottom: 14px;
+      line-height: 1.1;
+    }
+    .pillar .desc {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+    .s3 .footer {
+      margin-top: 80px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    /* Slide 5: partnership */
+    .s5 .lead {
+      font-family: var(--font-serif);
+      font-size: 52px;
+      line-height: 1.05;
+      margin: 0 0 24px;
+    }
+    .s5 .sub {
+      font-size: 17px;
+      color: var(--text-secondary);
+      max-width: 1000px;
+      line-height: 1.55;
+      margin-bottom: 50px;
+    }
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+    }
+    .phase {
+      border-top: 2px solid var(--accent-dim);
+      padding-top: 22px;
+    }
+    .phase.now { border-top-color: var(--accent); }
+    .phase .when {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--accent);
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .phase .what {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 12px;
+      line-height: 1.15;
+    }
+    .phase .detail {
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--text-secondary);
+    }
+    .s5 .closer {
+      margin-top: 70px;
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    /* Slide nav indicator */
+    .nav {
+      position: fixed;
+      bottom: 24px;
+      right: 32px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 1.6px;
+      color: var(--text-muted);
+      user-select: none;
+    }
+    .nav .dot {
+      display: inline-block;
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--border-default);
+      margin: 0 4px;
+      transition: background 200ms;
+      vertical-align: middle;
+    }
+    .nav .dot.active { background: var(--accent); }
+    .hint {
+      position: fixed;
+      bottom: 24px;
+      left: 32px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 1.2px;
+      color: var(--text-muted);
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+<div class="deck">
+
+  <!-- Slide 1: Title -->
+  <section class="slide s1 active" data-slide="1">
+    <div class="wordmark">
+      <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="13" width="24" height="2" fill="var(--accent)" />
+        <rect x="6" y="9" width="16" height="2" fill="var(--accent)" opacity="0.65" />
+        <rect x="10" y="17" width="8" height="2" fill="var(--accent)" opacity="0.85" />
+        <rect x="13" y="3" width="2" height="22" fill="var(--accent-dim)" opacity="0.6" />
+      </svg>
+      <div class="tag">Compliance Co Pilot</div>
+    </div>
+    <h1>Meridian<span class="second">Sentinel</span></h1>
+    <div class="sub">A counterparty screening copilot, built for Meridian Energy Trading SA.</div>
+    <div class="footer">Peter Nemrow &nbsp;·&nbsp; Sayari Forward Deployed Engineer submission &nbsp;·&nbsp; June 2026</div>
+  </section>
+
+  <!-- Slide 2: The blind spot (Anchor + Need, single focus) -->
+  <section class="slide s2" data-slide="2">
+    <div class="kicker">The compliance reality at Meridian today</div>
+    <h2 class="argument-lead">Your OFAC screening has <span class="critical">one structural blind spot</span>, and it produces regulatory exposure on every list you process.</h2>
+    <div class="single-card pain-card">
+      <div class="card-label">The blind spot</div>
+      <div class="card-title">Name screening cannot see ownership.</div>
+      <div class="card-body">
+        Under OFAC's 50 percent rule, Meridian cannot transact with any entity owned at least 50 percent by a sanctioned party, even when the entity's own name never appears on the SDN list. A name screen has no way to see the ownership chain. It waves the entity through. You carry the exposure.
+      </div>
+      <div class="card-citation">31 CFR §501.801</div>
+    </div>
+    <div class="slide-footnote">
+      Example from last quarter's list: Russian Railways. The Russian state controls it through SDN designated parties. Your name screen returns clean.
+    </div>
+  </section>
+
+  <!-- Slide 3: Cure -->
+  <section class="slide s3" data-slide="3">
+    <div class="kicker">What I built</div>
+    <h2 class="lead">Resolve. Reconcile. <span class="accent">Show your work.</span></h2>
+    <div class="sub">Sentinel resolves every counterparty to a real corporate entity, reconciles three independent signals, and surfaces only the disagreements your analyst needs to see. Every value cites a Sayari API field and a cached file on disk.</div>
+    <div class="three">
+      <div class="pillar">
+        <div class="num">01</div>
+        <div class="name">Resolve</div>
+        <div class="desc">Sayari's resolution beats string matching. Pinned parent IDs handle the cases where default resolution returns a subsidiary instead of the real corporate parent.</div>
+      </div>
+      <div class="pillar">
+        <div class="num">02</div>
+        <div class="name">Reconcile</div>
+        <div class="desc">A fair OFAC name screen, Sayari risk factors, and Sayari's ownership graph compared side by side. Outcomes bucket into both catch, ownership only, name lost, and false positive.</div>
+      </div>
+      <div class="pillar">
+        <div class="num">03</div>
+        <div class="name">Show your work</div>
+        <div class="desc">Every claim traces to a cache file path and a raw field. The AI copilot calls deterministic tools and never produces a number on its own. Audit ready by default.</div>
+      </div>
+    </div>
+    <div class="footer">What you are about to see is a real run against fifty counterparties. Nothing is simulated.</div>
+  </section>
+
+  <!-- Slide 4: The blind spot, closed (mirror of slide 2) -->
+  <section class="slide s4" data-slide="4">
+    <div class="kicker">What we just demonstrated</div>
+    <h2 class="argument-lead">The blind spot, <span class="accent">closed</span>. Every exposure surfaced, every finding cited.</h2>
+    <div class="single-card resolution-card">
+      <div class="card-label">The blind spot, closed</div>
+      <div class="card-title">Sayari's ownership graph saw what the name screen missed.</div>
+      <div class="card-body">
+        Of fifty counterparties on this list, four were blockable only via the 50 percent rule. Sentinel surfaced each one by traversing the ownership chain. Every finding cites a Sayari entity URL and a cached source file. Every block decision is ready for your analyst to disposition.
+      </div>
+      <div class="entity-chips">
+        <span class="entity-chip">Russian Railways</span>
+        <span class="entity-chip">MiG Corporation</span>
+        <span class="entity-chip">Gazprom</span>
+        <span class="entity-chip">Belorusskaya Kaliynaya Companya</span>
+      </div>
+    </div>
+    <div class="slide-footnote">
+      Sentinel runs against your existing pipeline. Day one is wiring the integration. The rest is the work we do together.
+    </div>
+  </section>
+
+  <!-- Slide 5: Partnership -->
+  <section class="slide s5" data-slide="5">
+    <div class="kicker">How I'd partner with Meridian</div>
+    <h2 class="lead">What you saw today is built. What we'd build together is the fit.</h2>
+    <div class="sub">The Forward Deployed model is not handing you code and walking away. It is embedding inside your team, integrating Sentinel into your specific procurement pipeline, and partnering with you as Sayari ships new capabilities.</div>
+    <div class="timeline">
+      <div class="phase now">
+        <div class="when">Day 0</div>
+        <div class="what">Demo to deployment kickoff</div>
+        <div class="detail">Scope your specific procurement, case management, and warehouse systems. Identify your first list to onboard live.</div>
+      </div>
+      <div class="phase">
+        <div class="when">Day 30</div>
+        <div class="what">Pipeline integration</div>
+        <div class="detail">SFTP, Snowflake, or Ariba ingestion wired. Sentinel running on your real counterparty list with your team in maker checker review.</div>
+      </div>
+      <div class="phase">
+        <div class="when">Day 60</div>
+        <div class="what">Writeback and rollout</div>
+        <div class="detail">Outcomes flowing to your case management, ServiceNow tickets on escalated dispositions, audit trail in your warehouse, analyst team trained.</div>
+      </div>
+      <div class="phase">
+        <div class="when">Day 90</div>
+        <div class="what">Steady state and roadmap</div>
+        <div class="detail">Continuous improvement loop. Your patterns feed back into Sayari's roadmap, with me as the conduit. Built fast, deployed deep, owned end to end.</div>
+      </div>
+    </div>
+    <div class="closer">Thank you.</div>
+  </section>
+
+</div>
+
+<div class="nav" id="nav"></div>
+<div class="hint">← → to navigate</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const nav = document.getElementById('nav');
+  let idx = 0;
+
+  function renderNav() {
+    let html = '';
+    for (let i = 0; i < slides.length; i++) {
+      html += `<span class="dot${i === idx ? ' active' : ''}"></span>`;
+    }
+    html += ` &nbsp;${idx + 1} / ${slides.length}`;
+    nav.innerHTML = html;
+  }
+  function show(i) {
+    if (i < 0 || i >= slides.length) return;
+    slides[idx].classList.remove('active');
+    idx = i;
+    slides[idx].classList.add('active');
+    renderNav();
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); show(idx + 1); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(idx - 1); }
+    else if (e.key === 'Home') { show(0); }
+    else if (e.key === 'End') { show(slides.length - 1); }
+  });
+  document.addEventListener('click', (e) => {
+    // Click right half to advance, left half to go back.
+    const x = e.clientX;
+    if (x > window.innerWidth / 2) show(idx + 1);
+    else show(idx - 1);
+  });
+  renderNav();
+</script>
+</body>
+</html>

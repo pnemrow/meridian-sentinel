@@ -1,8 +1,8 @@
 """
 Entity profile fetching and extraction.
 
-Ported from sayari_ground_truth.py. Handles both live API responses
-and pre-cached raw JSON dictionaries.
+Handles both live API responses and pre cached raw JSON dictionaries
+with the same shape (the cache files are saved API responses verbatim).
 """
 from __future__ import annotations
 

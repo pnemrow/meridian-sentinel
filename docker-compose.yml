@@ -1,8 +1,39 @@
-version: "3.9"
+# Default path: `docker compose up`
+# Brings up the API only. App uses file based persistence in output/.
+# This is the demo path and the recommended path for evaluation.
+#
+# Postgres path: `docker compose --profile db up`
+# Brings up Postgres in addition to the API. Exercises the optional
+# database persistence layer (services/api/routers/investigations.py
+# has the Postgres branch). Useful if you want to verify that path.
 
 services:
+  api:
+    build:
+      context: .
+      dockerfile: services/api/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      OUTPUT_DIR: /app/output
+      OFAC_CACHE_DIR: /app/services/api/data
+      # DATABASE_URL is empty by default — app falls back to file based.
+      # When run under `--profile db`, this picks up the postgres service.
+      DATABASE_URL: ${DATABASE_URL:-}
+      SAYARI_CLIENT_ID: ${SAYARI_CLIENT_ID:-}
+      SAYARI_CLIENT_SECRET: ${SAYARI_CLIENT_SECRET:-}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+    volumes:
+      # Mount output/ so new LIVE mode runs persist on the host.
+      # The Dockerfile already includes the cached repo data in the image,
+      # so this only matters if you want to keep new runs across container restarts.
+      - ./output:/app/output
+      - ./services/api/data:/app/services/api/data
+    restart: unless-stopped
+
   postgres:
     image: postgres:16-alpine
+    profiles: ["db"]
     environment:
       POSTGRES_DB: sentinel
       POSTGRES_USER: sentinel
@@ -17,27 +48,6 @@ services:
       interval: 5s
       timeout: 3s
       retries: 10
-
-  api:
-    build:
-      context: .
-      dockerfile: services/api/Dockerfile
-    ports:
-      - "8000:8000"
-    environment:
-      OUTPUT_DIR: /app/output
-      OFAC_CACHE_DIR: /app/services/api/data
-      DATABASE_URL: postgresql://sentinel:sentinel@postgres:5432/sentinel
-      SAYARI_CLIENT_ID: ${SAYARI_CLIENT_ID:-}
-      SAYARI_CLIENT_SECRET: ${SAYARI_CLIENT_SECRET:-}
-      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
-    volumes:
-      - ./output:/app/output
-      - ./services/api/data:/app/services/api/data
-    depends_on:
-      postgres:
-        condition: service_healthy
-    restart: unless-stopped
 
 volumes:
   pgdata:

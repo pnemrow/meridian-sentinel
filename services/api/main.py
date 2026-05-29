@@ -3,20 +3,30 @@ Meridian Sentinel — FastAPI service.
 
 Exposes the engine's tool functions over HTTP with a consistent
 {data, source} envelope. Every endpoint cites its data source so
-the front-end can render source IDs next to every claim.
+the front end can render source IDs next to every claim.
 
-Startup:
-    cd services/api
-    pip install -r requirements.txt
-    uvicorn main:app --reload --port 8000
+Run with Docker (recommended):
+    docker compose up
 
-Environment variables:
-    SAYARI_CLIENT_ID=...         (optional — omit for cache-only mode)
-    SAYARI_CLIENT_SECRET=...     (optional)
-    ANTHROPIC_API_KEY=...        (required for /agent/ask in LIVE mode)
-    DATABASE_URL=postgresql://localhost/sentinel   (optional — falls back to JSON seed)
-    OUTPUT_DIR=../../output      (path to the ground-truth output/ directory)
-    OFAC_CACHE_DIR=./data        (where sdn.xml is cached)
+Or natively from the repo root:
+    pip install -r services/api/requirements.txt
+    uvicorn services.api.main:app --reload --port 8000
+
+Environment variables (see .env.example for the full annotated list):
+    SAYARI_CLIENT_ID, SAYARI_CLIENT_SECRET
+        Required for LIVE mode uploads and live ownership traversals.
+        Omit for CACHED mode (the demo path), which uses recorded API
+        responses from output/raw/ and the cached OFAC SDN feed.
+    ANTHROPIC_API_KEY
+        Required only for freeform LIVE copilot questions. The four
+        cached golden runs (output/agent_runs/) work without it.
+    DATABASE_URL
+        Optional. Postgres path for investigation persistence; when
+        unset the app uses file based persistence under output/.
+    OUTPUT_DIR (default: ./output)
+        Where cached entity profiles, run artifacts, and dispositions live.
+    OFAC_CACHE_DIR (default: ./services/api/data)
+        Where sdn.xml is read from at startup.
 """
 from __future__ import annotations
 

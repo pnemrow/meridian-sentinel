@@ -49,7 +49,7 @@ function SanctionProgramTag({ code }) {
   );
 }
 
-// -------- SourcePopover (the literal "trace every finding" surface) --------
+// -------- SourcePopover --------
 function SourcePopover({ source, refLabel }) {
   if (!source) return null;
   const Row = ({ k, v, link, mono = true }) => (
@@ -79,7 +79,7 @@ function SourcePopover({ source, refLabel }) {
   );
 }
 
-// -------- CitedValue (quiet by default; hover/click reveals source) --------
+// -------- CitedValue --------
 function CitedValue({ children, source, refNum, asBlock }) {
   const [open, setOpen] = useState(false);
   const wrapRef = useRef(null);
@@ -112,7 +112,7 @@ function CitedValue({ children, source, refNum, asBlock }) {
   );
 }
 
-// -------- ConfidenceFlag (⚠ verify) --------
+// -------- ConfidenceFlag --------
 function ConfidenceFlag({ reason, inline }) {
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
@@ -153,7 +153,6 @@ function ConfidenceFlag({ reason, inline }) {
 
 // -------- EntityChip --------
 function EntityChip({ entity, onOpen }) {
-  // entity: { entity_id, name | input_name, type, sanctioned, pep }
   const name = entity.name || entity.input_name || entity.label;
   const glyph = entity.type === 'person' ? '◆' : '■';
   return (
@@ -276,7 +275,7 @@ function SectionHeader({ kicker, title, right }) {
   );
 }
 
-// -------- Country flag (text-only fallback — we never invent imagery) --------
+// -------- Country flag (text-only fallback) --------
 function CountryCode({ code }) {
   return (
     <span className="mono" style={{
@@ -288,8 +287,31 @@ function CountryCode({ code }) {
   );
 }
 
+// -------- StatusChip (workflow disposition) --------
+function StatusChip({ status, small }) {
+  const cfg = (window.DISPOSITION_STATUSES || {})[status] || { label: status, color: 'var(--text-muted)', bg: 'transparent' };
+  return (
+    <span style={{
+      display: 'inline-flex', alignItems: 'center', gap: 6,
+      padding: small ? '2px 8px' : '3px 10px',
+      borderRadius: 2,
+      border: `1px solid ${cfg.color}`,
+      background: cfg.bg,
+      color: cfg.color,
+      fontSize: small ? 10 : 11,
+      fontFamily: 'var(--font-mono)',
+      letterSpacing: 0.4,
+      whiteSpace: 'nowrap',
+    }}>
+      <span style={{ width: 5, height: 5, borderRadius: 999, background: cfg.color }} />
+      {cfg.label}
+    </span>
+  );
+}
+
 Object.assign(window, {
   cx, fmtMs, truncate,
   RiskBadge, SanctionProgramTag, SourcePopover, CitedValue, ConfidenceFlag,
   EntityChip, OutcomeBadge, OUTCOMES, ToolTraceRow, Card, SectionHeader, CountryCode,
+  StatusChip,
 });

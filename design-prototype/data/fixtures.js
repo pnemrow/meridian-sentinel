@@ -1,8 +1,27 @@
-// Meridian Sentinel — typed mocks shaped EXACTLY like the data contracts in §5-§9
-// All values are copied verbatim from Appendix A. Field names match production.
+// Meridian Sentinel — design time fixtures + live fetch fallbacks.
 //
-// CitedResult<T> = { data: T, source: { entity_url, raw_field_path, cache_file, api_endpoint } }
-// All values can be swapped for a real fetch() with no shape changes.
+// What this file is:
+//   Typed JS objects shaped EXACTLY like the data contracts the backend serves.
+//   Every value here can be replaced by a real fetch() with no shape change,
+//   because the API and the engine both follow the CitedResult envelope:
+//     CitedResult<T> = { data: T, source: { entity_url, raw_field_path, cache_file, api_endpoint } }
+//
+// Why it still exists after the backend is wired:
+//   data/api.js runs on page load and overwrites the relevant window.* globals
+//   with real backend responses. These fixtures are the graceful fallback when
+//   the backend is unreachable (initial page load, network failure, or running
+//   the static prototype with no API). Without them the UI would render empty
+//   states for the entire dashboard, compare table, and copilot. The trust
+//   thesis still holds because the badge always reflects the live source: if
+//   you see this fixture data, the page is honestly labeled as such.
+//
+// What's in here:
+//   - COMPARE_SUMMARY / COMPARE_ROWS / COMPARE_RESULT (list_1 reconciliation)
+//   - ENTITY_BELORUSSKAYA / SBERBANK / KERIMOV plus buildOwnerFixture() for graph nodes
+//   - ENTITY_INDEX (id → entity lookup map)
+//   - GRAPH_BELORUSSKAYA (the marquee ownership graph used by the print view)
+//   - COPILOT_GOLDEN_QUESTIONS / COPILOT_SAMPLE_STREAM (chip strings + replay stream)
+//   - SEEDED_LIST_PREVIEW / UPLOAD_SUMMARY / COLUMN_HINTS (upload flow defaults)
 
 // ------- helpers -------
 const src = (entity_url, raw_field_path, cache_file, api_endpoint) => ({

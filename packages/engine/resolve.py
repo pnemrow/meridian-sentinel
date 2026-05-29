@@ -1,8 +1,7 @@
 """
 Entity resolution logic.
 
-Ported from sayari_ground_truth.py, refactored into an importable module.
-Pinned IDs and retry-name overrides live here as the single authoritative source.
+Pinned IDs and retry name overrides live here as the single authoritative source.
 """
 from __future__ import annotations
 
