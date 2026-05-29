@@ -1068,7 +1068,7 @@ function Chip({ text, kind }) {
 
 // ── Resolved summary ────────────────────────────────────────────────────────
 
-function ResolvedSummary({ runResult, uploadResponse, runEvents = [], onContinue }) {
+function ResolvedSummary({ runResult, uploadResponse, runEvents = [], onContinue, onOpenEntity }) {
   const matchedSeeded = !!runResult?.matches_seeded;
   // Full post-run trace: every row, expandable. Streaming cap doesn't apply.
   const allRows = (runEvents || []).filter(e =>
