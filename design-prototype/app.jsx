@@ -685,7 +685,7 @@ function Surfaces({ route, go, openEntity, runMode, runId, setRunId, onUploadCom
     return <Integrations />;
   }
   if (route.name === 'upload') {
-    return <Upload onRunComplete={onUploadComplete} onOpenEntity={(id) => openEntity(id)} />;
+    return <Upload onRunComplete={onUploadComplete} onOpenEntity={(id) => openEntity(id)} runMode={runMode} />;
   }
   if (route.name === 'copilot') {
     return (

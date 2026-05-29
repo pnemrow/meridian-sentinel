@@ -548,13 +548,13 @@ def _resolve_with_audit(client, e):
 
 
 @router.post("/{upload_id}/run")
-async def run_upload(upload_id: str, name: str | None = None):
+async def run_upload(upload_id: str, name: str | None = None, mode: str = "cached"):
     """
     Execute the engine on the upload's parsed rows. Returns SSE.
 
-    Cached path (matches_seeded=true): emits a single "matched seeded list_1"
-    event and a "run_complete" with run_id="default", so the front-end falls
-    back to the existing demo cache without any work.
+    Cached path (matches_seeded=true AND mode != "live"): emits a single
+    "matched seeded list_1" event and a "run_complete" with run_id="default",
+    so the front-end falls back to the existing demo cache without any work.
 
     Live path: walks each row, resolves via Sayari, fetches the profile, caches
     the raw response to output/runs/{run_id}/raw/. Streams per-row progress.
@@ -562,10 +562,17 @@ async def run_upload(upload_id: str, name: str | None = None):
     investigation.json so /entities, /summary, /tools/compare_ofac_vs_sayari,
     and /api/investigations all serve the new run when called with ?run_id=.
 
+    When mode="live" and the upload happens to match the seeded list_1, the
+    shortcut is bypassed and a real Sayari run is executed. This is the demo
+    path that shows live per-row API calls, pinned-ID short-circuits, and
+    retry-name chains for list_1's well-known entities.
+
     Args:
         upload_id:  the upload's transient id (from POST /uploads).
         name:       optional analyst-chosen investigation name. Falls back to
                     the original filename. Persisted into investigation.json.
+        mode:       "cached" (default) or "live". "live" forces a real run
+                    even when the content matches seeded list_1.
     """
     upload = _uploads.get(upload_id)
     if upload is None:
@@ -577,9 +584,10 @@ async def run_upload(upload_id: str, name: str | None = None):
     matches_seeded = bool(
         _list_1_hash() and upload.get("content_hash") == _list_1_hash()
     )
+    use_shortcut = matches_seeded and mode.lower() != "live"
 
     async def stream() -> AsyncGenerator[str, None]:
-        if matches_seeded:
+        if use_shortcut:
             yield _sse(
                 "matched_seeded",
                 {

@@ -16,7 +16,7 @@
 
 const UPLOAD_API_BASE = (typeof window !== 'undefined' && window.SENTINEL_API_BASE) || '';
 
-function Upload({ onRunComplete, onOpenEntity }) {
+function Upload({ onRunComplete, onOpenEntity, runMode }) {
   const [step, setStep] = useState('source');      // source | sheet | map | running | resolved
   const [file, setFile] = useState(null);
   const [pendingUploadId, setPendingUploadId] = useState(null);  // when multi-sheet & still picking
@@ -115,8 +115,12 @@ function Upload({ onRunComplete, onOpenEntity }) {
       // Send the analyst-chosen investigation name as a query param so the
       // backend can write it into output/runs/{run_id}/investigation.json
       // and surface it on the dashboard + sidebar without a follow-up call.
-      const qs = investigationName ? `?name=${encodeURIComponent(investigationName)}` : '';
-      const resp = await fetch(`${UPLOAD_API_BASE}/uploads/${uploadResponse.upload_id}/run${qs}`, { method: 'POST' });
+      // The mode param decides whether the backend may take the matches_seeded
+      // shortcut (CACHED) or must run live against Sayari (LIVE).
+      const modeParam = (runMode || 'CACHED').toLowerCase();
+      const params = new URLSearchParams({ mode: modeParam });
+      if (investigationName) params.set('name', investigationName);
+      const resp = await fetch(`${UPLOAD_API_BASE}/uploads/${uploadResponse.upload_id}/run?${params.toString()}`, { method: 'POST' });
       if (!resp.ok) throw new Error(`HTTP ${resp.status} from /uploads/{id}/run`);
       const reader = resp.body.getReader();
       const decoder = new TextDecoder();
@@ -208,7 +212,7 @@ function Upload({ onRunComplete, onOpenEntity }) {
         disabled={step === 'source' || step === 'sheet'}
       >
         {(step === 'map' || step === 'running' || step === 'resolved') && uploadResponse
-          ? <MapAndPreview response={uploadResponse} onRun={onRun} canRun={step === 'map'} />
+          ? <MapAndPreview response={uploadResponse} onRun={onRun} canRun={step === 'map'} runMode={runMode} />
           : <span className="muted">Pick a source above to begin.</span>}
       </StepCard>
 
@@ -326,9 +330,17 @@ function SheetPicker({ sheets, file, onPick, onBack }) {
 
 // ── Map & preview (driven by /uploads response) ─────────────────────────────
 
-function MapAndPreview({ response, onRun, canRun }) {
+function MapAndPreview({ response, onRun, canRun, runMode }) {
   const mapping = response.column_mapping || {};
   const preview = response.preview || [];
+  const isLive = (runMode || 'CACHED').toUpperCase() === 'LIVE';
+  const matchesSeeded = !!response.matches_seeded;
+  // Run-button label reflects what will actually happen — the mode toggle
+  // only changes behaviour for matches_seeded uploads, since non-seeded
+  // uploads always need a live run to produce results.
+  const runLabel = isLive && matchesSeeded ? 'Run screening live (~50s) →'
+                 : matchesSeeded            ? 'Run screening (cached, instant) →'
+                                            : 'Run screening live →';
 
   // Investigation name: defaults to "<filename stem> · <sheet>" so it lands as
   // a sensible label without manual typing. Editable inline before Run.
@@ -430,14 +442,23 @@ function MapAndPreview({ response, onRun, canRun }) {
       </div>
 
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 18 }}>
-        <span className="mono muted" style={{ fontSize: 11 }}>POST /uploads/{response.upload_id}/run</span>
+        <span className="mono muted" style={{ fontSize: 11 }}>POST /uploads/{response.upload_id}/run?mode={isLive ? 'live' : 'cached'}</span>
         <button onClick={() => onRun(investigationName.trim() || _defaultName)} disabled={!canRun} style={{
           background: canRun ? 'var(--accent)' : 'transparent',
           color: canRun ? '#0A1628' : 'var(--text-muted)',
           border: canRun ? 0 : '1px solid var(--border-default)',
           padding: '10px 18px', borderRadius: 4, fontSize: 14, fontWeight: 600,
-        }}>{response.matches_seeded ? 'Run screening (cached) →' : 'Run screening live →'}</button>
+        }}>{runLabel}</button>
       </div>
+      {isLive && matchesSeeded ? (
+        <div className="muted" style={{
+          fontSize: 11, fontStyle: 'italic', marginTop: 8, textAlign: 'right',
+          maxWidth: 520, marginLeft: 'auto', lineHeight: 1.5,
+        }}>
+          Live mode active — this will re-run all {response.total_rows} entities through the real Sayari
+          API even though the content matches the seeded list.
+        </div>
+      ) : null}
     </div>
   );
 }
