@@ -127,8 +127,10 @@ async def run_agent_live(
     import anthropic
 
     from .tools import TOOL_SCHEMAS, SYSTEM_PROMPT, execute_tool, _summarize_result
+    # Credential store wins over env so in-app modal entries pick up without restart.
+    from services.api.credentials import get_credential
 
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    api_key = get_credential("ANTHROPIC_API_KEY")
     if not api_key:
         yield _sse("error", {"message": "ANTHROPIC_API_KEY not set."})
         yield _sse("done", {})

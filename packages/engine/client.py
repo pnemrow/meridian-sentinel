@@ -3,10 +3,24 @@ Sayari SDK client factory.
 
 Centralises credential lookup so every layer that needs a live client
 imports from here rather than duplicating os.environ logic.
+
+Credential resolution prefers the in-memory store in `services.api.credentials`
+(which the in-app credential modal writes to) so a user can override .env
+without restarting. The engine package itself remains standalone-importable —
+if services.api isn't on the path, we fall back to os.environ.
 """
 from __future__ import annotations
 
 import os
+
+
+def _lookup(key: str) -> str | None:
+    """Store-first lookup with a clean env fallback when run outside the API."""
+    try:
+        from services.api.credentials import get_credential  # noqa: PLC0415
+        return get_credential(key)
+    except ImportError:
+        return os.environ.get(key) or None
 
 
 def build_client():
@@ -14,8 +28,8 @@ def build_client():
 
     Returns None if credentials are not set — callers fall back to cached data.
     """
-    cid = os.environ.get("SAYARI_CLIENT_ID")
-    secret = os.environ.get("SAYARI_CLIENT_SECRET")
+    cid = _lookup("SAYARI_CLIENT_ID")
+    secret = _lookup("SAYARI_CLIENT_SECRET")
     if not cid or not secret:
         return None
     try:

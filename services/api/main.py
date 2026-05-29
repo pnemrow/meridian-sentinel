@@ -70,6 +70,7 @@ from services.api.tools.generate_briefing import generate_briefing_tool
 from services.api.ofac.matcher import OfacMatcher
 from services.api.routers.investigations import router as investigations_router
 from services.api.routers.uploads import router as uploads_router
+from services.api import credentials as _credentials
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
 log = logging.getLogger("sentinel.api")
@@ -223,6 +224,18 @@ class TraverseRequest(BaseModel):
 
 class BriefingRequest(BaseModel):
     entity_id: str
+
+
+class CredentialsRequest(BaseModel):
+    """Body for POST /api/credentials.
+
+    All fields optional — partial updates are supported (e.g. set only the
+    Anthropic key, leave Sayari alone). Empty string is treated as "set to
+    empty", not "leave alone"; pass None / omit to leave unchanged.
+    """
+    sayari_client_id: str | None = None
+    sayari_client_secret: str | None = None
+    anthropic_api_key: str | None = None
 
 
 class AgentRequest(BaseModel):
@@ -500,6 +513,37 @@ def list_entities(run_id: str | None = None):
             "api_endpoint": "cached GET /v1/entity/{id} responses",
         },
     }
+
+
+# ── Credentials (in-memory store for LIVE-mode features) ─────────────────────
+#
+# The store is process-local and cleared on container restart by design.
+# Browsers never see credential values back; status returns booleans only.
+# See services/api/credentials.py for the rationale.
+
+
+@app.post("/api/credentials")
+def set_credentials(req: CredentialsRequest):
+    """Set one or more credentials. Returns current status booleans."""
+    _credentials.set_credentials(
+        sayari_client_id=req.sayari_client_id,
+        sayari_client_secret=req.sayari_client_secret,
+        anthropic_api_key=req.anthropic_api_key,
+    )
+    return _credentials.status()
+
+
+@app.get("/api/credentials/status")
+def get_credentials_status():
+    """Boolean availability map. No values are returned to the client."""
+    return _credentials.status()
+
+
+@app.delete("/api/credentials")
+def clear_credentials():
+    """Wipe the in-memory store. Process env vars (if any) take over again."""
+    _credentials.clear()
+    return _credentials.status()
 
 
 @app.get("/summary")

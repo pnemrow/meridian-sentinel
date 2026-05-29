@@ -138,6 +138,48 @@ function App() {
   });
   const [runMode, setRunMode] = useState('CACHED'); // CACHED | LIVE
 
+  // Credential availability — drives whether LIVE-mode entry points are
+  // armed or open the in-app modal. Booleans only; the backend never returns
+  // the values themselves.
+  const [credentialStatus, setCredentialStatus] = useState({ sayari: false, anthropic: false });
+  // Modal state. `focusOn` is one of 'sayari' | 'anthropic' | 'both'; the
+  // pending callback fires after a successful save so the action that
+  // triggered the prompt completes naturally (e.g. switch into LIVE mode).
+  const [credModal, setCredModal] = useState(null); // { focusOn, onSaved } | null
+  const apiBase = (typeof window !== 'undefined' && window.SENTINEL_API_BASE) || '';
+
+  // Fetch initial status on mount. Failing silently is fine — the UI degrades
+  // to "no LIVE features known available" which gates the right prompts.
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const resp = await fetch(`${apiBase}/api/credentials/status`);
+        if (!resp.ok) return;
+        const status = await resp.json();
+        if (!cancelled) setCredentialStatus(status);
+      } catch (_) { /* offline or backend down — UI handles it */ }
+    })();
+    return () => { cancelled = true; };
+  }, [apiBase]);
+
+  // Open the modal with optional follow-up. The follow-up fires once the user
+  // saves AND the resulting status satisfies what the caller was waiting for
+  // — so e.g. requesting "sayari" creds doesn't run the follow-up if the user
+  // saves only an anthropic key.
+  const openCredModal = (focusOn, onAvailable) => {
+    setCredModal({
+      focusOn,
+      onSaved: (status) => {
+        setCredentialStatus(status);
+        if (typeof onAvailable === 'function') {
+          const need = focusOn === 'both' ? null : focusOn;
+          if (!need || status[need]) onAvailable(status);
+        }
+      },
+    });
+  };
+
   const _initial = useMemo(() => parseHash(), []);
   const [route, setRoute] = useState(_initial.route);
   const [runId, setRunId] = useState(_initial.runId);
@@ -230,12 +272,23 @@ function App() {
     <div style={{ display: 'grid', gridTemplateColumns: '232px 1fr', height: '100vh', background: 'var(--bg-primary)' }}>
       <LeftRail route={route} go={go} openEntity={openEntity} runId={runId} />
       <div style={{ display: 'flex', flexDirection: 'column', minWidth: 0, height: '100vh', minHeight: 0 }}>
-        <GlobalHeader runMode={runMode} setRunMode={setRunMode} route={route} go={go} runId={runId} signOut={signOut} />
+        <GlobalHeader runMode={runMode} setRunMode={setRunMode}
+                      credentialStatus={credentialStatus} openCredModal={openCredModal}
+                      route={route} go={go} runId={runId} signOut={signOut} />
         <main style={{ flex: 1, minWidth: 0, minHeight: 0, overflowY: 'auto', overflowX: 'hidden' }} data-screen-label={`${route.name}`}>
           <Surfaces route={route} go={go} openEntity={openEntity} runMode={runMode}
+                    credentialStatus={credentialStatus} openCredModal={openCredModal}
                     runId={runId} setRunId={setRunId} onUploadComplete={onUploadComplete} />
         </main>
       </div>
+      {credModal ? (
+        <CredentialsModal
+          focusOn={credModal.focusOn}
+          onClose={() => setCredModal(null)}
+          onSaved={credModal.onSaved}
+          apiBase={apiBase}
+        />
+      ) : null}
     </div>
   );
 }
@@ -474,7 +527,7 @@ function ActiveRunHeader({ runId, onCustomRun }) {
 }
 
 // -------- Global header --------
-function GlobalHeader({ runMode, setRunMode, route, go, runId, signOut }) {
+function GlobalHeader({ runMode, setRunMode, credentialStatus, openCredModal, route, go, runId, signOut }) {
   const showRunContext = route.name !== 'investigations' && route.name !== 'integrations';
   const onCustomRun = !!runId;
   return (
@@ -501,7 +554,8 @@ function GlobalHeader({ runMode, setRunMode, route, go, runId, signOut }) {
         )}
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-        <RunModeBadge mode={runMode} setMode={setRunMode} />
+        <RunModeBadge mode={runMode} setMode={setRunMode}
+                      credentialStatus={credentialStatus} openCredModal={openCredModal} />
         <SettingsMenu go={go} route={route} signOut={signOut} />
       </div>
     </header>
@@ -586,7 +640,7 @@ function SettingsMenu({ go, route, signOut }) {
   );
 }
 
-function RunModeBadge({ mode, setMode }) {
+function RunModeBadge({ mode, setMode, credentialStatus, openCredModal }) {
   const isLive = mode === 'LIVE';
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
@@ -596,8 +650,30 @@ function RunModeBadge({ mode, setMode }) {
     document.addEventListener('mousedown', onDoc);
     return () => document.removeEventListener('mousedown', onDoc);
   }, [open]);
+
+  // Clicking LIVE without Sayari creds opens the modal instead of switching.
+  // After save, if the resulting status has sayari=true the mode flips into
+  // LIVE — otherwise we stay in CACHED and the modal closes (user cancelled).
+  const pickLive = () => {
+    setOpen(false);
+    if (credentialStatus?.sayari) { setMode('LIVE'); return; }
+    if (typeof openCredModal === 'function') {
+      openCredModal('sayari', () => setMode('LIVE'));
+    } else {
+      // Fallback: still flip — backend will refuse with a clear error.
+      setMode('LIVE');
+    }
+  };
+
+  // Gear next to the badge — manage creds at any time (focus="both").
+  const openManager = (e) => {
+    e.stopPropagation();
+    setOpen(false);
+    if (typeof openCredModal === 'function') openCredModal('both');
+  };
+
   return (
-    <div ref={ref} style={{ position: 'relative' }}>
+    <div ref={ref} style={{ position: 'relative', display: 'inline-flex', alignItems: 'center', gap: 6 }}>
       <button onClick={() => setOpen(o => !o)} style={{
         background: isLive ? 'rgba(201,169,97,0.1)' : 'var(--bg-surface)',
         border: `1px solid ${isLive ? 'var(--accent)' : 'var(--border-default)'}`,
@@ -609,6 +685,13 @@ function RunModeBadge({ mode, setMode }) {
         <span style={{ width: 7, height: 7, borderRadius: 999, background: isLive ? 'var(--accent)' : 'var(--text-muted)' }} className={isLive ? 'pulse' : ''} />
         {mode}
       </button>
+      {/* Gear — opens the credential manager directly */}
+      <button onClick={openManager} title="Manage credentials" aria-label="Manage credentials" style={{
+        background: 'transparent', border: '1px solid var(--border-default)',
+        color: 'var(--text-muted)', padding: '3px 7px', borderRadius: 3,
+        fontFamily: 'var(--font-mono)', fontSize: 12, lineHeight: 1,
+        cursor: 'pointer',
+      }}>⚙</button>
       {open ? (
         <div style={{
           position: 'absolute', top: 'calc(100% + 6px)', right: 0,
@@ -627,9 +710,12 @@ function RunModeBadge({ mode, setMode }) {
           <div style={{ height: 1, background: 'var(--border-subtle)', margin: '10px 0' }} />
           <ModeOption
             active={mode === 'LIVE'}
-            onClick={() => { setMode('LIVE'); setOpen(false); }}
+            onClick={pickLive}
             label="LIVE"
-            desc="Hits the Sayari API in real time for fresh uploads and open-ended questions."
+            desc={credentialStatus?.sayari
+              ? "Hits the Sayari API in real time for fresh uploads and open-ended questions."
+              : "Hits the Sayari API in real time. Will ask for credentials when selected."}
+            badge={credentialStatus?.sayari ? null : 'creds needed'}
           />
           <div className="muted" style={{ fontSize: 11, marginTop: 12, fontStyle: 'italic', lineHeight: 1.5 }}>
             Recorded data is real — never simulated. The badge always reflects the current source honestly.
@@ -640,7 +726,7 @@ function RunModeBadge({ mode, setMode }) {
   );
 }
 
-function ModeOption({ active, label, desc, onClick }) {
+function ModeOption({ active, label, desc, onClick, badge }) {
   return (
     <button onClick={onClick} style={{
       width: '100%', textAlign: 'left',
@@ -652,8 +738,17 @@ function ModeOption({ active, label, desc, onClick }) {
         border: `1.5px solid ${active ? 'var(--accent)' : 'var(--text-muted)'}`,
         background: active ? 'var(--accent)' : 'transparent',
       }} />
-      <div>
-        <div className="mono" style={{ fontSize: 12, color: active ? 'var(--accent)' : 'var(--text-primary)', letterSpacing: 0.8 }}>{label}</div>
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 8 }}>
+          <span className="mono" style={{ fontSize: 12, color: active ? 'var(--accent)' : 'var(--text-primary)', letterSpacing: 0.8 }}>{label}</span>
+          {badge ? (
+            <span className="mono" style={{
+              fontSize: 9, color: 'var(--risk-medium)',
+              border: '1px solid var(--risk-medium)', borderRadius: 2,
+              padding: '1px 5px', letterSpacing: 0.4, whiteSpace: 'nowrap',
+            }}>{badge}</span>
+          ) : null}
+        </div>
         <div className="muted" style={{ fontSize: 11, marginTop: 3, lineHeight: 1.5 }}>{desc}</div>
       </div>
     </button>
@@ -661,7 +756,7 @@ function ModeOption({ active, label, desc, onClick }) {
 }
 
 // -------- Router --------
-function Surfaces({ route, go, openEntity, runMode, runId, setRunId, onUploadComplete }) {
+function Surfaces({ route, go, openEntity, runMode, runId, setRunId, onUploadComplete, credentialStatus, openCredModal }) {
   if (route.name === 'investigations') {
     return (
       <Investigations
@@ -694,6 +789,8 @@ function Surfaces({ route, go, openEntity, runMode, runId, setRunId, onUploadCom
         runId={runId}
         onOpenEntity={(id) => openEntity(id)}
         onOpenCompare={() => go('compare')}
+        credentialStatus={credentialStatus}
+        openCredModal={openCredModal}
       />
     );
   }
@@ -710,6 +807,8 @@ function Surfaces({ route, go, openEntity, runMode, runId, setRunId, onUploadCom
         runId={runId}
         onBack={() => go('compare', { focusEntityId: route.params.entityId })}
         onOpenEntity={(id, overrideTrail) => openEntity(id, overrideTrail)}
+        credentialStatus={credentialStatus}
+        openCredModal={openCredModal}
       />
     );
   }

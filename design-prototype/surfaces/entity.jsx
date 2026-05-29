@@ -74,7 +74,7 @@ async function fetchEntityFromBackend(entityId, runId) {
   };
 }
 
-function Entity({ entityId, onBack, onOpenEntity, trail = [], runId = null }) {
+function Entity({ entityId, onBack, onOpenEntity, trail = [], runId = null, credentialStatus, openCredModal }) {
   const [entity, setEntity] = useState(null);
   const [loadError, setLoadError] = useState(null);
   const [notCached, setNotCached] = useState(false);
@@ -221,7 +221,9 @@ function Entity({ entityId, onBack, onOpenEntity, trail = [], runId = null }) {
              a live Sayari call. For uncached entities (e.g. a graph-discovered
              owner who isn't on any input list), the empty-state UI handles it —
              no fake data is invented. runId scopes the call to the active run. */}
-        <LiveGraphFetcher entityId={rs.entity_id} entityName={rs.input_name} runId={runId} onOpenEntity={onOpenEntity} trail={trail} currentLabel={rs.input_name} />
+        <LiveGraphFetcher entityId={rs.entity_id} entityName={rs.input_name} runId={runId}
+                          onOpenEntity={onOpenEntity} trail={trail} currentLabel={rs.input_name}
+                          credentialStatus={credentialStatus} openCredModal={openCredModal} />
       </div>
 
       {showBriefing ? <BriefingModal entity={rs} runId={runId} onClose={() => setShowBriefing(false)} /> : null}
@@ -808,8 +810,11 @@ function EntityLoading({ entityId, onBack }) {
 // live call; if no credentials are set, the empty-state UI renders and no
 // fake data is invented.
 // ============================================================
-function LiveGraphFetcher({ entityId, entityName, onOpenEntity, trail, currentLabel, runId = null }) {
-  const [state, setState] = useState('fetching'); // 'fetching' | 'loaded' | 'error'
+function LiveGraphFetcher({ entityId, entityName, onOpenEntity, trail, currentLabel, runId = null, credentialStatus, openCredModal }) {
+  // 'fetching' | 'loaded' | 'error' | 'needs_credentials'
+  // The needs_credentials state surfaces the modal-launching prompt when the
+  // backend reports "No Sayari credentials" (200 response with data.error).
+  const [state, setState] = useState('fetching');
   const [graphData, setGraphData] = useState(null);
   const [errMsg, setErrMsg] = useState(null);
 
@@ -831,6 +836,17 @@ function LiveGraphFetcher({ entityId, entityName, onOpenEntity, trail, currentLa
       // OwnershipGraph expects graph.data.* — pass the envelope through.
       // Normalize node fields (backend may emit name/entity_id rather than label/id).
       const data = json.data || {};
+      // Uncached entity AND no/bad Sayari creds → backend returns 200 with
+      // an explicit error string. Treat the credentials family of errors as
+      // a credentials prompt, not a generic error — let the user add a key
+      // and retry inline. Covers: "No Sayari credentials" (empty store +
+      // empty env), 401 access_denied / Unauthorized (wrong key from OAuth),
+      // and the literal "credentials" word.
+      if (data.error && /credentials|unauthorized|access_denied|401/i.test(data.error)) {
+        setErrMsg(data.error);
+        setState('needs_credentials');
+        return;
+      }
       const nodes = (data.nodes || []).map(n => ({
         id: n.id || n.entity_id,
         label: n.label || n.name || (n.id || n.entity_id || '').slice(0,16),
@@ -895,6 +911,7 @@ function LiveGraphFetcher({ entityId, entityName, onOpenEntity, trail, currentLa
         <div className="mono" style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: 1.2, textTransform: 'uppercase' }}>Ownership network</div>
         <div style={{ fontSize: 14, color: 'var(--text-secondary)', marginTop: 2 }}>
           {state === 'fetching' ? 'loading ownership traversal…'
+           : state === 'needs_credentials' ? 'Sayari credentials required for live traversal'
            : state === 'error' ? 'fetch failed'
            : 'no ownership data available'}
         </div>
@@ -917,7 +934,7 @@ function LiveGraphFetcher({ entityId, entityName, onOpenEntity, trail, currentLa
           <line x1="320" y1="228" x2="230" y2="172" stroke="#94A3B8" strokeWidth="0.8" strokeDasharray="2 4" />
         </svg>
 
-        <div style={{ position: 'absolute', textAlign: 'center', maxWidth: 380, padding: '0 20px' }}>
+        <div style={{ position: 'absolute', textAlign: 'center', maxWidth: 420, padding: '0 20px' }}>
           {state === 'fetching' ? (
             <>
               <div className="mono" style={{ fontSize: 12, color: 'var(--accent)', letterSpacing: 1, marginBottom: 8 }}>
@@ -926,6 +943,27 @@ function LiveGraphFetcher({ entityId, entityName, onOpenEntity, trail, currentLa
               <div className="muted" style={{ fontSize: 12, lineHeight: 1.6 }}>
                 POST <span className="mono">/tools/traverse_ownership</span> · entity_id={entityId.slice(0,16)}…
               </div>
+            </>
+          ) : state === 'needs_credentials' ? (
+            <>
+              <div style={{ fontSize: 16, color: 'var(--text-primary)', marginBottom: 8 }}>
+                Live traversal needs Sayari credentials
+              </div>
+              <div className="muted" style={{ fontSize: 13, lineHeight: 1.6, marginBottom: 14 }}>
+                This entity isn't in the pre-cached set, so the ownership graph
+                must come from the Sayari API. Add credentials to continue —
+                they stay in memory only and clear on container restart.
+              </div>
+              <button onClick={() => {
+                if (typeof openCredModal === 'function') {
+                  openCredModal('sayari', () => startFetch());
+                } else {
+                  startFetch();
+                }
+              }} style={{
+                background: 'var(--accent)', color: '#0A1628', border: 0,
+                padding: '8px 16px', borderRadius: 4, fontWeight: 600, fontSize: 13,
+              }}>Add Sayari credentials →</button>
             </>
           ) : (
             <>

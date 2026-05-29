@@ -309,9 +309,190 @@ function StatusChip({ status, small }) {
   );
 }
 
+// -------- CredentialsModal (contextual LIVE-mode key entry) ----------------
+// Opens from three entry points: the LIVE mode-badge intercept, the co-pilot
+// freeform-question intercept, and the ownership-graph no-credentials error.
+// `focusOn` (sayari | anthropic | both) drives which section gets the accent
+// border + a contextual explainer so the user understands *why* they were
+// asked. On save the modal POSTs /api/credentials and calls onSaved with the
+// fresh status booleans so the caller can complete the action that triggered
+// the prompt (e.g. actually switch into LIVE mode).
+function CredentialsModal({ focusOn = 'both', onClose, onSaved, apiBase }) {
+  const [sayariId, setSayariId] = useState('');
+  const [sayariSecret, setSayariSecret] = useState('');
+  const [anthropicKey, setAnthropicKey] = useState('');
+  const [saving, setSaving] = useState(false);
+  const [err, setErr] = useState(null);
+
+  const base = apiBase || (typeof window !== 'undefined' && window.SENTINEL_API_BASE) || '';
+
+  const wantSayari    = focusOn === 'sayari' || focusOn === 'both';
+  const wantAnthropic = focusOn === 'anthropic' || focusOn === 'both';
+
+  const headline = focusOn === 'sayari'
+    ? "LIVE mode needs Sayari credentials"
+    : focusOn === 'anthropic'
+      ? "Freeform LIVE questions need an Anthropic key"
+      : "Credentials";
+  const explainer = focusOn === 'sayari'
+    ? "Live uploads and ownership traversals for entities not in cache call the Sayari API directly. Add your client id and secret to continue."
+    : focusOn === 'anthropic'
+      ? "The freeform co-pilot calls Claude Sonnet over a strict tool-use loop. The four cached golden questions still work without a key — only freeform input needs one."
+      : "Manage credentials for LIVE-mode features. Leave a section blank to skip it.";
+
+  const save = async () => {
+    setSaving(true); setErr(null);
+    const body = {};
+    if (sayariId.trim())     body.sayari_client_id     = sayariId.trim();
+    if (sayariSecret.trim()) body.sayari_client_secret = sayariSecret.trim();
+    if (anthropicKey.trim()) body.anthropic_api_key    = anthropicKey.trim();
+    if (Object.keys(body).length === 0) {
+      setErr("Enter at least one value, or hit Cancel.");
+      setSaving(false); return;
+    }
+    try {
+      const resp = await fetch(`${base}/api/credentials`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const status = await resp.json();
+      if (typeof onSaved === 'function') onSaved(status);
+      if (typeof onClose === 'function') onClose();
+    } catch (e) {
+      setErr(`Save failed: ${e.message}. Is the backend reachable at ${base || '/'}?`);
+      setSaving(false);
+    }
+  };
+
+  const clear = async () => {
+    setSaving(true); setErr(null);
+    try {
+      const resp = await fetch(`${base}/api/credentials`, { method: 'DELETE' });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const status = await resp.json();
+      if (typeof onSaved === 'function') onSaved(status);
+      if (typeof onClose === 'function') onClose();
+    } catch (e) {
+      setErr(`Clear failed: ${e.message}.`);
+      setSaving(false);
+    }
+  };
+
+  // Per-section styling: focusOn highlights the requested section with the
+  // accent border; the other section gets a quiet border to indicate it's
+  // available but not the reason this modal opened.
+  const sectionStyle = (focused) => ({
+    border: `1px solid ${focused ? 'var(--accent)' : 'var(--border-default)'}`,
+    background: focused ? 'rgba(201,169,97,0.04)' : 'var(--bg-primary)',
+    borderRadius: 4, padding: 14, marginBottom: 12,
+  });
+
+  return (
+    <div onClick={onClose} style={{
+      position: 'fixed', inset: 0, background: 'rgba(5,11,20,0.7)', zIndex: 100,
+      display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 40,
+    }}>
+      <div onClick={(e) => e.stopPropagation()} style={{
+        background: 'var(--bg-elevated)', border: '1px solid var(--border-default)',
+        borderRadius: 8, maxWidth: 540, width: '100%', padding: 28,
+      }}>
+        <div style={{ fontSize: 18, fontWeight: 600, marginBottom: 4 }}>{headline}</div>
+        <div className="muted" style={{ fontSize: 13, lineHeight: 1.5, marginBottom: 18 }}>{explainer}</div>
+
+        {wantSayari ? (
+          <div style={sectionStyle(focusOn === 'sayari' || focusOn === 'both')}>
+            <div className="mono" style={{ fontSize: 11, color: 'var(--accent)', letterSpacing: 1, textTransform: 'uppercase', marginBottom: 8 }}>
+              Sayari API
+            </div>
+            <label style={{ display: 'block', fontSize: 11, color: 'var(--text-muted)', marginBottom: 4 }}>Client ID</label>
+            <input
+              value={sayariId}
+              onChange={(e) => setSayariId(e.target.value)}
+              placeholder="SAYARI_CLIENT_ID"
+              style={_credInputStyle}
+            />
+            <label style={{ display: 'block', fontSize: 11, color: 'var(--text-muted)', marginTop: 10, marginBottom: 4 }}>Client Secret</label>
+            <input
+              type="password"
+              value={sayariSecret}
+              onChange={(e) => setSayariSecret(e.target.value)}
+              placeholder="SAYARI_CLIENT_SECRET"
+              style={_credInputStyle}
+            />
+          </div>
+        ) : null}
+
+        {wantAnthropic ? (
+          <div style={sectionStyle(focusOn === 'anthropic' || focusOn === 'both')}>
+            <div className="mono" style={{ fontSize: 11, color: 'var(--accent)', letterSpacing: 1, textTransform: 'uppercase', marginBottom: 8 }}>
+              Anthropic API
+            </div>
+            <label style={{ display: 'block', fontSize: 11, color: 'var(--text-muted)', marginBottom: 4 }}>API Key</label>
+            <input
+              type="password"
+              value={anthropicKey}
+              onChange={(e) => setAnthropicKey(e.target.value)}
+              placeholder="sk-ant-…"
+              style={_credInputStyle}
+            />
+          </div>
+        ) : null}
+
+        <div className="muted" style={{
+          fontSize: 11, fontStyle: 'italic', lineHeight: 1.5, marginTop: 4, marginBottom: 14,
+        }}>
+          Credentials are stored in memory only and cleared on container restart. They
+          are never persisted to disk or to your browser.
+        </div>
+
+        {err ? (
+          <div style={{
+            background: 'rgba(248,81,73,0.08)', border: '1px solid rgba(248,81,73,0.35)',
+            color: 'var(--risk-critical)', padding: '8px 12px', borderRadius: 4, fontSize: 12, marginBottom: 12,
+          }}>{err}</div>
+        ) : null}
+
+        <div style={{ display: 'flex', gap: 8, justifyContent: 'space-between', alignItems: 'center' }}>
+          <button onClick={clear} disabled={saving} style={{
+            background: 'transparent', color: 'var(--text-muted)',
+            border: '1px solid var(--border-default)',
+            padding: '6px 10px', borderRadius: 3, fontSize: 11, fontFamily: 'var(--font-mono)',
+            opacity: saving ? 0.5 : 1,
+          }}>Clear stored</button>
+
+          <div style={{ display: 'flex', gap: 8 }}>
+            <button onClick={onClose} disabled={saving} style={{
+              background: 'transparent', color: 'var(--text-secondary)',
+              border: '1px solid var(--border-default)', padding: '8px 14px', borderRadius: 4, fontSize: 13,
+              opacity: saving ? 0.5 : 1,
+            }}>Cancel</button>
+            <button onClick={save} disabled={saving} style={{
+              background: 'var(--accent)', color: '#0A1628',
+              border: 0, padding: '8px 14px', borderRadius: 4, fontWeight: 600, fontSize: 13,
+              opacity: saving ? 0.7 : 1,
+            }}>{saving ? 'Saving…' : 'Save'}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+const _credInputStyle = {
+  width: '100%',
+  background: 'var(--bg-surface)',
+  border: '1px solid var(--border-default)',
+  borderRadius: 3, padding: '7px 10px',
+  color: 'var(--text-primary)',
+  fontSize: 13, fontFamily: 'var(--font-mono)',
+  outline: 'none',
+  boxSizing: 'border-box',
+};
+
 Object.assign(window, {
   cx, fmtMs, truncate,
   RiskBadge, SanctionProgramTag, SourcePopover, CitedValue, ConfidenceFlag,
   EntityChip, OutcomeBadge, OUTCOMES, ToolTraceRow, Card, SectionHeader, CountryCode,
-  StatusChip,
+  StatusChip, CredentialsModal,
 });

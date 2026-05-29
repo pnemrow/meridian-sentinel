@@ -46,9 +46,16 @@ The badge in the top right of the UI toggles between CACHED and LIVE.
 
 CACHED requires zero credentials. It replays four captured Anthropic tool use runs against list_1, serves cached Sayari profiles for all 49 resolved entities, and uses an OFAC SDN feed downloaded in late May 2026. The badge in the UI honestly reflects this.
 
-LIVE requires SAYARI_CLIENT_ID and SAYARI_CLIENT_SECRET in .env. ANTHROPIC_API_KEY is only needed for freeform copilot questions; the four cached golden runs work without it. See .env.example for the full list of variables.
+LIVE needs `SAYARI_CLIENT_ID` + `SAYARI_CLIENT_SECRET` for uploads and live ownership traversals, and `ANTHROPIC_API_KEY` for freeform co-pilot questions. The four cached golden questions work without an Anthropic key.
 
-I have not bundled my Sayari or Anthropic credentials in this repo. You presumably have Sayari credentials through the company; an Anthropic key is only required for the freeform copilot path in LIVE mode.
+You can supply these credentials two ways — both equivalent, pick whichever you prefer:
+
+1. **In `.env` before starting** (classic): edit `.env.example` → `.env` with values, then `docker compose up`. The container picks them up at boot.
+2. **In the app, when prompted** (quick trial): start with an empty `.env`. The first time you need a LIVE feature — switching the mode badge to LIVE, submitting a freeform co-pilot question, or opening an entity not in the pre-cached set — a modal opens and asks for exactly the credentials that feature requires. A gear icon next to the mode badge also opens the modal at any time to manage credentials.
+
+In-app credentials live in memory only on the API process. They are cleared on container restart and never persisted to disk or to your browser. The store wins over `.env` when both are set, so an in-app entry is a clean override without restart.
+
+I have not bundled my Sayari or Anthropic credentials in this repo. You presumably have Sayari credentials through the company; an Anthropic key is only required for the freeform co-pilot path in LIVE mode.
 
 ---
 

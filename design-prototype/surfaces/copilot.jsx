@@ -18,7 +18,12 @@ function normalizeBackendEvent(payload) {
   }
 }
 
-function CoPilot({ onOpenEntity, onOpenCompare, initialState, runMode, runId = null }) {
+function CoPilot({ onOpenEntity, onOpenCompare, initialState, runMode, runId = null, credentialStatus, openCredModal }) {
+  // When LIVE freeform questions are submitted without an Anthropic key, show
+  // an inline prompt instead of firing the SSE call (which would just error).
+  // The 4 cached golden chips still work in CACHED mode — they bypass this
+  // gate via the same ask() path; we only intercept LIVE submissions.
+  const [needsAnthropic, setNeedsAnthropic] = useState(false);
   const [question, setQuestion] = useState('');
   const [conversation, setConversation] = useState(initialState?.conversation || []);
   const [tools, setTools] = useState(initialState?.tools || []);
@@ -111,9 +116,23 @@ function CoPilot({ onOpenEntity, onOpenCompare, initialState, runMode, runId = n
     schedule.forEach(({ at, ev }) => setTimeout(() => applyEvent(ev), at));
   }
 
+  // Whether this question is a cached golden chip (matched exactly) — those
+  // never need an Anthropic key because /agent/ask in cached mode replays a
+  // pre-captured event stream. Freeform questions in LIVE mode require one.
+  const _isGoldenQuestion = (q) =>
+    Array.isArray(window.COPILOT_GOLDEN_QUESTIONS)
+    && window.COPILOT_GOLDEN_QUESTIONS.includes(q);
+
   // -------- Live SSE fetch → fallback to replay --------
   async function ask(q) {
     if (streaming) return;
+    // LIVE + freeform + no anthropic key → intercept, surface inline prompt.
+    const isLive = (runMode || 'CACHED').toUpperCase() === 'LIVE';
+    if (isLive && !credentialStatus?.anthropic && !_isGoldenQuestion(q)) {
+      setNeedsAnthropic(true);
+      return;
+    }
+    setNeedsAnthropic(false);
     setConversation(prev => [...prev,
       { role: 'user', segments: [{ type: 'text', text: q }] },
       { role: 'assistant', segments: [] },
@@ -198,6 +217,27 @@ function CoPilot({ onOpenEntity, onOpenCompare, initialState, runMode, runId = n
 
         {/* Input */}
         <div style={{ padding: '16px 40px 24px', borderTop: '1px solid var(--border-subtle)' }}>
+          {needsAnthropic ? (
+            <div style={{
+              background: 'rgba(201,169,97,0.06)',
+              border: '1px solid var(--accent-dim)',
+              borderRadius: 4, padding: '10px 14px', marginBottom: 10,
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12,
+            }}>
+              <div style={{ fontSize: 12, color: 'var(--text-secondary)', lineHeight: 1.5 }}>
+                LIVE freeform questions require an Anthropic API key. Add it to enable.
+              </div>
+              <button onClick={() => {
+                if (typeof openCredModal === 'function') {
+                  openCredModal('anthropic', () => setNeedsAnthropic(false));
+                }
+              }} style={{
+                background: 'var(--accent)', color: '#0A1628', border: 0,
+                padding: '6px 12px', borderRadius: 3, fontSize: 12, fontWeight: 600,
+                whiteSpace: 'nowrap',
+              }}>Add key</button>
+            </div>
+          ) : null}
           <form onSubmit={(e) => { e.preventDefault(); if (question.trim()) { ask(question.trim()); setQuestion(''); } }}>
             <div style={{
               background: 'var(--bg-surface)',
