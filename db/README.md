@@ -1,43 +1,48 @@
-# Database — Morning Setup Instructions
+# Database
 
-Postgres is NOT running tonight. The engine operates entirely from the
-`output/raw/*.json` cache (real Sayari API data). DB load is a morning task.
+This folder is the optional Postgres persistence layer. The app does not require Postgres at all by default; the demo path uses file based persistence under `output/` and is fully self contained.
 
-## Setup steps (run in order)
+This folder exists for the case where a reviewer wants to exercise the Postgres branch in `services/api/routers/investigations.py`, which writes investigation metadata and dispositions to a relational schema instead of JSON files.
+
+## Bringing up the database
+
+The simplest path is the `db` profile in `docker-compose.yml`:
 
 ```bash
-# 1. Create database
-createdb sentinel
-
-# 2. Apply schema (3 tables: ofac_sdn, entity_cache, screening_run)
-psql sentinel -f db/schema.sql
-
-# Optional but recommended: enable pg_trgm for fuzzy OFAC name matching
-psql sentinel -c "CREATE EXTENSION IF NOT EXISTS pg_trgm;"
-
-# 3. Load cached Sayari data (49 entities from output/raw/)
-export DATABASE_URL=postgresql://localhost/sentinel
-python db/loaders/load_cache.py
-
-# 4. Load OFAC SDN (~10k entities, downloads ~15 MB XML)
-python db/loaders/load_ofac.py
-
-# Verify:
-psql sentinel -c "SELECT count(*) FROM entity_cache;"  -- should be 49
-psql sentinel -c "SELECT count(*) FROM ofac_sdn WHERE removed_at IS NULL;"  -- ~10k+
+docker compose --profile db up
 ```
 
-## Tables
+This brings up Postgres alongside the API. The schema in `schema.sql` is loaded automatically on first start via Postgres's `/docker-entrypoint-initdb.d` mechanism.
+
+To populate the schema with cached Sayari profiles and the OFAC SDN feed after Postgres is healthy:
+
+```bash
+export DATABASE_URL=postgresql://sentinel:sentinel@localhost:5432/sentinel
+
+# Optional but recommended for fuzzy OFAC name matching
+psql "$DATABASE_URL" -c "CREATE EXTENSION IF NOT EXISTS pg_trgm;"
+
+# Load cached Sayari profiles (49 entities from output/raw/) into entity_cache
+python db/loaders/load_cache.py
+
+# Load OFAC SDN feed into ofac_sdn
+python db/loaders/load_ofac.py
+
+# Verify
+psql "$DATABASE_URL" -c "SELECT count(*) FROM entity_cache;"
+psql "$DATABASE_URL" -c "SELECT count(*) FROM ofac_sdn WHERE removed_at IS NULL;"
+```
+
+## Schema
+
+Three tables, intentionally minimal.
 
 | Table | Rows | Purpose |
 |-------|------|---------|
-| `ofac_sdn` | ~10k | Daily-refreshed OFAC SDN feed |
-| `entity_cache` | 49 | Sayari API responses from output/raw/*.json |
-| `screening_run` | audit | Each compare_ofac_vs_sayari run |
+| `ofac_sdn` | ~10k | Treasury SDN feed, refreshable from `services/api/data/sdn.xml` |
+| `entity_cache` | 49 | Sayari API responses for list_1, mirrored from `output/raw/*.json` |
+| `screening_run` | audit | One row per `compare_ofac_vs_sayari` invocation |
 
-## Why only 3 tables?
+## Why Postgres is optional
 
-The Replit version had 13 tables. 10 were persistence overhead (fixtures,
-synthetic sessions, paced-replay state) that a PoC doesn't need.
-These 3 tables give us real SQL for the demo + quota-free real data.
-Ref: BUILD_SPEC.md §3, §8.
+For a proof of concept the file based path is more inspectable. Every artifact lives under `output/` and can be opened, grepped, or diffed directly. Postgres is the production move; the code in `services/api/routers/investigations.py` falls back to file storage when `DATABASE_URL` is unset, so the same routes work either way.
