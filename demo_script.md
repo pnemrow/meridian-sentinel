@@ -105,11 +105,15 @@ This run replays the captured results, which is instant. I'll show you the live 
 
 `[SCREEN: app, Compare surface]`
 
-*Click the "Run composition: expand" chevron at the top.*
+*The page loads. The Compare surface shows the kicker and a collapsed Run Composition line above the funnel.*
 
-Above the funnel you'll see the run composition. Fifty input rows, forty-nine resolved, forty-five sanctioned by some regime, forty exposed to OFAC SDN. The funnel below is the OFAC subset.
+Quick scope before the headline. Fifty vendors in, forty-nine resolved, forty-five sanctioned by some regime, forty exposed to OFAC SDN.
 
-*Re-collapse the panel before the Voice-C beat.*
+*Click the expand chevron on the Run Composition line. The tree appears showing how those numbers nest.*
+
+Of the forty-nine resolved, forty are exposed to OFAC SDN. The funnel below is that OFAC subset specifically. The other five are sanctioned by other regimes; the four entities at the bottom are clean across the board.
+
+*Click to collapse the panel.*
 
 > **[VOICE C — let it land. Two beats of silence after the funnel appears, then speak slowly.]**
 >
@@ -288,6 +292,8 @@ Thank you.
 **The rest of the script is Voice B.** Conversational, composed, peer to peer. If you find yourself getting formal or stilted, you've drifted out of B. The fix is to imagine Hunter sitting across a coffee table, not standing at a podium.
 
 **The Aha pause at the Compare reveal.** Two full beats of silence after the funnel appears, before you speak. That silence is doing more rhetorical work than any sentence you could put there. Trust it.
+
+**The Run Composition beat is scope-setting, not headline.** Keep it tight, about fifteen seconds total. Expand the tree, deliver the nesting line, collapse. Do not let the composition compete with the funnel for emphasis. The funnel is the Aha; the composition just preempts the "where do these numbers come from" question. If you find yourself spending more than twenty seconds on it, cut.
 
 **The trace expand on row 12.** Slow down. Read each pause. The four short declaratives ("endpoint", "payload", "response", "cache file") should each land like separate observations, not one breath of a list.
 

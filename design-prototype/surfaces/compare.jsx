@@ -3,10 +3,13 @@
 const COMPARE_API_BASE = (typeof window !== 'undefined' && window.SENTINEL_API_BASE) || '';
 
 function Compare({ onOpenEntity, focusEntityId, runId }) {
-  // When runId is set, fetch this run's compare result + /summary. Otherwise
-  // use window.COMPARE_RESULT (already populated by api.js for list_1).
+  // When runId is set, fetch this run's compare result. Otherwise use
+  // window.COMPARE_RESULT (already populated by api.js for list_1).
+  // The /summary endpoint used to feed a redundant "vendors · resolved ·
+  // sanctioned" header line that's now consolidated into RunComposition;
+  // the compare endpoint's summary already carries total_input,
+  // total_sanctioned, and total_ofac_exposed so the second fetch is gone.
   const [perRunResult, setPerRunResult] = useState(null);
-  const [perRunSummary, setPerRunSummary] = useState(null);
   const [perRunError, setPerRunError] = useState(null);
   // Disposition map keyed by entity_id — fetched from /api/dispositions/{run_id}
   // so the reconciliation table paints persisted decisions without window state.
@@ -39,22 +42,14 @@ function Compare({ onOpenEntity, focusEntityId, runId }) {
   useEffect(() => {
     if (!runId) {
       setPerRunResult(null);
-      setPerRunSummary(null);
       setPerRunError(null);
       return;
     }
     let cancelled = false;
-    Promise.all([
-      fetch(`${COMPARE_API_BASE}/tools/compare_ofac_vs_sayari?threshold=0.85&run_id=${encodeURIComponent(runId)}`).then(r => r.ok ? r.json() : Promise.reject(`HTTP ${r.status}`)),
-      fetch(`${COMPARE_API_BASE}/summary?run_id=${encodeURIComponent(runId)}`).then(r => r.ok ? r.json() : null),
-    ]).then(([cmp, sum]) => {
-      if (cancelled) return;
-      setPerRunResult(cmp);
-      setPerRunSummary(sum);
-    }).catch(err => {
-      if (cancelled) return;
-      setPerRunError(String(err));
-    });
+    fetch(`${COMPARE_API_BASE}/tools/compare_ofac_vs_sayari?threshold=0.85&run_id=${encodeURIComponent(runId)}`)
+      .then(r => r.ok ? r.json() : Promise.reject(`HTTP ${r.status}`))
+      .then(cmp => { if (!cancelled) setPerRunResult(cmp); })
+      .catch(err => { if (!cancelled) setPerRunError(String(err)); });
     return () => { cancelled = true; };
   }, [runId]);
 
@@ -66,9 +61,6 @@ function Compare({ onOpenEntity, focusEntityId, runId }) {
   const rows = result?.data?.rows || [];
   const summary = result?.data?.summary || {};
   const ofac_fetched_at = result?.data?.ofac_fetched_at;
-  // Make the per-run /summary available to the top header line (read inside
-  // the existing IIFE below) without leaking into window.RUN_SUMMARY.
-  const localRunSummary = perRunSummary;
 
   const gapRows = useMemo(
     () => rows.filter(r => r.outcome === 'sayari_only' || r.outcome === 'screen_ambiguous'),
@@ -152,50 +144,38 @@ function Compare({ onOpenEntity, focusEntityId, runId }) {
   return (
     <div style={{ padding: '32px 40px 80px', maxWidth: 1400, margin: '0 auto' }}>
 
+      {/* Kicker — investigation label only. The vendor/resolved/sanctioned
+          counts that used to sit here have moved into RunComposition's
+          consolidated collapsed line, so the surface now shows each fact
+          exactly once. */}
+      <div className="mono" style={{
+        color: 'var(--text-muted)', fontSize: 11, letterSpacing: 1.4,
+        textTransform: 'uppercase', marginBottom: 12,
+      }}>
+        {(() => {
+          // Active investigation lookup — derive the kicker label from the
+          // run we're looking at, not a hardcoded "list_1".
+          const list = window.INVESTIGATIONS || [];
+          const inv = runId
+            ? list.find(i => String(i.id) === String(runId))
+            : (list.find(i => i.hero) || list[0]);
+          const label = inv?.name || inv?.list_ref || (runId ? 'uploaded list' : 'list_1');
+          return `${label} · threshold 0.85`;
+        })()}
+      </div>
+
+      {/* Run composition — single source of truth for the headline counts.
+          Sits between kicker and serif headline so the kicker stays anchored
+          at the top while the expand/collapse motion happens beneath it. */}
       <RunComposition
         summary={summary}
         onSelectOutcome={(o) => setFilterOutcome(o)}
         spotlightRef={spotlightRef}
       />
 
-      {(() => {
-        // Top header: bind to real /summary (input/resolved/sanctioned counts)
-        // and to compare summary.ownership_gap. Per-run summary (when runId is
-        // set) wins over the cached window.RUN_SUMMARY.
-        const rs = (localRunSummary && localRunSummary.data)
-                || (window.RUN_SUMMARY && window.RUN_SUMMARY.data)
-                || {};
-        const totalInput      = rs.total_input      != null ? rs.total_input      : summary.total_entities + (summary.unresolved || 0);
-        const resolved        = rs.resolved         != null ? rs.resolved         : summary.total_entities;
-        const sanctionedCount = rs.sanctioned_count != null ? rs.sanctioned_count : null;
-        return (
-          <>
-            <div style={{ marginBottom: 12 }}>
-              <div className="mono" style={{ color: 'var(--text-muted)', fontSize: 11, letterSpacing: 1.4, textTransform: 'uppercase', marginBottom: 6 }}>
-                {(() => {
-                  // Active investigation lookup — derive the kicker label from
-                  // the run we're looking at, not a hardcoded "list_1".
-                  const list = window.INVESTIGATIONS || [];
-                  const inv = runId
-                    ? list.find(i => String(i.id) === String(runId))
-                    : (list.find(i => i.hero) || list[0]);
-                  const label = inv?.name || inv?.list_ref || (runId ? 'uploaded list' : 'list_1');
-                  return `${label} · threshold 0.85`;
-                })()}
-              </div>
-              <div style={{ fontSize: 14, color: 'var(--text-secondary)' }}>
-                <span className="mono" style={{ color: 'var(--text-primary)' }}>{totalInput}</span> vendors ·{' '}
-                <span className="mono" style={{ color: 'var(--text-primary)' }}>{resolved}</span> resolved ·{' '}
-                <span className="mono" style={{ color: 'var(--text-primary)' }}>{sanctionedCount != null ? sanctionedCount : '—'}</span> sanctioned
-              </div>
-            </div>
-
-            <div style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.4, maxWidth: 940, marginBottom: 32, paddingBottom: 24, borderBottom: '1px solid var(--border-subtle)' }}>
-              <span style={{ color: 'var(--accent)' }}>{summary.ownership_gap} vendor{summary.ownership_gap === 1 ? '' : 's'} a clean name-screen would wave through</span> are actually blocked.
-            </div>
-          </>
-        );
-      })()}
+      <div style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.4, maxWidth: 940, marginBottom: 32, paddingBottom: 24, borderBottom: '1px solid var(--border-subtle)' }}>
+        <span style={{ color: 'var(--accent)' }}>{summary.ownership_gap} vendor{summary.ownership_gap === 1 ? '' : 's'} a clean name-screen would wave through</span> are actually blocked.
+      </div>
 
       <CompareFunnel summary={summary} />
 
@@ -319,6 +299,8 @@ function RunComposition({ summary, onSelectOutcome, spotlightRef }) {
           fontSize: 10, color: 'var(--text-muted)', letterSpacing: 1.4, textTransform: 'uppercase',
         }}>Run composition</span>
         <span style={{ fontSize: 13, color: 'var(--text-secondary)' }}>
+          <span className="mono" style={{ color: 'var(--text-primary)' }}>{totalInput}</span> vendors
+          <span className="muted" style={{ margin: '0 8px' }}>·</span>
           <span className="mono" style={{ color: 'var(--text-primary)' }}>{resolved}</span> resolved
           <span className="muted" style={{ margin: '0 8px' }}>·</span>
           <span className="mono" style={{ color: 'var(--text-primary)' }}>{totalSanctioned}</span> sanctioned
