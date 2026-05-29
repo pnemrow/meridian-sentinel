@@ -175,7 +175,7 @@ For your downstream systems, every result's available as a structured payload. T
 
 *Close the slide over. Click "Download briefing PDF".*
 
-*The briefing modal appears. Click "Generate PDF". The PDF downloads.*
+*The briefing modal appears. Click "Generate briefing". A PDF downloads (or, on a native install without cairo and pango, the same content as HTML — the browser handles save-to-PDF either way).*
 
 `[SCREEN: app, PDF download confirmation]`
 
