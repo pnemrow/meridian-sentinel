@@ -138,20 +138,18 @@ curl -X POST http://localhost:8000/agent/capture
 }
 ```
 
-Cache-first: the 8 marquee entities read from `output/raw/traversal/{id}.json` (no API quota). Others trigger a live Sayari call if credentials are set.
+Cache-first. Every list_1 + list_3 entity has a pre-fetched traversal on disk
+so the demo runs end-to-end without Sayari credentials. Files live at:
 
-**8 pre-cached entity IDs:**
+- `output/raw/traversal/{entity_id}.json` — list_1 marquee + default cache
+- `output/runs/{run_id}/raw/traversal/{entity_id}.json` — per-run cache for
+  uploaded lists (list_3, future demos)
 
-| Entity | ID |
-|--------|----|
-| Sberbank | `OWwtbp9y51OcLHJQakLaMw` |
-| VTB Bank | `dy-rh2g0QtzUN_jC_e9S_A` |
-| Transneft | `9-IuyJoA08bELHrSY3mXXA` |
-| Gazprom | `RZAPsBRdYXTToVqy4ZuNow` |
-| Rosneft | `uKGj1Dx23piV16B7oVDwoQ` |
-| Rosoboronexport | `9LtTGZXn_LlN05C47cwZ5w` |
-| Belorusskaya Kaliynaya | `BSsUPVlxsICOW4GCjb4fqQ` |
-| Russian Railways | `RqBOnCZOD5pWG-tCf8wr8A` |
+Pass `?run_id=<id>` on the POST to scope the loader to the run-specific cache;
+without it, the loader reads the default dir. Uncached entities (e.g. a graph-
+discovered owner not on any input list) fall through to live Sayari — if no
+credentials are configured, the response carries an honest error and the
+empty-state UI handles it.
 
 ```bash
 curl -X POST http://localhost:8000/tools/traverse_ownership \
@@ -159,6 +157,14 @@ curl -X POST http://localhost:8000/tools/traverse_ownership \
   -d '{"entity_id":"OWwtbp9y51OcLHJQakLaMw"}'
 # → nodes: 51, edges: 50, sanction_hits: 11
 ```
+
+**Demo data** — `scripts/cache_traversals.py` walks every `entities.csv` row
+and POSTs `/tools/traverse_ownership` to populate the caches. Run it whenever
+you add a new investigation list. Rate-limited to 1 req/sec; ~100s for a
+50-entity list. Requires valid `SAYARI_CLIENT_ID` + `SAYARI_CLIENT_SECRET`
+during the cache pass — once the JSON files are committed, downstream readers
+need no credentials at all. Cache snapshot was last refreshed 2026-05-29 for
+49 list_1 entities + 48 list_3 entities (97 traversal files committed).
 
 ---
 

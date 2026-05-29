@@ -41,6 +41,13 @@ class EntityCache:
         self._profiles: list[Profile] | None = None
         self._load_name_index()
 
+    @property
+    def base_dir(self) -> Path:
+        """Public accessor for the cache root (output/ for default cache,
+        output/runs/{run_id}/ for run-scoped caches). Used by tools that
+        need to derive sibling directories like raw/traversal/."""
+        return self._out
+
     # ------------------------------------------------------------------
     # Index
     # ------------------------------------------------------------------

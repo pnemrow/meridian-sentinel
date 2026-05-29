@@ -1,19 +1,11 @@
 /* Surface 4 — Entity detail + ownership force-graph (§9) */
 
-// IDs the backend has cached ownership traversal data for (output/raw/traversal/*).
-// Used to decide whether the ownership graph auto-loads or sits behind an explicit
-// "fetch live" button (cost-transparency).
-const CACHED_TRAVERSAL_IDS = new Set([
-  "OWwtbp9y51OcLHJQakLaMw",  // Sberbank
-  "dy-rh2g0QtzUN_jC_e9S_A",  // VTB Bank
-  "9-IuyJoA08bELHrSY3mXXA",  // Transneft
-  "RZAPsBRdYXTToVqy4ZuNow",  // Gazprom
-  "uKGj1Dx23piV16B7oVDwoQ",  // Rosneft
-  "9LtTGZXn_LlN05C47cwZ5w",  // Rosoboronexport
-  "BSsUPVlxsICOW4GCjb4fqQ",  // Belorusskaya Kaliynaya
-  "RqBOnCZOD5pWG-tCf8wr8A",  // Russian Railways
-  "5wVHdujAfKLkHO7efPnAjQ",  // Sukhoi (UBO file)
-]);
+// (Previously: CACHED_TRAVERSAL_IDS — a hardcoded set of 9 marquee entity_ids
+// gating which entities auto-loaded the ownership graph vs sat behind a
+// "fetch live" button. Removed once scripts/cache_traversals.py pre-cached
+// every list_1 + list_3 entity's traversal. Every entity now auto-fetches;
+// the empty-state UI handles backend errors or empty traversals honestly —
+// no fake data is invented.)
 
 const SENTINEL_BASE = () => (typeof window !== 'undefined' && window.SENTINEL_API_BASE) || '';
 
@@ -167,7 +159,6 @@ function Entity({ entityId, onBack, onOpenEntity, trail = [], runId = null }) {
 
   const { risk_summary, raw_risk_factors, identifiers, source_count } = entity;
   const rs = risk_summary.data;
-  const hasCachedGraph = CACHED_TRAVERSAL_IDS.has(entityId);
 
   const setDisposition = async (status, rationale) => {
     // Persist via the backend so a refresh keeps the decision. Falls back to
@@ -223,13 +214,14 @@ function Entity({ entityId, onBack, onOpenEntity, trail = [], runId = null }) {
           <SourceBreakdown rows={sourceBreakdown} />
         </div>
 
-        {/* LiveGraphFetcher routes ALL entities through POST /tools/traverse_ownership:
-             cached marquee IDs auto-fetch on mount; others sit behind a click-gated
-             "fetch live" button. Either way the nodes/edges come from the backend —
-             never from a procedural generator. runId scopes the call to the active run. */}
+        {/* LiveGraphFetcher routes ALL entities through POST /tools/traverse_ownership.
+             Every list_1 + list_3 entity has a pre-cached traversal under
+             output/raw/traversal/ or output/runs/{run_id}/raw/traversal/, so the
+             component auto-fetches on mount and the backend cache-hits without
+             a live Sayari call. For uncached entities (e.g. a graph-discovered
+             owner who isn't on any input list), the empty-state UI handles it —
+             no fake data is invented. runId scopes the call to the active run. */}
         <LiveGraphFetcher entityId={rs.entity_id} entityName={rs.input_name} runId={runId} onOpenEntity={onOpenEntity} trail={trail} currentLabel={rs.input_name} />
-        {/* hasCachedGraph kept in scope for future use (e.g. graph header badge) */}
-        {hasCachedGraph ? null : null}
       </div>
 
       {showBriefing ? <BriefingModal entity={rs} runId={runId} onClose={() => setShowBriefing(false)} /> : null}
@@ -797,15 +789,16 @@ function EntityLoading({ entityId, onBack }) {
 }
 
 // ============================================================
-// LiveGraphFetcher — real-API ownership network loader.
-// Cached marquee entities auto-fetch on mount; others sit behind an explicit
-// "fetch live" button (cost-transparency) and call the same real endpoint.
-// Either way: the nodes/edges come from POST /tools/traverse_ownership — never
-// from a procedural generator.
+// LiveGraphFetcher — ownership network loader.
+// Auto-fetches on mount for every entity. POST /tools/traverse_ownership is
+// cache-first server-side: list_1 + list_3 entities cache-hit instantly from
+// output/raw/traversal/ or output/runs/{run_id}/raw/traversal/. Uncached
+// entities (e.g. a graph-discovered owner not on any input list) attempt a
+// live call; if no credentials are set, the empty-state UI renders and no
+// fake data is invented.
 // ============================================================
 function LiveGraphFetcher({ entityId, entityName, onOpenEntity, trail, currentLabel, runId = null }) {
-  const isCached = CACHED_TRAVERSAL_IDS.has(entityId);
-  const [state, setState] = useState(isCached ? 'fetching' : 'idle'); // 'idle' | 'fetching' | 'loaded' | 'error'
+  const [state, setState] = useState('fetching'); // 'fetching' | 'loaded' | 'error'
   const [graphData, setGraphData] = useState(null);
   const [errMsg, setErrMsg] = useState(null);
 
@@ -867,9 +860,9 @@ function LiveGraphFetcher({ entityId, entityName, onOpenEntity, trail, currentLa
     }
   };
 
-  // Auto-fire for cached marquee IDs the moment we mount.
+  // Auto-fire on mount for every entity. The backend is cache-first.
   useEffect(() => {
-    if (isCached) startFetch();
+    startFetch();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [entityId]);
 
@@ -890,9 +883,9 @@ function LiveGraphFetcher({ entityId, entityName, onOpenEntity, trail, currentLa
       <div style={{ padding: '14px 18px', borderBottom: '1px solid var(--border-subtle)' }}>
         <div className="mono" style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: 1.2, textTransform: 'uppercase' }}>Ownership network</div>
         <div style={{ fontSize: 14, color: 'var(--text-secondary)', marginTop: 2 }}>
-          {state === 'fetching' ? (isCached ? 'loading cached traversal…' : 'fetching live from Sayari…')
+          {state === 'fetching' ? 'loading ownership traversal…'
            : state === 'error' ? 'fetch failed'
-           : 'not yet cached — fetch live'}
+           : 'no ownership data available'}
         </div>
       </div>
       <div style={{
@@ -917,13 +910,13 @@ function LiveGraphFetcher({ entityId, entityName, onOpenEntity, trail, currentLa
           {state === 'fetching' ? (
             <>
               <div className="mono" style={{ fontSize: 12, color: 'var(--accent)', letterSpacing: 1, marginBottom: 8 }}>
-                <span className="pulse">●</span> {isCached ? 'reading cached traversal' : 'fetching ownership traversal'}
+                <span className="pulse">●</span> loading ownership traversal
               </div>
               <div className="muted" style={{ fontSize: 12, lineHeight: 1.6 }}>
                 POST <span className="mono">/tools/traverse_ownership</span> · entity_id={entityId.slice(0,16)}…
               </div>
             </>
-          ) : state === 'error' ? (
+          ) : (
             <>
               <div style={{ fontSize: 16, color: 'var(--risk-critical)', marginBottom: 8 }}>
                 Ownership fetch failed
@@ -936,20 +929,6 @@ function LiveGraphFetcher({ entityId, entityName, onOpenEntity, trail, currentLa
                 background: 'var(--accent)', color: '#0A1628', border: 0,
                 padding: '8px 16px', borderRadius: 4, fontWeight: 600, fontSize: 13,
               }}>retry →</button>
-            </>
-          ) : (
-            <>
-              <div style={{ fontSize: 16, color: 'var(--text-primary)', marginBottom: 8 }}>
-                Ownership network not yet retrieved
-              </div>
-              <div className="muted" style={{ fontSize: 13, lineHeight: 1.6, marginBottom: 18 }}>
-                Sentinel hasn't traversed the ownership graph for{' '}
-                <span style={{ color: 'var(--text-secondary)' }}>{entityName}</span> yet. Fetch it live from Sayari — typically <span className="mono">300–800ms</span>.
-              </div>
-              <button onClick={startFetch} style={{
-                background: 'var(--accent)', color: '#0A1628', border: 0,
-                padding: '8px 16px', borderRadius: 4, fontWeight: 600, fontSize: 13,
-              }}>Fetch ownership graph live →</button>
             </>
           )}
         </div>

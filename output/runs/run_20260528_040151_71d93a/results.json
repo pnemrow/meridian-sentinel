@@ -1,0 +1,1826 @@
+[
+  {
+    "entity_id": "Zaah0eFCojEexrqj9io8hw",
+    "input_name": "Bosch",
+    "resolved": {
+      "entity_id": "Zaah0eFCojEexrqj9io8hw",
+      "label": "PT. ROBERT BOSCH",
+      "confidence": "high",
+      "entity_url": "/v1/entity/Zaah0eFCojEexrqj9io8hw"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/Zaah0eFCojEexrqj9io8hw.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "eV8qxU_um7RC49wlFwmhnA",
+    "input_name": "Denso",
+    "resolved": {
+      "entity_id": "eV8qxU_um7RC49wlFwmhnA",
+      "label": "DENSO CORPORATION",
+      "confidence": "high",
+      "entity_url": "/v1/entity/eV8qxU_um7RC49wlFwmhnA"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/eV8qxU_um7RC49wlFwmhnA.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "0jJrkmZO892Ic6Um6CCxqQ",
+    "input_name": "ZF Friedrichshafen",
+    "resolved": {
+      "entity_id": "0jJrkmZO892Ic6Um6CCxqQ",
+      "label": "ZF FRIEDRICHSHAFEN AG",
+      "confidence": "high",
+      "entity_url": "/v1/entity/0jJrkmZO892Ic6Um6CCxqQ"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/0jJrkmZO892Ic6Um6CCxqQ.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "QWWXD2cM24-_lZXVlr-w3A",
+    "input_name": "Magna International",
+    "resolved": {
+      "entity_id": "QWWXD2cM24-_lZXVlr-w3A",
+      "label": "MAGNA INTERNATIONAL INC.",
+      "confidence": "high",
+      "entity_url": "/v1/entity/QWWXD2cM24-_lZXVlr-w3A"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "medium",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/QWWXD2cM24-_lZXVlr-w3A.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "wJr4XYZgeHiTDN6l-hqKqQ",
+    "input_name": "Aisin",
+    "resolved": {
+      "entity_id": "wJr4XYZgeHiTDN6l-hqKqQ",
+      "label": "AISIN CORPORATION",
+      "confidence": "high",
+      "entity_url": "/v1/entity/wJr4XYZgeHiTDN6l-hqKqQ"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/wJr4XYZgeHiTDN6l-hqKqQ.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "IRelLN5vzraC-u7R9ZaYyQ",
+    "input_name": "Continental",
+    "resolved": {
+      "entity_id": "IRelLN5vzraC-u7R9ZaYyQ",
+      "label": "CONTINENTAL AG",
+      "confidence": "high",
+      "entity_url": "/v1/entity/IRelLN5vzraC-u7R9ZaYyQ"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/IRelLN5vzraC-u7R9ZaYyQ.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "QKJjDK2j4C_xjstqLZbQ6Q",
+    "input_name": "Hyundai Mobis",
+    "resolved": {
+      "entity_id": "QKJjDK2j4C_xjstqLZbQ6Q",
+      "label": "HYUNDAI MOBIS",
+      "confidence": "high",
+      "entity_url": "/v1/entity/QKJjDK2j4C_xjstqLZbQ6Q"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/QKJjDK2j4C_xjstqLZbQ6Q.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "Xrmmm_N5jUWd9q5m1IYEcg",
+    "input_name": "Faurecia",
+    "resolved": {
+      "entity_id": "Xrmmm_N5jUWd9q5m1IYEcg",
+      "label": "Forvia SE",
+      "confidence": "high",
+      "entity_url": "/v1/entity/Xrmmm_N5jUWd9q5m1IYEcg"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/Xrmmm_N5jUWd9q5m1IYEcg.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "2j6mxlCk_CJutk7kq6YFcw",
+    "input_name": "Valeo",
+    "resolved": {
+      "entity_id": "2j6mxlCk_CJutk7kq6YFcw",
+      "label": "Valeo S.A.",
+      "confidence": "high",
+      "entity_url": "/v1/entity/2j6mxlCk_CJutk7kq6YFcw"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/2j6mxlCk_CJutk7kq6YFcw.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "FOdC9gVswGIgT92VPvZY3A",
+    "input_name": "Aptiv",
+    "resolved": {
+      "entity_id": "FOdC9gVswGIgT92VPvZY3A",
+      "label": "APTIV SERVICES US,LLC",
+      "confidence": "high",
+      "entity_url": "/v1/entity/FOdC9gVswGIgT92VPvZY3A"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "medium",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/FOdC9gVswGIgT92VPvZY3A.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "LAtrDml3ulKGjNIIFGSNAg",
+    "input_name": "Yazaki",
+    "resolved": {
+      "entity_id": "LAtrDml3ulKGjNIIFGSNAg",
+      "label": "YAZAKI CORPORATION",
+      "confidence": "high",
+      "entity_url": "/v1/entity/LAtrDml3ulKGjNIIFGSNAg"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/LAtrDml3ulKGjNIIFGSNAg.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "k_LPUynmSl-Ku7kaMCNKrw",
+    "input_name": "Panasonic Automotive",
+    "resolved": {
+      "entity_id": "k_LPUynmSl-Ku7kaMCNKrw",
+      "label": "PANASONIC AUTOMOTIVE SYSTEMS AMERICA LLC",
+      "confidence": "high",
+      "entity_url": "/v1/entity/k_LPUynmSl-Ku7kaMCNKrw"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/k_LPUynmSl-Ku7kaMCNKrw.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "xZdRzNJRqk81LHRym248ZA",
+    "input_name": "Sumitomo Electric",
+    "resolved": {
+      "entity_id": "xZdRzNJRqk81LHRym248ZA",
+      "label": "SUMITOMO ELECTRIC INDUSTRIES LTD/ADR/",
+      "confidence": "high",
+      "entity_url": "/v1/entity/xZdRzNJRqk81LHRym248ZA"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "medium",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/xZdRzNJRqk81LHRym248ZA.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "YYduGnnDHeKJiCm9mn0Jew",
+    "input_name": "BASF",
+    "resolved": {
+      "entity_id": "YYduGnnDHeKJiCm9mn0Jew",
+      "label": "BASF SE",
+      "confidence": "high",
+      "entity_url": "/v1/entity/YYduGnnDHeKJiCm9mn0Jew"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/YYduGnnDHeKJiCm9mn0Jew.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "UAxRxWgh2i_-jbGE-MzNcA",
+    "input_name": "Mahle",
+    "resolved": {
+      "entity_id": "UAxRxWgh2i_-jbGE-MzNcA",
+      "label": "MAHLE GMBH",
+      "confidence": "high",
+      "entity_url": "/v1/entity/UAxRxWgh2i_-jbGE-MzNcA"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/UAxRxWgh2i_-jbGE-MzNcA.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "Zut-uEpYFcwtVTb0jYb-Sg",
+    "input_name": "Schaeffler",
+    "resolved": {
+      "entity_id": "Zut-uEpYFcwtVTb0jYb-Sg",
+      "label": "Schaeffler AG",
+      "confidence": "high",
+      "entity_url": "/v1/entity/Zut-uEpYFcwtVTb0jYb-Sg"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/Zut-uEpYFcwtVTb0jYb-Sg.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "VDSgxFjxYKeBL_exLzruRw",
+    "input_name": "Yanfeng",
+    "resolved": {
+      "entity_id": "VDSgxFjxYKeBL_exLzruRw",
+      "label": "王彦峰",
+      "confidence": "high",
+      "entity_url": "/v1/entity/VDSgxFjxYKeBL_exLzruRw"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "medium",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/VDSgxFjxYKeBL_exLzruRw.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "jNnO2Ego-RC6kW0e5h6uBg",
+    "input_name": "Adient",
+    "resolved": {
+      "entity_id": "jNnO2Ego-RC6kW0e5h6uBg",
+      "label": "Adient plc",
+      "confidence": "high",
+      "entity_url": "/v1/entity/jNnO2Ego-RC6kW0e5h6uBg"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "medium",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/jNnO2Ego-RC6kW0e5h6uBg.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "ssC1Ovg6xFHpom8T3jS7vA",
+    "input_name": "ThyssenKrupp Automotive",
+    "resolved": {
+      "entity_id": "ssC1Ovg6xFHpom8T3jS7vA",
+      "label": "THYSSENKRUPP AUTOMOTIVE SYSTEMS OF AMERICA, LLC",
+      "confidence": "high",
+      "entity_url": "/v1/entity/ssC1Ovg6xFHpom8T3jS7vA"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "medium",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/ssC1Ovg6xFHpom8T3jS7vA.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "yKfh201iXT77Et5E-xXvVA",
+    "input_name": "Gestamp",
+    "resolved": {
+      "entity_id": "yKfh201iXT77Et5E-xXvVA",
+      "label": "GESTAMP HOLDING ARGENTINA, S.L.",
+      "confidence": "high",
+      "entity_url": "/v1/entity/yKfh201iXT77Et5E-xXvVA"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "medium",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/yKfh201iXT77Et5E-xXvVA.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "S5rJs4KGxmk6-olqZuTTWw",
+    "input_name": "Tenneco",
+    "resolved": {
+      "entity_id": "S5rJs4KGxmk6-olqZuTTWw",
+      "label": "SYSTEMS PROTECTION GROUP US LLC",
+      "confidence": "high",
+      "entity_url": "/v1/entity/S5rJs4KGxmk6-olqZuTTWw"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/S5rJs4KGxmk6-olqZuTTWw.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "0xhSL7Hc8xwycWWv9DobNw",
+    "input_name": "Cummins",
+    "resolved": {
+      "entity_id": "0xhSL7Hc8xwycWWv9DobNw",
+      "label": "CUMMINS SOUTHERN PLAINS LLC",
+      "confidence": "high",
+      "entity_url": "/v1/entity/0xhSL7Hc8xwycWWv9DobNw"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "medium",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/0xhSL7Hc8xwycWWv9DobNw.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "9jd2-RAqJveuAFTIitSmbA",
+    "input_name": "Plastic Omnium",
+    "resolved": {
+      "entity_id": "9jd2-RAqJveuAFTIitSmbA",
+      "label": "SMRC AUTOMOTIVE MODULES FRANCE SAS",
+      "confidence": "high",
+      "entity_url": "/v1/entity/9jd2-RAqJveuAFTIitSmbA"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/9jd2-RAqJveuAFTIitSmbA.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "tHDXZLbsAjBm0OkAy72NRQ",
+    "input_name": "Benteler Automotive",
+    "resolved": {
+      "entity_id": "tHDXZLbsAjBm0OkAy72NRQ",
+      "label": "本特勒投资（中国）有限公司",
+      "confidence": "high",
+      "entity_url": "/v1/entity/tHDXZLbsAjBm0OkAy72NRQ"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/tHDXZLbsAjBm0OkAy72NRQ.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "X-H0PYYHxkw9_q4gZKG7nA",
+    "input_name": "Brose",
+    "resolved": {
+      "entity_id": "X-H0PYYHxkw9_q4gZKG7nA",
+      "label": "BROSE QUERETARO SA DE CV",
+      "confidence": "high",
+      "entity_url": "/v1/entity/X-H0PYYHxkw9_q4gZKG7nA"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/X-H0PYYHxkw9_q4gZKG7nA.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "jAytS5--KS3lm3I2whrWtQ",
+    "input_name": "JTEKT",
+    "resolved": {
+      "entity_id": "jAytS5--KS3lm3I2whrWtQ",
+      "label": "JTEKT CORPORATION",
+      "confidence": "high",
+      "entity_url": "/v1/entity/jAytS5--KS3lm3I2whrWtQ"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/jAytS5--KS3lm3I2whrWtQ.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "fYE_gZNUGmlf3aGLuzpfHw",
+    "input_name": "Flex-N-Gate",
+    "resolved": {
+      "entity_id": "fYE_gZNUGmlf3aGLuzpfHw",
+      "label": "FLEX N GATE TEXAS LLC",
+      "confidence": "high",
+      "entity_url": "/v1/entity/fYE_gZNUGmlf3aGLuzpfHw"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/fYE_gZNUGmlf3aGLuzpfHw.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "l5pSi--fXqgm5N8s4bxv8g",
+    "input_name": "Nemak",
+    "resolved": {
+      "entity_id": "l5pSi--fXqgm5N8s4bxv8g",
+      "label": "NEMAK MEXICO SA",
+      "confidence": "high",
+      "entity_url": "/v1/entity/l5pSi--fXqgm5N8s4bxv8g"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/l5pSi--fXqgm5N8s4bxv8g.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "7wHV28d3Du8AJ11DaJfGig",
+    "input_name": "Infineon Technologies",
+    "resolved": {
+      "entity_id": "7wHV28d3Du8AJ11DaJfGig",
+      "label": "INFINEON TECHNOLOGIES AG",
+      "confidence": "high",
+      "entity_url": "/v1/entity/7wHV28d3Du8AJ11DaJfGig"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/7wHV28d3Du8AJ11DaJfGig.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "o9X2EBZaQ95AqbgpiRq24Q",
+    "input_name": "Hyundai Wia",
+    "resolved": {
+      "entity_id": "o9X2EBZaQ95AqbgpiRq24Q",
+      "label": "HYUNDAI WIA CORPORATION",
+      "confidence": "high",
+      "entity_url": "/v1/entity/o9X2EBZaQ95AqbgpiRq24Q"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/o9X2EBZaQ95AqbgpiRq24Q.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "jBqUJXlVjOrQq_tZ-cFdGg",
+    "input_name": "NTN",
+    "resolved": {
+      "entity_id": "jBqUJXlVjOrQq_tZ-cFdGg",
+      "label": "ＮＴＮ株式会社",
+      "confidence": "high",
+      "entity_url": "/v1/entity/jBqUJXlVjOrQq_tZ-cFdGg"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/jBqUJXlVjOrQq_tZ-cFdGg.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "kQW0LFJUgiWbeKuv0AcVaQ",
+    "input_name": "Hitachi Astemo",
+    "resolved": {
+      "entity_id": "kQW0LFJUgiWbeKuv0AcVaQ",
+      "label": "HITACHI ASTEMO, LTD.",
+      "confidence": "high",
+      "entity_url": "/v1/entity/kQW0LFJUgiWbeKuv0AcVaQ"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/kQW0LFJUgiWbeKuv0AcVaQ.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "kWOjhkC6RNeVjdlQC73LFw",
+    "input_name": "Draexlmaier",
+    "resolved": {
+      "entity_id": "kWOjhkC6RNeVjdlQC73LFw",
+      "label": "DAA DRAEXLMAIER AUTOMOTIVE OF AMERICA LLC",
+      "confidence": "high",
+      "entity_url": "/v1/entity/kWOjhkC6RNeVjdlQC73LFw"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/kWOjhkC6RNeVjdlQC73LFw.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "nFB3WLVy79d74jONFEWSGg",
+    "input_name": "Marelli",
+    "resolved": {
+      "entity_id": "nFB3WLVy79d74jONFEWSGg",
+      "label": "CALSONIC KANSEI MEXICANA SA DE CV",
+      "confidence": "high",
+      "entity_url": "/v1/entity/nFB3WLVy79d74jONFEWSGg"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/nFB3WLVy79d74jONFEWSGg.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "1xCmCLVYV2NWHa7hiVtTNA",
+    "input_name": "Grupo Antolin",
+    "resolved": {
+      "entity_id": "1xCmCLVYV2NWHa7hiVtTNA",
+      "label": "GRUPO ANTOLIN INGENIERIA SA",
+      "confidence": "high",
+      "entity_url": "/v1/entity/1xCmCLVYV2NWHa7hiVtTNA"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "medium",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/1xCmCLVYV2NWHa7hiVtTNA.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "qAt866Paw2xBpRuhXTdhZQ",
+    "input_name": "BorgWarner",
+    "resolved": {
+      "entity_id": "qAt866Paw2xBpRuhXTdhZQ",
+      "label": "BORGWARNER PDS IRAPUATO S DE RL DE CV",
+      "confidence": "high",
+      "entity_url": "/v1/entity/qAt866Paw2xBpRuhXTdhZQ"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/qAt866Paw2xBpRuhXTdhZQ.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "ZY4IINalx7sgl94i5icLSQ",
+    "input_name": "HELLA",
+    "resolved": {
+      "entity_id": "ZY4IINalx7sgl94i5icLSQ",
+      "label": "HELLA ROMANIA S.R.L.",
+      "confidence": "high",
+      "entity_url": "/v1/entity/ZY4IINalx7sgl94i5icLSQ"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/ZY4IINalx7sgl94i5icLSQ.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "RLHRkvyd5O8Fm3XUOZX2gg",
+    "input_name": "Samvardhana Motherson",
+    "resolved": {
+      "entity_id": "RLHRkvyd5O8Fm3XUOZX2gg",
+      "label": "SAMVARDHANA MOTHERSON ADSYS TECH LIMITED",
+      "confidence": "high",
+      "entity_url": "/v1/entity/RLHRkvyd5O8Fm3XUOZX2gg"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "medium",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/RLHRkvyd5O8Fm3XUOZX2gg.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "DDtzsftayzGFurdnmE720A",
+    "input_name": "Webasto",
+    "resolved": {
+      "entity_id": "DDtzsftayzGFurdnmE720A",
+      "label": "Webasto Mechatronics GmbH",
+      "confidence": "high",
+      "entity_url": "/v1/entity/DDtzsftayzGFurdnmE720A"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "medium",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/DDtzsftayzGFurdnmE720A.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "1EUd63d83C4kfbkoO8e77w",
+    "input_name": "Toyoda Gosei",
+    "resolved": {
+      "entity_id": "1EUd63d83C4kfbkoO8e77w",
+      "label": "TOYODA GOSEI CO.,LTD",
+      "confidence": "high",
+      "entity_url": "/v1/entity/1EUd63d83C4kfbkoO8e77w"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/1EUd63d83C4kfbkoO8e77w.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "CsjkkNlITOSoL4lS4NgM_A",
+    "input_name": "DuPont",
+    "resolved": {
+      "entity_id": "CsjkkNlITOSoL4lS4NgM_A",
+      "label": "DUPONT CAPITAL MANAGEMENT CORP",
+      "confidence": "high",
+      "entity_url": "/v1/entity/CsjkkNlITOSoL4lS4NgM_A"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/CsjkkNlITOSoL4lS4NgM_A.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "gqq46JF5wE3C9p1bP-TGGw",
+    "input_name": "GKN Automotive",
+    "resolved": {
+      "entity_id": "gqq46JF5wE3C9p1bP-TGGw",
+      "label": "GKN DRIVELINE CELAYA SA DE CV",
+      "confidence": "high",
+      "entity_url": "/v1/entity/gqq46JF5wE3C9p1bP-TGGw"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/gqq46JF5wE3C9p1bP-TGGw.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "P7LDrX-s3CcJDxa-JrDLTA",
+    "input_name": "Eberspächer",
+    "resolved": {
+      "entity_id": "P7LDrX-s3CcJDxa-JrDLTA",
+      "label": "Eberspächer Insurance Services GmbH",
+      "confidence": "high",
+      "entity_url": "/v1/entity/P7LDrX-s3CcJDxa-JrDLTA"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "medium",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/P7LDrX-s3CcJDxa-JrDLTA.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "FpVm2HsNjl864tQHM-6vyA",
+    "input_name": "Visteon",
+    "resolved": {
+      "entity_id": "FpVm2HsNjl864tQHM-6vyA",
+      "label": "VISTEON CORP",
+      "confidence": "high",
+      "entity_url": "/v1/entity/FpVm2HsNjl864tQHM-6vyA"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/FpVm2HsNjl864tQHM-6vyA.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "60ADOmPsqP_ouLbtcVxytA",
+    "input_name": "Meritor",
+    "resolved": {
+      "entity_id": "60ADOmPsqP_ouLbtcVxytA",
+      "label": "MERITOR AUTOMOTIVE INC",
+      "confidence": "high",
+      "entity_url": "/v1/entity/60ADOmPsqP_ouLbtcVxytA"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "medium",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/60ADOmPsqP_ouLbtcVxytA.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "R-Ks8pA4FlxrErQ4hGS40w",
+    "input_name": "NSK",
+    "resolved": {
+      "entity_id": "R-Ks8pA4FlxrErQ4hGS40w",
+      "label": "NSK LTD.",
+      "confidence": "high",
+      "entity_url": "/v1/entity/R-Ks8pA4FlxrErQ4hGS40w"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "medium",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/R-Ks8pA4FlxrErQ4hGS40w.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "cAmnI92Pnaemjk7pVLfysw",
+    "input_name": "American Axle & Manufacturing",
+    "resolved": {
+      "entity_id": "cAmnI92Pnaemjk7pVLfysw",
+      "label": "AMERICAN AXLE & MANUFACTURING INC",
+      "confidence": "high",
+      "entity_url": "/v1/entity/cAmnI92Pnaemjk7pVLfysw"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "high",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/cAmnI92Pnaemjk7pVLfysw.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  },
+  {
+    "entity_id": "7j08soVAdChRf6ah-OZmsw",
+    "input_name": "Mando",
+    "resolved": {
+      "entity_id": "7j08soVAdChRf6ah-OZmsw",
+      "label": "Mando Corporation",
+      "confidence": "high",
+      "entity_url": "/v1/entity/7j08soVAdChRf6ah-OZmsw"
+    },
+    "screening": {
+      "ofac_sdn": {
+        "hit": false,
+        "sdn_id": null,
+        "programs": [],
+        "match_name": null
+      },
+      "ownership_exposure": {
+        "has_exposure": false,
+        "factor": null
+      },
+      "other_sanctions": [],
+      "risk_level": "medium",
+      "outcome": "no_ofac",
+      "is_directly_designated": false
+    },
+    "disposition": {
+      "status": "pending_review",
+      "reviewer": null,
+      "rationale": null,
+      "updated_at": ""
+    },
+    "sources": [
+      {
+        "cache_file": "output/runs/run_20260528_040151_71d93a/raw/7j08soVAdChRf6ah-OZmsw.json",
+        "api_endpoint": "GET /v1/entity/{id} (cached during this run)"
+      }
+    ]
+  }
+]

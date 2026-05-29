@@ -881,7 +881,13 @@ Object.assign(window, {
 // NEW — Investigations (workflow), Integrations catalog, Dispositions
 // ============================================================
 
-// Investigations list — each is a screening run with workflow state
+// Investigations list — the hero entry IS the demo and is backed by real
+// list_1 cache data. Three additional fictional rows (Procurement feed,
+// Swiss Intermediary Audit, APAC Distribution Partners) used to live here
+// but were removed: clicking them led to dead screens, since they had no
+// backing run on disk. Real disk-stored runs (e.g. uploaded list_3) now
+// populate the dashboard via the /api/investigations endpoint and surface
+// alongside the hero.
 const INVESTIGATIONS = [
   {
     id: "inv_2026_q1_vendor",
@@ -896,46 +902,6 @@ const INVESTIGATIONS = [
     status: "in_review",
     reviewer: { initials: "PV", name: "P. Volkov" },
     hero: true, // the demo path
-  },
-  {
-    id: "inv_procurement_feed",
-    name: "Procurement feed",
-    list_ref: "feed_2026-05-27",
-    source: "SFTP integration",
-    source_kind: "sftp",
-    created_at: "2026-05-27",
-    entity_count: 18,
-    sanctioned_count: 2,
-    ownership_gap_count: 0,
-    status: "pending_review",
-    reviewer: null,
-    just_arrived: true,
-  },
-  {
-    id: "inv_swiss_intermediary",
-    name: "Swiss Intermediary Audit",
-    list_ref: "audit_apr_2026",
-    source: "Manual upload",
-    source_kind: "manual",
-    created_at: "2026-04-12",
-    entity_count: 22,
-    sanctioned_count: 1,
-    ownership_gap_count: 0,
-    status: "cleared",
-    reviewer: { initials: "AM", name: "A. Müller" },
-  },
-  {
-    id: "inv_apac_distribution",
-    name: "APAC Distribution Partners · Q4",
-    list_ref: "apac_q4_2025",
-    source: "Manual upload",
-    source_kind: "manual",
-    created_at: "2025-11-08",
-    entity_count: 64,
-    sanctioned_count: 0,
-    ownership_gap_count: 0,
-    status: "cleared",
-    reviewer: { initials: "RS", name: "R. Singh" },
   },
 ];
 

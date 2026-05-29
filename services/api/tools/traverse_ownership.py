@@ -110,12 +110,30 @@ def _absorb_target(target: dict, nodes_by_id: dict) -> None:
 
 # ── Cache-based transform ─────────────────────────────────────────────────────
 
-def _load_traversal_cache(entity_id: str) -> dict | None:
-    """Try to load pre-fetched traversal JSON. Checks {id}.json and {id}_ubo.json."""
-    for suffix in ("", "_ubo"):
-        path = _TRAVERSAL_DIR / f"{entity_id}{suffix}.json"
-        if path.exists():
-            return json.loads(path.read_text(encoding="utf-8"))
+def _load_traversal_cache(entity_id: str, cache_dir: Path | None = None) -> dict | None:
+    """Try to load pre-fetched traversal JSON.
+
+    Search order:
+      1. {cache_dir}/raw/traversal/{id}{suffix}.json — run-scoped cache, if a
+         run cache_dir was provided (e.g. output/runs/run_20260528_.../)
+      2. _TRAVERSAL_DIR/{id}{suffix}.json              — default cache at
+         output/raw/traversal/
+
+    Checks the `_ubo` suffix as a secondary file for historical Sukhoi-style
+    pre-fetched UBO traversals.
+    """
+    search_dirs: list[Path] = []
+    if cache_dir is not None:
+        per_run = Path(cache_dir) / "raw" / "traversal"
+        if per_run != _TRAVERSAL_DIR:
+            search_dirs.append(per_run)
+    search_dirs.append(_TRAVERSAL_DIR)
+
+    for d in search_dirs:
+        for suffix in ("", "_ubo"):
+            path = d / f"{entity_id}{suffix}.json"
+            if path.exists():
+                return json.loads(path.read_text(encoding="utf-8"))
     return None
 
 
@@ -201,7 +219,8 @@ def _absorb_live(payload: dict, root_id: str, is_upstream: bool,
         _absorb_target(item.get("target"), nodes_by_id)
 
 
-def _live_traversal(entity_id: str, depth: int, direction: str) -> CitedResult:
+def _live_traversal(entity_id: str, depth: int, direction: str,
+                    cache_dir: Path | None = None) -> CitedResult:
     entity_url = f"/v1/entity/{entity_id}"
     nodes_by_id: dict[str, dict] = {
         entity_id: {"id": entity_id, "label": None, "type": None,
@@ -258,9 +277,18 @@ def _live_traversal(entity_id: str, depth: int, direction: str) -> CitedResult:
     # next call cache-hits via _transform_traversal and produces the same
     # nodes/edges. Previous versions wrote the *normalised* edges array under
     # the "data" key, which then failed to re-parse via the path walker.
+    #
+    # When cache_dir is provided (run-scoped), the file lands at
+    # {cache_dir}/raw/traversal/{id}.json so each upload's traversals stay
+    # alongside the entity profiles they go with. Otherwise it falls back to
+    # the default _TRAVERSAL_DIR (output/raw/traversal/) — list_1's home.
     if raw_upstream_payload is not None:
-        _TRAVERSAL_DIR.mkdir(parents=True, exist_ok=True)
-        cache_path = _TRAVERSAL_DIR / f"{entity_id}.json"
+        write_dir = (
+            Path(cache_dir) / "raw" / "traversal"
+            if cache_dir is not None else _TRAVERSAL_DIR
+        )
+        write_dir.mkdir(parents=True, exist_ok=True)
+        cache_path = write_dir / f"{entity_id}.json"
         try:
             cache_path.write_text(
                 json.dumps(raw_upstream_payload, default=str, ensure_ascii=False),
@@ -310,9 +338,12 @@ def traverse_ownership_tool(
 
     The optional `cache` arg (a run-scoped EntityCache) is used to look up the
     root entity's label so the response carries a meaningful name for the
-    active run. Without it, the root node renders with label=None.
+    active run. It also drives the per-run traversal cache search/write — the
+    loader checks `{cache.base_dir}/raw/traversal/{id}.json` before falling
+    back to the default `output/raw/traversal/{id}.json`.
     """
-    raw = _load_traversal_cache(entity_id)
+    cache_dir = cache.base_dir if cache is not None else None
+    raw = _load_traversal_cache(entity_id, cache_dir=cache_dir)
     if raw is not None:
         graph = _transform_traversal(entity_id, raw)
         # Fill the root-node label from the provided cache so a run_id-scoped
@@ -337,15 +368,26 @@ def traverse_ownership_tool(
                             break
             except Exception:
                 pass
+        # Cache citation: prefer the run-scoped path when the file actually
+        # lives there, so source links resolve to the file that was read.
+        cache_file = f"output/raw/traversal/{entity_id}.json"
+        if cache_dir is not None:
+            per_run = Path(cache_dir) / "raw" / "traversal" / f"{entity_id}.json"
+            if per_run.exists():
+                # Repo-relative path for the front-end's source link
+                try:
+                    cache_file = str(per_run.relative_to(_REPO))
+                except ValueError:
+                    cache_file = str(per_run)
         return CitedResult(
             data=graph,
             source=SourceCitation(
                 entity_url=f"/v1/entity/{entity_id}",
                 raw_field_path="data[].{source, target, path[].{entity, field, relationships}}",
-                cache_file=f"output/raw/traversal/{entity_id}.json",
+                cache_file=cache_file,
                 api_endpoint="GET /v1/traversal/ubo (cached)",
             ),
         )
 
-    # Not cached — try live API
-    return _live_traversal(entity_id, depth, direction)
+    # Not cached — try live API (writes to per-run dir if cache_dir is set)
+    return _live_traversal(entity_id, depth, direction, cache_dir=cache_dir)

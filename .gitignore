@@ -9,5 +9,10 @@ services/api/data/sdn.xml
 services/api/data/sdn_meta.json
 # Local backups taken before re-captures, not source of truth
 output/agent_runs.bak-*/
-# Per-upload runs: ~50MB each (50 raw Sayari responses), regenerated on demand
-output/runs/
+# Per-upload runs: ~50MB each (50 raw Sayari responses), regenerated on demand.
+# Whitelist the pinned demo list_3 run so the reviewer can drive CACHED mode
+# (entity detail + ownership graph) end-to-end without re-running an upload.
+# NB: must ignore the *contents* (output/runs/*) — not the directory itself
+# (output/runs/) — so git can recurse into the whitelisted run.
+output/runs/*
+!output/runs/run_20260528_040151_71d93a/
