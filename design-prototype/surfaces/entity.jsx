@@ -313,7 +313,7 @@ function EntityHeader({ rs, source, disposition, onDownloadBriefing, onOpenApi }
               padding: '10px 16px', borderRadius: 4, fontWeight: 600, fontSize: 13,
               whiteSpace: 'nowrap',
             }}>
-            ↓ Download briefing PDF
+            ↓ Download briefing
           </button>
           <button onClick={onOpenApi}
             style={{
@@ -488,11 +488,15 @@ function SourceBreakdown({ rows }) {
 }
 
 // -------- Briefing modal --------
-// Real flow: clicking "Generate PDF" hits GET /tools/generate_briefing/{id}/download
-// which streams a WeasyPrint-rendered PDF with Content-Disposition: attachment.
+// Real flow: clicking "Generate briefing" hits GET /tools/generate_briefing/{id}/download.
+// The backend returns application/pdf when WeasyPrint + cairo/pango are installed
+// (Docker path), or text/html otherwise (native install without graphics libs).
+// Either way the browser saves it as a file; PDF goes straight to disk, HTML
+// can be opened and saved-as-PDF via File > Print.
 function BriefingModal({ entity, onClose, runId = null }) {
   const [status, setStatus] = useState('idle'); // 'idle' | 'generating' | 'done' | 'error'
   const [errMsg, setErrMsg] = useState(null);
+  const [resultFormat, setResultFormat] = useState(null); // 'pdf' | 'html' once the download completes
 
   const downloadUrl = runId
     ? `${SENTINEL_BASE()}/tools/generate_briefing/${entity.entity_id}/download?run_id=${encodeURIComponent(runId)}`
@@ -507,8 +511,13 @@ function BriefingModal({ entity, onClose, runId = null }) {
       // without navigating away from the SPA.
       const resp = await fetch(downloadUrl);
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      // Derive extension from Content-Type so HTML fallback lands as .html, not
+      // a .pdf-named blob that confuses the OS file picker.
+      const ct = (resp.headers.get('Content-Type') || '').toLowerCase();
+      const ext = ct.includes('html') ? 'html' : 'pdf';
+      setResultFormat(ext);
       const blob = await resp.blob();
-      const filename = `meridian-sentinel-briefing-${entity.entity_id}.pdf`;
+      const filename = `meridian-sentinel-briefing-${entity.entity_id}.${ext}`;
       const blobUrl = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = blobUrl;
@@ -539,17 +548,19 @@ function BriefingModal({ entity, onClose, runId = null }) {
           GET /tools/generate_briefing/{entity.entity_id}/download
         </div>
         <div style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.5, marginBottom: 20 }}>
-          A source-cited PDF compliance briefing for <span style={{ color: 'var(--text-primary)' }}>{entity.input_name}</span> —
-          rendered server-side via WeasyPrint in the light/print theme, with every fact tied to
+          A source-cited compliance briefing for <span style={{ color: 'var(--text-primary)' }}>{entity.input_name}</span> —
+          rendered server-side in the light/print theme, with every fact tied to
           its <span className="mono" style={{ fontSize: 11 }}>output/raw/{entity.entity_id}.json</span> field path.
+          PDF when WeasyPrint + cairo are available (Docker path); otherwise
+          print-friendly HTML you can save via File &gt; Print.
         </div>
         <div style={{
           background: 'var(--bg-terminal)', border: '1px solid var(--border-subtle)',
           padding: 12, borderRadius: 4, fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-terminal)', marginBottom: 18,
         }}>
-          {`Content-Type: application/pdf
+          {`Content-Type: application/pdf  |  text/html
 Content-Disposition: attachment;
-  filename="meridian-sentinel-briefing-${entity.entity_id}.pdf"`}
+  filename="meridian-sentinel-briefing-${entity.entity_id}.{pdf|html}"`}
         </div>
         {status === 'error' ? (
           <div style={{
@@ -571,9 +582,9 @@ Content-Disposition: attachment;
             padding: '8px 14px', borderRadius: 4, fontWeight: 600, fontSize: 13,
             opacity: status === 'generating' ? 0.7 : 1,
           }}>
-            {status === 'generating' ? 'Generating…'
-             : status === 'done' ? '✓ Downloaded'
-             : 'Generate PDF'}
+            {status === 'generating' ? 'Generating briefing…'
+             : status === 'done' ? (resultFormat === 'html' ? '✓ Downloaded HTML' : '✓ Downloaded')
+             : 'Generate briefing'}
           </button>
         </div>
       </div>

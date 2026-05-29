@@ -38,6 +38,8 @@ uvicorn services.api.main:app --port 8000
 
 Open http://localhost:8000/ui/.
 
+If WeasyPrint's system dependencies (cairo, pango, gdk-pixbuf) are not installed on the host, the briefing endpoint serves a print-friendly HTML version instead of a PDF. Use the browser's File > Print > Save as PDF for the audit artifact. The Docker path installs the dependencies and produces a server-rendered PDF directly.
+
 ### Credentials
 
 The badge in the top right of the UI toggles between CACHED and LIVE.

@@ -33,6 +33,21 @@ if str(_REPO) not in sys.path:
 from packages.engine import EntityCache, CitedResult, SourceCitation
 from .risk_summary import risk_summary_tool
 
+# WeasyPrint is an optional runtime dependency. The pip install always succeeds
+# (it's in requirements.txt), but `import weasyprint` raises OSError on hosts
+# missing the underlying C libraries (cairo, pango, gdk-pixbuf). Docker bakes
+# them in; a native install on macOS/Windows without brew/choco does not.
+#
+# We resolve once at module import time and branch on HAS_WEASYPRINT inside
+# generate_briefing_tool. When False, we serve the HTML template directly and
+# the analyst can save-to-PDF via File > Print in the browser.
+try:
+    from weasyprint import HTML as _WeasyHTML  # type: ignore[import]
+    HAS_WEASYPRINT = True
+except (ImportError, OSError):
+    _WeasyHTML = None  # type: ignore[assignment]
+    HAS_WEASYPRINT = False
+
 # Bump when the template / data shape changes meaningfully — surfaced in footer.
 BRIEFING_VERSION = "1.1.0"
 BRIEFING_DIR = Path("/tmp/sentinel-briefings")
@@ -801,33 +816,37 @@ def generate_briefing_tool(
             disposition=disposition,
         )
 
-    # Try WeasyPrint for PDF
-    try:
-        from weasyprint import HTML  # type: ignore[import]
-        pdf_path = out_dir / f"briefing-{entity_id}.pdf"
-        HTML(string=html_content).write_pdf(str(pdf_path))
-        pdf_bytes = pdf_path.read_bytes()
-        return CitedResult(
-            data={
-                "entity_id": entity_id,
-                "pdf_path": str(pdf_path),
-                "format": "pdf",
-                "size_bytes": len(pdf_bytes),
-                "version": BRIEFING_VERSION,
-            },
-            source=SourceCitation(
-                entity_url=entity_url,
-                cache_file=cache_file,
-                api_endpoint="GET /v1/entity/{id} (cached) + cached UBO traversal",
-            ),
-        )
-    except ImportError:
-        pass
-    except Exception as exc:
-        import logging
-        logging.getLogger("sentinel.briefing").warning("WeasyPrint failed: %s", exc)
+    # PDF path — WeasyPrint installed AND cairo/pango/gdk-pixbuf available.
+    # The HAS_WEASYPRINT flag is resolved once at module load. If the render
+    # itself blows up at runtime (template bug, font issue, etc.) we still
+    # fall through to the HTML response rather than crashing the request.
+    if HAS_WEASYPRINT:
+        try:
+            pdf_path = out_dir / f"briefing-{entity_id}.pdf"
+            _WeasyHTML(string=html_content).write_pdf(str(pdf_path))
+            pdf_bytes = pdf_path.read_bytes()
+            return CitedResult(
+                data={
+                    "entity_id": entity_id,
+                    "pdf_path": str(pdf_path),
+                    "format": "pdf",
+                    "size_bytes": len(pdf_bytes),
+                    "version": BRIEFING_VERSION,
+                },
+                source=SourceCitation(
+                    entity_url=entity_url,
+                    cache_file=cache_file,
+                    api_endpoint="GET /v1/entity/{id} (cached) + cached UBO traversal",
+                ),
+            )
+        except Exception as exc:
+            import logging
+            logging.getLogger("sentinel.briefing").warning(
+                "WeasyPrint render failed (falling back to HTML): %s", exc
+            )
 
-    # HTML fallback
+    # HTML fallback — WeasyPrint either not installed or render failed.
+    # The analyst saves to PDF via the browser's File > Print > Save as PDF.
     html_path = out_dir / f"briefing-{entity_id}.html"
     html_path.write_text(html_content, encoding="utf-8")
     return CitedResult(
@@ -837,7 +856,12 @@ def generate_briefing_tool(
             "format": "html",
             "size_bytes": len(html_content.encode()),
             "version": BRIEFING_VERSION,
-            "note": "WeasyPrint not installed — generated HTML instead of PDF.",
+            "note": (
+                "WeasyPrint not installed on this host — serving print-friendly HTML. "
+                "Use File > Print > Save as PDF in the browser for the audit artifact."
+            ) if not HAS_WEASYPRINT else (
+                "WeasyPrint render failed at runtime — serving the HTML template directly."
+            ),
         },
         source=SourceCitation(
             entity_url=entity_url,
