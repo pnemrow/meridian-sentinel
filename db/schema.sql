@@ -1,10 +1,13 @@
--- Meridian Sentinel — 3-table Postgres schema
+-- Meridian Sentinel — Postgres schema (6 tables)
 --
 -- Design: thin, auditable, quota-free real data.
 -- Tables:
 --   ofac_sdn       — daily-refreshed OFAC SDN feed (run db/loaders/load_ofac.py)
 --   entity_cache   — Sayari API responses cached from output/raw/*.json
 --   screening_run  — each compare_ofac_vs_sayari run (audit trail)
+--   investigation  — workflow record per screening run
+--   entity_result  — per-entity customer payload (downstream API shape)
+--   disposition    — analyst maker-checker decision + rationale
 --
 -- Setup:
 --   createdb sentinel

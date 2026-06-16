@@ -4,7 +4,7 @@ Meridian Sentinel — MCP server.
 Exposes the engine's tools over the Model Context Protocol so Claude (or any
 MCP-compatible LLM) can call them directly — no HTTP hop, direct Python import.
 
-Tools exposed (mirror the spec §4 Layer 1 + replit_reference/services/mcp-server/src/tools.ts):
+Tools exposed (the engine's core capabilities):
   - resolve_entity
   - get_entity_profile
   - traverse_ownership

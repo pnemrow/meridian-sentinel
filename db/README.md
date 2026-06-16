@@ -35,13 +35,16 @@ psql "$DATABASE_URL" -c "SELECT count(*) FROM ofac_sdn WHERE removed_at IS NULL;
 
 ## Schema
 
-Three tables, intentionally minimal.
+Six tables, intentionally minimal.
 
 | Table | Rows | Purpose |
 |-------|------|---------|
 | `ofac_sdn` | ~10k | Treasury SDN feed, refreshable from `services/api/data/sdn.xml` |
 | `entity_cache` | 49 | Sayari API responses for list_1, mirrored from `output/raw/*.json` |
 | `screening_run` | audit | One row per `compare_ofac_vs_sayari` invocation |
+| `investigation` | per run | Workflow record for each screening run |
+| `entity_result` | per entity | Per-entity customer payload (downstream API shape) |
+| `disposition` | per decision | Analyst maker-checker decision + rationale |
 
 ## Why Postgres is optional
 

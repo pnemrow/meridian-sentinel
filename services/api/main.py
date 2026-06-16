@@ -168,11 +168,11 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
+    # The UI is served same-origin from /ui, so the app needs no cross-origin
+    # access for normal use; these entries cover a separately-served dev client.
     allow_origins=[
-        "http://localhost:3000",    # Next.js dev
-        "http://localhost:3001",
-        "http://127.0.0.1:3000",
-        "*",                        # tighten for production
+        "http://localhost:8000",
+        "http://127.0.0.1:8000",
     ],
     allow_methods=["*"],
     allow_headers=["*"],
@@ -187,7 +187,27 @@ app.include_router(uploads_router)
 # ── Static front-end (design-prototype mounted at /ui/) ──────────────────────
 _FRONTEND_DIR = _REPO / "design-prototype"
 if _FRONTEND_DIR.exists():
-    app.mount("/ui", StaticFiles(directory=str(_FRONTEND_DIR), html=True), name="ui")
+    # Teach Python about .jsx so served files get the right content-type
+    # instead of application/octet-stream (which some browsers cache strangely
+    # and Chrome treats as a download in some flows).
+    import mimetypes
+    mimetypes.add_type("text/babel", ".jsx")
+    mimetypes.add_type("text/javascript", ".mjs")
+
+    # Subclass to inject Cache-Control: no-store. This is a Babel-standalone
+    # demo server with no bundler — there are no content-hashed filenames, so
+    # any cache layer between the browser and disk strands the user on a stale
+    # surface after every commit. no-store is the right policy here; for a
+    # prod deploy you'd replace this with a real bundler + hashed asset names.
+    class _NoCacheStaticFiles(StaticFiles):
+        async def get_response(self, path, scope):
+            response = await super().get_response(path, scope)
+            response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
+            response.headers["Pragma"] = "no-cache"
+            response.headers["Expires"] = "0"
+            return response
+
+    app.mount("/ui", _NoCacheStaticFiles(directory=str(_FRONTEND_DIR), html=True), name="ui")
 
     from fastapi.responses import RedirectResponse
 

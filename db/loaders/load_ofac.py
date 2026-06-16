@@ -1,9 +1,8 @@
 """
 DB loader: OFAC SDN XML → ofac_sdn table.
 
-Ports the logic from replit_reference/services/sayari-py/app/ofac_refresh.py,
-adapted to work with this repo's structure (uses stdlib xml.etree instead of lxml
-to avoid an extra dependency).
+Parses the OFAC SDN XML feed with stdlib xml.etree (no lxml dependency) and
+upserts each entry into the ofac_sdn table.
 
 Usage:
     export DATABASE_URL=postgresql://user:pass@localhost/sentinel
