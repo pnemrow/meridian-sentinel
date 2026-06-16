@@ -25,3 +25,9 @@ output/agent_runs.bak-*/
 # so git can recurse into the whitelisted run.
 output/runs/*
 !output/runs/run_20260528_040151_71d93a/
+
+# Walkthrough deliverables (deck + leave-behind) are presentation artifacts
+# delivered by email, not committed to the product repo. The ADRs live in
+# docs/adr/ instead. These binaries are generated locally for emailing.
+docs/walkthrough/*.pptx
+docs/walkthrough/*.pdf
